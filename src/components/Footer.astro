@@ -1,0 +1,26 @@
+---
+import { SITE, canonical } from '../lib/site';
+interface Props {
+  citeYear?: number;
+}
+const { citeYear } = Astro.props;
+const canonicalURL = canonical(Astro.url.pathname);
+const year = new Date().getFullYear();
+---
+<hr class="gold-rule gold-rule--soft" />
+<footer class="chrome site-footer">
+  <div class="chrome-inner">
+    <div class="citation-block">
+      <a class="canonical" href={canonicalURL}>{canonicalURL}</a>
+    </div>
+    <div class="footer-license">
+      © {year} {SITE.author} · Licensed under
+      <a href={SITE.licenseUrl} rel="license">{SITE.licenseName}</a>
+    </div>
+    <ul class="footer-utility">
+      <li><a href="/citing/">Citing</a></li>
+      <li><a href="/about/">About</a></li>
+    </ul>
+    <p class="footer-series">Deep in God's Word — {SITE.name}</p>
+  </div>
+</footer>

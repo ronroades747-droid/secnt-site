@@ -1,0 +1,245 @@
+/* SECNT global stylesheet.
+   Implements the SECNT Visual Register (locked May 30): restrained-scholarly
+   typography, a single gold accent, warm-cream/near-black reading register,
+   reading-column discipline, generous whitespace, gold rule dividers. */
+
+@import './fonts.css';
+
+/* ====================================================================
+   DESIGN TOKENS — the SECNT web palette (Visual Register)
+   --------------------------------------------------------------------
+   Warm-cream ground, near-black text, atmospheric-warm gold accent — the
+   long-form scholarly reading register the Commentary is read at.
+
+   This is NOT an alternative to the slide deck's navy/gold; the two are
+   coordinate visual identities for distinct media, unified by the shared
+   gold accent. The slide palette (Navy #0E1B3A, Gold #DEB755, Cream #F5F1E6,
+   Light Gray #B8BCC8) is optimized for video-on-screen reading and lives at
+   the slide-production register; see the slide-template documentation. It
+   has no place in the web stylesheet, so it is not carried here.
+   ==================================================================== */
+:root {
+  --color-bg: #faf7f2;        /* warm-cream */
+  --color-surface: #f3eee4;   /* slightly deeper cream for inset blocks */
+  --color-text: #1a1a1a;      /* near-black */
+  --color-gold: #b8860b;      /* atmospheric-warm gold (range b8860b–c9a961) */
+  --color-gold-soft: #c9a961; /* softer gold for rules/large fills */
+  --color-border: #d4d0c7;    /* warm grey */
+  --color-meta: #6b6b6b;      /* metadata grey */
+  --color-footer: #555555;    /* footer text grey */
+  --color-link: var(--color-gold);
+  --color-link-hover: #8a6608;
+
+  /* Typography. Latin in the body serif; Greek/Hebrew fall through to SBL
+     BibLit via the unicode-range @font-face. */
+  --font-serif: 'EB Garamond', 'SBL BibLit', Cardo, Georgia, 'Times New Roman', serif;
+  --font-greek: 'SBL BibLit', Cardo, var(--font-serif);
+
+  --size-body: 1.125rem;   /* ~18px */
+  --leading-body: 1.65;
+  --measure: 68ch;         /* reading column 60–75 chars */
+  --chrome-max: 1200px;    /* full-width chrome cap */
+
+  --space: 1.5rem;
+  --rule: 2px;             /* gold rule weight */
+}
+
+/* ====================================================================
+   BASE
+   ==================================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-serif);
+  font-size: var(--size-body);
+  line-height: var(--leading-body);
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+:where(h1, h2, h3, h4) {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 1.8em 0 0.6em;
+}
+h1 { font-size: 2rem; margin-top: 0; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1.125rem; }
+
+p { margin: 0 0 1em; }
+
+a { color: var(--color-link); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: var(--color-link-hover); }
+
+:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; }
+
+::selection { background: var(--color-gold-soft); color: #1a1a1a; }
+
+img { max-width: 100%; height: auto; }
+
+/* Greek/Hebrew helper (covered by unicode-range too; class available for
+   forcing the family on mixed-script runs). */
+.greek, [lang='grc'], [lang='he'] { font-family: var(--font-greek); }
+
+/* ====================================================================
+   LAYOUT SHELL
+   ==================================================================== */
+.chrome { width: 100%; }
+.chrome-inner { max-width: var(--chrome-max); margin-inline: auto; padding-inline: clamp(1rem, 4vw, 2.5rem); }
+
+.gold-rule { border: 0; height: var(--rule); background: var(--color-gold); margin: 0; }
+.gold-rule--soft { background: var(--color-gold-soft); height: 1px; }
+
+main { flex: 1 0 auto; width: 100%; }
+
+/* Reading column: chrome is full width, reading content stays narrow. */
+.reading { max-width: var(--measure); margin-inline: auto; padding: clamp(2rem, 5vw, 3.5rem) clamp(1rem, 4vw, 1.5rem) 4rem; }
+.reading--wide { max-width: 860px; } /* for landing pages with TOC + prose */
+
+/* ====================================================================
+   HEADER
+   ==================================================================== */
+.site-header { padding-top: 1.4rem; }
+.site-identity { display: flex; flex-direction: column; gap: 0.15rem; }
+.wordmark {
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 0.06em;
+  color: var(--color-text);
+  text-decoration: none;
+}
+.wordmark:hover { color: var(--color-text); }
+.site-subtitle { color: var(--color-meta); font-size: 0.95rem; font-style: italic; }
+
+.primary-nav { margin: 1rem 0 1rem; }
+.primary-nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 1.25rem; margin: 0; padding: 0; }
+.primary-nav a { color: var(--color-text); text-decoration: none; font-size: 1rem; }
+.primary-nav a:hover, .primary-nav a[aria-current='page'] { color: var(--color-gold); text-decoration: underline; }
+
+/* Banner (Tier 1 only) */
+.banner { width: 100%; aspect-ratio: 21 / 9; overflow: hidden; background: var(--color-surface); }
+.banner img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+
+/* ====================================================================
+   CONTENT BLOCKS
+   ==================================================================== */
+.greek-epigraph {
+  font-family: var(--font-greek);
+  font-size: 1.5rem;
+  color: var(--color-text);
+  margin: 0 0 1.5rem;
+  padding-left: 1rem;
+  border-left: var(--rule) solid var(--color-gold);
+}
+
+.passage-ref { color: var(--color-meta); font-size: 0.95rem; letter-spacing: 0.02em; margin: 0 0 0.5rem; }
+
+/* The "Watch the lecture" call near a section heading */
+.lecture-link {
+  display: inline-block;
+  margin: 0.25rem 0 1.75rem;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--color-border);
+  border-left: var(--rule) solid var(--color-gold);
+  border-radius: 2px;
+  background: var(--color-surface);
+  text-decoration: none;
+  color: var(--color-text);
+}
+.lecture-link:hover { color: var(--color-text); border-left-color: var(--color-gold-soft); }
+.lecture-link .label { display: block; font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--color-meta); }
+
+/* Section TOC (auto-generated) */
+.section-toc { margin: 2rem 0; }
+.section-toc ol { list-style: none; counter-reset: toc; margin: 0; padding: 0; }
+.section-toc li { border-top: 1px solid var(--color-border); }
+.section-toc li:last-child { border-bottom: 1px solid var(--color-border); }
+.section-toc a { display: block; padding: 0.8rem 0; text-decoration: none; color: var(--color-text); }
+.section-toc a:hover { color: var(--color-gold); }
+.section-toc .toc-title { font-size: 1.1rem; }
+.section-toc .toc-desc { display: block; color: var(--color-meta); font-size: 0.95rem; margin-top: 0.15rem; }
+
+/* Diagram figure */
+figure.diagram { margin: 2.5rem 0; }
+figure.diagram img { display: block; margin-inline: auto; }
+figure.diagram figcaption { color: var(--color-meta); font-size: 0.95rem; margin-top: 0.6rem; text-align: center; }
+
+/* Video embed (Bunny / responsive) */
+.video-embed { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 3px; overflow: hidden; margin: 1.5rem 0; }
+.video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+.lecture-resources { list-style: none; padding: 0; margin: 1.5rem 0; display: flex; flex-wrap: wrap; gap: 1.25rem; }
+.lecture-resources a { text-decoration: none; }
+
+.back-link { display: inline-block; margin: 1.5rem 0; color: var(--color-meta); text-decoration: none; }
+.back-link:hover { color: var(--color-gold); }
+
+/* ====================================================================
+   FOOTNOTES (remark-gfm renders <section class="footnotes"> at doc end)
+   ==================================================================== */
+.footnotes { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--color-border); font-size: 0.95rem; color: var(--color-text); }
+.footnotes h2.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.footnotes ol { padding-left: 1.25rem; }
+.footnotes li { margin-bottom: 0.6rem; }
+.footnotes li::marker { color: var(--color-meta); }
+[data-footnote-ref], a[data-footnote-backref] { text-decoration: none; }
+
+/* ====================================================================
+   FOOTER
+   ==================================================================== */
+.site-footer { margin-top: 3rem; padding: 2rem 0 2.5rem; color: var(--color-footer); font-size: 0.95rem; }
+.citation-block { margin-bottom: 1rem; }
+.citation-block .canonical { color: var(--color-footer); word-break: break-all; }
+.footer-license a { color: var(--color-link); }
+.footer-utility { list-style: none; display: flex; flex-wrap: wrap; gap: 1rem; padding: 0; margin: 0.75rem 0; }
+.footer-utility a { color: var(--color-meta); text-decoration: none; font-size: 0.9rem; }
+.footer-series { color: var(--color-meta); font-size: 0.85rem; margin-top: 0.75rem; }
+
+/* Print-only citation footer (hidden on screen) */
+.print-citation { display: none; }
+
+/* ====================================================================
+   PRINT STYLESHEET
+   Clean polytonic Greek/Hebrew in print (font-face embeds print fine);
+   footnotes render at section-end (GFM already does); chrome suppressed;
+   page metadata at document end for citation.
+   ==================================================================== */
+@media print {
+  :root { --color-bg: #fff; --color-text: #000; }
+  body { font-size: 11.5pt; line-height: 1.45; }
+  .site-header, .primary-nav, .banner, .gold-rule, .site-footer,
+  .video-embed, .lecture-link, .lecture-resources, .back-link,
+  .section-toc { display: none !important; }
+  main, .reading { max-width: none; padding: 0; }
+  a { color: #000; text-decoration: none; }
+  /* keep footnote sequence with its content, avoid awkward breaks */
+  .footnotes, .greek-epigraph, blockquote, figure { break-inside: avoid; }
+  h1, h2, h3, h4 { break-after: avoid; }
+  .print-citation {
+    display: block;
+    margin-top: 2rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #000;
+    font-size: 9.5pt;
+    color: #000;
+  }
+}
+
+/* ====================================================================
+   RESPONSIVE
+   ==================================================================== */
+@media (max-width: 600px) {
+  :root { --size-body: 1.0625rem; }
+  .wordmark { font-size: 1.35rem; }
+  .primary-nav ul { gap: 0.85rem; }
+}

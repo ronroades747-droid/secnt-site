@@ -1,0 +1,39 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import BunnyEmbed from '../../../../components/BunnyEmbed.astro';
+import SectionToc from '../../../../components/SectionToc.astro';
+import { splitCommentaryId, normalizeId, isVisible } from '../../../../lib/site';
+
+export async function getStaticPaths() {
+  const landings = (await getCollection('commentary'))
+    .filter((e) => e.data.sectionType === 'unit-landing' && isVisible(e));
+  const lectures = await getCollection('lectures');
+  return landings.map((entry) => {
+    const { book, unit } = splitCommentaryId(entry.id);
+    const lecture = lectures.find((l) => normalizeId(l.data.sectionRef.id) === entry.id);
+    return { params: { book, unit }, props: { entry, lecture } };
+  });
+}
+const { entry, lecture } = Astro.props;
+const { Content } = await render(entry);
+const showLecture = lecture && isVisible(lecture);
+---
+<BaseLayout title={entry.data.title} description={entry.data.description}
+  pageMeta={{ date: entry.data.date, updated: entry.data.updated, license: entry.data.license, passageRef: entry.data.passageRef }}>
+  <article class="reading reading--wide">
+    {entry.data.passageRef && <p class="passage-ref">John {entry.data.passageRef}</p>}
+    <h1>{entry.data.title}</h1>
+    {entry.data.greekEpigraph && <p class="greek-epigraph">{entry.data.greekEpigraph}</p>}
+
+    {showLecture && (
+      <section aria-label="Introductory lecture">
+        <BunnyEmbed videoId={lecture.data.bunnyVideoId} title={lecture.data.title} />
+      </section>
+    )}
+
+    <Content />
+
+    <SectionToc unitId={entry.id} />
+  </article>
+</BaseLayout>

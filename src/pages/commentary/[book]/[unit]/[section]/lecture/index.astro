@@ -1,0 +1,41 @@
+---
+import { getCollection, getEntry, render } from 'astro:content';
+import BaseLayout from '../../../../../../layouts/BaseLayout.astro';
+import BunnyEmbed from '../../../../../../components/BunnyEmbed.astro';
+import { splitCommentaryId, normalizeId, commentaryUrl, isVisible } from '../../../../../../lib/site';
+
+export async function getStaticPaths() {
+  const lectures = (await getCollection('lectures')).filter(isVisible);
+  const paths = [];
+  for (const lecture of lectures) {
+    const refId = normalizeId(lecture.data.sectionRef.id);
+    // Unit-landing lecture (2-segment id) is embedded inline — no /lecture/ route.
+    if (refId.split('/').length < 3) continue;
+    const section = await getEntry('commentary', refId);
+    if (!section || !isVisible(section)) continue;
+    const { book, unit, section: sec } = splitCommentaryId(section.id);
+    paths.push({ params: { book, unit, section: sec }, props: { lecture, section } });
+  }
+  return paths;
+}
+const { lecture, section } = Astro.props;
+const l = lecture.data;
+const { Content } = await render(lecture);
+---
+<BaseLayout title={l.title} description={l.description}
+  pageMeta={{ date: l.date, updated: l.updated, license: l.license, passageRef: section.data.passageRef }}>
+  <article class="reading reading--wide">
+    <h1>{l.title}</h1>
+    <BunnyEmbed videoId={l.bunnyVideoId} title={l.title} />
+
+    <a class="back-link" href={commentaryUrl(section.id)}>← Read the commentary: {section.data.title}</a>
+
+    <ul class="lecture-resources">
+      {l.youtubeUrl && <li><a href={l.youtubeUrl} rel="noopener">Watch on YouTube</a></li>}
+      {l.slidesPdf && <li><a href={l.slidesPdf}>Download slides (PDF)</a></li>}
+      {l.duration && l.duration !== '00:00' && <li>Runtime: {l.duration}</li>}
+    </ul>
+
+    <Content />
+  </article>
+</BaseLayout>

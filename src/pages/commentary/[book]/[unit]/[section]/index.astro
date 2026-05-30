@@ -1,0 +1,54 @@
+---
+import { getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
+import BaseLayout from '../../../../../layouts/BaseLayout.astro';
+import { splitCommentaryId, normalizeId, lectureUrl, isVisible } from '../../../../../lib/site';
+
+export async function getStaticPaths() {
+  const sections = (await getCollection('commentary'))
+    .filter((e) => e.data.sectionType !== 'unit-landing' && isVisible(e));
+  const lectures = await getCollection('lectures');
+  return sections.map((entry) => {
+    const { book, unit, section } = splitCommentaryId(entry.id);
+    const lecture = lectures.find((l) => normalizeId(l.data.sectionRef.id) === entry.id);
+    return { params: { book, unit, section }, props: { entry, lecture } };
+  });
+}
+const { entry, lecture } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+const showLectureLink = d.hasLecture && lecture && isVisible(lecture);
+const diagramTop = d.diagram && d.diagram.position === 'top';
+const diagramBottom = d.diagram && d.diagram.position === 'bottom';
+---
+<BaseLayout title={d.title} description={d.description}
+  pageMeta={{ date: d.date, updated: d.updated, license: d.license, passageRef: d.passageRef }}>
+  <article class="reading">
+    {d.passageRef && <p class="passage-ref">John {d.passageRef}</p>}
+    <h1>{d.title}</h1>
+    {d.greekEpigraph && <p class="greek-epigraph">{d.greekEpigraph}</p>}
+
+    {showLectureLink && (
+      <a class="lecture-link" href={lectureUrl(entry.id)}>
+        <span class="label">Watch the paired lecture</span>
+        {lecture.data.title}
+      </a>
+    )}
+
+    {diagramTop && (
+      <figure class="diagram">
+        <Image src={d.diagram.src} alt={d.diagram.alt} />
+        {d.diagram.caption && <figcaption>{d.diagram.caption}</figcaption>}
+      </figure>
+    )}
+
+    <Content />
+
+    {diagramBottom && (
+      <figure class="diagram">
+        <Image src={d.diagram.src} alt={d.diagram.alt} />
+        {d.diagram.caption && <figcaption>{d.diagram.caption}</figcaption>}
+      </figure>
+    )}
+  </article>
+</BaseLayout>

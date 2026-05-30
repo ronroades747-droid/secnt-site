@@ -1,0 +1,30 @@
+---
+import { SITE, NAV } from '../lib/site';
+import Banner from './Banner.astro';
+interface Props { tier?: '1' | '2'; }
+const { tier = '2' } = Astro.props;
+const here = Astro.url.pathname;
+const isCurrent = (href: string) =>
+  href === '/' ? here === '/' : here === href || here.startsWith(href);
+---
+<header class="chrome site-header">
+  <div class="chrome-inner">
+    <a class="wordmark" href="/">{SITE.wordmark}</a>
+    <div class="site-identity">
+      <span class="site-subtitle">{SITE.name}</span>
+    </div>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        {NAV.map((item) => (
+          <li>
+            <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>
+<hr class="gold-rule" />
+{tier === '1' && <Banner />}

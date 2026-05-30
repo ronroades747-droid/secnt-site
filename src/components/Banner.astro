@@ -1,0 +1,10 @@
+---
+import { SITE } from '../lib/site';
+// Tier-1 chrome banner (homepage, volume, division landings). Drop the source
+// at /public/banner.jpg (the Deep in God's Word library image). Center-cropped
+// to 21:9 so the scholars-at-study and arched-doorway focal areas survive on
+// mobile, per the Visual Register.
+---
+<div class="banner">
+  <img src={SITE.banner.src} alt={SITE.banner.alt} width="2100" height="900" loading="eager" decoding="async" />
+</div>

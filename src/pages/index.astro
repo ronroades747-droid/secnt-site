@@ -1,17 +1,41 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { SITE, commentaryUrl, isVisible } from '../lib/site';
+const volumes = (await getCollection('volumes'))
+  .filter(isVisible)
+  .sort((a, b) => a.data.title.localeCompare(b.data.title));
 ---
+<BaseLayout
+  title={SITE.wordmark}
+  description="Verse-by-verse commentary on the New Testament at the systematic-theological register, paired with audiovisual lectures. Freely available under CC BY 4.0."
+  tier="1"
+>
+  <div class="reading reading--wide">
+    <h1>{SITE.name}</h1>
+    <p>
+      A multi-volume, verse-by-verse commentary on the New Testament. The
+      published Commentary is paired, section by section, with audiovisual
+      Lectures that teach the same scholarly work — the writing for readers at
+      depth, the lectures for teachers and students. The series is freely
+      available under a Creative Commons Attribution 4.0 license.
+    </p>
+    <p><em>Placeholder homepage prose — replace with the series-level statement.</em></p>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+    <h2>Volumes</h2>
+    <ul>
+      {volumes.map((v) => (
+        <li><a href={commentaryUrl(v.id)}>{v.data.title}</a></li>
+      ))}
+      {volumes.length === 0 && <li><a href="/commentary/john/">Commentary on the Gospel of John</a></li>}
+    </ul>
+
+    <h2>About the series</h2>
+    <ul>
+      <li><a href="/about/">About SECNT</a></li>
+      <li><a href="/architecture-principles/">Architecture Principles</a></li>
+      <li><a href="/methodology/">Methodology</a></li>
+      <li><a href="/citing/">Citing</a></li>
+    </ul>
+  </div>
+</BaseLayout>

@@ -1,18 +1,22 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import remarkGfm from 'remark-gfm';
 
-// SECNT — Scholars Exegetical Commentaries on the New Testament
-// Site config. Two settings here are load-bearing for the citation-stable
-// corpus (per the Jn 1:1–3 Site Structure Handoff, §4), not cosmetic:
+// SECNT — Systematic Evangelical Commentaries on the New Testament
+// (substantive series name per about.md §2; the earlier "Scholars Exegetical"
+// wording is superseded).
 //
-//   site:          the canonical origin. Astro uses this to build absolute
-//                  canonical URLs. Must be the production domain.
-//   trailingSlash: 'always' — every published URL ends in a slash, e.g.
-//                  /commentary/john/1-1-to-3/05-en-arche/. Citations point
-//                  at slashed URLs; this guarantees they resolve and that
-//                  Astro emits matching <link rel="canonical"> hrefs.
+// Load-bearing settings for the citation-stable corpus (not cosmetic):
+//   site:          canonical origin; Astro builds absolute canonical URLs from it.
+//   trailingSlash: 'always' — every published URL ends in a slash; citations
+//                  point at slashed URLs and <link rel="canonical"> matches.
+//   remark-gfm:    enables Markdown footnotes ([^1]) — the apparatus-substantial
+//                  Commentary renders its footnote apparatus at document end.
 
 export default defineConfig({
   site: 'https://secnt.org',
   trailingSlash: 'always',
+  markdown: {
+    remarkPlugins: [remarkGfm],
+  },
 });

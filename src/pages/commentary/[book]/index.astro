@@ -1,0 +1,41 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { commentaryUrl, isVisible } from '../../../lib/site';
+
+export async function getStaticPaths() {
+  const vols = (await getCollection('volumes')).filter(isVisible);
+  return vols.map((entry) => ({ params: { book: entry.data.book }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const units = (await getCollection('commentary'))
+  .filter((e) => e.data.sectionType === 'unit-landing' && e.data.book === entry.data.book && isVisible(e))
+  .sort((a, b) => (a.data.chapter - b.data.chapter) || ((a.data.verseStart ?? 0) - (b.data.verseStart ?? 0)));
+---
+<BaseLayout title={entry.data.title} description={entry.data.description} tier="1"
+  pageMeta={{ date: entry.data.date, updated: entry.data.updated, license: entry.data.license }}>
+  <div class="reading reading--wide">
+    <h1>{entry.data.title}</h1>
+    <Content />
+
+    <h2>Published units</h2>
+    {units.length === 0 ? (
+      <p>No units published yet.</p>
+    ) : (
+      <nav class="section-toc" aria-label="Published units">
+        <ol>
+          {units.map((u) => (
+            <li>
+              <a href={commentaryUrl(u.id)}>
+                <span class="toc-title">{u.data.title}</span>
+                <span class="toc-desc">{u.data.passageRef ? `John ${u.data.passageRef} — ` : ''}{u.data.description}</span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+    )}
+  </div>
+</BaseLayout>

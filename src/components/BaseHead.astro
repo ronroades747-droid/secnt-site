@@ -1,0 +1,26 @@
+---
+import { SITE, canonical } from '../lib/site';
+interface Props { title: string; description?: string; }
+const { title, description } = Astro.props;
+const canonicalURL = canonical(Astro.url.pathname);
+const fullTitle = title === SITE.wordmark ? title : `${title} — ${SITE.wordmark}`;
+---
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content={Astro.generator} />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" href="/favicon.ico" />
+
+<title>{fullTitle}</title>
+{description && <meta name="description" content={description} />}
+<link rel="canonical" href={canonicalURL} />
+
+<meta name="author" content={SITE.author} />
+<meta name="license" content={SITE.licenseName} />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content={SITE.name} />
+<meta property="og:title" content={title} />
+{description && <meta property="og:description" content={description} />}
+<meta property="og:url" content={canonicalURL} />

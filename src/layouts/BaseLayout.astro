@@ -1,0 +1,43 @@
+---
+import '../styles/global.css';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE, canonical } from '../lib/site';
+
+interface Props {
+  title: string;
+  description?: string;
+  tier?: '1' | '2';
+  pageMeta?: {
+    date?: Date;
+    updated?: Date;
+    license?: string;
+    passageRef?: string;
+  };
+}
+const { title, description, tier = '2', pageMeta } = Astro.props;
+const canonicalURL = canonical(Astro.url.pathname);
+const citeYear = pageMeta?.date?.getFullYear();
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
+  <body>
+    <Header tier={tier} />
+    <main>
+      <slot />
+      <!-- Citation block rendered only in print, at document end. -->
+      <div class="print-citation">
+        {pageMeta?.passageRef && <div>John {pageMeta.passageRef}</div>}
+        {pageMeta?.date && <div>Published {pageMeta.date.toISOString().slice(0, 10)}</div>}
+        {pageMeta?.updated && <div>Revised {pageMeta.updated.toISOString().slice(0, 10)}</div>}
+        <div>{pageMeta?.license ?? SITE.licenseName} · {SITE.author}</div>
+        <div>{canonicalURL}</div>
+      </div>
+    </main>
+    <Footer citeYear={citeYear} />
+  </body>
+</html>

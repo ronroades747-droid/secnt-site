@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+import { commentaryUrl, isVisible } from '../lib/site';
+// Auto-generated unit TOC. Reads the commentary collection, keeps the children
+// of `unitId`, sorts by sectionNumber, and renders DESCRIPTIVE TITLES ONLY —
+// never section numbers, never slug numbers, never lectures. Count-agnostic:
+// new sections appear automatically; the §5.4 provisional folders slot in by
+// sectionNumber when they land.
+interface Props { unitId: string; }
+const { unitId } = Astro.props;
+const prefix = unitId + '/';
+const sections = (await getCollection('commentary'))
+  .filter((e) => e.id.startsWith(prefix) && isVisible(e))
+  .sort((a, b) => a.data.sectionNumber - b.data.sectionNumber);
+---
+{sections.length > 0 && (
+  <nav class="section-toc" aria-label="Sections in this unit">
+    <ol>
+      {sections.map((s) => (
+        <li>
+          <a href={commentaryUrl(s.id)}>
+            <span class="toc-title">{s.data.title}</span>
+            <span class="toc-desc">{s.data.description}</span>
+          </a>
+        </li>
+      ))}
+    </ol>
+  </nav>
+)}
