@@ -37,7 +37,7 @@
 
   --size-body: 1.125rem;   /* ~18px */
   --leading-body: 1.65;
-  --measure: 68ch;         /* reading column 60–75 chars */
+  --measure: 72ch;         /* reading column 60–75 chars */
   --chrome-max: 1200px;    /* full-width chrome cap */
 
   --space: 1.5rem;
