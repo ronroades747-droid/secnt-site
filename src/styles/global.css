@@ -27,17 +27,17 @@
   --color-border: #d4d0c7;    /* warm grey */
   --color-meta: #6b6b6b;      /* metadata grey */
   --color-footer: #555555;    /* footer text grey */
-  --color-link-hover: #6e5206;
-  --color-link: #8a6608;
+  --color-link: var(--color-gold);
+  --color-link-hover: #8a6608;
 
   /* Typography. Latin in the body serif; Greek/Hebrew fall through to SBL
      BibLit via the unicode-range @font-face. */
-  --font-serif: 'Source Serif 4','EB Garamond', 'SBL BibLit', Cardo, Georgia, 'Times New Roman', serif;
+  --font-serif: 'EB Garamond', 'SBL BibLit', Cardo, Georgia, 'Times New Roman', serif;
   --font-greek: 'SBL BibLit', Cardo, var(--font-serif);
 
   --size-body: 1.125rem;   /* ~18px */
   --leading-body: 1.65;
-  --measure: 72ch;         /* reading column 60–75 chars */
+  --measure: 72ch;         /* reading column ~65–72 chars */
   --chrome-max: 1200px;    /* full-width chrome cap */
 
   --space: 1.5rem;
@@ -173,6 +173,13 @@ main { flex: 1 0 auto; width: 100%; }
 figure.diagram { margin: 2.5rem 0; }
 figure.diagram img { display: block; margin-inline: auto; }
 figure.diagram figcaption { color: var(--color-meta); font-size: 0.95rem; margin-top: 0.6rem; text-align: center; }
+
+/* Block quotes — scholarly quotation and the editor's welcome */
+blockquote { margin: 1.6rem 0; padding: 0.2rem 0 0.2rem 1.3rem; border-left: 3px solid var(--color-gold-soft); }
+blockquote > :first-child { margin-top: 0; }
+blockquote > :last-child { margin-bottom: 0; }
+blockquote.editor-welcome p { font-style: italic; }
+blockquote footer { margin-top: 0.85rem; font-size: 0.95rem; font-style: normal; color: var(--color-meta); }
 
 /* Video embed (Bunny / responsive) */
 .video-embed { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 3px; overflow: hidden; margin: 1.5rem 0; }
