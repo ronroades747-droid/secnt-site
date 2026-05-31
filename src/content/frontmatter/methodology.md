@@ -1,3 +1,10 @@
+---
+title: "Methodology"
+description: "How the Commentary's scholarly resolutions are reached, documented, and refined — the dialogical research methodology behind SECNT."
+date: 2026-05-30
+order: 3
+license: CC-BY-4.0
+---
 # Methodology
 
 This page is the means-of-production counterpart to `/architecture-principles/`. Where that page articulates *what* the architectural-systematic shape is, this page articulates *how* that shape is produced — the editorial model under which the scholarship is adjudicated, the depth and reach of the research behind each position, the source-engagement standards, the shift from working notation to published apparatus, the calibration of confidence to the scope of a claim, the governance under which locked positions are refined, and the design of the whole to be carried forward by editors who come later. Several disciplines operate at both registers and are engaged at both pages; cross-references hold the coordination without re-argument.

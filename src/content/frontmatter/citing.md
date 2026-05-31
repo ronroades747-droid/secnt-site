@@ -1,3 +1,10 @@
+---
+title: "Citing SECNT"
+description: "How to cite the Commentary and Lectures, and what the CC BY 4.0 license permits."
+date: 2026-05-30
+order: 4
+license: CC-BY-4.0
+---
 # Citing SECNT
 
 The series is freely available under a Creative Commons Attribution 4.0 International license (CC BY 4.0). You are free to quote it, share it, and build on it — in teaching, in publication, in translation, for any purpose — provided you give appropriate credit and indicate any changes you make. This page sets out how to cite the Commentary and the Lectures, and what the license asks in return.
