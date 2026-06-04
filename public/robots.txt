@@ -1,0 +1,31 @@
+# secnt.org — robots policy
+# Locked OA&M posture: user-action retrieval allowed; AI *training* crawlers blocked.
+# Shipped from the repo so the policy is versioned and stable. NOTE: this file is
+# only served if Cloudflare's "managed robots.txt" (AI Crawl Control) is turned OFF;
+# otherwise the edge-managed file overrides it.
+
+# Default — allow well-behaved agents (human browsers, search indexing).
+User-agent: *
+Disallow:
+
+# Anthropic user-action + search agents — explicitly allowed.
+# Claude-User is the agent Production uses to read the live site.
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+# AI training crawlers — disallowed (the locked "block training crawlers" decision).
+# Edit this list to taste; these are the common ones.
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
