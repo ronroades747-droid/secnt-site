@@ -1,17 +1,19 @@
-<!--
-  SECNT · paste-ready BODY for the unit landing stub
-  Paste UNDER the existing frontmatter of src/content/commentary/john/1-1-to-3/index.md
-  (stub frontmatter untouched; sectionNumber: 0, sectionType: unit-landing are Dev-owned).
-  Body starts at ## per the commentary runbook — the template renders the <h1>,
-  passage ref, epigraph, and the Lecture 1 embed from frontmatter and pairing.
-  FOOTNOTES — pass completed June 4, 2026: the §1–§3 export carries no footnote
-  apparatus and no flattened-marker traces; the front matter's source disclosures
-  are inline in the prose by design. Residual check: one glance at §1–§3 of the
-  manuscript .docx for superscript markers; if none, this item is closed.
-  The Architectural Orientation Diagram is NOT in this body — it belongs in the
-  stub's `diagram` frontmatter field (see the Dev handoff note), and is on hold
-  behind the landing-template fix.
--->
+---
+title: "The Word in the Beginning"
+description: "John 1:1–3 — the Prologue's opening movement: the Word's eternal ontology, the Word's relation to God, the Word's full deity, and the Word's creational agency, with the v. 3 → v. 4 architectural pivot."
+date: 2026-05-30
+book: john
+chapter: 1
+passageRef: "1:1–3"
+sectionNumber: 0
+verseStart: 1
+verseEnd: 3
+sectionType: unit-landing
+greekEpigraph: "Ἐν ἀρχῇ ἦν ὁ λόγος"
+license: CC-BY-4.0
+hasLecture: true
+draft: true
+---
 
 ## 1. Introduction
 
