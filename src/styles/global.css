@@ -32,7 +32,7 @@
 
   /* Typography. Latin in the body serif; Greek/Hebrew fall through to SBL
      BibLit via the unicode-range @font-face. */
-  --font-serif: 'EB Garamond', 'SBL BibLit', Cardo, Georgia, 'Times New Roman', serif;
+  --font-serif: 'Source Serif 4', 'EB Garamond', 'SBL BibLit', Cardo, Georgia, 'Times New Roman', serif;
   --font-greek: 'SBL BibLit', Cardo, var(--font-serif);
 
   --size-body: 1.125rem;   /* ~18px */
