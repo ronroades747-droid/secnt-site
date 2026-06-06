@@ -1,0 +1,50 @@
+---
+// Persistent unit navigation. Lists the unit landing ("Introduction") plus
+// every PUBLISHED section in order, with the current page marked. Rendered on
+// the unit landing and on every section page so any published section is one
+// click away from anywhere — no scrolling to a bottom-of-page list. Shows the
+// "more to come" note (driven by the landing's passageComplete) at the foot
+// while the passage is in progress. Count- and draft-aware via isVisible.
+import { getCollection } from 'astro:content';
+import { commentaryUrl, isVisible } from '../lib/site';
+
+interface Props {
+  unitId: string;       // e.g. "john/1-1-to-3"
+  currentId?: string;   // section id, or undefined on the landing
+}
+const { unitId, currentId } = Astro.props;
+
+const all = await getCollection('commentary');
+const landing = all.find((e) => e.id === unitId);
+const sections = all
+  .filter((e) => e.id.startsWith(unitId + '/') && isVisible(e))
+  .sort((a, b) => a.data.sectionNumber - b.data.sectionNumber);
+
+const items: { id: string; url: string; label: string }[] = [];
+if (landing && isVisible(landing)) {
+  items.push({ id: landing.id, url: commentaryUrl(landing.id), label: 'Introduction' });
+}
+for (const s of sections) {
+  items.push({ id: s.id, url: commentaryUrl(s.id), label: s.data.title });
+}
+
+const current = currentId ?? unitId;
+const showMore = landing ? landing.data.passageComplete !== true : true;
+---
+{items.length > 0 && (
+  <nav class="unit-nav" aria-label="Sections in this unit">
+    <p class="unit-nav__heading">Sections</p>
+    <ol>
+      {items.map((it) => (
+        <li>
+          {it.id === current ? (
+            <span class="unit-nav__current" aria-current="page">{it.label}</span>
+          ) : (
+            <a href={it.url}>{it.label}</a>
+          )}
+        </li>
+      ))}
+    </ol>
+    {showMore && <p class="unit-nav__more">More to come; check back soon.</p>}
+  </nav>
+)}

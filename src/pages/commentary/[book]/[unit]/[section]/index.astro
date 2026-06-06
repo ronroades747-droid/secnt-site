@@ -2,6 +2,8 @@
 import { getCollection, render } from 'astro:content';
 import { Image } from 'astro:assets';
 import BaseLayout from '../../../../../layouts/BaseLayout.astro';
+import UnitNav from '../../../../../components/UnitNav.astro';
+import PrevNext from '../../../../../components/PrevNext.astro';
 import { splitCommentaryId, normalizeId, lectureUrl, isVisible } from '../../../../../lib/site';
 
 export async function getStaticPaths() {
@@ -15,6 +17,8 @@ export async function getStaticPaths() {
   });
 }
 const { entry, lecture } = Astro.props;
+const { book, unit } = splitCommentaryId(entry.id);
+const unitId = `${book}/${unit}`;
 const { Content } = await render(entry);
 const d = entry.data;
 const showLectureLink = d.hasLecture && lecture && isVisible(lecture);
@@ -23,6 +27,8 @@ const diagramBottom = d.diagram && d.diagram.position === 'bottom';
 ---
 <BaseLayout title={d.title} description={d.description}
   pageMeta={{ date: d.date, updated: d.updated, license: d.license, passageRef: d.passageRef }}>
+  <div class="unit-layout">
+  <UnitNav unitId={unitId} currentId={entry.id} />
   <article class="reading">
     {d.passageRef && <p class="passage-ref">John {d.passageRef}</p>}
     <h1>{d.title}</h1>
@@ -50,5 +56,8 @@ const diagramBottom = d.diagram && d.diagram.position === 'bottom';
         {d.diagram.caption && <figcaption>{d.diagram.caption}</figcaption>}
       </figure>
     )}
+
+    <PrevNext unitId={unitId} currentId={entry.id} />
   </article>
+  </div>
 </BaseLayout>

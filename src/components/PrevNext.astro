@@ -1,0 +1,53 @@
+---
+// Previous / Next pager across the unit's PUBLISHED sequence: the landing
+// ("Introduction") followed by published sections in order. Lets a reader work
+// straight through the unit without returning to the contents list. Draft-aware
+// via isVisible, so it only steps between published pairs.
+import { getCollection } from 'astro:content';
+import { commentaryUrl, isVisible } from '../lib/site';
+
+interface Props {
+  unitId: string;
+  currentId?: string;
+}
+const { unitId, currentId } = Astro.props;
+
+const all = await getCollection('commentary');
+const landing = all.find((e) => e.id === unitId);
+const sections = all
+  .filter((e) => e.id.startsWith(unitId + '/') && isVisible(e))
+  .sort((a, b) => a.data.sectionNumber - b.data.sectionNumber);
+
+const seq: { id: string; url: string; label: string }[] = [];
+if (landing && isVisible(landing)) {
+  seq.push({ id: landing.id, url: commentaryUrl(landing.id), label: 'Introduction' });
+}
+for (const s of sections) {
+  seq.push({ id: s.id, url: commentaryUrl(s.id), label: s.data.title });
+}
+
+const current = currentId ?? unitId;
+const i = seq.findIndex((x) => x.id === current);
+const prev = i > 0 ? seq[i - 1] : null;
+const next = i >= 0 && i < seq.length - 1 ? seq[i + 1] : null;
+---
+{(prev || next) && (
+  <nav class="prev-next" aria-label="Section navigation">
+    {prev ? (
+      <a class="prev-next__link prev-next__prev" href={prev.url}>
+        <span class="prev-next__dir">← Previous</span>
+        <span class="prev-next__title">{prev.label}</span>
+      </a>
+    ) : (
+      <span></span>
+    )}
+    {next ? (
+      <a class="prev-next__link prev-next__next" href={next.url}>
+        <span class="prev-next__dir">Next →</span>
+        <span class="prev-next__title">{next.label}</span>
+      </a>
+    ) : (
+      <span></span>
+    )}
+  </nav>
+)}
