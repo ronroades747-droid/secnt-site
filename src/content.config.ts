@@ -150,6 +150,12 @@ const commentary = defineCollection({
         .default([]),
 
       hasLecture: z.boolean().default(true),
+
+      // Unit-landing only. Marks a passage as fully published ("exhausted").
+      // While false, the unit-landing page shows a "more to come" line; flip to
+      // true in the same commit that publishes the passage's final pair and the
+      // line retires itself. Ignored on section entries.
+      passageComplete: z.boolean().default(false),
     }),
 });
 

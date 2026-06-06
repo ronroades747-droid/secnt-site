@@ -12,6 +12,7 @@ sectionType: unit-landing
 greekEpigraph: "Ἐν ἀρχῇ ἦν ὁ λόγος"
 license: CC-BY-4.0
 hasLecture: true
+passageComplete: false
 draft: true
 ---
 

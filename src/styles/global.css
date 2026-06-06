@@ -168,6 +168,7 @@ main { flex: 1 0 auto; width: 100%; }
 .section-toc a:hover { color: var(--color-gold); }
 .section-toc .toc-title { font-size: 1.1rem; }
 .section-toc .toc-desc { display: block; color: var(--color-meta); font-size: 0.95rem; margin-top: 0.15rem; }
+.more-to-come { color: var(--color-meta); font-size: 0.95rem; font-style: italic; margin: 1.5rem 0 0; }
 
 /* Diagram figure */
 figure.diagram { margin: 2.5rem 0; }
@@ -226,7 +227,7 @@ blockquote footer { margin-top: 0.85rem; font-size: 0.95rem; font-style: normal;
   body { font-size: 11.5pt; line-height: 1.45; }
   .site-header, .primary-nav, .banner, .gold-rule, .site-footer,
   .video-embed, .lecture-link, .lecture-resources, .back-link,
-  .section-toc { display: none !important; }
+  .section-toc, .more-to-come { display: none !important; }
   main, .reading { max-width: none; padding: 0; }
   a { color: #000; text-decoration: none; }
   /* keep footnote sequence with its content, avoid awkward breaks */

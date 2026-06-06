@@ -35,5 +35,9 @@ const showLecture = lecture && isVisible(lecture);
     <Content />
 
     <SectionToc unitId={entry.id} />
+
+    {!entry.data.passageComplete && (
+      <p class="more-to-come">More to come; check back soon.</p>
+    )}
   </article>
 </BaseLayout>
