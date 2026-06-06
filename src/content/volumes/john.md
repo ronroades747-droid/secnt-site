@@ -5,7 +5,7 @@ book: john
 bookDisplay: John
 date: 2026-05-30
 license: CC-BY-4.0
-draft: true
+draft: false
 ---
 
 Among the four Gospels, John is the one that reaches furthest back and furthest down. It opens not with a manger or a genealogy but before creation — "In the beginning was the Word" — and it carries the simplest vocabulary in the New Testament alongside its most searching thought. Its surface is plain enough to read aloud to a child; its depths have held the attention of the church's most careful readers for twenty centuries and are not yet exhausted.
