@@ -1,0 +1,23 @@
+---
+// Astro emits this as dist/404.html. Cloudflare Pages serves it (with a real
+// 404 status) for any unmatched path — replacing the soft-404 fallback that
+// silently served the homepage. Note: a zone-level catch-all redirect to "/"
+// will shadow this until it is removed in Cloudflare.
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Page not found" description="The page you requested could not be found.">
+  <article class="reading">
+    <h1>Page not found</h1>
+    <p>
+      The page you’re looking for doesn’t exist, or it may have moved. If you
+      arrived here from a citation, check the URL — the published Commentary
+      lives under <a href="/commentary/john/">Commentary</a>, and each unit has a
+      stable canonical address (for example,
+      <code>secnt.org/commentary/john/1-1-to-3/</code>).
+    </p>
+    <p>
+      Return to the <a href="/">homepage</a>, or read the
+      <a href="/commentary/john/">Commentary on the Gospel of John</a>.
+    </p>
+  </article>
+</BaseLayout>
