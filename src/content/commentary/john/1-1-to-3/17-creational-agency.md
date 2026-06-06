@@ -5,7 +5,7 @@ date: 2026-05-30
 book: john
 chapter: 1
 passageRef: "1:1–3"
-sectionNumber: 18
+sectionNumber: 17
 verseStart: 1
 verseEnd: 3
 sectionType: theology

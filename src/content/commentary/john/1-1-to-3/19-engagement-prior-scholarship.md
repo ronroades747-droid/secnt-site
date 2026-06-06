@@ -5,7 +5,7 @@ date: 2026-05-30
 book: john
 chapter: 1
 passageRef: "1:1–3"
-sectionNumber: 20
+sectionNumber: 19
 verseStart: 1
 verseEnd: 3
 sectionType: engagement

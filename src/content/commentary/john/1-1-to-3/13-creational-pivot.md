@@ -5,7 +5,7 @@ date: 2026-05-30
 book: john
 chapter: 1
 passageRef: "1:1–3"
-sectionNumber: 14
+sectionNumber: 13
 verseStart: 3
 verseEnd: 3
 sectionType: synthesis

@@ -5,7 +5,7 @@ date: 2026-05-30
 book: john
 chapter: 1
 passageRef: "1:1–3"
-sectionNumber: 21
+sectionNumber: 20
 verseStart: 1
 verseEnd: 3
 sectionType: pastoral
