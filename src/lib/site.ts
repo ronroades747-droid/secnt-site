@@ -30,7 +30,7 @@ export const NAV = [
   { label: 'Architecture Principles', href: '/architecture-principles/' },
   { label: 'Methodology', href: '/methodology/' },
   { label: 'Citing', href: '/citing/' },
-  { label: 'Commentary', href: '/commentary/john/' },
+  { label: 'Commentary', href: '/commentary/' },
   { label: 'Articles', href: '/articles/' },
 ];
 
