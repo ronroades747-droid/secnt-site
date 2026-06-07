@@ -1,10 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import { SITE, commentaryUrl, isVisible } from '../lib/site';
+import { SITE, commentaryUrl, articleUrl, isVisible } from '../lib/site';
 const volumes = (await getCollection('volumes'))
   .filter(isVisible)
   .sort((a, b) => a.data.title.localeCompare(b.data.title));
+// Parent articles only (chapters excluded); gated so the homepage shows an
+// Articles entry point only once an article is published — the home page is
+// the front door to both genres, distinct from /commentary/ (volumes only)
+// and /articles/ (articles only), never showing an empty "coming" section.
+const articles = (await getCollection('articles'))
+  .filter((a) => !a.id.includes('/') && isVisible(a))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 <BaseLayout
   title={SITE.wordmark}
@@ -46,6 +53,17 @@ const volumes = (await getCollection('volumes'))
       ))}
       {volumes.length === 0 && <li><a href="/commentary/john/">Commentary on the Gospel of John</a></li>}
     </ul>
+
+    {articles.length > 0 && (
+      <Fragment>
+        <h2>Articles</h2>
+        <ul>
+          {articles.map((a) => (
+            <li><a href={articleUrl(a.id)}>{a.data.title}</a></li>
+          ))}
+        </ul>
+      </Fragment>
+    )}
 
     <h2>About the series</h2>
     <ul>
