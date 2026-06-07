@@ -114,14 +114,17 @@ const volumes = defineCollection({
 // Collection: articles  —  article register
 // ---------------------------------------------------------------------------
 // Top-level section parallel to Commentary (IA decision, June 6, 2026).
-// Designed against the first real article — the 1974 M.A. thesis — which
-// exists as a scanned typescript, not born-digital prose. Two article shapes
-// are therefore supported by one schema:
-//   - born-print: the `pdf` field carries the artifact; the page body is the
-//     scholarly landing prose (what the work is, its provenance, how to cite)
-//   - born-digital: omit `pdf`; the body carries the full article prose
-// Start minimal, extend deliberately (abstract/keywords/DOI wait until a
-// real article needs them).
+// Designed against the first real article — the 1974 M.A. thesis. Articles
+// take two shapes, both in this one collection, with path owning identity:
+//   - single-page article: one file, articles/slug.md; the body carries the
+//     full prose (or the landing prose for a born-print PDF artifact)
+//   - chaptered article (theses): a folder, articles/slug/index.md as the
+//     article landing plus articles/slug/NN-or-name.md chapter children,
+//     publishing chapter by chapter under the incremental-exposure rhythm
+//     (the landing lists published chapters; `complete` retires the
+//     "More to come" line, like passageComplete on commentary landings)
+// An entry whose id contains '/' is a chapter; chapters require
+// chapterNumber for ordering. Start minimal, extend deliberately.
 const articles = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/articles' }),
   schema: () =>
@@ -136,6 +139,12 @@ const articles = defineCollection({
       // the title and in the listing (e.g. "M.A. thesis, Wheaton College,
       // June 1974"). Omitted for articles original to SECNT.
       provenance: z.string().optional(),
+      // Chapters only: ordering within the parent article (routing/order,
+      // never reader-facing — the title carries the reader-facing name).
+      chapterNumber: z.number().int().positive().optional(),
+      // Article landing only: flipped true in the commit that publishes the
+      // final chapter; retires the "More to come" line.
+      complete: z.boolean().default(false),
       // The artifact, for born-print articles. `src` is a site-absolute path
       // under /articles/ in public/ (PDFs bypass the asset pipeline).
       pdf: z

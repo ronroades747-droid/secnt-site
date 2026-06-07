@@ -1,20 +1,17 @@
 ---
-title: "The Text of the Gospel of John in the Writings of Gregory of Nyssa"
-description: "A text-critical collation and study of Gregory of Nyssa's citations and adaptations of the Gospel of John."
+title: "Chapter 1"
+description: "The text of John 1 in Gregory's citations, references, and adaptations — pp. 16–22 of the typescript."
 date: 2026-06-06
-provenance: "M.A. thesis, Wheaton College, June 1974"
-pdf:
-  src: /articles/roades-1974-text-of-john-in-gregory-of-nyssa-sample.pdf
-  pages: 8
-  sizeMB: 12.3
-  label: "Original typescript (facsimile scan)"
-  note: "Sample — the title page and pages 16–22. The digital text above is the publication text; the scan is preserved as the facsimile of record."
+chapterNumber: 1
 license: CC-BY-4.0
 draft: true
 ---
 
+
 <!-- TRANSCRIPTION SAMPLE — Dev-transcribed from the facsimile (pp. 16–18) to
      establish the markdown conventions for the apparatus genre. Conventions:
+     · The typescript's chapter heading is carried by this stub's frontmatter
+       title — the delivered body must NOT repeat it (no-body-h1 rule)
      · Verse lemma: bold verse number, polytonic Greek, thesis sigla ( ) [ ]
        preserved exactly
      · Lettered text-critical notes (a), (b)… : markdown footnotes, anchored
@@ -27,8 +24,6 @@ draft: true
        Gregory's text underlined with <u> (typescript's meaning-bearing
        underline); apparatus Greek unaccented, as in the typescript
      Verify the transcription against the facsimile before publishing. -->
-
-## Chapter 1
 
 <span id="p16" class="page-marker">p. 16</span>
 

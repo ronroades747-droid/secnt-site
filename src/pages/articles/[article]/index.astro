@@ -1,21 +1,30 @@
 ---
-// Article page. For born-print articles (the `pdf` frontmatter field present)
-// this page is the scholarly landing: title, provenance, the body's framing
-// prose, and the artifact block linking the PDF. For born-digital articles
-// the body carries the full prose and the artifact block simply doesn't
-// render. Breadcrumb: Articles › [title], final crumb unlinked.
+// Article page / article landing. Single-page articles render their full
+// body here. Chaptered articles (id is a folder with chapter children)
+// render their landing prose, then a template-generated contents list of
+// PUBLISHED chapters — growing chapter by chapter under the incremental-
+// exposure rhythm, with the "More to come" line gated on the landing's
+// `complete` flag. Born-print artifacts render the PDF block either way.
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
-import { isVisible } from '../../../lib/site';
+import { articleUrl, isVisible } from '../../../lib/site';
 
 export async function getStaticPaths() {
-  const articles = (await getCollection('articles')).filter(isVisible);
+  const articles = (await getCollection('articles'))
+    .filter((e) => !e.id.includes('/') && isVisible(e));
   return articles.map((entry) => ({ params: { article: entry.id }, props: { entry } }));
 }
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 const d = entry.data;
+
+const chapters = (await getCollection('articles'))
+  .filter((e) => e.id.startsWith(entry.id + '/') && isVisible(e))
+  .sort((a, b) => (a.data.chapterNumber ?? 0) - (b.data.chapterNumber ?? 0));
+const isChaptered = chapters.length > 0;
+const showMore = isChaptered && d.complete !== true;
+
 const pdfMeta = d.pdf
   ? [d.pdf.pages && `${d.pdf.pages} pages`, d.pdf.sizeMB && `${d.pdf.sizeMB} MB`]
       .filter(Boolean)
@@ -30,6 +39,23 @@ const pdfMeta = d.pdf
     {d.provenance && <p class="article-provenance">{d.provenance}</p>}
 
     <Content />
+
+    {isChaptered && (
+      <nav class="section-toc" aria-label="Chapters">
+        <h2>Contents</h2>
+        <ol>
+          {chapters.map((c) => (
+            <li>
+              <a href={articleUrl(c.id)}>
+                <span class="toc-title">{c.data.title}</span>
+                <span class="toc-desc">{c.data.description}</span>
+              </a>
+            </li>
+          ))}
+        </ol>
+        {showMore && <p class="more-to-come">More to come; check back soon.</p>}
+      </nav>
+    )}
 
     {d.pdf && (
       <aside class="article-pdf">

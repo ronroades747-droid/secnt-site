@@ -1,0 +1,75 @@
+---
+// Chapter page of a chaptered article. Breadcrumb: Articles › [Article] ›
+// [Chapter]; prev/next pager over PUBLISHED chapters in chapterNumber order
+// (draft-skip rule: an unpublished successor renders the unlinked "More to
+// come" echo until the landing's `complete` flag is set). Page-marker
+// anchors resolve per chapter (…/chapter-1/#p17).
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../../../components/Breadcrumb.astro';
+import { articleUrl, isVisible } from '../../../../lib/site';
+
+export async function getStaticPaths() {
+  const all = await getCollection('articles');
+  const chapters = all.filter((e) => e.id.includes('/') && isVisible(e));
+  const paths = [];
+  for (const entry of chapters) {
+    const [article, chapter] = entry.id.split('/');
+    const parent = all.find((e) => e.id === article);
+    if (!parent || !isVisible(parent)) continue;
+    paths.push({ params: { article, chapter }, props: { entry, parent } });
+  }
+  return paths;
+}
+const { entry, parent } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+
+const siblings = (await getCollection('articles'))
+  .filter((e) => e.id.startsWith(parent.id + '/') && isVisible(e))
+  .sort((a, b) => (a.data.chapterNumber ?? 0) - (b.data.chapterNumber ?? 0));
+const i = siblings.findIndex((e) => e.id === entry.id);
+const prev = i > 0 ? siblings[i - 1] : null;
+const next = i >= 0 && i < siblings.length - 1 ? siblings[i + 1] : null;
+const moreToCome = !next && i === siblings.length - 1 && parent.data.complete !== true;
+---
+<BaseLayout title={`${d.title} — ${parent.data.title}`} description={d.description}
+  pageMeta={{ date: d.date, updated: d.updated, license: d.license }}>
+  <article class="reading">
+    <Breadcrumb crumbs={[
+      { label: 'Articles', href: '/articles/' },
+      { label: parent.data.title, href: articleUrl(parent.id) },
+      { label: d.title },
+    ]} />
+    <h1>{d.title}</h1>
+
+    <Content />
+
+    <nav class="prev-next" aria-label="Chapter navigation">
+      {prev ? (
+        <a class="prev-next__link prev-next__prev" href={articleUrl(prev.id)}>
+          <span class="prev-next__dir">← Previous</span>
+          <span class="prev-next__title">{prev.data.title}</span>
+        </a>
+      ) : (
+        <a class="prev-next__link prev-next__prev" href={articleUrl(parent.id)}>
+          <span class="prev-next__dir">← Up</span>
+          <span class="prev-next__title">{parent.data.title}</span>
+        </a>
+      )}
+      {next ? (
+        <a class="prev-next__link prev-next__next" href={articleUrl(next.id)}>
+          <span class="prev-next__dir">Next →</span>
+          <span class="prev-next__title">{next.data.title}</span>
+        </a>
+      ) : moreToCome ? (
+        <span class="prev-next__link prev-next__next prev-next__more">
+          <span class="prev-next__dir">Next →</span>
+          <span class="prev-next__title">More to come</span>
+        </span>
+      ) : (
+        <span></span>
+      )}
+    </nav>
+  </article>
+</BaseLayout>

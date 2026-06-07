@@ -17,7 +17,7 @@ const year = new Date().getFullYear();
 
 const volumes = (await getCollection('volumes')).filter(isVisible);
 const articles = (await getCollection('articles'))
-  .filter(isVisible)
+  .filter((a) => !a.id.includes('/') && isVisible(a))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 <hr class="gold-rule gold-rule--soft" />
