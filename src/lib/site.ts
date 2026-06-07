@@ -31,6 +31,7 @@ export const NAV = [
   { label: 'Methodology', href: '/methodology/' },
   { label: 'Citing', href: '/citing/' },
   { label: 'Commentary', href: '/commentary/john/' },
+  { label: 'Articles', href: '/articles/' },
 ];
 
 // --- Sections-sidebar segment grouping -------------------------------------
@@ -65,6 +66,9 @@ export const SEGMENT_OF: Record<string, (typeof SEGMENT_ORDER)[number]> = {
 export const commentaryUrl = (id: string) => `/commentary/${id}/`;
 export const volumeUrl = (book: string) => `/commentary/${book}/`;
 export const frontmatterUrl = (id: string) => `/${id}/`;
+// An article id is its slug under /articles/ (path-owns-identity, same as
+// commentary).
+export const articleUrl = (id: string) => `/articles/${id}/`;
 // A lecture lives at its paired section's URL + "lecture/".
 export const lectureUrl = (sectionId: string) =>
   `/commentary/${sectionId}/lecture/`;

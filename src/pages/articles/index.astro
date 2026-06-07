@@ -1,0 +1,42 @@
+---
+// Articles landing — the section home for the Articles top-level section
+// (parallel to /commentary/). Reverse-chronological list of published
+// articles; grows as articles publish at the expected one-every-couple-of-
+// months cadence.
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { articleUrl, isVisible } from '../../lib/site';
+
+const articles = (await getCollection('articles'))
+  .filter(isVisible)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+---
+<BaseLayout title="Articles"
+  description="Scholarly articles published in the Systematic Evangelical Commentaries on the New Testament.">
+  <div class="reading reading--wide">
+    <h1>Articles</h1>
+    <p>Scholarly articles published alongside the Commentary — studies whose scope is a question rather than a passage. Like the Commentary, they are freely available under CC BY 4.0 and carry stable, citable addresses.</p>
+    {articles.length === 0 ? (
+      <p>No articles published yet.</p>
+    ) : (
+      <nav class="section-toc" aria-label="Published articles">
+        <ol>
+          {articles.map((a) => (
+            <li>
+              <a href={articleUrl(a.id)}>
+                <span class="toc-title">{a.data.title}</span>
+                <span class="toc-desc">
+                  {a.data.provenance ? `${a.data.provenance} — ` : ''}{a.data.description}
+                </span>
+                <span class="toc-desc">Published {fmt(a.data.date)}</span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+    )}
+  </div>
+</BaseLayout>

@@ -1,0 +1,43 @@
+---
+// Article page. For born-print articles (the `pdf` frontmatter field present)
+// this page is the scholarly landing: title, provenance, the body's framing
+// prose, and the artifact block linking the PDF. For born-digital articles
+// the body carries the full prose and the artifact block simply doesn't
+// render. Breadcrumb: Articles › [title], final crumb unlinked.
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import { isVisible } from '../../../lib/site';
+
+export async function getStaticPaths() {
+  const articles = (await getCollection('articles')).filter(isVisible);
+  return articles.map((entry) => ({ params: { article: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+const pdfMeta = d.pdf
+  ? [d.pdf.pages && `${d.pdf.pages} pages`, d.pdf.sizeMB && `${d.pdf.sizeMB} MB`]
+      .filter(Boolean)
+      .join(' · ')
+  : '';
+---
+<BaseLayout title={d.title} description={d.description}
+  pageMeta={{ date: d.date, updated: d.updated, license: d.license }}>
+  <article class="reading">
+    <Breadcrumb crumbs={[{ label: 'Articles', href: '/articles/' }, { label: d.title }]} />
+    <h1>{d.title}</h1>
+    {d.provenance && <p class="article-provenance">{d.provenance}</p>}
+
+    <Content />
+
+    {d.pdf && (
+      <aside class="article-pdf">
+        <p class="article-pdf__label">The article (PDF)</p>
+        <a class="article-pdf__link" href={d.pdf.src}>Read “{d.title}”</a>
+        {pdfMeta && <p class="article-pdf__meta">{pdfMeta}</p>}
+        {d.pdf.note && <p class="article-pdf__note">{d.pdf.note}</p>}
+      </aside>
+    )}
+  </article>
+</BaseLayout>

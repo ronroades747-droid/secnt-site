@@ -1,11 +1,24 @@
 ---
-import { SITE, canonical } from '../lib/site';
+// Site footer. Carries the per-page citation block, the license line, the
+// section-switcher (labeled groups for the site's top-level genres —
+// "Commentaries" and "Articles" — each listing its published works), utility
+// links, and the series identity line. The switcher is the cross-section
+// navigation planned with the Articles IA decision (June 6, 2026): each group
+// grows on its own as works publish; only published entries render.
+import { getCollection } from 'astro:content';
+import { SITE, canonical, volumeUrl, articleUrl, isVisible } from '../lib/site';
+
 interface Props {
   citeYear?: number;
 }
 const { citeYear } = Astro.props;
 const canonicalURL = canonical(Astro.url.pathname);
 const year = new Date().getFullYear();
+
+const volumes = (await getCollection('volumes')).filter(isVisible);
+const articles = (await getCollection('articles'))
+  .filter(isVisible)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 <hr class="gold-rule gold-rule--soft" />
 <footer class="chrome site-footer">
@@ -17,6 +30,32 @@ const year = new Date().getFullYear();
       © {year} {SITE.author} · Licensed under
       <a href={SITE.licenseUrl} rel="license">{SITE.licenseName}</a>
     </div>
+
+    {(volumes.length > 0 || articles.length > 0) && (
+      <nav class="footer-sections" aria-label="Site sections">
+        {volumes.length > 0 && (
+          <div class="footer-sections__group">
+            <p class="footer-sections__label"><a href="/commentary/">Commentaries</a></p>
+            <ul>
+              {volumes.map((v) => (
+                <li><a href={volumeUrl(v.data.book)}>{v.data.title}</a></li>
+              ))}
+            </ul>
+          </div>
+        )}
+        {articles.length > 0 && (
+          <div class="footer-sections__group">
+            <p class="footer-sections__label"><a href="/articles/">Articles</a></p>
+            <ul>
+              {articles.map((a) => (
+                <li><a href={articleUrl(a.id)}>{a.data.title}</a></li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </nav>
+    )}
+
     <ul class="footer-utility">
       <li><a href="/citing/">Citing</a></li>
       <li><a href="/about/">About</a></li>

@@ -1,11 +1,18 @@
 ---
-import { SITE, NAV } from '../lib/site';
+import { getCollection } from 'astro:content';
+import { SITE, NAV, isVisible } from '../lib/site';
 import Banner from './Banner.astro';
 interface Props { tier?: '1' | '2'; }
 const { tier = '2' } = Astro.props;
 const here = Astro.url.pathname;
 const isCurrent = (href: string) =>
   href === '/' ? here === '/' : here === href || here.startsWith(href);
+// Incremental-exposure discipline: the Articles entry appears only once at
+// least one article is published — the site never shows an empty "coming"
+// section. (The /articles/ landing still builds, so the URL is stable from
+// the start; it just isn't linked until it has content.)
+const hasArticles = (await getCollection('articles')).some(isVisible);
+const nav = NAV.filter((item) => item.href !== '/articles/' || hasArticles);
 ---
 <header class="chrome site-header">
   <div class="chrome-inner">
@@ -15,7 +22,7 @@ const isCurrent = (href: string) =>
     </div>
     <nav class="primary-nav" aria-label="Primary">
       <ul>
-        {NAV.map((item) => (
+        {nav.map((item) => (
           <li>
             <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>
               {item.label}

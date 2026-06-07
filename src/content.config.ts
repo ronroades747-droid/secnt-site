@@ -111,6 +111,50 @@ const volumes = defineCollection({
 });
 
 // ---------------------------------------------------------------------------
+// Collection: articles  —  article register
+// ---------------------------------------------------------------------------
+// Top-level section parallel to Commentary (IA decision, June 6, 2026).
+// Designed against the first real article — the 1974 M.A. thesis — which
+// exists as a scanned typescript, not born-digital prose. Two article shapes
+// are therefore supported by one schema:
+//   - born-print: the `pdf` field carries the artifact; the page body is the
+//     scholarly landing prose (what the work is, its provenance, how to cite)
+//   - born-digital: omit `pdf`; the body carries the full article prose
+// Start minimal, extend deliberately (abstract/keywords/DOI wait until a
+// real article needs them).
+const articles = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/articles' }),
+  schema: () =>
+    z.object({
+      title: z.string(),
+      description: z.string(),
+      author: z.string().default('Ronald E. Roades'),
+      // Site publication date — drives the reverse-chronological listing.
+      date: z.coerce.date(),
+      updated: z.coerce.date().optional(),
+      // Provenance of a work first produced elsewhere/earlier, rendered under
+      // the title and in the listing (e.g. "M.A. thesis, Wheaton College,
+      // June 1974"). Omitted for articles original to SECNT.
+      provenance: z.string().optional(),
+      // The artifact, for born-print articles. `src` is a site-absolute path
+      // under /articles/ in public/ (PDFs bypass the asset pipeline).
+      pdf: z
+        .object({
+          src: z.string(),
+          pages: z.number().int().positive().optional(),
+          sizeMB: z.number().positive().optional(),
+          note: z.string().optional(),
+        })
+        .optional(),
+      license,
+      draft: z.boolean().default(false),
+      revisions: z
+        .array(z.object({ date: z.coerce.date(), note: z.string() }))
+        .default([]),
+    }),
+});
+
+// ---------------------------------------------------------------------------
 // Collection: commentary  —  unit register
 // ---------------------------------------------------------------------------
 const commentary = defineCollection({
@@ -182,4 +226,4 @@ const lectures = defineCollection({
   }),
 });
 
-export const collections = { frontmatter, volumes, commentary, lectures };
+export const collections = { frontmatter, volumes, commentary, lectures, articles };

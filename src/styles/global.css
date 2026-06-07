@@ -227,6 +227,14 @@ blockquote footer { margin-top: 0.85rem; font-size: 0.95rem; font-style: normal;
 .back-link { display: inline-block; margin: 1.5rem 0; color: var(--color-meta); text-decoration: none; }
 .back-link:hover { color: var(--color-gold); }
 
+/* Articles */
+.article-provenance { color: var(--color-meta); font-style: italic; margin: -0.4rem 0 1.5rem; }
+.article-pdf { margin: 2.5rem 0 0; padding: 1rem 1.2rem; border: 1px solid var(--color-border); border-left: var(--rule) solid var(--color-gold); background: var(--color-surface); }
+.article-pdf__label { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-meta); margin: 0 0 0.4rem; }
+.article-pdf__link { font-size: 1.1rem; }
+.article-pdf__meta { color: var(--color-meta); font-size: 0.92rem; margin: 0.4rem 0 0; }
+.article-pdf__note { color: var(--color-meta); font-size: 0.92rem; font-style: italic; margin: 0.4rem 0 0; }
+
 /* ====================================================================
    FOOTNOTES (remark-gfm renders <section class="footnotes"> at doc end)
    ==================================================================== */
@@ -244,6 +252,14 @@ blockquote footer { margin-top: 0.85rem; font-size: 0.95rem; font-style: normal;
 .citation-block { margin-bottom: 1rem; }
 .citation-block .canonical { color: var(--color-footer); word-break: break-all; }
 .footer-license a { color: var(--color-link); }
+.footer-sections { display: flex; flex-wrap: wrap; gap: 2.5rem; margin: 1.25rem 0 0.5rem; }
+.footer-sections__label { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 0.35rem; }
+.footer-sections__label a { color: var(--color-meta); text-decoration: none; }
+.footer-sections__label a:hover { color: var(--color-gold); }
+.footer-sections ul { list-style: none; margin: 0; padding: 0; }
+.footer-sections li { margin: 0.2rem 0; }
+.footer-sections li a { color: var(--color-footer); text-decoration: none; font-size: 0.92rem; }
+.footer-sections li a:hover { color: var(--color-gold); }
 .footer-utility { list-style: none; display: flex; flex-wrap: wrap; gap: 1rem; padding: 0; margin: 0.75rem 0; }
 .footer-utility a { color: var(--color-meta); text-decoration: none; font-size: 0.9rem; }
 .footer-series { color: var(--color-meta); font-size: 0.85rem; margin-top: 0.75rem; }
