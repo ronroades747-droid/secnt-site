@@ -141,6 +141,10 @@ const articles = defineCollection({
       pdf: z
         .object({
           src: z.string(),
+          // Block label; default suits a born-print article whose PDF IS the
+          // article. Override when the PDF is secondary (e.g. a facsimile
+          // alongside a digital publication text).
+          label: z.string().default('The article (PDF)'),
           pages: z.number().int().positive().optional(),
           sizeMB: z.number().positive().optional(),
           note: z.string().optional(),
