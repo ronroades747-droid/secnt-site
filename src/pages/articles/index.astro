@@ -14,7 +14,7 @@ const articles = (await getCollection('articles'))
 const fmt = (d: Date) =>
   d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
 ---
-<BaseLayout title="Articles"
+<BaseLayout tier="1" title="Articles"
   description="Scholarly articles published in the Systematic Evangelical Commentaries on the New Testament.">
   <div class="reading reading--wide">
     <h1>Articles</h1>

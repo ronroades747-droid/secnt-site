@@ -34,7 +34,7 @@ const passageLabel = section.data.passageRef
 const lectureCrumb = l.title.split(' — ')[0] ?? l.title;
 
 const crumbs = [
-  { label: 'Commentary', href: '/commentary/' },
+  { label: 'Commentaries', href: '/commentary/' },
   { label: bookDisplay, href: volumeUrl(book) },
   { label: passageLabel, href: commentaryUrl(unitId) },
   ...(sec ? [{ label: section.data.title, href: commentaryUrl(section.id) }] : []),

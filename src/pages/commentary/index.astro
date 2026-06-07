@@ -9,10 +9,10 @@ import { volumeUrl, isVisible } from '../../lib/site';
 
 const volumes = (await getCollection('volumes')).filter(isVisible);
 ---
-<BaseLayout title="Commentary"
+<BaseLayout tier="1" title="Commentaries"
   description="The published volumes of the Systematic Evangelical Commentaries on the New Testament.">
   <div class="reading reading--wide">
-    <h1>Commentary</h1>
+    <h1>Commentaries</h1>
     <p>The published volumes of the series. Each volume's page carries its table of contents, listing the passages published so far.</p>
     {volumes.length === 0 ? (
       <p>No volumes published yet.</p>

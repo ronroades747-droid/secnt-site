@@ -31,7 +31,7 @@ const diagramBottom = d.diagram && d.diagram.position === 'bottom';
 const vols = await getCollection('volumes');
 const bookDisplay = vols.find((v) => v.data.book === book)?.data.bookDisplay ?? book;
 const crumbs = [
-  { label: 'Commentary', href: '/commentary/' },
+  { label: 'Commentaries', href: '/commentary/' },
   { label: bookDisplay, href: volumeUrl(book) },
   { label: d.passageRef ? `${bookDisplay} ${d.passageRef}` : unit, href: commentaryUrl(unitId) },
   { label: d.title },
