@@ -1,6 +1,6 @@
 ---
 title: "Commentary on the Gospel of John"
-description: "Volume-level landing for SECNT's commentary on the Gospel of John — intra-Gospel restraint, Johannine Prologue commitments, and Gospel TOC."
+description: "A verse-by-verse commentary on the Gospel of John for ministers, teachers, and students — the work of text, language, and meaning that stands beneath the sermon."
 book: john
 bookDisplay: John
 date: 2026-05-30
