@@ -1,15 +1,18 @@
 ---
-import { getCollection, getEntry, render } from 'astro:content';
-import BaseLayout from '../../../../../../layouts/BaseLayout.astro';
-import BunnyEmbed from '../../../../../../components/BunnyEmbed.astro';
-import { splitCommentaryId, normalizeId, commentaryUrl, isVisible } from '../../../../../../lib/site';
+// Lecture pages for section-child lectures. Landing-paired lectures (2-segment
+// sectionRef) render at the unit-level route ([unit]/lecture/) instead — the
+// June 6, 2026 uniform link-and-serve decision gives every lecture its own
+// page; none embeds on a Commentary page.
+import { getCollection, getEntry } from 'astro:content';
+import LecturePage from '../../../../../../components/LecturePage.astro';
+import { splitCommentaryId, normalizeId, isVisible } from '../../../../../../lib/site';
 
 export async function getStaticPaths() {
   const lectures = (await getCollection('lectures')).filter(isVisible);
   const paths = [];
   for (const lecture of lectures) {
     const refId = normalizeId(lecture.data.sectionRef.id);
-    // Unit-landing lecture (2-segment id) is embedded inline — no /lecture/ route.
+    // Landing-paired lecture (2-segment id) renders at the unit-level lecture route.
     if (refId.split('/').length < 3) continue;
     const section = await getEntry('commentary', refId);
     if (!section || !isVisible(section)) continue;
@@ -19,23 +22,5 @@ export async function getStaticPaths() {
   return paths;
 }
 const { lecture, section } = Astro.props;
-const l = lecture.data;
-const { Content } = await render(lecture);
 ---
-<BaseLayout title={l.title} description={l.description}
-  pageMeta={{ date: l.date, updated: l.updated, license: l.license, passageRef: section.data.passageRef }}>
-  <article class="reading reading--wide">
-    <h1>{l.title}</h1>
-    <BunnyEmbed videoId={l.bunnyVideoId} title={l.title} />
-
-    <a class="back-link" href={commentaryUrl(section.id)}>← Read the commentary: {section.data.title}</a>
-
-    <ul class="lecture-resources">
-      {l.youtubeUrl && <li><a href={l.youtubeUrl} rel="noopener">Watch on YouTube</a></li>}
-      {l.slidesPdf && <li><a href={l.slidesPdf}>Download slides (PDF)</a></li>}
-      {l.duration && l.duration !== '00:00' && <li>Runtime: {l.duration}</li>}
-    </ul>
-
-    <Content />
-  </article>
-</BaseLayout>
+<LecturePage lecture={lecture} section={section} />

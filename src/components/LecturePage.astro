@@ -1,0 +1,61 @@
+---
+// Shared lecture-page article, used by both lecture routes (section-child
+// lectures and the landing-paired lecture, per the June 6, 2026 uniform
+// link-and-serve decision) so every lecture page is structurally identical.
+// Breadcrumb (Change 6): Commentary › John › John 1:1–3 › [Section title] ›
+// Lecture N — section crumb links to the paired Commentary page; for the
+// landing-paired lecture the section crumb IS the passage crumb, so the trail
+// collapses to Commentary › John › John 1:1–3 › Lecture N.
+// Lecture pages carry no Sections sidebar: the back-link is the reading-flow
+// exit, the passage crumb the orientation exit, the volume/Commentary crumbs
+// the TOC exits.
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BunnyEmbed from './BunnyEmbed.astro';
+import Breadcrumb from './Breadcrumb.astro';
+import { commentaryUrl, volumeUrl, splitCommentaryId } from '../lib/site';
+
+interface Props {
+  lecture: any; // lectures collection entry
+  section: any; // the commentary entry this lecture teaches
+}
+const { lecture, section } = Astro.props;
+const l = lecture.data;
+const { Content } = await render(lecture);
+
+const { book, unit, section: sec } = splitCommentaryId(section.id);
+const unitId = `${book}/${unit}`;
+const vols = await getCollection('volumes');
+const bookDisplay = vols.find((v) => v.data.book === book)?.data.bookDisplay ?? book;
+const passageLabel = section.data.passageRef
+  ? `${bookDisplay} ${section.data.passageRef}`
+  : bookDisplay;
+// Final crumb: "Lecture N" from the locked title form "Lecture N — [Title]".
+const lectureCrumb = l.title.split(' — ')[0] ?? l.title;
+
+const crumbs = [
+  { label: 'Commentary', href: '/commentary/' },
+  { label: bookDisplay, href: volumeUrl(book) },
+  { label: passageLabel, href: commentaryUrl(unitId) },
+  ...(sec ? [{ label: section.data.title, href: commentaryUrl(section.id) }] : []),
+  { label: lectureCrumb },
+];
+---
+<BaseLayout title={l.title} description={l.description}
+  pageMeta={{ date: l.date, updated: l.updated, license: l.license, passageRef: section.data.passageRef }}>
+  <article class="reading reading--wide">
+    <Breadcrumb crumbs={crumbs} />
+    <h1>{l.title}</h1>
+    <BunnyEmbed videoId={l.bunnyVideoId} title={l.title} />
+
+    <a class="back-link" href={commentaryUrl(section.id)}>← Read the commentary: {section.data.title}</a>
+
+    <ul class="lecture-resources">
+      {l.youtubeUrl && <li><a href={l.youtubeUrl} rel="noopener">Watch on YouTube</a></li>}
+      {l.slidesPdf && <li><a href={l.slidesPdf}>Download slides (PDF)</a></li>}
+      {l.duration && l.duration !== '00:00' && <li>Runtime: {l.duration}</li>}
+    </ul>
+
+    <Content />
+  </article>
+</BaseLayout>

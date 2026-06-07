@@ -1,0 +1,26 @@
+---
+// Lecture pages for landing-paired lectures (June 6, 2026 navigation handoff,
+// Change 1): the unit landing no longer embeds its lecture; the lecture whose
+// sectionRef is the unit landing (e.g. john/1-1-to-3) renders here as its own
+// page, identical in structure to other lecture pages, with back-link to the
+// unit landing. No redirects needed — no such URL existed before.
+import { getCollection, getEntry } from 'astro:content';
+import LecturePage from '../../../../../components/LecturePage.astro';
+import { splitCommentaryId, normalizeId, isVisible } from '../../../../../lib/site';
+
+export async function getStaticPaths() {
+  const lectures = (await getCollection('lectures')).filter(isVisible);
+  const paths = [];
+  for (const lecture of lectures) {
+    const refId = normalizeId(lecture.data.sectionRef.id);
+    if (refId.split('/').length !== 2) continue; // landing-paired only
+    const landing = await getEntry('commentary', refId);
+    if (!landing || !isVisible(landing)) continue;
+    const { book, unit } = splitCommentaryId(landing.id);
+    paths.push({ params: { book, unit }, props: { lecture, section: landing } });
+  }
+  return paths;
+}
+const { lecture, section } = Astro.props;
+---
+<LecturePage lecture={lecture} section={section} />

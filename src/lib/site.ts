@@ -33,6 +33,33 @@ export const NAV = [
   { label: 'Commentary', href: '/commentary/john/' },
 ];
 
+// --- Sections-sidebar segment grouping -------------------------------------
+// June 6, 2026 navigation handoff, Change 4. Dev decision recorded: grouping
+// derives from a sectionType → segment mapping (option a) — the schema's
+// type vocabulary maps cleanly onto the segments for this unit and is expected
+// to for future units. If a future unit breaks the mapping, switch to an
+// optional `segment` frontmatter field on the stubs (option b); either way
+// Production authors nothing — grouping derives from Dev-owned frontmatter.
+export const SEGMENT_ORDER = [
+  'Introduction',
+  'The Text',
+  'Architecture',
+  'Exegesis',
+  'Theology',
+  'Engagement & Pastoral Close',
+] as const;
+
+export const SEGMENT_OF: Record<string, (typeof SEGMENT_ORDER)[number]> = {
+  'unit-landing': 'Introduction',
+  'text-critical': 'The Text',
+  framing: 'Architecture',
+  exegesis: 'Exegesis',
+  synthesis: 'Exegesis', // Exegesis segment spans exegesis + synthesis types
+  theology: 'Theology',
+  engagement: 'Engagement & Pastoral Close',
+  pastoral: 'Engagement & Pastoral Close',
+};
+
 // --- URL helpers ---------------------------------------------------------
 // commentary id is e.g. "john/1-1-to-3" or "john/1-1-to-3/06-en-arche".
 export const commentaryUrl = (id: string) => `/commentary/${id}/`;

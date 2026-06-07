@@ -1,0 +1,34 @@
+---
+// Gospel-level Commentary TOC — the target of the "Commentary" breadcrumb
+// crumb (June 6, 2026 navigation handoff, Change 6). Lists published volumes;
+// grows as the series does. Until a second volume publishes this is a short
+// page, but the crumb needs a real, stable target from the start.
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { volumeUrl, isVisible } from '../../lib/site';
+
+const volumes = (await getCollection('volumes')).filter(isVisible);
+---
+<BaseLayout title="Commentary"
+  description="The published volumes of the Systematic Evangelical Commentaries on the New Testament.">
+  <div class="reading reading--wide">
+    <h1>Commentary</h1>
+    <p>The published volumes of the series. Each volume's page carries its table of contents, listing the passages published so far.</p>
+    {volumes.length === 0 ? (
+      <p>No volumes published yet.</p>
+    ) : (
+      <nav class="section-toc" aria-label="Published volumes">
+        <ol>
+          {volumes.map((v) => (
+            <li>
+              <a href={volumeUrl(v.data.book)}>
+                <span class="toc-title">{v.data.title}</span>
+                <span class="toc-desc">{v.data.description}</span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+    )}
+  </div>
+</BaseLayout>

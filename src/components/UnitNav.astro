@@ -1,18 +1,30 @@
 ---
-// Persistent unit navigation. Lists the unit landing ("Introduction") plus
-// every PUBLISHED section in order, with the current page marked. Rendered on
-// the unit landing and on every section page so any published section is one
-// click away from anywhere — no scrolling to a bottom-of-page list. Shows the
-// "more to come" note (driven by the landing's passageComplete) at the foot
-// while the passage is in progress. Count- and draft-aware via isVisible.
+// Persistent unit navigation (sections sidebar). Lists the unit landing
+// ("Introduction") plus every PUBLISHED section, grouped under segment
+// subheads (June 6, 2026 navigation handoff, Change 4), with the current page
+// marked in gold. Below the Sections list, separated by a hairline rule, the
+// PAIRED LECTURE block (Change 3) links the current page's lecture — always
+// exactly one entry (pairing is 1:1), generated from the sectionRef pairing
+// resolved by the page template and passed in.
+//
+// Mobile: the whole nav stacks above the article; only the sections list
+// scrolls, so the paired-lecture block stays discoverable (see global.css).
+// Desktop: the sidebar scrolls independently when it exceeds the viewport.
+// Count- and draft-aware via isVisible. Shows the "more to come" note
+// (driven by the landing's passageComplete) at the foot of the sections list
+// while the passage is in progress.
 import { getCollection } from 'astro:content';
-import { commentaryUrl, isVisible } from '../lib/site';
+import { commentaryUrl, isVisible, SEGMENT_ORDER, SEGMENT_OF } from '../lib/site';
 
 interface Props {
-  unitId: string;       // e.g. "john/1-1-to-3"
-  currentId?: string;   // section id, or undefined on the landing
+  unitId: string; // e.g. "john/1-1-to-3"
+  currentId?: string; // section id, or undefined on the landing
+  // Paired lecture for the CURRENT page, resolved by the template (null/absent
+  // when the page has no published lecture).
+  pairedLecture?: { data: { title: string; duration?: string } } | null;
+  pairedLectureUrl?: string;
 }
-const { unitId, currentId } = Astro.props;
+const { unitId, currentId, pairedLecture, pairedLectureUrl } = Astro.props;
 
 const all = await getCollection('commentary');
 const landing = all.find((e) => e.id === unitId);
@@ -20,31 +32,74 @@ const sections = all
   .filter((e) => e.id.startsWith(unitId + '/') && isVisible(e))
   .sort((a, b) => a.data.sectionNumber - b.data.sectionNumber);
 
-const items: { id: string; url: string; label: string }[] = [];
+type Item = { id: string; url: string; label: string };
+const groups = new Map<string, Item[]>();
+const add = (segment: string, item: Item) => {
+  if (!groups.has(segment)) groups.set(segment, []);
+  groups.get(segment)!.push(item);
+};
+
 if (landing && isVisible(landing)) {
-  items.push({ id: landing.id, url: commentaryUrl(landing.id), label: 'Introduction' });
+  add(SEGMENT_OF['unit-landing'], {
+    id: landing.id,
+    url: commentaryUrl(landing.id),
+    label: 'Introduction',
+  });
 }
 for (const s of sections) {
-  items.push({ id: s.id, url: commentaryUrl(s.id), label: s.data.title });
+  add(SEGMENT_OF[s.data.sectionType] ?? 'Exegesis', {
+    id: s.id,
+    url: commentaryUrl(s.id),
+    label: s.data.title,
+  });
 }
+
+// Segments render in canonical order; empty segments are skipped, so the
+// sidebar grows segment by segment as pairs publish.
+const orderedGroups = SEGMENT_ORDER.filter((seg) => groups.has(seg)).map(
+  (seg) => ({ segment: seg, items: groups.get(seg)! })
+);
 
 const current = currentId ?? unitId;
 const showMore = landing ? landing.data.passageComplete !== true : true;
+const hasAny = orderedGroups.length > 0;
+// Duration line below the lecture title, when frontmatter carries one.
+// [Confirm with Ron whether to show duration — remove this line to drop it.]
+const duration =
+  pairedLecture?.data.duration && pairedLecture.data.duration !== '00:00'
+    ? pairedLecture.data.duration
+    : null;
 ---
-{items.length > 0 && (
+{(hasAny || pairedLecture) && (
   <nav class="unit-nav" aria-label="Sections in this unit">
-    <p class="unit-nav__heading">Sections</p>
-    <ol>
-      {items.map((it) => (
-        <li>
-          {it.id === current ? (
-            <span class="unit-nav__current" aria-current="page">{it.label}</span>
-          ) : (
-            <a href={it.url}>{it.label}</a>
-          )}
-        </li>
-      ))}
-    </ol>
-    {showMore && <p class="unit-nav__more">More to come; check back soon.</p>}
+    {hasAny && (
+      <div class="unit-nav__sections">
+        <p class="unit-nav__heading">Sections</p>
+        {orderedGroups.map((g) => (
+          <div class="unit-nav__segment">
+            <p class="unit-nav__subhead">{g.segment}</p>
+            <ol>
+              {g.items.map((it) => (
+                <li>
+                  {it.id === current ? (
+                    <span class="unit-nav__current" aria-current="page">{it.label}</span>
+                  ) : (
+                    <a href={it.url}>{it.label}</a>
+                  )}
+                </li>
+              ))}
+            </ol>
+          </div>
+        ))}
+        {showMore && <p class="unit-nav__more">More to come; check back soon.</p>}
+      </div>
+    )}
+    {pairedLecture && pairedLectureUrl && (
+      <div class="unit-nav__lecture">
+        <p class="unit-nav__heading">Paired Lecture</p>
+        <a href={pairedLectureUrl}>{pairedLecture.data.title}</a>
+        {duration && <p class="unit-nav__duration">Runtime: {duration}</p>}
+      </div>
+    )}
   </nav>
 )}

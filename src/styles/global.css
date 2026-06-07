@@ -144,20 +144,13 @@ main { flex: 1 0 auto; width: 100%; }
 
 .passage-ref { color: var(--color-meta); font-size: 0.95rem; letter-spacing: 0.02em; margin: 0 0 0.5rem; }
 
-/* The "Watch the lecture" call near a section heading */
-.lecture-link {
-  display: inline-block;
-  margin: 0.25rem 0 1.75rem;
-  padding: 0.5rem 0.9rem;
-  border: 1px solid var(--color-border);
-  border-left: var(--rule) solid var(--color-gold);
-  border-radius: 2px;
-  background: var(--color-surface);
-  text-decoration: none;
-  color: var(--color-text);
-}
-.lecture-link:hover { color: var(--color-text); border-left-color: var(--color-gold-soft); }
-.lecture-link .label { display: block; font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--color-meta); }
+/* Breadcrumb trail (suppressed in print — navigation chrome) */
+.breadcrumb { margin: 0 0 1.25rem; font-size: 0.9rem; color: var(--color-meta); }
+.breadcrumb ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
+.breadcrumb li + li::before { content: '›'; margin: 0 0.5rem; color: var(--color-border); }
+.breadcrumb a { color: var(--color-meta); text-decoration: none; }
+.breadcrumb a:hover { color: var(--color-gold); }
+.breadcrumb [aria-current='page'] { color: var(--color-meta); }
 
 /* Section TOC (auto-generated) */
 .section-toc { margin: 2rem 0; }
@@ -175,14 +168,25 @@ main { flex: 1 0 auto; width: 100%; }
    gold marks the current item, content keeps its reading measure. */
 .unit-layout { display: block; }
 
-.unit-nav { margin: 0 0 2.5rem; border: 1px solid var(--color-border); border-left: var(--rule) solid var(--color-gold); background: var(--color-surface); padding: 1rem 1.1rem; max-height: 50vh; overflow-y: auto; }
+.unit-nav { margin: 0 0 2.5rem; border: 1px solid var(--color-border); border-left: var(--rule) solid var(--color-gold); background: var(--color-surface); padding: 1rem 1.1rem; }
 .unit-nav__heading { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-meta); margin: 0 0 0.5rem; }
+/* On small viewports only the sections list scrolls, so the paired-lecture
+   block below it stays discoverable above the article. */
+.unit-nav__sections { max-height: 45vh; overflow-y: auto; }
+.unit-nav__segment { margin: 0 0 0.6rem; }
+.unit-nav__subhead { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-meta); margin: 0.85rem 0 0.15rem; }
+.unit-nav__segment:first-of-type .unit-nav__subhead { margin-top: 0.25rem; }
 .unit-nav ol { list-style: none; margin: 0; padding: 0; }
 .unit-nav a, .unit-nav__current { display: block; padding: 0.35rem 0; font-size: 0.98rem; line-height: 1.3; text-decoration: none; }
 .unit-nav a { color: var(--color-text); }
 .unit-nav a:hover { color: var(--color-gold); }
 .unit-nav__current { color: var(--color-gold); font-weight: 600; }
 .unit-nav__more { color: var(--color-meta); font-size: 0.9rem; font-style: italic; margin: 0.75rem 0 0; }
+/* Paired-lecture block: below the Sections list, hairline rule between. */
+.unit-nav__lecture { margin-top: 1rem; padding-top: 0.9rem; border-top: 1px solid var(--color-border); }
+.unit-nav__lecture a { color: var(--color-text); }
+.unit-nav__lecture a:hover { color: var(--color-gold); }
+.unit-nav__duration { color: var(--color-meta); font-size: 0.88rem; margin: 0.2rem 0 0; }
 
 .prev-next { display: flex; justify-content: space-between; gap: 1.5rem; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border); }
 .prev-next__link { text-decoration: none; max-width: 48%; }
@@ -190,11 +194,15 @@ main { flex: 1 0 auto; width: 100%; }
 .prev-next__dir { display: block; font-size: 0.8rem; letter-spacing: 0.04em; color: var(--color-meta); }
 .prev-next__title { color: var(--color-link); }
 .prev-next__link:hover .prev-next__title { color: var(--color-link-hover); }
+.prev-next__more .prev-next__title { color: var(--color-meta); font-style: italic; }
 
 @media (min-width: 64rem) {
   .unit-layout { display: grid; grid-template-columns: minmax(13rem, 15rem) minmax(0, 1fr); gap: clamp(2rem, 4vw, 3.5rem); max-width: 1180px; margin-inline: auto; padding-inline: clamp(1rem, 4vw, 1.5rem); align-items: start; }
   .unit-layout > .reading { padding-inline: 0; }
-  .unit-nav { position: sticky; top: 1.5rem; margin: 0; border: 0; border-left: 1px solid var(--color-border); background: none; padding: 0 0 0 1rem; max-height: calc(100vh - 3rem); }
+  /* Sticky sidebar with independent scroll when it exceeds the viewport
+     (21 entries + subheads + paired-lecture block on short screens). */
+  .unit-nav { position: sticky; top: 1.5rem; margin: 0; border: 0; border-left: 1px solid var(--color-border); background: none; padding: 0 0 0 1rem; max-height: calc(100vh - 3rem); overflow-y: auto; }
+  .unit-nav__sections { max-height: none; overflow: visible; }
 }
 
 /* Diagram figure */
@@ -253,11 +261,14 @@ blockquote footer { margin-top: 0.85rem; font-size: 0.95rem; font-style: normal;
   :root { --color-bg: #fff; --color-text: #000; }
   body { font-size: 11.5pt; line-height: 1.45; }
   .site-header, .primary-nav, .banner, .gold-rule, .site-footer,
-  .video-embed, .lecture-link, .lecture-resources, .back-link,
+  .video-embed, .breadcrumb, .lecture-resources, .back-link,
   .section-toc, .more-to-come, .unit-nav, .prev-next { display: none !important; }
   .unit-layout { display: block; max-width: none; padding: 0; margin: 0; }
   main, .reading { max-width: none; padding: 0; }
   a { color: #000; text-decoration: none; }
+  /* Diagrams are scholarly content and print with the page; SVG scales crisply. */
+  figure.diagram img { max-width: 100%; }
+  figure.diagram figcaption { font-size: 9.5pt; }
   /* keep footnote sequence with its content, avoid awkward breaks */
   .footnotes, .greek-epigraph, blockquote, figure { break-inside: avoid; }
   h1, h2, h3, h4 { break-after: avoid; }

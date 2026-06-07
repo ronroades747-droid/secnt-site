@@ -1,0 +1,31 @@
+---
+// Breadcrumb trail (June 6, 2026 navigation handoff, Change 6). Rendered on
+// every page in the commentary tree:
+//   Volume page:   Commentary › John
+//   Unit landing:  Commentary › John › John 1:1–3
+//   Section page:  Commentary › John › John 1:1–3 › [Section title]
+//   Lecture page:  Commentary › John › John 1:1–3 › [Section title] › Lecture N
+// The final crumb is the current page and is unlinked. All crumbs derive from
+// existing frontmatter; no new fields. Suppressed in print (navigation chrome).
+interface Crumb {
+  label: string;
+  href?: string; // omitted on the final (current-page) crumb
+}
+interface Props {
+  crumbs: Crumb[];
+}
+const { crumbs } = Astro.props;
+---
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    {crumbs.map((c) => (
+      <li>
+        {c.href ? (
+          <a href={c.href}>{c.label}</a>
+        ) : (
+          <span aria-current="page">{c.label}</span>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>

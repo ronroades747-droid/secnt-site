@@ -30,6 +30,14 @@ const current = currentId ?? unitId;
 const i = seq.findIndex((x) => x.id === current);
 const prev = i > 0 ? seq[i - 1] : null;
 const next = i >= 0 && i < seq.length - 1 ? seq[i + 1] : null;
+// Draft-skip rule: while the current page has no published successor, the next
+// cell renders an unlinked "More to come" echo — never a link to a draft.
+// When the passage closes (passageComplete: true) the echo retires; a forward
+// link to the next passage's landing is deferred [confirm at Jn 1:4–5 open].
+const moreToCome =
+  !next && i === seq.length - 1 && landing
+    ? landing.data.passageComplete !== true
+    : false;
 ---
 {(prev || next) && (
   <nav class="prev-next" aria-label="Section navigation">
@@ -46,6 +54,11 @@ const next = i >= 0 && i < seq.length - 1 ? seq[i + 1] : null;
         <span class="prev-next__dir">Next →</span>
         <span class="prev-next__title">{next.label}</span>
       </a>
+    ) : moreToCome ? (
+      <span class="prev-next__link prev-next__next prev-next__more">
+        <span class="prev-next__dir">Next →</span>
+        <span class="prev-next__title">More to come</span>
+      </span>
     ) : (
       <span></span>
     )}
