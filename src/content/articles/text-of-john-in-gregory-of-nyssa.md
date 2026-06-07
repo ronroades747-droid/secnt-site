@@ -19,6 +19,9 @@ draft: true
        preserved exactly
      · Lettered text-critical notes (a), (b)… : markdown footnotes, anchored
        where the typescript anchors them
+     · Page markers: <span id="pNN" class="page-marker">p. NN</span> at each
+       typescript page break (inline where the break falls mid-sentence), so
+       original pagination cites against the canonical URL (…/#pNN)
      · Apparatus block: follows the lemma under a rule; work titles italic
        (typescript underline-as-italic convention); Johannine wording inside
        Gregory's text underlined with <u> (typescript's meaning-bearing
@@ -27,13 +30,17 @@ draft: true
 
 ## Chapter 1
 
+<span id="p16" class="page-marker">p. 16</span>
+
 **1** Ἐν ἀρχῇ ἦν ὁ λόγος, καὶ ὁ λόγος ἦν πρὸς τὸν θεόν, καὶ θεὸς ἦν ὁ λόγος. **2** [οὗτος] ἦν ἐν ἀρχῇ πρὸς τὸν θεόν.
 
 ---
 
 **1** ref. *Eun.* 161 (GNO 2.380.15), <u>εν αρχη . . . θεον</u> *fid.* (GNO 3-1.64.23), <u>εν αρχη ην ο λογος</u> *Eun.* 3.2.17 (GNO 2.57.19), ref. *Eun.* (GNO 2.347.22), <u>εν αρχη ην</u> *fid.* (GNO 3-1.64.25), <u>και ο λογος . . . θεον</u> *Eun.* 3.2.20 (GNO 2.58.21), *fid.* (GNO 3-1.64.26), *Eun.* 3.2.19 (GNO 2.58.7), <u>ο λογος ην . . . θεον</u> *Eun.* 3.2.20 (GNO 2.58.23), <u>και θεος ην ο λογος</u> *Eun.* 3.2.22 (GNO 2.59.9); ADAPT. <u>εν αρχη τε γαρ ην ο λογος</u> *hom. opif.* 2 (M 44.137.B); [1,4,5,2,18,1] <u>θεος ην ο λογος</u> / <u>και ζωη ην</u> / <u>και φως ην</u> / <u>ο μονον εν αρχη και προς τον θεον και κολποις του πατρος ων</u> / ωστε δια . . . αλλα τω ειπεν οτι <u>θεος ην</u> *Eun.* 3.8.40 (GNO 2.253.25); *[transcription of the remainder of the v. 1 entry and the v. 2 entry continues from pp. 16–17]*
 
-**3** πάντα δι' αὐτοῦ ἐγένετο, καὶ χωρὶς αὐτοῦ ἐγένετο [οὐδέν][^a] ὃ γέγονεν **4** ἐν αὐτῷ.[^b] ζωὴ [ἦν] (καὶ ἡ ζωὴ ἦν τὸ φῶς (τῶν) ἀνθρώπων· **5** (καὶ) τὸ φῶς ἐν τῇ σκοτίᾳ ἐλάμψε, καὶ ἡ σκοτία αὐτὸ οὐ κατέλαβεν.
+<span id="p17" class="page-marker">p. 17</span>
+
+**3** πάντα δι' αὐτοῦ ἐγένετο, καὶ χωρὶς αὐτοῦ ἐγένετο [οὐδέν][^a] ὃ γέγονεν **4** ἐν αὐτῷ.[^b] ζωὴ [ἦν] (καὶ ἡ ζωὴ ἦν τὸ <span id="p18" class="page-marker">p. 18</span> φῶς (τῶν) ἀνθρώπων· **5** (καὶ) τὸ φῶς ἐν τῇ σκοτίᾳ ἐλάμψε, καὶ ἡ σκοτία αὐτὸ οὐ κατέλαβεν.
 
 ---
 
