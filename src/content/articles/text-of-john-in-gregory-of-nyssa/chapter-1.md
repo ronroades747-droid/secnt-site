@@ -7,23 +7,9 @@ license: CC-BY-4.0
 draft: true
 ---
 
-
-<!-- TRANSCRIPTION SAMPLE — Dev-transcribed from the facsimile (pp. 16–18) to
-     establish the markdown conventions for the apparatus genre. Conventions:
-     · The typescript's chapter heading is carried by this stub's frontmatter
-       title — the delivered body must NOT repeat it (no-body-h1 rule)
-     · Verse lemma: bold verse number, polytonic Greek, thesis sigla ( ) [ ]
-       preserved exactly
-     · Lettered text-critical notes (a), (b)… : markdown footnotes, anchored
-       where the typescript anchors them
-     · Page markers: <span id="pNN" class="page-marker">p. NN</span> at each
-       typescript page break (inline where the break falls mid-sentence), so
-       original pagination cites against the canonical URL (…/#pNN)
-     · Apparatus block: follows the lemma under a rule; work titles italic
-       (typescript underline-as-italic convention); Johannine wording inside
-       Gregory's text underlined with <u> (typescript's meaning-bearing
-       underline); apparatus Greek unaccented, as in the typescript
-     Verify the transcription against the facsimile before publishing. -->
+<!-- Delivery status: p. 16 (Jn 1:1-2, lemma + apparatus) delivered by the
+     source documentation project, verified against the facsimile, accepted
+     2026-06-07. pp. 17-22 pending; append below in page order. -->
 
 <span id="p16" class="page-marker">p. 16</span>
 
@@ -31,16 +17,6 @@ draft: true
 
 ---
 
-**1** ref. *Eun.* 161 (GNO 2.380.15), <u>εν αρχη . . . θεον</u> *fid.* (GNO 3-1.64.23), <u>εν αρχη ην ο λογος</u> *Eun.* 3.2.17 (GNO 2.57.19), ref. *Eun.* (GNO 2.347.22), <u>εν αρχη ην</u> *fid.* (GNO 3-1.64.25), <u>και ο λογος . . . θεον</u> *Eun.* 3.2.20 (GNO 2.58.21), *fid.* (GNO 3-1.64.26), *Eun.* 3.2.19 (GNO 2.58.7), <u>ο λογος ην . . . θεον</u> *Eun.* 3.2.20 (GNO 2.58.23), <u>και θεος ην ο λογος</u> *Eun.* 3.2.22 (GNO 2.59.9); ADAPT. <u>εν αρχη τε γαρ ην ο λογος</u> *hom. opif.* 2 (M 44.137.B); [1,4,5,2,18,1] <u>θεος ην ο λογος</u> / <u>και ζωη ην</u> / <u>και φως ην</u> / <u>ο μονον εν αρχη και προς τον θεον και κολποις του πατρος ων</u> / ωστε δια . . . αλλα τω ειπεν οτι <u>θεος ην</u> *Eun.* 3.8.40 (GNO 2.253.25); *[transcription of the remainder of the v. 1 entry and the v. 2 entry continues from pp. 16–17]*
+**1** *ref. Eun.* 161 (GNO 2.380.15), <u>εν αρχη</u> . . . <u>θεον</u> *fid.* (GNO 3-1.64.23), <u>εν αρχη ην ο λογος</u> *Eun.* 3.2.17 (GNO 2.57.19), *ref. Eun.* (GNO 2.347.22), <u>εν αρχη ην</u> *fid.* (GNO 3-1.64.25), <u>και ο λογος</u> . . . <u>θεον</u> *Eun.* 3.2.20 (GNO 2.58.21), *fid.* (GNO 3-1.64.26), *Eun.* 3.2.19 (GNO 2.58.7), <u>ο λογος ην</u> . . . <u>θεον</u> *Eun.* 3.2.20 (GNO 2.58.23), <u>και θεος ην ο λογος</u> *Eun.* 3.2.22 (GNO 2.59.9); ADAPT. <u>εν αρχη</u> τε γαρ <u>ην ο λογος</u> *hom. opif.* 2 (M 44.137.B); [1,4,5,2,18,1] <u>θεος ην ο λογος</u> / και <u>ζωη ην</u> / και <u>φως ην</u> / ο μονον <u>εν αρχη</u> και <u>προς τον θεον</u> και <u>κολποις του πατρος ων</u> / ωστε δια . . . αλλα τω ειπεν οτι <u>θεος ην</u> *Eun.* 3.8.40 (GNO 2.253.25); <u>αρχη</u> εν η <u>ο λογος</u> και τω <u>εν τη αρχη οντι</u> λογω ειπε γαρ οτι <u>και ο λογος</u> . . . <u>ην ο λογος</u> *ref. Eun.* 22 (GNO 2.321.13); [1,5,4,9,14,18] λεγει γαρ οτι <u>εν αρχη ην και προς τον θεον ην και θεος ην</u> / και <u>φως ην</u> / και <u>ζωη</u> / και <u>αληθεια</u> / . . . και <u>εν τοις κολποις του πατρος ων</u> *Eun.* 3.6.7 (GNO 2.188.7); [1,3] <u>εν αρχη οντα λογον και αει προς τον θεον οντα και θεον οντα λογον</u> / τον δι' ου τα <u>παντα</u> εγενετο και ου <u>χωρις των γεγονοτων εστιν ουδεν</u> *hom. 13 in Canticles* (GNO 6.381.1); ουτος γαρ <u>ο λογος</u> ος <u>εν αρχη ην και προς τον θεον ην</u> . . . αλλα και <u>αυτος θεος ην</u> *Eun.* 3.2.22 (GNO 2.59.13); οτι <u>εν αρχη ην ο λογος και προς τον θεον και θεος</u> *Eun.* 3.6.40 (GNO 2.200.14); *ref. Eun.* 96 (GNO 2.352.9); [2,1] <u>αυτος</u> δε <u>εν αρχη</u> εστιν και <u>προς τον θεον</u> εστι / θεος ων και λογος *Eun.* 3.1.14 (GNO 2.8.18); <u>εν αρχη οντα και θεον οντα τον λογον</u> *ref. Eun.* 56 (GNO 2.335.7); <u>ο λογος ο εν αρχη ων και προς τον θεον ων</u> *Apoll.* (GNO 3-1.151.14); [1,3] τον <u>εν αρχη οντα λογον</u> θεου / τον δι' ου τα <u>παντα</u> τουτον *Eun.* 1.252 (GNO 1.100.17); <u>λογον εν αρχη λογον θεον</u> *hom. 3 in Cant.* (GNO 6.86.6); <u>εν αρχη οντα λογον</u> *Eun.* 3.4.52 (GNO 2.154.12); [1,18] <u>εν αρχη ων λογος</u> / <u>ο μονογενης θεος</u> αλλοτριος εστι *hom. in I Cor.* 15:28 (M 44.1309.A); <u>εν αρχη οντος λογον θεον</u> *deit.* (M 46.564.B); [18,1] <u>ο μονογενης υιος ο ων εν τοις κολποις του πατρος</u> / <u>ο εν αρχη ων</u> *ep.* 1.16 (GNO 8-2.8.3), <u>εν αρχη οντος</u> *Eun.* 3.6.21 (GNO 2.193.22), <u>εν αρχη ων</u> *Eun.* 3.1.49 (GNO 2.30.26); ην γαρ εφ' εαυτου <u>ο λογος και προς τον θεον ην</u> και οπερ <u>ο θεος ην</u> τουτο και <u>ο λογος ην</u>. θεος γαρ και <u>αυτος ην</u> *Apoll.* (GNO 3-1.174.1); ο και <u>προς τον θεον ων και θεος ων</u> *Eun.* 3.7.2 (GNO 2.215.13); [4,1] <u>ζωη μεν εστιν ο λογος</u> *Eun.* 3.8.17 (GNO 2.244.25); [1:18,16:28,1:1] <u>ο μονογενης θεος</u> / <u>εκ του πατρος εξελθων</u> / και <u>εν τω πατρι ων</u> *Eun.* 3.1.85 (GNO 2.33.13).
 
-<span id="p17" class="page-marker">p. 17</span>
-
-**3** πάντα δι' αὐτοῦ ἐγένετο, καὶ χωρὶς αὐτοῦ ἐγένετο [οὐδέν][^a] ὃ γέγονεν **4** ἐν αὐτῷ.[^b] ζωὴ [ἦν] (καὶ ἡ ζωὴ ἦν τὸ <span id="p18" class="page-marker">p. 18</span> φῶς (τῶν) ἀνθρώπων· **5** (καὶ) τὸ φῶς ἐν τῇ σκοτίᾳ ἐλάμψε, καὶ ἡ σκοτία αὐτὸ οὐ κατέλαβεν.
-
----
-
-*[the v. 3–5 apparatus entries follow from pp. 17–18]*
-
-[^a]: <u>ουδε εν</u> *Eun.* 1.302, *Eun.* 1.303, *Eun.* 1.3.36] ουδεν *Eun.* 3.1.13, ref. *Eun.* 47, ref. *Eun.* 70, ref. *Eun.* 126, *hom.* 2 *in Cant.*, *hom.* 13 *in Cant.* Variations in ms. evidence for individual works are: *Eun.* 1.302 and *Eun.* 1.303 both read ουδεν in one ms. of five. *hom.* 2 *in Cant.* reads ουδε εν in four mss. of thirteen. ref. *Eun.* 47 reads ουδε ουτε εγενετο in two mss. of six. Only *Eun.* 1.302, *Eun.* 1.303, and *hom.* 2 *in Cant.* are citations. If Gregory knew only one of the variants, then ουδεν must be considered as original, for it is impossible to explain ουδεν as the result of scribal corrections over such a wide base. Indeed, the expected tendency would be correction to ουδε εν, the Byzantine reading. This may be what happened in *Eun.* 1, especially since full citations (viz., *Eun.* 1.302, 303) are where scribal changes most frequently occur.
-
-[^b]: Gregory's punctuation of this sentence is, to the best of my knowledge, unique among the New Testament mss. and Fathers. However, the evidence for a full stop after αυτω is overwhelming. In the first place, *Eun.* 1.302 and *Eun.* 1.303 both read a full stop after αυτω. However, the real proof of this punctuation is found in two passages, *Eun.* 3.8.40 and *Eun.* 3.10.26. E.g., *Eun.* 3.10.26 says: ο μακαριος, φησιν, Ιωαννης εν αρχη ειναι τον λογον φησας και τουτον ζωην προσειπων, ειτα την ζωην φως ονομασας, μικρον υποβας Και ο λογος σαρξ εγενετο, φησιν. From the strong sequential element of this argument one can see that Gregory (along with Eunomius apparently) understands John 1:4 as giving the title of "Life" to Jesus. The only way this can be so is if he believed the author to have intended a full stop after αυτω.
+**2** ADAPT. [1,4,5,2,18,1] see under 1:1, *Eun.* 3.8.40 (GNO 2.253.25), [2,1] see under 1:1 *Eun.* 3.1.14 (GNO 2.8.19).
