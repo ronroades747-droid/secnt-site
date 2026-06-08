@@ -2,8 +2,8 @@
 // Unit landing. Under the June 6, 2026 uniform link-and-serve decision the
 // landing is an ordinary Commentary page in every navigational respect: no
 // inline lecture embed (the landing-paired lecture has its own page at
-// ./lecture/), the paired-lecture link renders in the sidebar like any
-// section, and the diagram frontmatter field renders here just as the section
+// ./lecture/), the paired-lecture link renders at the top of the article like
+// any section, and the diagram frontmatter field renders here just as the section
 // template renders it (closing the open item in publishing-a-pair.md).
 import { getCollection, render } from 'astro:content';
 import { Image } from 'astro:assets';
@@ -28,6 +28,8 @@ const { book } = splitCommentaryId(entry.id);
 const { Content } = await render(entry);
 const d = entry.data;
 const pairedLecture = d.hasLecture && lecture && isVisible(lecture) ? lecture : null;
+const pairedLectureUrl = lectureUrl(entry.id);
+const lectureNo = pairedLecture?.data.title.match(/^Lecture\s+(\d+)/)?.[1];
 const diagramTop = d.diagram && d.diagram.position === 'top';
 const diagramBottom = d.diagram && d.diagram.position === 'bottom';
 
@@ -42,13 +44,18 @@ const crumbs = [
 <BaseLayout title={d.title} description={d.description}
   pageMeta={{ date: d.date, updated: d.updated, license: d.license, passageRef: d.passageRef }}>
   <div class="unit-layout">
-    <UnitNav unitId={entry.id}
-      pairedLecture={pairedLecture} pairedLectureUrl={lectureUrl(entry.id)} />
+    <UnitNav unitId={entry.id} />
     <article class="reading reading--wide">
       <Breadcrumb crumbs={crumbs} />
       {d.passageRef && <p class="passage-ref">John {d.passageRef}</p>}
       <h1>{d.title}</h1>
       {d.greekEpigraph && <p class="greek-epigraph">{d.greekEpigraph}</p>}
+
+      {pairedLecture && (
+        <p class="paired-lecture">
+          <a href={pairedLectureUrl}>Watch the paired lecture{lectureNo ? ` \u2014 Lecture ${lectureNo}` : ''}</a>
+        </p>
+      )}
 
       {diagramTop && (
         <figure class="diagram">

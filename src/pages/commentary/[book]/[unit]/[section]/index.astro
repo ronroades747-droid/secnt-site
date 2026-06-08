@@ -22,9 +22,11 @@ const { book, unit } = splitCommentaryId(entry.id);
 const unitId = `${book}/${unit}`;
 const { Content } = await render(entry);
 const d = entry.data;
-// Paired-lecture link renders in the sidebar (June 6, 2026 handoff, Change 3),
-// not as an inline callout in the article.
+// Paired-lecture link renders at the TOP of the article (in the page header),
+// resolved from the section's hasLecture flag and the lecture's visibility.
 const pairedLecture = d.hasLecture && lecture && isVisible(lecture) ? lecture : null;
+const pairedLectureUrl = lectureUrl(entry.id);
+const lectureNo = pairedLecture?.data.title.match(/^Lecture\s+(\d+)/)?.[1];
 const diagramTop = d.diagram && d.diagram.position === 'top';
 const diagramBottom = d.diagram && d.diagram.position === 'bottom';
 
@@ -40,13 +42,18 @@ const crumbs = [
 <BaseLayout title={d.title} description={d.description}
   pageMeta={{ date: d.date, updated: d.updated, license: d.license, passageRef: d.passageRef }}>
   <div class="unit-layout">
-  <UnitNav unitId={unitId} currentId={entry.id}
-    pairedLecture={pairedLecture} pairedLectureUrl={lectureUrl(entry.id)} />
+  <UnitNav unitId={unitId} currentId={entry.id} />
   <article class="reading">
     <Breadcrumb crumbs={crumbs} />
     {d.passageRef && <p class="passage-ref">John {d.passageRef}</p>}
     <h1>{d.title}</h1>
     {d.greekEpigraph && <p class="greek-epigraph">{d.greekEpigraph}</p>}
+
+    {pairedLecture && (
+      <p class="paired-lecture">
+        <a href={pairedLectureUrl}>Watch the paired lecture{lectureNo ? ` \u2014 Lecture ${lectureNo}` : ''}</a>
+      </p>
+    )}
 
     {diagramTop && (
       <figure class="diagram">

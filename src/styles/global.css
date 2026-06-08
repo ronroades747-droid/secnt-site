@@ -144,6 +144,12 @@ main { flex: 1 0 auto; width: 100%; }
 
 .passage-ref { color: var(--color-meta); font-size: 0.95rem; letter-spacing: 0.02em; margin: 0 0 0.5rem; }
 
+/* Paired-lecture link in the page header — the section's other format
+   (audiovisual), linked at the top of the reading column. Inherits body-link
+   gold; a touch of weight gives it presence without a button. */
+.paired-lecture { margin: 0 0 1.75rem; font-size: 0.98rem; }
+.paired-lecture a { font-weight: 500; }
+
 /* Breadcrumb trail (suppressed in print — navigation chrome) */
 .breadcrumb { margin: 0 0 1.25rem; font-size: 0.9rem; color: var(--color-meta); }
 .breadcrumb ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
@@ -170,8 +176,8 @@ main { flex: 1 0 auto; width: 100%; }
 
 .unit-nav { margin: 0 0 2.5rem; border: 1px solid var(--color-border); border-left: var(--rule) solid var(--color-gold); background: var(--color-surface); padding: 1rem 1.1rem; }
 .unit-nav__heading { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-meta); margin: 0 0 0.5rem; }
-/* On small viewports only the sections list scrolls, so the paired-lecture
-   block below it stays discoverable above the article. */
+/* On small viewports the whole nav stacks above the article; only the
+   sections list scrolls. */
 .unit-nav__sections { max-height: 45vh; overflow-y: auto; }
 .unit-nav__segment { margin: 0 0 0.6rem; }
 .unit-nav__subhead { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-meta); margin: 0.85rem 0 0.15rem; }
@@ -182,11 +188,6 @@ main { flex: 1 0 auto; width: 100%; }
 .unit-nav a:hover { color: var(--color-gold); }
 .unit-nav__current { color: var(--color-gold); font-weight: 600; }
 .unit-nav__more { color: var(--color-meta); font-size: 0.9rem; font-style: italic; margin: 0.75rem 0 0; }
-/* Paired-lecture block: below the Sections list, hairline rule between. */
-.unit-nav__lecture { margin-top: 1rem; padding-top: 0.9rem; border-top: 1px solid var(--color-border); }
-.unit-nav__lecture a { color: var(--color-text); }
-.unit-nav__lecture a:hover { color: var(--color-gold); }
-.unit-nav__duration { color: var(--color-meta); font-size: 0.88rem; margin: 0.2rem 0 0; }
 
 .prev-next { display: flex; justify-content: space-between; gap: 1.5rem; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border); }
 .prev-next__link { text-decoration: none; max-width: 48%; }
@@ -200,7 +201,7 @@ main { flex: 1 0 auto; width: 100%; }
   .unit-layout { display: grid; grid-template-columns: minmax(13rem, 15rem) minmax(0, 1fr); gap: clamp(2rem, 4vw, 3.5rem); max-width: 1180px; margin-inline: auto; padding-inline: clamp(1rem, 4vw, 1.5rem); align-items: start; }
   .unit-layout > .reading { padding-inline: 0; }
   /* Sticky sidebar with independent scroll when it exceeds the viewport
-     (21 entries + subheads + paired-lecture block on short screens). */
+     (21 entries + segment subheads on short screens). */
   .unit-nav { position: sticky; top: 1.5rem; margin: 0; border: 0; border-left: 1px solid var(--color-border); background: none; padding: 0 0 0 1rem; max-height: calc(100vh - 3rem); overflow-y: auto; }
   .unit-nav__sections { max-height: none; overflow: visible; }
 }
@@ -278,7 +279,7 @@ blockquote footer { margin-top: 0.85rem; font-size: 0.95rem; font-style: normal;
   body { font-size: 11.5pt; line-height: 1.45; }
   .site-header, .primary-nav, .banner, .gold-rule, .site-footer,
   .video-embed, .breadcrumb, .lecture-resources, .back-link,
-  .section-toc, .more-to-come, .unit-nav, .prev-next { display: none !important; }
+  .section-toc, .more-to-come, .unit-nav, .prev-next, .paired-lecture { display: none !important; }
   .unit-layout { display: block; max-width: none; padding: 0; margin: 0; }
   main, .reading { max-width: none; padding: 0; }
   a { color: #000; text-decoration: none; }
