@@ -22,11 +22,11 @@ const units = (await getCollection('commentary'))
     <h1>{entry.data.title}</h1>
     <Content />
 
-    <h2>Published units</h2>
+    <h2>Contents</h2>
     {units.length === 0 ? (
       <p>No units published yet.</p>
     ) : (
-      <nav class="section-toc" aria-label="Published units">
+      <nav class="section-toc" aria-label="Contents">
         <ol>
           {units.map((u) => (
             <li>
