@@ -10,7 +10,7 @@ pdf:
   sizeMB: 3                      # set to the final size
   note: "Searchable facsimile of the original 1974 typescript."
 license: CC-BY-4.0
-draft: true                      # flip to false in the commit that adds the PDF
+draft: false                      # flip to false in the commit that adds the PDF
 ---
 
 <!-- Body = the article landing prose (yours to write). Start at ##; the template
