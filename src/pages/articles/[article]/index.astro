@@ -60,7 +60,7 @@ const pdfMeta = d.pdf
     {d.pdf && (
       <aside class="article-pdf">
         <p class="article-pdf__label">{d.pdf.label}</p>
-        <a class="article-pdf__link" href={d.pdf.src}>Read “{d.title}”</a>
+        <a class="article-pdf__link" href={d.pdf.src} download>Download “{d.title}”</a>
         {pdfMeta && <p class="article-pdf__meta">{pdfMeta}</p>}
         {d.pdf.note && <p class="article-pdf__note">{d.pdf.note}</p>}
       </aside>
