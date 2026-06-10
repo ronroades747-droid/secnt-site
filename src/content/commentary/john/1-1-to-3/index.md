@@ -14,32 +14,14 @@ license: CC-BY-4.0
 hasLecture: true
 passageComplete: false
 draft: false
+diagram:
+  src: ./jn1-1-3-architectural-orientation.svg
+  alt: "Architectural orientation diagram of the Prologue of John (1:1–18). Three movements shown left to right: 1:1–5 The Word in the Beginning, 1:6–13 The Word Coming as Light, 1:14–18 The Word's Glory in the Flesh. A gold arc labeled Foyer-Bracket spans from verse 1 (πρὸς τὸν θεόν, with God) to verse 18 (εἰς τὸν κόλπον τοῦ πατρός, in the bosom of the Father), showing that the Prologue's two ends answer one another. Below the movements, a horizontal arrow labeled Macro-Tense Spine runs through three stations: ἦν, was, timeless eternal being; ἐγένετο, came to be, creation and history; ὃ γέγονεν, what has come to be, the resulting state. Within the first movement, the unit John 1:1–3 is highlighted, with the v. 3 → v. 4 pivot marked at its right edge."
+  caption: "Architectural orientation: the Prologue's three movements, the foyer-bracket across vv. 1 and 18, the macro-tense spine, and the 1:1–3 unit positioned within. The architecture is established in the foyer-bracket pattern and the macro-tense spine (and taught in Lectures 3–6)."
+  position: top
 ---
 
-<!--
-  SECNT · Commentary on the Gospel of John
-  Unit landing page — Jn 1:1–3 (The Word in the Beginning)
-  Repo destination: src/content/commentary/john/1-1-to-3/index.md
-  Canonical URL: secnt.org/commentary/john/1-1-to-3/
-
-  PRODUCTION NOTES (strip or keep as comments — not rendered):
-  · Body carries the Commentary Draft §1–§3 front matter per the Brief–Commentary
-    identity discipline: rendered, not re-authored. Wording follows the locked
-    Commentary Draft verbatim at the body-text register.
-  · FOOTNOTES: the §1–§3 source disclosures appear inline in the locked text as
-    drafted (the front matter is itself the disclosure apparatus). The text export
-    available at drafting carried no footnote markers for §1–§3; verify against
-    the manuscript .docx and restore any §1–§3 footnotes the export flattened.
-  · Lecture 1 embeds on this page via the lectures collection:
-    src/content/lectures/john/1-1-to-3/index.md (sectionRef: john/1-1-to-3).
-    No embed markup belongs in this file.
-  · Frontmatter fields below mirror the lectures-collection vocabulary; reconcile
-    to the commentary-collection schema at integration.
-  · Citation block verified June 4, 2026 against the live secnt.org/citing/ page
-    (full and short forms carried verbatim; supersedes Cycle Plan §III.2's string).
--->
-
-<!--
+<<!--
   SECNT · Commentary on the Gospel of John
   Unit landing page — Jn 1:1–3 (The Word in the Beginning)
   Repo destination: src/content/commentary/john/1-1-to-3/index.md

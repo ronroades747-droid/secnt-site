@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 640">
+  <style>
+    .aod-gk    { font-family: 'SBL BibLit','Cardo','Source Serif 4',Georgia,serif; }
+    .aod-lt    { font-family: 'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; }
+    .aod-ink   { fill: currentColor; }
+    .aod-grey  { fill: var(--color-meta, #6b6b6b); }
+    .aod-gold  { stroke: var(--color-gold, #b8860b); fill: none; }
+    .aod-box   { fill: none; stroke: currentColor; stroke-width: 1.5; }
+    .aod-arrow { fill: var(--color-gold, #b8860b); }
+  </style>
+
+  <defs>
+    <marker id="aod-arrowhead" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path class="aod-arrow" d="M 0 0 L 10 5 L 0 10 z"/>
+    </marker>
+  </defs>
+
+  <!-- Foyer-bracket arc -->
+  <path class="aod-gold" stroke-width="2.5" d="M 80 165 Q 800 -40 1520 165"/>
+  <text class="aod-lt aod-ink"  x="800" y="118" text-anchor="middle" font-size="22">Foyer-Bracket — the Prologue’s two ends answer one another</text>
+  <text class="aod-lt aod-grey" x="84" y="152" font-size="16">v. 1</text>
+  <text class="aod-lt aod-grey" x="1516" y="152" text-anchor="end" font-size="16">v. 18</text>
+
+  <!-- Endpoint phrases -->
+  <text class="aod-gk aod-ink"  x="80" y="212" font-size="30">πρὸς τὸν θεόν</text>
+  <text class="aod-lt aod-grey" x="80" y="244" font-size="17">with God (v. 1)</text>
+  <text class="aod-gk aod-ink"  x="1520" y="212" text-anchor="end" font-size="30">εἰς τὸν κόλπον τοῦ πατρός</text>
+  <text class="aod-lt aod-grey" x="1520" y="244" text-anchor="end" font-size="17">in the bosom of the Father (v. 18)</text>
+
+  <!-- Movement boxes -->
+  <rect class="aod-box" x="80"   y="285" width="453" height="150" rx="3"/>
+  <rect class="aod-box" x="573"  y="285" width="453" height="150" rx="3"/>
+  <rect class="aod-box" x="1066" y="285" width="454" height="150" rx="3"/>
+
+  <!-- Box I -->
+  <text class="aod-lt aod-ink" x="306" y="322" text-anchor="middle" font-size="21">I — John 1:1–5</text>
+  <text class="aod-lt aod-ink" x="306" y="352" text-anchor="middle" font-size="21">The Word in the Beginning</text>
+  <rect class="aod-box" x="100" y="382" width="250" height="38" rx="3"/>
+  <text class="aod-lt aod-ink"  x="225" y="407" text-anchor="middle" font-size="16">Jn 1:1–3 — this unit</text>
+  <text class="aod-lt aod-grey" x="368" y="407" font-size="15">v. 3 → v. 4 pivot</text>
+
+  <!-- Box II -->
+  <text class="aod-lt aod-ink" x="799" y="350" text-anchor="middle" font-size="21">II — John 1:6–13</text>
+  <text class="aod-lt aod-ink" x="799" y="382" text-anchor="middle" font-size="21">The Word Coming as Light</text>
+
+  <!-- Box III -->
+  <text class="aod-lt aod-ink" x="1293" y="350" text-anchor="middle" font-size="21">III — John 1:14–18</text>
+  <text class="aod-lt aod-ink" x="1293" y="382" text-anchor="middle" font-size="21">The Word’s Glory in the Flesh</text>
+
+  <!-- Macro-tense spine -->
+  <text class="aod-lt aod-ink" x="800" y="490" text-anchor="middle" font-size="22">Macro-Tense Spine</text>
+  <line class="aod-gold" stroke-width="2.5" x1="80" y1="515" x2="1518" y2="515" marker-end="url(#aod-arrowhead)"/>
+
+  <text class="aod-gk aod-ink"  x="306"  y="565" text-anchor="middle" font-size="34">ἦν</text>
+  <text class="aod-lt aod-grey" x="306"  y="593" text-anchor="middle" font-size="16">was — timeless, eternal being</text>
+  <text class="aod-gk aod-ink"  x="799"  y="565" text-anchor="middle" font-size="34">ἐγένετο</text>
+  <text class="aod-lt aod-grey" x="799"  y="593" text-anchor="middle" font-size="16">came to be — creation and history</text>
+  <text class="aod-gk aod-ink"  x="1293" y="565" text-anchor="middle" font-size="34">ὃ γέγονεν</text>
+  <text class="aod-lt aod-grey" x="1293" y="593" text-anchor="middle" font-size="16">what has come to be — the resulting state</text>
+</svg>
