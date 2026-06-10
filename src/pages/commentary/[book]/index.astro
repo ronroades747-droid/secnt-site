@@ -15,7 +15,7 @@ const units = (await getCollection('commentary'))
   .filter((e) => e.data.sectionType === 'unit-landing' && e.data.book === entry.data.book && isVisible(e))
   .sort((a, b) => (a.data.chapter - b.data.chapter) || ((a.data.verseStart ?? 0) - (b.data.verseStart ?? 0)));
 ---
-<BaseLayout title={entry.data.title} description={entry.data.description} tier="1"
+<BaseLayout title={entry.data.title} description={entry.data.description} tier="2"
   pageMeta={{ date: entry.data.date, updated: entry.data.updated, license: entry.data.license }}>
   <div class="reading reading--wide">
     <Breadcrumb crumbs={[{ label: 'Commentaries', href: '/commentary/' }, { label: entry.data.bookDisplay }]} />
