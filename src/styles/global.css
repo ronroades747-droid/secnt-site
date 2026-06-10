@@ -209,6 +209,8 @@ main { flex: 1 0 auto; width: 100%; }
 /* Diagram figure */
 figure.diagram { margin: 2.5rem 0; }
 figure.diagram img { display: block; margin-inline: auto; }
+figure.diagram .diagram-svg { color: var(--color-text); }
+figure.diagram .diagram-svg svg { display: block; width: 100%; height: auto; margin-inline: auto; }
 figure.diagram figcaption { color: var(--color-meta); font-size: 0.95rem; margin-top: 0.6rem; text-align: center; }
 
 /* Block quotes — scholarly quotation and the editor's welcome */
@@ -285,6 +287,7 @@ blockquote footer { margin-top: 0.85rem; font-size: 0.95rem; font-style: normal;
   a { color: #000; text-decoration: none; }
   /* Diagrams are scholarly content and print with the page; SVG scales crisply. */
   figure.diagram img { max-width: 100%; }
+  figure.diagram .diagram-svg svg { max-width: 100%; }
   figure.diagram figcaption { font-size: 9.5pt; }
   /* keep footnote sequence with its content, avoid awkward breaks */
   .footnotes, .greek-epigraph, blockquote, figure { break-inside: avoid; }

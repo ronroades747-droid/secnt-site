@@ -1,0 +1,53 @@
+---
+/**
+ * Diagram.astro — inline reader-facing architectural diagram.
+ *
+ * Renders a commentary `diagram` frontmatter object as an INLINE <svg> figure
+ * rather than an <img>. Inlining puts the SVG in the page DOM so it inherits
+ * the site's loaded SBL BibLit (polytonic Greek matches the running prose) and
+ * the Visual Register palette tokens — the SVG paints with currentColor and
+ * var(--color-gold) / var(--color-meta), so a token change propagates to every
+ * diagram. (An <img>-referenced SVG renders in the browser's static mode, which
+ * ignores page fonts and CSS variables; that mismatch is why we inline here.)
+ *
+ * The SVG is co-located next to the entry's .md and referenced by a relative
+ * `./name.svg` path. We resolve that against the entry's own file path and look
+ * the raw SVG up in a build-time glob. A missing file throws at build — the
+ * same fail-fast guarantee the old image() path gave.
+ *
+ * Accessibility: the wrapper carries role="img" and the frontmatter alt as its
+ * accessible name; the inner <svg> is presented as a single labeled graphic.
+ */
+interface DiagramData {
+  src: string;
+  alt: string;
+  caption?: string;
+  position?: 'top' | 'bottom';
+}
+interface Props {
+  diagram: DiagramData;
+  entryPath: string; // entry.filePath, e.g. src/content/commentary/john/1-1-to-3/index.md
+}
+const { diagram, entryPath } = Astro.props;
+
+const svgs = import.meta.glob('/src/content/commentary/**/*.svg', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+}) as Record<string, string>;
+
+const dir = entryPath.replace(/^\.?\/+/, '').replace(/\/[^/]+$/, '');
+const rel = diagram.src.replace(/^\.\//, '');
+const key = `/${dir}/${rel}`;
+const svg = svgs[key];
+if (!svg) {
+  throw new Error(
+    `Diagram SVG not found: "${diagram.src}" (resolved to ${key}) for ${entryPath}. ` +
+      `Co-locate the .svg next to the .md and reference it with a ./ path.`
+  );
+}
+---
+<figure class="diagram">
+  <div class="diagram-svg" role="img" aria-label={diagram.alt} set:html={svg}></div>
+  {diagram.caption && <figcaption>{diagram.caption}</figcaption>}
+</figure>

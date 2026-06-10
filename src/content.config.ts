@@ -172,7 +172,7 @@ const articles = defineCollection({
 // ---------------------------------------------------------------------------
 const commentary = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/commentary' }),
-  schema: ({ image }) =>
+  schema: () =>
     z.object({
       title: z.string(),
       description: z.string(),
@@ -191,9 +191,15 @@ const commentary = defineCollection({
       sectionType,
       greekEpigraph: z.string().optional(),
 
+      // Reader-facing architectural diagram. `src` is a relative ./ path to an
+      // SVG co-located beside this entry's .md. Diagram.astro inlines the SVG
+      // into the page DOM (not an <img>), so it inherits the site's SBL BibLit
+      // (Greek matches the running prose) and the Visual Register palette tokens
+      // (currentColor / --color-gold / --color-meta). The path is resolved
+      // against the entry's file path at build; a missing file throws.
       diagram: z
         .object({
-          src: image(),
+          src: z.string(),
           alt: z.string(),
           caption: z.string().optional(),
           position: z.enum(['top', 'bottom']).default('bottom'),

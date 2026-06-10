@@ -6,7 +6,7 @@
 // any section, and the diagram frontmatter field renders here just as the section
 // template renders it (closing the open item in publishing-a-pair.md).
 import { getCollection, render } from 'astro:content';
-import { Image } from 'astro:assets';
+import Diagram from '../../../../components/Diagram.astro';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import UnitNav from '../../../../components/UnitNav.astro';
 import PrevNext from '../../../../components/PrevNext.astro';
@@ -57,21 +57,11 @@ const crumbs = [
         </p>
       )}
 
-      {diagramTop && (
-        <figure class="diagram">
-          <Image src={d.diagram.src} alt={d.diagram.alt} />
-          {d.diagram.caption && <figcaption>{d.diagram.caption}</figcaption>}
-        </figure>
-      )}
+      {diagramTop && <Diagram diagram={d.diagram} entryPath={entry.filePath} />}
 
       <Content />
 
-      {diagramBottom && (
-        <figure class="diagram">
-          <Image src={d.diagram.src} alt={d.diagram.alt} />
-          {d.diagram.caption && <figcaption>{d.diagram.caption}</figcaption>}
-        </figure>
-      )}
+      {diagramBottom && <Diagram diagram={d.diagram} entryPath={entry.filePath} />}
 
       <PrevNext unitId={entry.id} />
     </article>
