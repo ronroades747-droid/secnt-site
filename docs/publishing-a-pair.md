@@ -98,8 +98,8 @@ diagram:
   position: top      # or: bottom
 ```
 
-- **Co-locate the `.svg`** in the same folder as the `.md` and reference it with a relative `./` path. `src` runs through Astro's `image()` helper, which resolves and bundles it.
-- Because `image()` resolves at build time, **the SVG must exist when the field is present.** A `diagram` field pointing at a missing file fails the build. So omit the field while the diagram is pending, and add the field and the SVG in the same commit.
+- **Co-locate the `.svg`** in the same folder as the `.md` and reference it with a relative `./` path. The page template inlines the SVG into the page DOM — it does **not** emit an `<img>` — so the diagram's polytonic Greek renders in the site's SBL BibLit (matching the running prose) and its colors track the Visual Register palette. Author diagrams in `currentColor` and `var(--color-gold)` / `var(--color-meta)` (with hard-coded fallbacks) and they sit in the web register automatically; a token change then carries to every diagram.
+- The `./` path is resolved against the entry's own file at build time, so **the SVG must exist when the field is present.** A `diagram` field pointing at a missing file fails the build (deliberately — it catches a mistyped path before it ships). So omit the field while the diagram is pending, and add the field and the SVG in the same commit.
 - **Never hand-roll `<img src="./…">` in the body.** Raw HTML images skip the asset pipeline; the relative path resolves against the page URL at runtime and 404s.
 - The field renders on **every** Commentary page, including the unit landing — the Architectural Orientation Diagram publishes by adding the field and the SVG to `index.md`'s folder. Diagrams are scholarly content: they render in print with caption.
 
