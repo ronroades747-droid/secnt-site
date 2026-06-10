@@ -1,10 +1,24 @@
 ---
 import { SITE } from '../lib/site';
-// Tier-1 chrome banner (homepage, volume, division landings). Drop the source
-// at /public/banner.jpg (the Deep in God's Word library image). Center-cropped
-// to 21:9 so the scholars-at-study and arched-doorway focal areas survive on
-// mobile, per the Visual Register.
+// Chrome banner — two heights, one image:
+//   full (default) — Tier-1 arrival points (homepage, volume, section homes);
+//     21:9, descriptive alt, per the Visual Register.
+//   slim           — every other page; a persistent ~110px strip carrying the
+//     warm-scholarly signature without competing with reading content. The
+//     strip is decorative identity (empty alt — the full banner already carries
+//     the description at the arrival points).
+// Source: /public/banner.jpg (the Deep in God's Word library image),
+// center-cropped so the scholars-at-study and arched-doorway focal areas survive.
+interface Props { slim?: boolean; }
+const { slim = false } = Astro.props;
 ---
-<div class="banner">
-  <img src={SITE.banner.src} alt={SITE.banner.alt} width="2100" height="900" loading="eager" decoding="async" />
+<div class={slim ? 'banner banner--slim' : 'banner'}>
+  <img
+    src={SITE.banner.src}
+    alt={slim ? '' : SITE.banner.alt}
+    width="2100"
+    height="900"
+    loading="eager"
+    decoding="async"
+  />
 </div>

@@ -34,4 +34,4 @@ const nav = NAV.filter((item) => item.href !== '/articles/' || hasArticles);
   </div>
 </header>
 <hr class="gold-rule" />
-{tier === '1' && <Banner />}
+{tier === '1' ? <Banner /> : <Banner slim />}
