@@ -37,12 +37,7 @@ draft: false
     to the commentary-collection schema at integration.
   · Citation block verified June 4, 2026 against the live secnt.org/citing/ page
     (full and short forms carried verbatim; supersedes Cycle Plan §III.2's string).
-  · The body opens with an H1 repeating the frontmatter title. If the commentary
-    template renders the title from frontmatter, remove the body H1 to avoid a
-    doubled heading.
 -->
-
-# The Word in the Beginning — John 1:1–3
 
 ## 1. Introduction
 
@@ -59,12 +54,6 @@ draft: false
 > In the beginning was the Word, and the Word was with God, and the Word was God. He was with God in the beginning. Through Him all things were made, and without Him nothing was made.
 
 Per the project's text-critical decisions (settled in the discussion of the text), this commentary reads *oude hen* (rather than *ouden*) at the close of v. 3a and places the full stop after *oude hen* (Reading A), with *ho gegonen* opening v. 4 rather than closing v. 3. The BSB's rendering, which reads *ouden* and closes v. 3 with "that has been made" under Reading B, is given here adjusted to the working text. Both adjustments — the form-question at 1:3b and the punctuation at 1:3/4 — converge on the same reading of v. 3 as a self-contained creational statement bounded at *oude hen*, with *ho gegonen* operating across the verse-boundary as the v. 3 → v. 4 architectural pivot.
-
-<figure>
-  <img src="./jn1-1-3-architectural-orientation.svg"
-       alt="Architectural orientation diagram of the Prologue of John (1:1–18). Three movements shown left to right: 1:1–5 The Word in the Beginning, 1:6–13 The Word Coming as Light, 1:14–18 The Word's Glory in the Flesh. A gold arc labeled Foyer-Bracket spans from verse 1 (πρὸς τὸν θεόν, with God) to verse 18 (εἰς τὸν κόλπον τοῦ πατρός, in the bosom of the Father), showing that the Prologue's two ends answer one another. Below the movements, a horizontal timeline labeled Macro-Tense Spine runs through three stations: ἦν, was, timeless eternal being; ἐγένετο, came to be, creation and history; ὃ γέγονεν, what has come to be, the resulting state — with a note that the ἦν register recurs at vv. 1–2, 4, 9, 10, and 15, so the spine runs the Prologue's full length. Within the first movement, the unit John 1:1–3 is highlighted, with the v. 3 → v. 4 pivot marked at its right edge." />
-  <figcaption>Architectural orientation: the Prologue's three movements, the foyer-bracket across vv. 1 and 18, the macro-tense spine, and the 1:1–3 unit positioned within. The architecture is established in the foyer-bracket pattern and the macro-tense spine (and taught in Lectures 3–6).</figcaption>
-</figure>
 
 ### Why This Passage Matters
 
