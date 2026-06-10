@@ -21,29 +21,6 @@ diagram:
   position: top
 ---
 
-<<!--
-  SECNT · Commentary on the Gospel of John
-  Unit landing page — Jn 1:1–3 (The Word in the Beginning)
-  Repo destination: src/content/commentary/john/1-1-to-3/index.md
-  Canonical URL: secnt.org/commentary/john/1-1-to-3/
-
-  PRODUCTION NOTES (strip or keep as comments — not rendered):
-  · Body carries the Commentary Draft §1–§3 front matter per the Brief–Commentary
-    identity discipline: rendered, not re-authored. Wording follows the locked
-    Commentary Draft verbatim at the body-text register.
-  · FOOTNOTES: the §1–§3 source disclosures appear inline in the locked text as
-    drafted (the front matter is itself the disclosure apparatus). The text export
-    available at drafting carried no footnote markers for §1–§3; verify against
-    the manuscript .docx and restore any §1–§3 footnotes the export flattened.
-  · Lecture 1 embeds on this page via the lectures collection:
-    src/content/lectures/john/1-1-to-3/index.md (sectionRef: john/1-1-to-3).
-    No embed markup belongs in this file.
-  · Frontmatter fields below mirror the lectures-collection vocabulary; reconcile
-    to the commentary-collection schema at integration.
-  · Citation block verified June 4, 2026 against the live secnt.org/citing/ page
-    (full and short forms carried verbatim; supersedes Cycle Plan §III.2's string).
--->
-
 ## Introduction
 
 ### The Passage
