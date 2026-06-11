@@ -9,6 +9,11 @@ sectionNumber: 3
 verseStart: 1
 verseEnd: 3
 sectionType: framing
+diagram:
+  src: ./jn1-1-3-macro-tense-spine.svg
+  alt: "The Prologue's macro-tense spine. The three governing verb-tenses are laid left to right along a single line: ἦν (being), ἐγένετο (coming-to-be), and ὃ γέγονεν (resulting-state). Four ἦν cluster at the opening across vv. 1–2; the line steps down at the turn, where the tense becomes ἐγένετο twice at v. 3 and then ὃ γέγονεν at the v. 3 → v. 4 boundary; the being-tense ἦν then recurs down the Prologue's length (vv. 9, 10, 15, 18). The line runs beneath the three movements — foyer (vv. 1–5), history (vv. 6–13), closure (vv. 14–18) — with the 1:1–3 unit marked at the opening."
+  caption: "The macro-tense spine: the Prologue's governing tenses read along the line. Four ἦν at the opening (vv. 1–2), the turn to ἐγένετο and ὃ γέγονεν at v. 3, and ἦν recurring down the unit's length — eternal being set against created becoming."
+  position: anchor
 license: CC-BY-4.0
 hasLecture: true
 draft: false
@@ -19,6 +24,8 @@ If the foyer-bracket gives the Prologue its shape, the macro-tense pattern gives
 ## The three terms
 
 The imperfect ἦν is the tense of unbounded existence: it states what already was, without marking a point of origin, and so carries the Word's eternal being — the Word who, at whatever beginning one names, already was. The aorist ἐγένετο is the tense of coming-to-be: it marks the entry into existence of what had not been, and so carries the creation, the all that came into being through the Word. The perfect ὃ γέγονεν is the tense of the resulting state: it names what has come to be and now stands in being, the settled condition of the created order. Between the first term and the second lies the whole ontological divide the Prologue is built on. The Word does not become; the Word is. The creation does not eternally be; it comes to be. The grammar carries the theology before any predicate is added.
+
+<!-- diagram -->
 
 ## The spine across the unit
 
