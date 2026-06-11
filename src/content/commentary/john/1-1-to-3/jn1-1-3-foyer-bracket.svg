@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1260 680"
+     role="img" aria-labelledby="fbTitle fbDesc" preserveAspectRatio="xMidYMid meet">
+  <title id="fbTitle">The Prologue&#8217;s foyer-bracket &#8212; bracket-pairs arcing above the line</title>
+  <desc id="fbDesc">The Prologue&#8217;s opening and closing joined by bracket-pairs arcing above the line &#8212; the Word with God (v. 1) answered by the Word in the Father&#8217;s embrace (v. 18), and the Creator (v. 3) answered by the Exegete (v. 18); a third, provisional pair (v. 4 / v. 14) shown dashed, engaged at John 1:14.</desc>
+
+  <style>
+    .gk      { font-family:'SBL BibLit','Cardo','Source Serif 4',Georgia,serif; fill:currentColor; }
+    .gkdim   { font-family:'SBL BibLit','Cardo','Source Serif 4',Georgia,serif; fill:var(--color-meta, #6b6b6b); opacity:.64; }
+    .ink     { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; }
+    .meta    { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta, #6b6b6b); }
+    .metadim { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta, #6b6b6b); opacity:.64; }
+    .arc     { fill:none; stroke:var(--color-gold, #b8860b); stroke-linecap:round; }
+    .arcdim  { fill:none; stroke:var(--color-meta, #6b6b6b); stroke-width:2; stroke-linecap:round; stroke-dasharray:7 6; opacity:.6; }
+    .rule    { stroke:var(--color-gold, #b8860b); stroke-width:2; stroke-linecap:round; }
+    .tick    { stroke:var(--color-meta, #6b6b6b); stroke-width:1.2; fill:none; }
+    .crown   { fill:var(--color-gold, #b8860b); }
+    .crowndim{ fill:var(--color-meta, #6b6b6b); opacity:.55; }
+  </style>
+
+  <!-- ===== baseline (the Prologue) ===== -->
+  <line class="rule" x1="98" y1="472" x2="1132" y2="472"/>
+
+  <!-- ===== Layer A : the shape (arcs above the line) ===== -->
+  <path class="arc" style="stroke-width:2.4" d="M110 472 C110 -28 1120 -28 1120 472"/>
+  <path class="arc" style="stroke-width:2.2" d="M360 472 C360 112 1098 112 1098 472"/>
+  <path class="arcdim" d="M480 472 C480 250 940 250 940 472"/>
+
+  <!-- crowns (label above a small accent crown-mark) -->
+  <text class="ink"  x="615" y="74"  text-anchor="middle" font-size="21">v. 1 / v. 18</text>
+  <path class="crown" d="M598 95 L598 86 L607 90 L615 80 L623 90 L632 86 L632 95 Z"/>
+
+  <text class="ink"  x="729" y="176" text-anchor="middle" font-size="21">v. 3 / v. 18</text>
+  <path class="crown" d="M712 199 L712 190 L721 194 L729 184 L737 194 L746 190 L746 199 Z"/>
+
+  <text class="metadim" x="710" y="283" text-anchor="middle" font-size="20">engaged at John 1:14</text>
+  <path class="crowndim" d="M693 307 L693 298 L702 302 L710 292 L718 302 L727 298 L727 307 Z"/>
+
+  <!-- arc-foot Greek (primary ink) -->
+  <text class="gk" x="96"  y="430" text-anchor="middle" font-size="25">&#960;&#961;&#8056;&#962; &#964;&#8056;&#957;</text>
+  <text class="gk" x="96"  y="457" text-anchor="middle" font-size="25">&#952;&#949;&#972;&#957;</text>
+
+  <text class="gk" x="268" y="405" text-anchor="middle" font-size="25">&#960;&#940;&#957;&#964;&#945;</text>
+  <text class="gk" x="268" y="432" text-anchor="middle" font-size="25">&#948;&#953;&#8217; &#945;&#8016;&#964;&#959;&#8166;</text>
+  <text class="gk" x="268" y="459" text-anchor="middle" font-size="25">&#7952;&#947;&#941;&#957;&#949;&#964;&#959;</text>
+
+  <text class="gk" x="1000" y="434" text-anchor="middle" font-size="25">&#7952;&#954;&#949;&#8150;&#957;&#959;&#962;</text>
+  <text class="gk" x="1000" y="461" text-anchor="middle" font-size="25">&#7952;&#958;&#951;&#947;&#942;&#963;&#945;&#964;&#959;</text>
+
+  <text class="gk" x="1178" y="410" text-anchor="middle" font-size="25">&#949;&#7984;&#962; &#964;&#8056;&#957;</text>
+  <text class="gk" x="1178" y="437" text-anchor="middle" font-size="25">&#954;&#972;&#955;&#960;&#959;&#957;</text>
+  <text class="gk" x="1178" y="464" text-anchor="middle" font-size="25">&#964;&#959;&#8166; &#960;&#945;&#964;&#961;&#972;&#962;</text>
+
+  <!-- arc-3 feet (dim, provisional) -->
+  <text class="gkdim" x="565" y="430" text-anchor="middle" font-size="24">&#950;&#969;&#942; &#183; &#966;&#8182;&#962;</text>
+  <text class="gkdim" x="858" y="430" text-anchor="middle" font-size="24">&#948;&#972;&#958;&#945;</text>
+
+  <!-- ===== movement labels (secondary) ===== -->
+  <text class="meta" x="300"  y="503" text-anchor="middle" font-size="22">Foyer &#183; vv. 1&#8211;5</text>
+  <text class="meta" x="690"  y="503" text-anchor="middle" font-size="22">History &#183; vv. 6&#8211;13</text>
+  <text class="meta" x="1035" y="503" text-anchor="middle" font-size="22">Closure &#183; vv. 14&#8211;18</text>
+
+  <!-- unit tick (secondary, understated) -->
+  <path class="tick" d="M112 524 L112 531 L360 531 L360 524"/>
+  <text class="meta" x="236" y="552" text-anchor="middle" font-size="18">1:1&#8211;3</text>
+
+  <!-- ===== legend (bottom caption, secondary) ===== -->
+  <text class="meta" x="630" y="632" text-anchor="middle" font-size="20">Arcs above the line &#8212; the Prologue&#8217;s shape (the bracket-pairs)</text>
+  <text class="meta" x="630" y="658" text-anchor="middle" font-size="19">Solid = established &#183; dashed = the pair engaged at John 1:14</text>
+</svg>

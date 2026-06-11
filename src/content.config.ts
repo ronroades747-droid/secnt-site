@@ -197,12 +197,17 @@ const commentary = defineCollection({
       // (Greek matches the running prose) and the Visual Register palette tokens
       // (currentColor / --color-gold / --color-meta). The path is resolved
       // against the entry's file path at build; a missing file throws.
+      //
+      // position: 'top' | 'bottom' render the figure outside the body, above or
+      // below it. 'anchor' renders it INSIDE the body at a <!-- diagram -->
+      // marker (see remark-diagram-anchor) — for a figure that belongs after the
+      // paragraph introducing it and before the sub-section that walks it.
       diagram: z
         .object({
           src: z.string(),
           alt: z.string(),
           caption: z.string().optional(),
-          position: z.enum(['top', 'bottom']).default('bottom'),
+          position: z.enum(['top', 'bottom', 'anchor']).default('bottom'),
         })
         .optional(),
 

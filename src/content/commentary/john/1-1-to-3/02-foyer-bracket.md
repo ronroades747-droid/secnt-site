@@ -9,6 +9,11 @@ sectionNumber: 2
 verseStart: 1
 verseEnd: 3
 sectionType: framing
+diagram:
+  src: ./jn1-1-3-foyer-bracket.svg
+  alt: "The Prologue's foyer-bracket pattern. A horizontal baseline runs through three labeled movements — the foyer (vv. 1–5), the historical middle (vv. 6–13), and the closure (vv. 14–18). Bracket-pairs arc above the line, joining the foyer's opening terms to the closure's answering terms: a solid arc from πρὸς τὸν θεόν (v. 1) to εἰς τὸν κόλπον τοῦ πατρός (v. 18), a second solid arc from πάντα δι' αὐτοῦ ἐγένετο (v. 3) to ἐκεῖνος ἐξηγήσατο (v. 18), and a third, dashed arc marking the provisional v. 4 / v. 14 pair (ζωή · φῶς answered by δόξα) engaged at John 1:14. The 1:1–3 unit is marked at the foyer end of the baseline."
+  caption: "The Prologue's foyer-bracket: the foyer's opening terms answered by the closure's terms across the unit's two ends. Solid arcs are the established pairs (v. 1 / v. 18; v. 3 / v. 18); the dashed arc is the v. 4 / v. 14 pair engaged at John 1:14."
+  position: anchor
 license: CC-BY-4.0
 hasLecture: true
 draft: false
@@ -17,6 +22,8 @@ draft: false
 The exegesis works clause by clause, but it does not work in a vacuum. It operates on a unit whose compositional architecture is already established — deliberately, by the evangelist, at the level of the Prologue as a whole. That architecture rests on two mechanisms working at once. The first is synchronic: the shape of the Prologue, the way its opening and closing movements frame what lies between them. The second is diachronic: the temporal spine running through the unit, the patterned movement of its verb-tenses from eternal being to temporal becoming. The two are coordinate — they operate together on the the same text — and how they are weighed relative to each other is taken up in the coordinate articulation of shape and spine. This section establishes both as the foundation on which the clause-level exegesis stands.
 
 The Prologue does not merely precede the Gospel; it encloses it. Under the three-movement linear reading adopted in the Introduction, the Prologue's outer movements — the foyer[^foyer] of vv. 1–5 and the closure of vv. 14–18 — frame the historical-redemptive middle of vv. 6–13, the section in which the eternal Word meets human history in the Baptist's witness, the world's rejection, and the regeneration of the children of God. This framing is not a reader's overlay laid across the text.[^overlay] It is carried by a set of bracket-pairs in which the foyer's opening terms and the closure's answering terms articulate the same realities at the unit's two ends. Two of these pairs have their foyer terminus within 1:1–3: the πρὸς τὸν θεόν of 1:1b, answered by the εἰς τὸν κόλπον τοῦ πατρός of 1:18; and the πάντα δι’ αὐτοῦ ἐγένετο of 1:3, answered by the ἐκεῖνος ἐξηγήσατο of 1:18. The third pair — the life-and-light of v. 4 answered by the δόξα of v. 14 — has its foyer terminus in 1:4–5 and is taken up there and at 1:14.
+
+<!-- diagram -->
 
 ## The v. 1 / v. 18 bracket
 
