@@ -14,7 +14,7 @@ hasLecture: false
 draft: false
 ---
 
-The architecture is not theologically neutral scaffolding on which the exegesis is later hung. It does theological work in its own right, and it does that work before a single predicate of the Word's earthly ministry has been narrated. What the shape and the spine accomplish, together, is to fix the Christology within which the whole Gospel is to be read — to settle, at the threshold, who the subject of the narrative is, so that everything the Gospel goes on to say of Jesus of Nazareth is read as said of the One the Prologue has already identified.
+The architecture is not theologically neutral scaffolding on which the exegesis is later hung. It does theological work in its own right, and it does that work before a single predicate of the Word's earthly ministry has been narrated. What the shape and the spine accomplish, together, is to fix the Christology within which the whole Gospel is to be read — to settle, at the threshold, who the subject of the narrative is, so that everything the Gospel goes on to say of Jesus of Nazareth is said of the One the Prologue has already identified.
 
 ## The frame: the Gospel within eternal communion, grounded in creation
 
