@@ -15,7 +15,7 @@ diagram:
   caption: "Coordinate articulation: the synchronic foyer-bracket and the diachronic macro-tense spine on a single baseline. The two mechanisms meet at shared termini — at the opening, and most sharply at v. 3, where πάντα δι' αὐτοῦ ἐγένετο is at once a foyer pole and the hinge of the tense-spine. The v. 4 / v. 14 arc is shown dimmed: the one pair still to be discharged, at 1:14."
   position: anchor
 license: CC-BY-4.0
-hasLecture: false
+hasLecture: true
 draft: false
 ---
 
