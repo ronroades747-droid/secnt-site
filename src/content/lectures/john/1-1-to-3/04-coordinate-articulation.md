@@ -7,5 +7,5 @@ bunnyVideoId: "REPLACE-WITH-BUNNY-GUID"
 youtubeUrl: "https://www.youtube.com/watch?v=REPLACE"
 duration: "00:00"
 license: CC-BY-4.0
-draft: true
+draft: false
 ---
