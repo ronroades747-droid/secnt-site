@@ -10,7 +10,7 @@ verseStart: 1
 verseEnd: 3
 sectionType: framing
 license: CC-BY-4.0
-hasLecture: false
+hasLecture: true
 draft: false
 ---
 
