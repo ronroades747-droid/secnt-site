@@ -9,6 +9,11 @@ sectionNumber: 4
 verseStart: 1
 verseEnd: 3
 sectionType: framing
+diagram:
+  src: ./jn1-1-3-coordinate-articulation.svg
+  alt: "The Prologue's two architectural mechanisms drawn on one baseline. Above, the foyer-bracket arcs: ARC 1 spans v. 1 to v. 18, ARC 2 spans v. 3 to v. 18, and a third, dimmed arc — the v. 4 / v. 14 pair, engaged at John 1:14 — is held provisional. Below, the macro-tense spine runs left to right: four ἦν cluster at vv. 1–2, the line steps down where the tense turns to ἐγένετο at v. 3 and ὃ γέγονεν at the v. 3 → v. 4 boundary. Two points where the arcs and the spine coincide are marked in gold: at the opening, where the v. 1 foyer pole meets the eternal-being ἦν, and — most sharply, tied together — at v. 3, where the foyer pole of the v. 3 / v. 18 bracket falls on the hinge at which the spine turns from being to becoming."
+  caption: "Coordinate articulation: the synchronic foyer-bracket and the diachronic macro-tense spine on a single baseline. The two mechanisms meet at shared termini — at the opening, and most sharply at v. 3, where πάντα δι' αὐτοῦ ἐγένετο is at once a foyer pole and the hinge of the tense-spine. The v. 4 / v. 14 arc is shown dimmed: the one pair still to be discharged, at 1:14."
+  position: anchor
 license: CC-BY-4.0
 hasLecture: false
 draft: false
@@ -19,6 +24,8 @@ The Prologue's architecture rests on two mechanisms, and they have been establis
 ## Where the two mechanisms meet
 
 The two mechanisms are not merely parallel; they share their termini. The opening of the unit is at once the foyer pole of the v. 1 / v. 18 bracket and the point at which the spine's eternal-being register is laid down: the πρὸς τὸν θεόν that the closure answers is stated in the same clauses where ἦν stands. And v. 3 is the sharpest point of intersection. The creational statement πάντα δι' αὐτοῦ ἐγένετο is simultaneously the foyer pole of the v. 3 / v. 18 creator-and-exegete bracket and the hinge at which the spine turns from ἦν to ἐγένετο. The verse that frames the Gospel's redemptive narrative as the work of its Creator is the same verse at which the grammar pivots from the Word who was to the all that came to be. The shape and the movement are fastened to the same words. This is what it means to call the architecture deliberate: a single compositional decision is doing two kinds of structural work at once.[^coordinate]
+
+<!-- diagram -->
 
 ## The asymmetry
 
