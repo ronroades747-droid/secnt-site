@@ -88,6 +88,18 @@ export function splitCommentaryId(id: string) {
 export const canonical = (pathname: string) =>
   new URL(pathname, SITE.origin).href;
 
+// Reader-facing date form for the page-foot publication/revision line, per the
+// Publication & Revision Dates standard: month spelled, e.g. "3 June 2026".
+// Formatted in UTC so a date-only frontmatter value (parsed as UTC midnight)
+// never renders one day off in a negative-offset build/runtime timezone.
+export const formatDate = (d: Date) =>
+  d.toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    timeZone: 'UTC',
+  });
+
 // Visibility gate for draft staging:
 //   dev               -> show everything
 //   preview build     -> set SECNT_SHOW_DRAFTS=1 to show drafts

@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
+import PageDates from '../../../components/PageDates.astro';
 import { commentaryUrl, isVisible } from '../../../lib/site';
 
 export async function getStaticPaths() {
@@ -16,7 +17,7 @@ const units = (await getCollection('commentary'))
   .sort((a, b) => (a.data.chapter - b.data.chapter) || ((a.data.verseStart ?? 0) - (b.data.verseStart ?? 0)));
 ---
 <BaseLayout title={entry.data.title} description={entry.data.description} tier="2"
-  pageMeta={{ date: entry.data.date, updated: entry.data.updated, license: entry.data.license }}>
+  pageMeta={{ date: entry.data.date, revised: entry.data.revised, license: entry.data.license }}>
   <div class="reading reading--wide">
     <Breadcrumb crumbs={[{ label: 'Commentaries', href: '/commentary/' }, { label: entry.data.bookDisplay }]} />
     <h1>{entry.data.title}</h1>
@@ -39,5 +40,6 @@ const units = (await getCollection('commentary'))
         </ol>
       </nav>
     )}
+    <PageDates date={entry.data.date} revised={entry.data.revised} />
   </div>
 </BaseLayout>

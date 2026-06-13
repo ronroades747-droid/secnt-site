@@ -10,6 +10,7 @@ import Diagram from '../../../../components/Diagram.astro';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import UnitNav from '../../../../components/UnitNav.astro';
 import PrevNext from '../../../../components/PrevNext.astro';
+import PageDates from '../../../../components/PageDates.astro';
 import Breadcrumb from '../../../../components/Breadcrumb.astro';
 import { splitCommentaryId, normalizeId, lectureUrl, volumeUrl, isVisible } from '../../../../lib/site';
 
@@ -42,7 +43,7 @@ const crumbs = [
 ];
 ---
 <BaseLayout title={d.title} description={d.description}
-  pageMeta={{ date: d.date, updated: d.updated, license: d.license, passageRef: d.passageRef }}>
+  pageMeta={{ date: d.date, revised: d.revised, license: d.license, passageRef: d.passageRef }}>
   <div class="unit-layout">
     <UnitNav unitId={entry.id} />
     <article class="reading reading--wide">
@@ -64,6 +65,7 @@ const crumbs = [
       {diagramBottom && <Diagram diagram={d.diagram} entryPath={entry.filePath} />}
 
       <PrevNext unitId={entry.id} />
+      <PageDates date={d.date} revised={d.revised} />
     </article>
   </div>
 </BaseLayout>

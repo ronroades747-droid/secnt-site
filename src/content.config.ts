@@ -102,6 +102,8 @@ const volumes = defineCollection({
       author: z.string().default('Ronald E. Roades'),
       date: z.coerce.date(),
       updated: z.coerce.date().optional(),
+      // See commentary.revised — same standard, same semantics.
+      revised: z.coerce.date().optional(),
       license,
       draft: z.boolean().default(false),
       revisions: z
@@ -180,6 +182,14 @@ const commentary = defineCollection({
       date: z.coerce.date(),
       updated: z.coerce.date().optional(),
 
+      // Most-recent substantive revision date, per the Publication & Revision
+      // Dates standard (13 Jun 2026). A deliberate editorial act set by
+      // Production at go-live (alongside flipping `draft`), NOT git-derived and
+      // distinct from the heavier `revisions[]` changelog; present only once a
+      // substantive revision has occurred. Surfaces at the page foot
+      // ("Revised …") and as schema.org dateModified.
+      revised: z.coerce.date().optional(),
+
       book: z.string().default('john'),
       chapter: z.number().int().positive(),
       passageRef: z.string(),
@@ -237,6 +247,10 @@ const lectures = defineCollection({
     description: z.string().optional(),
     date: z.coerce.date(),
     updated: z.coerce.date().optional(),
+    // Conditional, per the Publication & Revision Dates standard: a lecture
+    // carries one only if it is ever substantively re-cut under Quality-over-
+    // Time governance. Same semantics as commentary.revised.
+    revised: z.coerce.date().optional(),
 
     sectionRef: reference('commentary'),
 

@@ -1,9 +1,33 @@
 ---
 import { SITE, canonical } from '../lib/site';
-interface Props { title: string; description?: string; }
-const { title, description } = Astro.props;
+interface Props {
+  title: string;
+  description?: string;
+  datePublished?: Date;
+  dateModified?: Date;
+}
+const { title, description, datePublished, dateModified } = Astro.props;
 const canonicalURL = canonical(Astro.url.pathname);
 const fullTitle = title === SITE.wordmark ? title : `${title} — ${SITE.wordmark}`;
+
+// schema.org Article dates, emitted machine-side per the Publication &
+// Revision Dates standard so citation managers and search-freshness signals
+// read the pair. Only emitted for dated content pages (datePublished present).
+// dateModified falls back to datePublished when the page has never been
+// revised. `<` is escaped so a value containing it can never break the script.
+const iso = (d: Date) => d.toISOString().slice(0, 10);
+const jsonLd = datePublished
+  ? JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: title,
+      author: { '@type': 'Person', name: SITE.author },
+      datePublished: iso(datePublished),
+      dateModified: iso(dateModified ?? datePublished),
+      license: SITE.licenseUrl,
+      url: canonicalURL,
+    }).replace(/</g, '\\u003c')
+  : null;
 ---
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -24,3 +48,5 @@ const fullTitle = title === SITE.wordmark ? title : `${title} — ${SITE.wordmar
 <meta property="og:title" content={title} />
 {description && <meta property="og:description" content={description} />}
 <meta property="og:url" content={canonicalURL} />
+
+{jsonLd && <script type="application/ld+json" set:html={jsonLd} />}

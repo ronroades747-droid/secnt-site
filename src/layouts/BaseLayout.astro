@@ -12,6 +12,7 @@ interface Props {
   pageMeta?: {
     date?: Date;
     updated?: Date;
+    revised?: Date;
     license?: string;
     passageRef?: string;
   };
@@ -19,11 +20,16 @@ interface Props {
 const { title, description, tier = '2', pageMeta } = Astro.props;
 const canonicalURL = canonical(Astro.url.pathname);
 const citeYear = pageMeta?.date?.getFullYear();
+// Effective revision date: the standard's `revised` field, falling back to the
+// legacy `updated` field for any template not yet migrated. Drives both the
+// print citation and the schema.org dateModified.
+const revisedDate = pageMeta?.revised ?? pageMeta?.updated;
 ---
 <!doctype html>
 <html lang="en">
   <head>
-    <BaseHead title={title} description={description} />
+    <BaseHead title={title} description={description}
+      datePublished={pageMeta?.date} dateModified={revisedDate} />
   </head>
   <body>
     <Header tier={tier} />
@@ -33,7 +39,7 @@ const citeYear = pageMeta?.date?.getFullYear();
       <div class="print-citation">
         {pageMeta?.passageRef && <div>John {pageMeta.passageRef}</div>}
         {pageMeta?.date && <div>Published {pageMeta.date.toISOString().slice(0, 10)}</div>}
-        {pageMeta?.updated && <div>Revised {pageMeta.updated.toISOString().slice(0, 10)}</div>}
+        {revisedDate && <div>Revised {revisedDate.toISOString().slice(0, 10)}</div>}
         <div>{pageMeta?.license ?? SITE.licenseName} · {SITE.author}</div>
         <div>{canonicalURL}</div>
       </div>

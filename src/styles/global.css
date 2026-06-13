@@ -272,6 +272,17 @@ blockquote footer { margin-top: 0.85rem; font-size: 0.95rem; font-style: normal;
 /* Print-only citation footer (hidden on screen) */
 .print-citation { display: none; }
 
+/* Reader-facing publication / revision dates at the page foot (screen).
+   Quiet metadata line; the same dates print at document end via
+   .print-citation, so this is suppressed in print to avoid duplication. */
+.page-dates {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-meta);
+  font-size: 0.9rem;
+}
+
 /* ====================================================================
    PRINT STYLESHEET
    Clean polytonic Greek/Hebrew in print (font-face embeds print fine);
@@ -283,7 +294,7 @@ blockquote footer { margin-top: 0.85rem; font-size: 0.95rem; font-style: normal;
   body { font-size: 11.5pt; line-height: 1.45; }
   .site-header, .primary-nav, .banner, .gold-rule, .site-footer,
   .video-embed, .breadcrumb, .lecture-resources, .back-link,
-  .section-toc, .more-to-come, .unit-nav, .prev-next, .paired-lecture { display: none !important; }
+  .section-toc, .more-to-come, .unit-nav, .prev-next, .paired-lecture, .page-dates { display: none !important; }
   .unit-layout { display: block; max-width: none; padding: 0; margin: 0; }
   main, .reading { max-width: none; padding: 0; }
   a { color: #000; text-decoration: none; }

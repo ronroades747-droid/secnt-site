@@ -1,0 +1,24 @@
+---
+// Reader-facing publication / revision dates at the page foot, per the
+// Publication & Revision Dates standard (13 Jun 2026). The publication date is
+// always shown; the revision line renders only when `revised` is present:
+//
+//   First published 3 June 2026
+//   First published 3 June 2026 · Revised 13 June 2026
+//
+// Screen-only — the same dates print at document end via BaseLayout's
+// .print-citation, so this block is suppressed in print to avoid duplication.
+// Scoped to Commentary and Lecture pages (the standard's scope); the machine-
+// readable schema.org datePublished/dateModified pair is emitted separately in
+// BaseHead.
+import { formatDate } from '../lib/site';
+interface Props {
+  date: Date;
+  revised?: Date;
+}
+const { date, revised } = Astro.props;
+---
+<footer class="page-dates">
+  <span>First published {formatDate(date)}</span>
+  {revised && <span> &#183; Revised {formatDate(revised)}</span>}
+</footer>

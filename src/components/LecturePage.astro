@@ -12,6 +12,7 @@
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BunnyEmbed from './BunnyEmbed.astro';
+import PageDates from './PageDates.astro';
 import Breadcrumb from './Breadcrumb.astro';
 import { commentaryUrl, volumeUrl, splitCommentaryId } from '../lib/site';
 
@@ -42,7 +43,7 @@ const crumbs = [
 ];
 ---
 <BaseLayout title={l.title} description={l.description}
-  pageMeta={{ date: l.date, updated: l.updated, license: l.license, passageRef: section.data.passageRef }}>
+  pageMeta={{ date: l.date, revised: l.revised, license: l.license, passageRef: section.data.passageRef }}>
   <article class="reading reading--wide">
     <Breadcrumb crumbs={crumbs} />
     <h1>{l.title}</h1>
@@ -57,5 +58,6 @@ const crumbs = [
     </ul>
 
     <Content />
+    <PageDates date={l.date} revised={l.revised} />
   </article>
 </BaseLayout>
