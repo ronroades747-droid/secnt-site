@@ -9,7 +9,6 @@ sectionNumber: 7
 verseStart: 1
 verseEnd: 1
 sectionType: exegesis
-greekEpigraph: "πρὸς τὸν θεόν"
 license: CC-BY-4.0
 hasLecture: false
 draft: false
