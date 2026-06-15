@@ -9,7 +9,6 @@ sectionNumber: 6
 verseStart: 1
 verseEnd: 1
 sectionType: exegesis
-greekEpigraph: "ἐν ἀρχῇ"
 license: CC-BY-4.0
 hasLecture: true
 draft: false
