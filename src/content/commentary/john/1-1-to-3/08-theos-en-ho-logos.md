@@ -10,7 +10,7 @@ verseStart: 1
 verseEnd: 1
 sectionType: exegesis
 license: CC-BY-4.0
-hasLecture: false
+hasLecture: true
 draft: false
 ---
 
