@@ -171,6 +171,63 @@ main { flex: 1 0 auto; width: 100%; }
 .section-toc .toc-desc { display: block; color: var(--color-meta); font-size: 0.95rem; margin-top: 0.15rem; }
 .more-to-come { color: var(--color-meta); font-size: 0.95rem; font-style: italic; margin: 1.5rem 0 0; }
 
+/* Volume Contents — two-column table (commentary left, lecture right), grouped
+   by passage. The passage heading row links to the unit landing and carries its
+   own (Lecture 1) link; section rows indent beneath. Forthcoming passages show
+   as muted, non-clickable placeholders so the whole volume's shape is visible.
+   Restrained-scholarly: typographic hierarchy, a hairline grid, gold on hover;
+   the lecture column is shrink-to-content and right-aligned. Stacks on mobile. */
+.volume-toc { margin: 1.5rem 0 0; }
+.volume-toc__cols {
+  display: grid; grid-template-columns: 1fr auto; gap: 1.5rem;
+  margin: 0; padding: 0 0 0.4rem; border-bottom: 1px solid var(--color-border);
+  font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-meta);
+}
+.volume-toc__cols span:last-child { text-align: right; }
+
+.vtoc-group { border-bottom: 1px solid var(--color-border); }
+.vtoc-group--forthcoming { opacity: 0.62; }
+
+/* Shared two-column row grid so the lecture column aligns across heading + rows. */
+.vtoc-passage, .vtoc-row {
+  display: grid; grid-template-columns: 1fr auto; gap: 1.5rem; align-items: baseline;
+}
+
+/* Passage heading row. */
+.vtoc-passage { padding: 0.95rem 0 0.55rem; }
+.vtoc-passage__link, .vtoc-passage__label { text-decoration: none; color: var(--color-text); display: block; }
+.vtoc-passage__link:hover { color: var(--color-gold); }
+.vtoc-ref { display: block; font-size: 0.82rem; letter-spacing: 0.02em; color: var(--color-meta); }
+.vtoc-passage__link:hover .vtoc-ref { color: inherit; }
+.vtoc-title { display: block; font-size: 1.22rem; font-weight: 600; line-height: 1.25; margin-top: 0.1rem; }
+.vtoc-flag {
+  align-self: center; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--color-meta); white-space: nowrap;
+}
+
+/* Section rows: indented under the heading. */
+.vtoc-rows { list-style: none; margin: 0 0 0.55rem; padding: 0; }
+.vtoc-row { padding: 0.4rem 0 0.4rem 1.25rem; border-top: 1px solid var(--color-border); }
+.vtoc-group .vtoc-rows .vtoc-row:first-child { border-top: 1px solid var(--color-border); }
+.vtoc-row__page { text-decoration: none; color: var(--color-text); line-height: 1.4; }
+.vtoc-row__page:hover { color: var(--color-gold); }
+
+/* Lecture column — right-aligned, quiet until hover. */
+.vtoc-lec {
+  justify-self: end; text-align: right; white-space: nowrap;
+  font-size: 0.9rem; color: var(--color-link); text-decoration: none;
+}
+.vtoc-lec:hover { color: var(--color-link-hover); text-decoration: underline; }
+.vtoc-lec--none { color: var(--color-border); }
+
+@media (max-width: 36rem) {
+  /* Stack: lecture link drops under its page link, still left-of-grid. */
+  .vtoc-passage, .vtoc-row { grid-template-columns: 1fr; gap: 0.25rem; }
+  .vtoc-flag, .vtoc-lec { justify-self: start; text-align: left; }
+  .vtoc-row { padding-left: 1rem; }
+  .volume-toc__cols { display: none; }
+}
+
 /* Unit navigation: a persistent section rail beside the reading column, plus a
    prev/next pager at the foot of each page. Restrained-scholarly: typographic,
    gold marks the current item, content keeps its reading measure. */

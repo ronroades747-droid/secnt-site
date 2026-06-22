@@ -3,7 +3,12 @@ import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
 import PageDates from '../../../components/PageDates.astro';
-import { commentaryUrl, isVisible } from '../../../lib/site';
+import {
+  commentaryUrl,
+  lectureUrl,
+  normalizeId,
+  isVisible,
+} from '../../../lib/site';
 
 export async function getStaticPaths() {
   const vols = (await getCollection('volumes')).filter(isVisible);
@@ -12,32 +17,173 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 
-const units = (await getCollection('commentary'))
-  .filter((e) => e.data.sectionType === 'unit-landing' && e.data.book === entry.data.book && isVisible(e))
-  .sort((a, b) => (a.data.chapter - b.data.chapter) || ((a.data.verseStart ?? 0) - (b.data.verseStart ?? 0)));
+// --- Volume outline --------------------------------------------------------
+// The passages this volume covers, in reading order, so the Contents shows the
+// SHAPE of the whole work rather than only what is live. A passage with a
+// published unit-landing renders as a real, clickable group; a passage without
+// one renders as a muted "forthcoming" placeholder. Placeholders retire
+// themselves automatically the moment a passage's unit-landing is published —
+// nothing here needs editing as content lands.
+//
+// SCOPE NOTE (22 Jun 2026): showing forthcoming placeholders on the VOLUME
+// landing intentionally supersedes the "never a coming slot" paragraph of
+// docs/publishing-a-pair.md for this page only. The incremental-exposure
+// rhythm still governs everything WITHIN a passage (the section rows below come
+// straight from isVisible, so they appear one pair at a time as before).
+//
+// Forthcoming `title`/`blurb` are optional; passage ref alone is shown until
+// Production settles a title. (If this list grows, consider promoting it to a
+// `outline` field on the volume frontmatter.)
+const VOLUME_OUTLINE: Record<
+  string,
+  { passageRef: string; chapter: number; verseStart: number; title?: string; blurb?: string }[]
+> = {
+  john: [
+    { passageRef: '1:1\u20133', chapter: 1, verseStart: 1 },
+    { passageRef: '1:4\u20135', chapter: 1, verseStart: 4 },
+    { passageRef: '1:6\u201313', chapter: 1, verseStart: 6 },
+    { passageRef: '1:14\u201318', chapter: 1, verseStart: 14 },
+  ],
+};
+
+const allCommentary = await getCollection('commentary');
+const allLectures = await getCollection('lectures');
+
+// Visible paired lecture for a commentary entry id → its URL + lecture number.
+function lectureFor(commentaryId: string) {
+  const lec = allLectures.find((l) => normalizeId(l.data.sectionRef.id) === commentaryId);
+  if (!lec || !isVisible(lec)) return null;
+  const no = lec.data.title.match(/^Lecture\s+(\d+)/)?.[1] ?? null;
+  return { url: lectureUrl(commentaryId), no };
+}
+
+type Row = { label: string; pageUrl: string; lectureUrl?: string; lectureNo?: string | null };
+type Group = {
+  forthcoming: boolean;
+  passageRef: string;
+  title: string | null;
+  blurb?: string | null;
+  landingUrl?: string;
+  lectureUrl?: string;
+  lectureNo?: string | null;
+  rows: Row[];
+  chapter: number;
+  verseStart: number;
+};
+
+function buildGroup(landing: (typeof allCommentary)[number]): Group {
+  const unitId = landing.id;
+  const sections = allCommentary
+    .filter((e) => e.id.startsWith(unitId + '/') && isVisible(e))
+    .sort((a, b) => a.data.sectionNumber - b.data.sectionNumber);
+  const headLec = landing.data.hasLecture ? lectureFor(unitId) : null;
+  const rows: Row[] = sections.map((s) => {
+    const lec = s.data.hasLecture ? lectureFor(s.id) : null;
+    return { label: s.data.title, pageUrl: commentaryUrl(s.id), lectureUrl: lec?.url, lectureNo: lec?.no };
+  });
+  return {
+    forthcoming: false,
+    passageRef: landing.data.passageRef,
+    title: landing.data.title,
+    landingUrl: commentaryUrl(unitId),
+    lectureUrl: headLec?.url,
+    lectureNo: headLec?.no,
+    rows,
+    chapter: landing.data.chapter,
+    verseStart: landing.data.verseStart ?? 0,
+  };
+}
+
+const realUnits = allCommentary.filter(
+  (e) => e.data.sectionType === 'unit-landing' && e.data.book === entry.data.book && isVisible(e),
+);
+const byRef = new Map(realUnits.map((u) => [u.data.passageRef, u]));
+const outline = VOLUME_OUTLINE[entry.data.book] ?? [];
+
+const groups: Group[] = [];
+const usedRefs = new Set<string>();
+for (const o of outline) {
+  const u = byRef.get(o.passageRef);
+  if (u) {
+    groups.push(buildGroup(u));
+    usedRefs.add(o.passageRef);
+  } else {
+    groups.push({
+      forthcoming: true,
+      passageRef: o.passageRef,
+      title: o.title ?? null,
+      blurb: o.blurb ?? null,
+      rows: [],
+      chapter: o.chapter,
+      verseStart: o.verseStart,
+    });
+  }
+}
+// Defensive: any published unit not named in the outline (a passage beyond the
+// Prologue) is appended so a real unit is never hidden by an unextended list.
+for (const u of realUnits) {
+  if (!usedRefs.has(u.data.passageRef)) groups.push(buildGroup(u));
+}
+groups.sort((a, b) => a.chapter - b.chapter || a.verseStart - b.verseStart);
+
+const bookDisplay = entry.data.bookDisplay;
 ---
 <BaseLayout title={entry.data.title} description={entry.data.description} tier="2"
   pageMeta={{ date: entry.data.date, revised: entry.data.revised, license: entry.data.license }}>
   <div class="reading reading--wide">
-    <Breadcrumb crumbs={[{ label: 'Commentaries', href: '/commentary/' }, { label: entry.data.bookDisplay }]} />
+    <Breadcrumb crumbs={[{ label: 'Commentaries', href: '/commentary/' }, { label: bookDisplay }]} />
     <h1>{entry.data.title}</h1>
     <Content />
 
     <h2>Contents</h2>
-    {units.length === 0 ? (
+    {groups.length === 0 ? (
       <p>No units published yet.</p>
     ) : (
-      <nav class="section-toc" aria-label="Contents">
-        <ol>
-          {units.map((u) => (
-            <li>
-              <a href={commentaryUrl(u.id)}>
-                <span class="toc-title">{u.data.title}</span>
-                <span class="toc-desc">{u.data.passageRef ? `John ${u.data.passageRef} — ` : ''}{u.data.description}</span>
-              </a>
-            </li>
-          ))}
-        </ol>
+      <nav class="volume-toc" aria-label="Contents">
+        <p class="volume-toc__cols" aria-hidden="true">
+          <span>Commentary</span><span>Lecture</span>
+        </p>
+        {groups.map((g) => (
+          <section class:list={['vtoc-group', { 'vtoc-group--forthcoming': g.forthcoming }]}>
+            {g.forthcoming ? (
+              <div class="vtoc-passage">
+                <span class="vtoc-passage__label">
+                  <span class="vtoc-ref">{bookDisplay} {g.passageRef}</span>
+                  {g.title && <span class="vtoc-title">{g.title}</span>}
+                </span>
+                <span class="vtoc-flag">Forthcoming</span>
+              </div>
+            ) : (
+              <>
+                <div class="vtoc-passage">
+                  <a class="vtoc-passage__link" href={g.landingUrl}>
+                    <span class="vtoc-ref">{bookDisplay} {g.passageRef}</span>
+                    {g.title && <span class="vtoc-title">{g.title}</span>}
+                  </a>
+                  {g.lectureUrl ? (
+                    <a class="vtoc-lec" href={g.lectureUrl}>{g.lectureNo ? `Lecture ${g.lectureNo}` : 'Lecture'}</a>
+                  ) : (
+                    <span class="vtoc-lec vtoc-lec--none" aria-hidden="true">—</span>
+                  )}
+                </div>
+                {g.rows.length > 0 && (
+                  <ol class="vtoc-rows">
+                    {g.rows.map((r) => (
+                      <li class="vtoc-row">
+                        <a class="vtoc-row__page" href={r.pageUrl}>{r.label}</a>
+                        {r.lectureUrl ? (
+                          <a class="vtoc-lec" href={r.lectureUrl}>{r.lectureNo ? `Lecture ${r.lectureNo}` : 'Lecture'}</a>
+                        ) : (
+                          <span class="vtoc-lec vtoc-lec--none" aria-hidden="true">—</span>
+                        )}
+                      </li>
+                    ))}
+                  </ol>
+                )}
+              </>
+            )}
+          </section>
+        ))}
       </nav>
     )}
     <PageDates date={entry.data.date} revised={entry.data.revised} />
