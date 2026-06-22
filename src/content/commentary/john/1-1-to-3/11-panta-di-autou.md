@@ -9,7 +9,6 @@ sectionNumber: 11
 verseStart: 3
 verseEnd: 3
 sectionType: exegesis
-greekEpigraph: "πάντα δι' αὐτοῦ"
 license: CC-BY-4.0
 hasLecture: true
 draft: true
