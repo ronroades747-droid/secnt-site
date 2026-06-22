@@ -12,7 +12,9 @@ This runbook has three parts: the **rhythm** that governs when things appear, th
 
 ## The publishing rhythm — incremental exposure
 
-**The site exposes only what is published.** A passage appears on the volume landing only once its first pair is live; its table of contents lists only published pairs and grows as more go live; each pair becomes visible and clickable the moment its own commit lands. There is no "stage the whole cycle and flip it all at once" step — pairs publish one at a time, roughly every day or two, and the live volume always shows finished work and never a "coming" slot.
+**The site exposes only what is published — with one deliberate exception, the volume landing's passage outline.** Within a passage, the table of contents lists only published pairs and grows as more go live; each pair becomes visible and clickable the moment its own commit lands. There is no "stage the whole cycle and flip it all at once" step — pairs publish one at a time, roughly every day or two.
+
+The volume landing is the exception (22 Jun 2026). To show the shape of the whole work up front, it lists the volume's full passage outline: each passage with a published unit landing renders as a clickable group (its passage heading, its published section rows, and the paired-lecture links); each passage still forthcoming renders as a muted, non-clickable "Forthcoming" placeholder. **Production does nothing to manage these placeholders** — a passage's placeholder retires itself automatically the moment its unit landing goes `draft: false`; there is no slot to reserve, grey out, or clear by hand. The outline is Dev-owned (`VOLUME_OUTLINE` in `src/pages/commentary/[book]/index.astro`). Everything *inside* a passage still follows the incremental rhythm above — section rows appear one published pair at a time.
 
 The order, once per passage:
 
