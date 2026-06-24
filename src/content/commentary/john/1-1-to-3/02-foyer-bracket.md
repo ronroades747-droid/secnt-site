@@ -19,7 +19,7 @@ license: CC-BY-4.0
 hasLecture: true
 draft: false
 ---
-(/commentary/john/1-1-to-3/08-theos-en-ho-logos/) 
+/commentary/john/1-1-to-3/08-theos-en-ho-logos/
 
 The exegesis works clause by clause, but it does not work in a vacuum. It operates on a unit whose compositional architecture is already established — deliberately, by the evangelist, at the level of the Prologue as a whole. That architecture rests on two mechanisms working at once. The first is synchronic: the shape of the Prologue, the way its opening and closing movements frame what lies between them. The second is diachronic: the temporal spine running through the unit, the patterned movement of its verb-tenses from eternal being to temporal becoming. The two are coordinate — they operate together on the same text — but, as the [coordinate articulation of shape and spine](/commentary/john/1-1-to-3/04-coordinate-articulation/) will show, they are not held at the same confidence. This section establishes both as the foundation on which the clause-level exegesis stands.
 
