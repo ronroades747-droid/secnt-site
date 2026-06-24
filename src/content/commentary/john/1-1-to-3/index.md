@@ -9,7 +9,6 @@ sectionNumber: 0
 verseStart: 1
 verseEnd: 3
 sectionType: unit-landing
-greekEpigraph: "Ἐν ἀρχῇ ἦν ὁ λόγος"
 license: CC-BY-4.0
 hasLecture: true
 passageComplete: false
