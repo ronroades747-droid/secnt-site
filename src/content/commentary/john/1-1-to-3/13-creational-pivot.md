@@ -9,6 +9,11 @@ sectionNumber: 13
 verseStart: 3
 verseEnd: 3
 sectionType: synthesis
+diagram:
+  src: ./jn1-1-3-creational-pivot.svg
+  alt: "The creational pivot of the macro-tense spine at the v. 3 → v. 4 hinge. A single line carries the spine: four ἦν cluster at the eternal-being level across vv. 1–2, the line steps down to ἐγένετο twice at v. 3 (πάντα δι' αὐτοῦ ἐγένετο, the outward agency of creation), then rises through the perfect ὃ γέγονεν — the standing result, marked as the bridge — and returns by an arrow up to the being-level at v. 4a (ζωὴ ἦν), where the preposition has shifted from the outward δι' αὐτοῦ to the in-him locus ἐν αὐτῷ. The unit 1:1–3 and the foyer (vv. 1–5) are marked beneath."
+  caption: "The creational pivot: the macro-tense spine turns and returns across the v. 3 → v. 4 boundary. Eternal being (ἦν) descends into created becoming (ἐγένετο) at v. 3, and the perfect ὃ γέγονεν bridges back up to being at v. 4a — δι' αὐτοῦ giving way to ἐν αὐτῷ, outward agency to in-him locus."
+  position: anchor
 license: CC-BY-4.0
 hasLecture: true
 draft: false
@@ -23,6 +28,8 @@ The reading makes ὃ γέγονεν the subject of verse 4a, and the tense of t
 ## The category-shift across the boundary
 
 What changes across the hinge is not the subject but the register of predication. Verse 3 predicated creation-agency outward — all things through him, δι' αὐτοῦ, the universal-scope agency of [the personally-distinct divine agent](/commentary/john/1-1-to-3/10-houtos/). Verse 4a predicates the resulting state in him — ἐν αὐτῷ, the in-him locus where what has come into being has its life. The movement is threefold and exact: from act to resulting state (ἐγένετο, then γέγονεν, then the renewed ἦν of ζωὴ ἦν); from outward agency to in-him locus (δι' αὐτοῦ to ἐν αὐτῷ); from the creation that came to be to the life in which it stands. A second grammatical signal marks the turn: the imperfect ἦν returns at verse 4a, after the aorists of verse 3 — the eternal-being tense of the macro-tense spine reasserted now of the life in the Word. The pivot is real: verse 3 and verse 4a do not say the same thing, and the resulting state is not the act restated. But it is also connected — the perfect ὃ γέγονεν is the bridge, naming the standing result of verse 3's act and grammatically attaching it to the in-him locus of verse 4a. Verse 3's creation does not simply stop and a new topic begin; the creation that came to be through him is, in its resulting state, found in him as life.
+
+<!-- diagram -->
 
 ## The case for reading the words with verse 3: Schnackenburg and Carson
 
