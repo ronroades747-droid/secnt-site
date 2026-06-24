@@ -1,9 +1,13 @@
 ---
-// Persistent unit navigation (sections sidebar): the unit landing
-// ("Introduction") plus every PUBLISHED section, grouped under segment
-// subheads (June 6, 2026 navigation handoff, Change 4), the current page in
-// gold. This is a pure reading spine — the paired-lecture link lives at the
-// TOP of each Commentary page (in the article header), not in the rail.
+// Persistent unit navigation (sections sidebar): an up-and-out "Contents"
+// link to the volume landing, then the unit landing ("Introduction") plus
+// every PUBLISHED section, the current page in gold. Sections are still
+// grouped by segment (for ordering and inter-group spacing), but the segment
+// subheads are not rendered — each section title now carries its own segment
+// prefix (e.g. "The Text: …", "Architecture: …"), so a subhead would just say
+// the word twice. The grouping survives as a beat of spacing between segments.
+// This is a pure reading spine — the paired-lecture link lives at the TOP of
+// each Commentary page (in the article header), not in the rail.
 //
 // Count- and draft-aware via isVisible. Shows the "more to come" note (driven
 // by the landing's passageComplete) at the foot while the passage is in
@@ -11,7 +15,7 @@
 // scrolls; desktop: the sidebar scrolls independently when it exceeds the
 // viewport.
 import { getCollection } from 'astro:content';
-import { commentaryUrl, isVisible, SEGMENT_ORDER, SEGMENT_OF } from '../lib/site';
+import { commentaryUrl, isVisible, SEGMENT_ORDER, SEGMENT_OF, volumeUrl, splitCommentaryId } from '../lib/site';
 
 interface Props {
   unitId: string; // e.g. "john/1-1-to-3"
@@ -56,14 +60,16 @@ const orderedGroups = SEGMENT_ORDER.filter((seg) => groups.has(seg)).map(
 const current = currentId ?? unitId;
 const showMore = landing ? landing.data.passageComplete !== true : true;
 const hasAny = orderedGroups.length > 0;
+// Up-and-out target: the volume landing, which lists this book's passages.
+const contentsUrl = volumeUrl(splitCommentaryId(unitId).book);
 ---
 {hasAny && (
   <nav class="unit-nav" aria-label="Sections in this unit">
     <div class="unit-nav__sections">
+      <a class="unit-nav__up" href={contentsUrl}>&larr; Contents</a>
       <p class="unit-nav__heading">Sections</p>
       {orderedGroups.map((g) => (
         <div class="unit-nav__segment">
-          <p class="unit-nav__subhead">{g.segment}</p>
           <ol>
             {g.items.map((it) => (
               <li>

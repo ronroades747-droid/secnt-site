@@ -229,9 +229,12 @@ main { flex: 1 0 auto; width: 100%; }
 /* On small viewports the whole nav stacks above the article; only the
    sections list scrolls. */
 .unit-nav__sections { max-height: 45vh; overflow-y: auto; }
-.unit-nav__segment { margin: 0 0 0.6rem; }
-.unit-nav__subhead { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-meta); margin: 0.85rem 0 0.15rem; }
-.unit-nav__segment:first-of-type .unit-nav__subhead { margin-top: 0.25rem; }
+.unit-nav a.unit-nav__up { display: inline-block; padding: 0; margin: 0 0 0.85rem; font-size: 0.82rem; letter-spacing: 0.02em; color: var(--color-meta); }
+.unit-nav a.unit-nav__up:hover { color: var(--color-gold); }
+/* Segment subheads were removed once each title gained its own segment prefix;
+   the inter-segment margin preserves the grouping as a beat of spacing. */
+.unit-nav__segment { margin: 0 0 1rem; }
+.unit-nav__segment:last-of-type { margin-bottom: 0; }
 .unit-nav ol { list-style: none; margin: 0; padding: 0; }
 .unit-nav a, .unit-nav__current { display: block; padding: 0.35rem 0; font-size: 0.98rem; line-height: 1.3; text-decoration: none; }
 .unit-nav a { color: var(--color-text); }
@@ -251,7 +254,7 @@ main { flex: 1 0 auto; width: 100%; }
   .unit-layout { display: grid; grid-template-columns: minmax(13rem, 15rem) minmax(0, 1fr); gap: clamp(2rem, 4vw, 3.5rem); max-width: 1180px; margin-inline: auto; padding-inline: clamp(1rem, 4vw, 1.5rem); align-items: start; }
   .unit-layout > .reading { padding-inline: 0; }
   /* Sticky sidebar with independent scroll when it exceeds the viewport
-     (21 entries + segment subheads on short screens). */
+     (21 entries on short screens). */
   .unit-nav { position: sticky; top: 1.5rem; margin: 0; border: 0; border-left: 1px solid var(--color-border); background: none; padding: 0 0 0 1rem; max-height: calc(100vh - 3rem); overflow-y: auto; }
   .unit-nav__sections { max-height: none; overflow: visible; }
 }
