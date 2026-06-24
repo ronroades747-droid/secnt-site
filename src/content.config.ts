@@ -199,7 +199,6 @@ const commentary = defineCollection({
       verseEnd: z.number().int().positive().optional(),
 
       sectionType,
-      greekEpigraph: z.string().optional(),
 
       // Reader-facing architectural diagram. `src` is a relative ./ path to an
       // SVG co-located beside this entry's .md. Diagram.astro inlines the SVG

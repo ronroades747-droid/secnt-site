@@ -135,15 +135,6 @@ main { flex: 1 0 auto; width: 100%; }
 /* ====================================================================
    CONTENT BLOCKS
    ==================================================================== */
-.greek-epigraph {
-  font-family: var(--font-greek);
-  font-size: 1.5rem;
-  color: var(--color-text);
-  margin: 0 0 1.5rem;
-  padding-left: 1rem;
-  border-left: var(--rule) solid var(--color-gold);
-}
-
 .passage-ref { color: var(--color-meta); font-size: 0.95rem; letter-spacing: 0.02em; margin: 0 0 0.5rem; }
 
 /* Paired-lecture link in the page header — the section's other format
@@ -360,7 +351,7 @@ blockquote footer { margin-top: 0.85rem; font-size: 0.95rem; font-style: normal;
   figure.diagram .diagram-svg svg { max-width: 100%; }
   figure.diagram figcaption { font-size: 9.5pt; }
   /* keep footnote sequence with its content, avoid awkward breaks */
-  .footnotes, .greek-epigraph, blockquote, figure { break-inside: avoid; }
+  .footnotes, blockquote, figure { break-inside: avoid; }
   h1, h2, h3, h4 { break-after: avoid; }
   .print-citation {
     display: block;

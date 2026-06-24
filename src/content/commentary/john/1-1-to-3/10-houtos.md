@@ -9,7 +9,6 @@ sectionNumber: 10
 verseStart: 2
 verseEnd: 2
 sectionType: exegesis
-greekEpigraph: "οὗτος"
 license: CC-BY-4.0
 hasLecture: true
 draft: false

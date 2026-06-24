@@ -69,7 +69,6 @@ For reference only. These are already set in every stub. Production never adds, 
 | `sectionNumber` | Dev | Routing/order only; never reader-facing. Required, no default |
 | `verseStart`, `verseEnd` | Dev | Ordering aids; optional |
 | `sectionType` | Dev | Required; one of `unit-landing`, `text-critical`, `framing`, `exegesis`, `synthesis`, `theology`, `engagement`, `pastoral`. Also drives the sidebar's segment grouping (Dev-owned mapping in the template) |
-| `greekEpigraph` | Dev | Optional polytonic epigraph; rendered under the title |
 | `diagram` | Dev | Optional; see *Diagrams* below |
 | `license` | Dev | `CC-BY-4.0` |
 | `hasLecture` | Dev | Defaults true; drives the sidebar's paired-lecture link |
