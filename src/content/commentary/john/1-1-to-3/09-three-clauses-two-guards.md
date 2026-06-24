@@ -1,5 +1,5 @@
 ---
-title: "Three Clauses, Two Guards"
+title: "Exegesis: Three Clauses, Two Guards"
 description: "Architectural synthesis at v. 1: πρὸς τὸν θεόν and θεὸς ἦν ὁ λόγος as a coupled pair of Two Guards, mutually requiring and guarding each other."
 date: 2026-06-18
 book: john

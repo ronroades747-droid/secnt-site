@@ -1,5 +1,5 @@
 ---
-title: "Πάντα δι' αὐτοῦ — Universal Scope and Personally-Distinct Agency"
+title: "Exegesis: Πάντα δι' αὐτοῦ — Universal Scope and Personally-Distinct Agency"
 description: "§5.4.1: v. 3a's positive predication — universal scope (πάντα) and personally-distinct divine agency (δι' αὐτοῦ) as one assertion: all things came to be through the Word."
 date: 2026-05-30
 book: john

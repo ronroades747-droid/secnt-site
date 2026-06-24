@@ -1,5 +1,5 @@
 ---
-title: "Οὐδὲ ἕν — The Absolute Foreclosure"
+title: "Exegesis: Οὐδὲ ἕν — The Absolute Foreclosure"
 description: "§5.4.2: v. 3b's absolute foreclosure — καὶ χωρὶς αὐτοῦ ἐγένετο οὐδὲ ἕν: nothing whatever came to be apart from the Word."
 date: 2026-06-22
 book: john

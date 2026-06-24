@@ -1,5 +1,5 @@
 ---
-title: "Coordinate Articulation of Shape and Spine"
+title: "Architecture: Coordinate Articulation of Shape and Spine"
 description: "The foyer-bracket and macro-tense patterns superimposed: coordinate articulations of one underlying compositional architecture rather than alternatives."
 date: 2026-05-30
 book: john

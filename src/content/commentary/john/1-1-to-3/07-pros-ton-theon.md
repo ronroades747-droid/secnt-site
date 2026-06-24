@@ -1,5 +1,5 @@
 ---
-title: "Πρὸς τὸν θεόν — The Word with God"
+title: "Exegesis: Πρὸς τὸν θεόν — The Word with God"
 description: "The second clause of v. 1: the Word's personal-distinction relation to God, articulated under the πρός + accusative construction."
 date: 2026-06-13
 book: john

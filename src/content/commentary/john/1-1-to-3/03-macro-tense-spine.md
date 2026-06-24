@@ -1,5 +1,5 @@
 ---
-title: "The Macro-Tense Spine"
+title: "Architecture: The Macro-Tense Spine"
 description: "The Prologue's diachronic spine: ἦν (timeless-eternal), ἐγένετο (historical-creational and historical-incarnational), ὃ γέγονεν (resulting-state)."
 date: 2026-05-30
 book: john

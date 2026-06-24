@@ -1,5 +1,5 @@
 ---
-title: "Θεὸς ἦν ὁ λόγος — The Word's Full Deity"
+title: "Exegesis: Θεὸς ἦν ὁ λόγος — The Word's Full Deity"
 description: "The third clause of v. 1: the Word's full deity, articulated under the qualitative-anarthrous construction."
 date: 2026-05-30
 book: john
