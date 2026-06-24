@@ -1,5 +1,5 @@
 ---
-title: "Lecture 14 — The v. 3 → v. 4 Architectural Pivot"
+title: "Exegesis: The v. 3 → v. 4 Architectural Pivot"
 description: "Exegesis of the architectural pivot at v. 3 → v. 4."
 date: 2026-05-30
 sectionRef: john/1-1-to-3/13-creational-pivot

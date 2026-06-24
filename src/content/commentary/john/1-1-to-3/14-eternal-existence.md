@@ -1,5 +1,5 @@
 ---
-title: "The Eternal Existence of the Word"
+title: "Theology: The Eternal Existence of the Word"
 description: "Locus One: the Word's eternal existence, doctrinally articulated on the grounds of v. 1a (ἐν ἀρχῇ ἦν ὁ λόγος)."
 date: 2026-05-30
 book: john

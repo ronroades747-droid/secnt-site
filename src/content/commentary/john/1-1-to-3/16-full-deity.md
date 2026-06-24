@@ -1,5 +1,5 @@
 ---
-title: "The Word's Full Deity"
+title: "Theology: The Word's Full Deity"
 description: "Locus Three: the Word's full deity, doctrinally articulated on the grounds of v. 1c (θεὸς ἦν ὁ λόγος), against modalism and Arianism, with forward gesture to 20:28."
 date: 2026-05-30
 book: john

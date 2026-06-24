@@ -32,7 +32,7 @@ const passageLabel = section.data.passageRef
   ? `${bookDisplay} ${section.data.passageRef}`
   : bookDisplay;
 // Final crumb: "Lecture N" from the locked title form "Lecture N — [Title]".
-const lectureCrumb = l.title.split(' — ')[0] ?? l.title;
+const lectureCrumb = 'Lecture';
 
 const crumbs = [
   { label: 'Commentaries', href: '/commentary/' },

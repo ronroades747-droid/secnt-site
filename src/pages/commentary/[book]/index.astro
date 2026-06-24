@@ -53,19 +53,16 @@ const allLectures = await getCollection('lectures');
 function lectureFor(commentaryId: string) {
   const lec = allLectures.find((l) => normalizeId(l.data.sectionRef.id) === commentaryId);
   if (!lec || !isVisible(lec)) return null;
-  const no = lec.data.title.match(/^Lecture\s+(\d+)/)?.[1] ?? null;
-  return { url: lectureUrl(commentaryId), no };
+  return { url: lectureUrl(commentaryId) };
 }
 
-type Row = { label: string; pageUrl: string; lectureUrl?: string; lectureNo?: string | null };
+type Row = { label: string; pageUrl: string; lectureUrl?: string };
 type Group = {
   forthcoming: boolean;
   passageRef: string;
   title: string | null;
   blurb?: string | null;
   landingUrl?: string;
-  lectureUrl?: string;
-  lectureNo?: string | null;
   rows: Row[];
   chapter: number;
   verseStart: number;
@@ -77,17 +74,18 @@ function buildGroup(landing: (typeof allCommentary)[number]): Group {
     .filter((e) => e.id.startsWith(unitId + '/') && isVisible(e))
     .sort((a, b) => a.data.sectionNumber - b.data.sectionNumber);
   const headLec = landing.data.hasLecture ? lectureFor(unitId) : null;
-  const rows: Row[] = sections.map((s) => {
-    const lec = s.data.hasLecture ? lectureFor(s.id) : null;
-    return { label: s.data.title, pageUrl: commentaryUrl(s.id), lectureUrl: lec?.url, lectureNo: lec?.no };
-  });
+  const rows: Row[] = [
+    { label: 'Introduction', pageUrl: commentaryUrl(unitId), lectureUrl: headLec?.url },
+    ...sections.map((s) => {
+      const lec = s.data.hasLecture ? lectureFor(s.id) : null;
+      return { label: s.data.title, pageUrl: commentaryUrl(s.id), lectureUrl: lec?.url };
+    }),
+  ];
   return {
     forthcoming: false,
     passageRef: landing.data.passageRef,
     title: landing.data.title,
     landingUrl: commentaryUrl(unitId),
-    lectureUrl: headLec?.url,
-    lectureNo: headLec?.no,
     rows,
     chapter: landing.data.chapter,
     verseStart: landing.data.verseStart ?? 0,
@@ -155,16 +153,11 @@ const bookDisplay = entry.data.bookDisplay;
               </div>
             ) : (
               <>
-                <div class="vtoc-passage">
-                  <a class="vtoc-passage__link" href={g.landingUrl}>
-                    <span class="vtoc-ref">{bookDisplay} {g.passageRef}</span>
+                <div class="vtoc-passage vtoc-passage--heading">
+                  <span class="vtoc-passage__label">
                     {g.title && <span class="vtoc-title">{g.title}</span>}
-                  </a>
-                  {g.lectureUrl ? (
-                    <a class="vtoc-lec" href={g.lectureUrl}>{g.lectureNo ? `Lecture ${g.lectureNo}` : 'Lecture'}</a>
-                  ) : (
-                    <span class="vtoc-lec vtoc-lec--none" aria-hidden="true">—</span>
-                  )}
+                    {' '}<span class="vtoc-ref">({bookDisplay} {g.passageRef})</span>
+                  </span>
                 </div>
                 {g.rows.length > 0 && (
                   <ol class="vtoc-rows">
@@ -172,7 +165,7 @@ const bookDisplay = entry.data.bookDisplay;
                       <li class="vtoc-row">
                         <a class="vtoc-row__page" href={r.pageUrl}>{r.label}</a>
                         {r.lectureUrl ? (
-                          <a class="vtoc-lec" href={r.lectureUrl}>{r.lectureNo ? `Lecture ${r.lectureNo}` : 'Lecture'}</a>
+                          <a class="vtoc-lec" href={r.lectureUrl}>Lecture</a>
                         ) : (
                           <span class="vtoc-lec vtoc-lec--none" aria-hidden="true">—</span>
                         )}

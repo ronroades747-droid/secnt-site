@@ -30,7 +30,6 @@ const { Content } = await render(entry);
 const d = entry.data;
 const pairedLecture = d.hasLecture && lecture && isVisible(lecture) ? lecture : null;
 const pairedLectureUrl = lectureUrl(entry.id);
-const lectureNo = pairedLecture?.data.title.match(/^Lecture\s+(\d+)/)?.[1];
 const diagramTop = d.diagram && d.diagram.position === 'top';
 const diagramBottom = d.diagram && d.diagram.position === 'bottom';
 
@@ -54,7 +53,7 @@ const crumbs = [
 
       {pairedLecture && (
         <p class="paired-lecture">
-          <a href={pairedLectureUrl}>Watch the paired lecture{lectureNo ? ` \u2014 Lecture ${lectureNo}` : ''}</a>
+          <a href={pairedLectureUrl}>Watch the lecture</a>
         </p>
       )}
 

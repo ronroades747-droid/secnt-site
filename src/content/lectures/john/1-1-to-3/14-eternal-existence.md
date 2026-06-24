@@ -1,5 +1,5 @@
 ---
-title: "Lecture 15 — Theology: The Eternal Existence of the Word"
+title: "Theology: The Eternal Existence of the Word"
 description: "Theological lecture on Locus One: the Eternal Existence of the Word."
 date: 2026-05-30
 sectionRef: john/1-1-to-3/14-eternal-existence

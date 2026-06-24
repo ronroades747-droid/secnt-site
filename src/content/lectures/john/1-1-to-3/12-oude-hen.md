@@ -1,5 +1,5 @@
 ---
-title: "Lecture 13 — Οὐδὲ ἕν: The Absolute Foreclosure"
+title: "Exegesis: Οὐδὲ ἕν — The Absolute Foreclosure"
 description: "Exegesis of v. 3b: the absolute foreclosure — nothing came to be apart from the Word."
 date: 2026-05-30
 sectionRef: john/1-1-to-3/12-oude-hen

@@ -1,5 +1,5 @@
 ---
-title: "Lecture 4 — Architecture: The Macro-Tense Spine"
+title: "Architecture: The Macro-Tense Spine"
 description: "Architectural lecture on the Prologue's macro-tense spine."
 date: 2026-05-30
 sectionRef: john/1-1-to-3/03-macro-tense-spine
