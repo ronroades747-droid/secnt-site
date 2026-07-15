@@ -22,6 +22,8 @@ The pivot at verse 3 to verse 4 is the point of the text at which the unit's fou
 
 The four are not four topics laid side by side. They are four predications of one Word, and the pivot is the point of the text at which the unit fastens them together: the eternal, personally-distinct, fully divine agent of creation is the One in whom the creation that came to be has its life. What the clauses said of the Word severally, the hinge says of him at once.
 
+<!-- diagram -->
+
 ## The Creator-creature distinction, most exactly drawn
 
 The pivot is the point at which [the unit's temporal spine turns](/commentary/john/1-1-to-3/03-macro-tense-spine/) — ἦν to ἐγένετο to γέγονεν — and the turn writes into the grammar the single distinction on which the Prologue's theology stands: [the absolute line between the One who is and all that comes to be](/commentary/john/1-1-to-3/05-architectural-implications/). Doctrinally, the pivot is where that line is most exactly drawn, because it is the point at which the two sides are named in one breath — the Word who was, the all that has come to be — and held apart by the very sequence of tenses that joins them. Bavinck fixes the distinction at just this register: the difference between the Creator and the creature, he writes, hinges on the contrast between being and becoming — all that is creaturely is in process of becoming and finds its rest only in him who is pure being without becoming.[^being-becoming]
