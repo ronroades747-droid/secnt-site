@@ -11,7 +11,7 @@ verseEnd: 3
 sectionType: theology
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 The three loci before this one developed the predications of verse 1 — the Word's eternal existence, his personal fellowship with God, his full deity. The unit's theology now leaves the verse-1 clauses and turns to verse 3, from who the Word is to what the Word did. The exegesis of verse 3 was kept within the Fourth Gospel: it established, on the unit's own grammar, that [all things came to be through the personally-distinct divine agent](/commentary/john/1-1-to-3/11-panta-di-autou/) — the διά read as genuine agency, the Philonic instrumental Logos foreclosed — and that [the absolute negative forecloses every exception, mediating instrument, and competing agency](/commentary/john/1-1-to-3/12-oude-hen/). This locus develops what that predication confesses, and the development opens three registers the exegesis deliberately reserved: the διά-agency the Prologue states is not a Johannine novelty but the shared confession of the apostolic church; it grounds a systematic doctrine of creation as the one Trinitarian work in which the Son is the agent through whom; and it was so received across the tradition and fixed in the church's creed. The locus carries the intra-Johannine clause to its inter-canonical, systematic, and conciliar yield. The theology develops the exegesis; it does not re-derive it.
