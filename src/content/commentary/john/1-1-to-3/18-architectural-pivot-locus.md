@@ -9,6 +9,10 @@ sectionNumber: 18
 verseStart: 1
 verseEnd: 3
 sectionType: theology
+diagram:
+  src: ./jn1-1-3-architectural-pivot-locus.svg
+  alt: "The unit's four predications of the Word gathered at the verse 3–4 pivot. Three predications stand at verse 1 — that the Word simply was (ἦν, the eternal-being register), that he was with God (πρὸς τὸν θεόν), and that he was God by nature (θεὸς ἦν ὁ λόγος); a fourth stands at verse 3 — that all things came to be through him (πάντα δι’ αὐτοῦ ἐγένετο). At the verse 3 to verse 4 hinge the tense turns from being to becoming and, through the bridge ὃ γέγονεν, rises to a renewed being at verse 4a — ζωὴ ἦν, the life that is in him (ἐν αὐτῷ). Four ties draw the four predications to that single point: the eternal, personally-distinct, fully divine agent of creation is the One in whom what has come to be has its life."
+  position: anchor
 license: CC-BY-4.0
 hasLecture: true
 draft: false

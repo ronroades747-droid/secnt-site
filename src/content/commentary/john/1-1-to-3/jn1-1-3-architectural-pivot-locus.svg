@@ -1,0 +1,96 @@
+<svg viewBox="0 0 1440 640" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="liTitle liDesc" preserveAspectRatio="xMidYMid meet">
+  <title id="liTitle">The unit's four predications of the Word gathered at the verse 3–4 pivot.</title>
+  <desc id="liDesc">The foyer of the Prologue — verses 1 to 4 — on the family's shared baseline. Three predications of the Word stand at verse 1: that he simply was (ἦν, the eternal-being register), that he was with God (πρὸς τὸν θεόν), and that he was God by nature (θεὸς ἦν ὁ λόγος). A fourth stands at verse 3: that all things came to be through him (πάντα δι’ αὐτοῦ ἐγένετο). At the verse 3 to verse 4 hinge the tense turns from being to becoming and, through the bridge ὃ γέγονεν, rises to a renewed being at verse 4a — ζωὴ ἦν, the life that is in him (ἐν αὐτῷ). Four ties draw the four predications to that single point, showing them fastened together there: the eternal, personally-distinct, fully divine agent of creation is the One in whom what has come to be has its life.</desc>
+
+  <style>
+    /* --- family theming interface: light page renders from in-file fallbacks;
+           dark slide renders when the host sets color / --color-gold / --color-meta --- */
+    .gk    { font-family:'SBL BibLit','Cardo','Source Serif 4',Georgia,serif; fill:currentColor; }
+    .gkf   { font-family:'SBL BibLit','Cardo','Source Serif 4',Georgia,serif; fill:currentColor; }
+    .ink   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; }
+    .lbl   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); }
+    .note  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); font-style:italic; }
+
+    .rule  { stroke:var(--color-gold,#b8860b); stroke-width:2.4; fill:none; stroke-linecap:round; }
+    .spine { stroke:var(--color-gold,#b8860b); stroke-width:2.6; fill:none; stroke-linejoin:round; stroke-linecap:round; }
+    .node  { fill:var(--color-gold,#b8860b); }
+    .gnode { fill:currentColor; }
+    .gring { fill:none; stroke:currentColor; stroke-width:1.6; }
+    .tie   { fill:none; stroke:currentColor; stroke-width:1.6; stroke-linecap:round; }
+    .tick  { stroke:var(--color-gold,#b8860b); stroke-width:1.2; fill:none; }
+    .brk   { stroke:var(--color-meta,#6b6b6b); stroke-width:1; fill:none; }
+  </style>
+
+  <defs>
+    <marker id="li-arrow" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--color-gold,#b8860b)"/>
+    </marker>
+  </defs>
+
+  <!-- ================= descriptive legend (top, secondary) ================= -->
+  <text class="note" x="720" y="44" text-anchor="middle" font-size="19">The unit's four predications of the Word — his eternal being, his communion with God, his full deity, his agency in creation —</text>
+  <text class="note" x="720" y="70" text-anchor="middle" font-size="19">gathered at the hinge, where the creation that came to be through him has its life in him.</text>
+
+  <!-- ================= baseline (the Prologue foyer) ================= -->
+  <line class="rule" x1="90" y1="250" x2="1240" y2="250"/>
+
+  <!-- ================= inherited layer: the spine (one step back in emphasis) ================= -->
+  <!-- descent at the turn, flat becoming run, rise through the bridge to the renewed being at v.4a -->
+  <path class="spine" d="M380 250 L510 380 L700 380 L835 315 L936 252" marker-end="url(#li-arrow)"/>
+
+  <!-- being cluster (eternal being) : four gold nodes over vv.1-2 -->
+  <circle class="node" cx="115" cy="250" r="5"/>
+  <circle class="node" cx="165" cy="250" r="5"/>
+  <circle class="node" cx="215" cy="250" r="5"/>
+  <circle class="node" cx="265" cy="250" r="5"/>
+  <text class="gk" x="115" y="233" text-anchor="middle" font-size="23">ἦν</text>
+  <text class="gk" x="165" y="233" text-anchor="middle" font-size="23">ἦν</text>
+  <text class="gk" x="215" y="233" text-anchor="middle" font-size="23">ἦν</text>
+  <text class="gk" x="265" y="233" text-anchor="middle" font-size="23">ἦν</text>
+  <text class="lbl" x="190" y="206" text-anchor="middle" font-size="17">eternal being</text>
+  <path class="brk" d="M103 266 L103 272 L277 272 L277 266"/>
+  <text class="lbl" x="190" y="290" text-anchor="middle" font-size="16">four times · vv. 1–2</text>
+
+  <!-- the turn -->
+  <text class="ink" x="470" y="350" text-anchor="middle" font-size="19">the tense turns</text>
+
+  <!-- becoming (ἐγένετο) : two gold nodes on the lower level at v.3 -->
+  <circle class="node" cx="575" cy="380" r="5"/>
+  <circle class="node" cx="645" cy="380" r="5"/>
+  <text class="gk" x="575" y="403" text-anchor="middle" font-size="22">ἐγένετο</text>
+  <text class="gk" x="645" y="424" text-anchor="middle" font-size="22">ἐγένετο</text>
+
+  <!-- v.1 predication anchors, stacked at the left edge -->
+  <text class="gk"  x="225" y="326" text-anchor="middle" font-size="24">πρὸς τὸν θεόν</text>
+  <text class="lbl" x="225" y="347" text-anchor="middle" font-size="15">with God</text>
+  <text class="gk"  x="238" y="384" text-anchor="middle" font-size="24">θεὸς ἦν ὁ λόγος</text>
+  <text class="lbl" x="238" y="405" text-anchor="middle" font-size="15">God by nature</text>
+
+  <!-- v.3 creation-agency anchor -->
+  <text class="gk"  x="610" y="456" text-anchor="middle" font-size="24">πάντα δι’ αὐτοῦ ἐγένετο</text>
+  <text class="lbl" x="610" y="478" text-anchor="middle" font-size="16">outward agency · δι’ αὐτοῦ</text>
+  <text class="lbl" x="610" y="499" text-anchor="middle" font-size="16">all things through him</text>
+
+  <!-- the bridge (inherited, one step back) -->
+  <circle class="node" cx="835" cy="315" r="7"/>
+  <text class="gk" x="835" y="299" text-anchor="middle" font-size="22">ὃ γέγονεν</text>
+
+  <!-- ================= distinctive layer: the four gathering ties ================= -->
+  <!-- (the eternal-being strand returns as the spine / pivot-arrow itself, above) -->
+  <path class="tie" d="M305 320 C500 296 720 272 938 252"/>
+  <path class="tie" d="M330 378 C520 362 740 320 939 255"/>
+  <path class="tie" d="M700 378 C780 362 858 308 940 255"/>
+
+  <!-- ================= the gathering node (visual focus — heaviest) ================= -->
+  <circle class="gring" cx="950" cy="250" r="18"/>
+  <circle class="gnode" cx="950" cy="250" r="11"/>
+  <text class="gkf" x="950" y="223" text-anchor="middle" font-size="30">ζωὴ ἦν</text>
+  <text class="lbl" x="1028" y="268" text-anchor="start" font-size="16">in-him · ἐν αὐτῷ</text>
+
+  <!-- ================= unit tick + movement label ================= -->
+  <path class="tick" d="M120 510 L120 516 L600 516 L600 510"/>
+  <text class="lbl" x="360" y="536" text-anchor="middle" font-size="17">1:1–3</text>
+  <text class="lbl" x="610" y="582" text-anchor="middle" font-size="27">Foyer · vv. 1–5</text>
+</svg>
