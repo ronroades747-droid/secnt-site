@@ -4,7 +4,7 @@ description: "Theological lecture on Locus Four: creation through the personally
 date: 2026-05-30
 sectionRef: john/1-1-to-3/17-creational-agency
 bunnyVideoId: "03496d40-a6cf-4ad2-871b-920231b4a00e"
-duration: "00:00"
+duration: "26:48"
 license: CC-BY-4.0
 draft: false
 ---
