@@ -107,3 +107,18 @@ export const formatDate = (d: Date) =>
 const showDrafts = process.env.SECNT_SHOW_DRAFTS === '1';
 export const isVisible = (entry: { data: { draft?: boolean } }) =>
   !import.meta.env.PROD || showDrafts ? true : !entry.data.draft;
+
+// Normalize the commentary `diagram` field to an array. The field is either a
+// single diagram object (the common case, and every Cycle-1 page) or an array
+// of them (a page carrying several — Jn 1:4–5 §4.1 and §5.4). Consumers — the
+// section and unit-landing templates, and remark-diagram-anchor — call this so
+// they can treat the one-and-many cases uniformly. Order is preserved.
+export type DiagramField = {
+  src: string;
+  alt: string;
+  caption?: string;
+  position?: 'top' | 'bottom' | 'anchor';
+};
+export const asDiagrams = (
+  d: DiagramField | DiagramField[] | undefined | null
+): DiagramField[] => (d == null ? [] : Array.isArray(d) ? d : [d]);

@@ -67,6 +67,18 @@ const sectionType = z.enum([
 const license = z.enum(['CC-BY-4.0']).default('CC-BY-4.0');
 
 // ---------------------------------------------------------------------------
+// Shared: reader-facing architectural diagram
+// ---------------------------------------------------------------------------
+// One figure. The commentary `diagram` field is either one of these or an
+// array of them (a page may carry several) — see the field's note below.
+const diagramObject = z.object({
+  src: z.string(),
+  alt: z.string(),
+  caption: z.string().optional(),
+  position: z.enum(['top', 'bottom', 'anchor']).default('bottom'),
+});
+
+// ---------------------------------------------------------------------------
 // Collection: frontmatter  —  series register
 // ---------------------------------------------------------------------------
 const frontmatter = defineCollection({
@@ -200,7 +212,7 @@ const commentary = defineCollection({
 
       sectionType,
 
-      // Reader-facing architectural diagram. `src` is a relative ./ path to an
+      // Reader-facing architectural diagram(s). `src` is a relative ./ path to an
       // SVG co-located beside this entry's .md. Diagram.astro inlines the SVG
       // into the page DOM (not an <img>), so it inherits the site's SBL BibLit
       // (Greek matches the running prose) and the Visual Register palette tokens
@@ -211,14 +223,14 @@ const commentary = defineCollection({
       // below it. 'anchor' renders it INSIDE the body at a <!-- diagram -->
       // marker (see remark-diagram-anchor) — for a figure that belongs after the
       // paragraph introducing it and before the sub-section that walks it.
-      diagram: z
-        .object({
-          src: z.string(),
-          alt: z.string(),
-          caption: z.string().optional(),
-          position: z.enum(['top', 'bottom', 'anchor']).default('bottom'),
-        })
-        .optional(),
+      //
+      // A page may carry MORE THAN ONE diagram: set `diagram` to an array of
+      // these objects (the Jn 1:4–5 §4.1 and §5.4 pages each carry two). A single
+      // object is still accepted and is the common case — consumers normalize to
+      // an array via `asDiagrams()` in site.ts. Ordering is significant: top and
+      // bottom diagrams render in array order; anchor diagrams fill the body's
+      // `<!-- diagram -->` markers in array order (Nth anchor → Nth marker).
+      diagram: z.union([diagramObject, diagramObject.array().min(1)]).optional(),
 
       license,
       draft: z.boolean().default(false),

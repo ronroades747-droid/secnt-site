@@ -38,8 +38,12 @@ function escapeHtml(s) {
 
 export default function remarkDiagramAnchor() {
   return (tree, file) => {
-    const diagram = file?.data?.astro?.frontmatter?.diagram;
-    if (!diagram || diagram.position !== 'anchor') return;
+    // The frontmatter `diagram` field is one object or an array of them (a page
+    // may carry several). Normalize, then take only the anchor-positioned ones.
+    const raw = file?.data?.astro?.frontmatter?.diagram;
+    const diagrams = raw == null ? [] : Array.isArray(raw) ? raw : [raw];
+    const anchors = diagrams.filter((d) => d && d.position === 'anchor');
+    if (anchors.length === 0) return;
 
     const mdPath = file?.history?.[0] ?? file?.path;
     if (!mdPath) {
@@ -47,40 +51,51 @@ export default function remarkDiagramAnchor() {
     }
 
     const children = tree.children ?? [];
-    const idx = children.findIndex(
-      (n) => n.type === 'html' && MARKER.test((n.value ?? '').trim())
-    );
-    if (idx === -1) {
+    // All markers, in document order; the Nth anchor diagram fills the Nth marker.
+    const markerIdxs = [];
+    children.forEach((n, i) => {
+      if (n.type === 'html' && MARKER.test((n.value ?? '').trim())) markerIdxs.push(i);
+    });
+
+    // Too FEW markers for the declared diagrams is a real error — a figure would
+    // have nowhere to render. EXTRA markers are tolerated (the pre-multi behavior
+    // filled the first marker and left the rest as inert HTML comments); we
+    // preserve that so existing single-diagram pages render byte-identically.
+    if (markerIdxs.length < anchors.length) {
       throw new Error(
-        `remark-diagram-anchor: diagram.position is "anchor" but no <!-- diagram --> ` +
-          `marker was found in ${mdPath}. Put the marker on its own line where the ` +
-          `figure should render, or use position top/bottom.`
+        `remark-diagram-anchor: ${anchors.length} anchor diagram(s) declared but ` +
+          `only ${markerIdxs.length} <!-- diagram --> marker(s) found in ${mdPath}. ` +
+          `Put one marker on its own line for each anchor diagram, in the same ` +
+          `order as the frontmatter array, or use position top/bottom.`
       );
     }
 
-    // Resolve the co-located SVG against the .md's own directory.
-    const rel = String(diagram.src).replace(/^\.\//, '');
-    const svgPath = path.resolve(path.dirname(mdPath), rel);
-    let svg;
-    try {
-      svg = fs.readFileSync(svgPath, 'utf8');
-    } catch {
-      throw new Error(
-        `remark-diagram-anchor: diagram SVG not found: "${diagram.src}" ` +
-          `(resolved to ${svgPath}) for ${mdPath}. Co-locate the .svg next to the ` +
-          `.md and reference it with a ./ path.`
-      );
-    }
+    anchors.forEach((diagram, k) => {
+      const childIdx = markerIdxs[k];
+      // Resolve the co-located SVG against the .md's own directory.
+      const rel = String(diagram.src).replace(/^\.\//, '');
+      const svgPath = path.resolve(path.dirname(mdPath), rel);
+      let svg;
+      try {
+        svg = fs.readFileSync(svgPath, 'utf8');
+      } catch {
+        throw new Error(
+          `remark-diagram-anchor: diagram SVG not found: "${diagram.src}" ` +
+            `(resolved to ${svgPath}) for ${mdPath}. Co-locate the .svg next to the ` +
+            `.md and reference it with a ./ path.`
+        );
+      }
 
-    const caption = diagram.caption
-      ? `<figcaption>${escapeHtml(diagram.caption)}</figcaption>`
-      : '';
-    const figure =
-      `<figure class="diagram">` +
-      `<div class="diagram-svg" role="img" aria-label="${escapeHtml(diagram.alt)}">${svg}</div>` +
-      caption +
-      `</figure>`;
+      const caption = diagram.caption
+        ? `<figcaption>${escapeHtml(diagram.caption)}</figcaption>`
+        : '';
+      const figure =
+        `<figure class="diagram">` +
+        `<div class="diagram-svg" role="img" aria-label="${escapeHtml(diagram.alt)}">${svg}</div>` +
+        caption +
+        `</figure>`;
 
-    children[idx] = { type: 'html', value: figure };
+      children[childIdx] = { type: 'html', value: figure };
+    });
   };
 }

@@ -6,7 +6,7 @@ import UnitNav from '../../../../../components/UnitNav.astro';
 import PrevNext from '../../../../../components/PrevNext.astro';
 import PageDates from '../../../../../components/PageDates.astro';
 import Breadcrumb from '../../../../../components/Breadcrumb.astro';
-import { splitCommentaryId, normalizeId, lectureUrl, volumeUrl, commentaryUrl, isVisible } from '../../../../../lib/site';
+import { splitCommentaryId, normalizeId, lectureUrl, volumeUrl, commentaryUrl, isVisible, asDiagrams } from '../../../../../lib/site';
 
 export async function getStaticPaths() {
   const sections = (await getCollection('commentary'))
@@ -27,8 +27,12 @@ const d = entry.data;
 // resolved from the section's hasLecture flag and the lecture's visibility.
 const pairedLecture = d.hasLecture && lecture && isVisible(lecture) ? lecture : null;
 const pairedLectureUrl = lectureUrl(entry.id);
-const diagramTop = d.diagram && d.diagram.position === 'top';
-const diagramBottom = d.diagram && d.diagram.position === 'bottom';
+// A page may carry one diagram or several (see asDiagrams / content.config.ts).
+// top/bottom render outside the body in array order; anchor diagrams are placed
+// inside the body by remark-diagram-anchor.
+const diagrams = asDiagrams(d.diagram);
+const diagramsTop = diagrams.filter((x) => (x.position ?? 'bottom') === 'top');
+const diagramsBottom = diagrams.filter((x) => (x.position ?? 'bottom') === 'bottom');
 
 const vols = await getCollection('volumes');
 const bookDisplay = vols.find((v) => v.data.book === book)?.data.bookDisplay ?? book;
@@ -54,11 +58,11 @@ const crumbs = [
       </p>
     )}
 
-    {diagramTop && <Diagram diagram={d.diagram} entryPath={entry.filePath} />}
+    {diagramsTop.map((dg) => <Diagram diagram={dg} entryPath={entry.filePath} />)}
 
     <Content />
 
-    {diagramBottom && <Diagram diagram={d.diagram} entryPath={entry.filePath} />}
+    {diagramsBottom.map((dg) => <Diagram diagram={dg} entryPath={entry.filePath} />)}
 
     <PrevNext unitId={unitId} currentId={entry.id} />
     <PageDates date={d.date} revised={d.revised} />

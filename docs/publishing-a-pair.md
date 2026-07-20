@@ -104,7 +104,19 @@ diagram:
 - **Never hand-roll `<img src="./…">` in the body.** Raw HTML images skip the asset pipeline; the relative path resolves against the page URL at runtime and 404s.
 - The field renders on **every** Commentary page, including the unit landing — the Architectural Orientation Diagram publishes by adding the field and the SVG to `index.md`'s folder. Diagrams are scholarly content: they render in print with caption.
 
-One diagram per page maximum (schema-enforced), which covers every planned diagram.
+**More than one diagram on a page.** Most pages carry one figure — a single `diagram` object as above. A page that carries several (the Jn 1:4–5 §4.1 and §5.4 pages each carry two) sets `diagram` to a **list** of these objects instead:
+
+```yaml
+diagram:
+  - src: ./jn1-4-5-gradatio-staircase.svg
+    alt: "…"
+    position: top          # renders above the body
+  - src: ./jn1-4-5-foyer-pole.svg
+    alt: "…"
+    position: bottom       # renders below the body
+```
+
+Order is significant: `top` and `bottom` figures render in list order; `anchor` figures fill the body's `<!-- diagram -->` markers in list order (the Nth `anchor` diagram takes the Nth marker, so give the page one marker per anchor figure). A single object and a list are both valid; every existing single-diagram page keeps working unchanged.
 
 ---
 
