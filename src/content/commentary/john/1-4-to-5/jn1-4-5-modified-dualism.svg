@@ -1,0 +1,97 @@
+<svg viewBox="0 0 1440 730" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="mdTitle mdDesc" preserveAspectRatio="xMidYMid meet">
+  <title id="mdTitle">The modified, non-ultimate dualism of John 1:5 — the darkness real but bounded, read on three registers, with the light shining within it.</title>
+  <desc id="mdDesc">Into what does the light shine? Into ἡ σκοτία, the darkness — the fallen human condition, read at once on three registers: cosmological (the created order under the absence of light), moral (the darkness of sin, a turning from God), and noetic (ignorance and unbelief, not knowing its Maker), the noetic register foregrounded. The light shines within the darkness: the preposition ἐν is locative, the sphere the light inhabits, not directional, not a hostile object struck at from outside. The darkness is bounded and non-ultimate: not an eternal counter-principle and not a Gnostic realm — a modified, not a metaphysical, dualism. Three scholarly guards hold that boundary: Bultmann (a revolt against the light, not a substance), Dodd (the darkness of 1:5 is not ultimate), and Lincoln (a qualification of the War Scroll and 1 Enoch, not their equivalent). The darkness is real, but it does not overcome the light.</desc>
+
+  <style>
+    /* family theming interface — light page from in-file fallbacks; dark slide when the host sets the tokens */
+    .gk    { font-family:'SBL BibLit','Cardo','Gentium Plus','Charis SIL','Source Serif 4',Georgia,serif; fill:currentColor; }
+    .ink   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; }
+    .lbl   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); }
+    .note  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); font-style:italic; }
+    .head  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-goldtext,#8a6608); letter-spacing:0.16em; }
+    .reglbl{ font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-goldtext,#8a6608); letter-spacing:0.18em; }
+    .neg   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); }
+
+    .box   { stroke:currentColor; stroke-width:2; fill:none; }
+    .bound { stroke:var(--color-gold,#b8860b); stroke-width:3.4; fill:none; stroke-linecap:round; }
+    .card  { stroke:var(--color-meta,#6b6b6b); stroke-width:1.3; fill:none; }
+    .ray   { stroke:var(--color-gold,#b8860b); stroke-width:2; stroke-linecap:round; }
+    .lnode { fill:var(--color-gold,#b8860b); }
+    .rfill { fill:var(--color-gold,#b8860b); }
+    .rring { fill:none; stroke:currentColor; stroke-width:1.8; }
+    .strk  { stroke:var(--color-meta,#6b6b6b); stroke-width:1.6; stroke-linecap:round; }
+  </style>
+
+  <!-- ================= legend ================= -->
+  <text class="note" x="720" y="48" text-anchor="middle" font-size="20">Into what does the light shine? Into ἡ σκοτία — a real darkness, but a modified and non-ultimate one:</text>
+  <text class="note" x="720" y="74" text-anchor="middle" font-size="20">the fallen human condition on three registers, the light shining within it (locative ἐν), never its equal.</text>
+
+  <!-- ================= the bounded darkness ================= -->
+  <rect class="box" x="110" y="170" width="620" height="470" rx="10"/>
+
+  <text class="gk"  x="150" y="222" font-size="34">ἡ σκοτία</text>
+  <text class="lbl" x="152" y="250" font-size="17">the darkness — the fallen human condition</text>
+
+  <!-- three registers -->
+  <!-- cosmological -->
+  <circle class="rring" cx="164" cy="316" r="7"/>
+  <text class="reglbl" x="186" y="313" font-size="19">COSMOLOGICAL</text>
+  <text class="note"   x="186" y="337" font-size="16">the created order under the absence of light</text>
+  <!-- moral -->
+  <circle class="rring" cx="164" cy="406" r="7"/>
+  <text class="reglbl" x="186" y="403" font-size="19">MORAL</text>
+  <text class="note"   x="186" y="427" font-size="16">the darkness of sin — a turning from God</text>
+  <!-- noetic (foregrounded) -->
+  <circle class="rfill" cx="164" cy="496" r="7.5"/>
+  <text class="reglbl" x="186" y="493" font-size="19">NOETIC</text>
+  <text class="note"   x="186" y="517" font-size="16">ignorance and unbelief — not knowing its Maker</text>
+  <text class="lbl"    x="186" y="539" font-size="14" font-style="italic" letter-spacing="0.08em">the register foregrounded here</text>
+
+  <!-- the light shining within (locative ἐν) -->
+  <text class="gk" x="618" y="312" text-anchor="middle" font-size="23" style="fill:var(--color-goldtext,#8a6608)">ἐν τῇ σκοτίᾳ</text>
+  <text class="gk"   x="618" y="344" text-anchor="middle" font-size="24">τὸ φῶς</text>
+  <g class="ray">
+    <line x1="638" y1="384" x2="656" y2="384"/>
+    <line x1="632" y1="370" x2="645" y2="360"/>
+    <line x1="618" y1="364" x2="618" y2="349"/>
+    <line x1="604" y1="370" x2="591" y2="360"/>
+    <line x1="598" y1="384" x2="580" y2="384"/>
+    <line x1="604" y1="398" x2="591" y2="408"/>
+    <line x1="618" y1="404" x2="618" y2="419"/>
+    <line x1="632" y1="398" x2="645" y2="408"/>
+  </g>
+  <circle class="lnode" cx="618" cy="384" r="14"/>
+  <text class="gk"   x="618" y="452" text-anchor="middle" font-size="22">φαίνει</text>
+  <text class="note" x="618" y="476" text-anchor="middle" font-size="16">within (ἐν), not at it</text>
+
+  <!-- identity line, box floor -->
+  <line class="strk" x1="150" y1="574" x2="690" y2="574" style="stroke-width:1; opacity:0.5"/>
+  <text class="note" x="420" y="602" text-anchor="middle" font-size="16.5">a humanity turned from God — a mode of existence, not a cosmic stuff</text>
+
+  <!-- ================= the bound + what the darkness is NOT ================= -->
+  <!-- the bound: the box's right edge, marked as the theological limit -->
+  <line class="bound" x1="748" y1="162" x2="748" y2="620"/>
+  <text class="head" x="748" y="148" text-anchor="middle" font-size="15">THE BOUND</text>
+  <text class="lbl"  x="768" y="642" font-size="15">a limit — the darkness is not ultimate</text>
+
+  <text class="head" x="1095" y="214" text-anchor="middle" font-size="16">WHAT THE DARKNESS IS NOT</text>
+
+  <!-- exclusion 1 -->
+  <text class="ink" x="800" y="300" font-size="23">not <tspan class="neg">an eternal counter-principle</tspan></text>
+  <line class="strk" x1="856" y1="292" x2="1204" y2="292"/>
+  <text class="note" x="800" y="326" font-size="16">no co-eternal rival, equal-and-opposite to the light</text>
+
+  <!-- exclusion 2 -->
+  <text class="ink" x="800" y="404" font-size="23">not <tspan class="neg">a Gnostic realm</tspan></text>
+  <line class="strk" x1="856" y1="396" x2="1070" y2="396"/>
+  <text class="note" x="800" y="430" font-size="16">no separate world or substance of its own</text>
+
+  <!-- the positive summary of the bound -->
+  <line class="card" x1="800" y1="486" x2="1360" y2="486"/>
+  <text class="reglbl" x="800" y="524" font-size="19">A MODIFIED, NOT A METAPHYSICAL, DUALISM</text>
+  <text class="note"   x="800" y="550" font-size="16.5">the bounded, non-ultimate state of the creature — not the light's equal</text>
+
+  <!-- movement summary -->
+  <text class="note" x="720" y="694" text-anchor="middle" font-size="18">a real darkness, but bounded and non-ultimate — the light shines within it, the dark remains dark, and it does not overcome the light</text>
+</svg>
