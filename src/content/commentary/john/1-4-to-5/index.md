@@ -11,8 +11,8 @@ verseEnd: 5
 sectionType: unit-landing
 license: CC-BY-4.0
 hasLecture: true
-passageComplete: false
-draft: true
+passageComplete: true
+draft: false
 diagram:
   src: ./jn1-4-5-architectural-orientation.svg
   alt: "Architectural orientation diagram of the Prologue of John (1:1–18), with 1:4–5 at the close of the first movement. Three movements left to right — 1:1–5 (the foyer), 1:6–13, 1:14–18. An arc carries the v. 4 / v. 14 foyer pole from the highlighted 1:4–5 unit to 1:14 at the far end, where the light of v. 4 is disclosed as the glory of v. 14. Beneath the frame the macro-tense spine — ἦν, ἐγένετο, ὃ γέγονεν — runs diachronically toward the incarnation."
