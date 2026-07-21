@@ -110,6 +110,8 @@ In the body, on its own line, at the spot the figure should land:
 - **Never hand-roll a `<figure>` or `<img>` in the body.** Raw HTML skips the diagram component — wrong classes, no palette/font inheritance — and ignores the marker entirely, so it renders wherever it was pasted and out of the Visual Register. If you find one pasted in, delete it and put a `<!-- diagram -->` marker where you want the figure.
 - `position: top` / `bottom` still work (render outside the prose, before/after the body) but marker placement is the standard.
 
+**Converting the Production sentinel.** Commentary Production marks a diagram's location in its authored prose with a visible `[[DIAGRAM: name]]` sentinel (see `docs/diagram-handoff-contract.md`), not a raw marker — an HTML comment does not survive a Google Doc. At the paste-into-stub step, replace each `[[DIAGRAM: name]]` with a `<!-- diagram -->` marker on its own line at the same position, one per diagram in reading order. That conversion is the Editor's; the sentinel never reaches the committed `.md`, and no `<figure>`/`<img>` ever does.
+
 The unit landing renders diagrams the same way — the marker injects the figure in-body via the diagram plugin, independent of the landing template.
 
 ### The landing
