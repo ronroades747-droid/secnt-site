@@ -1,0 +1,144 @@
+<svg viewBox="0 0 1440 1050" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="caTitle caDesc" preserveAspectRatio="xMidYMid meet">
+  <title id="caTitle">The coordinate articulation of John 1:4–5 — the gradatio and the macro-tense run as two dimensions of one composition on the same four treads.</title>
+  <desc id="caDesc">The four clauses of John 1:4–5 stand as a four-step staircase, one clause per tread, climbing from the life in the Word at the bottom to the darkness's failure at the top. The same four treads are read along two axes, held co-primary. Read as shape — the synchronic, rhetorical gradatio — each step takes up the last significant term of the step before: life is carried up to light, light up to darkness, so the terms climb life to light to darkness to the darkness's failure. Read as time — the diachronic, temporal macro-tense run — the verbs move imperfect, imperfect at verse 4, then the present at verse 5a, then the aorist at verse 5b: an eternal ground in the imperfect, the marked present that breaks the imperfect chain and sets the unit's time, and the constative aorist that sums the darkness's failure as one finished fact. The unit's run instantiates the Prologue's macro-tense spine, was, came-to-be, has-come-to-be. The two readings are not two arguments for one conclusion but one composition seen along two axes; neither is reducible to the other and neither leans on the other's ground.</desc>
+
+  <style>
+    /* --- family theming interface: light page renders from in-file fallbacks;
+           dark slide renders when the host sets color / --color-gold / --color-meta / --color-goldtext --- */
+    .gk    { font-family:'SBL BibLit','Cardo','Gentium Plus','Charis SIL','Source Serif 4',Georgia,serif; fill:currentColor; }
+    .ink   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; }
+    .lbl   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); }
+    .note  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); font-style:italic; }
+    .disc  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-goldtext,#8a6608); letter-spacing:2.5px; }
+    .eye   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-goldtext,#8a6608); letter-spacing:4px; }
+
+    .cw    { fill:var(--color-goldtext,#8a6608); }               /* catchword lemma inside a clause */
+    .vf    { text-decoration:underline; text-decoration-color:currentColor; text-underline-offset:4px; text-decoration-thickness:2px; } /* verb-form (the tense datum) */
+
+    .box   { fill:none; stroke:currentColor; stroke-width:2; }
+    .rule  { stroke:var(--color-gold,#b8860b); stroke-width:2.4; fill:none; stroke-linecap:round; }
+    .spine { stroke:var(--color-gold,#b8860b); stroke-width:2.6; fill:none; stroke-linejoin:round; stroke-linecap:round; }
+    .ctie  { stroke:var(--color-gold,#b8860b); stroke-width:2.2; fill:none; stroke-linecap:round; } /* catchword tie (synchronic) */
+    .drun  { stroke:currentColor; stroke-width:1.5; fill:none; stroke-linecap:round; }              /* node→tread tie (diachronic) */
+    .node  { fill:var(--color-gold,#b8860b); }
+    .ring  { fill:none; stroke:var(--color-gold,#b8860b); stroke-width:2; }
+    .oring { fill:none; stroke:var(--color-gold,#b8860b); stroke-width:1.8; }
+    .tick  { stroke:var(--color-meta,#6b6b6b); stroke-width:1.1; fill:none; }
+  </style>
+
+  <defs>
+    <marker id="ca-gold" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--color-gold,#b8860b)"/>
+    </marker>
+  </defs>
+
+  <!-- ===================== top banner: the co-primary thesis ===================== -->
+  <text class="eye"  x="720" y="34" text-anchor="middle" font-size="16">JOHN 1:4–5 · THE COORDINATE ARTICULATION</text>
+  <text class="ink"  x="720" y="70" text-anchor="middle" font-size="27">One composition · two dimensions</text>
+  <text class="note" x="720" y="100" text-anchor="middle" font-size="18.5">the gradatio — synchronic, rhetorical shape — and the macro-tense run — diachronic, temporal shape — trace the same four treads;</text>
+  <text class="note" x="720" y="124" text-anchor="middle" font-size="18.5">co-primary: neither reducible to the other, neither leaning on the other's ground.</text>
+
+  <!-- ===================== the four treads (shared substrate) ===================== -->
+  <!-- geometry reused verbatim from the Gradatio Staircase (Diagram 02) so 02 and 05 read as one hand -->
+
+  <!-- T1 · v.4a · ONTOLOGY -->
+  <rect class="box" x="90"  y="700" width="540" height="120" rx="10"/>
+  <text class="lbl"  x="112" y="730" font-size="17">v. 4a</text>
+  <text class="disc" x="608" y="730" text-anchor="end" font-size="17">ONTOLOGY</text>
+  <text class="gk"   x="360" y="774" text-anchor="middle" font-size="26">ἐν αὐτῷ <tspan class="cw">ζωὴ</tspan> <tspan class="vf">ἦν</tspan></text>
+  <text class="note" x="360" y="802" text-anchor="middle" font-size="16">in him was life</text>
+  <circle class="ring" cx="90" cy="760" r="13"/>
+  <text class="disc" x="90" y="766" text-anchor="middle" font-size="16" letter-spacing="0">1</text>
+
+  <!-- T2 · v.4b · ANTHROPOLOGY -->
+  <rect class="box" x="340" y="520" width="540" height="120" rx="10"/>
+  <text class="lbl"  x="362" y="550" font-size="17">v. 4b</text>
+  <text class="disc" x="858" y="550" text-anchor="end" font-size="17">ANTHROPOLOGY</text>
+  <text class="gk"   x="610" y="594" text-anchor="middle" font-size="25">καὶ ἡ <tspan class="cw">ζωὴ</tspan> <tspan class="vf">ἦν</tspan> τὸ <tspan class="cw">φῶς</tspan> τῶν ἀνθρώπων</text>
+  <text class="note" x="610" y="622" text-anchor="middle" font-size="16">the life, the light of humanity</text>
+  <circle class="ring" cx="340" cy="580" r="13"/>
+  <text class="disc" x="340" y="586" text-anchor="middle" font-size="16" letter-spacing="0">2</text>
+
+  <!-- T3 · v.5a · COSMOLOGY -->
+  <rect class="box" x="590" y="340" width="540" height="120" rx="10"/>
+  <text class="lbl"  x="612" y="370" font-size="17">v. 5a</text>
+  <text class="disc" x="1108" y="370" text-anchor="end" font-size="17">COSMOLOGY</text>
+  <text class="gk"   x="860" y="414" text-anchor="middle" font-size="26">καὶ τὸ <tspan class="cw">φῶς</tspan> ἐν τῇ <tspan class="cw">σκοτίᾳ</tspan> <tspan class="vf">φαίνει</tspan></text>
+  <text class="note" x="860" y="442" text-anchor="middle" font-size="16">the light shines in the darkness</text>
+  <circle class="ring" cx="590" cy="400" r="13"/>
+  <text class="disc" x="590" y="406" text-anchor="middle" font-size="16" letter-spacing="0">3</text>
+
+  <!-- T4 · v.5b · SOTERIOLOGY -->
+  <rect class="box" x="840" y="160" width="540" height="120" rx="10"/>
+  <text class="lbl"  x="862" y="190" font-size="17">v. 5b</text>
+  <text class="disc" x="1358" y="190" text-anchor="end" font-size="17">SOTERIOLOGY</text>
+  <text class="gk"   x="1110" y="234" text-anchor="middle" font-size="26">καὶ ἡ <tspan class="cw">σκοτία</tspan> αὐτὸ οὐ <tspan class="vf">κατέλαβεν</tspan></text>
+  <text class="note" x="1110" y="262" text-anchor="middle" font-size="16">the darkness did not overcome it</text>
+  <circle class="ring" cx="840" cy="220" r="13"/>
+  <text class="disc" x="840" y="226" text-anchor="middle" font-size="16" letter-spacing="0">4</text>
+
+  <!-- ===================== SYNCHRONIC register: the gradatio (catchword ties on the risers) ===================== -->
+  <!-- vertical ascent arrow = the synchronic axis (the shape climbs) -->
+  <path class="rule" d="M46 706 L46 300" marker-end="url(#ca-gold)"/>
+
+  <!-- catchword ties bridging the risers, each carrying the last term of the lower tread up to the next -->
+  <path class="ctie" d="M416 700 C430 678 434 662 447 642" marker-end="url(#ca-gold)"/>
+  <text class="disc" x="470" y="678" font-size="20" letter-spacing="0"><tspan class="gk cw">ζωή</tspan></text>
+
+  <path class="ctie" d="M716 520 C730 498 734 482 747 462" marker-end="url(#ca-gold)"/>
+  <text class="disc" x="770" y="498" font-size="20" letter-spacing="0"><tspan class="gk cw">φῶς</tspan></text>
+
+  <path class="ctie" d="M996 340 C1010 318 1014 302 1027 282" marker-end="url(#ca-gold)"/>
+  <text class="disc" x="1050" y="318" font-size="20" letter-spacing="0"><tspan class="gk cw">σκοτία</tspan></text>
+
+  <!-- synchronic register label (upper-left flank) -->
+  <text class="eye"  x="64" y="336" font-size="16">READ AS SHAPE</text>
+  <text class="ink"  x="64" y="364" font-size="18">the gradatio · synchronic</text>
+  <text class="note" x="64" y="392" font-size="15.5">each step takes up the last</text>
+  <text class="note" x="64" y="413" font-size="15.5">significant term of the one before —</text>
+  <text class="note" x="64" y="440" font-size="15.5">life → light → darkness →</text>
+  <text class="note" x="64" y="461" font-size="15.5">the darkness's failure</text>
+
+  <!-- ===================== DIACHRONIC register: the macro-tense run (spine in the lower-right) ===================== -->
+  <!-- the spine = the diachronic axis (time runs forward) -->
+  <path class="spine" d="M690 880 L925 712 L1160 548 L1355 398" marker-end="url(#ca-gold)"/>
+
+  <!-- node → tread ties -->
+  <path class="drun" d="M690 880 L630 820"/>
+  <path class="drun" d="M925 712 L880 640"/>
+  <path class="drun" d="M1160 548 L1130 460"/>
+  <path class="drun" d="M1355 398 L1380 280"/>
+
+  <!-- nodes + tense tags -->
+  <circle class="node" cx="690"  cy="880" r="6"/>
+  <text class="lbl" x="672" y="906" text-anchor="end" font-size="16">imperfect</text>
+
+  <circle class="node" cx="925"  cy="712" r="6"/>
+  <text class="lbl" x="956" y="708" font-size="16">imperfect</text>
+
+  <!-- v.5a present: the rupture — the Prologue's first present indicative (marked with a gold ring) -->
+  <circle class="oring" cx="1160" cy="548" r="13"/>
+  <circle class="node"  cx="1160" cy="548" r="6"/>
+  <text class="disc" x="1191" y="544" font-size="16" letter-spacing="0">present</text>
+  <text class="note" x="1191" y="566" font-size="14.5">the first present — it breaks the chain,</text>
+  <text class="note" x="1191" y="585" font-size="14.5">and sets the unit's time</text>
+
+  <circle class="node" cx="1355" cy="398" r="6"/>
+  <text class="lbl" x="1324" y="392" text-anchor="end" font-size="16">aorist</text>
+  <text class="note" x="1324" y="411" text-anchor="end" font-size="14.5">one finished fact</text>
+
+  <!-- diachronic register label (lower band, right of the spine's foot) -->
+  <text class="eye"  x="748" y="968" font-size="16">READ AS TIME</text>
+  <text class="ink"  x="748" y="996" font-size="18">the macro-tense run · diachronic</text>
+  <text class="note" x="748" y="1024" font-size="15.5">eternal ground → present shining → completed failure</text>
+
+  <!-- the Prologue-spine instantiation (bottom-left, below T1) -->
+  <text class="note" x="110" y="898" font-size="15.5">the unit's run instantiates the Prologue's</text>
+  <text class="note" x="110" y="919" font-size="15.5">macro-tense spine —</text>
+  <text class="gk"   x="110" y="948" font-size="20">ἦν · ἐγένετο · ὃ γέγονεν</text>
+
+  <!-- ===================== unit signature ===================== -->
+  <text class="eye" x="720" y="1040" text-anchor="middle" font-size="14">THE UNIT'S DELIBERATE COMPOSITION</text>
+</svg>
