@@ -1,0 +1,84 @@
+<svg viewBox="0 0 1440 780" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="olTitle olDesc" preserveAspectRatio="xMidYMid meet">
+  <title id="olTitle">The one divine life of John 1:4–5 traced as a single arc — in the Word, the light of men, shining within the darkness, unovercome — from creation toward the eternal life, completing at the incarnation of 1:14.</title>
+  <desc id="olDesc">The four movements of John 1:4–5 are gathered into a single arc: the life in the Word (ζωὴ ἦν, verse 4a), the light of men (τὸ φῶς τῶν ἀνθρώπων, verse 4b), the light shining within the darkness (ἐν τῇ σκοτίᾳ φαίνει, verse 5a), and the darkness that does not overcome it (οὐ κατέλαβεν, verse 5b). Gathered into one, they trace a single life from creation — the protological pole at verse 4a — toward consummation, the eternal life (ζωὴ αἰώνιος), the eschatological pole. The solid span of the arc, from verse 4a to verse 5b, is established; the dashed reach to the verse 14 terminus is provisional — the arc's within-volume close, which completes at the incarnation of John 1:14, with the eternal life named as the pole beyond.</desc>
+
+  <style>
+    /* family theming interface — light page from in-file fallbacks; dark slide when the host sets tokens */
+    .gk    { font-family:'SBL BibLit','Cardo','Gentium Plus','Charis SIL','Source Serif 4',Georgia,serif; fill:currentColor; }
+    .ink   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; }
+    .lbl   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); }
+    .note  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); font-style:italic; }
+    .head  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-goldtext,#8a6608); letter-spacing:0.16em; }
+    .thr   { fill:var(--color-goldtext,#8a6608); font-style:italic; }
+
+    .arc   { stroke:var(--color-gold,#b8860b); stroke-width:2.8; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+    .arcp  { stroke:var(--color-gold,#b8860b); stroke-width:2.6; fill:none; stroke-linecap:round; stroke-dasharray:9 10; }
+    .arcd  { stroke:var(--color-meta,#6b6b6b); stroke-width:1.8; fill:none; stroke-linecap:round; stroke-dasharray:3 8; }
+    .node  { fill:var(--color-gold,#b8860b); }
+    .pole  { fill:var(--color-gold,#b8860b); }
+    .gring { fill:none; stroke:currentColor; stroke-width:1.8; }
+    .tick  { stroke:var(--color-gold,#b8860b); stroke-width:1.2; fill:none; }
+  </style>
+
+  <defs>
+    <marker id="ol-open" viewBox="0 0 10 10" refX="7" refY="5"
+            markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 1 1 L 9 5 L 1 9" fill="none" stroke="var(--color-meta,#6b6b6b)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- ================= legend ================= -->
+  <text class="note" x="720" y="46" text-anchor="middle" font-size="19">Four movements, one life — the life in the Word, the light of men, the shining within the darkness, the darkness unovercome —</text>
+  <text class="note" x="720" y="72" text-anchor="middle" font-size="19">gathered into a single arc — from creation (v. 4a) toward the eternal life, completing at the incarnation of 1:14.</text>
+
+  <!-- ================= the one-life arc ================= -->
+  <!-- solid / established span: v.4a through v.5b -->
+  <path class="arc" d="M175,405 C 290,392 330,390 430,392 C 545,394 585,386 685,388 C 795,390 845,392 915,398"/>
+  <!-- provisional dashed reach to the v.14 within-volume terminus -->
+  <path class="arcp" d="M915,398 C 1010,410 1075,422 1150,430"/>
+  <!-- the eschatological pole beyond (dim, open) -->
+  <path class="arcd" d="M1168,428 L 1348,414" marker-end="url(#ol-open)"/>
+
+  <!--  creation / the life in the Word (v.4a)  -->
+  <circle class="pole" cx="175" cy="405" r="9"/>
+  <text class="ink"  x="175" y="347" text-anchor="middle" font-size="20">the life <tspan class="thr">in</tspan> the Word</text>
+  <text class="gk"   x="175" y="376" text-anchor="middle" font-size="23">ζωὴ ἦν</text>
+  <text class="lbl"  x="175" y="440" text-anchor="middle" font-size="16">creation · v. 4a</text>
+  <text class="note" x="175" y="462" text-anchor="middle" font-size="15.5">the protological pole</text>
+
+  <!--  the light of men (v.4b)  -->
+  <circle class="node" cx="430" cy="392" r="8"/>
+  <text class="ink"  x="430" y="334" text-anchor="middle" font-size="20">the light <tspan class="thr">of</tspan> men</text>
+  <text class="gk"   x="430" y="363" text-anchor="middle" font-size="23">τὸ φῶς τῶν ἀνθρώπων</text>
+  <text class="lbl"  x="430" y="428" text-anchor="middle" font-size="16">v. 4b</text>
+
+  <!--  shining within the darkness (v.5a)  -->
+  <circle class="node" cx="685" cy="388" r="8"/>
+  <text class="ink"  x="685" y="330" text-anchor="middle" font-size="20">shining <tspan class="thr">within</tspan> the darkness</text>
+  <text class="gk"   x="685" y="359" text-anchor="middle" font-size="23">ἐν τῇ σκοτίᾳ φαίνει</text>
+  <text class="lbl"  x="685" y="424" text-anchor="middle" font-size="16">v. 5a</text>
+
+  <!--  the darkness unovercome (v.5b)  -->
+  <circle class="node" cx="915" cy="398" r="8"/>
+  <text class="ink"  x="915" y="340" text-anchor="middle" font-size="20">the darkness cannot overcome it</text>
+  <text class="gk"   x="915" y="369" text-anchor="middle" font-size="23">οὐ κατέλαβεν</text>
+  <text class="lbl"  x="915" y="434" text-anchor="middle" font-size="16">v. 5b</text>
+
+  <!--  the v.14 within-volume terminus (provisional: hollow ring)  -->
+  <circle class="gring" cx="1150" cy="430" r="15"/>
+  <text class="ink"  x="1150" y="388" text-anchor="middle" font-size="19">the incarnation</text>
+  <text class="lbl"  x="1150" y="474" text-anchor="middle" font-size="16">v. 14 · the within-volume terminus</text>
+  <text class="note" x="1150" y="496" text-anchor="middle" font-size="15.5">the arc completes here, at 1:14</text>
+
+  <!--  the eschatological pole beyond  -->
+  <text class="gk"   x="1418" y="405" text-anchor="end" font-size="21">ζωὴ αἰώνιος</text>
+  <text class="lbl"  x="1418" y="430" text-anchor="end" font-size="15.5">eternal life — the eschatological pole</text>
+
+  <!-- ================= the integrative gathering (one life) ================= -->
+  <path class="tick" d="M175,504 L175,511 L915,511 L915,504"/>
+  <text class="head" x="545" y="534" text-anchor="middle" font-size="15">ONE LIFE — THE FOUR GATHERED INTO A SINGLE ARC</text>
+
+  <!-- ================= movement summary ================= -->
+  <text class="note" x="720" y="742" text-anchor="middle" font-size="18">one life — in the Word, the light of men, shining within the darkness, unovercome — from creation toward eternal life, completing at 1:14</text>
+</svg>
