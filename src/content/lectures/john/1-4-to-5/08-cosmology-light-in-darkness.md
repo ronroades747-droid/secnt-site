@@ -5,5 +5,6 @@ date: 2026-07-20
 sectionRef: john/1-4-to-5/08-cosmology-light-in-darkness
 bunnyVideoId: ""
 license: CC-BY-4.0
+duration: "00:00"
 draft: true
 ---

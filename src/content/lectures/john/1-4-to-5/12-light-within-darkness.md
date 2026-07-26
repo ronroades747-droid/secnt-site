@@ -5,5 +5,6 @@ date: 2026-07-20
 sectionRef: john/1-4-to-5/12-light-within-darkness
 bunnyVideoId: ""
 license: CC-BY-4.0
+duration: "00:00"
 draft: true
 ---
