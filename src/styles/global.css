@@ -40,8 +40,54 @@
   --measure: 72ch;         /* reading column ~65–72 chars */
   --chrome-max: 1200px;    /* full-width chrome cap */
 
+  /* Unit-layout envelope (sticky section rail + reading column). Held as
+     tokens rather than literals so the large-screen steps below can widen the
+     envelope without touching the grid rule, and so the diagram breakout can
+     compute the width of the content track it is allowed to fill. */
+  --unit-max: 1180px;      /* outer cap of the two-column unit layout */
+  --unit-side: 15rem;      /* section-rail track (max of its minmax) */
+  --unit-gap: 3.5rem;      /* rail-to-column gap (max of its clamp) */
+  --unit-pad: 1.5rem;      /* outer padding-inline (max of its clamp) */
+
+  /* Diagrams are authored on a ~1440-wide canvas; that is the ceiling for
+     in-page rendering. Larger than native is the zoom overlay's job. */
+  --diagram-max: 1440px;
+
   --space: 1.5rem;
   --rule: 2px;             /* gold rule weight */
+}
+
+/* ====================================================================
+   LARGE-DISPLAY READING SCALE
+   --------------------------------------------------------------------
+   The reading measure is set in `ch`, so stepping --size-body up on a large
+   panel grows the type and the column together: the line still runs ~72
+   characters, it is simply set larger. The register is unchanged — this is
+   the same page at the viewing distance a 27"+ display actually implies.
+   ==================================================================== */
+@media (min-width: 1400px) {
+  /* Type is already right at this width; the envelope is not. Widening the
+     chrome here is what gives a breakout diagram room on a laptop-sized
+     window before the type steps up at all. */
+  :root {
+    --chrome-max: 1280px;
+    --unit-max: 1320px;
+  }
+}
+@media (min-width: 1600px) {
+  :root {
+    --size-body: 1.1875rem;   /* ~19px */
+    --chrome-max: 1360px;
+    --unit-max: 1420px;
+  }
+}
+@media (min-width: 2000px) {
+  :root {
+    --size-body: 1.25rem;     /* ~20px */
+    --leading-body: 1.7;
+    --chrome-max: 1520px;
+    --unit-max: 1620px;
+  }
 }
 
 /* ====================================================================
@@ -251,7 +297,7 @@ main { flex: 1 0 auto; width: 100%; }
 .prev-next__more .prev-next__title { color: var(--color-meta); font-style: italic; }
 
 @media (min-width: 64rem) {
-  .unit-layout { display: grid; grid-template-columns: minmax(13rem, 15rem) minmax(0, 1fr); gap: clamp(2rem, 4vw, 3.5rem); max-width: 1180px; margin-inline: auto; padding-inline: clamp(1rem, 4vw, 1.5rem); align-items: start; }
+  .unit-layout { display: grid; grid-template-columns: minmax(13rem, var(--unit-side)) minmax(0, 1fr); gap: clamp(2rem, 4vw, var(--unit-gap)); max-width: var(--unit-max); margin-inline: auto; padding-inline: clamp(1rem, 4vw, var(--unit-pad)); align-items: start; }
   .unit-layout > .reading { padding-inline: 0; }
   /* Sticky sidebar with independent scroll when it exceeds the viewport
      (21 entries on short screens). */
@@ -259,12 +305,134 @@ main { flex: 1 0 auto; width: 100%; }
   .unit-nav__sections { max-height: none; overflow: visible; }
 }
 
-/* Diagram figure */
+/* ====================================================================
+   DIAGRAM FIGURE
+   --------------------------------------------------------------------
+   Diagrams are authored on a ~1440-wide canvas. Held to the prose measure
+   (~620px) they render near 43% scale, which puts their smallest labels
+   under 6px — legible on a phone only because pinch-zoom is a viewport
+   transform. A desktop reader has no equivalent gesture: browser zoom scales
+   the ch-based column and the SVG together, so the diagram never gets
+   relatively larger. Two answers, both here:
+
+     1. On wide viewports the figure BREAKS OUT of the reading measure to
+        fill the content track (prose keeps its 72ch discipline; only the
+        figure widens), capped at the SVG's native width.
+     2. Any diagram is CLICK-TO-ENLARGE into a full-viewport overlay with
+        zoom and pan — see the .dz block below and Diagram.astro.
+   ==================================================================== */
 figure.diagram { margin: 2.5rem 0; }
 figure.diagram img { display: block; margin-inline: auto; }
-figure.diagram .diagram-svg { color: var(--color-text); }
+figure.diagram .diagram-svg { color: var(--color-text); display: block; }
 figure.diagram .diagram-svg svg { display: block; width: 100%; height: auto; margin-inline: auto; }
-figure.diagram figcaption { color: var(--color-meta); font-size: 0.95rem; margin-top: 0.6rem; text-align: center; }
+/* The caption is prose and keeps a prose measure even when the figure above it
+   has broken out — a 1276px line of 15px type is not a caption, it is a rule. */
+figure.diagram figcaption {
+  color: var(--color-meta); font-size: 0.95rem; margin-top: 0.6rem; text-align: center;
+  max-width: min(60ch, 100%); margin-inline: auto;
+}
+
+/* Width of the content track each reading context can give a figure. The
+   unit layout subtracts its rail, gap and outer padding; a plain reading page
+   has the whole chrome width. Both clamp to the viewport so the breakout can
+   never introduce a horizontal scrollbar. */
+.reading { --diagram-room: min(100vw - 3rem, var(--chrome-max)); }
+.unit-layout > .reading {
+  --diagram-room: calc(min(100vw - 3rem, var(--unit-max))
+    - (2 * var(--unit-pad)) - var(--unit-side) - var(--unit-gap));
+}
+
+@media (min-width: 64rem) {
+  figure.diagram {
+    --dw: min(var(--diagram-max), var(--diagram-room));
+    width: var(--dw);
+    /* 100% is the reading column; a negative inline margin breaks the figure
+       out symmetrically, so it stays centred on the prose it belongs to. */
+    margin-inline: calc((100% - var(--dw)) / 2);
+  }
+}
+
+/* The zoom trigger. A bare button — no chrome of its own; the diagram is the
+   affordance. The hint line only appears once the script has wired the figure,
+   so a no-JS reader is never told to click something inert. */
+.diagram-zoom {
+  display: block; width: 100%;
+  margin: 0; padding: 0; border: 0; background: none;
+  font: inherit; color: inherit; text-align: inherit;
+}
+.diagram-zoom__hint { display: none; }
+[data-dz-ready] .diagram-zoom { cursor: zoom-in; }
+[data-dz-ready] .diagram-zoom__hint {
+  display: block; margin-top: 0.45rem;
+  font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--color-border); text-align: center;
+  transition: color 0.15s ease;
+}
+[data-dz-ready] .diagram-zoom:hover .diagram-zoom__hint,
+[data-dz-ready] .diagram-zoom:focus-visible .diagram-zoom__hint { color: var(--color-gold); }
+
+/* --------------------------------------------------------------------
+   Diagram zoom overlay (native <dialog>, top layer).
+   Panning is ordinary scrolling of the stage — trackpad, touch drag, arrow
+   keys and scrollbars all work without bespoke gesture handling. Zoom is a
+   multiplier on a JS-measured fit width.
+   -------------------------------------------------------------------- */
+dialog.dz {
+  width: 100vw; max-width: 100vw; height: 100dvh; max-height: 100dvh;
+  margin: 0; padding: 0; border: 0;
+  background: var(--color-bg); color: var(--color-text);
+  overflow: hidden;
+}
+dialog.dz::backdrop { background: rgba(26, 26, 26, 0.75); }
+dialog.dz[open] { display: flex; flex-direction: column; }
+
+.dz__bar {
+  flex: 0 0 auto;
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: 0.6rem clamp(0.75rem, 3vw, 1.5rem);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+.dz__caption {
+  flex: 1 1 auto; min-width: 0;
+  font-size: 0.9rem; color: var(--color-meta);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.dz__bar button {
+  flex: 0 0 auto;
+  font: inherit; font-size: 0.9rem; line-height: 1;
+  padding: 0.45rem 0.7rem;
+  color: var(--color-text); background: var(--color-bg);
+  border: 1px solid var(--color-border); border-radius: 2px;
+  cursor: pointer;
+}
+.dz__bar button:hover { border-color: var(--color-gold); color: var(--color-gold); }
+.dz__bar button[disabled] { opacity: 0.4; cursor: default; }
+.dz__bar button[disabled]:hover { border-color: var(--color-border); color: var(--color-text); }
+.dz__level {
+  flex: 0 0 auto; min-width: 4.5ch; text-align: center;
+  font-size: 0.85rem; color: var(--color-meta); font-variant-numeric: tabular-nums;
+}
+.dz__close { margin-left: 0.25rem; }
+
+.dz__stage {
+  flex: 1 1 auto; min-height: 0;
+  overflow: auto; overscroll-behavior: contain;
+  display: flex; align-items: safe center; justify-content: safe center;
+  padding: clamp(0.5rem, 2vw, 1.5rem);
+  background: var(--color-bg);
+}
+.dz__inner { flex: 0 0 auto; margin: auto; width: calc(var(--dz-base, 100%) * var(--dz-zoom, 1)); }
+.dz__inner svg { display: block; width: 100%; height: auto; }
+.dz__stage.is-grabbing { cursor: grabbing; }
+.dz__stage.is-pannable { cursor: grab; }
+
+/* The moved-out figure holds its height so the page behind does not reflow. */
+.diagram-svg[data-dz-vacated] { display: block; }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-dz-ready] .diagram-zoom__hint { transition: none; }
+}
 
 /* Block quotes — scholarly quotation and the editor's welcome */
 blockquote { margin: 1.6rem 0; padding: 0.2rem 0 0.2rem 1.3rem; border-left: 3px solid var(--color-gold-soft); }
@@ -349,10 +517,13 @@ blockquote footer { margin-top: 0.85rem; font-size: 0.95rem; font-style: normal;
   .unit-layout { display: block; max-width: none; padding: 0; margin: 0; }
   main, .reading { max-width: none; padding: 0; }
   a { color: #000; text-decoration: none; }
-  /* Diagrams are scholarly content and print with the page; SVG scales crisply. */
+  /* Diagrams are scholarly content and print with the page; SVG scales crisply.
+     The screen breakout and the zoom affordance are both screen-only. */
+  figure.diagram { width: auto !important; margin-inline: 0 !important; }
   figure.diagram img { max-width: 100%; }
   figure.diagram .diagram-svg svg { max-width: 100%; }
   figure.diagram figcaption { font-size: 9.5pt; }
+  .diagram-zoom__hint, dialog.dz { display: none !important; }
   /* keep footnote sequence with its content, avoid awkward breaks */
   .footnotes, blockquote, figure { break-inside: avoid; }
   h1, h2, h3, h4 { break-after: avoid; }

@@ -1,0 +1,182 @@
+---
+/**
+ * DiagramZoom.astro — the client behaviour for reader-facing diagrams.
+ *
+ * This is a script-only component, rendered ONCE by BaseLayout so it is present
+ * on every page. It deliberately does NOT live inside Diagram.astro: the
+ * standard placement for a diagram is `position: anchor` (locked Decision 5),
+ * and that path is served by the remark-diagram-anchor plugin, which injects
+ * the figure markup directly into the rendered Markdown without ever
+ * instantiating Diagram.astro. A script hoisted from the component would
+ * therefore be absent from exactly the pages that need it most. Binding here
+ * covers both the component path and the anchor path with one implementation;
+ * on a page with no diagrams the querySelectorAll finds nothing and the module
+ * costs a few hundred bytes and no work.
+ */
+---
+<script>
+  /**
+   * Diagram zoom overlay.
+   *
+   * Astro hoists and de-duplicates this module, so it runs ONCE per page no
+   * matter how many diagrams the page carries.
+   *
+   * The SVG is MOVED into the overlay rather than cloned: these diagrams carry
+   * internal ids (<title>/<desc> behind aria-labelledby, plus markers and
+   * gradients referenced by url(#…)), and two copies in one document would
+   * collide — the duplicate would silently steal the reference and arrowheads
+   * would paint from the wrong node. Moving keeps exactly one instance alive.
+   * The vacated wrapper is pinned to its measured height so the page behind
+   * the overlay does not reflow and lose the reader's scroll position.
+   *
+   * Panning is ordinary scrolling of the stage, so trackpad, touch, arrow keys
+   * and scrollbars all work for free; drag-to-pan is layered on for the mouse.
+   */
+  const STEPS = [1, 1.5, 2, 3, 4, 6];
+
+  interface Session {
+    svg: SVGSVGElement;
+    home: HTMLElement;
+    homeHeight: string;
+  }
+
+  let dialog: HTMLDialogElement | null = null;
+  let stage: HTMLElement;
+  let inner: HTMLElement;
+  let level: HTMLElement;
+  let caption: HTMLElement;
+  let btnIn: HTMLButtonElement;
+  let btnOut: HTMLButtonElement;
+  let step = 0;
+  let session: Session | null = null;
+
+  function build(): HTMLDialogElement {
+    const d = document.createElement('dialog');
+    d.className = 'dz';
+    d.innerHTML = `
+      <div class="dz__bar">
+        <span class="dz__caption"></span>
+        <button type="button" class="dz__out" aria-label="Zoom out">&minus;</button>
+        <span class="dz__level" role="status" aria-live="polite">100%</span>
+        <button type="button" class="dz__in" aria-label="Zoom in">+</button>
+        <button type="button" class="dz__fit">Fit</button>
+        <button type="button" class="dz__close">Close</button>
+      </div>
+      <div class="dz__stage" tabindex="0"><div class="dz__inner"></div></div>`;
+    document.body.appendChild(d);
+
+    stage = d.querySelector('.dz__stage') as HTMLElement;
+    inner = d.querySelector('.dz__inner') as HTMLElement;
+    level = d.querySelector('.dz__level') as HTMLElement;
+    caption = d.querySelector('.dz__caption') as HTMLElement;
+    btnIn = d.querySelector('.dz__in') as HTMLButtonElement;
+    btnOut = d.querySelector('.dz__out') as HTMLButtonElement;
+
+    btnIn.addEventListener('click', () => setStep(step + 1));
+    btnOut.addEventListener('click', () => setStep(step - 1));
+    (d.querySelector('.dz__fit') as HTMLButtonElement).addEventListener('click', () => setStep(0));
+    (d.querySelector('.dz__close') as HTMLButtonElement).addEventListener('click', () => d.close());
+
+    // Native <dialog> fires `close` for Esc as well as for close(): one exit path.
+    d.addEventListener('close', restore);
+    // Click the surround (not the diagram) to dismiss.
+    stage.addEventListener('click', (e) => { if (e.target === stage) d.close(); });
+
+    d.addEventListener('keydown', (e) => {
+      if (e.key === '+' || e.key === '=') { e.preventDefault(); setStep(step + 1); }
+      else if (e.key === '-' || e.key === '_') { e.preventDefault(); setStep(step - 1); }
+      else if (e.key === '0') { e.preventDefault(); setStep(0); }
+    });
+
+    // Ctrl/Cmd + wheel zooms; a bare wheel scrolls the stage, i.e. pans.
+    stage.addEventListener('wheel', (e) => {
+      if (!e.ctrlKey && !e.metaKey) return;
+      e.preventDefault();
+      setStep(step + (e.deltaY < 0 ? 1 : -1));
+    }, { passive: false });
+
+    // Drag-to-pan for the mouse, once there is something to pan to.
+    let dragging = false, sx = 0, sy = 0, sl = 0, st = 0;
+    stage.addEventListener('pointerdown', (e) => {
+      if (e.pointerType === 'touch') return; // native touch scrolling is better
+      if (stage.scrollWidth <= stage.clientWidth && stage.scrollHeight <= stage.clientHeight) return;
+      dragging = true; sx = e.clientX; sy = e.clientY; sl = stage.scrollLeft; st = stage.scrollTop;
+      stage.setPointerCapture(e.pointerId);
+      stage.classList.add('is-grabbing');
+    });
+    stage.addEventListener('pointermove', (e) => {
+      if (!dragging) return;
+      stage.scrollLeft = sl - (e.clientX - sx);
+      stage.scrollTop = st - (e.clientY - sy);
+    });
+    const endDrag = () => { dragging = false; stage.classList.remove('is-grabbing'); };
+    stage.addEventListener('pointerup', endDrag);
+    stage.addEventListener('pointercancel', endDrag);
+
+    window.addEventListener('resize', () => { if (session) { measure(); setStep(step); } });
+    return d;
+  }
+
+  /** Size the diagram so that step 0 fits the stage box entirely. */
+  function measure() {
+    if (!session) return;
+    const vb = session.svg.viewBox?.baseVal;
+    const ratio = vb && vb.width && vb.height ? vb.width / vb.height : 16 / 9;
+    const cs = getComputedStyle(stage);
+    const padX = parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight);
+    const padY = parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom);
+    const w = stage.clientWidth - padX;
+    const h = stage.clientHeight - padY;
+    inner.style.setProperty('--dz-base', `${Math.max(120, Math.min(w, h * ratio))}px`);
+  }
+
+  function setStep(next: number) {
+    step = Math.max(0, Math.min(STEPS.length - 1, next));
+    const z = STEPS[step];
+    inner.style.setProperty('--dz-zoom', String(z));
+    level.textContent = `${Math.round(z * 100)}%`;
+    btnOut.disabled = step === 0;
+    btnIn.disabled = step === STEPS.length - 1;
+    requestAnimationFrame(() => {
+      const pannable = stage.scrollWidth > stage.clientWidth || stage.scrollHeight > stage.clientHeight;
+      stage.classList.toggle('is-pannable', pannable);
+    });
+  }
+
+  function open(button: HTMLElement) {
+    const home = button.querySelector('.diagram-svg') as HTMLElement | null;
+    const svg = home?.querySelector('svg') as SVGSVGElement | null;
+    if (!home || !svg) return;
+    if (!dialog) dialog = build();
+
+    session = { svg, home, homeHeight: home.style.height };
+    home.style.height = `${home.getBoundingClientRect().height}px`;
+    home.setAttribute('data-dz-vacated', '');
+
+    inner.appendChild(svg);
+    const fig = button.closest('figure');
+    caption.textContent = fig?.querySelector('figcaption')?.textContent?.trim() ?? '';
+
+    dialog.showModal();
+    measure();
+    setStep(0);
+    stage.focus();
+  }
+
+  function restore() {
+    if (!session) return;
+    session.home.appendChild(session.svg);
+    session.home.style.height = session.homeHeight;
+    session.home.removeAttribute('data-dz-vacated');
+    session = null;
+  }
+
+  // Native <dialog> is the whole mechanism; without it the button stays inert
+  // and unmarked rather than promising a zoom it cannot deliver.
+  if (typeof HTMLDialogElement !== 'undefined' && HTMLDialogElement.prototype.showModal) {
+    for (const button of document.querySelectorAll<HTMLElement>('[data-diagram-zoom]')) {
+      button.closest('figure')?.setAttribute('data-dz-ready', '');
+      button.addEventListener('click', () => open(button));
+    }
+  }
+</script>

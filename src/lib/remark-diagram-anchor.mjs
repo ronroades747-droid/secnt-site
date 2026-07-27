@@ -89,9 +89,19 @@ export default function remarkDiagramAnchor() {
       const caption = diagram.caption
         ? `<figcaption>${escapeHtml(diagram.caption)}</figcaption>`
         : '';
+      // Must emit the same shape Diagram.astro does — including the zoom
+      // trigger — or an anchor-placed figure would be the one kind of diagram
+      // that cannot be enlarged, and anchor is the standard placement
+      // (Decision 5). The behaviour is bound in DiagramZoom.astro, which
+      // BaseLayout renders on every page precisely because this path never
+      // instantiates the component.
+      const label = escapeHtml(diagram.alt);
       const figure =
         `<figure class="diagram">` +
-        `<div class="diagram-svg" role="img" aria-label="${escapeHtml(diagram.alt)}">${svg}</div>` +
+        `<button type="button" class="diagram-zoom" data-diagram-zoom aria-label="Enlarge diagram — ${label}">` +
+        `<span class="diagram-svg" role="img" aria-label="${label}">${svg}</span>` +
+        `<span class="diagram-zoom__hint" aria-hidden="true">Click to enlarge</span>` +
+        `</button>` +
         caption +
         `</figure>`;
 
