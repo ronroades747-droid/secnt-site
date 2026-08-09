@@ -11,7 +11,7 @@ verseEnd: 5
 sectionType: framing
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 Three sections have now described the architecture of these two verses: a [staircase of terms](/commentary/john/1-4-to-5/02-gradatio-and-foyer/), a [run of tenses](/commentary/john/1-4-to-5/03-macro-tense-run/) beneath the same four clauses, and the [coordinate articulation](/commentary/john/1-4-to-5/04-coordinate-articulation/) that holds the two descriptions together as dimensions of one composition. What remains is the question that description has been building toward, and it is not a formal question. The architecture is not merely form. It carries theology at the level of the whole, before any single clause is expounded — and unless that freight is named now, the exegesis that follows will be heard clause by clause, as four true statements taken in turn, when the unit itself teaches something that no clause states alone. This section names what the shape of the unit already teaches, so that the clause-level exegesis is heard within it.
 
