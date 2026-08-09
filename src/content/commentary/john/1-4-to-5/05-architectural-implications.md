@@ -1,7 +1,7 @@
 ---
 title: "Architecture: What the Architecture Theologically Carries"
 description: "The theological freight of the unit’s architectural foundation, before the clause-level exegesis begins."
-date: 2026-07-20
+date: 2026-08-08
 book: john
 chapter: 1
 passageRef: "1:4–5"
