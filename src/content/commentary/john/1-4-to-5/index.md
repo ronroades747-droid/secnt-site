@@ -11,7 +11,7 @@ verseEnd: 5
 sectionType: unit-landing
 license: CC-BY-4.0
 hasLecture: true
-passageComplete: true
+passageComplete: false
 draft: false
 diagram:
   src: ./jn1-4-5-architectural-orientation.svg

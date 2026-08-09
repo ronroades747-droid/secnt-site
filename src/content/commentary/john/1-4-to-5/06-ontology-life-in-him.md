@@ -1,7 +1,7 @@
 ---
 title: "Exegesis: Ἐν αὐτῷ ζωὴ ἦν — Ontology, the Life in the Word"
 description: "The first clause (1:4a): the construal, the force of the imperfect, and the sense of ζωή — the life that was in the Word."
-date: 2026-07-20
+date: 2026-08-09
 book: john
 chapter: 1
 passageRef: "1:4–5"
@@ -11,7 +11,7 @@ verseEnd: 4
 sectionType: exegesis
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 The description of these two verses is finished; the exposition begins. Four clauses stand in a fixed order — an order the [architecture](/commentary/john/1-4-to-5/05-architectural-implications/) has shown to be composed, not incidental — and the exegesis takes them as they were built: ontology, anthropology, cosmology, soteriology, each tread on its own evidence. The first tread is the deepest. Before the light, before the darkness, before any response to either, John says what *is*: that in the Word there was life, and that this life is the standing ground of everything that has come to be. Three things are fixed on this page, in order: how the clause is construed, what force its imperfect carries, and what its ζωή means.
 
