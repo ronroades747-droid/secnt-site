@@ -1,7 +1,7 @@
 <svg viewBox="0 0 1440 730" xmlns="http://www.w3.org/2000/svg"
      role="img" aria-labelledby="mdTitle mdDesc" preserveAspectRatio="xMidYMid meet">
   <title id="mdTitle">The modified, non-ultimate dualism of John 1:5 — the darkness real but bounded, read on three registers, with the light shining within it.</title>
-  <desc id="mdDesc">Into what does the light shine? Into ἡ σκοτία, the darkness — the fallen human condition, read at once on three registers: cosmological (the created order under the absence of light), moral (the darkness of sin, a turning from God), and noetic (ignorance and unbelief, not knowing its Maker), the noetic register foregrounded. The light shines within the darkness: the preposition ἐν is locative, the sphere the light inhabits, not directional, not a hostile object struck at from outside. The darkness is bounded and non-ultimate: not an eternal counter-principle and not a Gnostic realm — a modified, not a metaphysical, dualism. Three scholarly guards hold that boundary: Bultmann (a revolt against the light, not a substance), Dodd (the darkness of 1:5 is not ultimate), and Lincoln (a qualification of the War Scroll and 1 Enoch, not their equivalent). The darkness is real, but it does not overcome the light.</desc>
+  <desc id="mdDesc">Into what does the light shine? Into ἡ σκοτία, the darkness — the fallen human condition, read at once on three registers: cosmological (the created order under the absence of light), moral (the darkness of sin, a turning from God), and noetic (ignorance and unbelief, not knowing its Maker), the noetic register foregrounded. The light shines within the darkness: the preposition ἐν is locative, the sphere the light inhabits, not directional, not a hostile object struck at from outside. The darkness is bounded and non-ultimate: not an eternal counter-principle and not a Gnostic realm — a modified, not a metaphysical, dualism. Three scholarly guards hold that boundary: Bultmann (a revolt against the light, not a substance), Dodd (the darkness of 1:5 is not ultimate), and Lincoln (John placed within a developed Jewish contrast that is already a modified dualism, God ultimately in control) — the first two by exclusion, the third by positive placement.</desc>
 
   <style>
     /* family theming interface — light page from in-file fallbacks; dark slide when the host sets the tokens */
@@ -93,5 +93,5 @@
   <text class="note"   x="800" y="550" font-size="16.5">the bounded, non-ultimate state of the creature — not the light's equal</text>
 
   <!-- movement summary -->
-  <text class="note" x="720" y="694" text-anchor="middle" font-size="18">a real darkness, but bounded and non-ultimate — the light shines within it, the dark remains dark, and it does not overcome the light</text>
+  <text class="note" x="720" y="694" text-anchor="middle" font-size="18">a real darkness, but bounded and non-ultimate — the light shines within it, and the dark remains dark</text>
 </svg>
