@@ -11,7 +11,7 @@ verseEnd: 4
 sectionType: exegesis
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 The second tread takes up the first. The subject of verse 4b is the life the reader has just watched the [first tread](/commentary/john/1-4-to-5/06-ontology-life-in-him/) establish — ἡ ζωή, now named again with the article, "*the* life," the very life predicated of the Word in verse 4a — and it is carried one step forward: this life *was the light of men*. The [staircase](/commentary/john/1-4-to-5/02-gradatio-and-foyer/) turns here, from what the life *is in the Word* to what it *is toward humanity*, and it turns by a copula that binds two articular definites to each other: ἡ ζωὴ ἦν τὸ φῶς. Three questions are fixed on this page, in order: what this φῶς is, how the life *is* the light, and whose light it is — the last in two steps, since "whose" asks both how far the light reaches and in what sense the light is humanity's own.
