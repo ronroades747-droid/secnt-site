@@ -204,11 +204,13 @@ git pull
 git add src/content/commentary/john/1-1-to-3/NN-slug.md src/content/lectures/john/1-1-to-3/NN-slug.md
 # if this is the last pair, also stage the landing with passageComplete flipped:
 # git add src/content/commentary/john/1-1-to-3/index.md
-git commit -m "Publish §… — <descriptor> (section + lecture)"
+git commit -m "Publish §… — <descriptor> (section + lecture)" -m "Authorized by: GATE 4, <cycle> — <the instrument, e.g. ARB 2.6 / IPC-10 §7>. Lane: Commentary Production."
 git push
 ```
 
 Cloudflare rebuilds automatically. `draft: false` content goes live; `draft: true` content is held back.
+
+**Name the authority in the commit.** Publication is the most consequential commit in the system — it is the moment a reading becomes public and citable — so it is the one that most needs to be traceable back to what authorized it. The second `-m` becomes a separate paragraph in the message; keep the subject line as it is. This follows the corpus convention in `CLAUDE.md` (*"Claude writes the commit message; Ron pastes it"*, adopted 12 Aug 2026): the session that authored the body supplies the whole message, GATE line included, and Ron pastes it at the flip.
 
 ---
 
