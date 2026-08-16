@@ -1,7 +1,7 @@
 ---
 title: "Theology: Creation through the Personally-Distinct Divine Agent"
 description: "Locus Four: creation through the Word, doctrinally articulated on the grounds of v. 3 (πάντα δι' αὐτοῦ ἐγένετο)."
-date: 2026-06-29
+date: 2026-07-14
 book: john
 chapter: 1
 passageRef: "1:1–3"

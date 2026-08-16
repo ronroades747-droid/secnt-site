@@ -1,7 +1,7 @@
 ---
 title: "Architecture: What the Foundation Theologically Carries"
 description: "Theological implications of the architectural foundation established by the foyer-bracket and macro-tense patterns."
-date: 2026-05-30
+date: 2026-06-12
 book: john
 chapter: 1
 passageRef: "1:1–3"

@@ -1,7 +1,7 @@
 ---
 title: "Engagement with Prior Scholarship: The Scholarly Record"
 description: "The cycle's substantive engagement with the scholarly literature that has shaped its resolutions, with engagement-layer disclosure of the load-bearing modern Tier 1 sources."
-date: 2026-05-30
+date: 2026-07-15
 book: john
 chapter: 1
 passageRef: "1:1–3"

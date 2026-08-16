@@ -1,7 +1,7 @@
 ---
 title: "Exegesis: Ἐν ἀρχῇ ἦν ὁ λόγος — The Word in the Beginning"
 description: "The opening clause of the Prologue: the Word's eternal ontology framed by the timeless-eternal ἦν and the temporal-anteriority register of ἐν ἀρχῇ."
-date: 2026-05-30
+date: 2026-06-13
 book: john
 chapter: 1
 passageRef: "1:1–3"

@@ -1,7 +1,7 @@
 ---
 title: "Theology: Personal Fellowship and the Doctrine of the Trinity"
 description: "Locus Two: personal fellowship between the Word and God, doctrinally articulated on the grounds of v. 1b (πρὸς τὸν θεόν), with forward gesture to Trinitarian articulation."
-date: 2026-06-23
+date: 2026-06-27
 revised: 2026-06-28
 book: john
 chapter: 1

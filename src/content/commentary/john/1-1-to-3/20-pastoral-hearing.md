@@ -1,7 +1,7 @@
 ---
 title: "Pastoral Hearing and Forward Arc"
 description: "The unit's pastoral hearing — what John 1:1–3 means for the church's reading and teaching — and the forward arc into 1:4–5, 1:6–13, 1:14, and the Gospel proper."
-date: 2026-05-30
+date: 2026-07-16
 book: john
 chapter: 1
 passageRef: "1:1–3"

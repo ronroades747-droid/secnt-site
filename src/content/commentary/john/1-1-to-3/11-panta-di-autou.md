@@ -1,7 +1,7 @@
 ---
 title: "Exegesis: Πάντα δι' αὐτοῦ — Universal Scope and Personally-Distinct Agency"
 description: "§5.4.1: v. 3a's positive predication — universal scope (πάντα) and personally-distinct divine agency (δι' αὐτοῦ) as one assertion: all things came to be through the Word."
-date: 2026-05-30
+date: 2026-06-22
 book: john
 chapter: 1
 passageRef: "1:1–3"
