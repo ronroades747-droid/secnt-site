@@ -2,6 +2,7 @@
 title: "Architecture: The Macro-Tense Spine"
 description: "The Prologue's diachronic spine: ἦν (timeless-eternal), ἐγένετο (historical-creational and historical-incarnational), ὃ γέγονεν (resulting-state)."
 date: 2026-06-09
+revised: 2026-08-16
 book: john
 chapter: 1
 passageRef: "1:1–3"

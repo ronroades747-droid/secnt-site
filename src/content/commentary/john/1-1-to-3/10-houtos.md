@@ -2,6 +2,7 @@
 title: "Exegesis: Οὗτος — The Resumptive-Emphatic Hinge of Verse 2"
 description: "Verse 2's οὗτος as the resumptive-emphatic hinge that consolidates v. 1's substantive architecture and prepares v. 3."
 date: 2026-06-19
+revised: 2026-08-16
 book: john
 chapter: 1
 passageRef: "1:1–3"

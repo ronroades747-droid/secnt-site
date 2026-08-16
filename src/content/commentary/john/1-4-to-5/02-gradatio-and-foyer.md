@@ -2,6 +2,7 @@
 title: "Architecture: The Internal Gradatio and the Foyer"
 description: "The unit’s synchronic shape: the four-tread gradatio (life → light → darkness → the darkness’s failure) and 1:4–5 at the far pole of the v. 4 / v. 14 foyer bracket."
 date: 2026-07-26
+revised: 2026-08-16
 book: john
 chapter: 1
 passageRef: "1:4–5"

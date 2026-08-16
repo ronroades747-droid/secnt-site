@@ -2,6 +2,7 @@
 title: "Architecture: The Macro-Tense Run on the Prologue Spine"
 description: "The unit’s diachronic shape: the marked run ἦν → φαίνει → κατέλαβεν as the unit-level instantiation of the Prologue’s macro-tense spine."
 date: 2026-07-26
+revised: 2026-08-16
 book: john
 chapter: 1
 passageRef: "1:4–5"

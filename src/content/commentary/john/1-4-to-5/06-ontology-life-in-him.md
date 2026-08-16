@@ -2,6 +2,7 @@
 title: "Exegesis: Ἐν αὐτῷ ζωὴ ἦν — Ontology, the Life in the Word"
 description: "The first clause (1:4a): the construal, the force of the imperfect, and the sense of ζωή — the life that was in the Word."
 date: 2026-08-09
+revised: 2026-08-16
 book: john
 chapter: 1
 passageRef: "1:4–5"

@@ -2,6 +2,7 @@
 title: "Architecture: The Coordinate Articulation of Shape and Spine"
 description: "The gradatio and the macro-tense run held co-primary — two dimensions of one composition, split by register so neither borrows the other’s witnesses."
 date: 2026-07-27
+revised: 2026-08-16
 book: john
 chapter: 1
 passageRef: "1:4–5"

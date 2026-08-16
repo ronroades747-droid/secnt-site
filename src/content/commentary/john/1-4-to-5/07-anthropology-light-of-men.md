@@ -2,6 +2,7 @@
 title: "Exegesis: Τὸ φῶς τῶν ἀνθρώπων — Anthropology, the Light of Men"
 description: "The second clause (1:4b): the life-light identification, the sense of φῶς, and the universal scope and plenary genitive of “the light of men.”"
 date: 2026-08-10
+revised: 2026-08-16
 book: john
 chapter: 1
 passageRef: "1:4–5"

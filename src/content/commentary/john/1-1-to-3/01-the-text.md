@@ -2,6 +2,7 @@
 title: "The Text: Settling the Form and the Punctuation"
 description: "Text-critical decisions for John 1:1–3: the form question (οὐδὲ ἕν vs. οὐδέν at v. 3b) and the punctuation question (Reading A vs. Reading B at the v. 3/4 boundary)."
 date: 2026-06-06
+revised: 2026-08-16
 book: john
 chapter: 1
 passageRef: "1:1–3"
