@@ -3,8 +3,8 @@
 // Publication & Revision Dates standard (13 Jun 2026). The publication date is
 // always shown; the revision line renders only when `revised` is present:
 //
-//   First published 3 June 2026
-//   First published 3 June 2026 · Revised 13 June 2026
+//   Published 3 June 2026
+//   Published 3 June 2026 · Revised 13 June 2026
 //
 // Screen-only — the same dates print at document end via BaseLayout's
 // .print-citation, so this block is suppressed in print to avoid duplication.
@@ -19,6 +19,6 @@ interface Props {
 const { date, revised } = Astro.props;
 ---
 <footer class="page-dates">
-  <span>First published {formatDate(date)}</span>
+  <span>Published {formatDate(date)}</span>
   {revised && <span> &#183; Revised {formatDate(revised)}</span>}
 </footer>

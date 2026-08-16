@@ -1,7 +1,7 @@
 ---
 title: "Architecture: The Macro-Tense Run on the Prologue Spine"
 description: "The unit’s diachronic shape: the marked run ἦν → φαίνει → κατέλαβεν as the unit-level instantiation of the Prologue’s macro-tense spine."
-date: 2026-07-20
+date: 2026-07-26
 book: john
 chapter: 1
 passageRef: "1:4–5"
@@ -17,7 +17,6 @@ diagram:
   alt: "The unit-level macro-tense run of John 1:4–5: the imperfect ἦν, ἦν (v. 4) → the present φαίνει (v. 5a, the Prologue’s first present indicative) → the aorist κατέλαβεν (v. 5b), as the unit-level instantiation of the Prologue’s macro-tense spine. The layered-temporal payload is marked: the protological imperfect grounding the eternal frame; the marked present holding creational, incarnational, and ongoing-contemporary frames together; the constative aorist gathering the darkness’s failure into one completed fact against the ongoing present."
   caption: "The macro-tense run: ἦν → φαίνει → κατέλαβεν — the protological imperfect, the one marked present shining, and the constative aorist gathering the darkness’s failure into a single completed fact."
   position: anchor
----
 ---
 The unit's shape is one thing; its time is another. The [staircase of terms](/commentary/john/1-4-to-5/02-gradatio-and-foyer/) shows what the unit *is* — four treads standing in a fixed relation, life to light to darkness to the darkness's failure. It does not show what the unit *does* in time. That is carried by a second feature, running beneath the same four treads and just as deliberate: the sequence of the verbs. This section takes that sequence on its own, and only that. How the two features are held together — for they are neither alternatives nor duplicates — is the burden of the section [after this one](/commentary/john/1-4-to-5/04-coordinate-articulation/). Nothing here re-argues the clause-level readings; those are settled, and are set out in the exegesis that follows.
 

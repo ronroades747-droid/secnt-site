@@ -1,7 +1,7 @@
 ---
 title: "The Text: Settling the Working Text of the Unit"
 description: "Text-critical decisions for John 1:4–5: the boundary at 1:3/4, the imperfect ζωὴ ἦν at v. 4a, and the uncontested text of v. 5 with the patristic reception note."
-date: 2026-07-20
+date: 2026-07-22
 book: john
 chapter: 1
 passageRef: "1:4–5"
@@ -12,8 +12,6 @@ sectionType: text-critical
 license: CC-BY-4.0
 hasLecture: true
 draft: false
----
----
 ---
 The exegesis of these two verses proceeds through their four clauses in the order the evangelist composed them, and it proceeds on a fixed text. This first section establishes that text. The unit's text-critical situation is unusual in a clarifying way: nearly all of it is settled before the unit begins, inherited from the reading of John 1:1–3, and only one point of decision belongs to the unit itself. Naming which is which is part of the commentary's discipline of disclosure — the reader is shown where the working text rests on judgments made earlier and where it rests on a judgment made here.
 
