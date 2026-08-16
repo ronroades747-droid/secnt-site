@@ -51,7 +51,7 @@ From this ground the movement takes its second step, and the composition has alr
 
 [^caution]: Morris, *John*, pp. 63–64: "we should not press the tense unduly." The caution is accepted as stated; the page's claim rests on the convergence of the grammatical force with the Prologue-wide pattern of the imperfect, not on the tense alone.
 
-[^barrett]: C. K. Barrett, *The Gospel according to St John*, 2nd ed. (London: SPCK, 1978), pp. 157–158: ζωή as "the essential energy of the Word." Barrett's independent case for the imperfect ἦν at verse 4a — "the second ἦν requires the first," p. 156 — is engaged in the [text-critical notes](/commentary/john/1-4-to-5/01-the-text/), where it matters that a reader on either side of the punctuation question arrives at the same verb.
+[^barrett]: C. K. Barrett, *The Gospel according to St John*, 2nd ed. (London: SPCK, 1978), pp. 157–158: ζωή as "the essential energy of the Word." Barrett's independent case for the imperfect ἦν at verse 4a — "the second ἦν (ἡ ζωὴ ἦν τὸ φῶς) seems to require the first," p. 156 — is engaged in the [text-critical notes](/commentary/john/1-4-to-5/01-the-text/), where it matters that a reader on either side of the punctuation question arrives at the same verb.
 
 [^mchugh]: McHugh, *John 1–4*, pp. 15–17, taking up Cyril of Alexandria's ἡ κατὰ φύσιν ζωή and Zahn: the ζωή of 1:4a as an "objectively subsistent reality," the uncreated life, set against creatures that carry "the germ of death."
 

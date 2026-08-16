@@ -46,7 +46,7 @@ The project reads verse 2 as a resumptive consolidation — emphatic, anti-Arian
 
 [^mchugh]: John McHugh, *A Critical and Exegetical Commentary on John 1–4*, International Critical Commentary (London: T&T Clark, 2009), 10, identifying the function of v. 2 as preparing the ground for v. 3 by reaffirming the Logos’s nature “in se and quoad Deum” — its eternal being and its relationship to God, the two clauses v. 2 retains — before the creation-agency is predicated.
 
-[^schnackenburg]: Rudolf Schnackenburg, *The Gospel according to St John*, vol. 1, trans. Kevin Smyth (New York: Herder and Herder, 1968), 237, anticipating McHugh's observation by decades: the Logos who according to v. 1b (and v. 2) is most intimately united to God is characterized in v. 3 as the Father's active collaborator.
+[^schnackenburg]: Rudolf Schnackenburg, *The Gospel according to St John*, vol. 1, trans. Kevin Smyth (New York: Herder and Herder, 1968), 238, anticipating McHugh's observation by decades: the Logos who according to v. 1b (and v. 2) is most intimately united to God is characterized in v. 3 as the Father's active collaborator.
 
 [^carson]: D. A. Carson, *The Gospel according to John*, Pillar New Testament Commentary (Grand Rapids: Eerdmans, 1991), 117, working the consolidation backward from the climactic predication of v. 1c — the Word who is God's own eternal Fellow and God's own Self is the single subject of whom v. 1's eternal being and personal fellowship are jointly predicated.
 
