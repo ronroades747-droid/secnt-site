@@ -214,6 +214,17 @@ Cloudflare rebuilds automatically. `draft: false` content goes live; `draft: tru
 
 ---
 
+## Dates and revision disclosure
+
+*(Added 16 August 2026 on the Editor's rulings; successor text for the Publication & Revision Dates standard of 13 June 2026, which `src/components/PageDates.astro` cites and which survives in no repo — presumed a retired Drive-era document.)*
+
+- **`date` is the go-live date, set on both stubs in the publish commit** (Editor's ruling, 9 August 2026, restated here). It renders at the page foot as **"Published {date}"** — the label is *Published*, not *First published* (conformed 16 August 2026, matching the print citation).
+- **A re-publication resets `date`.** A withdrawn pair returning to the site takes the **new** go-live date on both stubs, in the flip commit, and carries **no `revised` line** — the corrections are inside the fresh publication.
+- **A correction to a live page sets `revised`.** Any pass that changes a live page's rendered content adds or updates `revised: YYYY-MM-DD` to that pass's date **in the same commit** as the correction. The page foot then reads "Published {date} · Revised {revised}". Repeated corrections advance `revised` to the latest pass; the fuller history is git's.
+- The machine-readable schema.org pair (`datePublished` / `dateModified`) follows from these two fields automatically; nothing extra is set.
+
+---
+
 ## Creating a new section + lecture pair
 
 When a new pair must be added to the tree — a later cycle, or a section created after the initial scaffold — it is **two steps across two registers**, not one:
