@@ -1,7 +1,7 @@
 ---
 title: "Exegesis: Ἡ σκοτία αὐτὸ οὐ κατέλαβεν — Soteriology, the Darkness’s Failure"
 description: "The fourth clause (1:5b): κατέλαβεν read both-and (comprehend and overcome) and the constative aorist — the darkness’s failure against the light."
-date: 2026-07-20
+date: 2026-08-16
 book: john
 chapter: 1
 passageRef: "1:4–5"
@@ -11,7 +11,7 @@ verseEnd: 5
 sectionType: exegesis
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 The fourth tread closes the staircase, and it answers the question [the third tread](/commentary/john/1-4-to-5/08-cosmology-light-in-darkness/) left standing. The light shines within the darkness — and the darkness, at last, does something. Or rather: the darkness *fails* to do something, twice over. Verse 5b takes up the σκοτία one final time and makes it the grammatical subject of a verb, and on that verb — αὐτὸ οὐ κατέλαβεν — the whole movement comes to rest. Two things are fixed on this page: what the darkness failed to do, and how the tense of the failing frames it.
