@@ -1,7 +1,7 @@
 ---
 title: "Theology: The Life in the Word"
 description: "Locus One: the doctrine of the life held in the Word, seed of John 5:26."
-date: 2026-07-20
+date: 2026-08-17
 book: john
 chapter: 1
 passageRef: "1:4–5"
@@ -11,7 +11,7 @@ verseEnd: 5
 sectionType: theology
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 The exegesis is finished; the theology begins. Four clauses have been worked in the order the evangelist built them, and each was made to answer for itself — [what the first says](/commentary/john/1-4-to-5/06-ontology-life-in-him/), and the second, and the third, and [the last](/commentary/john/1-4-to-5/09-soteriology-not-overcome/). The work of this page is of a different order. It does not return to the clauses to press them further. It asks what the church, on the strength of what they say, has learned to confess — and it takes the treads in the order the composition set them, so that the first tread yields the first thing confessed.
