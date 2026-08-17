@@ -216,7 +216,7 @@ Cloudflare rebuilds automatically. `draft: false` content goes live; `draft: tru
 
 ## Dates and revision disclosure
 
-*(Added 16 August 2026 on the Editor's rulings; successor text for the Publication & Revision Dates standard of 13 June 2026, which `src/components/PageDates.astro` cites and which survives in no repo — presumed a retired Drive-era document.)*
+*(Added 16 August 2026 on the Editor's rulings; successor text for the Publication & Revision Dates standard of 13 June 2026, which `src/components/PageDates.astro` cites and which survives in no repo — a retired Drive-era document. Confirmed as the standard's successor by the Editor, 17 August 2026; this section is now the standard of record.)*
 
 - **`date` is the go-live date, set on both stubs in the publish commit** (Editor's ruling, 9 August 2026, restated here). It renders at the page foot as **"Published {date}"** — the label is *Published*, not *First published* (conformed 16 August 2026, matching the print citation).
 - **A re-publication resets `date`.** A withdrawn pair returning to the site takes the **new** go-live date on both stubs, in the flip commit, and carries **no `revised` line** — the corrections are inside the fresh publication.
