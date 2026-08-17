@@ -1,7 +1,7 @@
 ---
 title: "Introduction: Framing and Orientation"
 description: "Opening orientation for the Jn 1:1–3 cycle."
-date: 2026-06-05
+date: 2026-06-06
 sectionRef: john/1-1-to-3
 bunnyVideoId: "05bbd785-7ea9-4aa1-b2cb-89829988752d"
 duration: "16:00"
