@@ -1,0 +1,55 @@
+---
+// Cycle index — Route 2 of the Editor's two-routes ruling (Shorts Web Dev
+// Handoff, 19 Aug 2026, §2): a short introduction (the entry body, supplied
+// by Commentary Production) and the list of the cycle's slide pages, each
+// link resolving to the same canonical URL the QR uses. Slides not yet live
+// are listed with their committed publish date — working title + date,
+// unlinked until live — so the cycle page is the run's public calendar. That
+// is why this template reads the full slides collection, drafts included,
+// by design (metadata only; draft pages themselves are not built).
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from './Breadcrumb.astro';
+import PageDates from './PageDates.astro';
+import { slideUrl, isVisible, formatDate } from '../lib/site';
+
+const { entry } = Astro.props;
+const d = entry.data;
+const { Content } = await render(entry);
+const slides = (await getCollection('slides'))
+  .filter((s) => s.data.cycle.id === entry.id)
+  .sort((a, b) => a.data.scheduled.valueOf() - b.data.scheduled.valueOf());
+const crumbs = [
+  { label: 'Teaching Aids', href: '/slides/' },
+  { label: d.title },
+];
+---
+<BaseLayout title={`Teaching Aids — ${d.title}`} description={d.description}
+  pageMeta={{ date: d.date, revised: d.revised, license: d.license }}>
+  <article class="reading">
+    <Breadcrumb crumbs={crumbs} />
+    <p class="passage-ref">Teaching Aids</p>
+    <h1>{d.title}</h1>
+
+    <Content />
+
+    <ol class="slide-list">
+      {slides.map((s) =>
+        isVisible(s) ? (
+          <li>
+            <a href={slideUrl(s.id)}>
+              <span class="slide-list__title">{s.data.title}</span>
+            </a>
+          </li>
+        ) : (
+          <li class="slide-list__upcoming">
+            <span class="slide-list__title">{s.data.title}</span>
+            <span class="slide-list__date">Coming {formatDate(s.data.scheduled)}</span>
+          </li>
+        )
+      )}
+    </ol>
+
+    {d.date && <PageDates date={d.date} revised={d.revised} />}
+  </article>
+</BaseLayout>

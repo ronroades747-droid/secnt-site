@@ -550,3 +550,44 @@ blockquote footer { margin-top: 0.85rem; font-size: 0.95rem; font-style: normal;
    (articles). Visible but quiet; each carries an id so original page numbers
    cite against the canonical URL (…/#p17). Kept in print. */
 .page-marker { display: inline-block; color: var(--color-meta); font-size: 0.78rem; font-style: normal; letter-spacing: 0.04em; border: 1px solid var(--color-border); border-radius: 2px; padding: 0 0.35rem; margin: 0 0.15rem; vertical-align: 0.12em; scroll-margin-top: 1.5rem; user-select: none; }
+
+/* ====================================================================
+   TEACHING AIDS — shorts resource pages (/slides/)
+   Slide display, both-ratio download buttons, cycle index list.
+   (Shorts Web Dev Handoff, 19 Aug 2026; Shorts Program Plan §2, D13.)
+   ==================================================================== */
+.slide-display { margin: 1.75rem 0 1.25rem; }
+.slide-display img {
+  width: 100%; height: auto; display: block;
+  border: 1px solid var(--color-border);
+  background: #262b33; /* shorts-register field shows while the PNG loads */
+}
+.slide-downloads { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 0 0 0.6rem; }
+.download-button {
+  display: inline-block; padding: 0.55rem 1.1rem;
+  border: 1px solid var(--color-gold); border-left-width: 3px;
+  color: var(--color-text); background: var(--color-surface);
+  text-decoration: none; font-size: 0.98rem; font-weight: 500;
+}
+.download-button:hover { color: var(--color-link-hover); border-color: var(--color-link-hover); }
+.slide-caption { color: var(--color-meta); font-size: 0.92rem; margin: 0 0 2rem; }
+.slide-onward { margin-top: 2.25rem; }
+.slide-backlink { margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--color-border); }
+
+/* Cycle index — published slides linked; upcoming entries unlinked + dated
+   (the run's public calendar, Editor's ruling 19 Aug 2026). */
+.slide-list { list-style: none; margin: 2rem 0 0; padding: 0; }
+.slide-list li { border-top: 1px solid var(--color-border); }
+.slide-list li:last-child { border-bottom: 1px solid var(--color-border); }
+.slide-list a, .slide-list .slide-list__upcoming { display: block; padding: 0.8rem 0; }
+.slide-list a { text-decoration: none; color: var(--color-text); }
+.slide-list a:hover { color: var(--color-gold); }
+.slide-list__title { font-size: 1.1rem; }
+.slide-list__date { display: block; color: var(--color-meta); font-size: 0.92rem; margin-top: 0.15rem; }
+.slide-list__upcoming .slide-list__title { color: var(--color-meta); }
+
+@media print {
+  /* The slide itself prints (it is the teaching asset); the download buttons
+     and back-link are screen affordances. */
+  .slide-downloads, .slide-backlink { display: none !important; }
+}

@@ -1,0 +1,37 @@
+---
+// Teaching Aids landing — the section home for the shorts resource-page class
+// (Shorts Program Plan §2; Shorts Web Dev Handoff, 19 Aug 2026, §2 Route 2).
+// Lists published cycle pages; grows cycle by cycle, same incremental-
+// exposure discipline as Commentaries and Articles. The intro line is
+// Commentary Production's supplied wording (handoff memo §2).
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { slideCycleUrl, isVisible } from '../../lib/site';
+
+const cycles = (await getCollection('slideCycles'))
+  .filter(isVisible)
+  .sort((a, b) => a.data.order - b.data.order);
+---
+<BaseLayout tier="1" title="Teaching Aids"
+  description="Projectable slides and teaching notes from the SECNT commentaries — free to use in church and in class.">
+  <div class="reading reading--wide">
+    <h1>Teaching Aids</h1>
+    <p>Projectable slides and teaching notes from the SECNT commentaries — free to use in church and in class.</p>
+    {cycles.length === 0 ? (
+      <p>No teaching aids published yet.</p>
+    ) : (
+      <nav class="section-toc" aria-label="Teaching aids by passage">
+        <ol>
+          {cycles.map((c) => (
+            <li>
+              <a href={slideCycleUrl(c.id)}>
+                <span class="toc-title">{c.data.title}</span>
+                <span class="toc-desc">{c.data.description}</span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+    )}
+  </div>
+</BaseLayout>

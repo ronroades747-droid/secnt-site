@@ -47,5 +47,24 @@ const revisedDate = pageMeta?.revised ?? pageMeta?.updated;
     </main>
     <Footer citeYear={citeYear} />
     <DiagramZoom />
+    <!-- GoatCounter — privacy-first analytics, no cookies, no banner needed.
+         Pageviews site-wide; download counting via data-goatcounter-click on
+         the Teaching Aids download buttons (count.js binds those itself).
+         A visit arriving from a QR scan carries ?q and is recorded as its
+         own path (path + '?q'), so scans stay distinguishable from typed and
+         clicked visits (Shorts Program Plan §12). -->
+    {SITE.goatcounter && (
+      <script is:inline set:html={
+        `window.goatcounter = { path: function (p) { return new URLSearchParams(location.search).has('q') ? p + '?q' : p; } };`
+      } />
+    )}
+    {SITE.goatcounter && (
+      <script
+        is:inline
+        data-goatcounter={`https://${SITE.goatcounter}.goatcounter.com/count`}
+        async
+        src="https://gc.zgo.at/count.js"
+      ></script>
+    )}
   </body>
 </html>

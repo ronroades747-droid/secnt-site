@@ -19,6 +19,12 @@ export const SITE = {
   // Bunny Stream pull-zone library id (the GUID per video lives in lecture
   // frontmatter as bunnyVideoId). Set this once.
   bunnyLibraryId: '672956',
+  // GoatCounter site code — analytics for the whole site (pageviews) and the
+  // Teaching Aids download events (downloads headline, views never — Shorts
+  // Program Plan D18). The dashboard is https://<code>.goatcounter.com; QR
+  // scans arrive with ?q and are recorded as a distinct path (see BaseLayout).
+  // Editor's ruling 19 Aug 2026 (GoatCounter over Cloudflare Web Analytics).
+  goatcounter: 'secnt',
   banner: {
     src: '/banner.jpg',
     alt: 'An ancient library with scrolls in wooden shelving, classical columns, warm lamps, scholars at study, light from an arched doorway in the distance.',
@@ -32,6 +38,7 @@ export const NAV = [
   { label: 'Citing', href: '/citing/' },
   { label: 'Commentaries', href: '/commentary/' },
   { label: 'Articles', href: '/articles/' },
+  { label: 'Teaching Aids', href: '/slides/' },
 ];
 
 // --- Sections-sidebar segment grouping -------------------------------------
@@ -69,6 +76,18 @@ export const frontmatterUrl = (id: string) => `/${id}/`;
 // An article id is its slug under /articles/ (path-owns-identity, same as
 // commentary).
 export const articleUrl = (id: string) => `/articles/${id}/`;
+// Teaching Aids (shorts resource pages) — one namespace under /slides/: the
+// landing at /slides/, cycle indexes and slide pages both directly beneath
+// (/slides/john-1-1-to-3/, /slides/<slug>/). Slide-page URLs are the locked,
+// QR-baked, citation-stable tier (Decision 6, 19 Aug 2026): they are printed
+// into published video and can never be re-pointed. Web Dev owns slug
+// uniqueness across the shared namespace at stub creation.
+export const slideUrl = (id: string) => `/slides/${id}/`;
+export const slideCycleUrl = (id: string) => `/slides/${id}/`;
+// Served slide assets live in public/slides/<slug>/ beside the page route,
+// named from the slug — stable download URLs, nothing per-entry to drift.
+export const slideAssetUrl = (id: string, ratio: '16x9' | '9x16') =>
+  `/slides/${id}/${id}-${ratio}.png`;
 // A lecture lives at its paired section's URL + "lecture/".
 export const lectureUrl = (sectionId: string) =>
   `/commentary/${sectionId}/lecture/`;

@@ -1,0 +1,28 @@
+---
+// One dynamic route for both tiers under /slides/: cycle index pages
+// (/slides/john-1-1-to-3/) and slide resource pages (/slides/<slug>/). The
+// two collections share the namespace — Web Dev owns slug uniqueness at stub
+// creation (Decision 6, 19 Aug 2026). Slide-page URLs are QR-baked into
+// published video and citation-stable: never rename an entry.
+import { getCollection } from 'astro:content';
+import SlideCyclePage from '../../../components/SlideCyclePage.astro';
+import SlideResourcePage from '../../../components/SlideResourcePage.astro';
+import { isVisible } from '../../../lib/site';
+
+export async function getStaticPaths() {
+  const cycles = (await getCollection('slideCycles')).filter(isVisible);
+  const slides = (await getCollection('slides')).filter(isVisible);
+  return [
+    ...cycles.map((entry) => ({
+      params: { entry: entry.id },
+      props: { kind: 'cycle' as const, entry },
+    })),
+    ...slides.map((entry) => ({
+      params: { entry: entry.id },
+      props: { kind: 'slide' as const, entry },
+    })),
+  ];
+}
+const { kind, entry } = Astro.props;
+---
+{kind === 'cycle' ? <SlideCyclePage entry={entry} /> : <SlideResourcePage entry={entry} />}

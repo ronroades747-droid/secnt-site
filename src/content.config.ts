@@ -275,4 +275,68 @@ const lectures = defineCollection({
   }),
 });
 
-export const collections = { frontmatter, volumes, commentary, lectures, articles };
+
+// ---------------------------------------------------------------------------
+// Collection: slideCycles  —  Teaching Aids cycle indexes
+// ---------------------------------------------------------------------------
+// One entry per completed cycle whose shorts run has opened (Shorts Program
+// Plan §2/§4; Shorts Web Dev Handoff, 19 Aug 2026, §2 Route 2). The entry's
+// body is the cycle introduction (supplied by Commentary Production); the
+// template appends the cycle's slide list — published pages linked at their
+// canonical /slides/<slug>/ URLs, unpublished ones listed with their
+// committed publish date (the cycle page is the run's public calendar, per
+// the Editor's ruling of 19 Aug 2026). Path owns identity: the entry id is
+// the URL segment under /slides/ (e.g. john-1-1-to-3).
+const slideCycles = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/slide-cycles' }),
+  schema: () =>
+    z.object({
+      title: z.string(), // reader-facing, e.g. "John 1:1–3"
+      description: z.string(),
+      book: z.string().default('john'),
+      // Commentary unit-landing id this cycle's onward links resolve to,
+      // e.g. 'john/1-1-to-3' (the route tier, Shorts Program Plan §1).
+      commentaryUnit: z.string(),
+      // Listing order on the Teaching Aids landing (routing/order only).
+      order: z.number().int().min(0),
+      date: z.coerce.date().optional(),
+      revised: z.coerce.date().optional(),
+      license,
+      draft: z.boolean().default(false),
+    }),
+});
+
+// ---------------------------------------------------------------------------
+// Collection: slides  —  shorts resource pages (Teaching Aids)
+// ---------------------------------------------------------------------------
+// One entry per short (Shorts Program Plan §2, D13). Path owns identity: the
+// entry id IS the locked short URL's slug — /slides/<slug>/ is QR-baked into
+// published video and can never change (decisions-locked.md, Decision 6).
+// Frontmatter is Web-Dev-owned; the body (notes prose + the required
+// Pedagogical task section) is supplied by Commentary Production per short.
+// Served slide PNGs live in public/slides/<slug>/ under the derived names
+// <slug>-16x9.png / <slug>-9x16.png (see slideAssetUrl in site.ts); no
+// per-entry asset fields to drift. No shorts-register internal apparatus
+// (SS index IDs, Build numbers) appears anywhere in this public repo.
+const slides = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/slides' }),
+  schema: () =>
+    z.object({
+      title: z.string(),
+      description: z.string().optional(),
+      cycle: reference('slideCycles'),
+      // The committed publication date of the short this page pairs with —
+      // drives the cycle index's calendar line for entries not yet live.
+      // Distinct from `date` (go-live, set at the flip like every page).
+      scheduled: z.coerce.date(),
+      date: z.coerce.date().optional(),
+      revised: z.coerce.date().optional(),
+      // Accessibility text for the displayed slide; a plain default is
+      // derived from the title when absent.
+      imageAlt: z.string().optional(),
+      license,
+      draft: z.boolean().default(false),
+    }),
+});
+
+export const collections = { frontmatter, volumes, commentary, lectures, articles, slides, slideCycles };

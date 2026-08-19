@@ -12,7 +12,14 @@ const isCurrent = (href: string) =>
 // section. (The /articles/ landing still builds, so the URL is stable from
 // the start; it just isn't linked until it has content.)
 const hasArticles = (await getCollection('articles')).some(isVisible);
-const nav = NAV.filter((item) => item.href !== '/articles/' || hasArticles);
+// Same discipline for Teaching Aids: the entry appears once at least one
+// cycle page is published.
+const hasSlides = (await getCollection('slideCycles')).some(isVisible);
+const nav = NAV.filter(
+  (item) =>
+    (item.href !== '/articles/' || hasArticles) &&
+    (item.href !== '/slides/' || hasSlides)
+);
 ---
 <header class="chrome site-header">
   <div class="chrome-inner">

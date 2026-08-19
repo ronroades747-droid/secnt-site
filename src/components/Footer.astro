@@ -6,7 +6,7 @@
 // navigation planned with the Articles IA decision (June 6, 2026): each group
 // grows on its own as works publish; only published entries render.
 import { getCollection } from 'astro:content';
-import { SITE, canonical, volumeUrl, articleUrl, isVisible } from '../lib/site';
+import { SITE, canonical, volumeUrl, articleUrl, slideCycleUrl, isVisible } from '../lib/site';
 
 interface Props {
   citeYear?: number;
@@ -19,6 +19,9 @@ const volumes = (await getCollection('volumes')).filter(isVisible);
 const articles = (await getCollection('articles'))
   .filter((a) => !a.id.includes('/') && isVisible(a))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const slideCycles = (await getCollection('slideCycles'))
+  .filter(isVisible)
+  .sort((a, b) => a.data.order - b.data.order);
 ---
 <hr class="gold-rule gold-rule--soft" />
 <footer class="chrome site-footer">
@@ -31,7 +34,7 @@ const articles = (await getCollection('articles'))
       <a href={SITE.licenseUrl} rel="license">{SITE.licenseName}</a>
     </div>
 
-    {(volumes.length > 0 || articles.length > 0) && (
+    {(volumes.length > 0 || articles.length > 0 || slideCycles.length > 0) && (
       <nav class="footer-sections" aria-label="Site sections">
         {volumes.length > 0 && (
           <div class="footer-sections__group">
@@ -49,6 +52,16 @@ const articles = (await getCollection('articles'))
             <ul>
               {articles.map((a) => (
                 <li><a href={articleUrl(a.id)}>{a.data.title}</a></li>
+              ))}
+            </ul>
+          </div>
+        )}
+        {slideCycles.length > 0 && (
+          <div class="footer-sections__group">
+            <p class="footer-sections__label"><a href="/slides/">Teaching Aids</a></p>
+            <ul>
+              {slideCycles.map((c) => (
+                <li><a href={slideCycleUrl(c.id)}>{c.data.title}</a></li>
               ))}
             </ul>
           </div>

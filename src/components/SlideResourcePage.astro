@@ -1,0 +1,67 @@
+---
+// Slide resource page — one per short (Shorts Program Plan §2, D13; Shorts
+// Web Dev Handoff, 19 Aug 2026, §1). Route 1 lands here directly (the QR and
+// the typed short URL): title, the 16:9 slide displayed, download buttons for
+// both ratios, the notes body (with its Pedagogical task section, supplied by
+// Commentary Production), the onward link to the cycle's Lectures and
+// Commentary (the route tier, Plan §1), and the back-link to the cycle page.
+//
+// Download buttons carry data-goatcounter-click — downloads are the headline
+// metric (Plan D18); GoatCounter's count.js (loaded in BaseLayout) binds
+// these automatically, recording download/<slug>/<ratio> events.
+import { getEntry, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from './Breadcrumb.astro';
+import PageDates from './PageDates.astro';
+import { slideCycleUrl, slideAssetUrl, commentaryUrl } from '../lib/site';
+
+const { entry } = Astro.props;
+const d = entry.data;
+const { Content } = await render(entry);
+const cycle = await getEntry(d.cycle);
+const crumbs = [
+  { label: 'Teaching Aids', href: '/slides/' },
+  { label: cycle.data.title, href: slideCycleUrl(cycle.id) },
+  { label: d.title },
+];
+const alt = d.imageAlt ?? `Projectable slide: ${d.title}`;
+---
+<BaseLayout title={d.title} description={d.description}
+  pageMeta={{ date: d.date, revised: d.revised, license: d.license }}>
+  <article class="reading">
+    <Breadcrumb crumbs={crumbs} />
+    <p class="passage-ref">Teaching Aids · {cycle.data.title}</p>
+    <h1>{d.title}</h1>
+
+    <figure class="slide-display">
+      <img src={slideAssetUrl(entry.id, '16x9')} alt={alt} width="1920" height="1080" />
+    </figure>
+
+    <div class="slide-downloads">
+      <a class="download-button" href={slideAssetUrl(entry.id, '16x9')} download
+        data-goatcounter-click={`download/${entry.id}/16x9`}
+        data-goatcounter-title={`Download 16:9 — ${d.title}`}>
+        Download for projection (16:9)
+      </a>
+      <a class="download-button" href={slideAssetUrl(entry.id, '9x16')} download
+        data-goatcounter-click={`download/${entry.id}/9x16`}
+        data-goatcounter-title={`Download 9:16 — ${d.title}`}>
+        Download for phone/story (9:16)
+      </a>
+    </div>
+    <p class="slide-caption">Projection (16:9) · Phone/story (9:16). Free to project, print, and adapt with attribution — CC BY 4.0.</p>
+
+    <Content />
+
+    <p class="slide-onward">
+      This slide comes from the SECNT commentary work on {cycle.data.title} — Deep
+      in God's Word. For the full treatment, see{' '}
+      <a href={commentaryUrl(cycle.data.commentaryUnit)}>the Lectures and Commentary on {cycle.data.title}</a>.
+    </p>
+    <p class="slide-backlink">
+      <a href={slideCycleUrl(cycle.id)}>More slides from {cycle.data.title}</a>
+    </p>
+
+    {d.date && <PageDates date={d.date} revised={d.revised} />}
+  </article>
+</BaseLayout>
