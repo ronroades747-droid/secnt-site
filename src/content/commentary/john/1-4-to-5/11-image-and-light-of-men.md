@@ -1,7 +1,7 @@
 ---
 title: "Theology: The Image of God and the Light of Men"
 description: "Locus Two: the imago-Dei constitution of the recipients of the light."
-date: 2026-07-20
+date: 2026-08-18
 book: john
 chapter: 1
 passageRef: "1:4–5"
@@ -11,7 +11,7 @@ verseEnd: 5
 sectionType: theology
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 The first tread asked whose the life is, and answered that it is held — that no creature owns the life by which it lives, and that [to be alive at all is to hold one's life in the Word](/commentary/john/1-4-to-5/10-life-in-the-word/). The second tread asks a different question, and it is a question about us. If the life the Word has is, turned toward humanity, humanity's *light*, then what must the creature be that this light should be *its* light? The clause says τὸ φῶς τῶν ἀνθρώπων — the light *of men* — and the exegesis found that the genitive works [both ways at once](/commentary/john/1-4-to-5/07-anthropology-light-of-men/): the light is turned toward humanity, and it is humanity's own. It is the second of those, the possessive, that the church has had to say something about. A light can be shone at anything. It is not every thing's *own*.
