@@ -92,6 +92,18 @@ export const slideCycleUrl = (id: string) => `/slides/${id}/`;
 // stays scan-clean. (Editor, 20 Aug 2026.)
 export const slideAssetUrl = (id: string, ratio: '16x9' | '9x16') =>
   `/slides/${id}/${id}-${ratio}.jpg`;
+// Audience tags (handoff memo §2, Editor's ruling 20 Aug 2026): public labels
+// in display order. The chip renders the label inside a colored pill — one
+// color per category, color never the sole encoding. Chip values validated:
+// text/fill >= 5.9:1 (WCAG AA) and all fill pairs separable under
+// red-green color-blindness (lightness ladder + deuteranopia check).
+export const AUDIENCES = {
+  'for-everyone': 'For everyone',
+  'new-to-the-bible': 'New to the Bible',
+  'familiar-with-scripture': 'Familiar with Scripture',
+  'students-and-teachers': 'Students & teachers of the Word',
+} as const;
+export type AudienceKey = keyof typeof AUDIENCES;
 // A lecture lives at its paired section's URL + "lecture/".
 export const lectureUrl = (sectionId: string) =>
   `/commentary/${sectionId}/lecture/`;

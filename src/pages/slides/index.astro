@@ -7,6 +7,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { slideCycleUrl, isVisible } from '../../lib/site';
+import AudienceChip from '../../components/AudienceChip.astro';
 
 const cycles = (await getCollection('slideCycles'))
   .filter(isVisible)
@@ -17,6 +18,19 @@ const cycles = (await getCollection('slideCycles'))
   <div class="reading reading--wide">
     <h1>Teaching Aids</h1>
     <p>Projectable slides and teaching notes from the SECNT commentaries — free to use in church and in class.</p>
+    <!-- Audience explainer (supplied wording, memo §2) — doubles as the chip
+         legend: the category names render as their chips. -->
+    <p class="audience-legend">
+      Every slide is tagged with the hearer it was built for — the person whose
+      “wait, really?” it is meant to earn.
+      <AudienceChip audience="for-everyone" /> means no Bible background is needed.
+      <AudienceChip audience="new-to-the-bible" /> assumes only the famous verses.
+      <AudienceChip audience="familiar-with-scripture" /> is the regular churchgoer
+      who knows the passage as usually translated.
+      <AudienceChip audience="students-and-teachers" /> is for those who handle the
+      text closely — and every slide also serves the audiences beyond its tag: the
+      tag is the floor, not the ceiling.
+    </p>
     {cycles.length === 0 ? (
       <p>No teaching aids published yet.</p>
     ) : (

@@ -1,0 +1,8 @@
+---
+// Audience chip (handoff memo §2, Editor's ruling 20 Aug 2026): the public
+// label inside a colored pill — one color per category section-wide; the
+// word carries the meaning, the color only speeds the eye.
+import { AUDIENCES } from '../lib/site';
+const { audience } = Astro.props;
+---
+<span class={`audience-chip audience-chip--${audience}`}>{AUDIENCES[audience]}</span>

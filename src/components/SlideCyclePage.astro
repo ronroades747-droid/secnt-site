@@ -12,6 +12,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumb from './Breadcrumb.astro';
 import PageDates from './PageDates.astro';
 import { slideUrl, isVisible, formatDate } from '../lib/site';
+import AudienceChip from './AudienceChip.astro';
 
 const { entry } = Astro.props;
 const d = entry.data;
@@ -39,6 +40,7 @@ const crumbs = [
           <li>
             <a href={slideUrl(s.id)}>
               <span class="slide-list__title">{s.data.title}</span>
+              <AudienceChip audience={s.data.audience} />
             </a>
           </li>
         ) : (

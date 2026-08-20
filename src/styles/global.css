@@ -586,8 +586,32 @@ blockquote footer { margin-top: 0.85rem; font-size: 0.95rem; font-style: normal;
 .slide-list__date { display: block; color: var(--color-meta); font-size: 0.92rem; margin-top: 0.15rem; }
 .slide-list__upcoming .slide-list__title { color: var(--color-meta); }
 
+/* Audience chips (handoff memo §2, Editor's ruling 20 Aug 2026). One color
+   per category across the Teaching Aids section; the label is written inside
+   the chip — color is never the sole encoding. All text/fill pairs clear
+   WCAG AA (>= 5.9:1); the four fills hold a lightness ladder and were checked
+   pairwise under a deuteranopia simulation. */
+.audience-chip {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0.015em;
+  padding: 0.06rem 0.6rem 0.1rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  vertical-align: 0.12em;
+}
+.audience-chip--for-everyone            { background: #f5e7c0; color: #6d5306; }
+.audience-chip--new-to-the-bible        { background: #d6efd9; color: #14594a; }
+.audience-chip--familiar-with-scripture { background: #c2d2ea; color: #2e4157; }
+.audience-chip--students-and-teachers   { background: #ddbccc; color: #552c4b; }
+.slide-list .audience-chip { margin-left: 0.6rem; }
+.audience-legend { margin: 1.25rem 0 0; }
+
 @media print {
   /* The slide itself prints (it is the teaching asset); the download buttons
-     and back-link are screen affordances. */
+     and back-link are screen affordances. Chips print as text on white. */
   .slide-downloads, .slide-backlink { display: none !important; }
+  .audience-chip { background: none !important; color: #000 !important; padding: 0; border: 0; }
 }

@@ -318,6 +318,18 @@ const slideCycles = defineCollection({
 // <slug>-16x9.png / <slug>-9x16.png (see slideAssetUrl in site.ts); no
 // per-entry asset fields to drift. No shorts-register internal apparatus
 // (SS index IDs, Build numbers) appears anywhere in this public repo.
+// Audience tag — the public label registry (handoff memo §2, Editor's
+// audience-tags ruling, 20 Aug 2026 revision): names the floor, not the
+// ceiling. Tokens are public-safe; internal audience codes never appear in
+// this repo (Public-Facing Materials Discipline). Labels + chip styling:
+// AUDIENCES in site.ts and the chip classes in global.css.
+const audience = z.enum([
+  'for-everyone',
+  'new-to-the-bible',
+  'familiar-with-scripture',
+  'students-and-teachers',
+]);
+
 const slides = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/slides' }),
   schema: () =>
@@ -325,6 +337,7 @@ const slides = defineCollection({
       title: z.string(),
       description: z.string().optional(),
       cycle: reference('slideCycles'),
+      audience,
       // The committed publication date of the short this page pairs with —
       // drives the cycle index's calendar line for entries not yet live.
       // Distinct from `date` (go-live, set at the flip like every page).

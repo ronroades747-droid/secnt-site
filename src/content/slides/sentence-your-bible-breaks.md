@@ -1,6 +1,7 @@
 ---
 title: "The sentence your Bible breaks"
 cycle: john-1-1-to-3
+audience: students-and-teachers
 scheduled: 2026-08-31
 license: CC-BY-4.0
 draft: true
