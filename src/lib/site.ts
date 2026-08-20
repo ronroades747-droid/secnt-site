@@ -86,8 +86,12 @@ export const slideUrl = (id: string) => `/slides/${id}/`;
 export const slideCycleUrl = (id: string) => `/slides/${id}/`;
 // Served slide assets live in public/slides/<slug>/ beside the page route,
 // named from the slug — stable download URLs, nothing per-entry to drift.
+// JPG: the slide generators (Seedream / Nano Banana Pro) emit JPG, and for
+// photographic-style imagery JPG serves smaller at identical quality; the
+// 9:16 is the QR-composited frame, exported at quality >= 90 so the code
+// stays scan-clean. (Editor, 20 Aug 2026.)
 export const slideAssetUrl = (id: string, ratio: '16x9' | '9x16') =>
-  `/slides/${id}/${id}-${ratio}.png`;
+  `/slides/${id}/${id}-${ratio}.jpg`;
 // A lecture lives at its paired section's URL + "lecture/".
 export const lectureUrl = (sectionId: string) =>
   `/commentary/${sectionId}/lecture/`;
