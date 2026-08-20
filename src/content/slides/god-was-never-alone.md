@@ -2,7 +2,7 @@
 title: "God was never alone"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — God was never alone."
 cycle: john-1-1-to-3
-scheduled: 2026-08-24
+scheduled: 2026-08-19
 imageAlt: "Slide on a dark slate field. Headline: God was never alone. Gloss: Before anything existed: a love given and returned within God himself. Gold line: “the Word was with God” — John 1:1. Imagery: a family in silhouette, with a soft infinity symbol of warm light whose glow flows toward them."
 license: CC-BY-4.0
 draft: false
