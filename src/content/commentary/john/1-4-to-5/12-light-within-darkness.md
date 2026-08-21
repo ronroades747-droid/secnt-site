@@ -1,7 +1,7 @@
 ---
 title: "Theology: The Light Within the Darkness"
 description: "Locus Three: the darkness that is real but not ultimate — the light shining within it."
-date: 2026-08-20
+date: 2026-08-21
 book: john
 chapter: 1
 passageRef: "1:4–5"
