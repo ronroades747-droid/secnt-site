@@ -314,8 +314,8 @@ const slideCycles = defineCollection({
 // published video and can never change (decisions-locked.md, Decision 6).
 // Frontmatter is Web-Dev-owned; the body (notes prose + the required
 // Pedagogical task section) is supplied by Commentary Production per short.
-// Served slide PNGs live in public/slides/<slug>/ under the derived names
-// <slug>-16x9.png / <slug>-9x16.png (see slideAssetUrl in site.ts); no
+// Served slide images live in public/slides/<slug>/ under the derived names
+// <slug>-16x9.jpg / <slug>-9x16.jpg (see slideAssetUrl in site.ts); no
 // per-entry asset fields to drift. No shorts-register internal apparatus
 // (SS index IDs, Build numbers) appears anywhere in this public repo.
 // Audience tag — the public label registry (handoff memo §2, Editor's

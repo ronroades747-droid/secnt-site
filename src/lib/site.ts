@@ -87,9 +87,13 @@ export const slideCycleUrl = (id: string) => `/slides/${id}/`;
 // Served slide assets live in public/slides/<slug>/ beside the page route,
 // named from the slug — stable download URLs, nothing per-entry to drift.
 // JPG: the slide generators (Seedream / Nano Banana Pro) emit JPG, and for
-// photographic-style imagery JPG serves smaller at identical quality; the
-// 9:16 is the QR-composited frame, exported at quality >= 90 so the code
-// stays scan-clean. (Editor, 20 Aug 2026.)
+// photographic-style imagery JPG serves smaller at identical quality.
+// Neither served ratio carries a QR code: the code is a timed overlay laid
+// over the mp4 in the video editor, never baked into a downloadable image
+// (Editor's ruling, 20 Aug 2026, superseding the same day's composited-9:16
+// ruling — a code on the face of the download reads as advertising and
+// makes a pastor hesitate to reprint it; the 9:16 footer carries secnt.org
+// as a credit line instead). See Short 02 Build §4B/§7.
 export const slideAssetUrl = (id: string, ratio: '16x9' | '9x16') =>
   `/slides/${id}/${id}-${ratio}.jpg`;
 // Audience tags (handoff memo §2, Editor's ruling 20 Aug 2026): public labels
