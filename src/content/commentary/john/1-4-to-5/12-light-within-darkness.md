@@ -1,7 +1,7 @@
 ---
 title: "Theology: The Light Within the Darkness"
 description: "Locus Three: the darkness that is real but not ultimate — the light shining within it."
-date: 2026-07-20
+date: 2026-08-20
 book: john
 chapter: 1
 passageRef: "1:4–5"
@@ -11,7 +11,7 @@ verseEnd: 5
 sectionType: theology
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 The second tread asked what the human creature must be that a divine light could be called *its* light, and answered that humanity is the creature [made to receive it](/commentary/john/1-4-to-5/11-image-and-light-of-men/). The third tread turns to where that light is actually found. Not in a clear-eyed creature looking up, but shining in the dark — and so this tread yields a doctrine of the darkness quite as much as a doctrine of the light.
