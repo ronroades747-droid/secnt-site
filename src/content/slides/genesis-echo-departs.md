@@ -3,10 +3,10 @@ title: "The Genesis echo departs"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — The Genesis echo departs."
 cycle: john-1-1-to-3
 audience: new-to-the-bible
-scheduled: 2026-08-26
+scheduled: 2026-08-22
 imageAlt: "Slide on a dark slate field. Headline, two lines, set at the left: Genesis: God made. / John: the Word was. Gold line: Not made. Already there. Beneath it, the references Genesis 1:1 · John 1:1. Imagery: an open sky long before dawn, a soft warm golden glow with no visible source — no sun, no disc, no point of light — standing evenly down the right of the frame and dissolving leftward into the flat slate field the type sits on."
 license: CC-BY-4.0
-draft: true
+draft: false
 ---
 
 That John begins his Gospel with the first words of the Bible is one of the better-known facts about the Prologue: *ἐν ἀρχῇ* — *in the beginning* — is, word for word, how Genesis opens, and John's first readers would have heard it at once. What is far less often noticed is what he does inside the echo. He keeps the phrase and changes the verb. Genesis: *in the beginning God made the heavens and the earth* — a verb of doing, the first creative act. John: *in the beginning the Word was* — not an act at all, but a state. At precisely the point where Genesis records something God did, John records something that was already the case. A deed at the beginning, in the one; in the other, a Someone who simply is at the beginning.
