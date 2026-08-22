@@ -4,7 +4,7 @@ description: "Projectable slide and teaching notes from the SECNT commentary on 
 cycle: john-1-1-to-3
 audience: new-to-the-bible
 scheduled: 2026-08-22
-imageAlt: "Slide on a dark slate field. Headline, two lines, set at the left: Genesis: God made. / John: the Word was. Gold line: Not made. Already there. Beneath it, the references Genesis 1:1 · John 1:1. Imagery: an open sky long before dawn, a soft warm golden glow with no visible source — no sun, no disc, no point of light — standing evenly down the right of the frame and dissolving leftward into the flat slate field the type sits on."
+imageAlt: "Slide on a dark slate field. Headline, two lines, set at the left: Genesis: God made. / John: the Word was. Gold line: Not made. Already there. Beneath it, the references Genesis 1:1 · John 1:1. Imagery filling the right of the frame: an immense still expanse of dark water under an unbroken sky long before dawn, a broad warm golden glow above the horizon spreading across the water, fading leftward into the flat slate field the type sits on."
 license: CC-BY-4.0
 draft: false
 ---
