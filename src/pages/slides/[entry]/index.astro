@@ -3,15 +3,22 @@
 // (/slides/john-1-1-to-3/) and slide resource pages (/slides/<slug>/). The
 // two collections share the namespace — Web Dev owns slug uniqueness at stub
 // creation (Decision 6, 19 Aug 2026). Slide-page URLs are QR-baked into
-// published video and citation-stable: never rename an entry.
+// published video and citation-stable: never rename an entry. Slide
+// filenames carry an NN- run-order prefix that the loader strips, so the id
+// — and the URL — stays the bare slug; assertSlideIds gates the build on it.
 import { getCollection } from 'astro:content';
 import SlideCyclePage from '../../../components/SlideCyclePage.astro';
 import SlideResourcePage from '../../../components/SlideResourcePage.astro';
 import { isVisible } from '../../../lib/site';
+import { assertSlideIds } from '../../../lib/slide-ids';
 
 export async function getStaticPaths() {
   const cycles = (await getCollection('slideCycles')).filter(isVisible);
-  const slides = (await getCollection('slides')).filter(isVisible);
+  const allSlides = await getCollection('slides');
+  // Gate the build on the ids being exactly the QR-baked slugs — drafts
+  // included, since a stub's URL is in a placed code before it goes live.
+  assertSlideIds(allSlides.map((entry) => entry.id));
+  const slides = allSlides.filter(isVisible);
   return [
     ...cycles.map((entry) => ({
       params: { entry: entry.id },

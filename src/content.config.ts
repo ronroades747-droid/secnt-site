@@ -286,7 +286,10 @@ const lectures = defineCollection({
 // canonical /slides/<slug>/ URLs, unpublished ones listed with their
 // committed publish date (the cycle page is the run's public calendar, per
 // the Editor's ruling of 19 Aug 2026). Path owns identity: the entry id is
-// the URL segment under /slides/ (e.g. john-1-1-to-3).
+// the URL segment under /slides/ (e.g. john-1-1-to-3). Cycle files carry no
+// numeric prefix and so need no `generateId`; if they are ever numbered, they
+// need the same strip the slides loader carries below, for the same reason —
+// this collection shares the /slides/ namespace with it.
 const slideCycles = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/slide-cycles' }),
   schema: () =>
@@ -330,8 +333,21 @@ const audience = z.enum([
   'students-and-teachers',
 ]);
 
+// Filenames carry an NN- run-order prefix (the first-run publication order,
+// the same number the corpus short folders carry) so the directory sorts in
+// run order in both repos; `generateId` strips it, leaving the id exactly the
+// locked slug. The prefix is a filename convention only — it never reaches an
+// id, a URL, or an asset path. The pattern is `^\d+-`, deliberately not
+// `^\d{2}-`: a mistyped `4-` must still be stripped, because a two-digit
+// pattern would silently leave it in the id and re-point that page's QR code
+// at a 404. src/lib/slide-ids.ts is the independent check on that, asserted
+// at build in the /slides/ route.
 const slides = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/slides' }),
+  loader: glob({
+    pattern: '**/*.md',
+    base: './src/content/slides',
+    generateId: ({ entry }) => entry.replace(/\.md$/, '').replace(/^\d+-/, ''),
+  }),
   schema: () =>
     z.object({
       title: z.string(),
