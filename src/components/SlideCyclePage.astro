@@ -12,14 +12,32 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumb from './Breadcrumb.astro';
 import PageDates from './PageDates.astro';
 import { slideUrl, isVisible, formatDate } from '../lib/site';
+import { SLIDE_IDS } from '../lib/slide-ids';
 import AudienceChip from './AudienceChip.astro';
 
 const { entry } = Astro.props;
 const d = entry.data;
 const { Content } = await render(entry);
+
+// The list is ordered by RUN ORDER, not by `scheduled`.
+//
+// `scheduled` was the sort key until 23 Aug 2026, and it does not hold. It is
+// the Editor's field (Loop Rev 7) and he sets it at the flip, so two slides
+// can carry the same date: slots 3 and 4 both read 2026-08-22, the sort tied,
+// and the tie fell to the collection's id order — alphabetical, `communion-`
+// before `genesis-` — which put slot 4 ahead of slot 3 on the public calendar.
+// The `NN-` filename prefix does not break the tie, because `generateId`
+// strips it before the collection is keyed.
+//
+// SLIDE_IDS is the run order (Subject Index, Editor-approved 19 Aug 2026), so
+// the list now reads in the order the run publishes whatever any date says.
+// NOTE: this makes the ORDER of SLIDE_IDS load-bearing, where its own header
+// calls the order documentation — re-sequencing the run now means re-ordering
+// that list. The header is amended to match.
+const runOrder = new Map(SLIDE_IDS.map((id, i) => [id, i]));
 const slides = (await getCollection('slides'))
   .filter((s) => s.data.cycle.id === entry.id)
-  .sort((a, b) => a.data.scheduled.valueOf() - b.data.scheduled.valueOf());
+  .sort((a, b) => (runOrder.get(a.id) ?? Infinity) - (runOrder.get(b.id) ?? Infinity));
 const crumbs = [
   { label: 'Teaching Aids', href: '/slides/' },
   { label: d.title },

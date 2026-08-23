@@ -16,9 +16,15 @@
 //
 // Order below is the first-run publication order (Shorts Subject Index,
 // Editor-approved 19 Aug 2026), the same number the filenames and the corpus
-// short folders carry. Order here is documentation; the assertion compares
-// sets, so re-sequencing the run does not touch this file — only adding or
-// retiring a slide page does.
+// short folders carry.
+//
+// The ORDER IS LOAD-BEARING as of 23 Aug 2026: SlideCyclePage sorts the cycle
+// index by it. It used to sort by `scheduled`, but that field is the Editor's
+// and is set at the flip, so two live slides can share a date — slots 3 and 4
+// both landed on 2026-08-22 and the list put slot 4 first. Re-sequencing the
+// run therefore means re-ordering this list, in the same commit as the files.
+// The assertion below still compares SETS, so it will not catch an order
+// mistake; the cycle index is where one shows.
 export const SLIDE_IDS: readonly string[] = [
   'god-was-never-alone', // 01
   'not-even-one', // 02
