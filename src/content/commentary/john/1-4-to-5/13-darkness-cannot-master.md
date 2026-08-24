@@ -1,7 +1,7 @@
 ---
 title: "Theology: The Light the Darkness Cannot Master"
 description: "Locus Four: the light the darkness cannot overcome — the root of assurance."
-date: 2026-07-20
+date: 2026-08-24
 book: john
 chapter: 1
 passageRef: "1:4–5"
@@ -11,7 +11,7 @@ verseEnd: 5
 sectionType: theology
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 The third tread ended on a question it refused to answer. [The light shines within a darkness that is real, and still dark, and not ultimate](/commentary/john/1-4-to-5/12-light-within-darkness/) — and the dark, met by that light, did *something*. The exegesis of the final clause has already said what: [it failed](/commentary/john/1-4-to-5/09-soteriology-not-overcome/). It failed twice over, in the two registers of one bivalent verb — it did not comprehend the light, and it did not overcome it. That much is settled ground.
