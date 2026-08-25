@@ -1,6 +1,6 @@
 ---
 title: "Theology: The Life in the Word"
-description: "Locus One: the doctrine of the life held in the Word, seed of John 5:26."
+description: "The first tread's doctrine: the life held and never owned in the Word, seed of John 5:26."
 date: 2026-08-17
 book: john
 chapter: 1

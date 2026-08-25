@@ -1,6 +1,6 @@
 ---
 title: "Theology: The Image of God and the Light of Men"
-description: "Locus Two: the imago-Dei constitution of the recipients of the light."
+description: "The second tread's doctrine: the imago-Dei constitution of the recipients of the light."
 date: 2026-08-18
 book: john
 chapter: 1

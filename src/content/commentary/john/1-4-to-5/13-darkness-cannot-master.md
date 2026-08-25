@@ -1,6 +1,6 @@
 ---
 title: "Theology: The Light the Darkness Cannot Master"
-description: "Locus Four: the light the darkness cannot overcome — the root of assurance."
+description: "The fourth tread's doctrine: the light the darkness cannot overcome — the root of assurance."
 date: 2026-08-24
 book: john
 chapter: 1

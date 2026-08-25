@@ -1,6 +1,6 @@
 ---
 title: "Theology: The Light Within the Darkness"
-description: "Locus Three: the darkness that is real but not ultimate — the light shining within it."
+description: "The third tread's doctrine: the darkness that is real but not ultimate — the light shining within it."
 date: 2026-08-21
 book: john
 chapter: 1
