@@ -1,4 +1,4 @@
-<svg viewBox="0 0 1440 750" xmlns="http://www.w3.org/2000/svg"
+<svg viewBox="0 0 1440 780" xmlns="http://www.w3.org/2000/svg"
      role="img" aria-labelledby="fpTitle fpDesc" preserveAspectRatio="xMidYMid meet">
   <title id="fpTitle">The foyer pole — a single bracket from John 1:4–5 to John 1:14, light answered by glory.</title>
   <desc id="fpDesc">A single bracket spanning the foyer of John's Prologue from its near pole, John 1:4–5, to its far pole, John 1:14 — the life-and-light of verse 4 answered by the Word-made-flesh whose glory is beheld at verse 14, the light and the glory one divine self-disclosure. At the crown of the bracket the correspondence is marked: light answers glory. The near half of the bracket is solid and its pole a filled node: the shared pole-content is established. The far half is dashed and its pole a hollow ring: the claim that the two verses form a composed frame is provisional, completing at 1:14.</desc>
@@ -19,36 +19,35 @@
     .conn     { stroke:var(--color-meta,#6b6b6b); stroke-width:1.2; fill:none; }
   </style>
 
-  <!-- ================= descriptive legend (top, secondary) ================= -->
-  <text class="note" x="720" y="48" text-anchor="middle" font-size="19">The foyer bracket — the light of the beginning</text>
-  <text class="note" x="720" y="74" text-anchor="middle" font-size="19">disclosed as the glory of the incarnation.</text>
+  <!-- ================= title block (family form; min-21 re-author, 26 Aug 2026) ================= -->
+  <text class="ink" x="90" y="76"  font-size="36">The Foyer Pole</text>
+  <text class="lbl" x="90" y="110" font-size="22">John 1:4–5 · the light of the beginning disclosed as the glory of the incarnation</text>
 
   <!-- ================= crown: the correspondence φῶς ↔ δόξα ================= -->
-  <text class="gkgold" x="720" y="132" text-anchor="middle" font-size="30">φῶς <tspan class="lbl" font-size="26">↔</tspan> δόξα</text>
-  <text class="lbl" x="720" y="158" text-anchor="middle" font-size="17">light answers glory · one divine self-disclosure</text>
-  <line class="conn" x1="720" y1="170" x2="720" y2="196"/>
+  <text class="gkgold" x="720" y="176" text-anchor="middle" font-size="34">φῶς <tspan class="lbl" font-size="28">↔</tspan> δόξα</text>
+  <text class="lbl" x="720" y="206" text-anchor="middle" font-size="22">light answers glory · one divine self-disclosure</text>
+  <line class="conn" x1="720" y1="218" x2="720" y2="242"/>
 
   <!-- ================= the bracket (arc bowing up over the two poles) ================= -->
-  <!-- crown at (720,200); near/left half solid = established, far/right half dashed = provisional -->
-  <path class="arc-near" d="M 260 470 C 420 400, 600 205, 720 200"/>
-  <path class="arc-far"  d="M 720 200 C 840 205, 1020 400, 1180 470"/>
-  <circle class="node" cx="720" cy="200" r="5"/>
+  <!-- crown at (720,248); near/left half solid = established, far/right half dashed = provisional -->
+  <path class="arc-near" d="M 260 510 C 420 440, 600 253, 720 248"/>
+  <path class="arc-far"  d="M 720 248 C 840 253, 1020 440, 1180 510"/>
+  <circle class="node" cx="720" cy="248" r="5"/>
 
   <!-- ================= near pole (left) — v.4/5 · filled node · established ================= -->
-  <circle class="node" cx="260" cy="470" r="11"/>
-  <text class="lbl" x="260" y="516" text-anchor="middle" font-size="17">the near pole · 1:4–5</text>
-  <text class="gk"  x="260" y="558" text-anchor="middle" font-size="25">ζωή <tspan class="lbl" font-size="21">·</tspan> τὸ <tspan class="gkgold">φῶς</tspan> τῶν ἀνθρώπων</text>
-  <text class="note" x="260" y="588" text-anchor="middle" font-size="17">the life, the light of humanity</text>
+  <circle class="node" cx="260" cy="510" r="11"/>
+  <text class="lbl" x="260" y="556" text-anchor="middle" font-size="21">the near pole · 1:4–5</text>
+  <text class="gk"  x="260" y="598" text-anchor="middle" font-size="26">ζωή <tspan class="lbl" font-size="22">·</tspan> τὸ <tspan class="gkgold">φῶς</tspan> τῶν ἀνθρώπων</text>
+  <text class="note" x="260" y="630" text-anchor="middle" font-size="21">the life, the light of humanity</text>
 
   <!-- ================= far pole (right) — v.14 · hollow ring · provisional ================= -->
-  <circle class="ring" cx="1180" cy="470" r="11"/>
-  <text class="lbl" x="1180" y="516" text-anchor="middle" font-size="17">the far pole · 1:14</text>
-  <text class="gk"  x="1180" y="556" text-anchor="middle" font-size="25">ὁ λόγος σὰρξ ἐγένετο</text>
-  <text class="gk"  x="1180" y="590" text-anchor="middle" font-size="25">ἐθεασάμεθα τὴν <tspan class="gkgold">δόξαν</tspan> αὐτοῦ</text>
-  <text class="gk"  x="1180" y="624" text-anchor="middle" font-size="25">δόξαν ὡς μονογενοῦς</text>
-  <text class="note" x="1180" y="654" text-anchor="middle" font-size="17">the Word made flesh, whose glory is beheld</text>
+  <circle class="ring" cx="1180" cy="510" r="11"/>
+  <text class="lbl" x="1180" y="556" text-anchor="middle" font-size="21">the far pole · 1:14</text>
+  <text class="gk"  x="1180" y="596" text-anchor="middle" font-size="26">ὁ λόγος σὰρξ ἐγένετο</text>
+  <text class="gk"  x="1180" y="630" text-anchor="middle" font-size="26">ἐθεασάμεθα τὴν <tspan class="gkgold">δόξαν</tspan> αὐτοῦ</text>
+  <text class="gk"  x="1180" y="664" text-anchor="middle" font-size="26">δόξαν ὡς μονογενοῦς</text>
+  <text class="note" x="1180" y="694" text-anchor="middle" font-size="21">the Word made flesh, whose glory is beheld</text>
 
   <!-- reader-facing provisional note at the far pole (status carried by dashed arc + hollow ring + this note) -->
-  <text class="note" x="1180" y="696" text-anchor="middle" font-size="16">the pairing as a composed frame</text>
-  <text class="note" x="1180" y="718" text-anchor="middle" font-size="16">completes at 1:14</text>
+  <text class="note" x="1180" y="736" text-anchor="middle" font-size="21">the pairing as a composed frame completes at 1:14</text>
 </svg>
