@@ -1,7 +1,7 @@
 ---
 title: "Theology: The One Life, from Creation to Consummation"
 description: "The four treads gathered into one: one life — in the Word, for the world, shining in the dark, unovercome — traced from creation to consummation."
-date: 2026-07-20
+date: 2026-08-25
 book: john
 chapter: 1
 passageRef: "1:4–5"
@@ -11,7 +11,7 @@ verseEnd: 5
 sectionType: theology
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 diagram:
   src: ./jn1-4-5-one-life-arc.svg
   alt: "The one-life arc integrating the five theological developments of John 1:4–5. The first four — the life in the Word, the light of men, the light shining within the darkness, the light unovercome — are gathered by the fifth into a single arc: the one divine life traced from creation (the protological pole, v. 4a) to consummation (the eschatological pole, ζωὴ αἰώνιος), reaching its within-volume terminus at the v. 4 / v. 14 foyer."
