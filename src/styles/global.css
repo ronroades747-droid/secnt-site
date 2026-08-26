@@ -53,6 +53,14 @@
      in-page rendering. Larger than native is the zoom overlay's job. */
   --diagram-max: 1440px;
 
+  /* Legibility floor for in-page rendering (FWI-059). 836px is the room at
+     which a figure authored to the family's legibility floor (smallest font
+     21 on a 1440-wide viewBox) renders its smallest label at 12px. An SVG
+     is never drawn narrower than this: where the content track falls short,
+     the figure scrolls horizontally inside its own box (see DIAGRAM FIGURE)
+     instead of shrinking under the floor. */
+  --diagram-min: 836px;
+
   --space: 1.5rem;
   --rule: 2px;             /* gold rule weight */
 }
@@ -313,18 +321,25 @@ main { flex: 1 0 auto; width: 100%; }
    under 6px — legible on a phone only because pinch-zoom is a viewport
    transform. A desktop reader has no equivalent gesture: browser zoom scales
    the ch-based column and the SVG together, so the diagram never gets
-   relatively larger. Two answers, both here:
+   relatively larger. Three answers, all here (revised per FWI-059):
 
-     1. On wide viewports the figure BREAKS OUT of the reading measure to
-        fill the content track (prose keeps its 72ch discipline; only the
-        figure widens), capped at the SVG's native width.
-     2. Any diagram is CLICK-TO-ENLARGE into a full-viewport overlay with
-        zoom and pan — see the .dz block below and Diagram.astro.
+     1. The figure BREAKS OUT of the reading measure to fill the content
+        track at every width (prose keeps its 72ch discipline; only the
+        figure widens), capped at the SVG's native width. The breakout is
+        no longer gated at 64rem: below the two-column layout the track is
+        the plain reading-page room, which is wider than the measure.
+     2. The SVG never renders below --diagram-min (836px — the width at
+        which a to-floor figure reads 12px). Where the track is narrower,
+        the figure SCROLLS horizontally inside its own box; the box itself
+        stays at the track width, so the page never gains a scrollbar.
+     3. Any diagram is CLICK-TO-ENLARGE into a full-viewport overlay with
+        zoom and pan — a courtesy for detail, not the reading surface —
+        see the .dz block below and Diagram.astro.
    ==================================================================== */
 figure.diagram { margin: 2.5rem 0; }
 figure.diagram img { display: block; margin-inline: auto; }
-figure.diagram .diagram-svg { color: var(--color-text); display: block; }
-figure.diagram .diagram-svg svg { display: block; width: 100%; height: auto; margin-inline: auto; }
+figure.diagram .diagram-svg { color: var(--color-text); display: block; overflow-x: auto; }
+figure.diagram .diagram-svg svg { display: block; width: 100%; height: auto; margin-inline: auto; min-width: var(--diagram-min); }
 /* The caption is prose and keeps a prose measure even when the figure above it
    has broken out — a 1276px line of 15px type is not a caption, it is a rule. */
 figure.diagram figcaption {
@@ -337,19 +352,23 @@ figure.diagram figcaption {
    has the whole chrome width. Both clamp to the viewport so the breakout can
    never introduce a horizontal scrollbar. */
 .reading { --diagram-room: min(100vw - 3rem, var(--chrome-max)); }
-.unit-layout > .reading {
-  --diagram-room: calc(min(100vw - 3rem, var(--unit-max))
-    - (2 * var(--unit-pad)) - var(--unit-side) - var(--unit-gap));
+/* The unit layout's rail, gap and padding are subtracted only while the
+   two-column grid is actually on (64rem, matching the .unit-layout media
+   query above); below it the page is single-column and the room is the
+   plain reading-page room. */
+@media (min-width: 64rem) {
+  .unit-layout > .reading {
+    --diagram-room: calc(min(100vw - 3rem, var(--unit-max))
+      - (2 * var(--unit-pad)) - var(--unit-side) - var(--unit-gap));
+  }
 }
 
-@media (min-width: 64rem) {
-  figure.diagram {
-    --dw: min(var(--diagram-max), var(--diagram-room));
-    width: var(--dw);
-    /* 100% is the reading column; a negative inline margin breaks the figure
-       out symmetrically, so it stays centred on the prose it belongs to. */
-    margin-inline: calc((100% - var(--dw)) / 2);
-  }
+figure.diagram {
+  --dw: min(var(--diagram-max), var(--diagram-room));
+  width: var(--dw);
+  /* 100% is the reading column; a negative inline margin breaks the figure
+     out symmetrically, so it stays centred on the prose it belongs to. */
+  margin-inline: calc((100% - var(--dw)) / 2);
 }
 
 /* The zoom trigger. A bare button — no chrome of its own; the diagram is the
@@ -521,7 +540,7 @@ blockquote footer { margin-top: 0.85rem; font-size: 0.95rem; font-style: normal;
      The screen breakout and the zoom affordance are both screen-only. */
   figure.diagram { width: auto !important; margin-inline: 0 !important; }
   figure.diagram img { max-width: 100%; }
-  figure.diagram .diagram-svg svg { max-width: 100%; }
+  figure.diagram .diagram-svg svg { max-width: 100%; min-width: 0; }
   figure.diagram figcaption { font-size: 9.5pt; }
   .diagram-zoom__hint, dialog.dz { display: none !important; }
   /* keep footnote sequence with its content, avoid awkward breaks */
