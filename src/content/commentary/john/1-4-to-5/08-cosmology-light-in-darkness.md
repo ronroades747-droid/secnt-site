@@ -2,7 +2,7 @@
 title: "Exegesis: Τὸ φῶς ἐν τῇ σκοτίᾳ φαίνει — Cosmology, the Light in the Darkness"
 description: "The third clause (1:5a): the marked present φαίνει and the σκοτία with the locative ἐν, under the Genesis frame — the light shining within the darkness."
 date: 2026-08-16
-revised: 2026-08-21
+revised: 2026-08-26
 book: john
 chapter: 1
 passageRef: "1:4–5"
