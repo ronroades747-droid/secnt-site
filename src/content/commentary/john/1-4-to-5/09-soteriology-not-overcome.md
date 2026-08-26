@@ -2,7 +2,7 @@
 title: "Exegesis: Ἡ σκοτία αὐτὸ οὐ κατέλαβεν — Soteriology, the Darkness’s Failure"
 description: "The fourth clause (1:5b): κατέλαβεν read both-and (comprehend and overcome) and the constative aorist — the darkness’s failure against the light."
 date: 2026-08-16
-revised: 2026-08-24
+revised: 2026-08-25
 book: john
 chapter: 1
 passageRef: "1:4–5"
