@@ -1,4 +1,4 @@
-<svg viewBox="0 0 1440 800" xmlns="http://www.w3.org/2000/svg"
+<svg viewBox="0 0 1440 820" xmlns="http://www.w3.org/2000/svg"
      role="img" aria-labelledby="mtTitle mtDesc" preserveAspectRatio="xMidYMid meet">
   <title id="mtTitle">The unit's macro-tense run — imperfect, present, aorist — across John 1:4–5.</title>
   <desc id="mtDesc">The diachronic tense-shape of John 1:4–5, read left to right along the unit's foyer. Verse 4 stands in the imperfect: ζωὴ ἦν, ἦν — the life that was in the Word, the eternal frame, the near end of a long chain of imperfects running back through verses 1 to 4 (coordinate-but-distinct with the ἦν of verse 1). At verse 5a that long chain ruptures at φαίνει, the Prologue's first present indicative — the light shines. Rendered as a continuous, dominant line running on and forward, it sets the unit's time and holds three frames together in one shining: creational, incarnational, and ongoing-contemporary. At verse 5b the aorist κατέλαβεν sits as a single point on that ongoing line: the darkness's failure summarized as one completed fact, which the present outlasts. Beneath, one step back, runs the Prologue's own macro-tense spine — ἦν, ἐγένετο, ὃ γέγονεν — toward the incarnation; the unit's run is its instantiation at the scale of a single unit.</desc>
@@ -42,17 +42,17 @@
     </marker>
   </defs>
 
-  <!-- ================= descriptive legend (top, secondary) ================= -->
-  <text class="note" x="720" y="46" text-anchor="middle" font-size="19">The tense-shape of the unit read left to right — the eternal imperfect of verse 4, the marked present that ruptures the chain at verse 5a,</text>
-  <text class="note" x="720" y="72" text-anchor="middle" font-size="19">and the constative aorist at verse 5b: one completed fact set against the shining that goes on.</text>
+  <!-- ============ title block (family form; min-21 re-author, 26 Aug 2026) ============ -->
+  <text class="ink" x="90" y="74"  font-size="36">The Macro-Tense Run</text>
+  <text class="lbl" x="90" y="108" font-size="22">John 1:4–5 · imperfect → present → aorist, read left to right</text>
 
   <!-- ================= tense-register caps (above the run) ================= -->
-  <text class="cap" x="300"  y="140" text-anchor="middle" font-size="18">IMPERFECT</text>
-  <text class="cap" x="835"  y="140" text-anchor="middle" font-size="18">PRESENT</text>
-  <text class="cap" x="1185" y="140" text-anchor="middle" font-size="18">AORIST</text>
-  <text class="lbl" x="300"  y="164" text-anchor="middle" font-size="15">v. 4</text>
-  <text class="lbl" x="835"  y="164" text-anchor="middle" font-size="15">v. 5a</text>
-  <text class="lbl" x="1185" y="164" text-anchor="middle" font-size="15">v. 5b</text>
+  <text class="cap" x="300"  y="158" text-anchor="middle" font-size="21">IMPERFECT</text>
+  <text class="cap" x="835"  y="158" text-anchor="middle" font-size="21">PRESENT</text>
+  <text class="cap" x="1185" y="158" text-anchor="middle" font-size="21">AORIST</text>
+  <text class="lbl" x="300"  y="186" text-anchor="middle" font-size="21">v. 4</text>
+  <text class="lbl" x="835"  y="186" text-anchor="middle" font-size="21">v. 5a</text>
+  <text class="lbl" x="1185" y="186" text-anchor="middle" font-size="21">v. 5b</text>
 
   <!-- ================= the run: baseline, chain, rupture, ongoing present ================= -->
   <!-- inherited imperfect chain running back through vv.1–4 (one step back, the grand background) -->
@@ -60,79 +60,80 @@
   <circle class="dim" cx="128" cy="310" r="3.4"/>
   <circle class="dim" cx="198" cy="310" r="3.4"/>
   <circle class="dim" cx="268" cy="310" r="3.4"/>
-  <text class="note" x="205" y="356" text-anchor="middle" font-size="15">the long chain of imperfects · vv. 1–4</text>
+  <text class="note" x="205" y="358" text-anchor="middle" font-size="21">the long chain of imperfects · vv. 1–4</text>
 
   <!-- marked imperfects of v.4 : two gold nodes on a solid segment -->
   <line class="rule" x1="338" y1="310" x2="556" y2="310"/>
   <circle class="node" cx="372" cy="310" r="6"/>
   <circle class="node" cx="470" cy="310" r="6"/>
-  <text class="gk"  x="372" y="292" text-anchor="middle" font-size="26">ἦν</text>
-  <text class="gk"  x="470" y="292" text-anchor="middle" font-size="26">ἦν</text>
+  <text class="gk"  x="372" y="290" text-anchor="middle" font-size="26">ἦν</text>
+  <text class="gk"  x="470" y="290" text-anchor="middle" font-size="26">ἦν</text>
 
   <!-- the rupture: the baseline breaks; the present begins -->
   <path class="rupt" d="M600 296 L588 324"/>
   <path class="rupt" d="M616 296 L604 324"/>
-  <text class="note" x="602" y="356" text-anchor="middle" font-size="15">the chain ruptures</text>
+  <text class="note" x="590" y="358" text-anchor="middle" font-size="21">the chain ruptures</text>
 
   <!-- the marked present φαίνει : the dominant, continuous line running on and forward -->
   <line class="ongoing" x1="672" y1="310" x2="1352" y2="310" marker-end="url(#mt-arrow)"/>
   <circle class="ring"  cx="672" cy="310" r="12"/>
   <circle class="node"  cx="672" cy="310" r="6"/>
-  <text class="gkf" x="672" y="288" text-anchor="middle" font-size="30">φαίνει</text>
+  <text class="gkf" x="672" y="286" text-anchor="middle" font-size="30">φαίνει</text>
   <!-- shine radiations (subtle, redundant emphasis) -->
   <path class="frame" d="M690 288 L704 274"/>
   <path class="frame" d="M700 300 L718 292"/>
-  <text class="note" x="835" y="356" text-anchor="middle" font-size="15">continuous · dominant · it sets the unit's time</text>
+  <text class="note" x="852" y="358" text-anchor="middle" font-size="21">continuous · dominant</text>
+  <text class="note" x="852" y="384" text-anchor="middle" font-size="21">it sets the unit's time</text>
 
   <!-- the aorist κατέλαβεν : one point on the ongoing line -->
   <circle class="gnode" cx="1150" cy="310" r="7"/>
   <path class="completed" d="M1150 296 L1150 324"/>
-  <text class="gk"  x="1150" y="290" text-anchor="middle" font-size="26">κατέλαβεν</text>
-  <text class="note" x="1150" y="356" text-anchor="middle" font-size="15">one completed fact · a point</text>
+  <text class="gk"  x="1150" y="288" text-anchor="middle" font-size="26">κατέλαβεν</text>
+  <text class="note" x="1165" y="358" text-anchor="middle" font-size="21">one completed fact · a point</text>
 
   <!-- ================= layered temporal payload (below the run) ================= -->
   <!-- imperfect payload -->
-  <path class="brk" d="M110 384 L110 390 L500 390 L500 384"/>
-  <text class="ink" x="305" y="418" text-anchor="middle" font-size="18">the protological imperfect — the eternal frame</text>
-  <text class="lbl" x="305" y="444" text-anchor="middle" font-size="16">the life that was in the Word,</text>
-  <text class="lbl" x="305" y="466" text-anchor="middle" font-size="16">coordinate-but-distinct with the <tspan class="gk" font-size="17">ἦν</tspan> of v. 1</text>
+  <path class="brk" d="M110 410 L110 416 L500 416 L500 410"/>
+  <text class="ink" x="305" y="446" text-anchor="middle" font-size="22">the protological imperfect — the eternal frame</text>
+  <text class="lbl" x="305" y="476" text-anchor="middle" font-size="21">the life that was in the Word,</text>
+  <text class="lbl" x="305" y="502" text-anchor="middle" font-size="21">coordinate-but-distinct with the <tspan class="gk" font-size="21">ἦν</tspan> of v. 1</text>
 
   <!-- present payload : three frames held together -->
-  <path class="brk" d="M618 384 L618 390 L1052 390 L1052 384"/>
-  <text class="ink" x="835" y="418" text-anchor="middle" font-size="18">the Prologue's first present indicative</text>
-  <text class="lbl" x="835" y="444" text-anchor="middle" font-size="16">one shining, three frames held together —</text>
-  <text class="gk"  x="835" y="470" text-anchor="middle" font-size="17">τὸ φῶς ἐν τῇ σκοτίᾳ φαίνει</text>
+  <path class="brk" d="M618 410 L618 416 L1052 416 L1052 410"/>
+  <text class="ink" x="835" y="446" text-anchor="middle" font-size="22">the Prologue's first present indicative</text>
+  <text class="lbl" x="835" y="476" text-anchor="middle" font-size="21">one shining, three frames held together —</text>
+  <text class="gk"  x="835" y="506" text-anchor="middle" font-size="22">τὸ φῶς ἐν τῇ σκοτίᾳ φαίνει</text>
   <!-- three converging frame branches -->
-  <path class="frame" d="M700 500 L775 486"/>
-  <path class="frame" d="M835 504 L835 486"/>
-  <path class="frame" d="M970 500 L895 486"/>
-  <text class="lbl" x="700" y="520" text-anchor="middle" font-size="14">creational</text>
-  <text class="lbl" x="835" y="524" text-anchor="middle" font-size="14">incarnational</text>
-  <text class="lbl" x="970" y="520" text-anchor="middle" font-size="14">ongoing-contemporary</text>
+  <path class="frame" d="M700 538 L775 522"/>
+  <path class="frame" d="M835 542 L835 522"/>
+  <path class="frame" d="M970 538 L895 522"/>
+  <text class="lbl" x="690" y="562" text-anchor="middle" font-size="21">creational</text>
+  <text class="lbl" x="835" y="586" text-anchor="middle" font-size="21">incarnational</text>
+  <text class="lbl" x="990" y="562" text-anchor="middle" font-size="21">ongoing-contemporary</text>
 
   <!-- aorist payload -->
-  <path class="brk" d="M1010 384 L1010 390 L1360 390 L1360 384"/>
-  <text class="ink" x="1185" y="418" text-anchor="middle" font-size="18">the constative aorist — summed up</text>
-  <text class="lbl" x="1185" y="444" text-anchor="middle" font-size="16">the darkness's failure as one whole,</text>
-  <text class="lbl" x="1185" y="466" text-anchor="middle" font-size="16">against the shining that goes on</text>
+  <path class="brk" d="M1010 410 L1010 416 L1360 416 L1360 410"/>
+  <text class="ink" x="1185" y="446" text-anchor="middle" font-size="22">the constative aorist — summed up</text>
+  <text class="lbl" x="1185" y="476" text-anchor="middle" font-size="21">the darkness's failure as one whole,</text>
+  <text class="lbl" x="1185" y="502" text-anchor="middle" font-size="21">against the shining that goes on</text>
 
   <!-- ================= inherited layer: the Prologue macro-tense spine (one step back) ================= -->
-  <text class="note" x="720" y="588" text-anchor="middle" font-size="16">the unit-level instantiation of the Prologue's macro-tense spine</text>
-  <path class="link" d="M720 600 L720 622"/>
+  <text class="note" x="720" y="622" text-anchor="middle" font-size="21">the unit-level instantiation of the Prologue's macro-tense spine</text>
+  <path class="link" d="M720 634 L720 652"/>
 
-  <line class="spine" x1="150" y1="660" x2="1210" y2="660" marker-end="url(#mt-arrow-dim)"/>
-  <circle class="snode" cx="300" cy="660" r="5"/>
-  <circle class="snode" cx="700" cy="660" r="5"/>
-  <circle class="sring" cx="980" cy="660" r="8"/>
-  <text class="gk" x="300" y="642" text-anchor="middle" font-size="23">ἦν</text>
-  <text class="gk" x="700" y="642" text-anchor="middle" font-size="23">ἐγένετο</text>
-  <text class="gk" x="980" y="642" text-anchor="middle" font-size="23">ὃ γέγονεν</text>
-  <text class="lbl" x="300" y="688" text-anchor="middle" font-size="14">was</text>
-  <text class="lbl" x="700" y="688" text-anchor="middle" font-size="14">came to be</text>
-  <text class="lbl" x="980" y="688" text-anchor="middle" font-size="14">has come to be</text>
-  <text class="note" x="1200" y="686" text-anchor="end" font-size="14">toward the incarnation →</text>
+  <line class="spine" x1="150" y1="690" x2="1210" y2="690" marker-end="url(#mt-arrow-dim)"/>
+  <circle class="snode" cx="300" cy="690" r="5"/>
+  <circle class="snode" cx="700" cy="690" r="5"/>
+  <circle class="sring" cx="980" cy="690" r="8"/>
+  <text class="gk" x="300" y="670" text-anchor="middle" font-size="23">ἦν</text>
+  <text class="gk" x="700" y="670" text-anchor="middle" font-size="23">ἐγένετο</text>
+  <text class="gk" x="980" y="670" text-anchor="middle" font-size="23">ὃ γέγονεν</text>
+  <text class="lbl" x="300" y="720" text-anchor="middle" font-size="21">was</text>
+  <text class="lbl" x="700" y="720" text-anchor="middle" font-size="21">came to be</text>
+  <text class="lbl" x="980" y="720" text-anchor="middle" font-size="21">has come to be</text>
+  <text class="note" x="1360" y="720" text-anchor="end" font-size="21">toward the incarnation →</text>
 
   <!-- ================= movement summary + unit tag ================= -->
-  <text class="ink" x="720" y="742" text-anchor="middle" font-size="20">was … was  →  shines  →  did not overcome</text>
-  <text class="note" x="720" y="768" text-anchor="middle" font-size="16">the eternal grounding · the present that sets the time · the one completed failure of the dark</text>
+  <text class="ink" x="720" y="770" text-anchor="middle" font-size="22">was … was  →  shines  →  did not overcome</text>
+  <text class="note" x="720" y="798" text-anchor="middle" font-size="21">the eternal grounding · the present that sets the time · the one completed failure of the dark</text>
 </svg>
