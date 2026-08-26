@@ -2,6 +2,7 @@
 title: "Exegesis: The v. 3 → v. 4 Architectural Pivot"
 description: "The cycle's substantive fulcrum: the pivot from the eternal ἦν-state of vv. 1–3 to the resulting-state ἐν αὐτῷ in v. 4."
 date: 2026-06-23
+revised: 2026-08-26
 book: john
 chapter: 1
 passageRef: "1:1–3"

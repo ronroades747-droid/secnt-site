@@ -1,61 +1,91 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 640">
+<svg viewBox="0 0 1440 640" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="aodTitle aodDesc" preserveAspectRatio="xMidYMid meet">
+  <title id="aodTitle">The Johannine Prologue in three movements, with John 1:1–3 highlighted in the foyer.</title>
+  <desc id="aodDesc">The Prologue laid out as a single horizontal frame of three movements — the Word in the beginning (1:1–5), the Word coming as light (1:6–13), and the Word's glory in the flesh (1:14–18). A gold foyer-bracket arc spans from verse 1 (πρὸς τὸν θεόν, with God) to verse 18 (εἰς τὸν κόλπον τοῦ πατρός, in the bosom of the Father): the Prologue's two ends answer one another. John 1:1–3 is highlighted within the first movement, with the v. 3 → v. 4 pivot marked at its right edge. Beneath the frame the macro-tense spine runs through its three stations — ἦν (was, timeless eternal being), ἐγένετο (came to be, creation and history), ὃ γέγονεν (what has come to be, the resulting state). The diagram locates the unit within the whole Prologue.</desc>
+
   <style>
-    .aod-gk    { font-family: 'SBL BibLit','Cardo','Source Serif 4',Georgia,serif; }
-    .aod-lt    { font-family: 'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; }
-    .aod-ink   { fill: currentColor; }
-    .aod-grey  { fill: var(--color-meta, #6b6b6b); }
-    .aod-gold  { stroke: var(--color-gold, #b8860b); fill: none; }
-    .aod-box   { fill: none; stroke: currentColor; stroke-width: 1.5; }
-    .aod-arrow { fill: var(--color-gold, #b8860b); }
+    /* --- family theming interface: light page renders from in-file fallbacks;
+           dark slide renders when the host sets color / --color-gold / --color-meta / --color-goldtext --- */
+    .gk    { font-family:'SBL BibLit','Cardo','Gentium Plus','Charis SIL','Source Serif 4',Georgia,serif; fill:currentColor; }
+    .ink   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; }
+    .inkb  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; font-weight:600; }
+    .desc  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; font-style:italic; }
+    .lbl   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); }
+    .note  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); font-style:italic; }
+    .tab   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); letter-spacing:2px; }
+    .glab  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-goldtext,#8a6608); font-style:italic; }
+
+    .panel { fill:none; stroke:currentColor; stroke-width:1.6; }
+    .hl    { fill:none; stroke:var(--color-gold,#b8860b); stroke-width:3.4; }
+    .rule  { stroke:var(--color-gold,#b8860b); stroke-width:2.4; fill:none; stroke-linecap:round; }
+    .spine { stroke:var(--color-gold,#b8860b); stroke-width:2.6; fill:none; stroke-linejoin:round; stroke-linecap:round; }
+    .arcS  { stroke:var(--color-gold,#b8860b); stroke-width:2.6; fill:none; stroke-linecap:round; }
+    .node  { fill:var(--color-gold,#b8860b); }
   </style>
 
   <defs>
-    <marker id="aod-arrowhead" viewBox="0 0 10 10" refX="8" refY="5"
+    <marker id="aod-arrow" viewBox="0 0 10 10" refX="8" refY="5"
             markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path class="aod-arrow" d="M 0 0 L 10 5 L 0 10 z"/>
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--color-gold,#b8860b)"/>
     </marker>
   </defs>
 
-  <!-- Foyer-bracket arc -->
-  <path class="aod-gold" stroke-width="2.5" d="M 80 165 Q 800 -40 1520 165"/>
-  <text class="aod-lt aod-ink"  x="800" y="118" text-anchor="middle" font-size="22">Foyer-Bracket — the Prologue’s two ends answer one another</text>
-  <text class="aod-lt aod-grey" x="84" y="152" font-size="16">v. 1</text>
-  <text class="aod-lt aod-grey" x="1516" y="152" text-anchor="end" font-size="16">v. 18</text>
+  <!-- ============ title block (family form; floor re-author + Cycle-2 re-convergence, 26 Aug 2026) ============ -->
+  <text class="ink" x="90" y="74"  font-size="36">Architectural Orientation</text>
+  <text class="lbl" x="90" y="108" font-size="22">the Johannine Prologue in three movements · John 1:1–3 in the foyer</text>
 
-  <!-- Endpoint phrases -->
-  <text class="aod-gk aod-ink"  x="80" y="212" font-size="30">πρὸς τὸν θεόν</text>
-  <text class="aod-lt aod-grey" x="80" y="244" font-size="17">with God (v. 1)</text>
-  <text class="aod-gk aod-ink"  x="1520" y="212" text-anchor="end" font-size="30">εἰς τὸν κόλπον τοῦ πατρός</text>
-  <text class="aod-lt aod-grey" x="1520" y="244" text-anchor="end" font-size="17">in the bosom of the Father (v. 18)</text>
+  <!-- ================= the foyer-bracket arc (v. 1 answered by v. 18) ================= -->
+  <path class="arcS" d="M 100 283 C 380 128, 1060 128, 1340 283"/>
+  <text class="ink" x="720" y="160" text-anchor="middle" font-size="22">Foyer-Bracket — the Prologue's two ends answer one another</text>
+  <circle class="node" cx="100" cy="283" r="6"/>
+  <circle class="node" cx="1340" cy="283" r="6"/>
+  <text class="lbl" x="86" y="258" text-anchor="end" font-size="21">v. 1</text>
+  <text class="lbl" x="1354" y="258" text-anchor="start" font-size="21">v. 18</text>
 
-  <!-- Movement boxes -->
-  <rect class="aod-box" x="80"   y="285" width="453" height="150" rx="3"/>
-  <rect class="aod-box" x="573"  y="285" width="453" height="150" rx="3"/>
-  <rect class="aod-box" x="1066" y="285" width="454" height="150" rx="3"/>
+  <!-- endpoint phrases (inside the bowl, flanking beneath the crown) -->
+  <text class="gk"  x="430" y="206" text-anchor="middle" font-size="26">πρὸς τὸν θεόν</text>
+  <text class="lbl" x="430" y="234" text-anchor="middle" font-size="21">with God (v. 1)</text>
+  <text class="gk"  x="1010" y="206" text-anchor="middle" font-size="26">εἰς τὸν κόλπον τοῦ πατρός</text>
+  <text class="lbl" x="1010" y="234" text-anchor="middle" font-size="21">in the bosom of the Father (v. 18)</text>
 
-  <!-- Box I -->
-  <text class="aod-lt aod-ink" x="306" y="322" text-anchor="middle" font-size="21">I — John 1:1–5</text>
-  <text class="aod-lt aod-ink" x="306" y="352" text-anchor="middle" font-size="21">The Word in the Beginning</text>
-  <rect class="aod-box" x="100" y="382" width="250" height="38" rx="3"/>
-  <text class="aod-lt aod-ink"  x="225" y="407" text-anchor="middle" font-size="16">Jn 1:1–3 — this unit</text>
-  <text class="aod-lt aod-grey" x="368" y="407" font-size="15">v. 3 → v. 4 pivot</text>
+  <!-- ================= movement tabs ================= -->
+  <text class="tab" x="300"  y="276" text-anchor="middle" font-size="21">FIRST MOVEMENT</text>
+  <text class="tab" x="732"  y="276" text-anchor="middle" font-size="21">SECOND MOVEMENT</text>
+  <text class="tab" x="1152" y="276" text-anchor="middle" font-size="21">THIRD MOVEMENT</text>
 
-  <!-- Box II -->
-  <text class="aod-lt aod-ink" x="799" y="350" text-anchor="middle" font-size="21">II — John 1:6–13</text>
-  <text class="aod-lt aod-ink" x="799" y="382" text-anchor="middle" font-size="21">The Word Coming as Light</text>
+  <!-- ================= the frame: three movement panels ================= -->
+  <rect class="panel" x="80"  y="285" width="440" height="130" rx="4"/>
+  <rect class="panel" x="552" y="285" width="360" height="130" rx="4"/>
+  <rect class="panel" x="944" y="285" width="416" height="130" rx="4"/>
 
-  <!-- Box III -->
-  <text class="aod-lt aod-ink" x="1293" y="350" text-anchor="middle" font-size="21">III — John 1:14–18</text>
-  <text class="aod-lt aod-ink" x="1293" y="382" text-anchor="middle" font-size="21">The Word’s Glory in the Flesh</text>
+  <!-- panel 1 interior: the highlighted 1:1-3 unit + the v.3 → v.4 pivot at its right edge -->
+  <rect class="hl" x="84" y="287" width="156" height="126" rx="4"/>
+  <text class="inkb" x="162" y="350" text-anchor="middle" font-size="27">1:1–3</text>
+  <line class="rule" x1="114" y1="364" x2="210" y2="364"/>
+  <text class="glab" x="162" y="392" text-anchor="middle" font-size="21">this unit</text>
 
-  <!-- Macro-tense spine -->
-  <text class="aod-lt aod-ink" x="800" y="490" text-anchor="middle" font-size="22">Macro-Tense Spine</text>
-  <line class="aod-gold" stroke-width="2.5" x1="80" y1="515" x2="1518" y2="515" marker-end="url(#aod-arrowhead)"/>
+  <text class="lbl" x="390" y="346" text-anchor="middle" font-size="24">1:4–5</text>
+  <text class="lbl" x="390" y="378" text-anchor="middle" font-size="21">v. 3 → v. 4 pivot</text>
 
-  <text class="aod-gk aod-ink"  x="306"  y="565" text-anchor="middle" font-size="34">ἦν</text>
-  <text class="aod-lt aod-grey" x="306"  y="593" text-anchor="middle" font-size="16">was — timeless, eternal being</text>
-  <text class="aod-gk aod-ink"  x="799"  y="565" text-anchor="middle" font-size="34">ἐγένετο</text>
-  <text class="aod-lt aod-grey" x="799"  y="593" text-anchor="middle" font-size="16">came to be — creation and history</text>
-  <text class="aod-gk aod-ink"  x="1293" y="565" text-anchor="middle" font-size="34">ὃ γέγονεν</text>
-  <text class="aod-lt aod-grey" x="1293" y="593" text-anchor="middle" font-size="16">what has come to be — the resulting state</text>
+  <text class="inkb" x="732"  y="358" text-anchor="middle" font-size="25">1:6–13</text>
+  <text class="inkb" x="1152" y="358" text-anchor="middle" font-size="25">1:14–18</text>
+
+  <!-- ================= movement descriptors (under the band) ================= -->
+  <text class="desc" x="300"  y="450" text-anchor="middle" font-size="22">The Word in the beginning</text>
+  <text class="desc" x="732"  y="450" text-anchor="middle" font-size="22">The Word coming as light</text>
+  <text class="desc" x="1152" y="450" text-anchor="middle" font-size="22">The Word's glory in the flesh</text>
+
+  <!-- ================= the macro-tense spine (diachronic, beneath) ================= -->
+  <text class="ink" x="720" y="514" text-anchor="middle" font-size="22">Macro-Tense Spine</text>
+  <line class="spine" x1="80" y1="536" x2="1352" y2="536" marker-end="url(#aod-arrow)"/>
+
+  <circle class="node" cx="306"  cy="536" r="5"/>
+  <circle class="node" cx="732"  cy="536" r="5"/>
+  <circle class="node" cx="1152" cy="536" r="5"/>
+  <text class="gk" x="306"  y="572" text-anchor="middle" font-size="26">ἦν</text>
+  <text class="gk" x="732"  y="572" text-anchor="middle" font-size="26">ἐγένετο</text>
+  <text class="gk" x="1152" y="572" text-anchor="middle" font-size="26">ὃ γέγονεν</text>
+  <text class="lbl" x="306"  y="600" text-anchor="middle" font-size="21">was — timeless, eternal being</text>
+  <text class="lbl" x="732"  y="600" text-anchor="middle" font-size="21">came to be — creation and history</text>
+  <text class="lbl" x="1152" y="600" text-anchor="middle" font-size="21">what has come to be — the resulting state</text>
 </svg>

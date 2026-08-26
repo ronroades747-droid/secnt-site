@@ -2,6 +2,7 @@
 title: "Theology: The Architectural Pivot at v. 3"
 description: "Locus Five (the integrative Locus): the doctrinal articulation of what the v. 3 → v. 4 architectural pivot theologically carries, integrating Loci One through Four."
 date: 2026-07-15
+revised: 2026-08-26
 book: john
 chapter: 1
 passageRef: "1:1–3"

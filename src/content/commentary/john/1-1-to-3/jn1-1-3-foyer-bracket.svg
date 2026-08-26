@@ -61,9 +61,10 @@
 
   <!-- unit tick (secondary, understated) -->
   <path class="tick" d="M112 524 L112 531 L360 531 L360 524"/>
-  <text class="meta" x="236" y="552" text-anchor="middle" font-size="18">1:1&#8211;3</text>
+  <text class="meta" x="236" y="552" text-anchor="middle" font-size="20">1:1&#8211;3</text>
 
   <!-- ===== legend (bottom caption, secondary) ===== -->
   <text class="meta" x="630" y="632" text-anchor="middle" font-size="20">Arcs above the line &#8212; the Prologue&#8217;s shape (the bracket-pairs)</text>
-  <text class="meta" x="630" y="658" text-anchor="middle" font-size="19">Solid = established &#183; dashed = the pair engaged at John 1:14</text>
+  <text class="meta" x="630" y="658" text-anchor="middle" font-size="20">Solid = established &#183; dashed = the pair engaged at John 1:14</text>
+  <!-- min-font floor re-author, 26 Aug 2026 (FWI-061): sizes lifted to clear 12px at the 836px room -->
 </svg>

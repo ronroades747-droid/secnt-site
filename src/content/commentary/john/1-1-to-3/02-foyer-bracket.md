@@ -2,7 +2,7 @@
 title: "Architecture: The Foyer-Bracket Pattern"
 description: "The Prologue's synchronic shape: v. 1 and v. 18 as bracket endpoints, with the κόλπος relation across the span."
 date: 2026-06-07
-revised: 2026-08-16
+revised: 2026-08-26
 book: john
 chapter: 1
 passageRef: "1:1–3"

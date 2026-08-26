@@ -2,6 +2,7 @@
 title: "The Word in the Beginning"
 description: "John 1:1–3 — the Prologue's opening movement: the Word's eternal ontology, the Word's relation to God, the Word's full deity, and the Word's creational agency, with the v. 3 → v. 4 architectural pivot."
 date: 2026-06-06
+revised: 2026-08-26
 book: john
 chapter: 1
 passageRef: "1:1–3"

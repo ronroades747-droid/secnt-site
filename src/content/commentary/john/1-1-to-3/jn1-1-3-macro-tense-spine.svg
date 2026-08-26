@@ -40,9 +40,9 @@
   <text class="gk" x="194" y="459" text-anchor="middle" font-size="23">&#7974;&#957;</text>
   <text class="gk" x="236" y="459" text-anchor="middle" font-size="23">&#7974;&#957;</text>
   <path class="brk" d="M106 510 L106 516 L240 516 L240 510"/>
-  <text class="meta" x="173" y="534" text-anchor="middle" font-size="19">four times &#183; vv. 1&#8211;2</text>
+  <text class="meta" x="173" y="534" text-anchor="middle" font-size="20">four times &#183; vv. 1&#8211;2</text>
   <path class="tick" d="M106 550 L106 556 L254 556 L254 550"/>
-  <text class="meta" x="180" y="574" text-anchor="middle" font-size="18">1:1&#8211;3</text>
+  <text class="meta" x="180" y="574" text-anchor="middle" font-size="20">1:1&#8211;3</text>
 
   <!-- the turn : the tense steps down to &#7952;&#947;&#941;&#957;&#949;&#964;&#959; -->
   <circle class="node" cx="360" cy="500" r="5"/>
@@ -50,7 +50,7 @@
   <text class="gk" x="360" y="523" text-anchor="middle" font-size="22">&#7952;&#947;&#941;&#957;&#949;&#964;&#959;</text>
   <text class="gk" x="406" y="544" text-anchor="middle" font-size="22">&#7952;&#947;&#941;&#957;&#949;&#964;&#959;</text>
   <path class="brk" d="M338 556 L338 562 L430 562 L430 556"/>
-  <text class="ink" x="384" y="580" text-anchor="middle" font-size="19">the tense turns</text>
+  <text class="ink" x="384" y="580" text-anchor="middle" font-size="20">the tense turns</text>
 
   <!-- resulting-state : &#8003; &#947;&#941;&#947;&#959;&#957;&#949;&#957; at the v. 3 / v. 4 boundary -->
   <circle class="nodeg" cx="452" cy="500" r="5.5"/>
@@ -64,14 +64,15 @@
   <text class="gk" x="660"  y="459" text-anchor="middle" font-size="23">&#7974;&#957;</text>
   <text class="gk" x="740"  y="459" text-anchor="middle" font-size="23">&#7974;&#957;</text>
   <text class="gk" x="1000" y="459" text-anchor="middle" font-size="23">&#7974;&#957;</text>
-  <text class="meta" x="660"  y="491" text-anchor="middle" font-size="18">9</text>
-  <text class="meta" x="740"  y="491" text-anchor="middle" font-size="18">10</text>
-  <text class="meta" x="1000" y="491" text-anchor="middle" font-size="18">15</text>
-  <text class="meta" x="1120" y="491" text-anchor="middle" font-size="18">18</text>
-  <text class="note" x="838" y="548" text-anchor="middle" font-size="19">the being-tense recurs the Prologue&#8217;s length</text>
+  <text class="meta" x="660"  y="491" text-anchor="middle" font-size="20">9</text>
+  <text class="meta" x="740"  y="491" text-anchor="middle" font-size="20">10</text>
+  <text class="meta" x="1000" y="491" text-anchor="middle" font-size="20">15</text>
+  <text class="meta" x="1120" y="491" text-anchor="middle" font-size="20">18</text>
+  <text class="note" x="838" y="548" text-anchor="middle" font-size="20">the being-tense recurs the Prologue&#8217;s length</text>
 
   <!-- ===== movement labels (secondary) ===== -->
   <text class="meta" x="300"  y="642" text-anchor="middle" font-size="22">Foyer &#183; vv. 1&#8211;5</text>
   <text class="meta" x="690"  y="642" text-anchor="middle" font-size="22">History &#183; vv. 6&#8211;13</text>
   <text class="meta" x="1035" y="642" text-anchor="middle" font-size="22">Closure &#183; vv. 14&#8211;18</text>
+  <!-- min-font floor re-author, 26 Aug 2026 (FWI-061): sizes lifted to clear 12px at the 836px room -->
 </svg>
