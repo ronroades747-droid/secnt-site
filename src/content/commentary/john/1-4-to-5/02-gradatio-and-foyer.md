@@ -2,7 +2,7 @@
 title: "Architecture: The Internal Gradatio and the Foyer"
 description: "The unit’s synchronic shape: the four-tread gradatio (life → light → darkness → the darkness’s failure) and 1:4–5 at the far pole of the v. 4 / v. 14 foyer bracket."
 date: 2026-07-26
-revised: 2026-08-26
+revised: 2026-08-27
 book: john
 chapter: 1
 passageRef: "1:4–5"
@@ -65,6 +65,6 @@ With the shape of the unit established, the architecture turns from what stands 
 
 [^composition]: D. A. Carson, *The Gospel according to John* (Pillar New Testament Commentary; Eerdmans, 1991), pp. 112–113 — the "rhythmical prose" reading, and the linked clauses of verses 4–5 read as a single paced block; Leon Morris, *The Gospel according to John*, rev. ed. (New International Commentary on the New Testament; Eerdmans, 1995), pp. 63–64; C. K. Barrett, *The Gospel according to St John*, 2nd ed. (London: SPCK, 1978), pp. 149–151 — the "unified rhythmical prose" verdict. The reconstructions that would explain the unit's shape by recovering a pre-Gospel hymn or source are surveyed in the commentary's account of the [coordinate architecture](/commentary/john/1-4-to-5/04-coordinate-articulation/) and are not adopted: their observation — that the material is elevated, rhythmic, and groupable — is received at the level of the received text, while their account of how it came to be is declined.
 
-[^foyer]: Carson, *John* — the Prologue as the foyer of the Gospel, and, at pp. 118–126, the seed-bed grid mapping each of this unit's treads to its later development (1:4a → 5:26; 1:4b → 8:12; 1:5a → 3:19; 1:5b → 12:35). The strong form of the foyer claim — that the Prologue does not merely summarize the Gospel's themes but originates them — is held provisionally in this commentary, and John 1:4–5 contributes substantially to it.
+[^foyer]: Carson, *John* — the Prologue as the foyer of the Gospel, and, at pp. 110–111, the foyer grid mapping each of this unit's treads to its later development (1:4a → 5:26; 1:4b → 8:12; 1:5a → 3:19; 1:5b → 12:35). The strong form of the foyer claim — that the Prologue does not merely summarize the Gospel's themes but originates them — is held provisionally in this commentary, and John 1:4–5 contributes substantially to it.
 
 [^dodd]: C. H. Dodd, *The Interpretation of the Fourth Gospel* (Cambridge, 1953), p. 207, within the discussion at pp. 206–207 (of the δόξα beheld at verse 14: "there is here no longer any thought of visible light or radiance accompanying Christ in His earthly life; but not less really … the divine presence and power were apprehensible by those who had the faculty of faith"), 307 ("the Logos is the union of life and light"). Engaged directly, and at this point only: Dodd grounds the substantive identity of the light of verse 4 with the glory of verse 14 — one divine self-disclosure — and is not enlisted for the further claim that the two verses were composed as a frame, which he does not make. That claim's confirmation is reserved for the commentary's treatment of verse 14.

@@ -2,7 +2,7 @@
 title: "Exegesis: Ἐν αὐτῷ ζωὴ ἦν — Ontology, the Life in the Word"
 description: "The first clause (1:4a): the construal, the force of the imperfect, and the sense of ζωή — the life that was in the Word."
 date: 2026-08-09
-revised: 2026-08-16
+revised: 2026-08-27
 book: john
 chapter: 1
 passageRef: "1:4–5"
@@ -44,13 +44,13 @@ From this ground the movement takes its second step, and the composition has alr
 
 [^ridderbos]: Herman N. Ridderbos, *The Gospel of John: A Theological Commentary*, trans. John Vriend (Grand Rapids: Eerdmans, 1997), on 1:4; the same reading of the Prologue's imperfects in his "The Structure and Scope of the Prologue to the Gospel of John," *Novum Testamentum* 8 (1966). The formulation quoted — the present seen in light of its origin, antecedent to all human experience — is his.
 
-[^morris]: Leon Morris, *The Gospel according to John*, rev. ed. (New International Commentary on the New Testament; Grand Rapids: Eerdmans, 1995), pp. 63–64: "the present tense is never used of the Word, with but one exception, 'shines' in verse 5." The exception is weighed in the [run of tenses](/commentary/john/1-4-to-5/03-macro-tense-run/), where the unit's three tense-forms are treated together.
+[^morris]: Leon Morris, *The Gospel according to John*, rev. ed. (New International Commentary on the New Testament; Grand Rapids: Eerdmans, 1995), p. 96: "the present tense is never used of the Word, with but one exception, 'shines' in verse 5." The exception is weighed in the [run of tenses](/commentary/john/1-4-to-5/03-macro-tense-run/), where the unit's three tense-forms are treated together.
 
 [^turner]: Moulton–Howard–Turner, *A Grammar of New Testament Greek*, vol. III (Edinburgh: T&T Clark, 1963), p. 64 — "incomplete action, duration and continuity" — as cited by McHugh, *John 1–4*, ad loc.
 
 [^gives]: Ridderbos, *John*, on 1:4: the life of verse 4a is the life the Word "gives to the world," "not therefore the same as that which the Logos shares in himself with the Father." The distinction is load-bearing for this page: it is what keeps the eternal-frame register of the imperfect from collapsing the life-in-him of verse 4 into the aseity of verse 1.
 
-[^caution]: Morris, *John*, pp. 63–64: "we should not press the tense unduly." The caution is accepted as stated; the page's claim rests on the convergence of the grammatical force with the Prologue-wide pattern of the imperfect, not on the tense alone.
+[^caution]: Morris, *John*, p. 65: "We should not press the tense unduly." The caution is accepted as stated; the page's claim rests on the convergence of the grammatical force with the Prologue-wide pattern of the imperfect, not on the tense alone.
 
 [^barrett]: C. K. Barrett, *The Gospel according to St John*, 2nd ed. (London: SPCK, 1978), pp. 157–158: ζωή as "the essential energy of the Word." Barrett's independent case for the imperfect ἦν at verse 4a — "the second ἦν (ἡ ζωὴ ἦν τὸ φῶς) seems to require the first," p. 156 — is engaged in the [text-critical notes](/commentary/john/1-4-to-5/01-the-text/), where it matters that a reader on either side of the punctuation question arrives at the same verb.
 
