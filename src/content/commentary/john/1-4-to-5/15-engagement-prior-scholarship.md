@@ -1,7 +1,7 @@
 ---
 title: "Engagement with Prior Scholarship: The Scholarly Record"
 description: "The substantive engagement with the literature that shaped the cycle’s resolutions."
-date: 2026-07-20
+date: 2026-08-27
 book: john
 chapter: 1
 passageRef: "1:4–5"
@@ -11,7 +11,7 @@ verseEnd: 5
 sectionType: engagement
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 The resolutions set out across this unit — the working text and its punctuation, the composed architecture of the staircase and the run of tenses, the reading of each of the four clause-treads, and the five theological developments that rest on them — were not reached in isolation. Each was formed in sustained engagement with prior scholarship, read at close range, and each was adjudicated with the strongest alternative readings the literature offers held openly against it. This page gathers that record for John 1:4–5. It names the sources that bore weight on the unit's conclusions, the methodological disciplines under which they were weighed, and — for every principal resolution — the kind of evidence each source supplies, so that the reasoning behind a settled reading can be traced rather than received as assertion.
