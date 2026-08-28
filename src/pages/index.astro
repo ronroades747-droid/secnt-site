@@ -1,21 +1,28 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import { SITE, commentaryUrl, articleUrl, isVisible } from '../lib/site';
+import { SITE, commentaryUrl, articleUrl, slideCycleUrl, isVisible } from '../lib/site';
 const volumes = (await getCollection('volumes'))
   .filter(isVisible)
   .sort((a, b) => a.data.title.localeCompare(b.data.title));
 // Parent articles only (chapters excluded); gated so the homepage shows an
 // Articles entry point only once an article is published — the home page is
-// the front door to both genres, distinct from /commentary/ (volumes only)
-// and /articles/ (articles only), never showing an empty "coming" section.
+// the front door to all three genres, distinct from /commentary/ (volumes
+// only), /articles/ (articles only) and /slides/ (Teaching Aids only), never
+// showing an empty "coming" section.
 const articles = (await getCollection('articles'))
   .filter((a) => !a.id.includes('/') && isVisible(a))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+// Teaching Aids: the shorts resource-page section (Shorts Program Plan §2;
+// Shorts Web Dev Handoff §2, Route 2). Same incremental-exposure discipline
+// as Articles — the entry appears only once a cycle page is published.
+const slideCycles = (await getCollection('slideCycles'))
+  .filter(isVisible)
+  .sort((a, b) => a.data.order - b.data.order);
 ---
 <BaseLayout
   title={SITE.wordmark}
-  description="Verse-by-verse commentary on the New Testament at the systematic-theological register, paired with audiovisual lectures. Freely available under CC BY 4.0."
+  description="Verse-by-verse commentary on the New Testament at the systematic-theological register, paired with audiovisual lectures and projectable teaching aids. Freely available under CC BY 4.0."
   tier="1"
 >
   <div class="reading reading--wide">
@@ -27,8 +34,11 @@ const articles = (await getCollection('articles'))
       Lectures that teach the same scholarly work — the writing for readers at
       depth, the lectures for teachers and students. Particular questions that
       warrant fuller treatment are developed as scholarly articles, published
-      here and submitted for peer review in journals in the field. The series
-      is freely available under a Creative Commons Attribution 4.0 license.
+      here and submitted for peer review in journals in the field. From the
+      same work the series publishes teaching aids — projectable slides, each
+      with notes on how to teach from it, for use in church and in class. The
+      series is freely available under a Creative Commons Attribution 4.0
+      license.
     </p>
     <p>
       SECNT is also an invitation into a new genre of biblical scholarship. The
@@ -63,6 +73,17 @@ const articles = (await getCollection('articles'))
         <ul>
           {articles.map((a) => (
             <li><a href={articleUrl(a.id)}>{a.data.title}</a></li>
+          ))}
+        </ul>
+      </Fragment>
+    )}
+
+    {slideCycles.length > 0 && (
+      <Fragment>
+        <h2>Teaching Aids</h2>
+        <ul>
+          {slideCycles.map((c) => (
+            <li><a href={slideCycleUrl(c.id)}>{c.data.title}</a></li>
           ))}
         </ul>
       </Fragment>
