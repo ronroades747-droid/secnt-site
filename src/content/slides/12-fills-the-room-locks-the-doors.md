@@ -3,10 +3,10 @@ title: "Fills the room / locks the doors"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — Fills the room / locks the doors."
 cycle: john-1-1-to-3
 audience: new-to-the-bible
-scheduled: 2026-09-04
+scheduled: 2026-08-28
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Centred on the field, the headline on one line: Two halves, two claims. Beneath it, smaller, the reference: John 1:3. Below that, in gold on one line: The first fills the room; the second locks the doors."
 license: CC-BY-4.0
-draft: true
+draft: false
 ---
 
 Read John 1:3 aloud and it sounds like one claim said twice. *All things came to be through him. And without him not even one thing came to be.* The shape is familiar from the Psalms — a thought stated forward, then stated backward — and most hearers file the second half as the first half's echo, present for the weight and the balance rather than for anything new. Our research reads it otherwise, with the weight of the major commentators behind the reading: these are two different assertions, and the verse needs both. The first is a claim about *scope* — how far the Word's creative work reaches, which is as far as there is anything at all. The second is a claim about *exclusivity* — that nothing reaches being by any other path. The second does not follow from the first. A claim about how far something reaches is simply silent about whether anything else ever reached it too; you can hold the whole territory and still leave a back door open. So the negative half is doing work the positive half cannot do, and it does it by shutting three doors, each wider than the last: no exception, no overlooked corner or odd case that slipped past him; no mediating instrument, no sub-agent or tool through which some lower part of creation came to be at one remove; and no competing agency, no rival maker working alongside. The first fills the room; the second locks the doors.
