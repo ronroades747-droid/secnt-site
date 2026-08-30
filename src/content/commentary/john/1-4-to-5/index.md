@@ -93,7 +93,7 @@ Four disciplines govern the composition. The first is *final-form composition*: 
 
 [^nyssen]: Ronald E. Roades, "The Text of the Gospel of John in the Writings of Gregory of Nyssa" (MA thesis, Wheaton College, 1974), p. 18 — the connected Word/life/light/only-begotten sequence in the adaptation-chains at *Contra Eunomium* 3.8.40 (GNO 2.253.25) and 3.6.7 (GNO 2.188.7), and the singular aorist ἔλαμψε(ν) at verse 5. Primary-text patristic engagement.
 
-[^origen]: Origen, *Commentary on the Gospel according to John*, trans. Ronald E. Heine (Fathers of the Church 80, 89; Catholic University of America Press, 1989, 1993), on the deliberate life-then-light ordering; Joel C. Elowsky, ed., *John 1–10* (Ancient Christian Commentary on Scripture; IVP, 2006), pp. 25–28, on the early reception of κατέλαβεν. Clause-reception register.
+[^origen]: Origen, *Commentary on the Gospel according to John*, trans. Ronald E. Heine (Fathers of the Church 80, 89; Catholic University of America Press, 1989, 1993), on the deliberate life-then-light ordering; Joel C. Elowsky, ed., *John 1–10* (Ancient Christian Commentary on Scripture; IVP, 2006), pp. 26–28, on the early reception of κατέλαβεν. Clause-reception register.
 
 [^schnack]: Rudolf Schnackenburg, *The Gospel according to St John*, vol. 1, trans. Kevin Smyth (Herder and Herder, 1968), pp. 240–249 (with p. 234) — the load-bearing modern source across the unit, engaged directly on the sense of ζωή and the sense of φῶς — and pp. 224–229, the surveyed strophe analyses.
 
