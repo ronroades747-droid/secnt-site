@@ -3,10 +3,10 @@ title: "The creed line you already say"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — The creed line you already say."
 cycle: john-1-1-to-3
 audience: new-to-the-bible
-scheduled: 2026-09-07
+scheduled: 2026-08-30
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Across the middle, the headline in a single line: You already say John 1:3. Beneath it, in gold, one line of the Nicene Creed: through whom all things were made. Then, smaller and in grey, the two names it belongs to: the Nicene Creed and John 1:3."
 license: CC-BY-4.0
-draft: true
+draft: false
 ---
 
 There is a sentence millions of Christians say out loud, in unison, most Sundays — and it is a verse of the Bible. The Nicene Creed confesses the Son as the one *through whom all things were made*. That clause is not a summary of John's third verse and not an allusion to it. It is that verse. The evangelist writes that *all things came to be through him*, and when the church came to fix her faith in a symbol she reached for his preposition — δι' οὗ, *di' hou*, *through whom* — and set it in the middle of what the whole church says together. Our research reads that clause as John 1:3 made confession: the preposition of the Prologue carried up into the rule of faith. And the recognition opens a second thing, because the word *through* is easy to hear wrong. The ear takes it as *used* — the Father did the making, the Son was what the making was done with — so that a line about the Son's dignity is heard as a line about his usefulness. The church has never read it that way. The Greek and Latin Fathers alike received the verse as the church's charter of creation through the Word, and Theodore of Mopsuestia, in the fourth century, put it with a precision worth hearing: the evangelist, he says, shows clearly that the words *all things were made through him* were used not to denote service, but cooperation. Not service. Cooperation. That reading is not a modern construal laid over the verse; it is the tradition's own — and your congregation is reciting it, in the apostle's own preposition, every time it says the Creed.
