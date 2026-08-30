@@ -1,7 +1,7 @@
 ---
 title: "Pastoral Hearing and Forward Arc"
 description: "The unit’s pastoral hearing and the forward arc across the Gospel."
-date: 2026-07-20
+date: 2026-08-29
 book: john
 chapter: 1
 passageRef: "1:4–5"
@@ -11,7 +11,7 @@ verseEnd: 5
 sectionType: pastoral
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 The exegesis of the unit is complete, and the doctrine developed on it. What remains is to hear these two verses as those who will preach and teach them must hear them, and to name the trajectory they open into the rest of the Prologue and into the Gospel. Neither task re-exegetes; both gather. And what is gathered already has a shape: the last service this commentary can do for the unit is to hand it over in the form the evangelist gave it.
