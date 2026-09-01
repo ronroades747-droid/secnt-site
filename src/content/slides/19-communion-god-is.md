@@ -1,8 +1,20 @@
 ---
 title: "The communion God is"
+description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — The communion God is."
 cycle: john-1-1-to-3
 audience: familiar-with-scripture
 scheduled: 2026-09-11
+imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it and no Greek. Across the upper middle, a single-line headline in pale type: God did not become relational. Directly beneath it, larger and set entirely in gold, one line: The communion God is. Under that, in smaller grey type, the reference John 1:1. Lower down, one line of grey English: In the beginning, before anything came to be. Nothing else on the frame but the attribution line along the bottom."
 license: CC-BY-4.0
 draft: true
 ---
+
+Most of us are comfortable saying that God is relational. God is love; God reaches out; God gives himself away. Every word of that is true, and it is possible to hold all of it and still have it pointed the wrong way round. There is a reading — and it is not a foolish one — that would place the whole of God's relating on the far side of creation: God is one, and becomes three-in-relation only as he goes out to save. On that account the communion is something God takes up, a thing he does once there is somebody to do it with. John's first sentence will not have it, and the way it refuses is worth watching: not by argument, but by placement. Look at where the communion is stated. Not in the story of salvation — not at Bethlehem, not at the cross — but in the beginning, before anything came to be, before there was any world to be redeemed: *and the Word was with God*, πρὸς τὸν θεόν. Our research reads that clause as active personal communion, and the reading is established elsewhere in this cycle; what this slide adds is the timing. If the communion is predicated there, then there was no moment at which God could have entered it and nothing outside God to enter it from. It is not what God took up. It is what God is.
+
+*One thing worth knowing before you teach it: nothing here corrects a mistake your people have made. The sentence they are already saying — God is love — is true, and this slide does not qualify it. What it does is move the proof: from something God did in time to something God has always been, so that the love shown at the cross is the overflow of a communion that was already there rather than the moment it began.*
+
+*The Greek on this slide's frames: there is none. The clause is quoted here and in the short's narration, and it is set on neither download — the slide carries the claim in English, which is what a slide is for; the Greek is here, for you.*
+
+## Pedagogical task
+
+This slide's job is redirection, not correction: it takes a sentence your people already believe and points it at a different end of the story. The hearer's picture is almost never spoken aloud — most people have never asked whether God's relating begins with us — so name it first and let the gold line answer it; the surprise is that a verse they know by heart has already ruled on a question they did not know they were asking. From the pulpit that is a ten-second move inside a sermon on God's love, and it asks no Greek of anyone: put the slide up, say what you are *not* saying (that God is love only toward us), read the gold line, and land it — the next time you say God is love, do not reach forward to the cross to prove it; reach back. In a classroom, put the slide up and ask what the gold line **rules out**; the economy-only picture surfaces from the room rather than from the front, and the correction lands better for having been discovered. The restraint is the boundary: this slide establishes *when* the communion is stated and stops. How the persons are distinguished, what they share, and how the church came to say so are all real questions and none of them is this slide's — reaching for them turns a ten-second redirect into a lecture and spends the next slide's capital early. One refusal, one fact, one application. Leave it there.
