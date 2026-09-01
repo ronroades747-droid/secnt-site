@@ -3,10 +3,10 @@ title: "The communion God is"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — The communion God is."
 cycle: john-1-1-to-3
 audience: familiar-with-scripture
-scheduled: 2026-09-11
+scheduled: 2026-09-01
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it and no Greek. Across the upper middle, a single-line headline in pale type: God did not become relational. Directly beneath it, larger and set entirely in gold, one line: The communion God is. Under that, in smaller grey type, the reference John 1:1. Lower down, one line of grey English: In the beginning, before anything came to be. Nothing else on the frame but the attribution line along the bottom."
 license: CC-BY-4.0
-draft: true
+draft: false
 ---
 
 Most of us are comfortable saying that God is relational. God is love; God reaches out; God gives himself away. Every word of that is true, and it is possible to hold all of it and still have it pointed the wrong way round. There is a reading — and it is not a foolish one — that would place the whole of God's relating on the far side of creation: God is one, and becomes three-in-relation only as he goes out to save. On that account the communion is something God takes up, a thing he does once there is somebody to do it with. John's first sentence will not have it, and the way it refuses is worth watching: not by argument, but by placement. Look at where the communion is stated. Not in the story of salvation — not at Bethlehem, not at the cross — but in the beginning, before anything came to be, before there was any world to be redeemed: *and the Word was with God*, πρὸς τὸν θεόν. Our research reads that clause as active personal communion, and the reading is established elsewhere in this cycle; what this slide adds is the timing. If the communion is predicated there, then there was no moment at which God could have entered it and nothing outside God to enter it from. It is not what God took up. It is what God is.
