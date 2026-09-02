@@ -3,10 +3,10 @@ title: "Two orders of existence"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — Two orders of existence."
 cycle: john-1-1-to-3
 audience: familiar-with-scripture
-scheduled: 2026-09-15
+scheduled: 2026-09-02
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Across the upper part of the frame, a single-line headline in pale type: Not two points in time. Beneath it, a line of small grey type reading The Word was, with the reference John 1:1 in brackets after it; and under that, standing alone and set large in gold, a short Greek word of two letters. Below those, a second line of grey type reading Creation came to be through him, with the reference John 1:3 in brackets; and under it, set equally large but in pale type rather than gold, a longer Greek word. Nothing else on the frame but the attribution line along the bottom."
 license: CC-BY-4.0
-draft: true
+draft: false
 ---
 
 *In the beginning was the Word.* You know what that line is doing: before anything was made, the Word already was. **That reading is true, and the Lecture's own verdict on it is that it is too small.** The reason is that John is not using one verb in these opening lines — he is using two, and they are not two speeds of the same thing. At verse 1 the verb is **ἦν**, the imperfect of *to be*, the tense of continuous existence in the past: it states existence, with no beginning marked. At verse 3, of all things that came to be through him, the verb is **ἐγένετο**, the aorist of *to become*: it states coming-to-be, entry into existence at a point. The picture nearly every hearer carries is a single line, with creation somewhere along it and the Word standing further back on the same line — earlier, but on the line. **Our research concludes that the two verbs will not allow that picture.** They are not two points in time; they name two different orders of existence. The Word does not become; the Word is. The creation does not eternally be; it comes to be. Between those two verbs lies the entire distinction the Prologue is built upon — which is why this is a grammatical observation that turns out to be a doctrinal one, and why the move fits in a single sentence: *everything else comes to be, and the Word simply is.*
