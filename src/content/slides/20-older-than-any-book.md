@@ -3,10 +3,10 @@ title: "Older than any book that records it"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — Older than any book that records it."
 cycle: john-1-1-to-3
 audience: students-and-teachers
-scheduled: 2026-09-12
+scheduled: 2026-09-01
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it and no Greek. Across the upper middle, a single-line headline in pale type: John did not invent this. Directly beneath it, set entirely in gold, one line: All things came to be through him. Under that, in smaller grey type, the reference John 1:3. Lower down, one line of grey English: Older than any book that records it. Nothing else on the frame but the attribution line along the bottom."
 license: CC-BY-4.0
-draft: true
+draft: false
 ---
 
 John's Gospel was written last, and that one true fact quietly does something to how its third verse is heard. *All things came to be through him* arrives sounding like the summit of a development — the highest thing anyone in the New Testament says about Jesus, said by the last man to write it down. Then you read around it. Paul sets the same predication down in 1 Corinthians 8:6, naming the one Lord Jesus Christ as the one *through whom are all things*. The Colossian hymn extends it in every direction. Hebrews says it of the Son in its opening sentence. The Apocalypse says it of the exalted Christ. Four writers, four settings, one claim about one person. **The ordinary explanation of an agreement like that is borrowing** — somebody said it first and the rest picked it up. F. F. Bruce's judgment is that nobody did: there is no literary dependence running among those passages, not one of them copying another, so the teaching they share is, in his words, "antecedent to them all and therefore impressively primitive." Our research reads that convergence as the strongest evidence that creation through the Son is not a Johannine development but the apostolic church's common faith — and the consequence is the slide's own line. The confession is older than any book that records it. Not John's coinage that the rest received, and not Paul's teaching that the others borrowed; each of them reached back into a faith the church already had.
