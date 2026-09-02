@@ -3,10 +3,10 @@ title: "Verse 1 answered at verse 18"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — Verse 1 answered at verse 18."
 cycle: john-1-1-to-3
 audience: familiar-with-scripture
-scheduled: 2026-09-13
+scheduled: 2026-09-02
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Across the upper middle, a single-line headline in pale type: Verse 18 answers verse 1. Beneath it, on one line in the same pale type, a phrase of Greek: πρὸς τὸν θεόν; and under that in smaller grey type, John 1:1 — with God. Below those, set entirely in gold, a second line of Greek: εἰς τὸν κόλπον τοῦ πατρός; and under it in grey, John 1:18 — in the bosom of the Father. Nothing else on the frame but the attribution line along the bottom."
 license: CC-BY-4.0
-draft: true
+draft: false
 ---
 
 John 1:1 is the most quoted sentence in the Gospel, and it is almost always quoted alone — three clauses, self-contained, the verse on the poster and the verse the sermon opens on. But the evangelist did not build it to stand by itself. He built the Prologue so that **its opening is answered at its close.** At verse 1 the Word is *πρὸς τὸν θεόν*, with God. Seventeen verses later, in the Prologue's last line, the only Son is *εἰς τὸν κόλπον τοῦ πατρός* — in the bosom of the Father. **Two phrases, seventeen verses apart, naming the same relation.** And *κόλπος* is what makes the second phrase worth having: it is not a spatial picture but the image of the deepest personal intimacy language can carry without collapsing the distinction between two persons. Which means the Prologue has already told its reader how much weight *with God* is carrying — at the far end of itself. Our research reads the pairing as the evangelist's deliberate design rather than a coincidence of vocabulary, and it does not read it alone: **Schnackenburg and McHugh, working independently, both take the two termini as a single deliberate frame.** And the bracket holds across the incarnation. What the Word was *πρὸς τὸν θεόν* before creation, the incarnate Son remains *εἰς τὸν κόλπον τοῦ πατρός* in the flesh — the relation is not weakened by the passage from eternity into a human life; it is confirmed, and it is deepened.
