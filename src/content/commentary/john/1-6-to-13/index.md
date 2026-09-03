@@ -13,4 +13,11 @@ license: CC-BY-4.0
 hasLecture: true
 passageComplete: false
 draft: true
+diagram:
+  src: ./jn1-6-13-architectural-orientation.svg
+  alt: "Architectural orientation diagram of the Prologue of John (1:1–18), with 1:6–13 as the second of three movements — 1:1–5, 1:6–13, 1:14–18, left to right — bounded at Ἐγένετο ἄνθρωπος and ἐκ θεοῦ ἐγεννήθησαν. Two solid brackets arch over the whole from outside: v. 1 to v. 18 and v. 3 to v. 18. Inside them the v. 4 / v. 14 pair encloses the movement, drawn dashed and dimmed as a pairing held open until 1:14. Beneath, the macro-tense spine runs through the movement with ἦν and ἐγένετο marked; its third term does not appear in this movement."
+  caption: "Architectural orientation: 1:6–13 as the Prologue's second movement, bounded at “a man came to be” and “begotten of God” — outside the v. 1 / v. 18 and v. 3 / v. 18 brackets, enclosed by the v. 4 / v. 14 pair, with the macro-tense spine running through."
+  position: anchor
 ---
+
+<!-- diagram -->

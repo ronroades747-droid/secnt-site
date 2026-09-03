@@ -1,0 +1,133 @@
+<svg viewBox="0 0 1440 830" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="aoTitle aoDesc" preserveAspectRatio="xMidYMid meet">
+  <title id="aoTitle">The Johannine Prologue in three movements, with John 1:6–13 as the second movement.</title>
+  <desc id="aoDesc">Architectural orientation diagram of the Prologue of John (1:1–18), with 1:6–13 as the second of three movements — 1:1–5, 1:6–13, 1:14–18, left to right — bounded at Ἐγένετο ἄνθρωπος and ἐκ θεοῦ ἐγεννήθησαν. Two solid brackets arch over the whole from outside: v. 1 to v. 18 and v. 3 to v. 18. Inside them the v. 4 / v. 14 pair encloses the movement, drawn dashed and dimmed as a pairing held open until 1:14. Beneath, the macro-tense spine runs through the movement with ἦν and ἐγένετο marked; its third term does not appear in this movement.</desc>
+
+  <style>
+    /* --- family theming interface: light page renders from in-file fallbacks;
+           dark slide renders when the host sets color / --color-gold / --color-meta / --color-goldtext --- */
+    .gk    { font-family:'SBL BibLit','Cardo','Gentium Plus','Charis SIL','Source Serif 4',Georgia,serif; fill:currentColor; }
+    .gkd   { font-family:'SBL BibLit','Cardo','Gentium Plus','Charis SIL','Source Serif 4',Georgia,serif; fill:var(--color-meta,#6b6b6b); }
+    .ink   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; }
+    .inkb  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; font-weight:600; }
+    .desc  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; font-style:italic; }
+    .lbl   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); }
+    .note  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); font-style:italic; }
+    .tab   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); letter-spacing:2px; }
+    .glab  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-goldtext,#8a6608); font-style:italic; }
+
+    .panel { fill:none; stroke:currentColor; stroke-width:1.6; }
+    .hl    { fill:none; stroke:var(--color-gold,#b8860b); stroke-width:3.4; }
+    .rule  { stroke:var(--color-gold,#b8860b); stroke-width:2.4; fill:none; stroke-linecap:round; }
+    .spine { stroke:var(--color-gold,#b8860b); stroke-width:2.6; fill:none; stroke-linejoin:round; stroke-linecap:round; }
+    .arcS  { stroke:var(--color-gold,#b8860b); stroke-width:2.6; fill:none; stroke-linecap:round; }
+    .arcP  { stroke:var(--color-gold,#b8860b); stroke-width:2.2; fill:none; stroke-linecap:round; stroke-dasharray:7 6; opacity:0.6; }
+    .node  { fill:var(--color-gold,#b8860b); }
+    .noded { fill:var(--color-meta,#6b6b6b); }
+    .pring { fill:none; stroke:var(--color-gold,#b8860b); stroke-width:2; opacity:0.6; }
+    .pring2{ fill:none; stroke:var(--color-gold,#b8860b); stroke-width:2; }
+    .brk   { stroke:var(--color-meta,#6b6b6b); stroke-width:1; fill:none; }
+  </style>
+
+  <defs>
+    <marker id="ao-arrow" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--color-gold,#b8860b)"/>
+    </marker>
+  </defs>
+
+  <!-- ================= family title block ================= -->
+  <text class="ink" x="720" y="50" text-anchor="middle" font-size="34" letter-spacing="0.5">Architectural Orientation</text>
+  <text class="lbl" x="720" y="82" text-anchor="middle" font-size="22">the Johannine Prologue in three movements · John 1:6–13 as the second movement</text>
+
+  <!-- ================= the two solid brackets (locked), arching over the whole from outside the movement ================= -->
+  <!-- v. 1 / v. 18 -->
+  <path class="arcS" d="M100 400 C100 67 1345 67 1345 400"/>
+  <text class="lbl" x="722" y="140" text-anchor="middle" font-size="21">v. 1 / v. 18 — the Word with God, the Son in the Father's bosom</text>
+  <!-- v. 3 / v. 18 -->
+  <path class="arcS" d="M180 400 C180 153 1345 153 1345 400"/>
+  <text class="lbl" x="722" y="205" text-anchor="middle" font-size="21">v. 3 / v. 18 — the maker of all things makes him known</text>
+
+  <!-- ================= the v. 4 / v. 14 pair (provisional): dashed and dimmed, enclosing the movement ================= -->
+  <path class="arcP" d="M445 400 C445 247 985 247 985 400"/>
+  <text class="lbl" x="715" y="275" text-anchor="middle" font-size="21">v. 4 / v. 14 — light disclosed as glory</text>
+  <text class="note" x="715" y="332" text-anchor="middle" font-size="21">the pairing as a frame completes at 1:14</text>
+
+  <!-- bracket feet: filled = established, hollow = provisional -->
+  <circle class="node"  cx="100"  cy="400" r="6"/>
+  <circle class="node"  cx="180"  cy="400" r="6"/>
+  <circle class="node"  cx="1345" cy="400" r="6"/>
+  <circle class="pring" cx="445"  cy="400" r="7"/>
+  <circle class="pring" cx="985"  cy="400" r="7"/>
+  <text class="lbl" x="90"   y="425" text-anchor="start" font-size="21">v. 1</text>
+  <text class="lbl" x="172"  y="425" text-anchor="start" font-size="21">v. 3</text>
+  <text class="lbl" x="460"  y="425" text-anchor="end"   font-size="21">v. 4</text>
+  <text class="lbl" x="998"  y="425" text-anchor="start" font-size="21">v. 14</text>
+  <text class="lbl" x="1350" y="425" text-anchor="end"   font-size="21">v. 18</text>
+
+  <!-- ================= movement tabs ================= -->
+  <text class="tab" x="300"  y="386" text-anchor="middle" font-size="21">FIRST MOVEMENT</text>
+  <text class="tab" x="730"  y="386" text-anchor="middle" font-size="21">SECOND MOVEMENT</text>
+  <text class="tab" x="1175" y="386" text-anchor="middle" font-size="21">THIRD MOVEMENT</text>
+
+  <!-- ================= the frame: three movement panels ================= -->
+  <rect class="panel" x="80"  y="400" width="390" height="130" rx="4"/>
+  <rect class="hl"    x="500" y="400" width="460" height="130" rx="4"/>
+  <rect class="panel" x="990" y="400" width="370" height="130" rx="4"/>
+
+  <!-- panel 1: the first movement, the foyer (backdrop) -->
+  <text class="lbl" x="275" y="462" text-anchor="middle" font-size="25">1:1–5</text>
+  <text class="lbl" x="275" y="494" text-anchor="middle" font-size="21">the foyer · 1:4–5 at its close</text>
+
+  <!-- panel 2: this unit — the second movement itself -->
+  <text class="inkb" x="730" y="460" text-anchor="middle" font-size="28">1:6–13</text>
+  <line class="rule" x1="670" y1="474" x2="790" y2="474"/>
+  <text class="glab" x="730" y="504" text-anchor="middle" font-size="21">this unit</text>
+
+  <!-- panel 3 -->
+  <text class="lbl" x="1175" y="462" text-anchor="middle" font-size="25">1:14–18</text>
+  <text class="lbl" x="1175" y="494" text-anchor="middle" font-size="21">the summit</text>
+
+  <!-- ================= the movement's bounds (Greek, at the panel's two lower corners) ================= -->
+  <text class="gk" x="500" y="564" text-anchor="start" font-size="23">Ἐγένετο ἄνθρωπος</text>
+  <text class="lbl" x="500" y="590" text-anchor="start" font-size="21">v. 6 · opens</text>
+  <text class="gk" x="960" y="564" text-anchor="end" font-size="23">ἐκ θεοῦ ἐγεννήθησαν</text>
+  <text class="lbl" x="960" y="590" text-anchor="end" font-size="21">v. 13 · closes</text>
+
+  <!-- ================= movement descriptors ================= -->
+  <text class="desc" x="275"  y="626" text-anchor="middle" font-size="22">The Word in the beginning</text>
+  <text class="desc" x="1175" y="626" text-anchor="middle" font-size="22">The Word's glory in the flesh</text>
+  <text class="desc" x="730"  y="626" text-anchor="middle" font-size="22">The Word coming as light</text>
+
+  <!-- ================= the macro-tense spine (diachronic, beneath) ================= -->
+  <text class="note" x="80" y="668" text-anchor="start" font-size="21">the Prologue's tense-spine</text>
+  <line class="spine" x1="80" y1="686" x2="1352" y2="686" marker-end="url(#ao-arrow)"/>
+
+  <!-- the three spine forms at their locus (vv. 1–3), backdrop -->
+  <circle class="noded" cx="150" cy="686" r="5"/>
+  <circle class="noded" cx="250" cy="686" r="5"/>
+  <circle class="noded" cx="360" cy="686" r="5"/>
+  <text class="gkd" x="150" y="718" text-anchor="middle" font-size="22">ἦν</text>
+  <text class="gkd" x="250" y="718" text-anchor="middle" font-size="22">ἐγένετο</text>
+  <text class="gkd" x="360" y="718" text-anchor="middle" font-size="22">ὃ γέγονεν</text>
+  <path class="brk" d="M120 732 L120 738 L400 738 L400 732"/>
+  <text class="lbl" x="260" y="762" text-anchor="middle" font-size="21">the spine begins · verses 1–3</text>
+
+  <!-- the spine's terms marked in this movement -->
+  <circle class="node" cx="540" cy="686" r="5.5"/>
+  <circle class="node" cx="720" cy="686" r="5.5"/>
+  <text class="gk" x="540" y="718" text-anchor="middle" font-size="24">ἐγένετο</text>
+  <text class="gk" x="720" y="718" text-anchor="middle" font-size="24">ἦν</text>
+  <text class="lbl" x="540" y="744" text-anchor="middle" font-size="21">v. 6</text>
+  <text class="lbl" x="720" y="744" text-anchor="middle" font-size="21">vv. 8–10</text>
+  <path class="brk" d="M500 752 L500 758 L960 758 L960 752"/>
+  <text class="lbl" x="730" y="782" text-anchor="middle" font-size="21">the spine's terms in this movement · verses 6–13</text>
+
+  <!-- diachronic reach to the incarnation (backdrop) -->
+  <circle class="pring2" cx="1000" cy="686" r="6"/>
+  <text class="lbl"  x="1000" y="718" text-anchor="middle" font-size="21">1:14</text>
+  <text class="note" x="1190" y="718" text-anchor="middle" font-size="21">toward the incarnation</text>
+
+  <!-- ================= synthesis ================= -->
+  <text class="desc" x="720" y="820" text-anchor="middle" font-size="22">The second movement itself — not the close of one, as 1:4–5 was of the first.</text>
+</svg>
