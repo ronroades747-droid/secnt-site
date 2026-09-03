@@ -212,6 +212,20 @@ const commentary = defineCollection({
 
       sectionType,
 
+      // Optional group label rendered on the volume landing's Contents above
+      // the first row that carries a new value — a sub-grouping WITHIN a unit,
+      // below the segment level the sidebar derives from sectionType. First use:
+      // the Jn 1:6–13 Exegesis rows, grouped under the Draft's three "Beat"
+      // headings plus the synthesis close (Cycle Plan §III.1: the beats are
+      // structural dividers, not pages, and may be rendered on the Contents as
+      // group labels over the verse rows). Dev-owned, set at scaffold; reader-
+      // facing text only — never research apparatus. Consecutive rows sharing a
+      // value share one label; a row without one closes the group. This is the
+      // "option b" the site.ts segment-grouping note anticipated, scoped to the
+      // Contents page (the unit-nav rail is unchanged). Editor's ruling, 3 Sep
+      // 2026, at the Jn 1:6–13 scaffold.
+      tocGroup: z.string().optional(),
+
       // Reader-facing architectural diagram(s). `src` is a relative ./ path to an
       // SVG co-located beside this entry's .md. Diagram.astro inlines the SVG
       // into the page DOM (not an <img>), so it inherits the site's SBL BibLit

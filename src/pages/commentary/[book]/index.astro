@@ -56,7 +56,10 @@ function lectureFor(commentaryId: string) {
   return { url: lectureUrl(commentaryId) };
 }
 
-type Row = { label: string; pageUrl: string; lectureUrl?: string };
+// `group`: an optional sub-heading (the commentary `tocGroup` field) rendered
+// above this row when it differs from the previous row's — e.g. the Jn 1:6–13
+// Exegesis rows grouped under the unit's three beats. Never reader-authored.
+type Row = { label: string; pageUrl: string; lectureUrl?: string; group?: string };
 type Group = {
   forthcoming: boolean;
   passageRef: string;
@@ -78,7 +81,7 @@ function buildGroup(landing: (typeof allCommentary)[number]): Group {
     { label: 'Introduction', pageUrl: commentaryUrl(unitId), lectureUrl: headLec?.url },
     ...sections.map((s) => {
       const lec = s.data.hasLecture ? lectureFor(s.id) : null;
-      return { label: s.data.title, pageUrl: commentaryUrl(s.id), lectureUrl: lec?.url };
+      return { label: s.data.title, pageUrl: commentaryUrl(s.id), lectureUrl: lec?.url, group: s.data.tocGroup };
     }),
   ];
   return {
@@ -161,15 +164,20 @@ const bookDisplay = entry.data.bookDisplay;
                 </div>
                 {g.rows.length > 0 && (
                   <ol class="vtoc-rows">
-                    {g.rows.map((r) => (
-                      <li class="vtoc-row">
-                        <a class="vtoc-row__page" href={r.pageUrl}>{r.label}</a>
-                        {r.lectureUrl ? (
-                          <a class="vtoc-lec" href={r.lectureUrl}>Lecture</a>
-                        ) : (
-                          <span class="vtoc-lec vtoc-lec--none" aria-hidden="true">—</span>
+                    {g.rows.map((r, i) => (
+                      <>
+                        {r.group && r.group !== g.rows[i - 1]?.group && (
+                          <li class="vtoc-subhead" role="presentation">{r.group}</li>
                         )}
-                      </li>
+                        <li class="vtoc-row">
+                          <a class="vtoc-row__page" href={r.pageUrl}>{r.label}</a>
+                          {r.lectureUrl ? (
+                            <a class="vtoc-lec" href={r.lectureUrl}>Lecture</a>
+                          ) : (
+                            <span class="vtoc-lec vtoc-lec--none" aria-hidden="true">—</span>
+                          )}
+                        </li>
+                      </>
                     ))}
                   </ol>
                 )}

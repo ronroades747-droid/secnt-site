@@ -254,6 +254,14 @@ main { flex: 1 0 auto; width: 100%; }
 .vtoc-rows { list-style: none; margin: 0 0 0.55rem; padding: 0; }
 .vtoc-row { padding: 0.4rem 0 0.4rem 1.25rem; border-top: 1px solid var(--color-border); }
 .vtoc-group .vtoc-rows .vtoc-row:first-child { border-top: 1px solid var(--color-border); }
+/* Sub-group label within a unit (the commentary `tocGroup` field): a quiet
+   small-caps line over the rows it heads, in the meta register like the column
+   heads — a divider, not a page. */
+.vtoc-subhead {
+  padding: 0.85rem 0 0.15rem 1.25rem; border-top: 1px solid var(--color-border);
+  font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-meta);
+}
+.vtoc-subhead + .vtoc-row { border-top: 0; }
 .vtoc-row__page { text-decoration: none; color: var(--color-text); line-height: 1.4; }
 .vtoc-row__page:hover { color: var(--color-gold); }
 
