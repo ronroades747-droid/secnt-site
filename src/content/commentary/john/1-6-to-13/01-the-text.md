@@ -1,7 +1,7 @@
 ---
 title: "The Text: Settling the Working Text of the Unit"
 description: "The working text of John 1:6–13 settled verse by verse, and the 1:13 crux — the plural “were begotten … of God” against the singular."
-date: 2026-09-03
+date: 2026-09-05
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -11,7 +11,7 @@ verseEnd: 13
 sectionType: text-critical
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 The exegesis of this unit proceeds on a fixed text, and this first section establishes it. The situation is unusual in a way that clarifies rather than complicates: across eight verses there is exactly one point of decision, and it falls at the last of them. Verses 6 through 12 raise no textual question at all in any source this commentary engages. Verse 13 raises one, and it is among the most consequential in the Prologue — whether the verse describes the begetting of believers or the begetting of Christ. Naming which is which is part of the commentary's discipline of disclosure: the reader is shown where the working text rests on a judgment made here, and where it rests on nothing more contested than the agreement of the whole tradition.
 
