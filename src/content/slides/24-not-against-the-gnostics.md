@@ -3,10 +3,10 @@ title: "Not written against “the Gnostics”"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — Not written against “the Gnostics”."
 cycle: john-1-1-to-3
 audience: students-and-teachers
-scheduled: 2026-09-16
+scheduled: 2026-09-04
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Across the upper part of the frame, a single-line headline in pale type: Not written against the Gnostics. Beneath it, one line of smaller grey type reading The systems are second-century. The Prologue is late first. Below that, set larger and in gold, a single line reading John 1:3 rules out every competing agency. Nothing else on the frame but the attribution line along the bottom."
 license: CC-BY-4.0
-draft: true
+draft: false
 ---
 
 You have almost certainly heard it, and you may well have said it: John wrote verse three to shut the door on the Gnostics. It is one of the most repeated things said about this verse — and **it will not bear the dates.** The fully developed Gnostic systems, with their named teachers and their elaborate hierarchies of aeons, are second-century. The Prologue is late first. So whatever the clause was answering in its own moment was a tendency, a drift in that direction, and not Valentinus or Basilides by name; to read it as a point-by-point rebuttal of systems that did not yet exist is to date the polemic wrong. **Something in the claim is right, and it should be kept.** Read the clause back into the world it was written into and there is an edge in it: the verse does stand against any reading that would set a lesser maker between God and the world. **But our research concludes that the clause's force is not locked to that polemic**, and the correction is a gain rather than a loss. The clause is not narrower than the heresy; it is wider than it. It does not rule out only the demiurge — it rules out every mediating instrument and every competing agency whatsoever, any second hand of any kind, in any century. **The anti-Gnostic reading is the most prominent historical instance of what the clause forecloses. It is not the boundary of it.** Which is why the correction is worth making out loud rather than quietly dropping the old line: the narrow claim ties the verse to a controversy your hearer has never heard of and cannot check, and the wider one hands them something they can use on any Monday.
