@@ -3,10 +3,10 @@ title: "No demiurge to blame"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — No demiurge to blame."
 cycle: john-1-1-to-3
 audience: familiar-with-scripture
-scheduled: 2026-09-17
+scheduled: 2026-09-05
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Across the upper part of the frame, a single-line headline in pale type: John 1:3 says the world is good. Beneath it, one line of smaller grey type reading Every rival system needed someone else to blame. Below that, set larger and in gold, a single line reading Nothing in creation is traceable to a rival hand. Nothing else on the frame but the attribution line along the bottom."
 license: CC-BY-4.0
-draft: true
+draft: false
 ---
 
 You have read John 1:3 as a verse about Christ, and you have read it right: the whole of creation is the Word's doing, and nothing at all stands outside it. **But the second half of the verse is doing something else as well, and it is about the world rather than about him.** To hear it, look at what the alternatives needed. Herman Bavinck sets out the systems the early church had to answer — **Gnosticism**, which to explain sin posited an inferior god alongside the supreme deity, or an eternal matter nobody made, and later **Manichaeism**, which explained sin by an original evil being beside the true God. **Every one of those systems needed a second principle to carry the blame for the world's darkness** — and every one of them, by needing it, impugned the world. If matter is the problem, then the material order is a mistake, and the person hearing you is living inside the mistake. **Now set the negative of verse 3 against that.** If not even one thing came to be apart from the Word, there is no second principle at all: no province of being that some demiurge botched, **nothing in the creation traceable to a rival hand**. **And that is the conclusion, which is a stronger thing than an assertion:** the goodness of the world is not argued for here — it is *secured*, in the same act and by the same words that secure the Son. Our research concludes that this is the second doctrine the negative clause gives, and it is the one a congregation is least likely to have been told about. **The world is good because it is wholly his.**
