@@ -1,7 +1,7 @@
 ---
 title: "Architecture: The Bounded Movement"
 description: "The unit’s outer shape: 1:6–13 as the Prologue’s second movement, bounded at “a man came to be” and “begotten of God.”"
-date: 2026-09-03
+date: 2026-09-05
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -11,7 +11,7 @@ verseEnd: 13
 sectionType: framing
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 The unit opens where a man's coming-to-be opens it and closes where a begetting closes it, and both edges are the evangelist's own. Where a movement starts and stops is not a decorative question. It settles what belongs to the argument and what stands outside it — whether the witness sent from God is inside this movement or before it, whether the sentence about being begotten of God closes what precedes or opens what follows. Get the edges wrong and every reading downstream inherits the error. This section sets them, and shows what carries them.
 
