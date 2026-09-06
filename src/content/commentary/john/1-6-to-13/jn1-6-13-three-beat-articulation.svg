@@ -1,0 +1,140 @@
+<svg viewBox="0 0 1440 960" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="tbTitle tbDesc" preserveAspectRatio="xMidYMid meet">
+  <title id="tbTitle">The interior of John 1:6–13 in three beats, with the three figures at its joints.</title>
+  <desc id="tbDesc">The interior articulation of John 1:6–13 in three beats on one verse line — the parenthesis (vv. 6–8), the hinge-movement (vv. 9–11), the reception's turn (vv. 12–13) — with the seams drawn where the argument sets them: the parenthesis closing at v. 8; the light resuming at v. 9, facing forward with a lesser backward face toward v. 5; the turn at ὅσοι δέ, the unit's only interior connective; the single sentence of vv. 12–13 closing the movement. Three figures stand at the three joints: one refusal thrice told — οὐ κατέλαβεν (v. 5) → οὐκ ἔγνω (v. 10) → οὐ παρέλαβον (v. 11) — reaching back across the seam into the first movement and advancing in the definiteness of its subject and the personalization of its object; the verb-pair across the verse boundary — οὐ παρέλαβον answered by ἔλαβον on the marked δέ, the refusal answered, not extended; and the closing οὐκ … οὐδὲ … οὐδὲ … ἀλλά triad answering the refusal-series member for member. Inside beat two the crescendo ἐρχόμενον → ἦν → ἦλθεν is marked. The figure carries the catchword chain and nothing of the tenses.</desc>
+
+  <style>
+    /* --- family theming interface: light page renders from in-file fallbacks;
+           dark slide renders when the host sets color / --color-gold / --color-meta / --color-goldtext --- */
+    .gk    { font-family:'SBL BibLit','Cardo','Gentium Plus','Charis SIL','Source Serif 4',Georgia,serif; fill:currentColor; }
+    .ink   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; }
+    .desc  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; font-style:italic; }
+    .lbl   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); }
+    .note  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); font-style:italic; }
+
+    .band  { fill:none; stroke:currentColor; stroke-width:1.6; }
+    .stub  { fill:none; stroke:var(--color-meta,#6b6b6b); stroke-width:1.6; }
+    .seam  { stroke:var(--color-gold,#b8860b); stroke-width:3.4; fill:none; stroke-linecap:round; }
+    .rail  { stroke:var(--color-meta,#6b6b6b); stroke-width:2; fill:none; stroke-linecap:round; }
+    .stop  { stroke:var(--color-meta,#6b6b6b); stroke-width:2.6; fill:none; stroke-linecap:round; }
+    .arc   { stroke:var(--color-gold,#b8860b); stroke-width:2.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+    .bwd   { stroke:var(--color-meta,#6b6b6b); stroke-width:1.6; fill:none; stroke-linecap:round; }
+    .node  { fill:var(--color-gold,#b8860b); }
+    .brk   { stroke:var(--color-meta,#6b6b6b); stroke-width:1; fill:none; }
+    .guide { stroke:var(--color-meta,#6b6b6b); stroke-width:1; fill:none; }
+  </style>
+
+  <defs>
+    <marker id="tb-arrow" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--color-gold,#b8860b)"/>
+    </marker>
+    <marker id="tb-arrow-m" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--color-meta,#6b6b6b)"/>
+    </marker>
+  </defs>
+
+  <!-- ================= family title block ================= -->
+  <text class="ink" x="720" y="50" text-anchor="middle" font-size="34" letter-spacing="0.5">The Three-Beat Articulation</text>
+  <text class="lbl" x="720" y="82" text-anchor="middle" font-size="22">the interior of John 1:6–13 · the parenthesis, the hinge-movement, the reception's turn</text>
+
+  <!-- ================= the catchword chain: arrives from before the unit, stops at the turn ================= -->
+  <text class="lbl" x="60" y="120" text-anchor="start" font-size="21">the catchword chain</text>
+  <line class="rail" x1="60" y1="138" x2="1035" y2="138"/>
+  <line class="stop" x1="1035" y1="126" x2="1035" y2="150"/>
+  <text class="lbl"  x="1047" y="132" text-anchor="start" font-size="21">the links stop at the turn</text>
+  <text class="note" x="1047" y="158" text-anchor="start" font-size="21">the pace rises</text>
+
+  <!-- ================= the crescendo, inside beat two ================= -->
+  <text class="note" x="810" y="186" text-anchor="middle" font-size="21">the crescendo of the coming</text>
+  <polyline class="arc" points="665,292 810,260 936,234" marker-end="url(#tb-arrow)"/>
+  <circle class="node" cx="665" cy="292" r="5.5"/>
+  <circle class="node" cx="810" cy="260" r="5.5"/>
+  <circle class="node" cx="955" cy="228" r="5.5"/>
+  <text class="gk" x="665" y="278" text-anchor="middle" font-size="24">ἐρχόμενον</text>
+  <text class="gk" x="810" y="246" text-anchor="middle" font-size="24">ἦν</text>
+  <text class="gk" x="955" y="214" text-anchor="middle" font-size="24">ἦλθεν</text>
+
+  <!-- ================= the verse line: the unit in three beats, the first movement's stub outside it ================= -->
+  <rect class="stub" x="75"  y="320" width="150"  height="120" rx="4"/>
+  <rect class="band" x="250" y="320" width="1130" height="120" rx="4"/>
+  <line class="seam" x1="585"  y1="320" x2="585"  y2="440"/>
+  <line class="seam" x1="1035" y1="320" x2="1035" y2="440"/>
+
+  <text class="lbl" x="150" y="366" text-anchor="middle" font-size="25">v. 5</text>
+  <text class="lbl" x="150" y="402" text-anchor="middle" font-size="21">the first</text>
+  <text class="lbl" x="150" y="426" text-anchor="middle" font-size="21">movement</text>
+
+  <text class="ink" x="418"  y="366" text-anchor="middle" font-size="25">the parenthesis</text>
+  <text class="lbl" x="418"  y="402" text-anchor="middle" font-size="22">vv. 6–8</text>
+
+  <text class="ink" x="810"  y="366" text-anchor="middle" font-size="25">the hinge-movement</text>
+  <text class="lbl" x="810"  y="402" text-anchor="middle" font-size="22">vv. 9–11</text>
+
+  <text class="ink" x="1208" y="366" text-anchor="middle" font-size="25">the reception's turn</text>
+  <text class="lbl" x="1208" y="402" text-anchor="middle" font-size="22">vv. 12–13</text>
+  <text class="lbl" x="1208" y="428" text-anchor="middle" font-size="21">one sentence</text>
+
+  <!-- the two edges a joint figure crosses, continued as hairlines into the register below -->
+  <line class="guide" x1="250"  y1="530" x2="250"  y2="700"/>
+  <line class="guide" x1="1035" y1="530" x2="1035" y2="650"/>
+
+  <!-- ================= the seams, named beneath the line ================= -->
+  <text class="lbl" x="575" y="468" text-anchor="end"   font-size="21">the parenthesis closes · v. 8</text>
+  <text class="lbl" x="595" y="468" text-anchor="start" font-size="21">the light resumes · v. 9</text>
+
+  <!-- the hinge's two faces: full-weight forward, a lighter and shorter backward -->
+  <line class="arc" x1="595" y1="502" x2="742" y2="502" marker-end="url(#tb-arrow)"/>
+  <text class="lbl" x="750" y="508" text-anchor="start" font-size="21">forward-primary</text>
+  <line class="bwd" x1="575" y1="502" x2="458" y2="502" marker-end="url(#tb-arrow-m)"/>
+  <text class="lbl" x="450" y="508" text-anchor="end" font-size="21">a lesser backward face, toward v. 5</text>
+
+  <!-- the turn -->
+  <text class="gk"  x="1210" y="464" text-anchor="middle" font-size="23">ὅσοι δέ</text>
+  <text class="lbl" x="1210" y="490" text-anchor="middle" font-size="21">the unit's only interior connective</text>
+
+  <!-- ================= joint figure one: one refusal thrice told ================= -->
+  <polyline class="arc" points="150,672 810,618 975,580"/>
+  <circle class="node" cx="150" cy="672" r="5.5"/>
+  <circle class="node" cx="810" cy="618" r="5.5"/>
+  <circle class="node" cx="975" cy="580" r="5.5"/>
+
+  <text class="gk"  x="150" y="658" text-anchor="middle" font-size="24">οὐ κατέλαβεν</text>
+  <text class="lbl" x="150" y="698" text-anchor="middle" font-size="21">the darkness</text>
+  <text class="lbl" x="150" y="722" text-anchor="middle" font-size="21">v. 5</text>
+
+  <text class="gk"  x="810" y="604" text-anchor="middle" font-size="24">οὐκ ἔγνω</text>
+  <text class="lbl" x="810" y="644" text-anchor="middle" font-size="21">the world</text>
+  <text class="lbl" x="810" y="668" text-anchor="middle" font-size="21">v. 10</text>
+
+  <text class="gk"  x="975" y="566" text-anchor="middle" font-size="24">οὐ παρέλαβον</text>
+  <text class="lbl" x="975" y="606" text-anchor="middle" font-size="21">his own</text>
+  <text class="lbl" x="975" y="630" text-anchor="middle" font-size="21">v. 11</text>
+
+  <path class="brk" d="M150 740 L150 746 L975 746 L975 740"/>
+  <text class="lbl" x="562" y="772" text-anchor="middle" font-size="21">one refusal thrice told — more definite in subject, more personal in object</text>
+
+  <!-- ================= joint figure two: the verb-pair across the verse boundary ================= -->
+  <path class="arc" d="M975 548 C1005 520, 1110 520, 1140 548" marker-end="url(#tb-arrow)"/>
+  <circle class="node" cx="1140" cy="580" r="5.5"/>
+  <text class="gk"  x="1140" y="566" text-anchor="middle" font-size="24">ἔλαβον</text>
+  <text class="lbl" x="1140" y="606" text-anchor="middle" font-size="21">received</text>
+  <text class="lbl" x="1140" y="630" text-anchor="middle" font-size="21">v. 12</text>
+  <text class="lbl" x="1160" y="690" text-anchor="middle" font-size="21">the refusal answered, not extended</text>
+
+  <!-- ================= joint figure three: the closing triad ================= -->
+  <text class="lbl" x="1208" y="726" text-anchor="middle" font-size="21">the closing triad</text>
+  <path class="brk" d="M1046 740 L1040 740 L1040 848 L1046 848"/>
+  <text class="gk" x="1208" y="756" text-anchor="middle" font-size="22">οὐκ ἐξ αἱμάτων</text>
+  <text class="gk" x="1208" y="784" text-anchor="middle" font-size="22">οὐδὲ ἐκ θελήματος σαρκὸς</text>
+  <text class="gk" x="1208" y="812" text-anchor="middle" font-size="22">οὐδὲ ἐκ θελήματος ἀνδρὸς</text>
+  <text class="gk" x="1208" y="840" text-anchor="middle" font-size="22">ἀλλ᾽ ἐκ θεοῦ ἐγεννήθησαν</text>
+  <text class="lbl" x="1208" y="874" text-anchor="middle" font-size="21">answering member for member</text>
+
+  <!-- the one tie: the triad answers the refusal series -->
+  <path class="arc" d="M1038 794 C1006 792, 984 778, 978 752" marker-end="url(#tb-arrow)"/>
+
+  <!-- ================= synthesis ================= -->
+  <text class="desc" x="720" y="940" text-anchor="middle" font-size="22">One movement in three beats — a parenthesis, a coming refused, and a turn that answers the refusal.</text>
+</svg>
