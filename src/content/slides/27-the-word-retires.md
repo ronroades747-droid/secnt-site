@@ -3,10 +3,10 @@ title: "“The Word” retires"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — “The Word” retires."
 cycle: john-1-1-to-3
 audience: familiar-with-scripture
-scheduled: 2026-09-19
+scheduled: 2026-09-07
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Across the upper part of the frame, a single-line headline in pale type: The title vanishes after verse 14. Below it, set larger and in gold, the Greek phrase ho logos. Beneath the Greek, one line of smaller grey type reading Once the Person is named, the placeholder retires. Under that, small and grey, the reference John 1:1, 14. Nothing else on the frame but the attribution line along the bottom."
 license: CC-BY-4.0
-draft: true
+draft: false
 ---
 
 Ask a congregation what John's great title for Jesus is and the answer comes back without hesitating: **the Word**. It is the first thing the Gospel says, and it is how the Gospel is introduced from most pulpits. *In the beginning was the Word.* **What almost nobody notices is that John stops using it.** The title stands at 1:1 and again at 1:14 — *and the Word became flesh* — and after that it is gone. Not once in the twenty chapters that follow. **The Gospel that opens by calling him the Word never calls him the Word again.** That is not carelessness and it is not an accident of style. **Karl Barth described the title as a placeholder** — a *locum tenens*, "the provisional designation of a place which something or someone else will later fill." It can be read before it is understood, the way an inscription can be read before it is grasped, or the way the unknown in an equation can be written down before its value is known. **The Prologue sets the equation; the Gospel solves it.** And Barth noticed precisely where the solving shows: at 1:14, he wrote, "the name of the Logos is not repeated — it finally drops out of the picture — but this human name: Jesus." **Once the Person can be named and narrated, the abstraction has done its work.** Our research concludes that the disappearance is not a loose end in the Gospel but the title finishing its job, and that the hearer's surprise at it is the whole of what this slide is for.
