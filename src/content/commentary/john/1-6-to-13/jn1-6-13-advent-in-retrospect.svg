@@ -1,0 +1,138 @@
+<svg viewBox="0 0 1440 1040" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="arTitle arDesc" preserveAspectRatio="xMidYMid meet">
+  <title id="arTitle">The temporal plan of John 1:6–13 — an aorist frame, an imperfect interior beneath it, and one present left open.</title>
+  <desc id="arDesc">The temporal plan of John 1:6–13 as four stations on the verse line with the present inside them. The aorist frame — Ἐγένετο (v. 6), ἦλθεν (v. 7) — sets the vantage on this side of a completed advent: a retrospect, not a threshold. Beneath it the imperfect interior — οὐκ ἦν (v. 8), ἦν (v. 9), ἦν (v. 10) — reaches back across the whole history of the light's presence, the reach drawn dashed and dimmed because the advent has no single verse as its threshold. Then the reception aorists — οὐκ ἔγνω, ἦλθεν, οὐ παρέλαβον, ἔλαβον, ἔδωκεν — five summaries at the advent's climax, and the climactic aorist ἐγεννήθησαν, one completed act coincident with the reception. Two present participles are drawn at their two offices: ἐρχόμενον (v. 9) inside the time-embracing ἦν, not reaching the reader; τοῖς πιστεύουσιν (v. 12) as the one arrow that leaves the past frame toward the reader — the door the completed advent leaves open.</desc>
+
+  <style>
+    /* --- family theming interface: light page renders from in-file fallbacks;
+           dark slide renders when the host sets color / --color-gold / --color-meta / --color-goldtext --- */
+    .gk    { font-family:'SBL BibLit','Cardo','Gentium Plus','Charis SIL','Source Serif 4',Georgia,serif; fill:currentColor; }
+    .gkd   { font-family:'SBL BibLit','Cardo','Gentium Plus','Charis SIL','Source Serif 4',Georgia,serif; fill:var(--color-meta,#6b6b6b); }
+    .ink   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; }
+    .desc  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; font-style:italic; }
+    .lbl   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); }
+    .note  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); font-style:italic; }
+
+    .band  { fill:none; stroke:currentColor; stroke-width:1.6; }
+    .arc   { stroke:var(--color-gold,#b8860b); stroke-width:2.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+    .rise  { stroke:var(--color-gold,#b8860b); stroke-width:1.4; fill:none; stroke-linecap:round; }
+    .bar   { stroke:var(--color-gold,#b8860b); stroke-width:3; fill:none; stroke-linecap:butt; }
+    .tick  { stroke:var(--color-gold,#b8860b); stroke-width:2.4; fill:none; stroke-linecap:round; }
+    .reach { stroke:var(--color-gold,#b8860b); stroke-width:2.2; fill:none; stroke-linecap:round; stroke-dasharray:7 6; opacity:0.6; }
+    .pring { fill:none; stroke:var(--color-gold,#b8860b); stroke-width:2; opacity:0.6; }
+    .node  { fill:var(--color-gold,#b8860b); }
+    .tie   { stroke:var(--color-meta,#6b6b6b); stroke-width:1.4; fill:none; stroke-linecap:round; }
+    .guide { stroke:var(--color-meta,#6b6b6b); stroke-width:1; fill:none; }
+  </style>
+
+  <defs>
+    <marker id="ar-arrow" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--color-gold,#b8860b)"/>
+    </marker>
+  </defs>
+
+  <!-- ================= family title block ================= -->
+  <text class="ink" x="720" y="50" text-anchor="middle" font-size="34" letter-spacing="0.5">The Advent Told in Retrospect</text>
+  <text class="lbl" x="720" y="82" text-anchor="middle" font-size="22">the temporal plan of John 1:6–13 · an aorist frame, an imperfect interior, and one present left open</text>
+
+  <!-- ================= station one: the aorist frame, enclosing the whole movement ================= -->
+  <text class="note" x="850" y="160" text-anchor="middle" font-size="21">a retrospect, not a threshold</text>
+  <text class="lbl"  x="850" y="188" text-anchor="middle" font-size="21">the aorist frame · the vantage on a completed advent</text>
+  <path class="arc" d="M 321 290 L 321 208 L 1380 208 L 1380 290"/>
+
+  <!-- the frame's two terms -->
+  <text class="gk" x="321" y="380" text-anchor="middle" font-size="24">Ἐγένετο</text>
+  <text class="gk" x="462" y="380" text-anchor="middle" font-size="24">ἦλθεν</text>
+  <line class="rise" x1="321" y1="394" x2="321" y2="494"/>
+  <line class="rise" x1="462" y1="394" x2="462" y2="494"/>
+  <circle class="node" cx="321" cy="500" r="5.5"/>
+  <circle class="node" cx="462" cy="500" r="5.5"/>
+
+  <!-- ================= station three: the reception aorists ================= -->
+  <text class="lbl" x="1000" y="306" text-anchor="middle" font-size="21">five constative summaries — the reception at the advent's climax</text>
+
+  <text class="gk" x="886"  y="420" text-anchor="middle" font-size="24">οὐκ ἔγνω</text>
+  <text class="gk" x="1062" y="420" text-anchor="middle" font-size="24">οὐ παρέλαβον</text>
+  <text class="gk" x="1205" y="420" text-anchor="middle" font-size="24">ἔδωκεν</text>
+  <text class="gk" x="990"  y="462" text-anchor="middle" font-size="24">ἦλθεν</text>
+  <text class="gk" x="1132" y="462" text-anchor="middle" font-size="24">ἔλαβον</text>
+
+  <line class="rise" x1="886"  y1="434" x2="886"  y2="494"/>
+  <line class="rise" x1="1062" y1="434" x2="1062" y2="494"/>
+  <line class="rise" x1="1205" y1="434" x2="1205" y2="494"/>
+  <line class="rise" x1="990"  y1="476" x2="990"  y2="494"/>
+  <line class="rise" x1="1132" y1="476" x2="1132" y2="494"/>
+
+  <circle class="node" cx="886"  cy="500" r="5.5"/>
+  <circle class="node" cx="990"  cy="500" r="5.5"/>
+  <circle class="node" cx="1062" cy="500" r="5.5"/>
+  <circle class="node" cx="1132" cy="500" r="5.5"/>
+  <circle class="node" cx="1205" cy="500" r="5.5"/>
+
+  <!-- ================= station four: the climactic aorist, coincident with the reception ================= -->
+  <text class="lbl" x="980" y="340" text-anchor="middle" font-size="21">the climactic act coincides with them — no ordering of believing and being begotten</text>
+
+  <text class="gk" x="1309" y="380" text-anchor="middle" font-size="24">ἐγεννήθησαν</text>
+  <line class="rise" x1="1309" y1="394" x2="1309" y2="494"/>
+  <circle class="node" cx="1309" cy="500" r="5.5"/>
+
+  <!-- the coincidence: a bar with end ticks, and no arrowhead at either end -->
+  <line class="bar"  x1="1096" y1="484" x2="1380" y2="484"/>
+  <line class="tick" x1="1096" y1="476" x2="1096" y2="492"/>
+  <line class="tick" x1="1380" y1="476" x2="1380" y2="492"/>
+
+  <!-- ================= the verse line ================= -->
+  <rect class="band" x="250" y="500" width="1130" height="100" rx="4"/>
+  <text class="lbl" x="321"  y="558" text-anchor="middle" font-size="21">v. 6</text>
+  <text class="lbl" x="462"  y="558" text-anchor="middle" font-size="21">v. 7</text>
+  <text class="lbl" x="603"  y="558" text-anchor="middle" font-size="21">v. 8</text>
+  <text class="lbl" x="744"  y="558" text-anchor="middle" font-size="21">v. 9</text>
+  <text class="lbl" x="886"  y="558" text-anchor="middle" font-size="21">v. 10</text>
+  <text class="lbl" x="1027" y="558" text-anchor="middle" font-size="21">v. 11</text>
+  <text class="lbl" x="1168" y="558" text-anchor="middle" font-size="21">v. 12</text>
+  <text class="lbl" x="1309" y="558" text-anchor="middle" font-size="21">v. 13</text>
+
+  <!-- the two edges a figure crosses, continued as hairlines into the register below -->
+  <line class="guide" x1="250"  y1="628" x2="250"  y2="692"/>
+  <line class="guide" x1="1380" y1="628" x2="1380" y2="858"/>
+
+  <!-- ================= station two: the imperfect interior, beneath the frame ================= -->
+  <line class="rise" x1="603" y1="606" x2="603" y2="658"/>
+  <line class="rise" x1="744" y1="606" x2="744" y2="658"/>
+  <line class="rise" x1="886" y1="606" x2="886" y2="658"/>
+
+  <line class="arc" x1="603" y1="664" x2="886" y2="664"/>
+  <circle class="node" cx="603" cy="664" r="5.5"/>
+  <circle class="node" cx="744" cy="664" r="5.5"/>
+  <circle class="node" cx="886" cy="664" r="5.5"/>
+
+  <text class="gk" x="603" y="650" text-anchor="middle" font-size="24">οὐκ ἦν</text>
+  <text class="gk" x="744" y="650" text-anchor="middle" font-size="24">ἦν</text>
+  <text class="gk" x="886" y="650" text-anchor="middle" font-size="24">ἦν</text>
+  <text class="lbl" x="520" y="626" text-anchor="end" font-size="21">the imperfect interior</text>
+
+  <!-- the reach: dashed and dimmed, out past the unit's left edge, ending open -->
+  <line class="reach" x1="597" y1="664" x2="104" y2="664"/>
+  <circle class="pring" cx="95" cy="664" r="7"/>
+  <text class="lbl"  x="350" y="712" text-anchor="middle" font-size="21">reaching back across the whole history of the light's presence</text>
+  <text class="note" x="350" y="738" text-anchor="middle" font-size="21">no single verse is the threshold — coming from v. 9, arriving at v. 11</text>
+
+  <!-- ================= the first present participle: inside the time-embracing ἦν ================= -->
+  <line class="tie" x1="744" y1="678" x2="744" y2="752"/>
+  <text class="gk"   x="744" y="770" text-anchor="middle" font-size="24">ἐρχόμενον</text>
+  <text class="note" x="790" y="798" text-anchor="middle" font-size="21">inside the time-embracing <tspan class="gkd" font-style="italic">ἦν</tspan> — it does not reach the reader</text>
+
+  <!-- ================= the second present participle: the aperture, the one thing that leaves ================= -->
+  <circle class="node" cx="1168" cy="600" r="5.5"/>
+  <line class="rise" x1="1168" y1="606" x2="1168" y2="706"/>
+  <text class="gk"  x="1168" y="736" text-anchor="middle" font-size="24">τοῖς πιστεύουσιν</text>
+  <text class="lbl" x="1168" y="764" text-anchor="middle" font-size="21">v. 12 · the one door left open</text>
+
+  <path class="arc" d="M 1196 782 C 1284 806, 1344 824, 1396 846" marker-end="url(#ar-arrow)"/>
+  <text class="lbl"  x="1400" y="888" text-anchor="end" font-size="21">toward the reader</text>
+  <text class="note" x="1400" y="914" text-anchor="end" font-size="21">the evangelist's own present</text>
+
+  <!-- ================= synthesis ================= -->
+  <text class="desc" x="720" y="990" text-anchor="middle" font-size="22">An advent already complete when the telling begins — and one present tense that leaves the frame toward the reader.</text>
+</svg>
