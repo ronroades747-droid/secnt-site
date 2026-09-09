@@ -3,7 +3,7 @@ title: "One sentence, both heresies"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — One sentence, both heresies."
 cycle: john-1-1-to-3
 audience: familiar-with-scripture
-scheduled: 2026-09-22
+scheduled: 2026-09-09
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Across the upper part of the frame, a headline in pale type on two lines: Two clauses. Remove either, and the other falls. Beneath it, set alone in gold on a single line, the verse's last two clauses divided by a small centred dot: the Word was with God, the Word was God. Under them, small and grey, the reference John 1:1. Lower in the frame, in grey type on two lines, Drop the distinction: only the Father. Drop the deity: only a creature. Nothing else on the frame but the attribution line along the bottom."
 license: CC-BY-4.0
 draft: true
