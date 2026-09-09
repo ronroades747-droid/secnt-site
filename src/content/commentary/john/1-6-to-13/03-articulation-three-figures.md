@@ -2,6 +2,7 @@
 title: "Architecture: The Articulation, and the Three Figures at Its Joints"
 description: "The movement’s interior articulation — parenthesis, hinge-movement, the reception’s turn — and the three figures standing at its joints."
 date: 2026-09-07
+revised: 2026-09-09
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -67,7 +68,7 @@ The seams themselves are held with very high confidence. Three independent kinds
 
 What the three beats carry in time, and why an advent is being narrated from the far side of it, is the next section's question.
 
-[^crescendo]: B. F. Westcott, *The Gospel according to St John* (London: John Murray, 1908), p. 8, at verse 11: "The word forms a climax when combined with those which precede: was, was in the world, came to His own." Westcott's triad begins at verse 9's ἦν; reading the crescendo from ἐρχόμενον forward is this commentary's own, and is made at verse 9. Herman N. Ridderbos, *The Gospel according to John: A Theological Commentary*, trans. John Vriend (Grand Rapids: Eerdmans, 1997), p. 45: "With this the negative reaction to the coming and work of the Logos, already referred to in vss. 5 and 10, the prologue has reached its low point." Ridderbos's separate remark on the same page, that the Israel reading of verse 11 yields "a sort of climax" across verses 10 and 11, is hedged and conditional in his own text and is not the sentence relied on here.
+[^crescendo]: B. F. Westcott, *The Gospel according to St John* (London: John Murray, 1882), p. 8, at verse 11: "The word forms a climax when combined with those which precede: was, was in the world, came to His own." Westcott's triad begins at verse 9's ἦν; reading the crescendo from ἐρχόμενον forward is this commentary's own, and is made at verse 9. Herman N. Ridderbos, *The Gospel according to John: A Theological Commentary*, trans. John Vriend (Grand Rapids: Eerdmans, 1997), p. 45: "With this the negative reaction to the coming and work of the Logos, already referred to in vss. 5 and 10, the prologue has reached its low point." Ridderbos's separate remark on the same page, that the Israel reading of verse 11 yields "a sort of climax" across verses 10 and 11, is hedged and conditional in his own text and is not the sentence relied on here.
 
 [^turn]: John F. McHugh, *A Critical and Exegetical Commentary on John 1–4* (International Critical Commentary; London: T&T Clark, 2009), pp. 49–50: "each new sentence of the Prologue except 12 (ὅσοι δέ) has begun with an asyndeton," and, at verse 14, "the continuous asyndeton from v. 1 to v. 11." McHugh's observation is about the openings of sentences; connectives inside a sentence are a separate matter, and the Prologue has several. D. A. Carson, *The Gospel according to John* (Pillar New Testament Commentary; Grand Rapids: Eerdmans, 1991), p. 112: "From v. 12b on there are few such links, and the rise in pace adds forward movement as the text with increasing explicitness drives deeper into the realm of history." Carson bounds his set of linking words at verse 12a, so the last link in the chain is the receiving of verse 12 itself.
 

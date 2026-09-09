@@ -2,6 +2,7 @@
 title: "Architecture: The Temporal Payload — An Advent Told in Retrospect"
 description: "The unit’s tenses as one plan: an advent told in retrospect, from the aorist frame through the imperfect interior to the climactic begetting, with one present left open."
 date: 2026-09-08
+revised: 2026-09-09
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -99,7 +100,7 @@ Where this movement sits — between the opening verses and the summit at verse 
 
 [^summary]: Barth, *Witness to the Word*, p. 87, where the verb "refers to his total appearance and not simply to the first moment of his activity." Murray J. Harris, *John* (Exegetical Guide to the Greek New Testament; Nashville: B&H Academic, 2015), p. 22, taking the Prologue's aorists as constative — "action, whether momentary, prolonged, or repeated, that is conceived of as a unit" — a definition that admits momentary action, so the support is real and is not decisive by itself. Chrysostom is quoted at John F. McHugh, *A Critical and Exegetical Commentary on John 1–4* (International Critical Commentary; London: T&T Clark, 2009), p. 21: the verb points "not to this man's coming into existence, but to the mission itself." McHugh at p. 22 declines to make the two exclusive, allowing both the existence of the Baptist and his mission. The weight rests on Barth.
 
-[^career]: B. F. Westcott, *The Gospel according to St John* (London: John Murray, 1908), p. 7, where the Word is "advancing towards the Incarnation by preparatory revelations" and "came in type and prophecy and judgment," and where verse 11 is "the special personal manifestation of the Light to a chosen race" (pp. 7–8). The covenant career is Westcott's; reading the light's being in the world as its coming is this commentary's.
+[^career]: B. F. Westcott, *The Gospel according to St John* (London: John Murray, 1882), p. 7, where the Word is "advancing towards the Incarnation by preparatory revelations" and "came in type and prophecy and judgment," and where verse 11 is "the special personal manifestation of the Light to a chosen race" (pp. 7–8). The covenant career is Westcott's; reading the light's being in the world as its coming is this commentary's.
 
 [^calvin]: John Calvin, *Commentary on the Gospel according to John*, vol. 1, p. 38: "This extends to every age of the world." On that same page Calvin names his subject — "the only subject here treated is the common light of nature, which is far inferior to faith" — so the sentence is said of that light and not of the covenant. His covenant claim comes at verse 11, vol. 1, pp. 39–40.
 
