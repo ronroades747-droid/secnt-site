@@ -3,7 +3,7 @@ title: "Agent, not instrument"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — Agent, not instrument."
 cycle: john-1-1-to-3
 audience: familiar-with-scripture
-scheduled: 2026-09-08
+scheduled: 2026-09-20
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Across the upper part of the frame, a single-line headline in pale type: The Word was not what God used. Below it, set larger and in gold, the Greek phrase di' autou, meaning through him. Beneath the Greek, one line of smaller grey type reading A tool is held. An agent holds. Under that, small and grey, the reference John 1:3. Nothing else on the frame but the attribution line along the bottom."
 license: CC-BY-4.0
 draft: false

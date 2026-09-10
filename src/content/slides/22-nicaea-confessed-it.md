@@ -3,7 +3,7 @@ title: "Nicaea confessed it"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — Nicaea confessed it."
 cycle: john-1-1-to-3
 audience: for-everyone
-scheduled: 2026-09-02
+scheduled: 2026-09-14
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Across the upper part of the frame, a single-line headline in pale type: The church didn't invent it. Beneath it, a small grey label, John recorded it, and under that, set in gold, a line of scripture: the Word was God; and under that in smaller grey type, John 1:1. Below those, a second grey label, Thomas confessed it, and under it, in the same pale type as the headline, a second line of scripture: My Lord and my God; and under that in grey, John 20:28. Nothing else on the frame but the attribution line along the bottom."
 license: CC-BY-4.0
 draft: false

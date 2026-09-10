@@ -3,7 +3,7 @@ title: "Older than any book that records it"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — Older than any book that records it."
 cycle: john-1-1-to-3
 audience: students-and-teachers
-scheduled: 2026-09-01
+scheduled: 2026-09-12
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it and no Greek. Across the upper middle, a single-line headline in pale type: John did not invent this. Directly beneath it, set entirely in gold, one line: All things came to be through him. Under that, in smaller grey type, the reference John 1:3. Lower down, one line of grey English: Older than any book that records it. Nothing else on the frame but the attribution line along the bottom."
 license: CC-BY-4.0
 draft: false

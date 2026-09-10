@@ -3,7 +3,7 @@ title: "Verse 1 answered at verse 18"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — Verse 1 answered at verse 18."
 cycle: john-1-1-to-3
 audience: familiar-with-scripture
-scheduled: 2026-09-02
+scheduled: 2026-09-13
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Across the upper middle, a single-line headline in pale type: Verse 18 answers verse 1. Beneath it, on one line in the same pale type, a phrase of Greek: πρὸς τὸν θεόν; and under that in smaller grey type, John 1:1 — with God. Below those, set entirely in gold, a second line of Greek: εἰς τὸν κόλπον τοῦ πατρός; and under it in grey, John 1:18 — in the bosom of the Father. Nothing else on the frame but the attribution line along the bottom."
 license: CC-BY-4.0
 draft: false

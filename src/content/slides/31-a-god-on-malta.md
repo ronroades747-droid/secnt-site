@@ -3,7 +3,7 @@ title: "“A god” is right — on Malta"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — “A god” is right — on Malta."
 cycle: john-1-1-to-3
 audience: students-and-teachers
-scheduled: 2026-09-10
+scheduled: 2026-09-23
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Across the upper part of the frame, a headline in pale type on one line: “A god” is right — on Malta. Beneath it, alone and much larger, a single Greek word set in gold: theos. Under it, small and grey, the reference John 1:1. Lower in the frame, in grey type on two lines, Malta had many gods. John writes where God is one. Nothing else on the frame but the attribution line along the bottom."
 license: CC-BY-4.0
 draft: false

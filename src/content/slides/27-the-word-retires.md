@@ -3,7 +3,7 @@ title: "“The Word” retires"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — “The Word” retires."
 cycle: john-1-1-to-3
 audience: familiar-with-scripture
-scheduled: 2026-09-07
+scheduled: 2026-09-19
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Across the upper part of the frame, a single-line headline in pale type: The title vanishes after verse 14. Below it, set larger and in gold, the Greek phrase ho logos. Beneath the Greek, one line of smaller grey type reading Once the Person is named, the placeholder retires. Under that, small and grey, the reference John 1:1, 14. Nothing else on the frame but the attribution line along the bottom."
 license: CC-BY-4.0
 draft: false

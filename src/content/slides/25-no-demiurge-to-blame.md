@@ -3,7 +3,7 @@ title: "No demiurge to blame"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — No demiurge to blame."
 cycle: john-1-1-to-3
 audience: familiar-with-scripture
-scheduled: 2026-09-05
+scheduled: 2026-09-17
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Across the upper part of the frame, a single-line headline in pale type: John 1:3 says the world is good. Beneath it, one line of smaller grey type reading Every rival system needed someone else to blame. Below that, set larger and in gold, a single line reading Nothing in creation is traceable to a rival hand. Nothing else on the frame but the attribution line along the bottom."
 license: CC-BY-4.0
 draft: false

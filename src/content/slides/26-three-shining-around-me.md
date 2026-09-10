@@ -3,7 +3,7 @@ title: "The Three shining around me"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — The Three shining around me."
 cycle: john-1-1-to-3
 audience: familiar-with-scripture
-scheduled: 2026-09-05
+scheduled: 2026-09-18
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Across the upper part of the frame, a single-line headline in pale type: The Three are not a complication. Beneath it, one line of smaller grey type reading The verse never names God without the Word. Below that, set larger and in gold, a single line reading You reach the One through the Three. Under the gold line, small and grey, the reference John 1:1. Nothing else on the frame but the attribution line along the bottom."
 license: CC-BY-4.0
 draft: false

@@ -3,7 +3,7 @@ title: "The verb John refused"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — The verb John refused."
 cycle: john-1-1-to-3
 audience: familiar-with-scripture
-scheduled: 2026-09-09
+scheduled: 2026-09-21
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Across the upper part of the frame, a headline in pale type on two lines: John had this verb. He never used it of the Word. Beneath it, standing alone and set large in gold, a single Greek word of seven letters. Below that, in smaller grey type on two lines, the line He uses it three times in the next sentence, of everything else. Under it, small and grey, the reference John 1:3. Nothing else on the frame but the attribution line along the bottom."
 license: CC-BY-4.0
 draft: false
