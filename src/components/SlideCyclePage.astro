@@ -11,7 +11,7 @@ import { getCollection, render } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumb from './Breadcrumb.astro';
 import PageDates from './PageDates.astro';
-import { slideUrl, isVisible, formatDate } from '../lib/site';
+import { slideUrl, isSlideVisible, formatDate } from '../lib/site';
 import { SLIDE_IDS } from '../lib/slide-ids';
 import AudienceChip from './AudienceChip.astro';
 
@@ -54,7 +54,7 @@ const crumbs = [
 
     <ol class="slide-list">
       {slides.map((s) =>
-        isVisible(s) ? (
+        isSlideVisible(s) ? (
           <li>
             <a href={slideUrl(s.id)}>
               <span class="slide-list__title">{s.data.title}</span>

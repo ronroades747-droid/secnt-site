@@ -1,0 +1,18 @@
+# SECNT — scheduled publish build (the Editor's ruling of 10 September 2026).
+# Deploy:  npx wrangler deploy
+# Secret:  npx wrangler secret put DEPLOY_HOOK_URL
+# Dry run: npx wrangler dev  then
+#          curl "http://localhost:8787/cdn-cgi/local/scheduled?format=json"
+
+name = "secnt-publish-cron"
+main = "worker.js"
+compatibility_date = "2026-09-10"
+
+[triggers]
+# 12:00 UTC daily = 08:00 America/New_York in EDT, 07:00 in EST.
+# Cloudflare cron expressions are UTC; the hour is not DST-corrected by
+# ruling, and the drift is always earlier, never later.
+crons = ["0 12 * * *"]
+
+# No routes and no fetch handler: this Worker is not reachable over HTTP.
+# It exists only to be woken by the cron above.

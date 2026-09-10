@@ -9,7 +9,7 @@
 import { getCollection } from 'astro:content';
 import SlideCyclePage from '../../../components/SlideCyclePage.astro';
 import SlideResourcePage from '../../../components/SlideResourcePage.astro';
-import { isVisible } from '../../../lib/site';
+import { isVisible, isSlideVisible } from '../../../lib/site';
 import { assertSlideIds } from '../../../lib/slide-ids';
 
 export async function getStaticPaths() {
@@ -18,7 +18,9 @@ export async function getStaticPaths() {
   // Gate the build on the ids being exactly the QR-baked slugs — drafts
   // included, since a stub's URL is in a placed code before it goes live.
   assertSlideIds(allSlides.map((entry) => entry.id));
-  const slides = allSlides.filter(isVisible);
+  // Slide pages wait for their own `scheduled` date (the 10 Sep 2026 ruling); cycle
+  // indexes above do not — they carry no such field.
+  const slides = allSlides.filter(isSlideVisible);
   return [
     ...cycles.map((entry) => ({
       params: { entry: entry.id },

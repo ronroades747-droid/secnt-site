@@ -147,6 +147,29 @@ const showDrafts = process.env.SECNT_SHOW_DRAFTS === '1';
 export const isVisible = (entry: { data: { draft?: boolean } }) =>
   !import.meta.env.PROD || showDrafts ? true : !entry.data.draft;
 
+// Visibility gate for SLIDE pages, which additionally wait for their own
+// publication date (the Editor's ruling of 10 September 2026; the Plan decision number is assigned when the Plan is amended). `scheduled`
+// is the short's YouTube date, carried from the Subject Index into the stub;
+// the page goes live on the morning of that date, hours ahead of the short,
+// so the description link is never ahead of the page it points at.
+//
+// The gate is DATE-ONLY on purpose. The time of day is carried by *when the
+// publish build runs* — the Cloudflare cron at 12:00 UTC — not by this field,
+// which the schema types as a bare date. Consequence, stated rather than
+// discovered: a build triggered for some other reason after 00:00 UTC on the
+// day is already past a bare date, so an ordinary evening push can surface
+// the next day's page early. That is accepted (Editor's ruling, 10 Sep 2026);
+// tightening it means comparing in America/New_York here.
+//
+// `slideCycles` entries carry no `scheduled` and keep using isVisible.
+export const isSlideVisible = (entry: {
+  data: { draft?: boolean; scheduled: Date };
+}) => {
+  if (!isVisible(entry)) return false;
+  if (!import.meta.env.PROD || showDrafts) return true;
+  return entry.data.scheduled.getTime() <= Date.now();
+};
+
 // Normalize the commentary `diagram` field to an array. The field is either a
 // single diagram object (the common case, and every Cycle-1 page) or an array
 // of them (a page carrying several — Jn 1:4–5 §4.1 and §5.4). Consumers — the
