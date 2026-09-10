@@ -3,10 +3,10 @@ title: "“A god” is right — on Malta"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — “A god” is right — on Malta."
 cycle: john-1-1-to-3
 audience: students-and-teachers
-scheduled: 2026-09-23
+scheduled: 2026-09-10
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Across the upper part of the frame, a headline in pale type on one line: “A god” is right — on Malta. Beneath it, alone and much larger, a single Greek word set in gold: theos. Under it, small and grey, the reference John 1:1. Lower in the frame, in grey type on two lines, Malta had many gods. John writes where God is one. Nothing else on the frame but the attribution line along the bottom."
 license: CC-BY-4.0
-draft: true
+draft: false
 ---
 
 Sooner or later someone tells you that John's opening line should read *and the Word was a god*, and the instinct is to answer that their Greek is wrong. **The instinct is the weaker move**, and it is worth knowing that before you need it rather than after. At the level of grammar alone the rendering is available — and there is a place in the New Testament where it is the right one. In Acts 28 Paul is shipwrecked on Malta; a viper fastens on his hand as he lays brushwood on the fire, he shakes it off, and the islanders — who had been waiting for him to swell up and fall down dead — conclude that he is a god. Murray Harris says that "a god" is there **"a proper translation,"** and it is: those islanders had a pantheon, and their world had room on it for one more. Our research concludes, with the field's commentary and grammar at near-unanimity behind the reading of John's clause, that what rules the same rendering out of the Prologue is **not the words but the frame they stand in**. John writes inside Israel's confession that God is one, and for a monotheist the singular can name one being and no other — there is no shelf of lesser deities to set the Word on. **So the rendering that fits Malta perfectly has nowhere to stand in John 1:1.** It fails, and it fails on the world the sentence is spoken in.
