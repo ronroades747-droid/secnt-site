@@ -3,7 +3,7 @@ title: "The Genesis echo departs"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — The Genesis echo departs."
 cycle: john-1-1-to-3
 audience: new-to-the-bible
-scheduled: 2026-08-22
+scheduled: 2026-08-26
 imageAlt: "Slide on a dark slate field. Headline, two lines, set at the left: Genesis: God made. / John: the Word was. Gold line: Not made. Already there. Beneath it, the references Genesis 1:1 · John 1:1. Imagery filling the right of the frame: an immense still expanse of dark water under an unbroken sky long before dawn, a broad warm golden glow above the horizon spreading across the water, fading leftward into the flat slate field the type sits on."
 license: CC-BY-4.0
 draft: false

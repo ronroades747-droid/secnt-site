@@ -3,7 +3,7 @@ title: "Foundation, not capstone"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — Foundation, not capstone."
 cycle: john-1-1-to-3
 audience: new-to-the-bible
-scheduled: 2026-08-28
+scheduled: 2026-09-03
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Centred on the field, the headline in a single line: The last line carries the first two. In gold beneath it: and the Word was God. Under that, smaller, the reference: John 1:1. Beneath that, on one line: The top of the climb, and the rock under it."
 license: CC-BY-4.0
 draft: false

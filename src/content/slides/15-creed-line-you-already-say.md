@@ -3,7 +3,7 @@ title: "The creed line you already say"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — The creed line you already say."
 cycle: john-1-1-to-3
 audience: new-to-the-bible
-scheduled: 2026-08-30
+scheduled: 2026-09-07
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Across the middle, the headline in a single line: You already say John 1:3. Beneath it, in gold, one line of the Nicene Creed: through whom all things were made. Then, smaller and in grey, the two names it belongs to: the Nicene Creed and John 1:3."
 license: CC-BY-4.0
 draft: false

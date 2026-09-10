@@ -3,7 +3,7 @@ title: "“Was” means the Word did not begin"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — “Was” means the Word did not begin."
 cycle: john-1-1-to-3
 audience: familiar-with-scripture
-scheduled: 2026-08-23
+scheduled: 2026-08-29
 imageAlt: "Slide on a dark slate field. Headline, three lines, set at the left: “Was” means / the Word / did not begin. Gold line beneath it: the Greek word ἦν. Then, smaller: the Word already was — John 1:1. Imagery filling the right of the frame: an immense open expanse with no source of light anywhere in it — no sun, no disc, no bright point — a cool, pale silver-blue light already at its fullest along the right edge and weakening steadily leftward, dissolving into the flat slate field the type sits on."
 license: CC-BY-4.0
 draft: false

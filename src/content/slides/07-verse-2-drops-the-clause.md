@@ -3,7 +3,7 @@ title: "Verse 2 drops the famous clause"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — Verse 2 drops the famous clause."
 cycle: john-1-1-to-3
 audience: new-to-the-bible
-scheduled: 2026-08-24
+scheduled: 2026-08-30
 imageAlt: "Slide on a dark slate field. Across the top of the frame, thin, soft veils of pale cloud, luminous throughout with an even warm-white light — no sun, no brightest point anywhere in them — thinning steadily downward and dissolving into the flat slate field below. Centred on that field, the headline: Verse 2 drops “the Word was God.” In gold beneath it, the whole of verse 2: “This one was in the beginning with God” — John 1:2. Then, smaller: A selection is a choice, not an echo."
 license: CC-BY-4.0
 draft: false

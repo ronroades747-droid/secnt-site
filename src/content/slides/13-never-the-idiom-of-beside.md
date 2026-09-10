@@ -3,7 +3,7 @@ title: "Never the idiom of “beside”"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — Never the idiom of “beside”."
 cycle: john-1-1-to-3
 audience: familiar-with-scripture
-scheduled: 2026-08-29
+scheduled: 2026-09-05
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Centred on the field, the headline in a single line: This is not the Greek for beside — with the word beside set in italic. In gold beneath it, the Greek of the clause: πρὸς τὸν θεόν. Then, smaller, the reference: John 1:1. Below that, smaller still: Communion, not geography."
 license: CC-BY-4.0
 draft: false

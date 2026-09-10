@@ -3,7 +3,7 @@ title: "The sentence your Bible breaks"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — The sentence your Bible breaks."
 cycle: john-1-1-to-3
 audience: students-and-teachers
-scheduled: 2026-08-25
+scheduled: 2026-08-31
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Centred on the field, the headline in a single line: This sentence crosses the verse line. In gold beneath it, the Greek clause ὃ γέγονεν. Then, smaller, the sentence read whole: “What has come into being, in him was life.” — John 1:3–4."
 license: CC-BY-4.0
 draft: false

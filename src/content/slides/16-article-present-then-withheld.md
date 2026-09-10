@@ -3,7 +3,7 @@ title: "The article present, then withheld"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — The article present, then withheld."
 cycle: john-1-1-to-3
 audience: familiar-with-scripture
-scheduled: 2026-08-31
+scheduled: 2026-09-08
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Across the upper middle, the headline in a single line: Watch the article disappear. Beneath it, two lines of Greek in pale type, one above the other, each a clause of John 1:1. In the first line one short word near the middle of it is set in gold; in the second line there is no gold at all. Below them, in smaller grey type, the reference: John 1:1."
 license: CC-BY-4.0
 draft: false

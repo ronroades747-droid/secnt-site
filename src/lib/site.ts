@@ -148,7 +148,7 @@ export const isVisible = (entry: { data: { draft?: boolean } }) =>
   !import.meta.env.PROD || showDrafts ? true : !entry.data.draft;
 
 // Visibility gate for SLIDE pages, which additionally wait for their own
-// publication date (the Editor's ruling of 10 September 2026; the Plan decision number is assigned when the Plan is amended). `scheduled`
+// publication date (**Plan D33**, 10 September 2026; Shorts Loop Rev 39). `scheduled`
 // is the short's YouTube date, carried from the Subject Index into the stub;
 // the page goes live on the morning of that date, hours ahead of the short,
 // so the description link is never ahead of the page it points at.
@@ -158,7 +158,7 @@ export const isVisible = (entry: { data: { draft?: boolean } }) =>
 // which the schema types as a bare date. Consequence, stated rather than
 // discovered: a build triggered for some other reason after 00:00 UTC on the
 // day is already past a bare date, so an ordinary evening push can surface
-// the next day's page early. That is accepted (Editor's ruling, 10 Sep 2026);
+// the next day's page early. That is accepted (Plan D33(e));
 // tightening it means comparing in America/New_York here.
 //
 // `slideCycles` entries carry no `scheduled` and keep using isVisible.

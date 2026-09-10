@@ -3,7 +3,7 @@ title: "Count the “was”es"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — Count the “was”es."
 cycle: john-1-1-to-3
 audience: new-to-the-bible
-scheduled: 2026-08-29
+scheduled: 2026-09-06
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Across the top, the headline in a single line: John writes was four times — with the word was set in italic. Beneath it, in gold, four lines of scripture, one clause to a line: In the beginning was the Word, and the Word was with God, and the Word was God. This one was in the beginning with God. Then, smaller and in grey, the reference: John 1:1–2."
 license: CC-BY-4.0
 draft: false

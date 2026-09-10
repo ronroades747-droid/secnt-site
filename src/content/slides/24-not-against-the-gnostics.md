@@ -3,7 +3,7 @@ title: "Not written against “the Gnostics”"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — Not written against “the Gnostics”."
 cycle: john-1-1-to-3
 audience: students-and-teachers
-scheduled: 2026-09-04
+scheduled: 2026-09-16
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Across the upper part of the frame, a single-line headline in pale type: Not written against the Gnostics. Beneath it, one line of smaller grey type reading The systems are second-century. The Prologue is late first. Below that, set larger and in gold, a single line reading John 1:3 rules out every competing agency. Nothing else on the frame but the attribution line along the bottom."
 license: CC-BY-4.0
 draft: false

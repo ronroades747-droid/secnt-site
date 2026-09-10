@@ -3,7 +3,7 @@ title: "You cannot be in communion with yourself"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — You cannot be in communion with yourself."
 cycle: john-1-1-to-3
 audience: new-to-the-bible
-scheduled: 2026-08-22
+scheduled: 2026-08-27
 imageAlt: "Slide on a dark slate field. Headline, three lines, set at the left: You cannot be / in communion / with yourself. Gold line beneath it: “With God” comes first. Then the reference John 1:1. Imagery filling the right of the frame: an immense open expanse with no source of light anywhere in it — no sun, no disc, no bright point — warmest at the right edge and weakening steadily leftward, dissolving into the flat slate field the type sits on."
 license: CC-BY-4.0
 draft: false

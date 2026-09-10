@@ -3,7 +3,7 @@ title: "The making and the made"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — The making and the made."
 cycle: john-1-1-to-3
 audience: familiar-with-scripture
-scheduled: 2026-08-26
+scheduled: 2026-09-01
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Centred on the field, the headline in a single line: This tense change is doing doctrine. In gold beneath it, two Greek verb forms separated by a dot: ἐγένετο · γέγονεν, with their transliterations beneath in italics: egeneto · gegonen. Then, smaller, the sentence: The aorist looks at the making; the perfect looks at the made. — John 1:3–4."
 license: CC-BY-4.0
 draft: false

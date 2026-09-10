@@ -3,7 +3,7 @@ title: "Fills the room / locks the doors"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — Fills the room / locks the doors."
 cycle: john-1-1-to-3
 audience: new-to-the-bible
-scheduled: 2026-08-28
+scheduled: 2026-09-04
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Centred on the field, the headline on one line: Two halves, two claims. Beneath it, smaller, the reference: John 1:3. Below that, in gold on one line: The first fills the room; the second locks the doors."
 license: CC-BY-4.0
 draft: false

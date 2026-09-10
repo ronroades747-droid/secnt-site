@@ -3,7 +3,7 @@ title: "Made, and then let go — refused"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — Made, and then let go — refused."
 cycle: john-1-1-to-3
 audience: familiar-with-scripture
-scheduled: 2026-08-31
+scheduled: 2026-09-10
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Across the upper portion, a single-line headline in pale type: Made, and never let go. Beneath it, centred, a short Greek phrase set entirely in gold, with the reference John 1:4 in smaller grey type directly under it. Below that, one line of grey English: What has come to be has its life in him. Nothing else on the frame but the attribution line along the bottom."
 license: CC-BY-4.0
 draft: false

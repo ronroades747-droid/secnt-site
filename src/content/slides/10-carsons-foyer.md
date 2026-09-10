@@ -3,7 +3,7 @@ title: "Carson’s foyer"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — Carson’s foyer."
 cycle: john-1-1-to-3
 audience: familiar-with-scripture
-scheduled: 2026-08-27
+scheduled: 2026-09-02
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Centred in the lower half, the headline in a single line: The Prologue is not an introduction. In gold beneath it, on one line: A preface is left behind. A foyer frames. Then, smaller, in two lines: You enter the Gospel through it, and the Gospel answers back to it. Beneath that, the reference: John 1:1–18."
 license: CC-BY-4.0
 draft: false

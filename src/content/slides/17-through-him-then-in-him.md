@@ -3,7 +3,7 @@ title: "Through him, then in him"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — Through him, then in him."
 cycle: john-1-1-to-3
 audience: familiar-with-scripture
-scheduled: 2026-08-31
+scheduled: 2026-09-09
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Across the upper third, the headline in a single line: Made through him. Alive in him. Beneath it, centred, a short Greek phrase in pale type, with the reference John 1:3 in smaller grey type directly under it. Lower down, a second and shorter Greek phrase of the same size, set entirely in gold, with the reference John 1:4 under it in the same grey. Nothing else on the frame but the attribution line along the bottom."
 license: CC-BY-4.0
 draft: false

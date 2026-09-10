@@ -3,7 +3,7 @@ title: "Not even one thing"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — Not even one thing."
 cycle: john-1-1-to-3
 audience: new-to-the-bible
-scheduled: 2026-08-20
+scheduled: 2026-08-25
 imageAlt: "Slide on a dark slate field. Headline: “Nothing” is not what John wrote. Gold line: “without him not even one thing came to be”, with John 1:3 beneath it. Imagery: the Milky Way running down from the upper right, threaded with cool interstellar dust, one warm golden light at the top right whose glow reaches the whole field."
 license: CC-BY-4.0
 draft: false

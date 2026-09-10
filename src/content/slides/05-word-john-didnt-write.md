@@ -3,7 +3,7 @@ title: "The word John didn’t write"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — The word John didn’t write."
 cycle: john-1-1-to-3
 audience: familiar-with-scripture
-scheduled: 2026-08-23
+scheduled: 2026-08-28
 imageAlt: "Slide on a dark slate field. Headline, two lines: The word John / didn’t write. Beneath it, in gold, the Greek word πάντα. Then, smaller: “all things,” not “the world” — John 1:3. Filling the whole frame, countless small points of pale light, no one of them standing out, densest at the top and fading continuously downward until only a few barely-visible points remain among the words."
 license: CC-BY-4.0
 draft: false
