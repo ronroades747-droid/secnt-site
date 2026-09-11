@@ -1,0 +1,98 @@
+<svg viewBox="0 0 1440 895" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="gmTitle gmDesc" preserveAspectRatio="xMidYMid meet">
+  <title id="gmTitle">The Gospel in miniature — the turn at John 1:11 | 12 laid over the Gospel's two books: a turn in a linear movement, not a fold.</title>
+  <desc id="gmDesc">The turn at John 1:11 | 12 as the Gospel's own turn composed in a verse each. εἰς τὰ ἴδια ἦλθεν, καὶ οἱ ἴδιοι αὐτὸν οὐ παρέλαβον is laid over the Book of Signs (1:19–12:50), closing on the refusal at the Gospel's own summary, 12:37–41; ὅσοι δὲ ἔλαβον αὐτόν is laid over the Book of Glory (13:1–20:31), closing on the believing at 20:30–31 — two spans, one turn, the marked δέ at the seam. An inclusio arc joins the reception's last phrase to the book's last sentence: τοῖς πιστεύουσιν εἰς τὸ ὄνομα αὐτοῦ (1:12) ↔ πιστεύοντες ζωὴν ἔχητε ἐν τῷ ὀνόματι αὐτοῦ (20:31). At 13:1, where οἱ ἴδιοι returns and the household that refused him is replaced by the household he loves, the turn's realization is drawn dashed and dimmed, held provisional beyond this volume's scope. The movement is drawn as a line with a turn in it, not folded about a centre.</desc>
+
+  <style>
+    /* --- family theming interface (section anchor: jn1-6-13-architectural-orientation.svg):
+           light page renders from in-file fallbacks; dark slide renders when the host sets
+           color / --color-gold / --color-meta / --color-goldtext --- */
+    .gk    { font-family:'SBL BibLit','Cardo','Gentium Plus','Charis SIL','Source Serif 4',Georgia,serif; fill:currentColor; }
+    .gkd   { font-family:'SBL BibLit','Cardo','Gentium Plus','Charis SIL','Source Serif 4',Georgia,serif; fill:var(--color-meta,#6b6b6b); }
+    .ink   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; }
+    .inkb  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; font-weight:600; }
+    .desc  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; font-style:italic; }
+    .lbl   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); }
+    .note  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); font-style:italic; }
+    .glab  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-goldtext,#8a6608); font-style:italic; }
+
+    .panel { fill:none; stroke:currentColor; stroke-width:1.6; }
+    .seam  { stroke:var(--color-gold,#b8860b); stroke-width:3.4; fill:none; stroke-linecap:round; }
+    .arcS  { stroke:var(--color-gold,#b8860b); stroke-width:2.6; fill:none; stroke-linecap:round; }
+    .held  { stroke:var(--color-gold,#b8860b); stroke-width:2.2; fill:none; stroke-linecap:round; stroke-dasharray:7 6; opacity:0.6; }
+    .node  { fill:var(--color-gold,#b8860b); }
+    .pring { fill:none; stroke:var(--color-gold,#b8860b); stroke-width:2; opacity:0.6; }
+    .brk   { stroke:var(--color-meta,#6b6b6b); stroke-width:1.4; fill:none; }
+  </style>
+
+  <!-- ================= family title block ================= -->
+  <text class="ink" x="720" y="50" text-anchor="middle" font-size="34" letter-spacing="0.5">The Gospel in Miniature</text>
+  <text class="lbl" x="720" y="82" text-anchor="middle" font-size="22">the turn at John 1:11 | 12 as the Gospel's own turn · composed in a verse each</text>
+
+  <!-- ================= the two verses laid over the two books ================= -->
+  <!-- v. 11 over the Book of Signs (cell x 250–870) -->
+  <text class="lbl" x="560" y="142" text-anchor="middle" font-size="21">v. 11</text>
+  <text class="gk"  x="560" y="186" text-anchor="middle" font-size="24">εἰς τὰ ἴδια ἦλθεν, καὶ οἱ ἴδιοι αὐτὸν οὐ παρέλαβον</text>
+  <text class="lbl" x="560" y="220" text-anchor="middle" font-size="21">He came to what was his own,</text>
+  <text class="lbl" x="560" y="246" text-anchor="middle" font-size="21">and his own people did not welcome him</text>
+  <path class="brk" d="M252 284 L252 272 L868 272 L868 284"/>
+
+  <!-- v. 12 over the Book of Glory (cell x 900–1360) -->
+  <text class="lbl" x="1130" y="142" text-anchor="middle" font-size="21">v. 12</text>
+  <text class="gk"  x="1130" y="186" text-anchor="middle" font-size="24">ὅσοι δὲ ἔλαβον αὐτόν</text>
+  <text class="lbl" x="1130" y="220" text-anchor="middle" font-size="21">But as many as received him</text>
+  <path class="brk" d="M902 284 L902 272 L1358 272 L1358 284"/>
+
+  <!-- ================= the seam: one turn, on the marked δέ ================= -->
+  <text class="gk" x="885" y="326" text-anchor="middle" font-size="26">δέ</text>
+  <line class="seam" x1="885" y1="340" x2="885" y2="510"/>
+  <circle class="node" cx="885" cy="340" r="5"/>
+
+  <!-- ================= the Gospel as one line ================= -->
+  <rect class="panel" x="80"  y="350" width="150" height="110" rx="4"/>
+  <rect class="panel" x="250" y="350" width="620" height="110" rx="4"/>
+  <rect class="panel" x="900" y="350" width="460" height="110" rx="4"/>
+
+  <!-- the Prologue, where the turn is composed -->
+  <text class="lbl" x="155" y="386" text-anchor="middle" font-size="21">1:1–18</text>
+  <text class="lbl" x="155" y="413" text-anchor="middle" font-size="21">the Prologue</text>
+  <text class="glab" x="155" y="441" text-anchor="middle" font-size="21">vv. 11 | 12</text>
+
+  <!-- the Book of Signs, closing on the refusal -->
+  <text class="ink"  x="270" y="396" text-anchor="start" font-size="22">the Book of Signs</text>
+  <text class="lbl"  x="270" y="429" text-anchor="start" font-size="21">1:19–12:50</text>
+  <text class="lbl"  x="838" y="396" text-anchor="end"   font-size="21">12:37–41</text>
+  <text class="note" x="838" y="429" text-anchor="end"   font-size="21">closes on the refusal</text>
+  <circle class="node" cx="852" cy="460" r="6"/>
+
+  <!-- the Book of Glory, closing on the believing -->
+  <text class="ink"  x="922"  y="396" text-anchor="start" font-size="22">the Book of Glory</text>
+  <text class="lbl"  x="922"  y="429" text-anchor="start" font-size="21">13:1–20:31</text>
+  <text class="lbl"  x="1328" y="396" text-anchor="end"   font-size="21">20:30–31</text>
+  <text class="note" x="1328" y="429" text-anchor="end"   font-size="21">closes on the believing</text>
+
+  <!-- the seam's reading, in words -->
+  <text class="glab" x="870" y="540" text-anchor="end" font-size="21">one turn, on the marked “but”</text>
+
+  <!-- ================= 13:1 — the turn's realization, held (dashed, dimmed, hollow) ================= -->
+  <line class="held" x1="918" y1="467" x2="918" y2="500"/>
+  <circle class="pring" cx="918" cy="460" r="7"/>
+  <text class="lbl"  x="934" y="492" text-anchor="start" font-size="21">13:1 · his own, <tspan class="gkd">οἱ ἴδιοι</tspan>, named again —</text>
+  <text class="lbl"  x="934" y="518" text-anchor="start" font-size="21">the household that refused him</text>
+  <text class="lbl"  x="934" y="544" text-anchor="start" font-size="21">replaced by the household he loves</text>
+  <text class="note" x="934" y="570" text-anchor="start" font-size="21">held beyond this volume</text>
+
+  <!-- ================= the inclusio (solid): 1:12 answered by 20:31, beneath the whole line ================= -->
+  <path class="arcS" d="M155 460 C155 940 1340 940 1340 460"/>
+  <circle class="node" cx="155"  cy="460" r="6"/>
+  <circle class="node" cx="1340" cy="460" r="6"/>
+
+  <text class="gk"  x="740" y="616" text-anchor="middle" font-size="24">τοῖς πιστεύουσιν εἰς τὸ ὄνομα αὐτοῦ</text>
+  <text class="lbl" x="740" y="644" text-anchor="middle" font-size="21">1:12 · to those who believe in his name</text>
+  <text class="gk"  x="740" y="686" text-anchor="middle" font-size="24">πιστεύοντες ζωὴν ἔχητε ἐν τῷ ὀνόματι αὐτοῦ</text>
+  <text class="lbl" x="740" y="714" text-anchor="middle" font-size="21">20:31 · that believing you may have life in his name</text>
+  <text class="note" x="740" y="752" text-anchor="middle" font-size="21">the reception's last phrase, answered by the book's last sentence</text>
+
+  <!-- ================= synthesis ================= -->
+  <text class="desc" x="720" y="871" text-anchor="middle" font-size="22">One turn on the marked “but” — a turn in a linear movement, not a fold about a centre.</text>
+</svg>
