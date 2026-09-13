@@ -5,6 +5,11 @@
 site from `main`. It has no fetch handler and no route: nothing can call it
 over HTTP.
 
+**It is not the only trigger.** `.github/workflows/daily-publish.yml` POSTs the
+same hook at **12:30 UTC**, half an hour behind this one (Editor's ruling,
+12 September 2026). Either trigger alone publishes the day's page, so read what
+follows as describing one of two independent paths to the same build.
+
 **Why it exists.** The site is a static Astro build, so a page goes live only
 when a build runs. `isSlideVisible` in `src/lib/site.ts` holds a slide page
 back until its `scheduled` date has arrived — and without a build at that
@@ -26,9 +31,16 @@ never to fix the cron first.
 
 What this cannot repair is the other surface. The short goes out at 9:00 PM ET
 on its own date regardless, so a missed morning means the description link
-lands on a 404 for the audience the short just sent. That is the reason to
-enable a Cloudflare **Notifications** alert on Worker errors: it is the only
-thing that catches a failure on a morning nobody is looking.
+lands on a 404 for the audience the short just sent. Two things stand against
+that. The first is redundancy: the GitHub Actions workflow above POSTs the same
+hook at 12:30 UTC, so both triggers must fail on the same morning before a page
+goes dark. The second is that the workflow is also the alarm. A Cloudflare
+**Notifications** alert on Worker errors would be the natural instrument and is
+not available here — those alert types require the Workers **Paid** plan, and
+this account is on the free one — whereas GitHub emails the owner when a
+scheduled workflow fails, for nothing. Note that GitHub disables a scheduled
+workflow after 60 days without repository activity; this repo is nowhere near
+that, but a long quiet stretch is worth a glance at the Actions tab.
 
 **The hour.** 12:00 UTC is 08:00 Eastern in EDT and 07:00 in EST. The hour is
 deliberately not DST-corrected (Plan D33; Editor's ruling, 10 September 2026): the drift
@@ -48,6 +60,10 @@ beat the short's 9:00 PM ET publication.
    npx wrangler deploy
    npx wrangler secret put DEPLOY_HOOK_URL      # paste the hook URL
    ```
+3. **Give the same URL to the second trigger.** GitHub → the `secnt-site` repo →
+   Settings → Secrets and variables → Actions → **New repository secret**, named
+   `CF_DEPLOY_HOOK_URL`. Until it exists the workflow fails loudly on every run,
+   which is the intended behaviour — a silent no-op would be worse.
 
 ## Checking it
 

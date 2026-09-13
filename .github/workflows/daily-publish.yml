@@ -1,0 +1,50 @@
+# SECNT — the second publish trigger (Plan D33; Editor's ruling, 12 September 2026).
+#
+# Why there are two. A slide page goes live only when a build runs, so the build
+# IS the publication. The Cloudflare Worker in ops/publish-cron is the first
+# trigger, at 12:00 UTC; this workflow is the second, thirty minutes later.
+# Either one alone publishes the day's page — the visibility gate is a predicate
+# over all forty-five slides, not a queue, so ANY build reveals whatever is due —
+# which means a morning is lost only if both triggers fail on the same day.
+#
+# It also supplies the alerting the Worker cannot. Cloudflare's Workers error
+# notifications require the Workers Paid plan; GitHub emails the owner of a
+# scheduled workflow when a run fails, at no cost. That is the morning nobody is
+# looking, which is the only morning the alert is for.
+#
+# CF_DEPLOY_HOOK_URL is the same Pages deploy hook the Worker holds, kept as a
+# repository secret (Settings → Secrets and variables → Actions). It carries no
+# authentication of its own, so anyone holding it can trigger builds: it is never
+# echoed below, and `set -x` must never be added to that step.
+name: Daily publish build
+
+on:
+  schedule:
+    # 12:30 UTC = 08:30 America/New_York in EDT, 07:30 in EST. Deliberately
+    # behind the Worker's 12:00, so the ordinary case is that this run finds the
+    # page already live and rebuilds it harmlessly. GitHub's scheduler is
+    # best-effort and runs late under load; that is tolerable here, because the
+    # deadline this has to beat is the short's 9:00 PM ET.
+    - cron: '30 12 * * *'
+  # A button, too: Actions → Daily publish build → Run workflow forces a build
+  # without waiting and without handling the hook URL by hand.
+  workflow_dispatch:
+
+jobs:
+  poke-deploy-hook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: POST the Pages deploy hook
+        env:
+          HOOK: ${{ secrets.CF_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$HOOK" ]; then
+            echo "CF_DEPLOY_HOOK_URL is not set on this repository" >&2
+            exit 1
+          fi
+          code=$(curl -sS -o /dev/null -w '%{http_code}' -X POST "$HOOK")
+          echo "deploy hook -> $code"
+          case "$code" in
+            2*) ;;
+            *) echo "deploy hook returned $code" >&2; exit 1 ;;
+          esac
