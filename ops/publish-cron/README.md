@@ -51,14 +51,34 @@ beat the short's 9:00 PM ET publication.
 
 ## Checking it
 
-- **Did it run?** Cloudflare dashboard → the Worker → Settings → Trigger
-  Events → **Cron Triggers → Past Events**. A failed POST throws, so a bad or
-  missing hook shows up there as a failed run rather than as silence.
+- **Did it run, and what happened?** Cloudflare dashboard → the Worker →
+  **Observability**, range Last 24 hours. A success writes
+  `[secnt-publish] <timestamp> cron=0 12 * * * -> 200`; a failure writes its
+  reason in words, because both throws in `worker.js` carry the cause in the
+  message. This works only because `[observability]` is set in `wrangler.toml`.
+  It was not on 12 September 2026, and that failed run left nothing behind but a
+  count. Free-plan retention is three days: a failure not read inside that
+  window is gone.
+- **If the logs have aged out.** The Worker → **Metrics** keeps invocation and
+  error counts longer than the logs live. It will tell you a run failed but not
+  why — with one useful exception: a failure recording **zero subrequests** means
+  the POST was never attempted, which narrows it to the `DEPLOY_HOOK_URL` guard
+  or to a value malformed enough that `fetch` refused it. That is how the
+  12 September failure was diagnosed with no log to read.
 - **Force a run locally:**
   ```
   npx wrangler dev
   curl "http://localhost:8787/cdn-cgi/local/scheduled?format=json"
   ```
+  This uses a local secret, so it exercises the code and not the deployed
+  `DEPLOY_HOOK_URL`.
+- **Force a run against the real secret:**
+  ```
+  npx wrangler dev --remote --test-scheduled
+  ```
+  then open `http://localhost:8787/__scheduled`. The Worker runs on Cloudflare
+  with its real bindings, so this is the only check that proves the stored URL
+  works — and it fires an actual build.
 - **Force a real build without waiting:** POST the deploy hook yourself.
 
 ## What this does not do

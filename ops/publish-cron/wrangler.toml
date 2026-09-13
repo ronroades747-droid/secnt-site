@@ -15,6 +15,17 @@ compatibility_date = "2026-09-10"
 # true. (Removing it later requires a redeploy, not just a dashboard change.)
 workers_dev = false
 
+# Persist this Worker's logs to the dashboard. Without this a failed run is an
+# exception COUNT on the metrics page and nothing more: the run of 12 September
+# 2026 threw, the console line naming the reason was written and discarded, and
+# the cause had to be inferred from a subrequest count of zero. The setting
+# lives here rather than on the dashboard toggle because `wrangler deploy`
+# overwrites what the toggle sets. One run a day against a free-plan allowance
+# of 200,000 events, so the sampling rate is 1 and no run is ever thinned out.
+[observability]
+enabled = true
+head_sampling_rate = 1
+
 [triggers]
 # 12:00 UTC daily = 08:00 America/New_York in EDT, 07:00 in EST.
 # Cloudflare cron expressions are UTC; the hour is not DST-corrected by
