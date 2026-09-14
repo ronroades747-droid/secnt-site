@@ -6,7 +6,7 @@ audience: familiar-with-scripture
 scheduled: 2026-09-24
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Across the upper part of the frame, a headline in pale type on one line: The Son is the Father’s exegete. Beneath it, larger, a single Greek word set in gold, the verb of John 1:18. Under it, small and grey, its transliteration in italic, exēgēsato, and the reference John 1:18. Lower in the frame, in grey type on two lines: “He has made him known.” Our word “exegesis” descends from this verb. Nothing else on the frame but the attribution line along the bottom."
 license: CC-BY-4.0
-draft: true
+draft: false
 ---
 
 Most hearers meet the word *exegesis* as a specialist's term — what scholars do to texts, carefully and at some distance. **John 1:18 turns that around.** At the close of the Prologue John says of the Son ἐκεῖνος ἐξηγήσατο — "he has made him known" — and the verb he chooses is the one our word *exegesis* descends from. **The Son is the Father's exegete**: the one who narrates the unseen God, who draws him out into the open where he can be known. Our research holds the line here at the plain sense of the verb — the fuller treatment of verse 18 belongs to the commentary's work on the Prologue's closing verses — and the plain sense is enough to carry the turn. **It also reframes the work of anyone who teaches from it.** The name we give the careful, word-by-word reading of Scripture comes from the verb John uses for the Son making the Father known. **Careful reading is not a technique for handling a text; it is an act of knowing God.**
