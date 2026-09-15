@@ -13,7 +13,7 @@ John's Gospel was written last, and that one true fact quietly does something to
 
 *The citation chain, because a quotation is only as good as the page you can check it on.* The sentence is **F. F. Bruce's**, from *The Gospel of John: Introduction, Exposition and Notes* (London: Pickering and Inglis, 1983), page 32. It reaches this commentary **through D. A. Carson**, who quotes it at page 118 of *The Gospel according to John* (Pillar New Testament Commentary, Eerdmans, 1991) in his comment on John 1:3–4, and Carson's page is the copy these notes were verified against. Carson's own observation there — that creation by the pre-existent Christ is a common New Testament theme though the *Word* title for it is confined to the Prologue — is carried here in paraphrase only; no wording of his is quoted.
 
-*The Greek on this slide's frames: there is none, and for once the source did not have any either.* The lecture slide this short comes from is a quotation slide — a judgment about four texts, not about a Greek form. The Greek those four texts share is real and is worth a teacher's time; it is not this slide's, and the lecture is the better door to it.
+*The Greek on this slide's frames: there is none, and that is deliberate.* What the slide carries is a judgment about four texts, not a claim about a Greek form — so there is no single word to point at. The Greek those four passages share is real and is worth a teacher's time; it is simply not what this slide is for.
 
 ## Pedagogical task
 

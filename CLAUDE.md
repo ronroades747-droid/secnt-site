@@ -17,7 +17,9 @@ Site mechanics, schema, and runbooks are documented **here**. Scholarly and prod
 ## Two things that are absolute in this repo
 
 1. **Never copy `Sources/` content here.** The corpus repo is private because its archives are licensed. This repo is public. Licensed source material must never reach it in any form — not as a quotation block, not as an archive file, not in a commit message.
-2. **Claude never flips `draft: false`.** Publication is Ron's, at GATE 4, per the single-placer rule in the Commentary Production instructions. A session authors, delivers, and verifies; it does not publish.
+2. **Claude never publishes.** A session authors, delivers and verifies; it does not publish. Publication is Ron's, per the single-placer rule in the Commentary Production instructions.
+
+   ***Amended for the Shorts register, 14 September 2026*** *(Editor's ruling; Shorts Loop **Rev 46(e)**, Program Plan **D38**)*. In that register a slide page is now **authored `draft: false`** and left **uncommitted**; `scheduled` alone governs release, and **the Editor's own commit and push are the act of publishing**. The rule's purpose is untouched — nothing a session writes is live until Ron pushes, and the uncommitted working tree is the hold that `draft: true` used to be. **Elsewhere in this repo the flat prohibition stands**: for Commentary pages and every other collection, Claude does not set `draft: false` at all. *The guard that makes the Shorts case safe is `src/lib/check-slide-dates.mjs`, which fails the build on any `scheduled` that moves a slot backwards.*
 
 ---
 
