@@ -15,8 +15,19 @@
 // prior deploy keeps serving.
 //
 // Order below is the first-run publication order (Shorts Subject Index,
-// Editor-approved 19 Aug 2026), the same number the filenames and the corpus
-// short folders carry.
+// Editor-approved 19 Aug 2026), the same number the filenames carry. It used
+// to be the corpus short number too; see the renumbering note below for the
+// two entries where those two numbers now diverge.
+//
+// RENUMBERED 15 Sep 2026. Slots 15 and 16 were never uploaded, and the Editor
+// moved them to the tail of the run (ruling of 14 Sep 2026). Their files now
+// carry the `46-` and `47-` prefixes and their entries sit at the end of this
+// list, so the site's prefixes read 01-14, 17-45, 46, 47 — the gap at 15/16 is
+// deliberate, not a missing file. The CORPUS still calls these shorts 15 and 16
+// and its folders are still `15_`/`16_`: the prefix here is publication order,
+// the corpus number is the short's identity, and for these two they diverge
+// from this commit on. No URL moved — the loader strips the prefix, so
+// /slides/creed-line-you-already-say/ and its QR code are untouched.
 //
 // The ORDER IS LOAD-BEARING as of 23 Aug 2026: SlideCyclePage sorts the cycle
 // index by it. It used to sort by `scheduled`, but that field is the Editor's
@@ -40,8 +51,6 @@ export const SLIDE_IDS: readonly string[] = [
   'fills-the-room-locks-the-doors', // 12
   'never-the-idiom-of-beside', // 13
   'four-times-was', // 14
-  'creed-line-you-already-say', // 15
-  'article-present-then-withheld', // 16
   'through-him-then-in-him', // 17
   'made-not-let-go', // 18
   'communion-god-is', // 19
@@ -71,6 +80,8 @@ export const SLIDE_IDS: readonly string[] = [
   'calvins-autotheos', // 43
   'one-choice-two-architectures', // 44
   'same-hands', // 45
+  'creed-line-you-already-say', // 46 (corpus short 15)
+  'article-present-then-withheld', // 47 (corpus short 16)
 ];
 
 // Fails the build if the ids the loader produced are not exactly SLIDE_IDS.
