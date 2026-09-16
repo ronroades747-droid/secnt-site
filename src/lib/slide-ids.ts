@@ -22,6 +22,8 @@
 //     the collection: not built, not listed, not date-checked, and not here.
 //     Naming one moves it back into `slides/` with its prefix and `scheduled`
 //     date, and adds its slug here.
+//   - Slot 25 (`no-demiurge-to-blame`) was withdrawn to held on the same date,
+//     before it went live, so the prefixes run 24, 26 — deliberate.
 //   - The empty placeholders for slots 34–45 were removed on the same date;
 //     a candidate with no page has no file anywhere until it is named.
 //
@@ -61,7 +63,6 @@ export const SLIDE_IDS: readonly string[] = [
   'nicaea-confessed-it', // 22
   'two-orders-of-existence', // 23
   'not-against-the-gnostics', // 24
-  'no-demiurge-to-blame', // 25
   'three-shining-around-me', // 26
 ];
 
