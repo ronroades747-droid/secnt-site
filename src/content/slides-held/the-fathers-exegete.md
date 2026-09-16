@@ -3,7 +3,6 @@ title: "The Son is the Father’s exegete"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — The Son is the Father’s exegete."
 cycle: john-1-1-to-3
 audience: familiar-with-scripture
-scheduled: 2026-09-24
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Across the upper part of the frame, a headline in pale type on one line: The Son is the Father’s exegete. Beneath it, larger, a single Greek word set in gold, the verb of John 1:18. Under it, small and grey, its transliteration in italic, exēgēsato, and the reference John 1:18. Lower in the frame, in grey type on two lines: “He has made him known.” Our word “exegesis” descends from this verb. Nothing else on the frame but the attribution line along the bottom."
 license: CC-BY-4.0
 draft: false

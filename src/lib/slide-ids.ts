@@ -1,41 +1,43 @@
-// The 45 slide-page slugs of the Jn 1:1–3 run — frozen, and checked at build.
+// The slide-page slugs in the Teaching Aids collection — checked at build.
 //
 // A slide entry's id IS its public URL (`/slides/<id>/`) and IS its served
-// asset path (`/slides/<id>/<id>-16x9.jpg`), and from first publish that URL
-// is baked into a QR code that is already generated and placed. It can never
-// change (Decision 6, 19 Aug 2026; the route header says the same). The risk
-// is not a deliberate rename — it is a quiet one: the slides loader strips an
-// `^\d+-` run-order prefix from the filename, and any prefix the pattern
-// misses (`4-` where `04-` was meant) stays in the id and re-points that
-// page's code at a 404 without failing anything.
+// asset path (`/slides/<id>/<id>-16x9.jpg`), and once published that URL is
+// citation-stable: it never changes (Decision 6, 19 Aug 2026). The risk is
+// not a deliberate rename — it is a quiet one: the slides loader strips an
+// `^\d+-` publication-order prefix from the filename, and any prefix the
+// pattern misses (`4-` where `04-` was meant) stays in the id and moves the
+// page to a URL nothing links to, without failing anything.
 //
 // So this list is the independent check. It is not derived from the
-// filenames; it is the set of slugs the codes encode. assertSlideIds() turns
-// any drift into a build failure, and a broken build never deploys — the
-// prior deploy keeps serving.
+// filenames. assertSlideIds() turns any drift into a build failure, and a
+// broken build never deploys — the prior deploy keeps serving.
 //
-// Order below is the first-run publication order (Shorts Subject Index,
-// Editor-approved 19 Aug 2026), the same number the filenames carry. It used
-// to be the corpus short number too; see the renumbering note below for the
-// two entries where those two numbers now diverge.
+// PUBLICATION ONE AT A TIME (Editor's ruling, 16 Sep 2026). The run no longer
+// has a pre-set calendar. The Editor names each Teaching Aid, with its date,
+// when he decides it; Web Dev then creates its file in `src/content/slides/`
+// with the next free `NN-` prefix and adds its slug to the END of this list,
+// in the same commit. So this list holds exactly the slides that have been
+// NAMED — published, or scheduled and not yet live — and nothing else.
+//   - Finished pages not yet named sit in `src/content/slides-held/`, outside
+//     the collection: not built, not listed, not date-checked, and not here.
+//     Naming one moves it back into `slides/` with its prefix and `scheduled`
+//     date, and adds its slug here.
+//   - The empty placeholders for slots 34–45 were removed on the same date;
+//     a candidate with no page has no file anywhere until it is named.
 //
-// RENUMBERED 15 Sep 2026. Slots 15 and 16 were never uploaded, and the Editor
-// moved them to the tail of the run (ruling of 14 Sep 2026). Their files now
-// carry the `46-` and `47-` prefixes and their entries sit at the end of this
-// list, so the site's prefixes read 01-14, 17-45, 46, 47 — the gap at 15/16 is
-// deliberate, not a missing file. The CORPUS still calls these shorts 15 and 16
-// and its folders are still `15_`/`16_`: the prefix here is publication order,
-// the corpus number is the short's identity, and for these two they diverge
-// from this commit on. No URL moved — the loader strips the prefix, so
-// /slides/creed-line-you-already-say/ and its QR code are untouched.
+// Prefix gap at 15/16. Slots 15 and 16 were never uploaded and were moved to
+// the tail of the run (ruling of 14 Sep 2026) as `46-`/`47-`; on 16 Sep 2026
+// both went to `slides-held/` with the rest of the unnamed pages. The gap in
+// the prefixes is deliberate. The corpus still numbers those two shorts 15
+// and 16: the prefix here is publication order, the corpus number is the
+// short's identity, and for those two they diverge.
 //
-// The ORDER IS LOAD-BEARING as of 23 Aug 2026: SlideCyclePage sorts the cycle
-// index by it. It used to sort by `scheduled`, but that field is the Editor's
-// and is set at the flip, so two live slides can share a date — slots 3 and 4
-// both landed on 2026-08-22 and the list put slot 4 first. Re-sequencing the
-// run therefore means re-ordering this list, in the same commit as the files.
-// The assertion below still compares SETS, so it will not catch an order
-// mistake; the cycle index is where one shows.
+// The ORDER IS LOAD-BEARING (since 23 Aug 2026): SlideCyclePage sorts the
+// cycle index by it rather than by `scheduled`, because two slides can share
+// a date. Keep the list in publication order — which, with each new slide
+// appended as it is named, is the order it was named in. The assertion below
+// compares SETS, so it will not catch an order mistake; the cycle index is
+// where one shows.
 export const SLIDE_IDS: readonly string[] = [
   'god-was-never-alone', // 01
   'not-even-one', // 02
@@ -61,36 +63,15 @@ export const SLIDE_IDS: readonly string[] = [
   'not-against-the-gnostics', // 24
   'no-demiurge-to-blame', // 25
   'three-shining-around-me', // 26
-  'the-word-retires', // 27
-  'agent-not-instrument', // 28
-  'verb-john-refused', // 29
-  'one-sentence-both-heresies', // 30
-  'a-god-on-malta', // 31
-  'the-fathers-exegete', // 32
-  'eternity-not-endless-time', // 33
-  'old-idiom-new-agent', // 34
-  'no-sending-without-distinction', // 35
-  'two-greek-nothings', // 36
-  'answered-with-a-tense', // 37
-  'revelation-rests-on-creation', // 38
-  'one-letter-not-the-iota', // 39
-  'spine-of-the-prologue', // 40
-  'aseity-is-a-denial', // 41
-  'being-and-becoming', // 42
-  'calvins-autotheos', // 43
-  'one-choice-two-architectures', // 44
-  'same-hands', // 45
-  'creed-line-you-already-say', // 46 (corpus short 15)
-  'article-present-then-withheld', // 47 (corpus short 16)
 ];
 
 // Fails the build if the ids the loader produced are not exactly SLIDE_IDS.
 // Called from the /slides/ route's getStaticPaths, on the unfiltered
-// collection, so drafts are checked too — a stub's id is baked into a code
-// long before its page goes live.
+// collection, so drafts are checked too — a named slide's id is fixed from
+// the moment it is scheduled, before its page goes live.
 //
-// Adding or retiring a slide page is a deliberate act: add or remove the slug
-// here in the same commit, and say in the message which code it answers to.
+// Naming or withdrawing a slide page is a deliberate act: add or remove the
+// slug here in the same commit as the file.
 export function assertSlideIds(ids: readonly string[]): void {
   const expected = new Set(SLIDE_IDS);
   const found = new Set(ids);
@@ -99,9 +80,9 @@ export function assertSlideIds(ids: readonly string[]): void {
   const duplicated = ids.filter((id, i) => ids.indexOf(id) !== i).sort();
   if (missing.length === 0 && unexpected.length === 0 && duplicated.length === 0) return;
   const lines = [
-    `Slide ids do not match the ${SLIDE_IDS.length} QR-baked slugs in src/lib/slide-ids.ts.`,
-    'A slide id is its published URL and its asset path; a changed id points a',
-    'placed QR code at a 404. Check the NN- filename prefixes and the',
+    `Slide ids do not match the ${SLIDE_IDS.length} slugs listed in src/lib/slide-ids.ts.`,
+    'A slide id is its published URL and its asset path; a changed id moves the',
+    'page to a URL nothing links to. Check the NN- filename prefixes and the',
     "`generateId` strip in content.config.ts before touching this list.",
   ];
   if (missing.length) lines.push(`  expected but not found: ${missing.join(', ')}`);

@@ -16,11 +16,15 @@
 // moves a slot backwards breaks that, which is every past-date typo except
 // one landing on slot 01.
 //
-// What it cannot check. This repo cannot see the Subject Index, which is the
-// actual authority for these dates and lives in the corpus repo. Exact
-// agreement with the publication-order table is checked in two other places:
-// at GATE S0 of each build session (Loop Rev 39(b)), and by the daily
-// conformance read that mails the Editor any disagreement.
+// What it cannot check. The authority for each date is the Editor, who names
+// each slide with its date when he decides it (publication one at a time,
+// ruling of 16 Sep 2026 — superseding the Subject Index's pre-set
+// publication-order table as the source). A date typed wrong but still in
+// order is invisible here; the check at the moment of naming is reading the
+// date back against the Editor's hand-off.
+//
+// Only files in `src/content/slides/` are read. Finished pages not yet named
+// sit in `src/content/slides-held/`, carry no `scheduled`, and are not checked.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -79,8 +83,8 @@ export function checkSlideDates() {
     throw new Error(
       '[secnt] slide publication dates will not do (Plan D33; Shorts Loop Rev 39(b)):\n  - ' +
         problems.join('\n  - ') +
-        '\n\nThe authority for these dates is the publication-order table in the corpus at ' +
-        'Shorts\\Shorts Subject Index — SECNT Lectures.md. Fix the date rather than the check.',
+        '\n\nThe authority for these dates is the Editor\'s hand-off naming each slide and its ' +
+        'date (publication one at a time, 16 Sep 2026). Fix the date rather than the check.',
     );
   }
 }

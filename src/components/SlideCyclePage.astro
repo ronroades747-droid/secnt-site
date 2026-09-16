@@ -2,11 +2,13 @@
 // Cycle index — Route 2 of the Editor's two-routes ruling (Shorts Web Dev
 // Handoff, 19 Aug 2026, §2): a short introduction (the entry body, supplied
 // by Commentary Production) and the list of the cycle's slide pages, each
-// link resolving to the same canonical URL the QR uses. Slides not yet live
-// are listed with their committed publish date — working title + date,
-// unlinked until live — so the cycle page is the run's public calendar. That
-// is why this template reads the full slides collection, drafts included,
-// by design (metadata only; draft pages themselves are not built).
+// link resolving to the slide's canonical URL. Slides named but not yet live
+// are listed with their publish date — title + date, unlinked until live.
+// Since 16 Sep 2026 slides are named one at a time, so that line shows only
+// what the Editor has already scheduled; finished pages not yet named live in
+// `src/content/slides-held/`, outside the collection, and never appear here.
+// This template reads the full slides collection, drafts included, by design
+// (metadata only; draft pages themselves are not built).
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumb from './Breadcrumb.astro';
@@ -29,8 +31,9 @@ const { Content } = await render(entry);
 // The `NN-` filename prefix does not break the tie, because `generateId`
 // strips it before the collection is keyed.
 //
-// SLIDE_IDS is the run order (Subject Index, Editor-approved 19 Aug 2026), so
-// the list now reads in the order the run publishes whatever any date says.
+// SLIDE_IDS is the run order (each slide appended as the Editor names it,
+// since 16 Sep 2026), so the list reads in the order the run publishes
+// whatever any date says.
 // NOTE: this makes the ORDER of SLIDE_IDS load-bearing, where its own header
 // calls the order documentation — re-sequencing the run now means re-ordering
 // that list. The header is amended to match.

@@ -149,7 +149,8 @@ export const isVisible = (entry: { data: { draft?: boolean } }) =>
 
 // Visibility gate for SLIDE pages, which additionally wait for their own
 // publication date (**Plan D33**, 10 September 2026; Shorts Loop Rev 39). `scheduled`
-// is the short's YouTube date, carried from the Subject Index into the stub;
+// is the short's YouTube date, given by the Editor when he names the slide
+// (publication one at a time, 16 Sep 2026) and written into its file then;
 // the page goes live on the morning of that date, hours ahead of the short,
 // so the description link is never ahead of the page it points at.
 //

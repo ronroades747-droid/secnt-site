@@ -22,7 +22,7 @@ and the only thing that differs is the clock.
 ## If a day is missed
 
 Nothing is lost, and no catch-up is needed. The gate is a predicate over every
-entry, not a queue of pending work: each build asks of all forty-five slides
+entry, not a queue of pending work: each build asks of every scheduled slide
 which of them have dates that have arrived. So a cron that fails on the 12th
 leaves that page dark for a day, and the build on the 13th publishes both it
 and the 13th's page together. Any build does this — a push to `main`, or
@@ -99,6 +99,7 @@ beat the short's 9:00 PM ET publication.
 
 ## What this does not do
 
-It does not touch YouTube. The short is scheduled in YouTube Studio from the
-same date in the Subject Index's publication-order table; the two surfaces
-read one date and neither triggers the other.
+It does not touch YouTube. The short is scheduled in YouTube Studio on the
+same date the Editor gives when he names the slide (publication one at a
+time, 16 September 2026); the two surfaces carry one date and neither
+triggers the other.

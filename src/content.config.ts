@@ -368,9 +368,12 @@ const slides = defineCollection({
       description: z.string().optional(),
       cycle: reference('slideCycles'),
       audience,
-      // The committed publication date of the short this page pairs with —
-      // drives the cycle index's calendar line for entries not yet live.
+      // The publication date of the short this page pairs with, given by the
+      // Editor when he names the slide (one at a time, 16 Sep 2026) — gates
+      // release and drives the cycle index's "Coming" line until then.
       // Distinct from `date` (go-live, set at the flip like every page).
+      // Finished pages not yet named sit in src/content/slides-held/, outside
+      // this collection's base, and carry no `scheduled` until they are.
       scheduled: z.coerce.date(),
       date: z.coerce.date().optional(),
       revised: z.coerce.date().optional(),

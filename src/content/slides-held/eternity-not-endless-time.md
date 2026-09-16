@@ -3,7 +3,6 @@ title: "Eternity is not endless time"
 description: "Projectable slide and teaching notes from the SECNT commentary on John 1:1–3 — Eternity is not endless time."
 cycle: john-1-1-to-3
 audience: familiar-with-scripture
-scheduled: 2026-09-25
 imageAlt: "Slide on a flat dark slate field, with no imagery anywhere on it. Across the upper part of the frame, a single-line headline in pale type: Eternity is not a longer timeline. Beneath it, alone and set large in gold, a single Greek word of two letters — the imperfect verb of John 1:1. Under it, small and grey, the reference John 1:1. Lower in the frame, in grey type on one line, A beginning. An end. And the succession of moments. Nothing else on the frame but the attribution line along the bottom."
 license: CC-BY-4.0
 draft: false
