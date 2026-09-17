@@ -1,6 +1,6 @@
 ---
 title: "Architecture: The Co-Articulation of Beats and Tenses"
-description: "The rhetorical articulation and the temporal plan superimposed on one verse line: two dimensions of a single composition, doubly attested."
+description: "The rhetorical articulation and the temporal plan superimposed on one verse line: two dimensions of a single composition, each resting on its own witnesses at its own register."
 date: 2026-09-03
 book: john
 chapter: 1
