@@ -49,9 +49,14 @@ whenever the order differs, as 15/16 already do.
 ## To create a new stub (one commit)
 
 1. Create `src/content/slides/NN-<slug>.md` with `title`, `cycle`,
-   `audience`, `scheduled`, `license: CC-BY-4.0` and `draft: true`, and an
+   `audience`, `scheduled`, `license: CC-BY-4.0` and `draft: false`, and an
    empty body. The cycle page shows it as "Coming <date>" until it is live.
 2. Append `'<slug>'` to the end of `SLIDE_IDS`.
+
+`scheduled` alone gates release (Rev 46(e)); the hold on an unfilled stub is
+that it stays **uncommitted**, not the draft flag. Go-live is the Cloudflare
+rebuild on the date. (Editor's ruling, 18 September 2026, correcting this
+recipe's `draft: true`.)
 
 The Shorts build then fills the page and places its images under the slug
 returned.

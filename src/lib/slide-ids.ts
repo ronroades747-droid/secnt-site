@@ -65,6 +65,7 @@ export const SLIDE_IDS: readonly string[] = [
   'not-against-the-gnostics', // 24
   'three-shining-around-me', // 26
   'creed-line-you-already-say', // 27 (corpus short 15)
+  'one-sentence-both-heresies', // 28 (corpus short 30)
 ];
 
 // Fails the build if the ids the loader produced are not exactly SLIDE_IDS.
