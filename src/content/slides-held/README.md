@@ -20,7 +20,7 @@ The Editor names each Teaching Aid to Web Dev with:
 - **Old title** — only if the page is already built (a file in this folder),
   so it can be found.
 - **Date** — the day it publishes (the page goes live at 8:00 AM ET that day;
-  the short at 9:00 PM ET).
+  the short at 12:00 PM ET, per D41, 15 September 2026).
 - **Level** 0–3, mapped to the `audience` field:
   0 = `for-everyone` · 1 = `new-to-the-bible` ·
   2 = `familiar-with-scripture` · 3 = `students-and-teachers`.
@@ -32,7 +32,13 @@ dates to be non-decreasing by slot, so a gap left lower down is not reused).
 **Slugs:** lowercase ASCII from the final title, words hyphenated, small words
 dropped where that keeps it short. A page already built here **keeps its
 existing slug** — its served images under `public/slides/<slug>/` are named
-for it — even when its title changes.
+for it — even when its title changes. **But a short re-made under D44
+(19 September 2026) is a new short rather than a retitling, and takes a new
+slug:** its superseded attempt is deleted from this folder, with its served
+images, instead of being renamed. That holds only while the superseded page
+has never been live — a published slide URL is QR-baked and never re-pointed
+(Decision 6), so a short re-made after publication leaves the old page
+serving at its own slug.
 
 **The site slot is publication order, not the short's corpus number.** The
 corpus numbers its shorts by identity (`NN_<slug>` folders); the two diverge
