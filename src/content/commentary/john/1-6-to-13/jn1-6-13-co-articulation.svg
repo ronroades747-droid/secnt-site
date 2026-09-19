@@ -1,0 +1,138 @@
+<svg viewBox="0 0 1440 940" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="coTitle coDesc" preserveAspectRatio="xMidYMid meet">
+  <title id="coTitle">The co-articulation of John 1:6–13 — the unit's rhetorical beats and its temporal plan as two dimensions of one composition on the same verse line.</title>
+  <desc id="coDesc">The eight verses of John 1:6–13 stand on one verse line, read twice over. Above the line the rhetorical articulation divides the unit into four beats: the parenthesis at verses 6 to 8, the hinge-movement at verses 9 to 11, the turn at verse 12, and the close at verse 13. Below the line the temporal plan sets out four stations: the aorist frame, the imperfect interior, the reception aorists, and the climactic act. The two readings rest on their own witnesses at their own registers — the commentators who divide the unit, and the grammarians and commentators who parse its verbs — and they trace the same treads. They cross once, inside verse 8. The parenthesis closes at the end of that verse while the imperfect interior opens at its head, at οὐκ ἦν ἐκεῖνος τὸ φῶς, he was not the light, which is at once the parenthesis's one ἦν-clause and the interior's first verb. Between that crossing and the close of the parenthesis lies exactly one clause — verse 8b, ἀλλ᾽ ἵνα μαρτυρήσῃ περὶ τοῦ φωτός, but he came to bear witness to the light — and its width is the offset. The two dimensions do not open onto the present at the same place. The turn at verse 12 is marked by the connective δέ. The unit's one non-past verb, the present participle τοῖς πιστεύουσιν, to those who believe, stands at the turn's end and is marked by tense instead; it is drawn off the tread line, leaving the frame toward the reader. The two dimensions coincide in their treads, not in where each opens onto the evangelist's present.</desc>
+
+  <style>
+    /* --- family theming interface: light page renders from in-file fallbacks;
+           dark slide renders when the host sets color / --color-gold / --color-meta / --color-goldtext --- */
+    .gk    { font-family:'SBL BibLit','Cardo','Gentium Plus','Charis SIL','Source Serif 4',Georgia,serif; fill:currentColor; }
+    .gkd   { font-family:'SBL BibLit','Cardo','Gentium Plus','Charis SIL','Source Serif 4',Georgia,serif; fill:var(--color-meta,#6b6b6b); }
+    .ink   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; }
+    .desc  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; font-style:italic; }
+    .lbl   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); }
+    .note  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); font-style:italic; }
+    .glab  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-goldtext,#8a6608); font-style:italic; }
+    .gtab  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-goldtext,#8a6608); letter-spacing:2.5px; }
+
+    .band  { fill:none; stroke:currentColor; stroke-width:1.6; }
+    .cell  { fill:none; stroke:currentColor; stroke-width:1.6; }
+    .joint { stroke:var(--color-gold,#b8860b); stroke-width:3.4; fill:none; stroke-linecap:round; }
+    .cross { stroke:var(--color-gold,#b8860b); stroke-width:3.4; fill:none; stroke-linecap:butt; }
+    .bar   { stroke:var(--color-gold,#b8860b); stroke-width:3; fill:none; stroke-linecap:butt; }
+    .tick  { stroke:var(--color-gold,#b8860b); stroke-width:2.4; fill:none; stroke-linecap:round; }
+    .span  { stroke:var(--color-gold,#b8860b); stroke-width:2.6; fill:none; stroke-linecap:round; }
+    .arc   { stroke:var(--color-gold,#b8860b); stroke-width:2.6; fill:none; stroke-linecap:round; }
+    .rise  { stroke:var(--color-gold,#b8860b); stroke-width:1.4; fill:none; stroke-linecap:round; }
+    .node  { fill:var(--color-gold,#b8860b); }
+    .guide { stroke:var(--color-meta,#6b6b6b); stroke-width:1; fill:none; }
+    .divide{ stroke:var(--color-gold,#b8860b); stroke-width:2.6; fill:none; stroke-dasharray:7 6; stroke-linecap:round; }
+    .brk   { stroke:var(--color-meta,#6b6b6b); stroke-width:1; fill:none; }
+  </style>
+
+  <defs>
+    <marker id="co-arrow" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--color-gold,#b8860b)"/>
+    </marker>
+  </defs>
+
+  <!-- ================= family title block ================= -->
+  <text class="ink" x="720" y="50" text-anchor="middle" font-size="34" letter-spacing="0.5">The Co-Articulation of Beats and Tenses</text>
+  <text class="lbl" x="720" y="82" text-anchor="middle" font-size="22">John 1:6–13 · one composition, two dimensions</text>
+
+  <!-- ================= rhetorical register: flank ================= -->
+  <text class="gtab" x="250"  y="182" font-size="21">READ AS BEATS</text>
+  <text class="ink"  x="470"  y="182" font-size="22">the rhetorical articulation · synchronic</text>
+  <text class="note" x="1380" y="182" text-anchor="end" font-size="21">the commentators who divide the unit</text>
+
+  <!-- ================= the four beats ================= -->
+  <rect class="cell" x="250"     y="210" width="423.75" height="120" rx="4"/>
+  <rect class="cell" x="673.75"  y="210" width="423.75" height="120" rx="4"/>
+  <rect class="cell" x="1097.5"  y="210" width="141.25" height="120" rx="4"/>
+  <rect class="cell" x="1238.75" y="210" width="141.25" height="120" rx="4"/>
+
+  <text class="ink" x="461.88"  y="250" text-anchor="middle" font-size="25">the parenthesis</text>
+  <text class="ink" x="885.63"  y="250" text-anchor="middle" font-size="25">the hinge-movement</text>
+  <text class="ink" x="1168.13" y="250" text-anchor="middle" font-size="25">the turn</text>
+  <text class="ink" x="1309.38" y="250" text-anchor="middle" font-size="25">the close</text>
+
+  <!-- the verses themselves, on the grid, v. 8 split where the dimensions cross -->
+  <text class="lbl" x="321"    y="288" text-anchor="middle" font-size="22">v. 6</text>
+  <text class="lbl" x="462"    y="288" text-anchor="middle" font-size="22">v. 7</text>
+  <text class="lbl" x="567.63" y="288" text-anchor="middle" font-size="22">v. 8a</text>
+  <text class="lbl" x="638.38" y="288" text-anchor="middle" font-size="22">v. 8b</text>
+  <text class="lbl" x="744"    y="288" text-anchor="middle" font-size="22">v. 9</text>
+  <text class="lbl" x="886"    y="288" text-anchor="middle" font-size="22">v. 10</text>
+  <text class="lbl" x="1027"   y="288" text-anchor="middle" font-size="22">v. 11</text>
+  <text class="lbl" x="1168"   y="288" text-anchor="middle" font-size="22">v. 12</text>
+  <text class="lbl" x="1309"   y="288" text-anchor="middle" font-size="22">v. 13</text>
+
+  <!-- separators between verses inside a beat, no taller than the numeral -->
+  <line class="guide" x1="391.25" y1="271" x2="391.25" y2="291"/>
+  <line class="guide" x1="532.5"  y1="271" x2="532.5"  y2="291"/>
+  <line class="guide" x1="815"    y1="271" x2="815"    y2="291"/>
+  <line class="guide" x1="956.25" y1="271" x2="956.25" y2="291"/>
+
+  <!-- the 8a | 8b divide, which is also the offset's left bound -->
+  <line class="divide" x1="603" y1="271" x2="603" y2="346"/>
+
+  <!-- ================= the two joint marks ================= -->
+  <!-- rhetorical: the parenthesis closes after 8b -->
+  <line class="joint" x1="673.75" y1="210" x2="673.75" y2="356"/>
+  <!-- temporal: the imperfect interior opens at 8a's head, down to its own span -->
+  <line class="joint" x1="532.5"  y1="330" x2="532.5"  y2="422"/>
+  <line class="joint" x1="532.5"  y1="454" x2="532.5"  y2="484"/>
+
+  <!-- ================= the offset, between the two lines that bound it ================= -->
+  <line class="bar"  x1="603" y1="346" x2="673.75" y2="346"/>
+  <line class="tick" x1="603"    y1="338" x2="603"    y2="354"/>
+  <line class="tick" x1="673.75" y1="338" x2="673.75" y2="354"/>
+  <text class="glab" x="520" y="372" text-anchor="end" font-size="21">the offset · one clause</text>
+
+  <!-- ================= the turn's marker ================= -->
+  <text class="gk"  x="1168" y="360" text-anchor="middle" font-size="24">ὅσοι δέ</text>
+  <text class="lbl" x="1168" y="388" text-anchor="middle" font-size="21">but as many as · the turn is marked by <tspan class="gkd">δέ</tspan></text>
+
+  <!-- ================= temporal register: flank ================= -->
+  <text class="gtab" x="250"  y="440" font-size="21">READ AS TENSES</text>
+  <text class="ink"  x="470"  y="440" font-size="22">the temporal plan · diachronic</text>
+  <text class="note" x="1380" y="440" text-anchor="end" font-size="21">the grammarians and commentators who parse its verbs</text>
+
+  <!-- ================= the four stations, at their true extents, on two levels ================= -->
+  <line class="span" x1="250"   y1="484" x2="532.5"  y2="484"/>
+  <line class="span" x1="532.5" y1="484" x2="956.25" y2="484"/>
+  <line class="tick" x1="250"    y1="476" x2="250"    y2="492"/>
+  <line class="tick" x1="532.5"  y1="476" x2="532.5"  y2="492"/>
+  <line class="tick" x1="956.25" y1="476" x2="956.25" y2="492"/>
+  <text class="ink" x="391.25" y="512" text-anchor="middle" font-size="22">the aorist frame</text>
+  <text class="ink" x="744.38" y="512" text-anchor="middle" font-size="22">the imperfect interior</text>
+
+  <line class="span" x1="815"     y1="550" x2="1238.75" y2="550"/>
+  <line class="span" x1="1238.75" y1="550" x2="1380"    y2="550"/>
+  <line class="tick" x1="815"     y1="542" x2="815"     y2="558"/>
+  <line class="tick" x1="1238.75" y1="542" x2="1238.75" y2="558"/>
+  <line class="tick" x1="1380"    y1="542" x2="1380"    y2="558"/>
+  <text class="ink" x="1026.88" y="578" text-anchor="middle" font-size="22">the reception aorists</text>
+  <text class="ink" x="1309.38" y="578" text-anchor="middle" font-size="22">the climactic act</text>
+
+  <!-- ================= the aperture, off the tread line ================= -->
+  <circle class="node" cx="1168" cy="550" r="5.5"/>
+  <line class="rise" x1="1168" y1="556" x2="1168" y2="611"/>
+  <text class="gk"  x="1168" y="641" text-anchor="middle" font-size="24">τοῖς πιστεύουσιν</text>
+  <text class="lbl" x="1168" y="667" text-anchor="middle" font-size="21">to those who believe</text>
+  <text class="lbl" x="1168" y="693" text-anchor="middle" font-size="21">marked by tense, not by the connective</text>
+  <path class="arc" d="M1215 707 C1290 725, 1345 741, 1386 759" marker-end="url(#co-arrow)"/>
+  <text class="lbl" x="1392" y="793" text-anchor="end" font-size="21">toward the reader</text>
+
+  <!-- ================= the v. 8 detail ================= -->
+  <text class="note" x="250" y="660" font-size="21">inside v. 8 — the one place the two dimensions cross inside a sentence</text>
+  <text class="gk"   x="250" y="700" font-size="24">οὐκ ἦν ἐκεῖνος τὸ φῶς</text>
+  <text class="lbl"  x="250" y="726" font-size="21">he was not the light — the parenthesis's one <tspan class="gkd">ἦν</tspan>-clause and the interior's first verb</text>
+  <text class="gk"   x="250" y="764" font-size="24">ἀλλ᾽ ἵνα μαρτυρήσῃ περὶ τοῦ φωτός</text>
+  <text class="lbl"  x="250" y="790" font-size="21">but [he came] to bear witness to the light — the clause between the two joints</text>
+
+  <!-- ================= closing note and synthesis ================= -->
+  <text class="note" x="720" y="846" text-anchor="middle" font-size="21">the two dimensions coincide in their treads, not in where each opens onto the present</text>
+  <text class="desc" x="720" y="900" text-anchor="middle" font-size="22">Two dimensions of one composition — the same treads, each resting on its own witnesses at its own register.</text>
+</svg>
