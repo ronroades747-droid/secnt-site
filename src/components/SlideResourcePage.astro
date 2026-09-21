@@ -1,37 +1,95 @@
 ---
-// Slide resource page — one per short (Shorts Program Plan §2, D13; Shorts
-// Web Dev Handoff, 19 Aug 2026, §1). Route 1 lands here directly (the QR and
-// the typed short URL): title, the 16:9 slide displayed, download buttons for
-// both ratios, the notes body (with its Pedagogical task section, supplied by
-// Commentary Production), the onward link to the cycle's Lectures and
-// Commentary (the route tier, Plan §1), and the back-link to the cycle page.
+// Slide resource page — one per teaching aid (Shorts Program Plan sec 2, D13;
+// Shorts Web Dev Handoff, 19 Aug 2026, sec 1). Route 1 lands here directly
+// (the QR and the typed short URL): title, the 16:9 slide displayed, download
+// buttons for both ratios, the notes body (with its Pedagogical task section,
+// supplied by Commentary Production), the onward link to the Lectures and
+// Commentary (the route tier, Plan sec 1), and the return link.
 //
 // Download buttons carry data-goatcounter-click — downloads are the headline
 // metric (Plan D18); GoatCounter's count.js (loaded in BaseLayout) binds
 // these automatically, recording download/<slug>/<ratio> events.
-import { getEntry, render } from 'astro:content';
+//
+// TWO PROVENANCES, ONE PAGE (D47). An aid reaches this template either by its
+// `cycle` — a pre-D47 aid, belonging to the /slides run index — or by its
+// `section`, the commentary section its lecture taught. The surrounding
+// furniture is read from whichever it has: the breadcrumb, the context line,
+// the onward link and the return link all derive, so neither kind carries a
+// field the other needs.
+//
+// Through the D47 sec 6 migration an aid has BOTH for a while, and then it
+// shows both return routes — its index and its lecture. That is deliberate:
+// the index stays reachable until every aid has crossed, so none is ever
+// unreachable during the change (ask sec 5(b)). When the last has crossed, the
+// index retires and the cycle-shaped half of this page goes with it.
+//
+// The page's own URL never moves either way: /slides/<slug>/ is QR-baked into
+// published video and citation-stable (Decision 6; D45; the Editor's ruling of
+// 20 Sep 2026 confirming the reserved question at D47 sec 10).
+import { getCollection, getEntry, render } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumb from './Breadcrumb.astro';
 import PageDates from './PageDates.astro';
-import { slideCycleUrl, slideAssetUrl, commentaryUrl } from '../lib/site';
+import {
+  slideCycleUrl,
+  slideAssetUrl,
+  commentaryUrl,
+  lectureUrl,
+  volumeUrl,
+  splitCommentaryId,
+} from '../lib/site';
 import AudienceChip from './AudienceChip.astro';
 
 const { entry } = Astro.props;
 const d = entry.data;
 const { Content } = await render(entry);
-const cycle = await getEntry(d.cycle);
-const crumbs = [
-  { label: 'Teaching Aids', href: '/slides/' },
-  { label: cycle.data.title, href: slideCycleUrl(cycle.id) },
-  { label: d.title },
-];
+
+const cycle = d.cycle ? await getEntry(d.cycle) : null;
+const section = d.section ? await getEntry(d.section) : null;
+
+// Derived from the section when there is one: its unit is the passage, and the
+// volume supplies the book's display name, exactly as the commentary templates
+// resolve it.
+let sectionUnitId: string | null = null;
+let passageLabel = '';
+let bookDisplay = '';
+if (section) {
+  const { book, unit } = splitCommentaryId(section.id);
+  sectionUnitId = `${book}/${unit}`;
+  const vols = await getCollection('volumes');
+  bookDisplay = vols.find((v) => v.data.book === book)?.data.bookDisplay ?? book;
+  passageLabel = section.data.passageRef
+    ? `${bookDisplay} ${section.data.passageRef}`
+    : unit;
+}
+
+// The context line beside "Teaching Aids", and the passage the onward link
+// names. A section-borne aid speaks of its passage; a pre-D47 one of its run.
+const contextLabel = section ? passageLabel : cycle!.data.title;
+const onwardUnit = section ? sectionUnitId! : cycle!.data.commentaryUnit;
+
+// Breadcrumb: a section-borne aid sits in the commentary trail, since the
+// Teaching Aids index it would otherwise point at is the page that retires.
+const crumbs = section
+  ? [
+      { label: 'Commentaries', href: '/commentary/' },
+      { label: bookDisplay, href: volumeUrl(splitCommentaryId(section.id).book) },
+      { label: passageLabel, href: commentaryUrl(sectionUnitId!) },
+      { label: d.title },
+    ]
+  : [
+      { label: 'Teaching Aids', href: '/slides/' },
+      { label: cycle!.data.title, href: slideCycleUrl(cycle!.id) },
+      { label: d.title },
+    ];
+
 const alt = d.imageAlt ?? `Projectable slide: ${d.title}`;
 ---
 <BaseLayout title={d.title} description={d.description}
   pageMeta={{ date: d.date, revised: d.revised, license: d.license }}>
   <article class="reading">
     <Breadcrumb crumbs={crumbs} />
-    <p class="passage-ref">Teaching Aids · {cycle.data.title} <AudienceChip audience={d.audience} /></p>
+    <p class="passage-ref">Teaching Aids · {contextLabel} <AudienceChip audience={d.audience} /></p>
     <h1>{d.title}</h1>
 
     <figure class="slide-display">
@@ -55,13 +113,20 @@ const alt = d.imageAlt ?? `Projectable slide: ${d.title}`;
     <Content />
 
     <p class="slide-onward">
-      This slide comes from the SECNT commentary work on {cycle.data.title} — Deep
+      This slide comes from the SECNT commentary work on {contextLabel} — Deep
       in God's Word. For the full treatment, see{' '}
-      <a href={commentaryUrl(cycle.data.commentaryUnit)}>the Lectures and Commentary on {cycle.data.title}</a>.
+      <a href={commentaryUrl(onwardUnit)}>the Lectures and Commentary on {contextLabel}</a>.
     </p>
-    <p class="slide-backlink">
-      <a href={slideCycleUrl(cycle.id)}>More slides from {cycle.data.title}</a>
-    </p>
+    {section && (
+      <p class="slide-backlink">
+        <a href={lectureUrl(section.id)}>Back to the lecture: {section.data.title}</a>
+      </p>
+    )}
+    {cycle && (
+      <p class="slide-backlink">
+        <a href={slideCycleUrl(cycle.id)}>More slides from {cycle.data.title}</a>
+      </p>
+    )}
 
     {d.date && <PageDates date={d.date} revised={d.revised} />}
   </article>

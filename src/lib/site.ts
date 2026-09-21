@@ -96,6 +96,22 @@ export const slideCycleUrl = (id: string) => `/slides/${id}/`;
 // as a credit line instead). See Short 02 Build §4B/§7.
 export const slideAssetUrl = (id: string, ratio: '16x9' | '9x16') =>
   `/slides/${id}/${id}-${ratio}.jpg`;
+
+// The paired lecture's thumbnail for the section page's panel row — Slide 1 of
+// that lecture's deck, which already exists for every pair in the corpus at
+// Volumes/<Vol>/Cycles/<Cycle>/Diptychs/<NN-slug>/Slide1.PNG and is copied
+// into public/lectures/ at the pair's media commit, downscaled.
+//
+// Same rule as slideAssetUrl above and for the same reason: the path derives
+// from the entry's id, so there is no per-entry frontmatter field to drift and
+// nothing to backfill but the files themselves. The id already contains the
+// book and unit (john/1-6-to-13/08-co-articulation), so it lays the tree out
+// under /lectures/ exactly as the content tree lays it out.
+//
+// A section whose file is absent renders no lecture panel at all rather than a
+// broken image: the section route tests for the file at build (see its
+// getStaticPaths) and the panel degrades, per ask sec 9.
+export const lectureThumbUrl = (sectionId: string) => `/lectures/${sectionId}.png`;
 // Audience tags (handoff memo §2, Editor's ruling 20 Aug 2026): public labels
 // in display order. The chip renders the label inside a colored pill — one
 // color per category, color never the sole encoding. Chip values validated:
@@ -163,12 +179,38 @@ export const isVisible = (entry: { data: { draft?: boolean } }) =>
 // tightening it means comparing in America/New_York here.
 //
 // `slideCycles` entries carry no `scheduled` and keep using isVisible.
+//
+// A MISSING `scheduled` is no longer a contradiction (D47 sec 3): an aid that
+// names a `section` has no date of its own and derives its published state
+// from that section instead — see isAidVisible below, which is what the
+// routes actually call. This function keeps the dated gate for the pre-D47
+// aids that still carry one, and treats its absence as "no dated gate".
 export const isSlideVisible = (entry: {
-  data: { draft?: boolean; scheduled: Date };
+  data: { draft?: boolean; scheduled?: Date };
 }) => {
   if (!isVisible(entry)) return false;
   if (!import.meta.env.PROD || showDrafts) return true;
+  if (!entry.data.scheduled) return true;
   return entry.data.scheduled.getTime() <= Date.now();
+};
+
+// Visibility for a teaching aid, which since D47 sec 3 has no flip of its own.
+// An aid naming a `section` is live exactly when that commentary section is
+// live: one flip of the section's `draft` publishes the commentary page, its
+// lecture and its aid together, and an aid committed ahead of its pair is
+// inert rather than premature. An aid with no section is a pre-D47 one and
+// keeps the dated gate above.
+//
+// `section` is the resolved commentary entry, or undefined when the reference
+// points at an entry the caller did not load — in which case nothing is known
+// to derive from and the aid stays hidden, which is the safe direction.
+export const isAidVisible = (
+  aid: { data: { draft?: boolean; scheduled?: Date; section?: { id: string } } },
+  section: { data: { draft?: boolean } } | undefined
+) => {
+  if (!aid.data.section) return isSlideVisible(aid);
+  if (!import.meta.env.PROD || showDrafts) return true;
+  return section ? isVisible(section) : false;
 };
 
 // Normalize the commentary `diagram` field to an array. The field is either a

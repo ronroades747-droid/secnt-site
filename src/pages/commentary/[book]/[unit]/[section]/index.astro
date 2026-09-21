@@ -1,32 +1,69 @@
 ---
+import fs from 'node:fs';
+import path from 'node:path';
 import { getCollection, render } from 'astro:content';
 import Diagram from '../../../../../components/Diagram.astro';
+import Triptych from '../../../../../components/Triptych.astro';
 import BaseLayout from '../../../../../layouts/BaseLayout.astro';
 import UnitNav from '../../../../../components/UnitNav.astro';
 import PrevNext from '../../../../../components/PrevNext.astro';
 import PageDates from '../../../../../components/PageDates.astro';
 import Breadcrumb from '../../../../../components/Breadcrumb.astro';
-import { splitCommentaryId, normalizeId, lectureUrl, volumeUrl, commentaryUrl, isVisible, asDiagrams } from '../../../../../lib/site';
+import { splitCommentaryId, normalizeId, lectureUrl, volumeUrl, commentaryUrl, isVisible, isAidVisible, asDiagrams } from '../../../../../lib/site';
 
 export async function getStaticPaths() {
   const sections = (await getCollection('commentary'))
     .filter((e) => e.data.sectionType !== 'unit-landing' && isVisible(e));
   const lectures = await getCollection('lectures');
+  // The section's teaching aid is found from the collection by its `section`
+  // reference (D47 sec 4) — never from a list kept by hand. One aid per pair
+  // (D47 sec 1), so the first match is the match.
+  const aids = await getCollection('slides');
   return sections.map((entry) => {
     const { book, unit, section } = splitCommentaryId(entry.id);
     const lecture = lectures.find((l) => normalizeId(l.data.sectionRef.id) === entry.id);
-    return { params: { book, unit, section }, props: { entry, lecture } };
+    const aid =
+      aids.find((a) => a.data.section && normalizeId(a.data.section.id) === entry.id) ?? null;
+    // The lecture's thumbnail has no frontmatter field: its path derives from
+    // this section's id (see lectureThumbUrl). Test for the file HERE, at
+    // build, so a pair whose Slide 1 has not been copied over yet renders no
+    // lecture panel at all rather than a broken image — the same degrade ask
+    // sec 9 requires of a section with no aid.
+    const thumb = path.join(process.cwd(), 'public', 'lectures', `${entry.id}.png`);
+    return {
+      params: { book, unit, section },
+      props: { entry, lecture, aid, hasLectureThumb: fs.existsSync(thumb) },
+    };
   });
 }
-const { entry, lecture } = Astro.props;
+const { entry, lecture, aid, hasLectureThumb } = Astro.props;
 const { book, unit } = splitCommentaryId(entry.id);
 const unitId = `${book}/${unit}`;
 const { Content } = await render(entry);
 const d = entry.data;
-// Paired-lecture link renders at the TOP of the article (in the page header),
-// resolved from the section's hasLecture flag and the lecture's visibility.
+// The panel row renders at the TOP of the article, between the title and the
+// body, so that it stands when the page opens (ask sec 2). It replaces the
+// "Watch the lecture" line that stood here before — the thumbnail and its
+// label now carry that link.
+//
+// The lecture panel needs the lecture published AND its thumbnail present; the
+// aid panel needs an aid whose own section — this one — is live (D47 sec 3),
+// which is what makes a single flip of `draft` publish all three.
 const pairedLecture = d.hasLecture && lecture && isVisible(lecture) ? lecture : null;
-const pairedLectureUrl = lectureUrl(entry.id);
+const showLecture = Boolean(pairedLecture && hasLectureThumb);
+const visibleAid = aid && isAidVisible(aid, entry) ? aid : null;
+// NOTHING IS EVER LOST WHILE THE BACKFILL RUNS. A published lecture whose
+// Slide 1 has not been copied into public/lectures/ yet keeps the plain
+// "Watch the lecture" line that stood here before the row existed, so no
+// published page loses its lecture link waiting for an image. The line retires
+// itself, page by page, as each thumbnail lands.
+//
+// (Ask sec 3 assumed no backfill: it had the thumbnail coming from Bunny,
+// where every published pair already has one. The Editor's ruling of 20 Sep
+// 2026 took the image from the pair's own Diptychs folder instead, which is
+// cheaper per pair and independent of Bunny but does have to be carried over
+// for the pairs already published.)
+const lectureTextLinkOnly = Boolean(pairedLecture && !hasLectureThumb);
 // A page may carry one diagram or several (see asDiagrams / content.config.ts).
 // top/bottom render outside the body in array order; anchor diagrams are placed
 // inside the body by remark-diagram-anchor.
@@ -52,9 +89,11 @@ const crumbs = [
     {d.passageRef && <p class="passage-ref">John {d.passageRef}</p>}
     <h1>{d.title}</h1>
 
-    {pairedLecture && (
+    <Triptych sectionId={entry.id} showLecture={showLecture} aid={visibleAid} />
+
+    {lectureTextLinkOnly && (
       <p class="paired-lecture">
-        <a href={pairedLectureUrl}>Watch the lecture</a>
+        <a href={lectureUrl(entry.id)}>Watch the lecture</a>
       </p>
     )}
 

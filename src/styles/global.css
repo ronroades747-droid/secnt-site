@@ -197,6 +197,58 @@ main { flex: 1 0 auto; width: 100%; }
 .paired-lecture { margin: 0 0 1.75rem; font-size: 0.98rem; }
 .paired-lecture a { font-weight: 500; }
 
+/* --- TRIPTYCH -------------------------------------------------------------
+   The panel row under a commentary section's title: the paired lecture, and
+   the section's teaching aid in its two formats (D47 sec 4; Web Dev Ask, 20
+   Sep 2026). It replaces the .paired-lecture line on SECTION pages; the unit
+   landing keeps that line, having neither a row nor an aid (ask sec 9).
+
+   Frames are uniform 16:9 and share one height, so the three thumbnails line
+   up whatever their own proportions. The tall 9:16 is centred in its frame
+   against --color-bg — the PAGE background, not the slide field — so it floats
+   on the page rather than sitting in a visible box (the Editor's ruling, 20
+   Sep 2026). Nothing is bordered, for the same reason: a rule around the wide
+   frames would make the tall one's frame visible by contrast.
+
+   The row wraps rather than shrinking below legibility: on a narrow screen the
+   aid's pair drops under the lecture. */
+.triptych {
+  --frame-h: clamp(64px, 11vw, 104px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem 2rem;
+  margin: 0 0 2rem;
+}
+.triptych__panel { text-decoration: none; color: var(--color-text); }
+.triptych__frames { display: flex; gap: 0.5rem; }
+.triptych__frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(var(--frame-h) * 16 / 9);
+  height: var(--frame-h);
+  background: var(--color-bg);
+  overflow: hidden;
+}
+.triptych__frame img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  transition: opacity 0.15s ease;
+}
+.triptych__label {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-link);
+}
+.triptych__panel:hover .triptych__label { color: var(--color-link-hover); text-decoration: underline; }
+.triptych__panel:hover .triptych__frame img { opacity: 0.85; }
+.triptych__panel:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 4px; }
+
 /* Breadcrumb trail (suppressed in print — navigation chrome) */
 .breadcrumb { margin: 0 0 1.25rem; font-size: 0.9rem; color: var(--color-meta); }
 .breadcrumb ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
@@ -540,7 +592,7 @@ blockquote footer { margin-top: 0.85rem; font-size: 0.95rem; font-style: normal;
   body { font-size: 11.5pt; line-height: 1.45; }
   .site-header, .primary-nav, .banner, .gold-rule, .site-footer,
   .video-embed, .breadcrumb, .lecture-resources, .back-link,
-  .section-toc, .more-to-come, .unit-nav, .prev-next, .paired-lecture, .page-dates { display: none !important; }
+  .section-toc, .more-to-come, .unit-nav, .prev-next, .paired-lecture, .triptych, .page-dates { display: none !important; }
   .unit-layout { display: block; max-width: none; padding: 0; margin: 0; }
   main, .reading { max-width: none; padding: 0; }
   a { color: #000; text-decoration: none; }

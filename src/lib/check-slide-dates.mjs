@@ -23,8 +23,22 @@
 // order is invisible here; the check at the moment of naming is reading the
 // date back against the Editor's hand-off.
 //
-// Only files in `src/content/slides/` are read. Finished pages not yet named
-// sit in `src/content/slides-held/`, carry no `scheduled`, and are not checked.
+// Only files in `src/content/slides/` are read.
+//
+// AIDS THAT DERIVE ARE SKIPPED ENTIRELY (D47 sec 3, 19 Sep 2026). An aid
+// carrying a `section` has no date of its own — it is live exactly when its
+// commentary section is live — so it has nothing for this check to order, and
+// no run slot either, since D47 abolished the run. It is passed over before
+// either requirement is applied. Without that, the first aid built under D47
+// fails this check twice over, on a missing slot prefix and a missing
+// `scheduled`, which is exactly what stood between pair 09's finished aid and
+// the tree.
+//
+// This is NOT the retirement of the dated mechanism. `scheduled`, the
+// Cloudflare cron and this guard stand until slots 27, 28 and 29 are live on
+// 21, 23 and 25 September and retire after the last of them; teaching the
+// check to skip what does not concern it is a different act from switching it
+// off, and collapsing the two would strand those three slots.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -32,6 +46,7 @@ import { fileURLToPath } from 'node:url';
 const SLIDES_DIR = fileURLToPath(new URL('../content/slides/', import.meta.url));
 const SLOT_NAME = /^(\d{2})-(.+)\.md$/;
 const SCHEDULED = /^scheduled:\s*(\S+)\s*$/m;
+const SECTION = /^section:\s*(\S+)\s*$/m;
 
 const slot = (n) => String(n).padStart(2, '0');
 
@@ -45,12 +60,17 @@ export function checkSlideDates() {
   const problems = [];
 
   for (const file of files) {
+    const source = fs.readFileSync(path.join(SLIDES_DIR, file), 'utf8');
+
+    // An aid that names a section derives its publication from that section
+    // and carries no date and no run slot. Nothing here applies to it.
+    if (SECTION.exec(source)) continue;
+
     const named = SLOT_NAME.exec(file);
     if (!named) {
       problems.push(`${file}: the filename does not open with a two-digit slot number`);
       continue;
     }
-    const source = fs.readFileSync(path.join(SLIDES_DIR, file), 'utf8');
     const found = SCHEDULED.exec(source);
     if (!found) {
       problems.push(`${file}: no \`scheduled:\` line in the frontmatter`);

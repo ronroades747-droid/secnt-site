@@ -36,10 +36,20 @@
 //
 // The ORDER IS LOAD-BEARING (since 23 Aug 2026): SlideCyclePage sorts the
 // cycle index by it rather than by `scheduled`, because two slides can share
-// a date. Keep the list in publication order — which, with each new slide
-// appended as it is named, is the order it was named in. The assertion below
-// compares SETS, so it will not catch an order mistake; the cycle index is
-// where one shows.
+// a date. The assertion below compares SETS, so it will not catch an order
+// mistake; the cycle index is where one shows.
+//
+// THE LIST IS NOW CLOSED (D47 sec 6; the Editor's ruling of 20 Sep 2026).
+// These twenty-six are the final content of the /slides index: the run ends
+// with slot 29 on 25 September and nothing is ever appended here again. Aids
+// built under D47 are NOT added — they are reached from their commentary
+// section, not from the index, and they carry no run order to record.
+//
+// They are still entries in this collection, though, with pages of their own
+// at the same /slides/<slug>/ tier — so the assertion below had to stop
+// demanding that the collection and this list be the same set, which would
+// fail the build on the first D47 aid. What it keeps is the job it was
+// written for.
 export const SLIDE_IDS: readonly string[] = [
   'god-was-never-alone', // 01
   'not-even-one', // 02
@@ -69,28 +79,43 @@ export const SLIDE_IDS: readonly string[] = [
   'jn1-029', // 29 (SS-027)
 ];
 
-// Fails the build if the ids the loader produced are not exactly SLIDE_IDS.
-// Called from the /slides/ route's getStaticPaths, on the unfiltered
-// collection, so drafts are checked too — a named slide's id is fixed from
-// the moment it is scheduled, before its page goes live.
+// Fails the build on the drift this file exists to catch. Called from the
+// /slides/ route's getStaticPaths, on the unfiltered collection, so drafts are
+// checked too — a slide's id is fixed from the moment its page exists.
 //
-// Naming or withdrawing a slide page is a deliberate act: add or remove the
-// slug here in the same commit as the file.
+// Three checks, and the middle one carries the original purpose now that the
+// collection is allowed to grow past this list:
+//
+//   1. Every one of the twenty-six is still present. They are the QR-baked,
+//      citation-stable URLs; none may ever go missing, and the list is closed
+//      so this can never need editing again.
+//   2. No id opens with a digit. The loader strips an `^\d+-` run-order prefix
+//      from the filename, and a prefix the pattern misses — `4_foo.md`,
+//      `4foo.md` — survives into the id and moves that page to a URL nothing
+//      links to, silently. Any leftover digit is that failure.
+//   3. No id is produced twice, across the legacy run and the D47 aids that
+//      now share this collection.
+//
+// Aids built under D47 pass on 2 and 3 without being listed. They are not
+// added here (see the note above): the list records a run that has ended.
 export function assertSlideIds(ids: readonly string[]): void {
-  const expected = new Set(SLIDE_IDS);
   const found = new Set(ids);
   const missing = SLIDE_IDS.filter((id) => !found.has(id));
-  const unexpected = [...found].filter((id) => !expected.has(id)).sort();
+  const prefixed = [...found].filter((id) => /^\d/.test(id)).sort();
   const duplicated = ids.filter((id, i) => ids.indexOf(id) !== i).sort();
-  if (missing.length === 0 && unexpected.length === 0 && duplicated.length === 0) return;
+  if (missing.length === 0 && prefixed.length === 0 && duplicated.length === 0) return;
   const lines = [
-    `Slide ids do not match the ${SLIDE_IDS.length} slugs listed in src/lib/slide-ids.ts.`,
-    'A slide id is its published URL and its asset path; a changed id moves the',
+    'Teaching-aid ids will not do (src/lib/slide-ids.ts).',
+    'An aid id is its published URL and its asset path; a changed id moves the',
     'page to a URL nothing links to. Check the NN- filename prefixes and the',
     "`generateId` strip in content.config.ts before touching this list.",
   ];
-  if (missing.length) lines.push(`  expected but not found: ${missing.join(', ')}`);
-  if (unexpected.length) lines.push(`  found but not expected: ${unexpected.join(', ')}`);
+  if (missing.length)
+    lines.push(`  closed run: listed but no longer in the collection: ${missing.join(', ')}`);
+  if (prefixed.length)
+    lines.push(
+      `  id opens with a digit, so a filename prefix was not stripped: ${prefixed.join(', ')}`,
+    );
   if (duplicated.length) lines.push(`  produced more than once: ${duplicated.join(', ')}`);
   throw new Error(lines.join('\n'));
 }

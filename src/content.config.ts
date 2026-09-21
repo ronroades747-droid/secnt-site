@@ -363,26 +363,68 @@ const slides = defineCollection({
     generateId: ({ entry }) => entry.replace(/\.md$/, '').replace(/^\d+-/, ''),
   }),
   schema: () =>
-    z.object({
-      title: z.string(),
-      description: z.string().optional(),
-      cycle: reference('slideCycles'),
-      audience,
-      // The publication date of the short this page pairs with, given by the
-      // Editor when he names the slide (one at a time, 16 Sep 2026) — gates
-      // release and drives the cycle index's "Coming" line until then.
-      // Distinct from `date` (go-live, set at the flip like every page).
-      // Finished pages not yet named sit in src/content/slides-held/, outside
-      // this collection's base, and carry no `scheduled` until they are.
-      scheduled: z.coerce.date(),
-      date: z.coerce.date().optional(),
-      revised: z.coerce.date().optional(),
-      // Accessibility text for the displayed slide; a plain default is
-      // derived from the title when absent.
-      imageAlt: z.string().optional(),
-      license,
-      draft: z.boolean().default(false),
-    }),
+    z
+      .object({
+        title: z.string(),
+        description: z.string().optional(),
+        // WHERE THE AID HANGS — one of these two, and D47 turns the page from
+        // the first to the second.
+        //
+        // `cycle` is the original attachment: the aid belongs to a run listed
+        // on the /slides index. It is OPTIONAL since D47 and the index is
+        // CLOSED to new entries (D47 sec 6) — the twenty-six aids of the John
+        // 1:1-3 run are its final content, and no aid built under D47 joins it.
+        //
+        // `section` is D47 sec 4's replacement: the commentary section this
+        // aid's lecture taught. The commentary template finds the aid by
+        // matching this against the section's own id — from the collection,
+        // never from a hand-maintained list, which is the whole point of the
+        // requirement. It also carries the aid's PUBLISHED STATE (D47 sec 3):
+        // an aid with a section has no flip of its own and is live exactly
+        // when that section is live, so one flip publishes the commentary
+        // page, its lecture and its aid together.
+        //
+        // The migration (D47 sec 6, scheduled by the Editor's ruling of 20 Sep
+        // 2026) gives each existing aid a `section` WHILE IT KEEPS its
+        // `cycle`, so it is reachable from both at once and none is ever
+        // unreachable while the change runs. When the last has crossed, the
+        // index and its nav link retire and the cycle-shaped fields go with
+        // them.
+        cycle: reference('slideCycles').optional(),
+        section: reference('commentary').optional(),
+        audience,
+        // The publication date of the short this page pairs with, given by the
+        // Editor when he names the slide (one at a time, 16 Sep 2026) — gates
+        // release and drives the cycle index's "Coming" line until then.
+        // Distinct from `date` (go-live, set at the flip like every page).
+        //
+        // OPTIONAL since D47 sec 3, which abolished the aid's own flip: an aid
+        // carrying a `section` carries neither `scheduled` nor a meaningful
+        // `draft`, deriving both from that section. The field survives for the
+        // three dated slots of 21, 23 and 25 September and retires with the
+        // Cloudflare cron and the build's date guard after the last is live —
+        // A SEPARATE TRACK from the index retirement above, and the two must
+        // not be collapsed: doing so either strands the dated slots or retires
+        // the index early.
+        scheduled: z.coerce.date().optional(),
+        date: z.coerce.date().optional(),
+        revised: z.coerce.date().optional(),
+        // Accessibility text for the displayed slide; a plain default is
+        // derived from the title when absent.
+        imageAlt: z.string().optional(),
+        license,
+        draft: z.boolean().default(false),
+      })
+      // Both optional, but never both absent. An aid with neither is reachable
+      // from nowhere — not listed on the index, not shown on any commentary
+      // page — and would build a live page that nothing links to.
+      .refine((d) => d.cycle !== undefined || d.section !== undefined, {
+        message:
+          'A teaching aid must carry `section` (the commentary section its lecture taught) or ' +
+          '`cycle` (a /slides run index). An aid with neither is reachable from nowhere. ' +
+          'Aids built under D47 carry `section`.',
+        path: ['section'],
+      }),
 });
 
 export const collections = { frontmatter, volumes, commentary, lectures, articles, slides, slideCycles };

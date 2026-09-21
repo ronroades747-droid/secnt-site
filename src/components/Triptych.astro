@@ -1,0 +1,74 @@
+---
+// The row of panels under a commentary section's title: the paired lecture,
+// and that section's teaching aid in its two formats. D47 sec 4 (the aid is
+// reachable from its commentary section, beside the lecture) as specified by
+// the Web Dev Ask of 20 Sep 2026 and the Editor's shape rulings of that date.
+//
+// The third panel of the triptych is the page this sits on. D47's reason is
+// the Editor's: a reader who has one of the three is the reader most likely to
+// want the other two.
+//
+// The aid is found from the collection by matching its `section` against this
+// section's id — never from a hand-maintained list, which is the whole point
+// of the data contract (D47 sec 4). Resolution happens in the route's
+// getStaticPaths; this component only renders what it is handed.
+//
+// SHAPE. All frames are 16:9 and the same height, so the three thumbnails line
+// up whatever their own proportions. The tall 9:16 is centred in its frame and
+// padded with --color-bg — the page background, not the slide field — so it
+// floats on the page rather than sitting in a visible box (the Editor's
+// ruling, 20 Sep 2026).
+//
+// Each panel is ONE link wrapping its frames and its label, so the thumbnail
+// and the words under it go to the same place and the label is the link's
+// accessible name. The lecture's label reads "Watch the Lecture"; the aid's
+// two images share the single label "Teaching Aids" — plural by the Editor's
+// ruling of 20 Sep 2026, where D47 gives each pair ONE aid in two formats. The
+// divergence is nominal and deliberate: a teacher sees two downloadable
+// artifacts.
+//
+// IT DEGRADES RATHER THAN LEAVING A GAP (ask sec 9). Every published section
+// must keep rendering: a section with a lecture and no aid shows one panel, a
+// section with neither shows nothing at all and the row does not appear.
+// Twenty-odd published sections are in the first case today and stay there
+// until the D47 sec 6 migration reaches them.
+import { slideAssetUrl, slideUrl, lectureUrl, lectureThumbUrl } from '../lib/site';
+
+interface Props {
+  sectionId: string;
+  /** True when the paired lecture is published AND its thumbnail file exists. */
+  showLecture: boolean;
+  /** The section's teaching aid, already visibility-checked, or null. */
+  aid: any | null;
+}
+const { sectionId, showLecture, aid } = Astro.props;
+const aidAlt = aid ? (aid.data.imageAlt ?? `Projectable slide: ${aid.data.title}`) : '';
+---
+{(showLecture || aid) && (
+  <nav class="triptych" aria-label="Lecture and teaching aid for this section">
+    {showLecture && (
+      <a class="triptych__panel" href={lectureUrl(sectionId)}>
+        <span class="triptych__frames">
+          <span class="triptych__frame">
+            <img src={lectureThumbUrl(sectionId)} alt="" width="640" height="360" loading="lazy" />
+          </span>
+        </span>
+        <span class="triptych__label">Watch the Lecture</span>
+      </a>
+    )}
+
+    {aid && (
+      <a class="triptych__panel" href={slideUrl(aid.id)}>
+        <span class="triptych__frames">
+          <span class="triptych__frame">
+            <img src={slideAssetUrl(aid.id, '16x9')} alt={aidAlt} width="1920" height="1080" loading="lazy" />
+          </span>
+          <span class="triptych__frame triptych__frame--tall">
+            <img src={slideAssetUrl(aid.id, '9x16')} alt="" width="1080" height="1920" loading="lazy" />
+          </span>
+        </span>
+        <span class="triptych__label">Teaching Aids</span>
+      </a>
+    )}
+  </nav>
+)}

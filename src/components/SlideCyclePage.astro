@@ -14,6 +14,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumb from './Breadcrumb.astro';
 import PageDates from './PageDates.astro';
 import { slideUrl, isSlideVisible, formatDate } from '../lib/site';
+// NOTE: this page lists only cycle-borne aids, every one of which carries a
+// `scheduled` date — the index is closed to new entries (D47 sec 6), so no
+// dateless aid can ever reach the "Coming" line below.
 import { SLIDE_IDS } from '../lib/slide-ids';
 import AudienceChip from './AudienceChip.astro';
 
@@ -37,9 +40,12 @@ const { Content } = await render(entry);
 // NOTE: this makes the ORDER of SLIDE_IDS load-bearing, where its own header
 // calls the order documentation — re-sequencing the run now means re-ordering
 // that list. The header is amended to match.
+// `cycle` is optional since D47 (aids built under that ruling carry `section`
+// instead and are never listed here), so the match is guarded — an aid with no
+// cycle belongs to no index and simply is not this page's business.
 const runOrder = new Map(SLIDE_IDS.map((id, i) => [id, i]));
 const slides = (await getCollection('slides'))
-  .filter((s) => s.data.cycle.id === entry.id)
+  .filter((s) => s.data.cycle?.id === entry.id)
   .sort((a, b) => (runOrder.get(a.id) ?? Infinity) - (runOrder.get(b.id) ?? Infinity));
 const crumbs = [
   { label: 'Teaching Aids', href: '/slides/' },
@@ -67,7 +73,7 @@ const crumbs = [
         ) : (
           <li class="slide-list__upcoming">
             <span class="slide-list__title">{s.data.title}</span>
-            <span class="slide-list__date">Coming {formatDate(s.data.scheduled)}</span>
+            <span class="slide-list__date">{s.data.scheduled ? `Coming ${formatDate(s.data.scheduled)}` : 'Coming soon'}</span>
           </li>
         )
       )}
