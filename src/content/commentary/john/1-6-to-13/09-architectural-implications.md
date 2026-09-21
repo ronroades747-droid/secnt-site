@@ -1,7 +1,7 @@
 ---
 title: "Architecture: What the Architecture Theologically Carries"
 description: "What the movement’s architecture theologically carries, before the verse-by-verse exegesis begins."
-date: 2026-09-03
+date: 2026-09-21
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -11,7 +11,7 @@ verseEnd: 13
 sectionType: framing
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 The architecture of this movement has now been read whole — its edges, its joints, its tenses, the frame it sits in, the way it faces the Gospel, the one door it leaves open, and the fit between the two dimensions that carry its shape. Seven sections took it apart a layer at a time. This one asks what the assembled shape teaches, before a single verse is expounded.
