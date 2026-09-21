@@ -18,10 +18,19 @@
 // field the other needs.
 //
 // Through the D47 sec 6 migration an aid has BOTH for a while, and then it
-// shows both return routes — its index and its lecture. That is deliberate:
-// the index stays reachable until every aid has crossed, so none is ever
-// unreachable during the change (ask sec 5(b)). When the last has crossed, the
-// index retires and the cycle-shaped half of this page goes with it.
+// shows both return routes — its index and its commentary section. That is
+// deliberate: the index stays reachable until every aid has crossed, so none
+// is ever unreachable during the change (ask sec 5(b)). When the last has
+// crossed, the index retires and the cycle-shaped half of this page goes with
+// it.
+//
+// THE RETURN IS TO THE COMMENTARY PAGE, NOT THE LECTURE (the Editor's ruling,
+// 20 Sep 2026, on reading the built page — superseding his own earlier word
+// that the "More slides" link would move to the lecture). Both of the pair's
+// other panels return to the same place: the lecture page's back-link already
+// reads "Read the commentary", and this one now matches it. The commentary
+// page is where the triptych stands, so a reader returning there is handed all
+// three panels rather than just the one he came from.
 //
 // The page's own URL never moves either way: /slides/<slug>/ is QR-baked into
 // published video and citation-stable (Decision 6; D45; the Editor's ruling of
@@ -34,7 +43,6 @@ import {
   slideCycleUrl,
   slideAssetUrl,
   commentaryUrl,
-  lectureUrl,
   volumeUrl,
   splitCommentaryId,
 } from '../lib/site';
@@ -119,7 +127,7 @@ const alt = d.imageAlt ?? `Projectable slide: ${d.title}`;
     </p>
     {section && (
       <p class="slide-backlink">
-        <a href={lectureUrl(section.id)}>Back to the lecture: {section.data.title}</a>
+        <a href={commentaryUrl(section.id)}>Read the commentary: {section.data.title}</a>
       </p>
     )}
     {cycle && (
