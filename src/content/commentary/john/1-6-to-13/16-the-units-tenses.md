@@ -9,7 +9,6 @@ sectionNumber: 16
 verseStart: 6
 verseEnd: 13
 sectionType: synthesis
-tocGroup: "The synthesis close"
 license: CC-BY-4.0
 hasLecture: true
 draft: true

@@ -9,7 +9,6 @@ sectionNumber: 11
 verseStart: 9
 verseEnd: 9
 sectionType: exegesis
-tocGroup: "Beat two — the light’s coming to its own (1:9–11)"
 license: CC-BY-4.0
 hasLecture: true
 draft: true

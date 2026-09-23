@@ -9,7 +9,6 @@ sectionNumber: 10
 verseStart: 6
 verseEnd: 8
 sectionType: exegesis
-tocGroup: "Beat one — the parenthesis (1:6–8)"
 license: CC-BY-4.0
 hasLecture: true
 draft: false

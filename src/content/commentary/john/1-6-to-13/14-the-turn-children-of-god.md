@@ -9,7 +9,6 @@ sectionNumber: 14
 verseStart: 12
 verseEnd: 12
 sectionType: exegesis
-tocGroup: "Beat three — the reception’s turn (1:12–13)"
 license: CC-BY-4.0
 hasLecture: true
 draft: true
