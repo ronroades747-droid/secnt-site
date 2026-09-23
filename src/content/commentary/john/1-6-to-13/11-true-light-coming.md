@@ -1,6 +1,6 @@
 ---
 title: "Exegesis: Ἦν τὸ φῶς τὸ ἀληθινόν — The True Light, Coming into the World"
-description: "John 1:9: the true light, coming into the world — present to the world it made."
+description: "John 1:9: the true light, coming into the world — the light that gives light to every human being."
 date: 2026-09-03
 book: john
 chapter: 1
