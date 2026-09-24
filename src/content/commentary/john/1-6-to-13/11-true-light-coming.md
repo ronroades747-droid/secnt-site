@@ -144,7 +144,7 @@ The verse thus lands as one teachable claim. The Word was the true light — the
 
 [^durative]: B. F. Westcott, *The Gospel according to St John* (Murray, 1882), p. 7 — "From the first He was (so to speak) on His way to the world, advancing towards the Incarnation by preparatory revelations." Abbott, *Johannine Grammar*, §2508 — "the Light was 'continually coming' to all mankind (more especially to the prophets and saints) and then … it definitely 'came' in the Incarnation."
 
-[^modality]: Barth, *Witness to the Word*, p. 87; Herman N. Ridderbos, *The Gospel of John: A Theological Commentary* (Eerdmans, 1997), p. 43.
+[^modality]: Barth, *Witness to the Word*, p. 87; Herman N. Ridderbos, *The Gospel according to John: A Theological Commentary* (Eerdmans, 1997), p. 43.
 
 [^schnackenburg-arc]: Schnackenburg, *John*, vol. 1, p. 254. His sentence continues, "on men, that is, on those who believe in him (v. 7)." It is cited here for the arc from creation to the Incarnation, not for the scope of the illumination, which Schnackenburg asserts in his own voice on the same pages — "universal, and indispensable to every man" (p. 253), and a power "which can and must be displayed in every man who desires to reach his goal" (p. 254).
 
