@@ -113,7 +113,7 @@ Schnackenburg, *The Gospel according to St John*, vol. 1, translated by Kevin Sm
 
 Carson, *The Gospel according to John* (Pillar New Testament Commentary, Eerdmans, 1991), supplies the modern evangelical Tier 1 anchor and the foyer image that governs the commentary's architectural framing. Carson on the act-of-creation versus state-of-creation tense-change at the v. 3 → v. 4 boundary is load-bearing; Carson's exposition of the unit's exegetical decisions is engaged throughout.
 
-Ridderbos, *The Gospel of John: A Theological Commentary* (Eerdmans, 1997), and Ridderbos's *Novum Testamentum* article "The Structure and Scope of the Prologue to the Gospel of John" (NovT 8, 1966), supply the linear three-movement architecture and the principal articulation of the macro-tense pattern across the Prologue. Ridderbos's reading is the substantive foundation of the macro-tense spine.
+Ridderbos, *The Gospel according to John: A Theological Commentary* (Eerdmans, 1997), and Ridderbos's *Novum Testamentum* article "The Structure and Scope of the Prologue to the Gospel of John" (NovT 8, 1966), supply the linear three-movement architecture and the principal articulation of the macro-tense pattern across the Prologue. Ridderbos's reading is the substantive foundation of the macro-tense spine.
 
 Brown, *The Gospel according to John I–XII* (Anchor Bible, Doubleday, 1966), supplies the staircase-parallelism analysis of the Prologue's compositional engine and the foundational engagement on the v. 1 / v. 14 structural pairing that the foyer-bracket pattern extends. Brown is engaged at primary-text register throughout the architecture and the exegesis.
 
