@@ -86,7 +86,7 @@ The parenthesis thus lands as one teachable claim, and it is the movement's thre
 
 [^alternation]: Andreas J. Köstenberger, *John 1–21* (Evangelical Exegetical Commentary; 2026), vol. 1, pp. 59–61 — the alternation of cadence, with the shift placed at verse 7 and the return at verse 9.
 
-[^ridderbos]: Herman N. Ridderbos, *The Gospel of John: A Theological Commentary* (Eerdmans, 1997), pp. 41–42 — the two Baptist passages at two strategic points, contributing essentially to the thought-pattern they are said to break. Ridderbos is there reporting a case others have pressed before adopting it; his own conclusion on the same pages is that the Baptist references reinforce the Prologue's central content.
+[^ridderbos]: Herman N. Ridderbos, *The Gospel according to John: A Theological Commentary* (Eerdmans, 1997), pp. 41–42 — the two Baptist passages at two strategic points, contributing essentially to the thought-pattern they are said to break. Ridderbos is there reporting a case others have pressed before adopting it; his own conclusion on the same pages is that the Baptist references reinforce the Prologue's central content.
 
 [^barth]: Karl Barth, *Witness to the Word: A Commentary on John 1*, ed. Walther Fürst, trans. Geoffrey W. Bromiley (Eerdmans, 1986), p. 50 — the clause is the protasis of a double conditional, "if we are right to view vv. 6ff. not as an abruptly interposed fragment but as an introduction to vv. 9ff.," and is a supposition rather than a verdict. The composition-history bracket is at p. 13, where he holds his judgment "even if, as Bultmann has assumed" the verses were added to an older work.
 
