@@ -1,7 +1,7 @@
 ---
 title: "Exegesis: Ἦν τὸ φῶς τὸ ἀληθινόν — The True Light, Coming into the World"
 description: "John 1:9: the true light, coming into the world — the light that gives light to every human being."
-date: 2026-09-03
+date: 2026-09-23
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -11,7 +11,7 @@ verseEnd: 9
 sectionType: exegesis
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 The [parenthesis](/commentary/john/1-6-to-13/10-witness-sent/) has said what John was not. Verse 9 turns from the lamp to the light, and with a single verb the main line resumes: Ἦν, the imperfect that governed verses 1–5 and that verse 8 has just refused to the Baptist. What follows is the movement's second beat — the true light, coming into the world, illumining every human being.
