@@ -50,12 +50,19 @@ const revisedDate = pageMeta?.revised ?? pageMeta?.updated;
     <!-- GoatCounter — privacy-first analytics, no cookies, no banner needed.
          Pageviews site-wide; download counting via data-goatcounter-click on
          the Teaching Aids download buttons (count.js binds those itself).
-         A visit arriving from a QR scan carries ?q and is recorded as its
-         own path (path + '?q'), so scans stay distinguishable from typed and
-         clicked visits (Shorts Program Plan §12). -->
+         A visit arriving from a campaign link carries one tag and is
+         recorded as its own path (path + '?tag'): ?ys YouTube Shorts,
+         ?yv YouTube videos, ?fr Facebook Reels; ?q and ?c are kept as legacy
+         campaigns. First match wins, current campaigns before legacy. Any
+         other parameter (utm_*, fbclid, …) is dropped, as count.js already
+         cuts the path back to the canonical URL. -->
     {SITE.goatcounter && (
       <script is:inline set:html={
-        `window.goatcounter = { path: function (p) { return new URLSearchParams(location.search).has('q') ? p + '?q' : p; } };`
+        `window.goatcounter = { path: function (p) {
+  var s = new URLSearchParams(location.search);
+  var t = ['ys', 'yv', 'fr', 'q', 'c'].find(function (k) { return s.has(k); });
+  return t ? p + '?' + t : p;
+} };`
       } />
     )}
     {SITE.goatcounter && (
