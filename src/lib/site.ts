@@ -5,6 +5,8 @@
 // entry's id IS its path under /commentary/, so URL derivation is just
 // prefix + id + trailing slash. No hand-maintained path tables.
 
+import { commentaryPdfName } from './commentary-pdf.mjs';
+
 export const SITE = {
   wordmark: 'SECNT',
   // The locked, substantive series name is "Systematic Evangelical" (see
@@ -112,6 +114,13 @@ export const slideAssetUrl = (id: string, ratio: '16x9' | '9x16') =>
 // broken image: the section route tests for the file at build (see its
 // getStaticPaths) and the panel degrades, per ask sec 9.
 export const lectureThumbUrl = (sectionId: string) => `/lectures/${sectionId}.png`;
+
+// A commentary page's PDF, printed from the built page at every Cloudflare
+// build and never committed (see src/lib/commentary-pdf.mjs, which writes the
+// file under this same name). It sits beside the page, named from the id:
+// /commentary/john/1-1-to-3/06-en-arche/john-1-1-to-3-06-en-arche.pdf.
+export const commentaryPdfUrl = (id: string) =>
+  `${commentaryUrl(id)}${commentaryPdfName(id)}`;
 // Audience tags (handoff memo §2, Editor's ruling 20 Aug 2026): public labels
 // in display order. The chip renders the label inside a colored pill — one
 // color per category, color never the sole encoding. Chip values validated:

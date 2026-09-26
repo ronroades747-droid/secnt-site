@@ -1,0 +1,27 @@
+---
+// The downloads line on a commentary page — section pages and unit landings
+// alike — directly under the Triptych, or under the "Watch the lecture" text
+// link where no thumbnail exists (Web Dev Ask "Downloads on the commentary
+// page", 26 Sep 2026, sec 2).
+//
+// Everything licensed CC BY 4.0 may be kept, so the reader is handed the page
+// to keep. The PDF link always renders: every page that builds has a PDF
+// printed beside it (src/lib/commentary-pdf.mjs), so nothing is ever a gap.
+//
+// Counted in GoatCounter under a key the lecture page shares
+// (download/pdf/<section-id>), so the page a reader started from does not
+// split the count (sec 5).
+import { commentaryPdfUrl } from '../lib/site';
+import { commentaryPdfName } from '../lib/commentary-pdf.mjs';
+
+interface Props {
+  sectionId: string;
+  title: string;
+}
+const { sectionId, title } = Astro.props;
+---
+<p class="page-downloads">
+  <a href={commentaryPdfUrl(sectionId)} download={commentaryPdfName(sectionId)}
+    data-goatcounter-click={`download/pdf/${sectionId}`}
+    data-goatcounter-title={`Download PDF — ${title}`}>Download this page (PDF)</a>
+</p>

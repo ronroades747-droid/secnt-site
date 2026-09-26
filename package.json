@@ -12,7 +12,9 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@sparticuz/chromium": "^153.0.0",
     "astro": "^6.4.0",
+    "playwright-core": "^1.63.0",
     "remark-gfm": "^4.0.1"
   }
 }

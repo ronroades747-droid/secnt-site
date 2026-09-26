@@ -4,6 +4,7 @@ import path from 'node:path';
 import { getCollection, render } from 'astro:content';
 import Diagram from '../../../../../components/Diagram.astro';
 import Triptych from '../../../../../components/Triptych.astro';
+import PageDownloads from '../../../../../components/PageDownloads.astro';
 import BaseLayout from '../../../../../layouts/BaseLayout.astro';
 import UnitNav from '../../../../../components/UnitNav.astro';
 import PrevNext from '../../../../../components/PrevNext.astro';
@@ -96,6 +97,8 @@ const crumbs = [
         <a href={lectureUrl(entry.id)}>Watch the lecture</a>
       </p>
     )}
+
+    <PageDownloads sectionId={entry.id} title={d.title} />
 
     {diagramsTop.map((dg) => <Diagram diagram={dg} entryPath={entry.filePath} />)}
 

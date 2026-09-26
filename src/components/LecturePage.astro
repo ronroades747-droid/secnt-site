@@ -14,7 +14,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import BunnyEmbed from './BunnyEmbed.astro';
 import PageDates from './PageDates.astro';
 import Breadcrumb from './Breadcrumb.astro';
-import { commentaryUrl, volumeUrl, splitCommentaryId } from '../lib/site';
+import { commentaryUrl, commentaryPdfUrl, volumeUrl, splitCommentaryId } from '../lib/site';
+import { commentaryPdfName } from '../lib/commentary-pdf.mjs';
 
 interface Props {
   lecture: any; // lectures collection entry
@@ -53,6 +54,9 @@ const crumbs = [
 
     <ul class="lecture-resources">
       {l.youtubeUrl && <li><a href={l.youtubeUrl} rel="noopener">Watch on YouTube</a></li>}
+      <li><a href={commentaryPdfUrl(section.id)} download={commentaryPdfName(section.id)}
+        data-goatcounter-click={`download/pdf/${section.id}`}
+        data-goatcounter-title={`Download PDF — ${section.data.title}`}>Download the commentary (PDF)</a></li>
       {l.slidesPdf && <li><a href={l.slidesPdf}>Download slides (PDF)</a></li>}
       {l.duration && l.duration !== '00:00' && <li>Runtime: {l.duration}</li>}
     </ul>
