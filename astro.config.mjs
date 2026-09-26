@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 import remarkGfm from 'remark-gfm';
 import remarkDiagramAnchor from './src/lib/remark-diagram-anchor.mjs';
 import { checkSlideDates } from './src/lib/check-slide-dates.mjs';
+import { commentaryPdfs } from './src/lib/commentary-pdf.mjs';
 
 // SECNT — Systematic Evangelical Commentaries on the New Testament
 // (substantive series name per about.md §2; the earlier "Scholars Exegetical"
@@ -23,6 +24,9 @@ import { checkSlideDates } from './src/lib/check-slide-dates.mjs';
 // Plan D33 `scheduled` decides whether a slide page publishes, and a
 // well-formed but wrong date ships the page silently — early, ahead of its
 // short. See src/lib/check-slide-dates.mjs for what it can and cannot catch.
+//
+// The commentary PDFs are printed from the built pages after every Cloudflare
+// build and never committed; see src/lib/commentary-pdf.mjs.
 
 /** Fails the build if a slide's `scheduled` precedes an earlier slot's. */
 const slideDateCheck = {
@@ -32,7 +36,7 @@ const slideDateCheck = {
 
 export default defineConfig({
   site: 'https://secnt.org',
-  integrations: [slideDateCheck],
+  integrations: [slideDateCheck, commentaryPdfs],
   trailingSlash: 'always',
   markdown: {
     remarkPlugins: [remarkGfm, remarkDiagramAnchor],
