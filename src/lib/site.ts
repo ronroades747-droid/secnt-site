@@ -21,9 +21,6 @@ export const SITE = {
   // Bunny Stream pull-zone library id (the GUID per video lives in lecture
   // frontmatter as bunnyVideoId). Set this once.
   bunnyLibraryId: '672956',
-  // The library's own pull zone, from which Bunny serves each video's MP4
-  // fallback file as a direct download (Downloads ask, 26 Sep 2026, sec 3).
-  bunnyCdnHost: 'vz-6567ecee-051.b-cdn.net',
   // GoatCounter site code — analytics for the whole site (pageviews) and the
   // Teaching Aids download events (downloads headline, views never — Shorts
   // Program Plan D18). The dashboard is https://<code>.goatcounter.com; QR
@@ -124,18 +121,6 @@ export const lectureThumbUrl = (sectionId: string) => `/lectures/${sectionId}.pn
 // /commentary/john/1-1-to-3/06-en-arche/john-1-1-to-3-06-en-arche.pdf.
 export const commentaryPdfUrl = (id: string) =>
   `${commentaryUrl(id)}${commentaryPdfName(id)}`;
-
-// A lecture's MP4, served by Bunny's MP4 fallback and built from the lecture's
-// bunnyVideoId, the same way BunnyEmbed builds the player URL: nothing is kept
-// per pair. 720p only (Editor, 26 Sep 2026): half the size of 1080p, and on
-// slides and a speaker the two look nearly the same. It is cross-origin, so a
-// browser ignores the link's `download` attribute: what makes it save rather
-// than play inline is an Edge Rule on the pull zone sending
-// `Content-Disposition: attachment` for .mp4 (Bunny configuration, set by the
-// Editor at go-live). The file saves under Bunny's own name, play_720p.mp4
-// (accepted by the Editor the same day).
-export const lectureMp4Url = (bunnyVideoId: string) =>
-  `https://${SITE.bunnyCdnHost}/${bunnyVideoId}/play_720p.mp4`;
 // Audience tags (handoff memo §2, Editor's ruling 20 Aug 2026): public labels
 // in display order. The chip renders the label inside a colored pill — one
 // color per category, color never the sole encoding. Chip values validated:
