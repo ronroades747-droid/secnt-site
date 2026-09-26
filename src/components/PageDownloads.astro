@@ -5,22 +5,31 @@
 // page", 26 Sep 2026, sec 2).
 //
 // Everything licensed CC BY 4.0 may be kept, so the reader is handed the page
-// to keep. The PDF link always renders: every page that builds has a PDF
-// printed beside it (src/lib/commentary-pdf.mjs), so nothing is ever a gap.
+// and its lecture to keep. The PDF link always renders: every page that builds
+// has a PDF printed beside it (src/lib/commentary-pdf.mjs). The MP4 link
+// renders only where the page has a published paired lecture, so a page
+// without one shows the PDF alone and nothing is ever a gap (sec 6).
 //
-// Counted in GoatCounter under a key the lecture page shares
-// (download/pdf/<section-id>), so the page a reader started from does not
-// split the count (sec 5).
-import { commentaryPdfUrl } from '../lib/site';
+// Counted in GoatCounter under keys the lecture page shares
+// (download/lecture/<section-id>, download/pdf/<section-id>), so the page a
+// reader started from does not split the count (sec 5).
+import { commentaryPdfUrl, lectureMp4Url } from '../lib/site';
 import { commentaryPdfName } from '../lib/commentary-pdf.mjs';
 
 interface Props {
   sectionId: string;
   title: string;
+  /** The paired lecture, already visibility-checked, or null. */
+  lecture: any | null;
 }
-const { sectionId, title } = Astro.props;
+const { sectionId, title, lecture } = Astro.props;
 ---
 <p class="page-downloads">
+  {lecture && (
+    <a href={lectureMp4Url(lecture.data.bunnyVideoId)} download
+      data-goatcounter-click={`download/lecture/${sectionId}`}
+      data-goatcounter-title={`Download MP4 — ${title}`}>Download the lecture (MP4)</a>
+  )}
   <a href={commentaryPdfUrl(sectionId)} download={commentaryPdfName(sectionId)}
     data-goatcounter-click={`download/pdf/${sectionId}`}
     data-goatcounter-title={`Download PDF — ${title}`}>Download this page (PDF)</a>

@@ -198,7 +198,7 @@ main { flex: 1 0 auto; width: 100%; }
 .paired-lecture a { font-weight: 500; }
 /* Downloads line under the Triptych / "Watch the lecture" link on commentary
    pages (Web Dev Ask, Downloads on the commentary page, 26 Sep 2026). */
-.page-downloads { margin: 0 0 1.75rem; font-size: 0.98rem; }
+.page-downloads { margin: 0 0 1.75rem; font-size: 0.98rem; display: flex; flex-wrap: wrap; gap: 0.35rem 1.5rem; }
 .page-downloads a { font-weight: 500; }
 /* Sits close under whatever it follows, so the two read as one group. */
 .paired-lecture:has(+ .page-downloads),

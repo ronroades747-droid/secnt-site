@@ -98,7 +98,7 @@ const crumbs = [
       </p>
     )}
 
-    <PageDownloads sectionId={entry.id} title={d.title} />
+    <PageDownloads sectionId={entry.id} title={d.title} lecture={pairedLecture} />
 
     {diagramsTop.map((dg) => <Diagram diagram={dg} entryPath={entry.filePath} />)}
 
