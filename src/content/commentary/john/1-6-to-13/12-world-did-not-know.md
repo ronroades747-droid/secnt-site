@@ -2,6 +2,7 @@
 title: "Exegesis: ὁ κόσμος αὐτὸν οὐκ ἔγνω — The World That Did Not Know Its Maker"
 description: "John 1:10: in the world, the world made through him — and the world did not know its Maker."
 date: 2026-09-27
+revised: 2026-09-27
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -74,7 +75,7 @@ Carson's caution that γινώσκω and οἶδα "seem to be used synonymously
 
 Set against the first movement's [οὐ κατέλαβεν](/commentary/john/1-4-to-5/09-soteriology-not-overcome/), the two verbs portray the same event under distinct aspects: the darkness that would not comprehend the light, the world that would not know him. And the three-member series — [one refusal told three times](/commentary/john/1-6-to-13/03-articulation-three-figures/) — advances. The advance is claimed at the register the evidence supports, and no further. It is not a growing harshness in the verbs. It is a growing *definiteness in the subject that refuses*, and a growing *personalization of the one refused*. The darkness did not grasp the light, αὐτό, neuter. The world did not know *him*, αὐτόν, masculine and personal. His own people did not welcome *him* — the subject narrowed to a covenant household.
 
-Three commentators support the advance across the last two members. Köstenberger reads a causal sequence: "Because the world failed to recognize its Maker, it did not receive him."[^eec-because] McHugh judges οὐ παρέλαβον somewhat stronger than οὐκ ἔγνω.[^mchugh-stronger] Schnackenburg judges it "much more likely" that the hymn "repeated the thought of v. 10 and intensified it."[^schnackenburg-intensified] Two stand against, and they are recorded as a live minority rather than answered away: Barth, for whom "v. 11 is only the explication of v. 10c,"[^barth-explication] and Bultmann, for whom verse 11 is exactly parallel to verse 10, each explaining the other.[^bultmann-parallel] The articulation adopted here survives both, since neither denies that the object becomes personal and the subject definite; what they deny is an escalation of content, and that is not claimed. The sense of the verb is held with very high confidence. The advance is held with high confidence, on a contested field — and the whole claim of the three verbs is completed at the next verse.
+Three commentators support the advance across the last two members. Köstenberger reads a causal sequence: "Because the world failed to recognize its Maker, it did not receive him."[^eec-because] McHugh judges οὐ παρέλαβον somewhat stronger than οὐκ ἔγνω.[^mchugh-stronger] Schnackenburg judges it "much more likely" that the hymn "repeated the thought of v. 10 and intensified it."[^schnackenburg-intensified] Two read verse 11 as restating verse 10, and they mark the limit of the claim rather than being answered away: Barth, for whom "v. 11 is only the explication of v. 10c,"[^barth-explication] and Bultmann, for whom verse 11 is exactly parallel to verse 10, each explaining the other.[^bultmann-parallel] Neither denies that the object becomes personal and the subject definite, and each registers that gain in his own words — for Barth, "the ou parelabon is a sharpening of the ouk egnō of v. 10";[^barth-sharpening] for Bultmann, οὐ παρέλαβον is "an expression which becomes clearer by its reference to the efforts of the historical Revealer to win men to him."[^bultmann-clearer] What they deny is an escalation of content, and that is not claimed. The sense of the verb is held with very high confidence. The advance is held with high confidence, on a contested field — and the whole claim of the three verbs is completed at the next verse.
 
 ## The refusal, and its limits
 
@@ -207,6 +208,10 @@ The verse thus lands as one teachable claim. He was in the world — and the wor
 [^barth-explication]: Barth, *Witness to the Word*, p. 66.
 
 [^bultmann-parallel]: Bultmann, *John*, p. 56.
+
+[^barth-sharpening]: Barth, *Witness to the Word*, p. 68.
+
+[^bultmann-clearer]: Bultmann, *John*, p. 56.
 
 [^schnackenburg-closed]: Schnackenburg, *John*, vol. 1, pp. 257–258.
 
