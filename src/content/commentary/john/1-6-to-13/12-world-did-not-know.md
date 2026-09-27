@@ -1,7 +1,7 @@
 ---
 title: "Exegesis: ὁ κόσμος αὐτὸν οὐκ ἔγνω — The World That Did Not Know Its Maker"
 description: "John 1:10: in the world, the world made through him — and the world did not know its Maker."
-date: 2026-09-03
+date: 2026-09-27
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -11,7 +11,7 @@ verseEnd: 10
 sectionType: exegesis
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 [The light that gives light to every human being](/commentary/john/1-6-to-13/11-true-light-coming/) came into a world, and verse 10 says what the world did. Three short clauses, joined by καί — ἐν τῷ κόσμῳ ἦν, καὶ ὁ κόσμος δι᾽ αὐτοῦ ἐγένετο, καὶ ὁ κόσμος αὐτὸν οὐκ ἔγνω — carry the movement's first refusal: he was in the world, the world was made through him, the world did not know him. Ὁ κόσμος stands as a full noun in the second clause and again in the third. That is a marked figure, since nothing needed disambiguating and a relative clause lay ready to hand. Five things are fixed on this page: how the three clauses relate; what "the world" means, and whether it means the same thing three times; what ἦν asserts; what the middle clause is doing; and what "did not know" is.
