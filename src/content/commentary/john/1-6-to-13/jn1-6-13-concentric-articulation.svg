@@ -1,0 +1,92 @@
+<svg viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="caTitle caDesc" preserveAspectRatio="xMidYMid meet">
+  <title id="caTitle">The concentric articulation of John 1:11: the estate, the household within it, and at verse 12 the remnant within the household.</title>
+  <desc id="caDesc">The one line of John 1:11 as a narrowing in three concentric rings. The outermost, the estate — τὰ ἴδια, the world he made, now claimed as owned, continuous with v. 10's ὁ κόσμος. Inside it the household — οἱ ἴδιοι, Israel, the covenant people taught by the law and the prophets. At v. 12, inside the household, the remnant — ὅσοι … ἔλαβον, bounded by reception and not by lineage. The one refusal thrice told is marked at its three subjects — the darkness (v. 5) and the world (v. 10) at the estate, his own (v. 11) at the household — advancing in definiteness and personalization and no further. The neuter and the masculine stand in one line: the universal possession asserted in the very sentence whose masculine grieves the covenant refusal. The receivers are carried as a bounded set and nothing more.</desc>
+
+  <style>
+    /* --- family theming interface (section anchor): light page renders from in-file fallbacks;
+           dark slide renders when the host sets color / --color-gold / --color-meta / --color-goldtext --- */
+    .gk    { font-family:'SBL BibLit','Cardo','Gentium Plus','Charis SIL','Source Serif 4',Georgia,serif; fill:currentColor; }
+    .gkd   { font-family:'SBL BibLit','Cardo','Gentium Plus','Charis SIL','Source Serif 4',Georgia,serif; fill:var(--color-meta,#6b6b6b); }
+    .gkg   { font-family:'SBL BibLit','Cardo','Gentium Plus','Charis SIL','Source Serif 4',Georgia,serif; fill:var(--color-goldtext,#8a6608); text-decoration:underline; }
+    .ink   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; }
+    .desc  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; font-style:italic; }
+    .lbl   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); }
+    .note  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); font-style:italic; }
+    .tab   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); letter-spacing:2px; }
+    .glab  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-goldtext,#8a6608); font-style:italic; }
+
+    .ring1 { fill:none; stroke:currentColor; stroke-width:1.6; }
+    .ring2 { fill:none; stroke:currentColor; stroke-width:2.4; }
+    .hl    { fill:none; stroke:var(--color-gold,#b8860b); stroke-width:3.4; }
+    .rail  { stroke:var(--color-gold,#b8860b); stroke-width:2.6; fill:none; stroke-linecap:round; }
+    .lead  { stroke:var(--color-gold,#b8860b); stroke-width:1.6; fill:none; }
+    .node  { fill:var(--color-gold,#b8860b); }
+  </style>
+
+  <defs>
+    <marker id="ca-arrow" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--color-gold,#b8860b)"/>
+    </marker>
+  </defs>
+
+  <!-- ================= family title block ================= -->
+  <text class="ink" x="720" y="50" text-anchor="middle" font-size="34" letter-spacing="0.5">The Concentric Articulation</text>
+  <text class="lbl" x="720" y="82" text-anchor="middle" font-size="22">John 1:11 as a narrowing · the estate, the household, and at v. 12 the remnant</text>
+
+  <!-- ================= the one line: the neuter and the masculine ================= -->
+  <text class="gk" x="720" y="142" text-anchor="middle" font-size="28">εἰς <tspan class="gkg">τὰ ἴδια</tspan> ἦλθεν, καὶ <tspan class="gkg">οἱ ἴδιοι</tspan> αὐτὸν οὐ παρέλαβον</text>
+  <text class="desc" x="720" y="180" text-anchor="middle" font-size="22">He came to what was his own, and his own people did not welcome him.</text>
+
+  <!-- ================= the three rings, concentric ovals (not to scale) ================= -->
+  <ellipse class="ring1" cx="490" cy="540" rx="460" ry="300"/>
+  <ellipse class="ring2" cx="490" cy="540" rx="330" ry="203"/>
+  <ellipse class="hl"    cx="490" cy="540" rx="178" ry="95"/>
+
+  <!-- the estate -->
+  <text class="tab" x="490" y="290" text-anchor="middle" font-size="21">THE ESTATE</text>
+  <text class="gk"  x="490" y="324" text-anchor="middle" font-size="24">τὰ ἴδια <tspan class="lbl" font-size="21">· neuter</tspan></text>
+  <text class="lbl" x="490" y="790" text-anchor="middle" font-size="21">the world he made, now claimed as owned</text>
+
+  <!-- the household -->
+  <text class="tab" x="490" y="388" text-anchor="middle" font-size="21">THE HOUSEHOLD</text>
+  <text class="gk"  x="490" y="421" text-anchor="middle" font-size="24">οἱ ἴδιοι <tspan class="lbl" font-size="21">· masculine</tspan></text>
+  <text class="lbl" x="490" y="668" text-anchor="middle" font-size="21">Israel, the covenant people,</text>
+  <text class="lbl" x="490" y="696" text-anchor="middle" font-size="21">taught by the law and the prophets</text>
+
+  <!-- the remnant (v. 12): bounded by reception, not by lineage -->
+  <text class="tab" x="490" y="506" text-anchor="middle" font-size="21">THE REMNANT</text>
+  <text class="gk"  x="490" y="540" text-anchor="middle" font-size="24">ὅσοι … ἔλαβον</text>
+  <text class="lbl" x="490" y="572" text-anchor="middle" font-size="21">bounded by reception,</text>
+  <text class="lbl" x="490" y="599" text-anchor="middle" font-size="21">not by lineage · v. 12</text>
+
+  <!-- ================= one refusal, thrice told: marked at its three subjects ================= -->
+  <text class="tab" x="1000" y="352" text-anchor="start" font-size="21">ONE REFUSAL, THRICE TOLD</text>
+  <line class="rail" x1="1000" y1="388" x2="1000" y2="676" marker-end="url(#ca-arrow)"/>
+
+  <!-- v. 5 and v. 10 at the estate; v. 11 at the household -->
+  <line class="lead" x1="1000" y1="400" x2="897" y2="400"/>
+  <line class="lead" x1="1000" y1="520" x2="949" y2="520"/>
+  <line class="lead" x1="1000" y1="640" x2="777" y2="640"/>
+  <circle class="node" cx="897" cy="400" r="6"/>
+  <circle class="node" cx="949" cy="520" r="6"/>
+  <circle class="node" cx="777" cy="640" r="6"/>
+
+  <text class="gk"  x="1025" y="408" text-anchor="start" font-size="24">οὐ κατέλαβεν</text>
+  <text class="lbl" x="1025" y="436" text-anchor="start" font-size="21">the darkness, <tspan class="gkd">ἡ σκοτία</tspan> · v. 5</text>
+  <text class="gk"  x="1025" y="528" text-anchor="start" font-size="24">οὐκ ἔγνω</text>
+  <text class="lbl" x="1025" y="556" text-anchor="start" font-size="21">the world, <tspan class="gkd">ὁ κόσμος</tspan> · v. 10</text>
+  <text class="gk"  x="1025" y="648" text-anchor="start" font-size="24">οὐ παρέλαβον</text>
+  <text class="lbl" x="1025" y="676" text-anchor="start" font-size="21">his own · v. 11</text>
+
+  <text class="note" x="1000" y="728" text-anchor="start" font-size="21">advancing in definiteness of subject</text>
+  <text class="note" x="1000" y="754" text-anchor="start" font-size="21">and personalization of object</text>
+
+  <!-- ================= the guard in the grammar ================= -->
+  <text class="glab" x="1000" y="808" text-anchor="start" font-size="22">Israel-first is not Israel-only</text>
+  <text class="lbl"  x="1000" y="836" text-anchor="start" font-size="21">the neuter and the masculine in one line</text>
+
+  <!-- ================= synthesis ================= -->
+  <text class="desc" x="720" y="880" text-anchor="middle" font-size="22">One owner, one estate, one household — and within it a remnant bounded by reception.</text>
+</svg>
