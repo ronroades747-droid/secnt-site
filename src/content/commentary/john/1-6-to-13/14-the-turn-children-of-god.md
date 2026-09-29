@@ -1,7 +1,7 @@
 ---
 title: "Exegesis: ὅσοι δὲ ἔλαβον αὐτόν — The Turn: A Right to Become Children of God"
 description: "John 1:12: “but as many as received him” — the turn, and the right given to become children of God."
-date: 2026-09-03
+date: 2026-09-29
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -11,7 +11,7 @@ verseEnd: 12
 sectionType: exegesis
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 Here the Prologue turns. After three refusals — [the darkness that did not grasp](/commentary/john/1-4-to-5/09-soteriology-not-overcome/), [the world that did not know](/commentary/john/1-6-to-13/12-world-did-not-know/), [his own who did not welcome](/commentary/john/1-6-to-13/13-his-own-welcome-refused/) — a single particle, δέ, and a single repeated verb turn the movement: ὅσοι δὲ ἔλαβον αὐτόν, *but as many as received him*. The verse then says what they were given, what they became, who gave it, and who they are. Seven things are fixed on this page: the verb-pair across the verse boundary and what "received" means; who the receivers are; what ἐξουσία is; what τέκνα says and what "adoption" is doing; who gives; what the irregular opening construction does, and whether it says anything about number; and what believing in his name is.
