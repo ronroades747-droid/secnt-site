@@ -2,7 +2,7 @@
 title: "Architecture: The Temporal Payload — An Advent Told in Retrospect"
 description: "The unit’s tenses as one plan: an advent told in retrospect, from the aorist frame through the imperfect interior to the climactic begetting, with one present left open."
 date: 2026-09-08
-revised: 2026-09-09
+revised: 2026-09-30
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -56,7 +56,7 @@ McHugh, who is on that second list, concedes the point himself. Surveying the tw
 
 The five verbs of the reception are aorists: οὐκ ἔγνω, *did not know him*, at verse 10; ἦλθεν, *came*, and οὐ παρέλαβον, *did not receive him*, at verse 11; ἔλαβον, *received him*, and ἔδωκεν, *gave*, at verse 12. They summarize the advent's reception at its climax, and all five are constative — each viewing its action whole rather than watching it happen.
 
-That claim rests on the class rather than on any one commentator's parse of any one verb, and it is worth being exact about who says what. Harris takes the Prologue's aorists as constative as a class. Carson holds that the aorist "merely establishes that the writer looks on the action holistically." Schnackenburg has these aorists reflect that the encounter between the Word and the world "took place in the reality of history." The composed symmetry of the refusal and the answer that follows it stands with them.[^class] At individual verbs the evidence is thinner, and is reported as such: Harris labels οὐ παρέλαβον a constative that sums up "in a comprehensive glance the stark failure of the majority of Jews," and Waetjen labels οὐκ ἔγνω a constative that reduces an ongoing response of denial and rejection to a single fact. That is two verbs, not five.[^individual]
+That claim rests on class and principle rather than on any one commentator's parse of any one verb, and it is worth being exact about who says what. Harris holds the Prologue's six uses of ἐγένετο to be constative as a class; none of the five is that verb, so this commentary carries his class to them by analogy. Carson, commenting on verse 5, states a general principle: "that tense merely establishes that the writer looks on the action holistically." Schnackenburg, of the aorists at verses 10 and 11, says that they "merely reflect the fact that the encounter between the Logos and the world took place in the reality of history." The composed symmetry of the refusal and the answer that follows it stands with them.[^class] At individual verbs the evidence is thinner, and is reported as such: Harris labels οὐ παρέλαβον a constative that sums up "in a comprehensive glance the stark failure of the majority of Jews," and Waetjen labels οὐκ ἔγνω a constative that reduces an ongoing response of denial and rejection to a single fact. That is two verbs, not five.[^individual]
 
 Waetjen's grammar is taken here and his reference is not. He reads verses 9 to 13 as the history of the rejection of the Word before the time of Jesus — the older reading, already placed above and not adopted. A parse can be right while the reference built on it is declined, and this is one of those cases.
 
@@ -76,7 +76,7 @@ Two present participles stand inside all this past, and they do two different jo
 
 The first is ἐρχόμενον, *coming*, at verse 9. It sits inside the time-embracing ἦν and gives the advent's ongoing mode; it does not reach forward to the reader. It says how the light was coming, not that it is still coming to you.
 
-The second is τοῖς πιστεύουσιν, *to those who believe*, at verse 12. That one does reach forward, and Harris says why: it is "open to those who live after John's time."[^aperture] It is the one verb form in the movement that is not past, and it is the single place where the whole retrospect opens onto the reader's own present.
+The second is τοῖς πιστεύουσιν, *to those who believe*, at verse 12. That one does reach forward, and Harris says why: it is "open to those who live after John's time."[^aperture] It is the one verb in the movement whose time reaches the reader's present: the single place where the whole retrospect opens onto the reader's own day.
 
 So the contemporary frame of this movement enters at the reception's open door, and not at the light's shining — the reverse of the arrangement in the movement before it, which is the inversion this section began by noting.
 
@@ -108,7 +108,7 @@ Where this movement sits — between the opening verses and the summit at verse 
 
 [^complementary]: McHugh, *John 1–4*, p. 43: "the two positions are perhaps not mutually exclusive alternatives, but complementary… In other words, the reception of the Word of God under the Old Covenant was repeated at the coming of the Word made Flesh." McHugh prints the hinge division himself (p. 5, p. 28), which is why the concession is worth having.
 
-[^class]: Harris, *John*, p. 22, on the Prologue's aorists as a class. D. A. Carson, *The Gospel according to John* (Pillar New Testament Commentary; Grand Rapids: Eerdmans, 1991), p. 138: the aorist "merely establishes that the writer looks on the action holistically." Schnackenburg, *John*, vol. 1, p. 258, where these aorists "reflect the fact that the encounter between the Logos and the world took place in the reality of history." The symmetry of οὐ παρέλαβον answered by ἔλαβον is treated at verse 12.
+[^class]: Harris, *John*, p. 22, on the six uses of ἐγένετο in the Prologue: "these uses of the aorist are all constative." D. A. Carson, *The Gospel according to John* (Pillar New Testament Commentary; Grand Rapids: Eerdmans, 1991), p. 138, in his note on verse 5 (κατέλαβεν), as a general principle: "that tense merely establishes that the writer looks on the action holistically." Schnackenburg, *John*, vol. 1, p. 258, of ἦλθεν and οὐκ ἔγνω: "These aorists merely reflect the fact that the encounter between the Logos and the world took place in the reality of history." The symmetry of οὐ παρέλαβον answered by ἔλαβον is treated at verse 12.
 
 [^individual]: Harris, *John*, p. 30, at οὐ παρέλαβον: a constative "summing up in a comprehensive glance the stark failure of the majority of Jews." Herman C. Waetjen, "Logos πρὸς τὸν θεόν and the Objectification of Truth in the Prologue of the Fourth Gospel," *Catholic Biblical Quarterly* 63 (2001), p. 276, at οὐκ ἔγνω. Harris labels no other verb of the five flatly constative — ἔγνω he hedges, and ἦλθεν, ἔλαβον and ἔδωκεν he does not label at all; his remark that ἔλαβον bears the same sense as παρέλαβον (p. 31) is about the compound and the simple verb, not about aspect. Waetjen's own second constative is at verse 5, and the phrase "single fact" there is Moule's. The claim for all five is therefore the class's and not theirs.
 

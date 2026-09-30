@@ -2,6 +2,7 @@
 title: "Architecture: The Gospel-Facing Register"
 description: "The turn at vv. 11–12 as the Gospel’s own turn in miniature: the refusal of his own and the reception of as many as received him, laid over the Book of Signs and the Book of Glory."
 date: 2026-09-15
+revised: 2026-09-30
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -73,7 +74,7 @@ The answer of the Gospel's last sentence to this unit's last phrase is held firm
 
 The realization at 13:1 is held provisionally, and deliberately so. It is a claim about the architecture of a Gospel whose later chapters this volume has not read, and it is recorded here so that the reader can see where it would be tested.
 
-What the movement does with its one non-past verb — the door it leaves open at the believing, and to whom — is the next section's question.
+What the movement does with the one verb whose time reaches the reader's present — the door it leaves open at the believing, and to whom — is the next section's question.
 
 [^halves]: Murray J. Harris, *John* (Exegetical Guide to the Greek New Testament; B&H, 2015), p. 10, giving the Gospel's four sections with "1:19–12:50 (that illustrates 1:11) … 13:1–20:31 (that illustrates 1:12)" and noting that "the two main parts (#2 and #3) each end with a summary (12:37–50; 20:30–31)"; Harris reports the four-part division as generally recognized, and his own outline (p. 11) divides the second half further. Raymond E. Brown, *The Gospel according to John (I–XII)* (Anchor Bible 29; Doubleday, 1966), p. 19: "Verses 11 and 12 seem to be a summary of the two main divisions of John. Verse 11 covers the Book of Signs (chs. 1–12) … Verse 12 covers the Book of Glory (chs. 13–20)"; again at p. 29, "vss. 11 and 12 are really short summaries of the two parts of the Gospel," and at p. cxxxviii, where the outline itself records that "the spirit of these two main divisions of the Gospel is summed up in two verses of the Prologue (1:11–12)." D. A. Carson, *The Gospel according to John* (Pillar New Testament Commentary; Eerdmans, 1991), p. 125, quoted above. Andrew T. Lincoln, *The Gospel according to Saint John* (Black's New Testament Commentaries; Continuum, 2005), p. 102: verse 11 "also provides a preview of the first part of the narrative, where in 1:19–12:50 …"; and of verses 12–13, "this summary of the positive response previews the second part of the narrative, where in 13:1–17:26 Jesus is portrayed with those who did receive him" — the farewell material, narrower than the second half as the others draw it. C. H. Dodd, *The Interpretation of the Fourth Gospel* (Cambridge, 1953), p. 402: "The evangelist himself has characterized the Book of Signs as a story of rejection … Thus the statement of the Prologue is made good: εἰς τὰ ἴδια ἦλθεν, καὶ οἱ ἴδιοι αὐτὸν οὐ παρέλαβον. But the Prologue goes on, ὅσοι δὲ ἔλαβον αὐτόν …," completed on p. 403: "Thus the chapters which exhibit the rejection of Christ must be supplemented by chapters which exhibit the blessedness of those who receive Him, and through Him become children of God." Dodd names the second term of the relation as the Farewell Discourses rather than as his second book as a whole, and his hinge is the departure of Judas at 13:30, not 13:1.
 
