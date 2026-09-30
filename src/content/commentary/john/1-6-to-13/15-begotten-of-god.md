@@ -1,7 +1,7 @@
 ---
 title: "Exegesis: ἐκ θεοῦ ἐγεννήθησαν — Begotten, Not of the World but of God"
 description: "John 1:13: begotten not of blood, nor of the will of the flesh, nor of the will of man, but of God."
-date: 2026-09-03
+date: 2026-09-30
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -11,7 +11,7 @@ verseEnd: 13
 sectionType: exegesis
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 The sentence that began at [verse 12](/commentary/john/1-6-to-13/14-the-turn-children-of-god/) does not end there. A relative clause with no verb of its own until its last word runs on: οἳ οὐκ ἐξ αἱμάτων οὐδὲ ἐκ θελήματος σαρκὸς οὐδὲ ἐκ θελήματος ἀνδρὸς ἀλλ᾽ ἐκ θεοῦ ἐγεννήθησαν, *who were begotten — not of bloods, nor of the will of the flesh, nor of the will of a husband — but of God.* It is the movement's close, and it says what it is to become a child of God by ruling out every way a human being is ordinarily brought into the world and naming God instead. Six things are fixed on this page: what the relative attaches to; what the three denials exclude, severally and together; what the begetting is; who begets, given that verse 12 said the Word gives; how God's act stands to the human turning; and what the verse is not saying — about baptism, and about the birth of Jesus.
