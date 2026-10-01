@@ -85,7 +85,7 @@ What the world refuses is not information but a relation, and the refusal is cul
 
 The first guard is Ridderbos's: "The inner contradiction of this not knowing is not explained. The opposition simply posits itself in all its mysteriousness." With it goes his refusal to find in the verse "an unsatisfied dormant sense or preunderstanding that needed only to be activated," since what is needed is "the miracle of a new creation."[^ridderbos-mystery] The commentary declines to supply a mechanism the text withholds.
 
-The second guard is the one the first movement established: the refusal is real, and it is not final. Barth's discrimination is adopted — if there is tragedy here, "in the mind of the Evangelist the cosmos rather than Jesus is the tragic hero."[^barth-tragic] So is his reading of the passage's key: beyond the accusation, "there sounds as the meaning of the whole passage vv. 9–13 the melody of triumph."[^barth-triumph] The Gospel's next use of the word is 1:29 — the world whose sin is taken away.
+The second guard is the one the first movement established: the refusal is real, and it is not final. Barth's answer to the tragic reading is adopted. He meets it on its own premise — if there is tragedy here, "in the mind of the Evangelist the cosmos rather than Jesus is the tragic hero" — and then declines the category: the complaint and accusation against the world are real, but in the mind of the Evangelist they "hardly have a 'tragic' ring in the pregnant sense of the term."[^barth-tragic] He had said as much of the first movement: such terms are "out of place in vv. 10f. too."[^barth-tragic-47] His reading of the passage's key is adopted too: beyond the accusation, "there sounds as the meaning of the whole passage vv. 9–13 the melody of triumph."[^barth-triumph] The Gospel's next use of the word is 1:29 — the world whose sin is taken away.
 
 The verse thus lands as one teachable claim. He was in the world — and the world was his own handiwork, made through him — and yet the world did not know him. Not that it failed to identify him: it refused him, and what it refused was a whole relation, mind and heart and will together, owed to the one from whom it had its being. That is why the sentence is not a tragedy of mistaken identity but an indictment; and why, in this Gospel, it is not the last word. It is the seed of the Gospel's "the world has hated them" and its "the ruler of this world is judged" (17:14; 16:11), and it sets up the movement's next step, in which the refusal narrows from the world to a people: the light came to what was its own.
 
@@ -218,5 +218,7 @@ The verse thus lands as one teachable claim. He was in the world — and the wor
 [^ridderbos-mystery]: Ridderbos, *John*, p. 44.
 
 [^barth-tragic]: Barth, *Witness to the Word*, p. 65.
+
+[^barth-tragic-47]: Barth, *Witness to the Word*, p. 47.
 
 [^barth-triumph]: Barth, *Witness to the Word*, p. 66.
