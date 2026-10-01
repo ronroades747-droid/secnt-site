@@ -30,7 +30,7 @@ First, κόσμος keeps one referent across the verse — the inhabited human 
 
 McHugh reads the Gospel's whole use of the word from that verse. In the Fourth Gospel, he concludes, ὁ κόσμος "denotes the divinely created world which has, as Genesis teaches, rejected God, but which is at the same time not beyond salvation."[^mchugh] On that reading the world that hates and is judged (15:18–19; 16:8–11) is the world God so loved (3:16) and whose sin the Lamb takes away (1:29). And [the predicate rule](/commentary/john/1-6-to-13/) by which this commentary reads verse 10 reads each later occurrence the same way: the aspect shifts with the predicate, never the thing itself.
 
-The consequence is not small. It forbids the reader to divide the Gospel's world in two, a world to be loved and another to be judged. The world that will hate the disciples is not another world than the one for which the Son is given. It is the same world, seen under what it does and under what is done for it.
+On that reading the consequence is not small. It forbids the reader to divide the Gospel's world in two, a world to be loved and another to be judged. The world that will hate the disciples is not another world than the one for which the Son is given. It is the same world, seen under what it does and under what is done for it.
 
 ## Responsibility grounded in creation
 
@@ -46,7 +46,7 @@ Barth's answer to the tragic reading holds. If there is tragedy here, "in the mi
 
 ## The register of the claim
 
-The doctrine rests on what the exegesis held, and is held where the exegesis held it. That κόσμος names one world across verse 10 is held with very high confidence; that the aspect is carried by the predicate and not by the noun, with high confidence, because it is the reading that could most easily be stretched. The reading of the Gospel's later uses is McHugh's, taken here on that reading, and each of those occurrences is read in its own place. That the middle clause grounds the world's culpability, and that what the world refused was a whole relation, are held with very high confidence. That the world is estranged and not alien is not a further finding beside these: it is what they entail.
+The doctrine rests on what the exegesis held, and is held where the exegesis held it. That κόσμος names one world across verse 10 is held with very high confidence; that the aspect is carried by the predicate and not by the noun, with high confidence, because it is the reading that could most easily be stretched. The reading of the Gospel's later uses is McHugh's, taken here on that reading, and each of those occurrences is read in its own place. That the middle clause applies the creating work of verse 3 to the world that refuses, and that what the world refused was a whole relation, are held with very high confidence. That the world's refusal is culpable on that ground, and that the world is estranged and not alien, are not further findings beside these: they are what those readings entail.
 
 ## The pastoral hearing
 
@@ -54,8 +54,8 @@ The pastoral hearing is plain. No one who refuses the light is refusing a strang
 
 And no one is beyond the world God loved. The world that did not know its Maker is the world whose sin the Lamb takes away. What the first refusal teaches the church to confess, then, is this: that the world is his, that its refusal of him is real and answerable, and that its refusal is not the last word. That the refusal narrows from the world to a people — the light came to what was its own — is where the theology turns next.
 
-[^mchugh]: John F. McHugh, *A Critical and Exegetical Commentary on John 1–4* (International Critical Commentary; T&T Clark, 2009), p. 41. He reaches the sentence from the three clauses of verse 10, which he calls "almost a definition, of the sense in which John is going to use the term" (p. 40).
+[^mchugh]: John F. McHugh, *A Critical and Exegetical Commentary on John 1–4* (International Critical Commentary; T&T Clark, 2009), p. 41. He reaches the sentence from the three clauses of verse 10, which he calls "certainly a description, almost a definition, of the sense in which John is going to use the term" (p. 40).
 
-[^barth-tragic]: Karl Barth, *Witness to the Word: A Commentary on John 1*, ed. Walther Fürst, trans. Geoffrey W. Bromiley (Eerdmans, 1986), p. 65. The tragic reading he answers is W. Bauer's. Already at p. 47 Barth had said that such terms are "out of place in vv. 10f. too."
+[^barth-tragic]: Karl Barth, *Witness to the Word: A Commentary on John 1*, ed. Walther Fürst, trans. Geoffrey W. Bromiley (Eerdmans, 1986), p. 65. The tragic reading he answers there is W. Bauer's. Already at p. 47, where H. J. Holtzmann had heard a "tragic note" and Bauer "pessimism" in the first movement, Barth had written: "We shall see that such terms are out of place in vv. 10f. too."
 
-[^barth-triumph]: Barth, *Witness to the Word*, p. 66, where he grants the accusation as "certainly present but only as a secondary note."
+[^barth-triumph]: Barth, *Witness to the Word*, p. 66, where he grants the complaint and accusation as "certainly present but only as a secondary note."
