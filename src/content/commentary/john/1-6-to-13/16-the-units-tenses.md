@@ -1,7 +1,7 @@
 ---
 title: "Exegesis: The Unit’s Tenses — The Synthesis Close"
 description: "The synthesis close: the unit’s verbs gathered — the aorist frame, the imperfect interior, the reception aorists, the climactic begetting, and the one present inside them."
-date: 2026-09-03
+date: 2026-10-01
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -11,7 +11,7 @@ verseEnd: 13
 sectionType: synthesis
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 The reader has now met every verb in these eight verses, each in its own place: the man who came, the light that was coming, the world that did not know, the home that did not welcome, the ones who received and were begotten, and those who believe. [Before the verses were read one by one](/commentary/john/1-6-to-13/04-temporal-payload/), this commentary set out what their tenses do together — an advent told in retrospect. This page does the same work from the other end. With each verb now read where it stands, the tenses are gathered back into one plan; the one dispute about them that the verses left open is closed; and the plan is held against the one serious claim that these verses mark no time at all.
