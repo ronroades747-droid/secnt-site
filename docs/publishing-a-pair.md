@@ -146,6 +146,7 @@ The Bunny library ID is global (already in `src/lib/site.ts`); you never set it 
 | `bunnyVideoId` | yes | The **bare GUID** — see the rule below |
 | `youtubeUrl` | no | YouTube mirror link |
 | `duration` | no | `MM:SS` or `HH:MM:SS`; rendered if present |
+| `audioUrl` | no | The voice track's full `https://audio.secnt.org/…` address — see below |
 | `license` | yes | `CC-BY-4.0` |
 | `draft` | yes | `true` while staging, `false` to go live |
 
@@ -160,6 +161,16 @@ The Bunny library ID is global (already in `src/lib/site.ts`); you never set it 
    Not the player URL, not the embed URL, not `player.mediadelivery.net/...` — just the hex string. The site builds the full embed URL around it.
 
 2. **`draft`** — flip to `false`.
+
+### `audioUrl` — the listen-only player
+
+Set at the flip, with the other lecture fields, once the voice track has been uploaded unchanged to Bunny Storage (`secnt-audio`) in its cycle's folder. **Copy the address from the pair's Build** (its artifact-name block); never derive it from the page slug. The path is the corpus cycle folder plus the voice track's committed file name, and it is case-sensitive:
+
+```yaml
+audioUrl: "https://audio.secnt.org/Jn1_6-13/Jn1_613_Lecture_18.mp3"
+```
+
+With it set, the lecture page shows a "Listen" player under the video and the commentary page a "Listen to the lecture" line under its lecture panel. Without it, neither appears. The build refuses a value that is not a full `https` URL.
 
 ### `sectionRef` — make it match exactly
 
@@ -249,6 +260,7 @@ Do not author a section file from scratch on the Production side. The frontmatte
 **Lecture**
 - [ ] Video uploaded to Bunny, encoded, 16:9 title-slide thumbnail set
 - [ ] `bunnyVideoId` = bare GUID (no URL)
+- [ ] `audioUrl`, if the voice track is uploaded: copied from the Build, opens and plays in a browser
 - [ ] `sectionRef` matches the section's ID exactly
 - [ ] `title` in `Lecture N — [descriptor]` form
 

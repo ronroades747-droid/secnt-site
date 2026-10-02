@@ -284,6 +284,19 @@ const lectures = defineCollection({
     slidesPdf: z.string().optional(),
     duration: z.string().optional(),
 
+    // The lecture's voice track, for listening with the screen locked (Web Dev
+    // Ask "Lecture audio player", 2 Oct 2026). A full https URL on the audio
+    // host, audio.secnt.org (Bunny Storage behind a pull zone — the files run
+    // past Cloudflare Pages' 25 MiB cap, so they are never served from this
+    // repo). Copied at the flip from the pair's Build, never derived from the
+    // slug: the path is the corpus cycle folder plus the voice track's own
+    // committed file name, and it is case-sensitive. Absent → no player.
+    audioUrl: z
+      .string()
+      .url()
+      .refine((u) => u.startsWith('https://'), { message: 'audioUrl must be an https URL' })
+      .optional(),
+
     license,
     draft: z.boolean().default(false),
   }),
