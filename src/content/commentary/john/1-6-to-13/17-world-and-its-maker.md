@@ -1,7 +1,7 @@
 ---
 title: "Theology: The World That Did Not Know Its Maker"
 description: "The theology of the refusal at v. 10: a world made through him that did not know its Maker."
-date: 2026-09-03
+date: 2026-10-02
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -11,7 +11,7 @@ verseEnd: 13
 sectionType: theology
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 The exegesis is finished, and the theology begins where the refusal began. Every verse of the movement has now been read in its place, and [the verse of the world's refusal](/commentary/john/1-6-to-13/12-world-did-not-know/) was read for what it says: a world made through him that did not know him. This page does not return to those clauses to press them further. It asks what the church, on the strength of them, has learned to confess — and the first refusal yields a doctrine of the world.
