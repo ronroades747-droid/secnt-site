@@ -98,6 +98,12 @@ const crumbs = [
       </p>
     )}
 
+    {pairedLecture?.data.audioUrl && (
+      <p class="paired-listen">
+        <a href={`${lectureUrl(entry.id)}#listen`}>Listen to the lecture</a>
+      </p>
+    )}
+
     <PageDownloads sectionId={entry.id} title={d.title} />
 
     {diagramsTop.map((dg) => <Diagram diagram={dg} entryPath={entry.filePath} />)}

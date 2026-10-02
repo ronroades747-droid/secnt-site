@@ -200,8 +200,15 @@ main { flex: 1 0 auto; width: 100%; }
    pages (Web Dev Ask, Downloads on the commentary page, 26 Sep 2026). */
 .page-downloads { margin: 0 0 1.75rem; font-size: 0.98rem; display: flex; flex-wrap: wrap; gap: 0.35rem 1.5rem; }
 .page-downloads a { font-weight: 500; }
+/* "Listen to the lecture" (Web Dev Ask, Lecture audio player, 2 Oct 2026):
+   one line under the Triptych, shown only where the lecture has audio. */
+.paired-listen { margin: 0 0 1.75rem; font-size: 0.98rem; }
+.paired-listen a { font-weight: 500; }
 /* Sits close under whatever it follows, so the two read as one group. */
 .paired-lecture:has(+ .page-downloads),
+.paired-lecture:has(+ .paired-listen),
+.paired-listen:has(+ .page-downloads),
+.triptych:has(+ .paired-listen),
 .triptych:has(+ .page-downloads) { margin-bottom: 0.6rem; }
 
 /* --- TRIPTYCH -------------------------------------------------------------
@@ -534,6 +541,12 @@ blockquote footer { margin-top: 0.85rem; font-size: 0.95rem; font-style: normal;
 .lecture-resources { list-style: none; padding: 0; margin: 1.5rem 0; display: flex; flex-wrap: wrap; gap: 1.25rem; }
 .lecture-resources a { text-decoration: none; }
 
+/* Lecture audio (listen-only player under the video). Full width of the
+   reading column, so on a phone it spans the screen under the video. */
+.lecture-audio { margin: 1.5rem 0 0; }
+.lecture-audio__label { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-meta); margin: 0 0 0.4rem; font-weight: normal; }
+.lecture-audio__player { display: block; width: 100%; }
+
 .back-link { display: inline-block; margin: 1.5rem 0; color: var(--color-meta); text-decoration: none; }
 .back-link:hover { color: var(--color-gold); }
 
@@ -598,7 +611,7 @@ blockquote footer { margin-top: 0.85rem; font-size: 0.95rem; font-style: normal;
   :root { --color-bg: #fff; --color-text: #000; }
   body { font-size: 11.5pt; line-height: 1.45; }
   .site-header, .primary-nav, .banner, .gold-rule, .site-footer,
-  .video-embed, .breadcrumb, .lecture-resources, .back-link,
+  .video-embed, .lecture-audio, .paired-listen, .breadcrumb, .lecture-resources, .back-link,
   .section-toc, .more-to-come, .unit-nav, .prev-next, .paired-lecture, .triptych, .page-downloads, .page-dates { display: none !important; }
   .unit-layout { display: block; max-width: none; padding: 0; margin: 0; }
   main, .reading { max-width: none; padding: 0; }
