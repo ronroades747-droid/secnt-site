@@ -30,7 +30,7 @@ Three things follow from this, and one thing is refused.
 
 First, the guilt of the refusal is the guilt of a belonging repudiated. His own refused the one whose own they were. What they turned away was not a stranger's claim but a rightful owner's.
 
-The refusal of a welcome is therefore, at bottom, the refusal of self-recognition. The universal reading's own champion states it best. In Bultmann's account, those who belong to the Creator are asked whether they are willing to recognize themselves as belonging to him; if they refuse, they thereby assign themselves another origin.[^bultmann-origin] That sentence gains rather than loses force at the covenant level, where the belonging refused had been confessed in Israel's own scriptures. And so the covenant people, refusing, "became no different than the world in her rejection of its Maker."[^eec-world]
+The refusal of a welcome is therefore, at bottom, the refusal of self-recognition. The universal reading's own champion states it best. In Bultmann's account, the ἴδιοι are asked whether they are willing to recognize themselves as belonging to their Creator; if they refuse, they thereby assign themselves another origin.[^bultmann-origin] That sentence gains rather than loses force at the covenant level, where the belonging refused had been confessed in Israel's own scriptures. And so the covenant people, refusing, "became no different than the world in her rejection of its Maker."[^eec-world]
 
 That is the doctrine's hard edge. Election does not lessen the guilt of refusal; it is what makes the refusal personal. A people taught to know him, and named as his, did not receive him.
 
@@ -44,9 +44,9 @@ And the remnant stands at the very next verse. [Those who received him](/comment
 
 Third, the order in salvation's history is real: he came first to Israel.
 
-And here is the one thing the locus refuses: the narrowing that this order has so often been made to carry. The universal scope of the light *of men* is not diminished by the covenant refusal. The same line that grieves the household's refusal calls the whole world his. He came to what was his own, the world he made, and within it to his own people.
+And here is the one thing the doctrine refuses: the narrowing that this order has so often been made to carry. The universal scope of the light *of men* is not diminished by the covenant refusal. The same line that grieves the household's refusal calls the whole world his. He came to what was his own, the world he made, and within it to his own people.
 
-*Israel-first is not Israel-only* — it is [what the wordplay says](/commentary/john/1-6-to-13/13-his-own-welcome-refused/). The guard is not brought to the verse from outside. It is written into the verse's own grammar.
+*Israel-first is not Israel-only.* That is not a caveat imposed on the verse from outside; it is [what the wordplay says](/commentary/john/1-6-to-13/13-his-own-welcome-refused/). The guard is written into the verse's own grammar.
 
 Cyril drew a severer conclusion: when Christ was not received, the grace passed to the Gentiles.[^cyril-gentiles] His reading is recorded here, with its patristic severity noted, and it is not adopted.
 
