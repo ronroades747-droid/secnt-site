@@ -111,7 +111,7 @@ The tradition states the same guard in its own forms. Carson, in passing: "there
 
 The verse thus lands as one teachable claim. He came to what was his own — the world he had made — and his own people, the people God had made his own and taught by the law and the prophets, did not welcome him. It is the same refusal the darkness made and the world made, now at its most personal. It is not a stranger unrecognized, but a rightful owner turned away at the door of his own house, by the household that knew his name. And the sentence that grieves Israel's refusal is the same sentence that calls the whole world his: he came first to Israel, but he was never only Israel's.
 
-It is the seed of the Gospel's first half — the public ministry the Prologue here summarizes in a verse, and its verdict at 12:37–41. It is the seed, too, of the hinge at 13:1, where his own are named again and, this time, loved to the end. Nor is the refusal the last word: the very next verse begins with those who received him.
+It is the seed of the Gospel's first half — the public ministry the Prologue here summarizes in a verse, and its verdict at 12:37–41. It is the seed, too, of the hinge at 13:1, where his own are named again and, this time, loved to the end (held provisional at the Gospel's register). Nor is the refusal the last word: the very next verse begins with those who received him.
 
 [^ridderbos-low]: Herman N. Ridderbos, *The Gospel according to John: A Theological Commentary* (Eerdmans, 1997), p. 45.
 
