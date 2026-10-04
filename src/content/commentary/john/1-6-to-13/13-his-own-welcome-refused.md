@@ -2,6 +2,7 @@
 title: "Exegesis: εἰς τὰ ἴδια ἦλθεν — His Own, and the Welcome Refused"
 description: "John 1:11: he came to what was his own — the world as his estate, Israel as his household — and his own did not welcome him."
 date: 2026-09-28
+revised: 2026-10-04
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -29,7 +30,7 @@ The evangelist uses one adjective twice in one line, neuter and then masculine, 
 
 Οἱ ἴδιοι are Israel — "his own people (as the masculine *hoi idioi* must be translated)," as Carson puts it.[^carson-people] They are the covenant nation that the Old Testament's formulas of possession name (Exodus 19:5–6; Deuteronomy 7:6; 14:2; 26:18).[^possession-formulas] The Gospel then narrates their refusal of him from 1:19 to 12:50. And they are named here in John's own relational idiom of belonging — οἱ ἴδιοι again at 13:1, τὰ ἴδια πρόβατα at 10:3–4 — rather than in the Septuagint's.
 
-That is the answer to the strongest objection to the Israel reading. Bultmann observes that the Septuagint's formula for the chosen people is λαὸς περιούσιος, not this word.[^bultmann-laos] But the evangelist is not quoting the Septuagint's formula. He is speaking his Gospel's own language, the language he will use again at exactly the hinge where his own *receive* him (13:1).
+That is the answer to the strongest objection to the Israel reading. Bultmann observes that the Septuagint's formula for the chosen people is λαὸς περιούσιος, not this word.[^bultmann-laos] But the evangelist is not quoting the Septuagint's formula. He is speaking his Gospel's own language, the language he will use again at exactly the hinge where he loved his own to the end (13:1).
 
 The split referent is carried whole by Harris, and by Lindars as Ridderbos reports him.[^split-whole] The rest of the tradition carries it in halves. Schnackenburg, Bultmann and Michaels read the neuter as the Word's own world.[^neuter-half] McHugh, Carson, Köstenberger, Dodd, Barrett, Morris, Westcott, Lincoln, Keener, Calvin, Brown and, among the Fathers, Cyril read the masculine as Israel.[^masculine-half] The ground for dividing them is the discipline [the previous verse](/commentary/john/1-6-to-13/12-world-did-not-know/) adopted — an aspect is claimed only where the clause's own predicate carries it — applied now to the two members. The neuter's predicate is a coming's *destination*, and it carries the widest register. The masculine's predicate is a personal welcome refused, and it carries the covenant register.
 
