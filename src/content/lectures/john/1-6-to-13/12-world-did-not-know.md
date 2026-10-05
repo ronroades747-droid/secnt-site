@@ -6,5 +6,6 @@ sectionRef: john/1-6-to-13/12-world-did-not-know
 bunnyVideoId: "e7c97f94-b818-4b33-8db6-e967776196b0"
 license: CC-BY-4.0
 duration: "51:55"
+audioUrl: "https://audio.secnt.org/Jn1_6-13/Jn1_613_Lecture_13.mp3"
 draft: false
 ---

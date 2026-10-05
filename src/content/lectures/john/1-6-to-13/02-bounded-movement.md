@@ -6,5 +6,6 @@ sectionRef: john/1-6-to-13/02-bounded-movement
 bunnyVideoId: "78b52703-705e-4e20-8de6-ea3d6a2e706b"
 license: CC-BY-4.0
 duration: "24:06"
+audioUrl: "https://audio.secnt.org/Jn1_6-13/Jn1_613_Lecture_03.mp3"
 draft: false
 ---

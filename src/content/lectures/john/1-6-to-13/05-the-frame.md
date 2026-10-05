@@ -6,5 +6,6 @@ sectionRef: john/1-6-to-13/05-the-frame
 bunnyVideoId: "a949ca12-90b9-40c0-8d61-53a63b17efae"
 license: CC-BY-4.0
 duration: "23:29"
+audioUrl: "https://audio.secnt.org/Jn1_6-13/Jn1_613_Lecture_06.mp3"
 draft: false
 ---

@@ -6,5 +6,6 @@ sectionRef: john/1-6-to-13/10-witness-sent
 bunnyVideoId: "6bd0a872-a669-4ff0-a31d-2267572b099f"
 license: CC-BY-4.0
 duration: "37:22"
+audioUrl: "https://audio.secnt.org/Jn1_6-13/Jn1_613_Lecture_11.mp3"
 draft: false
 ---

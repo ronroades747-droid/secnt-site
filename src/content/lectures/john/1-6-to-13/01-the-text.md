@@ -6,5 +6,6 @@ sectionRef: john/1-6-to-13/01-the-text
 bunnyVideoId: "469c36bf-03b5-463b-ba4b-0d3cc400c43b"
 license: CC-BY-4.0
 duration: "24:34"
+audioUrl: "https://audio.secnt.org/Jn1_6-13/Jn1_613_Lecture_02.mp3"
 draft: false
 ---

@@ -6,5 +6,6 @@ sectionRef: john/1-6-to-13/03-articulation-three-figures
 bunnyVideoId: "7b3ee40a-b88b-4dcb-bc01-e2a7c0f44478"
 license: CC-BY-4.0
 duration: "28:29"
+audioUrl: "https://audio.secnt.org/Jn1_6-13/Jn1_613_Lecture_04.mp3"
 draft: false
 ---
