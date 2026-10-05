@@ -16,7 +16,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import BunnyEmbed from './BunnyEmbed.astro';
 import PageDates from './PageDates.astro';
 import Breadcrumb from './Breadcrumb.astro';
-import { commentaryUrl, commentaryPdfUrl, volumeUrl, splitCommentaryId, lectureThumbUrl, normalizeId } from '../lib/site';
+import { commentaryUrl, commentaryPdfUrl, volumeUrl, splitCommentaryId, lectureThumbUrl } from '../lib/site';
 import { commentaryPdfName } from '../lib/commentary-pdf.mjs';
 
 interface Props {
@@ -39,11 +39,10 @@ const lectureCrumb = 'Lecture';
 
 // The listen-only player (Web Dev Ask "Lecture audio player", 2 Oct 2026):
 // the native <audio> element, no player script, preload="none" so nothing is
-// fetched until play is pressed. A small script (below) counts the first play
-// per page view as a GoatCounter event, listen/<lecture id>, and sets the
-// Media Session metadata the lock screen and the car's display show. The
-// artwork is the lecture's thumbnail, offered only where the file exists.
-const listenPath = `listen/${normalizeId(lecture.id)}`;
+// fetched until play is pressed. A small script (below) sets the Media
+// Session metadata the lock screen and the car's display show. The artwork is
+// the lecture's thumbnail, offered only where the file exists. (Until
+// 5 October 2026 it also counted the first play as a GoatCounter event.)
 const thumbFile = path.join(process.cwd(), 'public', 'lectures', `${section.id}.png`);
 const audioArtwork = fs.existsSync(thumbFile) ? lectureThumbUrl(section.id) : '';
 
@@ -66,8 +65,6 @@ const crumbs = [
       <section class="lecture-audio" id="listen" aria-label="Listen to the lecture">
         <h2 class="lecture-audio__label">Listen</h2>
         <audio class="lecture-audio__player" controls preload="none" src={l.audioUrl}
-          data-listen-path={listenPath}
-          data-listen-title={`Listen — ${l.title}`}
           data-media-title={l.title}
           data-media-album={passageLabel}
           data-media-artwork={audioArtwork}></audio>
@@ -78,9 +75,7 @@ const crumbs = [
 
     <ul class="lecture-resources">
       {l.youtubeUrl && <li><a href={l.youtubeUrl} rel="noopener">Watch on YouTube</a></li>}
-      <li><a href={commentaryPdfUrl(section.id)} download={commentaryPdfName(section.id)}
-        data-goatcounter-click={`download/pdf/${section.id}`}
-        data-goatcounter-title={`Download PDF — ${section.data.title}`}>Download the commentary (PDF)</a></li>
+      <li><a href={commentaryPdfUrl(section.id)} download={commentaryPdfName(section.id)}>Download the commentary (PDF)</a></li>
       {l.slidesPdf && <li><a href={l.slidesPdf}>Download slides (PDF)</a></li>}
       {l.duration && l.duration !== '00:00' && <li>Runtime: {l.duration}</li>}
     </ul>
@@ -91,14 +86,10 @@ const crumbs = [
 </BaseLayout>
 
 <script>
-  // Count a listen and label the lock screen. GoatCounter's click binding is
-  // not used here: a press on the native controls is not reliably a click on
-  // the element, and a play from the lock screen or the car is no click at
-  // all. The `play` event covers every route; `counted` keeps it to one count
-  // per page view however often the listener pauses and resumes.
+  // Label the lock screen. The `play` event covers every route a play can
+  // take: the native controls, the lock screen, the car.
   const artist = "Deep in God's Word — SECNT";
-  for (const audio of document.querySelectorAll<HTMLAudioElement>('audio[data-listen-path]')) {
-    let counted = false;
+  for (const audio of document.querySelectorAll<HTMLAudioElement>('audio.lecture-audio__player')) {
     audio.addEventListener('play', () => {
       const d = audio.dataset;
       if ('mediaSession' in navigator && 'MediaMetadata' in window) {
@@ -110,12 +101,6 @@ const crumbs = [
             ? [{ src: new URL(d.mediaArtwork, location.href).href, sizes: '640x360', type: 'image/png' }]
             : [],
         });
-      }
-      if (counted) return;
-      const gc = (window as any).goatcounter;
-      if (gc && typeof gc.count === 'function') {
-        gc.count({ path: d.listenPath, title: d.listenTitle, event: true });
-        counted = true;
       }
     });
   }

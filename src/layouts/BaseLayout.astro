@@ -47,31 +47,9 @@ const revisedDate = pageMeta?.revised ?? pageMeta?.updated;
     </main>
     <Footer citeYear={citeYear} />
     <DiagramZoom />
-    <!-- GoatCounter — privacy-first analytics, no cookies, no banner needed.
-         Pageviews site-wide; download counting via data-goatcounter-click on
-         the Teaching Aids download buttons (count.js binds those itself).
-         A visit arriving from a campaign link carries one tag and is
-         recorded as its own path (path + '?tag'): ?ys YouTube Shorts,
-         ?yv YouTube videos, ?fr Facebook Reels, ?fp Facebook posts; ?q and ?c
-         are kept as legacy campaigns. First match wins, current campaigns
-         before legacy. Any other parameter (utm_*, fbclid, …) is dropped, as
-         count.js already cuts the path back to the canonical URL. -->
-    {SITE.goatcounter && (
-      <script is:inline set:html={
-        `window.goatcounter = { path: function (p) {
-  var s = new URLSearchParams(location.search);
-  var t = ['ys', 'yv', 'fr', 'fp', 'q', 'c'].find(function (k) { return s.has(k); });
-  return t ? p + '?' + t : p;
-} };`
-      } />
-    )}
-    {SITE.goatcounter && (
-      <script
-        is:inline
-        data-goatcounter={`https://${SITE.goatcounter}.goatcounter.com/count`}
-        async
-        src="https://gc.zgo.at/count.js"
-      ></script>
-    )}
+    {/* Analytics: Cloudflare Web Analytics, switched on in the Cloudflare
+        dashboard, which adds its own beacon at the edge; nothing is loaded
+        from here. GoatCounter and the campaign tags were retired on
+        5 October 2026 (Editor's ruling). */}
   </body>
 </html>

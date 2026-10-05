@@ -21,12 +21,6 @@ export const SITE = {
   // Bunny Stream pull-zone library id (the GUID per video lives in lecture
   // frontmatter as bunnyVideoId). Set this once.
   bunnyLibraryId: '672956',
-  // GoatCounter site code — analytics for the whole site (pageviews) and the
-  // Teaching Aids download events (downloads headline, views never — Shorts
-  // Program Plan D18). The dashboard is https://<code>.goatcounter.com; QR
-  // scans arrive with ?q and are recorded as a distinct path (see BaseLayout).
-  // Editor's ruling 19 Aug 2026 (GoatCounter over Cloudflare Web Analytics).
-  goatcounter: 'secnt',
   banner: {
     src: '/banner.jpg',
     alt: 'An ancient library with scrolls in wooden shelving, classical columns, warm lamps, scholars at study, light from an arched doorway in the distance.',

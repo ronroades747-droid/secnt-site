@@ -103,7 +103,8 @@ async function renderCommentaryPdfs({ dir, pages, logger }) {
   try {
     const page = await browser.newPage();
     // The built page loads nothing from outside that its print needs; blocking
-    // the rest keeps GoatCounter from counting a build as a reader.
+    // the rest keeps any outside script from running or counting a build as a
+    // reader.
     await page.route('**/*', (route) =>
       route.request().url().startsWith(origin) ? route.continue() : route.abort()
     );
