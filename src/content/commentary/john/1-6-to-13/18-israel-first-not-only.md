@@ -1,7 +1,7 @@
 ---
 title: "Theology: His Own — Israel-First, Not Israel-Only"
 description: "The theology of v. 11: his own as the covenant household within the world he owns — Israel-first, not Israel-only."
-date: 2026-09-03
+date: 2026-10-05
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -11,7 +11,7 @@ verseEnd: 13
 sectionType: theology
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 The exegesis has read the verse, and the theology turns to what it teaches. [The verse of his own](/commentary/john/1-6-to-13/13-his-own-welcome-refused/) was read clause by clause: he came to what was his own, and his own people did not welcome him. This page does not argue those clauses again. It asks what the church, on the strength of them, has learned to confess — and the second refusal yields a doctrine of election and its refusal.
