@@ -11,10 +11,6 @@
 // The lecture MP4 the ask also specified was withdrawn by the Editor on
 // 26 Sep 2026, to see first whether readers want the lectures to keep; it is
 // in git history (16941ed) if that demand appears.
-//
-// Counted in GoatCounter under a key the lecture page shares
-// (download/pdf/<section-id>), so the page a reader started from does not
-// split the count (sec 5).
 import { commentaryPdfUrl } from '../lib/site';
 import { commentaryPdfName } from '../lib/commentary-pdf.mjs';
 
@@ -22,10 +18,8 @@ interface Props {
   sectionId: string;
   title: string;
 }
-const { sectionId, title } = Astro.props;
+const { sectionId } = Astro.props;
 ---
 <p class="page-downloads">
-  <a href={commentaryPdfUrl(sectionId)} download={commentaryPdfName(sectionId)}
-    data-goatcounter-click={`download/pdf/${sectionId}`}
-    data-goatcounter-title={`Download PDF — ${title}`}>Download this page (PDF)</a>
+  <a href={commentaryPdfUrl(sectionId)} download={commentaryPdfName(sectionId)}>Download this page (PDF)</a>
 </p>

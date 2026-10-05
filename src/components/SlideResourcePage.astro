@@ -6,10 +6,6 @@
 // supplied by Commentary Production), the onward link to the Lectures and
 // Commentary (the route tier, Plan sec 1), and the return link.
 //
-// Download buttons carry data-goatcounter-click — downloads are the headline
-// metric (Plan D18); GoatCounter's count.js (loaded in BaseLayout) binds
-// these automatically, recording download/<slug>/<ratio> events.
-//
 // TWO PROVENANCES, ONE PAGE (D47). An aid reaches this template either by its
 // `cycle` — a pre-D47 aid, belonging to the /slides run index — or by its
 // `section`, the commentary section its lecture taught. The surrounding
@@ -105,14 +101,10 @@ const alt = d.imageAlt ?? `Projectable slide: ${d.title}`;
     </figure>
 
     <div class="slide-downloads">
-      <a class="download-button" href={slideAssetUrl(entry.id, '16x9')} download
-        data-goatcounter-click={`download/${entry.id}/16x9`}
-        data-goatcounter-title={`Download 16:9 — ${d.title}`}>
+      <a class="download-button" href={slideAssetUrl(entry.id, '16x9')} download>
         Download for projection (16:9)
       </a>
-      <a class="download-button" href={slideAssetUrl(entry.id, '9x16')} download
-        data-goatcounter-click={`download/${entry.id}/9x16`}
-        data-goatcounter-title={`Download 9:16 — ${d.title}`}>
+      <a class="download-button" href={slideAssetUrl(entry.id, '9x16')} download>
         Download for phone/story (9:16)
       </a>
     </div>
