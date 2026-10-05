@@ -6,5 +6,6 @@ sectionRef: john/1-6-to-13/07-the-aperture
 bunnyVideoId: "c879b85f-b09b-4867-a5ff-d9332a128535"
 license: CC-BY-4.0
 duration: "17:07"
+audioUrl: "https://audio.secnt.org/Jn1_6-13/Jn1_613_Lecture_08.mp3"
 draft: false
 ---
