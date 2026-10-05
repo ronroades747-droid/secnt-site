@@ -5,6 +5,7 @@ date: 2026-06-06
 sectionRef: john/1-1-to-3
 bunnyVideoId: "05bbd785-7ea9-4aa1-b2cb-89829988752d"
 duration: "16:00"
+audioUrl: "https://audio.secnt.org/Jn1_1-3/Jn1_13_Lecture_01.mp3"
 license: CC-BY-4.0
 draft: false
 ---

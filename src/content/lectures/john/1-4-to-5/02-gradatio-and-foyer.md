@@ -6,5 +6,6 @@ sectionRef: john/1-4-to-5/02-gradatio-and-foyer
 bunnyVideoId: "410865ba-9689-4315-86af-326e2ca5f06b"
 license: CC-BY-4.0
 duration: "24:11"
+audioUrl: "https://audio.secnt.org/Jn1_4-5/Jn1_45_Lecture_03.mp3"
 draft: false
 ---

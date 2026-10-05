@@ -6,5 +6,6 @@ sectionRef: john/1-4-to-5
 bunnyVideoId: "cfba897b-cf56-4759-a147-5cd9c1dc9a35"
 license: CC-BY-4.0
 duration: "12:09"
+audioUrl: "https://audio.secnt.org/Jn1_4-5/Jn1_45_Lecture_01.mp3"
 draft: false
 ---

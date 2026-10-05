@@ -5,6 +5,7 @@ date: 2026-06-12
 sectionRef: john/1-1-to-3/04-coordinate-articulation
 bunnyVideoId: "dafc1df1-62a9-49f8-926b-cd0136616f79"
 duration: "16:29"
+audioUrl: "https://audio.secnt.org/Jn1_1-3/Jn1_13_Lecture_05.mp3"
 license: CC-BY-4.0
 draft: false
 ---

@@ -5,6 +5,7 @@ date: 2026-06-12
 sectionRef: john/1-1-to-3/05-architectural-implications
 bunnyVideoId: "267e2d9c-feff-4a5d-a4fa-79f400cbe9c2"
 duration: "18:33"
+audioUrl: "https://audio.secnt.org/Jn1_1-3/Jn1_13_Lecture_06.mp3"
 license: CC-BY-4.0
 draft: false
 ---
