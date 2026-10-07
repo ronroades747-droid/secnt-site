@@ -1,7 +1,7 @@
 ---
 title: "Theology: Children of God — A Right That Carries Its Effect"
 description: "The theology of v. 12: the right to become children of God as a right that carries its effect."
-date: 2026-09-03
+date: 2026-10-07
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -11,7 +11,7 @@ verseEnd: 13
 sectionType: theology
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 The exegesis has read the verse, and the theology turns to what it teaches. [The verse of the turn](/commentary/john/1-6-to-13/14-the-turn-children-of-god/) was read clause by clause: to all who received him, to those believing in his name, he gave the right to become children of God. This page does not argue those clauses again. It asks what the church, on the strength of them, has learned to confess — and the turn yields a doctrine of the believer's standing.
