@@ -26,7 +26,7 @@ The right is conferred by declaration, effectual because of who declares it. And
 
 ## Children, and never as the Son is
 
-The standing is a real filiation. John's word for the receivers is τέκνα, children, and the idea of "child," as distinguished from "son," "is that of a community of nature (v. 13) as distinguished from that of a dignity of heirship."[^westcott-nature]
+The standing is a real filiation. John's word for the receivers is τέκνα, children, and the idea of "child" as against "son" "is that of a community of nature (v. 13) as distinguished from that of a dignity of heirship."[^westcott-nature]
 
 So the church's word "adoption" names the derivative mode of that nature. It is not a substitute for it. The nature is derived from God's begetting, and never from the Son's essential generation, and the children are never as the Son is. Barth gives the ground: "The right of the hosoi to be children of God is thus enclosed and grounded in the Son."[^barth-enclosed]
 
@@ -40,7 +40,7 @@ And the name is the divine name. [The exegesis](/commentary/john/1-6-to-13/14-th
 
 Two guards keep the doctrine honest.
 
-The first concerns its reach. The status is *not confined to the enfleshed arrival*. The reception is as wide as the coming it answers — one advent, with a covenant career through Moses and the prophets and its direction toward verse 14. "There were and are those" who receive him.[^barth-were] Dodd reads the verse of Israel's faithful remnant: "Those who received the word, to them it gave the right to become children of God."[^dodd-remnant] This is held with high confidence and no higher. It rests on [the working calibration this commentary adopted at verse 9](/commentary/john/1-6-to-13/11-true-light-coming/), it is open to refinement when verse 14 is treated, and Brown presses on it. For him the Spirit who begets God's children was not given until Jesus was glorified.[^brown-timing]
+The first concerns its reach. The status is *not confined to the enfleshed arrival*. The reception is as wide as the coming it answers — one advent, with a covenant career through Moses and the prophets and its direction toward verse 14. "There were and are those" who receive him.[^barth-were] Dodd reads the verse of Israel's faithful remnant, rendering it: "Those who received the word, to them it gave the right to become children of God".[^dodd-remnant] This is held with high confidence and no higher. It rests on [the working calibration this commentary adopted at verse 9](/commentary/john/1-6-to-13/11-true-light-coming/), it is open to refinement when verse 14 is treated, and Brown presses on it. For him the Spirit who begets God's children was not given until Jesus was glorified.[^brown-timing]
 
 The second concerns its certainty. Believing in his name does not certify itself. The same phrase names a faith Jesus would not entrust himself to, at 2:23–24. And the present participle is where John puts the limit: the standing is for those who go on receiving.
 
