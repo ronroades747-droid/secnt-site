@@ -1,7 +1,7 @@
 ---
 title: "Theology: Begotten of God — The Word Gives and God Begets"
 description: "The theology of v. 13: begotten of God — the Word gives, and God begets."
-date: 2026-09-03
+date: 2026-10-08
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -11,7 +11,7 @@ verseEnd: 13
 sectionType: theology
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 The exegesis has read the verse, and the theology turns to what it teaches. [The verse of the begetting](/commentary/john/1-6-to-13/15-begotten-of-god/) was read clause by clause: who were begotten — not of bloods, nor of the will of the flesh, nor of the will of a husband — but of God. This page does not argue those clauses again. It asks what the church, on the strength of them, has learned to confess. The close of the movement yields a doctrine of regeneration, and the doctrine is carried to the exact edge the text draws, and no further.
