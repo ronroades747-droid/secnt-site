@@ -1,0 +1,131 @@
+<svg viewBox="0 0 1440 850" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="olTitle olDesc" preserveAspectRatio="xMidYMid meet">
+  <title id="olTitle">The one-life arc continued across John 1:6–13: the reception segment — the light's coming, its refusal, its reception and the begetting — with one door held open at the believing, and its terminus at 1:14 left beyond the unit.</title>
+  <desc id="olDesc">The one-life arc continued across the Prologue's second movement. The first movement's nodes open the arc in a dim register, as inherited — the life in the Word, the light of men, shining within the darkness, unovercome. The reception segment supplies the next nodes: the light's coming into the world (v. 9), its refusal (vv. 10–11), its reception (v. 12), and the begetting (v. 13) as the already-pole of eternal life — a new mode of existence already begun, the begetting its means — with the present participle of v. 12, "to those who believe" — the one verb whose time reaches the reader's present — holding the arc open. The unit's four theological developments are gathered by the fifth into one movement seen from where the evangelist stands: an advent finished, a refusal told, a begetting done, one door open. The arc's within-Prologue terminus — the light of v. 4 disclosed as the glory of v. 14 — is drawn dashed and dimmed beyond the unit's edge, treated at 1:14–18 and not asserted here; beyond it the arc runs on, as in the first movement's figure, toward eternal life at the consummation.</desc>
+
+  <style>
+    /* --- family theming interface: light page renders from in-file fallbacks;
+           dark slide renders when the host sets color / --color-gold / --color-meta / --color-goldtext --- */
+    .gk    { font-family:'SBL BibLit','Cardo','Gentium Plus','Charis SIL','Source Serif 4',Georgia,serif; fill:currentColor; }
+    .gkd   { font-family:'SBL BibLit','Cardo','Gentium Plus','Charis SIL','Source Serif 4',Georgia,serif; fill:var(--color-meta,#6b6b6b); }
+    .ink   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; }
+    .desc  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; font-style:italic; }
+    .lbl   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); }
+    .note  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); font-style:italic; }
+    .tab   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); letter-spacing:2px; }
+    .glab  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-goldtext,#8a6608); font-style:italic; }
+    .head  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-goldtext,#8a6608); letter-spacing:0.12em; }
+    .it    { font-style:italic; }
+
+    .arci  { stroke:var(--color-meta,#6b6b6b); stroke-width:1.8; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+    .arc   { stroke:var(--color-gold,#b8860b); stroke-width:2.8; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+    .arcP  { stroke:var(--color-gold,#b8860b); stroke-width:2.2; fill:none; stroke-linecap:round; stroke-dasharray:7 6; opacity:0.6; }
+    .arcd  { stroke:var(--color-meta,#6b6b6b); stroke-width:1.8; fill:none; stroke-linecap:round; stroke-dasharray:3 8; }
+    .edge  { stroke:var(--color-meta,#6b6b6b); stroke-width:1; fill:none; stroke-dasharray:4 5; }
+    .node  { fill:var(--color-gold,#b8860b); }
+    .noded { fill:var(--color-meta,#6b6b6b); }
+    .pring { fill:none; stroke:var(--color-gold,#b8860b); stroke-width:2; opacity:0.6; }
+    .tick  { stroke:var(--color-gold,#b8860b); stroke-width:1.2; fill:none; }
+  </style>
+
+  <defs>
+    <marker id="ol-open" viewBox="0 0 10 10" refX="7" refY="5"
+            markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 1 1 L 9 5 L 1 9" fill="none" stroke="var(--color-meta,#6b6b6b)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- ================= family title block ================= -->
+  <text class="ink" x="720" y="50" text-anchor="middle" font-size="34" letter-spacing="0.5">The One-Life Arc</text>
+  <text class="lbl" x="720" y="82" text-anchor="middle" font-size="22">John 1:6–13 · the reception segment, continuing the arc of John 1:4–5</text>
+  <text class="desc" x="720" y="118" text-anchor="middle" font-size="22">the one divine life, from the Word to the believing — seen from where the evangelist stands</text>
+
+  <!-- ================= zone tabs ================= -->
+  <text class="lbl" x="196" y="162" text-anchor="middle" font-size="21">1:4–5</text>
+  <text class="tab" x="196" y="188" text-anchor="middle" font-size="21">AS INHERITED</text>
+  <text class="lbl" x="784" y="162" text-anchor="middle" font-size="21">1:6–13</text>
+  <text class="tab" x="784" y="188" text-anchor="middle" font-size="21">THE RECEPTION SEGMENT</text>
+  <text class="lbl" x="1322" y="162" text-anchor="middle" font-size="21">1:14</text>
+  <text class="tab" x="1322" y="188" text-anchor="middle" font-size="21">BEYOND THE UNIT</text>
+
+  <!-- unit edge: after v. 13, where the reception segment ends -->
+  <path class="edge" d="M1205,206 L1205,470"/>
+
+  <!-- ================= the one-life arc ================= -->
+  <!-- inherited: 1:4–5, thin solid meta (locked, not provisional) -->
+  <path class="arci" d="M55,600 C 68.3,591.8 107.2,566.5 135,551 C 162.8,535.5 192.8,520.2 222,507 C 251.2,493.8 273.7,484.3 310,472 C 325.7,466.7 343.3,460.6 362,454.6"/>
+  <!-- the reception segment: heavy solid gold, to the door -->
+  <path class="arc" d="M362,454.6 C 386.5,446.7 413.1,439 440,433 C 487.5,422.5 543.3,414.8 595,409 C 646.7,403.2 695.8,399 750,398 C 804.2,397 868.3,396 920,403 C 971.7,410 993.3,413.8 1060,440"/>
+  <!-- held: the dashed, dimmed reach beyond the unit to v. 14 -->
+  <path class="arcP" d="M1060,440 C 1119.6,463.4 1245.7,524.8 1302.8,551.9"/>
+  <!-- the eschatological pole beyond, as inherited (dotted, open) -->
+  <path class="arcd" d="M1338,554 L 1424,528" marker-end="url(#ol-open)"/>
+
+  <!-- ===== the first movement, as inherited (dim, English only) ===== -->
+  <circle class="noded" cx="55" cy="600" r="8"/>
+  <text class="lbl" x="34" y="646" font-size="21">the life <tspan class="it">in</tspan> the Word</text>
+  <text class="lbl" x="34" y="673" font-size="21">creation · v. 4a</text>
+  <circle class="noded" cx="135" cy="551" r="6"/>
+  <text class="lbl" x="135" y="479" text-anchor="middle" font-size="21">the light <tspan class="it">of</tspan> men</text>
+  <text class="lbl" x="135" y="506" text-anchor="middle" font-size="21">v. 4b</text>
+  <circle class="noded" cx="222" cy="507" r="6"/>
+  <text class="lbl" x="240" y="562" text-anchor="middle" font-size="21">shining <tspan class="it">within</tspan></text>
+  <text class="lbl" x="240" y="589" text-anchor="middle" font-size="21">the darkness · v. 5a</text>
+  <circle class="noded" cx="310" cy="472" r="6"/>
+  <text class="lbl" x="305" y="414" text-anchor="middle" font-size="21">unovercome</text>
+  <text class="lbl" x="305" y="441" text-anchor="middle" font-size="21">v. 5b</text>
+
+  <!-- ===== the reception segment ===== -->
+  <!-- v. 9: the light's coming (above) -->
+  <circle class="node" cx="440" cy="433" r="9"/>
+  <text class="gk" x="440" y="288" text-anchor="middle" font-size="24">ἐρχόμενον</text>
+  <text class="gk" x="440" y="317" text-anchor="middle" font-size="24">εἰς τὸν κόσμον</text>
+  <text class="ink" x="440" y="346" text-anchor="middle" font-size="21">the true light, coming</text>
+  <text class="lbl" x="440" y="373" text-anchor="middle" font-size="21">into the world · v. 9</text>
+  <!-- vv. 10–11: its refusal (below) -->
+  <circle class="node" cx="595" cy="409" r="9"/>
+  <text class="gk" x="612" y="457" text-anchor="middle" font-size="24">οὐκ ἔγνω · οὐ παρέλαβον</text>
+  <text class="ink" x="612" y="486" text-anchor="middle" font-size="21">the world did not know him;</text>
+  <text class="ink" x="612" y="513" text-anchor="middle" font-size="21">his own did not welcome him</text>
+  <text class="lbl" x="612" y="540" text-anchor="middle" font-size="21">vv. 10–11</text>
+  <!-- v. 12: its reception (above) -->
+  <circle class="node" cx="750" cy="398" r="9"/>
+  <text class="gk" x="750" y="268" text-anchor="middle" font-size="24">ὅσοι δὲ ἔλαβον αὐτόν</text>
+  <text class="ink" x="750" y="297" text-anchor="middle" font-size="21">as many as received him —</text>
+  <text class="ink" x="750" y="324" text-anchor="middle" font-size="21">the right to become</text>
+  <text class="ink" x="750" y="351" text-anchor="middle" font-size="21">children of God</text>
+  <text class="lbl" x="750" y="378" text-anchor="middle" font-size="21">v. 12</text>
+  <!-- v. 13: the begetting — the already of eternal life (below) -->
+  <circle class="node" cx="920" cy="403" r="9"/>
+  <text class="gk" x="916" y="460" text-anchor="middle" font-size="24">ἐκ θεοῦ ἐγεννήθησαν</text>
+  <text class="ink" x="916" y="489" text-anchor="middle" font-size="21">begotten of God · v. 13</text>
+  <text class="glab" x="916" y="516" text-anchor="middle" font-size="21">eternal life, already begun —</text>
+  <text class="glab" x="916" y="543" text-anchor="middle" font-size="21">a new existence</text>
+  <!-- the door: the present participle of v. 12 holds the arc open (above) -->
+  <circle class="node" cx="1060" cy="440" r="7"/>
+  <text class="glab" x="1060" y="254" text-anchor="middle" font-size="21">one door open</text>
+  <text class="gk" x="1060" y="281" text-anchor="middle" font-size="24">τοῖς πιστεύουσιν</text>
+  <text class="ink" x="1060" y="310" text-anchor="middle" font-size="21">to those who believe · v. 12</text>
+  <text class="note" x="1060" y="337" text-anchor="middle" font-size="21">the one verb whose time</text>
+  <text class="note" x="1060" y="364" text-anchor="middle" font-size="21">reaches the reader’s present</text>
+
+  <!-- ===== beyond the unit: the held terminus and the pole ===== -->
+  <circle class="pring" cx="1320" cy="560" r="16"/>
+  <text class="lbl" x="1320" y="608" text-anchor="middle" font-size="21">the light of v. 4</text>
+  <text class="lbl" x="1320" y="635" text-anchor="middle" font-size="21">disclosed as glory</text>
+  <text class="lbl" x="1320" y="662" text-anchor="middle" font-size="21">v. 14</text>
+  <text class="note" x="1320" y="689" text-anchor="middle" font-size="21">the Word become flesh —</text>
+  <text class="note" x="1320" y="716" text-anchor="middle" font-size="21">treated at 1:14–18,</text>
+  <text class="note" x="1320" y="743" text-anchor="middle" font-size="21">not asserted here</text>
+  <text class="gk" x="1424" y="478" text-anchor="end" font-size="24">ζωὴ αἰώνιος</text>
+  <text class="lbl" x="1424" y="505" text-anchor="end" font-size="21">consummation</text>
+
+  <!-- ================= the gathering ================= -->
+  <path class="tick" d="M595,628 L595,636 L920,636 L920,628"/>
+  <text class="head" x="758" y="670" text-anchor="middle" font-size="21">ONE MOVEMENT, SEEN FROM WHERE THE EVANGELIST STANDS</text>
+  <text class="note" x="758" y="700" text-anchor="middle" font-size="21">the world that did not know him · his own · children of God · begotten of God</text>
+
+  <!-- ================= register tag and synthesis ================= -->
+  <text class="note" x="720" y="762" text-anchor="middle" font-size="21">an illumination of the unit’s theology, not a load-bearing claim on any verse</text>
+  <text class="desc" x="720" y="808" text-anchor="middle" font-size="22">An advent finished, a refusal told, a begetting done — and one door, at the believing, left open.</text>
+</svg>
