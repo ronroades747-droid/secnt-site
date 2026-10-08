@@ -6,5 +6,6 @@ sectionRef: john/1-4-to-5/04-coordinate-articulation
 bunnyVideoId: "cfea79da-d830-4f71-ac04-6091492fb28b"
 license: CC-BY-4.0
 duration: "28:49"
+audioUrl: "https://audio.secnt.org/Jn1_4-5/Jn1_45_Lecture_05.mp3"
 draft: false
 ---

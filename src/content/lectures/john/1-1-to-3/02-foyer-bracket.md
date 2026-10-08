@@ -5,6 +5,7 @@ date: 2026-06-08
 sectionRef: john/1-1-to-3/02-foyer-bracket
 bunnyVideoId: "0f330f84-947b-419d-87ef-8526bd79e8f5"
 duration: "18:42"
+audioUrl: "https://audio.secnt.org/Jn1_1-3/Jn1_13_Lecture_03.mp3"
 license: CC-BY-4.0
 draft: false
 ---

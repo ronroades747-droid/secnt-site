@@ -5,6 +5,7 @@ date: 2026-06-13
 sectionRef: john/1-1-to-3/06-en-arche
 bunnyVideoId: "f33d7695-5292-4674-b941-f39d9a184953"
 duration: "25:12"
+audioUrl: "https://audio.secnt.org/Jn1_1-3/Jn1_13_Lecture_07.mp3"
 license: CC-BY-4.0
 draft: false
 ---

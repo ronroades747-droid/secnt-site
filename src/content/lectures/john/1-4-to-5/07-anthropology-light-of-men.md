@@ -6,5 +6,6 @@ sectionRef: john/1-4-to-5/07-anthropology-light-of-men
 bunnyVideoId: "8cf427ad-0c49-496b-9d1a-ab1cc1ee55fc"
 license: CC-BY-4.0
 duration: "29:59"
+audioUrl: "https://audio.secnt.org/Jn1_4-5/Jn1_45_Lecture_08.mp3"
 draft: false
 ---

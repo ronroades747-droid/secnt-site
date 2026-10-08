@@ -5,6 +5,7 @@ date: 2026-06-21
 sectionRef: john/1-1-to-3/09-three-clauses-two-guards
 bunnyVideoId: "924d0943-58c3-4150-9a82-6a331694e05e"
 duration: "27:52"
+audioUrl: "https://audio.secnt.org/Jn1_1-3/Jn1_13_Lecture_10.mp3"
 license: CC-BY-4.0
 draft: false
 ---

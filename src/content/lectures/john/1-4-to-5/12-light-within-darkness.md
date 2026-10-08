@@ -6,5 +6,6 @@ sectionRef: john/1-4-to-5/12-light-within-darkness
 bunnyVideoId: "fc2adbee-3764-4ded-84ea-b5243edd898e"
 license: CC-BY-4.0
 duration: "29:51"
+audioUrl: "https://audio.secnt.org/Jn1_4-5/Jn1_45_Lecture_13.mp3"
 draft: false
 ---

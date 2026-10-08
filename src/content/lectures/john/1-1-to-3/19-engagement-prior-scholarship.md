@@ -5,6 +5,7 @@ date: 2026-07-15
 sectionRef: john/1-1-to-3/19-engagement-prior-scholarship
 bunnyVideoId: "215c0c38-33d8-4373-85c0-991f77b64894"
 duration: "13:42"
+audioUrl: "https://audio.secnt.org/Jn1_1-3/Jn1_13_Lecture_20.mp3"
 license: CC-BY-4.0
 draft: false
 ---

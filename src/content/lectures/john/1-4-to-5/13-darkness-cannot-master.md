@@ -6,5 +6,6 @@ sectionRef: john/1-4-to-5/13-darkness-cannot-master
 bunnyVideoId: "29c3adcd-dedd-4282-9218-c7bc7e67d83a"
 license: CC-BY-4.0
 duration: "30:33"
+audioUrl: "https://audio.secnt.org/Jn1_4-5/Jn1_45_Lecture_14.mp3"
 draft: false
 ---
