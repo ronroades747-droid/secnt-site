@@ -2,7 +2,7 @@
 title: "Architecture: What the Architecture Theologically Carries"
 description: "What the movement’s architecture theologically carries, before the verse-by-verse exegesis begins."
 date: 2026-09-21
-revised: 2026-09-30
+revised: 2026-10-08
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -43,11 +43,11 @@ And the thing it moves toward is not a human turning. The last word of the movem
 
 ## One door, and it is the believing
 
-The third is the plainest and the most easily passed over. Everything in this movement is told as finished. The coming is finished, the not-knowing is finished, the refusal is finished; the receiving and the giving and the begetting are all told as done.
+The third is the plainest and the most easily passed over. The advent this movement tells is finished. The coming is finished, the not-knowing is finished, the refusal is finished; the receiving and the giving and the begetting are all told as done.
 
 Except one. [At the end of the turn](/commentary/john/1-6-to-13/07-the-aperture/), one phrase reaches past the telling into the reader's own present — *to those who believe in his name* — and it is the only place in eight verses where the movement faces the reader directly. It is not at the light's shining, and it is not at the refusal. It is at the reception, and at nothing else.
 
-That placement is composed rather than incidental. The unit narrates an advent already complete and leaves exactly one thing open, and the one thing it leaves open is the door the reader may walk through. A commentary can say this without straining, because the tense does the work: the evangelist declined to leave anything else open.
+That placement is composed rather than incidental. The unit narrates an advent already complete and leaves exactly one thing open, and the one thing it leaves open is the door the reader may walk through. A commentary can say this without straining, because the passage marks the place itself: the door stands where the movement turns, and the evangelist left nothing else open onto the reader's present.
 
 ## How firmly this is held
 

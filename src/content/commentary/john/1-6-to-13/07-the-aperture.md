@@ -2,7 +2,7 @@
 title: "Architecture: The Aperture — The One Door Left Open"
 description: "The one verb in the movement whose time reaches the reader’s present — “to those who believe” — and the door the completed advent leaves open toward the reader."
 date: 2026-09-17
-revised: 2026-09-30
+revised: 2026-10-08
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -17,7 +17,7 @@ draft: false
 
 The last section looked past the Prologue's edge, to the book the Prologue opens. This one comes back inside the passage, to a single word.
 
-Everything this movement narrates is finished. A man came; the light was coming into the world; the world did not know him; his own did not welcome him; those who received him were given the right to become children of God; they were begotten of God. The movement tells it all [from this side of an advent already complete](/commentary/john/1-6-to-13/04-temporal-payload/), in aorists that summarize and imperfects that reach back beneath them. And at one place, and only one, the telling opens onto the time of whoever is reading it. This section asks where that place is, why it is there, and how far the observation can be pressed.
+The advent this movement narrates is finished. A man came; the light was coming into the world; the world did not know him; his own did not welcome him; those who received him were given the right to become children of God; they were begotten of God. The movement tells it all [from this side of an advent already complete](/commentary/john/1-6-to-13/04-temporal-payload/), in aorists that summarize and imperfects that reach back beneath them. And at one place, and only one, the telling opens onto the time of whoever is reading it. This section asks where that place is, why it is there, and how far the observation can be pressed.
 
 ## The one verb whose time reaches the reader's present
 
