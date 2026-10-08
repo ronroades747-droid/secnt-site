@@ -6,5 +6,6 @@ sectionRef: john/1-4-to-5/15-engagement-prior-scholarship
 bunnyVideoId: "7c56c279-5eba-41b1-8c1c-d1518017e593"
 license: CC-BY-4.0
 duration: "24:09"
+audioUrl: "https://audio.secnt.org/Jn1_4-5/Jn1_45_Lecture_16.mp3"
 draft: false
 ---

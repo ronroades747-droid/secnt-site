@@ -5,6 +5,7 @@ date: 2026-06-27
 sectionRef: john/1-1-to-3/14-eternal-existence
 bunnyVideoId: "9b7e1268-6929-42de-9f1e-a9bc08ab3891"
 duration: "23:40"
+audioUrl: "https://audio.secnt.org/Jn1_1-3/Jn1_13_Lecture_15.mp3"
 license: CC-BY-4.0
 draft: false
 ---

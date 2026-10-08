@@ -6,5 +6,6 @@ sectionRef: john/1-4-to-5/11-image-and-light-of-men
 bunnyVideoId: "9745990c-78ff-4e73-a7f1-985de4a38d00"
 license: CC-BY-4.0
 duration: "29:28"
+audioUrl: "https://audio.secnt.org/Jn1_4-5/Jn1_45_Lecture_12.mp3"
 draft: false
 ---

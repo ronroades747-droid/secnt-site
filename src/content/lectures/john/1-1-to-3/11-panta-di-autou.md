@@ -5,6 +5,7 @@ date: 2026-06-22
 sectionRef: john/1-1-to-3/11-panta-di-autou
 bunnyVideoId: "9858c589-c4d6-4051-8049-60d9ea6d5898"
 duration: "28:32"
+audioUrl: "https://audio.secnt.org/Jn1_1-3/Jn1_13_Lecture_12.mp3"
 license: CC-BY-4.0
 draft: false
 ---

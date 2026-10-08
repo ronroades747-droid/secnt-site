@@ -5,6 +5,7 @@ date: 2026-07-16
 sectionRef: john/1-1-to-3/20-pastoral-hearing
 bunnyVideoId: "71580b35-6ec8-4ab7-a7b6-aa46c18bf7ff"
 duration: "24:10"
+audioUrl: "https://audio.secnt.org/Jn1_1-3/Jn1_13_Lecture_21.mp3"
 license: CC-BY-4.0
 draft: false
 ---

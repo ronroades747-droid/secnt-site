@@ -5,6 +5,7 @@ date: 2026-06-10
 sectionRef: john/1-1-to-3/03-macro-tense-spine
 bunnyVideoId: "023fc2a4-3a43-4c5c-8896-097bb16a0596"
 duration: "16:53"
+audioUrl: "https://audio.secnt.org/Jn1_1-3/Jn1_13_Lecture_04.mp3"
 license: CC-BY-4.0
 draft: false
 ---

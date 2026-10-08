@@ -6,5 +6,6 @@ sectionRef: john/1-4-to-5/14-one-life-arc
 bunnyVideoId: "ec8e156c-82d5-42cb-a5ab-84557a6c0a54"
 license: CC-BY-4.0
 duration: "22:54"
+audioUrl: "https://audio.secnt.org/Jn1_4-5/Jn1_45_Lecture_15.mp3"
 draft: false
 ---
