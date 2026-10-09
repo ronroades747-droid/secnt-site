@@ -134,6 +134,8 @@ Robertson, A. T. *Word Pictures in the New Testament*. Vol. 5. Nashville: Broadm
 
 Schnackenburg, Rudolf. *The Gospel according to St John*. Vol. 1. Translated by Kevin Smyth. New York: Herder and Herder, 1968.
 
+Sosa Siliezar, Carlos Raúl. *Creation Imagery in the Gospel of John*. Library of New Testament Studies 546. London: Bloomsbury T&T Clark, 2015.
+
 Waetjen, Herman C. "Logos πρὸς τὸν θεόν and the Objectification of Truth in the Prologue of the Fourth Gospel." *Catholic Biblical Quarterly* 63, no. 2 (2001): 265–286.
 
 Wallace, Daniel B. *Greek Grammar beyond the Basics: An Exegetical Syntax of the New Testament*. Grand Rapids: Zondervan, 1996.
