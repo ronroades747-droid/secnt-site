@@ -1,7 +1,7 @@
 ---
 title: "Engagement with Prior Scholarship: The Scholarly Record"
 description: "The scholarly record on John 1:6–13: the commentators and grammarians engaged, and where this commentary stands with them and against them."
-date: 2026-09-03
+date: 2026-10-09
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -11,7 +11,7 @@ verseEnd: 13
 sectionType: engagement
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 The readings set out across this unit were not reached in isolation. That holds for the working text and its one crux, for the bounded movement and the three beats inside it, for the verses read one by one, from the parenthesis to the begetting, for the run of tenses that tells the advent in retrospect, and for the five theological developments that rest on them. Each was formed in sustained engagement with prior scholarship, read at close range, and each was settled with the strongest alternative the literature offers held openly against it. This page gathers that record for John 1:6–13. It looks back over the finished readings: which sources bore weight, the disciplines under which they were weighed, and, resolution by resolution, the kind of evidence each source supplied, so that the reasoning behind a settled reading can be traced rather than received as assertion. The [unit's opening page](/commentary/john/1-6-to-13/) set out the same sources in advance of the readings; this page is their record once the readings are made.
