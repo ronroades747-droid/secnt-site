@@ -1,7 +1,7 @@
 ---
 title: "Pastoral Hearing and Forward Arc"
 description: "Closing: the unit’s pastoral hearing and its forward arc toward the Word made flesh."
-date: 2026-09-03
+date: 2026-10-11
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -11,7 +11,7 @@ verseEnd: 13
 sectionType: pastoral
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 The exegesis of the unit is complete, the doctrine has been drawn from it, and the scholarship behind both is on the record. What remains is to hear these eight verses as those who will preach and teach them must hear them, and to name where the work they began goes next. Neither task re-exegetes. Both gather, and what they gather already has a shape. The last service this commentary can do for the unit is to hand it over in the form the evangelist gave it.
