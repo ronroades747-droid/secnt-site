@@ -12,7 +12,7 @@ verseEnd: 13
 sectionType: unit-landing
 license: CC-BY-4.0
 hasLecture: true
-passageComplete: false
+passageComplete: true
 draft: false
 diagram:
   src: ./jn1-6-13-architectural-orientation.svg
