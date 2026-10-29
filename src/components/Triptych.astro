@@ -34,7 +34,8 @@
 // until the D47 sec 6 migration reaches them.
 // THE QUOTATION CARD (corpus Production Pair Loop Rev 36; the Editor's rulings
 // of 28 Oct 2026). From pair 23 a card takes the aid's place; the aids already
-// published stay, so a section may show the lecture, the aid and the card. The
+// published stay, so a section may show the lecture, the aid and its cards —
+// one or two, each its own panel (the Editor, 28 Oct 2026). The
 // card's frame is square at the row's height (where a section also has an aid,
 // the card wraps to a second row on a narrow column). It is found and
 // visibility-checked in the route, as the aid is.
@@ -46,13 +47,13 @@ interface Props {
   showLecture: boolean;
   /** The section's teaching aid, already visibility-checked, or null. */
   aid: any | null;
-  /** The section's quotation card, already visibility-checked, or null. */
-  card?: any | null;
+  /** The section's quotation cards (one or two), already visibility-checked. */
+  cards?: any[];
 }
-const { sectionId, showLecture, aid, card = null } = Astro.props;
+const { sectionId, showLecture, aid, cards = [] } = Astro.props;
 const aidAlt = aid ? (aid.data.imageAlt ?? `Projectable slide: ${aid.data.title}`) : '';
 ---
-{(showLecture || aid || card) && (
+{(showLecture || aid || cards.length > 0) && (
   <nav class="triptych" aria-label="Lecture, teaching aid and quotation card for this section">
     {showLecture && (
       <a class="triptych__panel" href={lectureUrl(sectionId)}>
@@ -79,7 +80,7 @@ const aidAlt = aid ? (aid.data.imageAlt ?? `Projectable slide: ${aid.data.title}
       </a>
     )}
 
-    {card && (
+    {cards.map((card) => (
       <a class="triptych__panel" href={cardUrl(card.id)}>
         <span class="triptych__frames">
           <span class="triptych__frame triptych__frame--square">
@@ -88,6 +89,6 @@ const aidAlt = aid ? (aid.data.imageAlt ?? `Projectable slide: ${aid.data.title}
         </span>
         <span class="triptych__label">Quotation Card</span>
       </a>
-    )}
+    ))}
   </nav>
 )}
