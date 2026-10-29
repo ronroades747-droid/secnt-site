@@ -1,0 +1,20 @@
+---
+// A quotation card's page (the cards collection; corpus Production Pair Loop
+// Rev 36). Built only for a card whose commentary section is live, so a card
+// publishes with its section and never ahead of it.
+import { getCollection, getEntry } from 'astro:content';
+import CardPage from '../../../components/CardPage.astro';
+import { isAidVisible } from '../../../lib/site';
+
+export async function getStaticPaths() {
+  const cards = await getCollection('cards');
+  const out = [];
+  for (const card of cards) {
+    const section = await getEntry(card.data.section);
+    if (isAidVisible(card, section)) out.push({ params: { card: card.id }, props: { entry: card } });
+  }
+  return out;
+}
+const { entry } = Astro.props;
+---
+<CardPage entry={entry} />

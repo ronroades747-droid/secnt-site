@@ -20,11 +20,14 @@ export async function getStaticPaths() {
   // reference (D47 sec 4) — never from a list kept by hand. One aid per pair
   // (D47 sec 1), so the first match is the match.
   const aids = await getCollection('slides');
+  // The section's quotation card, found the same way (corpus Loop Rev 36).
+  const cards = await getCollection('cards');
   return sections.map((entry) => {
     const { book, unit, section } = splitCommentaryId(entry.id);
     const lecture = lectures.find((l) => normalizeId(l.data.sectionRef.id) === entry.id);
     const aid =
       aids.find((a) => a.data.section && normalizeId(a.data.section.id) === entry.id) ?? null;
+    const card = cards.find((c) => normalizeId(c.data.section.id) === entry.id) ?? null;
     // The lecture's thumbnail has no frontmatter field: its path derives from
     // this section's id (see lectureThumbUrl). Test for the file HERE, at
     // build, so a pair whose Slide 1 has not been copied over yet renders no
@@ -33,11 +36,11 @@ export async function getStaticPaths() {
     const thumb = path.join(process.cwd(), 'public', 'lectures', `${entry.id}.png`);
     return {
       params: { book, unit, section },
-      props: { entry, lecture, aid, hasLectureThumb: fs.existsSync(thumb) },
+      props: { entry, lecture, aid, card, hasLectureThumb: fs.existsSync(thumb) },
     };
   });
 }
-const { entry, lecture, aid, hasLectureThumb } = Astro.props;
+const { entry, lecture, aid, card, hasLectureThumb } = Astro.props;
 const { book, unit } = splitCommentaryId(entry.id);
 const unitId = `${book}/${unit}`;
 const { Content } = await render(entry);
@@ -53,6 +56,7 @@ const d = entry.data;
 const pairedLecture = d.hasLecture && lecture && isVisible(lecture) ? lecture : null;
 const showLecture = Boolean(pairedLecture && hasLectureThumb);
 const visibleAid = aid && isAidVisible(aid, entry) ? aid : null;
+const visibleCard = card && isAidVisible(card, entry) ? card : null;
 // NOTHING IS EVER LOST WHILE THE BACKFILL RUNS. A published lecture whose
 // Slide 1 has not been copied into public/lectures/ yet keeps the plain
 // "Watch the lecture" line that stood here before the row existed, so no
@@ -90,7 +94,7 @@ const crumbs = [
     {d.passageRef && <p class="passage-ref">John {d.passageRef}</p>}
     <h1>{d.title}</h1>
 
-    <Triptych sectionId={entry.id} showLecture={showLecture} aid={visibleAid} />
+    <Triptych sectionId={entry.id} showLecture={showLecture} aid={visibleAid} card={visibleCard} />
 
     {lectureTextLinkOnly && (
       <p class="paired-lecture">
