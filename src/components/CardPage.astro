@@ -33,11 +33,11 @@ const crumbs = [
 const esc = (t: string) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const sourceHtml = esc(d.source).replace(/\*([^*]+)\*/g, '<em>$1</em>');
 ---
-<BaseLayout title={d.title} description={d.description ?? `Quotation card: ${d.voice}, on ${d.verse}`}
+<BaseLayout title={d.title} description={d.description ?? (d.prayer ? `Prayer card: ${d.voice}` : `Quotation card: ${d.voice}, on ${d.verse}`)}
   pageMeta={{ date: d.date, revised: d.revised, license: d.license }}>
   <article class="reading">
     <Breadcrumb crumbs={crumbs} />
-    <p class="passage-ref">Quotation Card · {passageLabel}</p>
+    <p class="passage-ref">{d.prayer ? 'Prayer Card' : 'Quotation Card'} · {passageLabel}</p>
     <h1>{d.title}</h1>
 
     <figure class="card-display">
@@ -51,13 +51,15 @@ const sourceHtml = esc(d.source).replace(/\*([^*]+)\*/g, '<em>$1</em>');
     </div>
 
     <blockquote class="card-quotation">
-      <p>“{d.quotation}”</p>
+      {d.prayer ? <p>{d.quotation}</p> : <p>“{d.quotation}”</p>}
       <footer>— <span set:html={sourceHtml} />.</footer>
     </blockquote>
 
     <Content />
 
-    <p class="slide-caption">Free to share, print and project with attribution. Card design CC BY 4.0; the quotation is the author's, cited.</p>
+    <p class="slide-caption">{d.prayer
+      ? 'Free to share, print, project and pray, with attribution. CC BY 4.0.'
+      : "Free to share, print and project with attribution. Card design CC BY 4.0; the quotation is the author's, cited."}</p>
     <p class="slide-backlink">
       <a href={commentaryUrl(section!.id)}>Read the commentary: {section!.data.title}</a>
     </p>
