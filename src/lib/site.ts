@@ -109,6 +109,13 @@ export const slideAssetUrl = (id: string, ratio: '16x9' | '9x16') =>
 // getStaticPaths) and the panel degrades, per ask sec 9.
 export const lectureThumbUrl = (sectionId: string) => `/lectures/${sectionId}.png`;
 
+// A quotation card's page and its two served images (content.config.ts, the
+// cards collection). Names derive from the id, as the slide assets' do: the
+// 1080 square is shown on the pages, the 2048 original is the download.
+export const cardUrl = (id: string) => `/cards/${id}/`;
+export const cardImageUrl = (id: string, size: 'web' | 'full' = 'web') =>
+  size === 'full' ? `/cards/${id}/${id}-2048.jpg` : `/cards/${id}/${id}.jpg`;
+
 // A commentary page's PDF, printed from the built page at every Cloudflare
 // build and never committed (see src/lib/commentary-pdf.mjs, which writes the
 // file under this same name). It sits beside the page, named from the id:

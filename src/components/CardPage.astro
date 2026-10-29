@@ -1,0 +1,67 @@
+---
+// Quotation card page — one per card (the cards collection; corpus Production
+// Pair Loop Rev 36, the Editor's rulings of 28 Oct 2026). From pair 23 the card
+// stands where the teaching aid stood: the card displayed, the full image to
+// download, the quotation with its source in full, the post text as a short
+// note for teachers, and the return to the commentary page, where the card
+// sits beside the lecture.
+//
+// The licence line distinguishes the two things on the card: the design is
+// ours (CC BY 4.0); the quoted words are the author's, cited.
+import { getCollection, getEntry, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from './Breadcrumb.astro';
+import PageDates from './PageDates.astro';
+import { cardImageUrl, commentaryUrl, volumeUrl, splitCommentaryId } from '../lib/site';
+
+const { entry } = Astro.props;
+const d = entry.data;
+const { Content } = await render(entry);
+const section = await getEntry(d.section);
+const { book, unit } = splitCommentaryId(section!.id);
+const unitId = `${book}/${unit}`;
+const vols = await getCollection('volumes');
+const bookDisplay = vols.find((v) => v.data.book === book)?.data.bookDisplay ?? book;
+const passageLabel = section!.data.passageRef ? `${bookDisplay} ${section!.data.passageRef}` : unit;
+const crumbs = [
+  { label: 'Commentaries', href: '/commentary/' },
+  { label: bookDisplay, href: volumeUrl(book) },
+  { label: passageLabel, href: commentaryUrl(unitId) },
+  { label: d.title },
+];
+// The source may italicize a title with *…*; nothing else is interpreted.
+const esc = (t: string) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const sourceHtml = esc(d.source).replace(/\*([^*]+)\*/g, '<em>$1</em>');
+---
+<BaseLayout title={d.title} description={d.description ?? `Quotation card: ${d.voice}, on ${d.verse}`}
+  pageMeta={{ date: d.date, revised: d.revised, license: d.license }}>
+  <article class="reading">
+    <Breadcrumb crumbs={crumbs} />
+    <p class="passage-ref">Quotation Card · {passageLabel}</p>
+    <h1>{d.title}</h1>
+
+    <figure class="card-display">
+      <img src={cardImageUrl(entry.id)} alt={d.imageAlt} width="1080" height="1080" />
+    </figure>
+
+    <div class="slide-downloads">
+      <a class="download-button" href={cardImageUrl(entry.id, 'full')} download>
+        Download the card (2048 × 2048)
+      </a>
+    </div>
+
+    <blockquote class="card-quotation">
+      <p>“{d.quotation}”</p>
+      <footer>— <span set:html={sourceHtml} />.</footer>
+    </blockquote>
+
+    <Content />
+
+    <p class="slide-caption">Free to share, print and project with attribution. Card design CC BY 4.0; the quotation is the author's, cited.</p>
+    <p class="slide-backlink">
+      <a href={commentaryUrl(section!.id)}>Read the commentary: {section!.data.title}</a>
+    </p>
+
+    {d.date && <PageDates date={d.date} revised={d.revised} />}
+  </article>
+</BaseLayout>

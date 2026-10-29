@@ -32,7 +32,13 @@
 // section with neither shows nothing at all and the row does not appear.
 // Twenty-odd published sections are in the first case today and stay there
 // until the D47 sec 6 migration reaches them.
-import { slideAssetUrl, slideUrl, lectureUrl, lectureThumbUrl } from '../lib/site';
+// THE QUOTATION CARD (corpus Production Pair Loop Rev 36; the Editor's rulings
+// of 28 Oct 2026). From pair 23 a card takes the aid's place; the aids already
+// published stay, so a section may show the lecture, the aid and the card. The
+// card's frame is square at the row's height (where a section also has an aid,
+// the card wraps to a second row on a narrow column). It is found and
+// visibility-checked in the route, as the aid is.
+import { slideAssetUrl, slideUrl, lectureUrl, lectureThumbUrl, cardUrl, cardImageUrl } from '../lib/site';
 
 interface Props {
   sectionId: string;
@@ -40,12 +46,14 @@ interface Props {
   showLecture: boolean;
   /** The section's teaching aid, already visibility-checked, or null. */
   aid: any | null;
+  /** The section's quotation card, already visibility-checked, or null. */
+  card?: any | null;
 }
-const { sectionId, showLecture, aid } = Astro.props;
+const { sectionId, showLecture, aid, card = null } = Astro.props;
 const aidAlt = aid ? (aid.data.imageAlt ?? `Projectable slide: ${aid.data.title}`) : '';
 ---
-{(showLecture || aid) && (
-  <nav class="triptych" aria-label="Lecture and teaching aid for this section">
+{(showLecture || aid || card) && (
+  <nav class="triptych" aria-label="Lecture, teaching aid and quotation card for this section">
     {showLecture && (
       <a class="triptych__panel" href={lectureUrl(sectionId)}>
         <span class="triptych__frames">
@@ -68,6 +76,17 @@ const aidAlt = aid ? (aid.data.imageAlt ?? `Projectable slide: ${aid.data.title}
           </span>
         </span>
         <span class="triptych__label">Teaching Aids</span>
+      </a>
+    )}
+
+    {card && (
+      <a class="triptych__panel" href={cardUrl(card.id)}>
+        <span class="triptych__frames">
+          <span class="triptych__frame triptych__frame--square">
+            <img src={cardImageUrl(card.id)} alt={card.data.imageAlt} width="1080" height="1080" loading="lazy" />
+          </span>
+        </span>
+        <span class="triptych__label">Quotation Card</span>
       </a>
     )}
   </nav>

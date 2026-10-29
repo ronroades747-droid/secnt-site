@@ -440,4 +440,39 @@ const slides = defineCollection({
       }),
 });
 
-export const collections = { frontmatter, volumes, commentary, lectures, articles, slides, slideCycles };
+// ---------------------------------------------------------------------------
+// Collection: cards  —  quotation cards (the pair's card, in the aid's place)
+// ---------------------------------------------------------------------------
+// One entry per quotation card (corpus: Production Pair Loop Rev 36; the
+// Editor's rulings of 28 Oct 2026, "1-5 as recommended"). From pair 23 a card
+// takes the teaching aid's place; the aids already published stay, and a
+// section may carry both. Path owns identity: the entry id is the card's id in
+// the corpus Card Inventory, lower-cased (jn1-613-22), and /cards/<id>/ is its
+// page. Served images live in public/cards/<id>/ under derived names —
+// <id>.jpg (1080 square, for display) and <id>-2048.jpg (the full card, the
+// download) — see cardImageUrl in site.ts; no per-entry asset fields.
+//
+// Like a D47 aid, a card has no flip of its own: it is live exactly when the
+// commentary section it names is live (isAidVisible applies unchanged).
+// The quotation is the source's, cited in full; only the card's design is
+// ours to license.
+const cards = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/cards' }),
+  schema: () =>
+    z.object({
+      title: z.string(), // the quotation's opening words, for the page title
+      description: z.string().optional(),
+      section: reference('commentary'),
+      quotation: z.string(), // exactly as set on the card, without its marks
+      voice: z.string(), // e.g. "John Calvin"
+      verse: z.string(), // e.g. "John 1:13"
+      source: z.string(), // the full citation, markdown italics allowed
+      imageAlt: z.string(),
+      date: z.coerce.date().optional(),
+      revised: z.coerce.date().optional(),
+      license,
+      draft: z.boolean().default(false),
+    }),
+});
+
+export const collections = { frontmatter, volumes, commentary, lectures, articles, slides, slideCycles, cards };
