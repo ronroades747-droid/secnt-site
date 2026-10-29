@@ -87,7 +87,7 @@ const aidAlt = aid ? (aid.data.imageAlt ?? `Projectable slide: ${aid.data.title}
             <img src={cardImageUrl(card.id)} alt={card.data.imageAlt} width="1080" height="1080" loading="lazy" />
           </span>
         </span>
-        <span class="triptych__label">Quotation Card</span>
+        <span class="triptych__label">{card.data.prayer ? 'Prayer Card' : 'Quotation Card'}</span>
       </a>
     ))}
   </nav>

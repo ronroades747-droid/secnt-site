@@ -467,6 +467,10 @@ const cards = defineCollection({
       voice: z.string(), // e.g. "John Calvin"
       verse: z.string(), // e.g. "John 1:13"
       source: z.string(), // the full citation, markdown italics allowed
+      // A prayer card (the Editor, 29 Oct 2026): the commentary's own words,
+      // shown without quotation marks, its "voice" the attribution line
+      // ("A prayer on John 1:6–13").
+      prayer: z.boolean().default(false),
       imageAlt: z.string(),
       date: z.coerce.date().optional(),
       revised: z.coerce.date().optional(),
