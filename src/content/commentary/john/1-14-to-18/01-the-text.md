@@ -1,7 +1,7 @@
 ---
 title: "The Text: Settling the Working Text, and μονογενὴς θεός at 1:18"
 description: "The working text of John 1:14–18 settled verse by verse, and the 1:18 crux — “only God” against “only Son.”"
-date: 2026-11-02
+date: 2026-11-03
 book: john
 chapter: 1
 passageRef: "1:14–18"
@@ -11,7 +11,7 @@ verseEnd: 18
 sectionType: text-critical
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 The exegesis of this unit proceeds on a fixed text, and this first section establishes it. The unit is read on the critical editions' common text, adopted without emendation, for verses 14 through 18 alike. Its agreement with the editions has been checked at first hand: the printed text of the standard critical edition agrees with it word for word.[^na28] What remains is to show how that text was secured, and the work falls at three levels, which are kept distinct throughout. Three points are **resolved** against a named rival: the Baptist's formula at verse 15, the connective at the head of verse 16, and the crux at verse 18, which is decided on two questions, the noun and the article. The rest is **secure**, and is asserted verse by verse. And the questions of meaning that the variants raise are **routed** to the verses where they belong, and are not decided here.
 
