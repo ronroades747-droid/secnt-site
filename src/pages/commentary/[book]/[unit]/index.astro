@@ -5,7 +5,15 @@
 // ./lecture/), the paired-lecture link renders at the top of the article like
 // any section, and the diagram frontmatter field renders here just as the section
 // template renders it (closing the open item in publishing-a-pair.md).
+//
+// QUOTATION CARDS (corpus Production Pair Loop Rev 36). A landing that is a
+// pair's commentary section carries that pair's cards exactly as a section
+// page does: found from the `cards` collection by `section`, one or two in id
+// order, live exactly when the landing is (isAidVisible), and rendered by the
+// same Triptych panel. Only the cards are passed: the landing keeps its plain
+// lecture link and has no aid, so a landing with no cards renders as before.
 import { getCollection, render } from 'astro:content';
+import Triptych from '../../../../components/Triptych.astro';
 import Diagram from '../../../../components/Diagram.astro';
 import PageDownloads from '../../../../components/PageDownloads.astro';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
@@ -13,24 +21,30 @@ import UnitNav from '../../../../components/UnitNav.astro';
 import PrevNext from '../../../../components/PrevNext.astro';
 import PageDates from '../../../../components/PageDates.astro';
 import Breadcrumb from '../../../../components/Breadcrumb.astro';
-import { splitCommentaryId, normalizeId, lectureUrl, volumeUrl, isVisible, asDiagrams } from '../../../../lib/site';
+import { splitCommentaryId, normalizeId, lectureUrl, volumeUrl, isVisible, isAidVisible, asDiagrams } from '../../../../lib/site';
 
 export async function getStaticPaths() {
   const landings = (await getCollection('commentary'))
     .filter((e) => e.data.sectionType === 'unit-landing' && isVisible(e));
   const lectures = await getCollection('lectures');
+  const cards = await getCollection('cards');
   return landings.map((entry) => {
     const { book, unit } = splitCommentaryId(entry.id);
     const lecture = lectures.find((l) => normalizeId(l.data.sectionRef.id) === entry.id);
-    return { params: { book, unit }, props: { entry, lecture } };
+    const landingCards = cards
+      .filter((c) => normalizeId(c.data.section.id) === entry.id)
+      .sort((a, b) => a.id.localeCompare(b.id))
+      .slice(0, 2);
+    return { params: { book, unit }, props: { entry, lecture, landingCards } };
   });
 }
-const { entry, lecture } = Astro.props;
+const { entry, lecture, landingCards } = Astro.props;
 const { book } = splitCommentaryId(entry.id);
 const { Content } = await render(entry);
 const d = entry.data;
 const pairedLecture = d.hasLecture && lecture && isVisible(lecture) ? lecture : null;
 const pairedLectureUrl = lectureUrl(entry.id);
+const visibleCards = landingCards.filter((c) => isAidVisible(c, entry));
 // A page may carry one diagram or several (see asDiagrams / content.config.ts).
 const diagrams = asDiagrams(d.diagram);
 const diagramsTop = diagrams.filter((x) => (x.position ?? 'bottom') === 'top');
@@ -58,6 +72,8 @@ const crumbs = [
           <a href={pairedLectureUrl}>Watch the lecture</a>
         </p>
       )}
+
+      <Triptych sectionId={entry.id} showLecture={false} aid={null} cards={visibleCards} />
 
       <PageDownloads sectionId={entry.id} title={d.title} />
 
