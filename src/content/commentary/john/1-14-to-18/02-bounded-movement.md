@@ -47,7 +47,7 @@ Thirteen sources set verses 14 to 18 as one section. Twelve do so in their own v
 
 Three other edges have been proposed. Each is recorded here and none is adopted.
 
-The first joins verse 14 to what precedes, so that the Word's becoming flesh closes the second movement instead of opening the third. McHugh notes that two English versions do this, and that they are the exception, "for no editor of the Greek text has this arrangement." Morris's headings draw the same line: his section on the Word incarnate runs from verse 9 to verse 14, and a separate section on the Word's surpassing excellence opens at verse 15.[^joined] Against the four marks at verse 14, and against the convergence just described, the arrangement is recorded and not followed.
+The first joins verse 14 to what precedes, so that the Word's becoming flesh closes the second movement instead of opening the third. McHugh notes that the New English Bible and the Jerusalem Bible, with their revisions, do this, and that they are the exception, "for no editor of the Greek text has this arrangement." Morris's headings draw the same line: his section on the Word incarnate runs from verse 9 to verse 14, and a separate section on the Word's surpassing excellence opens at verse 15.[^joined] Against the four marks at verse 14, and against the convergence just described, the arrangement is recorded and not followed.
 
 The second makes verse 14 the climax of the whole Prologue. That is a claim about the movement's shape within, not about where it begins, and a climax is not a boundary. It is taken up where the unit's articulation is set out, in the next section.
 
