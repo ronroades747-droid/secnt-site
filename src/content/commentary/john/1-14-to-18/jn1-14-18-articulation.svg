@@ -1,0 +1,97 @@
+<svg viewBox="0 0 1440 830" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="arTitle arDesc" preserveAspectRatio="xMidYMid meet">
+  <title id="arTitle">The interior of John 1:14–18 in three parts: the confession, the witness, the ground and the declaration.</title>
+  <desc id="arDesc">The interior articulation of John 1:14–18 in three parts on one verse line — the confession (v. 14), the witness (v. 15), the ground and the declaration (vv. 16–18) — with the seams marked in the particles: the καί at v. 14, the two ὅτι of vv. 16 and 17, and the asyndeton at v. 18. Two grounding arrows run backward as the articulation's spine: v. 17 grounds v. 16, and v. 16 grounds v. 14. The catchwords span the witness: χάριτος καὶ ἀληθείας and πλήρης at v. 14 are carried across v. 15 to πληρώματος and χάριν at v. 16 and to ἡ χάρις καὶ ἡ ἀλήθεια at v. 17. Verse 18 is marked as the crown inside the third part, not a fourth. The figure carries nothing of the tenses.</desc>
+  <style>
+    /* --- family theming interface: light page renders from in-file fallbacks;
+           dark slide renders when the host sets color / --color-gold / --color-meta / --color-goldtext --- */
+    .gk    { font-family:'SBL BibLit','Cardo','Gentium Plus','Charis SIL','Source Serif 4',Georgia,serif; fill:currentColor; }
+    .gkd   { font-family:'SBL BibLit','Cardo','Gentium Plus','Charis SIL','Source Serif 4',Georgia,serif; fill:var(--color-meta,#6b6b6b); }
+    .ink   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; }
+    .inkb  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; font-weight:600; }
+    .desc  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; font-style:italic; }
+    .lbl   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); }
+    .note  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); font-style:italic; }
+    .glab  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-goldtext,#8a6608); font-style:italic; }
+    .band  { fill:none; stroke:currentColor; stroke-width:1.6; }
+    .seam  { stroke:var(--color-gold,#b8860b); stroke-width:3.4; fill:none; stroke-linecap:round; }
+    .joint { stroke:var(--color-meta,#6b6b6b); stroke-width:1.6; fill:none; }
+    .arc   { stroke:var(--color-gold,#b8860b); stroke-width:2.6; fill:none; stroke-linecap:round; }
+    .rail  { stroke:var(--color-meta,#6b6b6b); stroke-width:2; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+    .rule  { stroke:var(--color-gold,#b8860b); stroke-width:2.4; fill:none; stroke-linecap:round; }
+    .node  { fill:var(--color-gold,#b8860b); }
+    .guide { stroke:var(--color-meta,#6b6b6b); stroke-width:1; fill:none; }
+  </style>
+  <defs>
+    <marker id="ar-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--color-gold,#b8860b)"/>
+    </marker>
+    <marker id="ar-arrow-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--color-meta,#6b6b6b)"/>
+    </marker>
+  </defs>
+
+  <!-- ================= family title block ================= -->
+  <text class="ink" x="720" y="50" text-anchor="middle" font-size="34" letter-spacing="0.5">The Articulation</text>
+  <text class="lbl" x="720" y="82" text-anchor="middle" font-size="22">the interior of John 1:14–18 · the confession, the witness, the ground and the declaration</text>
+
+  <!-- ================= the chain of grounds: two arrows running backward, above the line ================= -->
+  <text class="lbl" x="535" y="138" text-anchor="middle" font-size="21">the chain of grounds · the articulation's spine</text>
+  <path class="arc" d="M805 322 C805 168 265 168 265 314" marker-end="url(#ar-arrow)"/>
+  <text class="lbl" x="535" y="196" text-anchor="middle" font-size="21">v. 16 grounds v. 14</text>
+  <path class="arc" d="M1030 322 C1030 252 815 252 815 314" marker-end="url(#ar-arrow)"/>
+  <text class="lbl" x="922" y="250" text-anchor="middle" font-size="21">v. 17 grounds v. 16</text>
+  <circle class="node" cx="805" cy="326" r="5"/>
+  <circle class="node" cx="1030" cy="326" r="5"/>
+
+  <!-- ================= the crown: v. 18 inside the third part ================= -->
+  <text class="glab" x="1250" y="262" text-anchor="middle" font-size="22">the crown</text>
+  <text class="note" x="1250" y="290" text-anchor="middle" font-size="21">inside the third part,</text>
+  <text class="note" x="1250" y="314" text-anchor="middle" font-size="21">not a fourth</text>
+
+  <!-- ================= the verse line: three parts, five verses; seams full height, interior joints half ================= -->
+  <rect class="band" x="80" y="330" width="1280" height="120" rx="4"/>
+  <line class="seam" x1="440" y1="330" x2="440" y2="450"/>
+  <line class="seam" x1="700" y1="330" x2="700" y2="450"/>
+  <line class="joint" x1="920" y1="402" x2="920" y2="450"/>
+  <line class="joint" x1="1140" y1="402" x2="1140" y2="450"/>
+
+  <text class="ink" x="260"  y="378" text-anchor="middle" font-size="25">the confession</text>
+  <text class="ink" x="570"  y="378" text-anchor="middle" font-size="25">the witness</text>
+  <text class="ink" x="1030" y="378" text-anchor="middle" font-size="25">the ground and the declaration</text>
+  <text class="lbl" x="260"  y="432" text-anchor="middle" font-size="22">v. 14</text>
+  <text class="lbl" x="570"  y="432" text-anchor="middle" font-size="22">v. 15</text>
+  <text class="lbl" x="810"  y="432" text-anchor="middle" font-size="22">v. 16</text>
+  <text class="lbl" x="1030" y="432" text-anchor="middle" font-size="22">v. 17</text>
+  <text class="inkb" x="1250" y="432" text-anchor="middle" font-size="22">v. 18</text>
+  <line class="rule" x1="1222" y1="440" x2="1278" y2="440"/>
+
+  <!-- ================= the joints, marked in the particles ================= -->
+  <line class="guide" x1="700" y1="452" x2="700" y2="462"/>
+  <line class="guide" x1="920" y1="452" x2="920" y2="462"/>
+  <line class="guide" x1="1140" y1="452" x2="1140" y2="462"/>
+  <text class="gk"   x="84"   y="486" text-anchor="start"  font-size="23">καί</text>
+  <text class="gk"   x="700"  y="486" text-anchor="middle" font-size="23">ὅτι</text>
+  <text class="gk"   x="920"  y="486" text-anchor="middle" font-size="23">ὅτι</text>
+  <text class="note" x="1140" y="486" text-anchor="middle" font-size="21">asyndeton</text>
+  <text class="lbl"  x="84"   y="516" text-anchor="start"  font-size="21">the joints, marked in the particles</text>
+
+  <!-- the two seams the catchwords cross, continued as hairlines into the register below -->
+  <line class="guide" x1="440" y1="540" x2="440" y2="700"/>
+  <line class="guide" x1="700" y1="540" x2="700" y2="700"/>
+
+  <!-- ================= the catchwords, carried across the witness ================= -->
+  <text class="lbl" x="84" y="566" text-anchor="start" font-size="21">the catchwords</text>
+  <text class="gk" x="260" y="606" text-anchor="middle" font-size="23">πλήρης</text>
+  <text class="gk" x="260" y="646" text-anchor="middle" font-size="23">χάριτος καὶ ἀληθείας</text>
+  <text class="gk" x="810" y="606" text-anchor="middle" font-size="23">πληρώματος</text>
+  <text class="gk" x="810" y="646" text-anchor="middle" font-size="23">χάριν</text>
+  <text class="gk" x="1030" y="686" text-anchor="middle" font-size="23">ἡ χάρις καὶ ἡ ἀλήθεια</text>
+  <line class="rail" x1="310" y1="599" x2="732" y2="599" marker-end="url(#ar-arrow-m)"/>
+  <line class="rail" x1="385" y1="639" x2="770" y2="639" marker-end="url(#ar-arrow-m)"/>
+  <polyline class="rail" points="400,639 430,679 892,679" marker-end="url(#ar-arrow-m)"/>
+  <text class="lbl" x="570" y="726" text-anchor="middle" font-size="21">carried across the witness</text>
+
+  <!-- ================= synthesis ================= -->
+  <text class="desc" x="720" y="806" text-anchor="middle" font-size="22">One movement in three parts — the confession, the witness that attests it, and the ground beneath it, crowned by the declaration.</text>
+</svg>
