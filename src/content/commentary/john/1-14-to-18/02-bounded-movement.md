@@ -1,7 +1,7 @@
 ---
 title: "Architecture: The Bounded Movement"
 description: "The unit’s outer shape: 1:14–18 as the Prologue’s third and last movement, bounded at “the Word became flesh” and “he has made him known.”"
-date: 2026-11-02
+date: 2026-11-04
 book: john
 chapter: 1
 passageRef: "1:14–18"
@@ -11,7 +11,7 @@ verseEnd: 18
 sectionType: framing
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 The unit opens where the Word is named again and closes where the Prologue closes, and the evangelist composed both edges. Where a movement begins and ends is not a matter of layout. It settles what the movement says and what lies outside it: whether the confession of verse 14 opens something new or completes what came before, and whether verse 18 is a sentence within the unit or its last word. This section sets the two edges, shows what carries them, and records the edges that have been proposed in their place.
 
