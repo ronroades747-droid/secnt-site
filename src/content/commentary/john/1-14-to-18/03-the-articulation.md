@@ -2,6 +2,7 @@
 title: "Architecture: The Articulation — Confession, Witness, Ground and Declaration"
 description: "The movement’s interior articulation — the confession, the witness, the ground and the declaration — and the chain of grounds that runs back through it."
 date: 2026-11-05
+revised: 2026-11-05
 book: john
 chapter: 1
 passageRef: "1:14–18"
@@ -36,7 +37,7 @@ The division is not this commentary's alone. Westcott drew the same three parts:
 
 ## The catchwords span the witness
 
-The strongest evidence for the three parts is a set of words that reach across the middle one. What verse 14 says the Son is full of, verses 16 and 17 say was received and came. Verse 14 calls him πλήρης χάριτος καὶ ἀληθείας, *full of grace and truth*. Verse 16 says that from his πλήρωμα, his *fullness*, we have all received, grace upon grace. Verse 17 says that grace and truth came through Jesus Christ. So the thought runs across verse 15, from verse 14 to verse 16, and the witness stands inside it.
+The strongest evidence for the three parts is a set of words that reach across the middle one. What verse 14 says the Son is full of, verses 16 and 17 say was received and came. Verse 14 calls him πλήρης χάριτος καὶ ἀληθείας, *full of grace and truth*. Verse 16 says that from his πλήρωμα, his *fullness*, we have all received grace in place of grace. Verse 17 says that the grace and the truth came to be through Jesus Christ. So the thought runs across verse 15, from verse 14 to verse 16, and the witness stands inside it.
 
 Ridderbos states it directly: "Verse 16 no longer forms a part of John's testimony but (as is evident from the word 'fullness') continues vs. 14."[^ridderbos] Brown says it more briefly still: "(16 expands 14; 15 is an interruption)."[^brown]
 
@@ -47,7 +48,7 @@ Ten traditions carry the tie. Beside Ridderbos and Brown stand Schnackenburg, Ba
 The Greek marks where the parts meet, in its small connecting words.
 
 - **The καί at verse 14.** It opens the confession, and with it the movement. In a Prologue whose sentences have mostly stood without a connective, it is the mark the previous section set at the front edge.
-- **The two ὅτι of verses 16 and 17.** Each introduces a ground. Abbott counts three ὅτι in the passage and finds that each "seems to base a new statement on some preceding similar one."[^hoti] The third, in verse 15, stands inside the Baptist's words, *for he was before me*, and marks no joint between the parts. The two that mark the articulation are those of verses 16 and 17.
+- **The two ὅτι of verses 16 and 17.** Each introduces a ground. Abbott counts three ὅτι in the passage and finds that each "seems to base a new statement on some preceding similar one."[^hoti] The third, in verse 15, stands inside the Baptist's words, *because he was before me*, and marks no joint between the parts. The two that mark the articulation are those of verses 16 and 17.
 - **The asyndeton at verse 18.** Verse 18 opens with no connective at all, and the absence is itself a tie. Harris reads it so: "Being asyndetic, verse 18 must be closely connected with verse 17."[^asyndeton]
 
 ## The chain, and the crown
