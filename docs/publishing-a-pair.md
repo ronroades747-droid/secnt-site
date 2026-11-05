@@ -110,7 +110,7 @@ In the body, on its own line, at the spot the figure should land:
 - **Never hand-roll a `<figure>` or `<img>` in the body.** Raw HTML skips the diagram component — wrong classes, no palette/font inheritance — and ignores the marker entirely, so it renders wherever it was pasted and out of the Visual Register. If you find one pasted in, delete it and put a `<!-- diagram -->` marker where you want the figure.
 - `position: top` / `bottom` still work (render outside the prose, before/after the body) but marker placement is the standard.
 
-**Converting the Production sentinel.** Commentary Production marks a diagram's location in its authored prose with a visible `[[DIAGRAM: name]]` sentinel (see `_Methods/diagram-handoff-contract.md` in the corpus repo), not a raw marker — an HTML comment does not survive a Google Doc. At the paste-into-stub step, replace each `[[DIAGRAM: name]]` with a `<!-- diagram -->` marker on its own line at the same position, one per diagram in reading order. That conversion is the Editor's; the sentinel never reaches the committed `.md`, and no `<figure>`/`<img>` ever does.
+**The marker arrives in the authored body; there is no conversion step.** Commentary Production places the `<!-- diagram -->` marker itself, on its own line, in the Markdown body it delivers, so the marker reaches the stub verbatim. The seam is governed by `_Methods/diagram-handoff-contract.md` in the corpus repo, not restated here. *(Until 5 November 2026 this paragraph described converting a visible `[[DIAGRAM: name]]` sentinel into the marker at the paste. The contract retired that sentinel on 10 August 2026, and the runbook was not conformed at the time.)*
 
 The unit landing renders diagrams the same way — the marker injects the figure in-body via the diagram plugin, independent of the landing template.
 
@@ -208,7 +208,7 @@ A plain `npm run build` shows only non-draft content — exactly what production
 
 ### Commit and push
 
-Git is the source of truth; Cloudflare Pages rebuilds on push to `main`.
+Git is the source of truth; Cloudflare Pages rebuilds production whenever `main` changes. Who commits, and how the commit reaches `main`, are set by the corpus conventions (corpus `CLAUDE.md`: the commit ruling and the *Cloud sessions* rules), not by this runbook. A local session commits on `main`, and the push that publishes is made only on Ron's authorization. A cloud session commits on its own `claude/…` branch, opens a pull request into `main`, and merges it, and the merge publishes. The shape of the local commit:
 
 ```powershell
 git pull
@@ -216,12 +216,12 @@ git add src/content/commentary/john/1-1-to-3/NN-slug.md src/content/lectures/joh
 # if this is the last pair, also stage the landing with passageComplete flipped:
 # git add src/content/commentary/john/1-1-to-3/index.md
 git commit -m "Publish §… — <descriptor> (section + lecture)" -m "Authorized by: GATE 4, <cycle> — <the instrument, e.g. ARB 2.6 / IPC-10 §7>. Lane: Commentary Production."
-git push
+# the push that publishes is made only on Ron's authorization; a cloud session opens and merges a PR instead
 ```
 
 Cloudflare rebuilds automatically. `draft: false` content goes live; `draft: true` content is held back.
 
-**Name the authority in the commit.** Publication is the most consequential commit in the system — it is the moment a reading becomes public and citable — so it is the one that most needs to be traceable back to what authorized it. The second `-m` becomes a separate paragraph in the message; keep the subject line as it is. This follows the corpus convention in `CLAUDE.md` (*"Claude writes the commit message; Ron pastes it"*, adopted 12 Aug 2026): the session that authored the body supplies the whole message, GATE line included, and Ron pastes it at the flip.
+**Name the authority in the commit.** Publication is the most consequential commit in the system — it is the moment a reading becomes public and citable — so it is the one that most needs to be traceable back to what authorized it. The second `-m` becomes a separate paragraph in the message; keep the subject line as it is. This follows the corpus convention in `CLAUDE.md` (Claude writes the commit message, adopted 12 Aug 2026, and since the Editor's ruling of 30 Aug 2026 also performs the commit): the session supplies the whole message, GATE line included, and the commit carries it at the flip.
 
 ---
 
@@ -269,5 +269,5 @@ Do not author a section file from scratch on the Production side. The frontmatte
 - [ ] `draft: false` and `date` set on **both** files, in one commit
 - [ ] If this is the **first** pair: the volume (`john.md`) and unit landing (`index.md`) are also `draft: false`
 - [ ] If this is the **last** pair: `passageComplete: true` set on the unit-landing `index.md` in the same commit
-- [ ] Committed and pushed; Cloudflare rebuild succeeded (green in the Pages dashboard)
+- [ ] Committed and on `main` (pushed on Ron's authorization, or the cloud session's PR merged); Cloudflare rebuild succeeded (green in the Pages dashboard)
 - [ ] Opened the live page: title shows once, passage ref and epigraph render, video plays, back-link/embed resolves; any diagram renders once, at its marker, in place; on the unit landing, the `More to come` line is present (or correctly gone, if this was the last pair)
