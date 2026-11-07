@@ -1,0 +1,85 @@
+<svg viewBox="0 0 1440 730" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="fwTitle fwDesc" preserveAspectRatio="xMidYMid meet">
+  <title id="fwTitle">The framework of the Prologue: three movements in one linear progression, carrying two concentric figures, with no centre.</title>
+  <desc id="fwDesc">The Prologue as three movements in progression, drawn left to right as one line that goes out from the Word with God and comes back to the Son in the Father's bosom, the third returning to the first. Two concentric figures are drawn solid, as received: the frame, vv. 1–2 with v. 18, and the two passages about John the Baptist at matching points, vv. 6–8 with v. 15. No inner pairings and no centre are drawn.</desc>
+
+  <style>
+    /* --- family theming interface (section anchor: jn1-14-18-architectural-orientation.svg):
+           light page renders from in-file fallbacks; dark slide renders when the host sets
+           color / --color-gold / --color-meta / --color-goldtext --- */
+    .gk    { font-family:'SBL BibLit','Cardo','Gentium Plus','Charis SIL','Source Serif 4',Georgia,serif; fill:currentColor; }
+    .gkd   { font-family:'SBL BibLit','Cardo','Gentium Plus','Charis SIL','Source Serif 4',Georgia,serif; fill:var(--color-meta,#6b6b6b); }
+    .ink   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; }
+    .inkb  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; font-weight:600; }
+    .desc  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; font-style:italic; }
+    .lbl   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); }
+    .note  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); font-style:italic; }
+    .glab  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-goldtext,#8a6608); font-style:italic; }
+
+    .panel { fill:none; stroke:currentColor; stroke-width:1.6; }
+    .arcS  { stroke:var(--color-gold,#b8860b); stroke-width:2.6; fill:none; stroke-linecap:round; }
+    .foot  { stroke:var(--color-gold,#b8860b); stroke-width:4; fill:none; stroke-linecap:round; }
+    .spine { stroke:var(--color-gold,#b8860b); stroke-width:2.6; fill:none; stroke-linecap:round; }
+    .node  { fill:var(--color-gold,#b8860b); }
+  </style>
+
+  <defs>
+    <marker id="fw-arrow" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--color-gold,#b8860b)"/>
+    </marker>
+  </defs>
+
+  <!-- ================= family title block ================= -->
+  <text class="ink" x="720" y="50" text-anchor="middle" font-size="34" letter-spacing="0.5">The Framework</text>
+  <text class="lbl" x="720" y="82" text-anchor="middle" font-size="22">a linear movement carrying concentric figures · the Prologue in three movements, the third returning to the first</text>
+
+  <!-- ================= the concentric figures, drawn as received (solid) ================= -->
+  <!-- the frame: vv. 1–2 with v. 18 -->
+  <path class="arcS" d="M140 400 C140 60 1330 60 1330 400"/>
+  <text class="lbl" x="735" y="132" text-anchor="middle" font-size="21">vv. 1–2 / v. 18 — the frame · the third movement returning to the first</text>
+  <!-- the two Baptist passages at matching points: vv. 6–8 with v. 15 -->
+  <path class="arcS" d="M560 400 C560 220 1000 220 1000 400"/>
+  <text class="lbl" x="780" y="218" text-anchor="middle" font-size="21">vv. 6–8 / v. 15 — the two passages about John the Baptist</text>
+  <text class="note" x="780" y="246" text-anchor="middle" font-size="21">at matching points</text>
+
+  <!-- ================= the Prologue as one line: three movement cells ================= -->
+  <rect class="panel" x="80"  y="400" width="390" height="112" rx="4"/>
+  <rect class="panel" x="500" y="400" width="360" height="112" rx="4"/>
+  <rect class="panel" x="890" y="400" width="470" height="112" rx="4"/>
+
+  <!-- feet: a span bar where a figure's foot is a passage, a node where it is a verse -->
+  <line class="foot" x1="104" y1="400" x2="176" y2="400"/>
+  <line class="foot" x1="520" y1="400" x2="600" y2="400"/>
+  <circle class="node" cx="140"  cy="400" r="6"/>
+  <circle class="node" cx="560"  cy="400" r="6"/>
+  <circle class="node" cx="1000" cy="400" r="6"/>
+  <circle class="node" cx="1330" cy="400" r="6"/>
+
+  <!-- verse labels under the feet -->
+  <text class="lbl" x="140"  y="430" text-anchor="middle" font-size="21">vv. 1–2</text>
+  <text class="lbl" x="560"  y="430" text-anchor="middle" font-size="21">vv. 6–8</text>
+  <text class="lbl" x="1000" y="430" text-anchor="middle" font-size="21">v. 15</text>
+  <text class="lbl" x="1344" y="430" text-anchor="end"    font-size="21">v. 18</text>
+
+  <!-- movement numerals and descriptors (the anchor's wording) -->
+  <text class="lbl"  x="275"  y="468" text-anchor="middle" font-size="25">1:1–5</text>
+  <text class="desc" x="275"  y="498" text-anchor="middle" font-size="21">The Word in the beginning</text>
+  <text class="lbl"  x="680"  y="468" text-anchor="middle" font-size="25">1:6–13</text>
+  <text class="desc" x="680"  y="498" text-anchor="middle" font-size="21">The Word coming as light</text>
+  <text class="inkb" x="1100" y="468" text-anchor="middle" font-size="28">1:14–18</text>
+  <text class="glab" x="1170" y="468" text-anchor="start"  font-size="21">this unit</text>
+  <text class="desc" x="1125" y="498" text-anchor="middle" font-size="21">The Word's glory in the flesh</text>
+
+  <!-- ================= the progression: one line, out and back ================= -->
+  <line class="spine" x1="80" y1="548" x2="1352" y2="548" marker-end="url(#fw-arrow)"/>
+  <circle class="node" cx="80" cy="548" r="5.5"/>
+  <text class="lbl"  x="720"  y="582" text-anchor="middle" font-size="21">three movements in progression</text>
+  <text class="lbl"  x="80"   y="582" text-anchor="start"  font-size="21">goes out from the Word with God</text>
+  <text class="gk"   x="80"   y="614" text-anchor="start"  font-size="24">πρὸς τὸν θεόν</text>
+  <text class="lbl"  x="1360" y="582" text-anchor="end"    font-size="21">comes back to the Son in the Father's bosom</text>
+  <text class="gk"   x="1360" y="614" text-anchor="end"    font-size="24">εἰς τὸν κόλπον τοῦ πατρός</text>
+
+  <!-- ================= synthesis ================= -->
+  <text class="desc" x="720" y="690" text-anchor="middle" font-size="22">The figures are real, and the whole is not folded around a centre.</text>
+</svg>
