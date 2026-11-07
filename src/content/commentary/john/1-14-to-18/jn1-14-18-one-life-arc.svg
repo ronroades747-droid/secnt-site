@@ -1,0 +1,122 @@
+<svg viewBox="0 0 1440 880" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="olTitle olDesc" preserveAspectRatio="xMidYMid meet">
+  <title id="olTitle">The one-life arc completed across John 1:14–18: the glory beheld drawn solid as the Prologue's terminus, seated across the movement and closing on its beginning, with the hour beyond the Prologue's edge as the Gospel's terminus.</title>
+  <desc id="olDesc">The one-life arc completed across the Prologue's third movement. The first two movements' nodes open the arc in a dim register, as inherited — the life in the Word, the light of men, shining in the darkness, the true light coming into the world, refused and received, and the begetting. This movement's nodes follow: σὰρξ ἐγένετο, the arrival and the terminus's condition; and the terminus within the volume, drawn solid — ἐθεασάμεθα τὴν δόξαν αὐτοῦ, the glory beheld — with its seating across the movement: the witness carrying it into the reader's day, the receiving of grace in place of grace, and the Son's making God known. The arc closes on its beginning, the life that was in the Word. Beyond the Prologue's edge the hour, the Gospel's terminus, is drawn dashed and dimmed and kept distinct from the volume's: two termini, not one. The four theological themes of the unit are gathered by a fifth into the one arc.</desc>
+
+  <style>
+    /* --- family theming interface: light page renders from in-file fallbacks;
+           dark slide renders when the host sets color / --color-gold / --color-meta / --color-goldtext --- */
+    .gk    { font-family:'SBL BibLit','Cardo','Gentium Plus','Charis SIL','Source Serif 4',Georgia,serif; fill:currentColor; }
+    .ink   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; }
+    .desc  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; font-style:italic; }
+    .lbl   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); }
+    .note  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); font-style:italic; }
+    .tab   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); letter-spacing:2px; }
+    .glab  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-goldtext,#8a6608); font-style:italic; }
+    .head  { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-goldtext,#8a6608); letter-spacing:0.12em; }
+    .it    { font-style:italic; }
+
+    .arci  { stroke:var(--color-meta,#6b6b6b); stroke-width:1.8; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+    .arc   { stroke:var(--color-gold,#b8860b); stroke-width:2.8; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+    .ret   { stroke:var(--color-gold,#b8860b); stroke-width:1.8; fill:none; stroke-linecap:round; }
+    .arcP  { stroke:var(--color-gold,#b8860b); stroke-width:2.2; fill:none; stroke-linecap:round; stroke-dasharray:7 6; opacity:0.6; }
+    .edge  { stroke:var(--color-meta,#6b6b6b); stroke-width:1; fill:none; stroke-dasharray:4 5; }
+    .node  { fill:var(--color-gold,#b8860b); }
+    .noded { fill:var(--color-meta,#6b6b6b); }
+    .tring { fill:none; stroke:currentColor; stroke-width:2; }
+    .hring { fill:none; stroke:var(--color-gold,#b8860b); stroke-width:2; stroke-dasharray:4 4; opacity:0.6; }
+    .tick  { stroke:var(--color-gold,#b8860b); stroke-width:1.2; fill:none; }
+  </style>
+
+  <!-- ================= family title block ================= -->
+  <text class="ink" x="720" y="50" text-anchor="middle" font-size="34" letter-spacing="0.5">The One-Life Arc</text>
+  <text class="lbl" x="720" y="82" text-anchor="middle" font-size="22">John 1:14–18 · the arc completed, continuing the arc of John 1:4–13</text>
+  <text class="desc" x="720" y="118" text-anchor="middle" font-size="22">the one divine life carried to its close — the glory beheld within the Prologue, the hour beyond it</text>
+
+  <!-- ================= zone tabs ================= -->
+  <text class="lbl" x="270" y="166" text-anchor="middle" font-size="21">1:4–13</text>
+  <text class="tab" x="270" y="192" text-anchor="middle" font-size="21">AS INHERITED</text>
+  <text class="lbl" x="880" y="166" text-anchor="middle" font-size="21">1:14–18</text>
+  <text class="tab" x="880" y="192" text-anchor="middle" font-size="21">THE ARC COMPLETED</text>
+  <text class="lbl" x="1430" y="166" text-anchor="end" font-size="21">the Gospel</text>
+  <text class="tab" x="1430" y="192" text-anchor="end" font-size="21">BEYOND THE PROLOGUE</text>
+
+  <!-- the Prologue's edge, after v. 18 -->
+  <path class="edge" d="M1228,244 L1228,630"/>
+
+  <!-- ================= the frame's return: v. 18 to the arc's beginning ================= -->
+  <path class="ret" d="M1140,445 C 1300,205 20,195 55,680"/>
+  <text class="lbl" x="640" y="262" text-anchor="middle" font-size="21">v. 18 returns to v. 1 — the arc closes on its beginning</text>
+
+  <!-- ================= the one-life arc ================= -->
+  <path class="arci" d="M55,680 C 85,660 110,644 140,636 C 170,628 195,608 225,596 C 255,584 285,570 315,560 C 345,550 375,538 405,530 C 435,522 465,513 495,507 C 520,502 540,497 560,493"/>
+  <path class="arc" d="M560,493 C 580,489 600,484 620,480 C 680,468 730,452 775,445 L 1140,445"/>
+  <!-- the hour: dashed and dimmed beyond the Prologue's edge -->
+  <path class="arcP" d="M1140,445 C 1235,448 1300,520 1328,585"/>
+
+  <!-- ===== the first two movements, as inherited (dim, English only) ===== -->
+  <circle class="noded" cx="55" cy="680" r="8"/>
+  <text class="lbl" x="34" y="726" font-size="21">the life <tspan class="it">in</tspan> the Word</text>
+  <text class="lbl" x="34" y="753" font-size="21">creation · v. 4a</text>
+  <circle class="noded" cx="140" cy="636" r="6"/>
+  <text class="lbl" x="168" y="558" text-anchor="middle" font-size="21">the light <tspan class="it">of</tspan> men</text>
+  <text class="lbl" x="168" y="585" text-anchor="middle" font-size="21">v. 4b</text>
+  <circle class="noded" cx="225" cy="596" r="6"/>
+  <text class="lbl" x="245" y="646" text-anchor="middle" font-size="21">shining in</text>
+  <text class="lbl" x="245" y="673" text-anchor="middle" font-size="21">the darkness · v. 5</text>
+  <circle class="noded" cx="315" cy="560" r="6"/>
+  <text class="lbl" x="315" y="483" text-anchor="middle" font-size="21">the true light,</text>
+  <text class="lbl" x="315" y="510" text-anchor="middle" font-size="21">coming · v. 9</text>
+  <circle class="noded" cx="405" cy="530" r="6"/>
+  <text class="lbl" x="420" y="580" text-anchor="middle" font-size="21">refused and</text>
+  <text class="lbl" x="420" y="607" text-anchor="middle" font-size="21">received · vv. 10–12</text>
+  <circle class="noded" cx="495" cy="507" r="6"/>
+  <text class="lbl" x="495" y="433" text-anchor="middle" font-size="21">the begetting</text>
+  <text class="lbl" x="495" y="460" text-anchor="middle" font-size="21">v. 13</text>
+
+  <!-- ===== this movement ===== -->
+  <!-- v. 14a: the arrival, the terminus's condition (below) -->
+  <circle class="node" cx="620" cy="480" r="9"/>
+  <text class="gk"  x="625" y="530" text-anchor="middle" font-size="24">σὰρξ ἐγένετο</text>
+  <text class="ink" x="625" y="558" text-anchor="middle" font-size="21">the Word became flesh —</text>
+  <text class="lbl" x="625" y="585" text-anchor="middle" font-size="21">its condition · v. 14</text>
+  <!-- v. 14: the Prologue's terminus, drawn solid (above) -->
+  <circle class="node"  cx="775" cy="445" r="11"/>
+  <circle class="tring" cx="775" cy="445" r="19"/>
+  <text class="glab" x="775" y="322" text-anchor="middle" font-size="21">the Prologue’s terminus</text>
+  <text class="gk"   x="775" y="352" text-anchor="middle" font-size="24">ἐθεασάμεθα</text>
+  <text class="gk"   x="775" y="380" text-anchor="middle" font-size="24">τὴν δόξαν αὐτοῦ</text>
+  <text class="ink"  x="775" y="408" text-anchor="middle" font-size="21">we beheld his glory · v. 14</text>
+  <!-- v. 15: the witness (below) -->
+  <circle class="node" cx="890" cy="445" r="7"/>
+  <text class="gk"  x="890" y="495" text-anchor="middle" font-size="24">μαρτυρεῖ</text>
+  <text class="ink" x="890" y="523" text-anchor="middle" font-size="21">the witness, carrying it</text>
+  <text class="ink" x="890" y="550" text-anchor="middle" font-size="21">into the reader’s day</text>
+  <text class="lbl" x="890" y="577" text-anchor="middle" font-size="21">v. 15</text>
+  <!-- vv. 16–17: the receiving (above) -->
+  <circle class="node" cx="1000" cy="445" r="7"/>
+  <text class="gk"  x="990" y="360" text-anchor="middle" font-size="24">χάριν ἀντὶ χάριτος</text>
+  <text class="ink" x="990" y="388" text-anchor="middle" font-size="21">grace in place of grace</text>
+  <text class="lbl" x="990" y="415" text-anchor="middle" font-size="21">vv. 16–17</text>
+  <!-- v. 18: the completion (below) -->
+  <circle class="node" cx="1140" cy="445" r="9"/>
+  <text class="gk"  x="1095" y="495" text-anchor="middle" font-size="24">ἐκεῖνος ἐξηγήσατο</text>
+  <text class="ink" x="1095" y="523" text-anchor="middle" font-size="21">the Son has made</text>
+  <text class="ink" x="1095" y="550" text-anchor="middle" font-size="21">God known · v. 18</text>
+  <text class="glab" x="1095" y="577" text-anchor="middle" font-size="21">its completion</text>
+
+  <!-- ===== beyond the Prologue: the Gospel's terminus ===== -->
+  <circle class="hring" cx="1338" cy="600" r="16"/>
+  <text class="lbl"  x="1338" y="648" text-anchor="middle" font-size="21">the hour</text>
+  <text class="lbl"  x="1338" y="675" text-anchor="middle" font-size="21">the Gospel’s terminus</text>
+  <text class="note" x="1338" y="702" text-anchor="middle" font-size="21">beyond the</text>
+  <text class="note" x="1338" y="729" text-anchor="middle" font-size="21">Prologue’s edge</text>
+
+  <!-- ================= the gathering ================= -->
+  <path class="tick" d="M620,636 L620,644 L1140,644 L1140,636"/>
+  <text class="head" x="880" y="680" text-anchor="middle" font-size="21">THE FOUR GATHERED INTO THE ONE ARC</text>
+  <text class="note" x="880" y="710" text-anchor="middle" font-size="21">the Word became flesh · the glory beheld · grace in place of grace · God made known</text>
+
+  <!-- ================= synthesis ================= -->
+  <text class="desc" x="720" y="820" text-anchor="middle" font-size="22">The Word who was — beheld, received, and making God known: the arc closed on its beginning, its fullness at the hour.</text>
+</svg>
