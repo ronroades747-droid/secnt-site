@@ -2,7 +2,7 @@
 title: "The Light Shines in the Darkness"
 description: "John 1:4–5 — the close of the Prologue’s first movement: the life in the Word, the light of men, the light shining in the darkness, and the darkness’s failure to overcome it."
 date: 2026-07-21
-revised: 2026-08-29
+revised: 2026-11-07
 book: john
 chapter: 1
 passageRef: "1:4–5"
@@ -55,7 +55,7 @@ The exegesis treats the unit on its own terms, permitting forward glances only w
 
 The theological implications engage touchpoints beyond the Gospel only where they *substantively illuminate* the unit's claims, not where they merely associate thematically. Genesis 1:1–5 is foundational rather than optional — the creation of light and its separation from darkness, taken up christologically, conditioning the whole movement. Genesis 1:26–27, the image of God, grounds the sense in which the light is "of men" in the possessive as well as the objective register — humanity constituted to receive the light the divine life is. And Psalm 36:9, "in your light we see light," supplies the Old Testament's own life-and-light collocation. Beyond these the theological work resists expansion; the unit's theology is deep at a few points rather than diffuse across many, and cross-canonical material enters only after the exegesis within John is done.
 
-The Greek reception of the Prologue is load-bearing for the project's distinctive contribution. Gregory of Nyssa read John 1:1, 1:4–5, 1:9, 1:14, and 1:18 as one connected sequence of Word, life, light, and only-begotten — early evidence that the Prologue was received as a connected whole — and at verse 5 he read the singular aorist ἔλαμψε(ν) against the φαίνει of all New Testament manuscripts.[^nyssen] This bears on how the unit's architecture was received, not on the working text, which stands. Here the commentary's supersession principle operates: the editor's own collation of the Nyssen text is engaged as primary-text work, taking precedence — at the loci where it is original — over the published secondary treatment of the same witness. Origen's deliberate life-then-light ordering and the fork in the early reception of κατέλαβεν are engaged at the clause level through Heine's edition and the Ancient Christian Commentary.[^origen]
+The Greek reception of the Prologue is load-bearing for the project's distinctive contribution. Gregory of Nyssa read John 1:1, 1:4–5, 1:9, 1:14, and 1:18 as one connected sequence of Word, life, and light, closing on 1:18's "in the bosom of the Father" — early evidence that the Prologue was received as a connected whole — and at verse 5 he read the singular aorist ἔλαμψε(ν) against the φαίνει of all New Testament manuscripts.[^nyssen] This bears on how the unit's architecture was received, not on the working text, which stands. Here the commentary's supersession principle operates: the editor's own collation of the Nyssen text is engaged as primary-text work, taking precedence — at the loci where it is original — over the published secondary treatment of the same witness. Origen's deliberate life-then-light ordering and the fork in the early reception of κατέλαβεν are engaged at the clause level through Heine's edition and the Ancient Christian Commentary.[^origen]
 
 This commentary is a permanent scholarly artifact, and it is held open to revision as the Prologue-wide work is completed. Its architectural claims in particular are held provisionally and are expected to strengthen as the later engagement with 1:14 and 1:15–18 fills in the Prologue's whole shape. The discipline requires no ongoing discussion in the text; it is simply the frame under which the commentary is written and refined.
 
@@ -91,7 +91,7 @@ Four disciplines govern the composition. The first is *final-form composition*: 
 
 [^forward]: Carson, *John*, pp. 118–126, on the four forward developments: 5:26 (the Son granted to have life in himself), 8:12 (the light of the world), 3:19 (the light come into the world), 12:35 (walk while you have the light).
 
-[^nyssen]: Ronald E. Roades, "The Text of the Gospel of John in the Writings of Gregory of Nyssa" (MA thesis, Wheaton College, 1974), p. 18 — the connected Word/life/light/only-begotten sequence in the adaptation-chains at *Contra Eunomium* 3.8.40 (GNO 2.253.25) and 3.6.7 (GNO 2.188.7), and the singular aorist ἔλαμψε(ν) at verse 5. Primary-text patristic engagement.
+[^nyssen]: Ronald E. Roades, "The Text of the Gospel of John in the Writings of Gregory of Nyssa" (MA thesis, Wheaton College, 1974), pp. 16, 18 — the connected Word/life/light sequence, closing on 1:18's "in the bosom of the Father," in the adaptation-chains at *Contra Eunomium* 3.8.40 (GNO 2.253.25) and 3.6.7 (GNO 2.188.7), and the singular aorist ἔλαμψε(ν) at verse 5. Primary-text patristic engagement.
 
 [^origen]: Origen, *Commentary on the Gospel according to John*, trans. Ronald E. Heine (Fathers of the Church 80, 89; Catholic University of America Press, 1989, 1993), on the deliberate life-then-light ordering; Joel C. Elowsky, ed., *John 1–10* (Ancient Christian Commentary on Scripture; IVP, 2006), pp. 26–28, on the early reception of κατέλαβεν. Clause-reception register.
 
