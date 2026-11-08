@@ -1,0 +1,72 @@
+<svg viewBox="0 0 1440 780" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="fpfTitle fpfDesc" preserveAspectRatio="xMidYMid meet">
+  <title id="fpfTitle">The Foyer's inner pair from its far end: the light of John 1:4 and the glory of John 1:14 as one reality, the pairing held provisionally.</title>
+  <desc id="fpfDesc">The Foyer's inner pair seen from its far end. Verse 4, the life that was the light of men, and v. 14, the glory beheld in the flesh, are joined as one reality: the glory beheld is the life-and-light now manifest. A matching mark stands at the witness after each pole — vv. 6–8 after v. 4, v. 15 after v. 14. The second movement, vv. 6–13, is drawn as what the pair encloses. The pair's bracket line is drawn dashed and dimmed throughout, as a pairing held provisionally.</desc>
+
+  <style>
+    /* --- family theming interface: light page renders from in-file fallbacks;
+           dark slide renders when the host sets color / --color-gold / --color-meta / --color-goldtext --- */
+    .gk     { font-family:'SBL BibLit','Cardo','Gentium Plus','Charis SIL','Source Serif 4',Georgia,serif; fill:currentColor; }
+    .gkd    { font-family:'SBL BibLit','Cardo','Gentium Plus','Charis SIL','Source Serif 4',Georgia,serif; fill:var(--color-meta,#6b6b6b); }
+    .gkgold { font-family:'SBL BibLit','Cardo','Gentium Plus','Charis SIL','Source Serif 4',Georgia,serif; fill:var(--color-goldtext,#8a6608); }
+    .ink    { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; }
+    .desc   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:currentColor; font-style:italic; }
+    .lbl    { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); }
+    .note   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-meta,#6b6b6b); font-style:italic; }
+    .glab   { font-family:'Source Serif 4','EB Garamond',Georgia,'Times New Roman',serif; fill:var(--color-goldtext,#8a6608); font-style:italic; }
+
+    .panel { fill:none; stroke:currentColor; stroke-width:1.6; }
+    .arcP  { stroke:var(--color-gold,#b8860b); stroke-width:2.6; fill:none; stroke-linecap:round; stroke-dasharray:7 6; opacity:0.6; }
+    .node  { fill:var(--color-gold,#b8860b); }
+    .pring { fill:none; stroke:var(--color-gold,#b8860b); stroke-width:2.4; opacity:0.6; }
+    .conn  { stroke:var(--color-meta,#6b6b6b); stroke-width:1.2; fill:none; }
+    .wit   { fill:currentColor; }
+  </style>
+
+  <!-- ================= family title block ================= -->
+  <text class="ink" x="720" y="50" text-anchor="middle" font-size="34" letter-spacing="0.5">The Foyer Pole</text>
+  <text class="lbl" x="720" y="82" text-anchor="middle" font-size="22">John 1:14 · the glory beheld in the flesh, the light of the beginning now manifest</text>
+
+  <!-- ================= crown: the content datum, one reality (solid type) ================= -->
+  <text class="gkgold" x="720" y="160" text-anchor="middle" font-size="34">φῶς <tspan class="lbl" font-size="28">↔</tspan> δόξα</text>
+  <text class="lbl" x="720" y="192" text-anchor="middle" font-size="22">one reality · the glory beheld is the light of the beginning, now manifest</text>
+  <line class="conn" x1="720" y1="204" x2="720" y2="228"/>
+
+  <!-- ================= the bracket: the pair at its provisional force, dashed and dimmed throughout ================= -->
+  <path class="arcP" d="M260 500 C420 430 600 241 720 236 C840 241 1020 430 1180 500"/>
+  <circle class="node" cx="720" cy="236" r="5"/>
+  <circle class="pring" cx="260"  cy="500" r="8"/>
+  <circle class="pring" cx="1180" cy="500" r="10"/>
+  <text class="note" x="720" y="390" text-anchor="middle" font-size="21">held open · the pairing seen now from its far end</text>
+
+  <!-- ================= the enclosed movement ================= -->
+  <rect class="panel" x="420" y="450" width="600" height="120" rx="4"/>
+  <text class="lbl"  x="760" y="492" text-anchor="middle" font-size="25">1:6–13</text>
+  <text class="desc" x="760" y="522" text-anchor="middle" font-size="21">The Word coming as light</text>
+  <text class="note" x="760" y="550" text-anchor="middle" font-size="21">what the pair encloses</text>
+
+  <!-- ================= the placement datum: one matching mark at the witness after each pole ================= -->
+  <path class="wit" d="M490 501 L499 510 L490 519 L481 510 Z"/>
+  <text class="lbl" x="490" y="486" text-anchor="middle" font-size="21">the witness</text>
+  <text class="lbl" x="490" y="544" text-anchor="middle" font-size="21">vv. 6–8</text>
+
+  <path class="wit" d="M1310 501 L1319 510 L1310 519 L1301 510 Z"/>
+  <text class="lbl" x="1310" y="486" text-anchor="middle" font-size="21">the witness</text>
+  <text class="lbl" x="1310" y="544" text-anchor="middle" font-size="21">v. 15</text>
+
+  <!-- ================= near pole, v. 4: the inherited end, dim ================= -->
+  <text class="lbl"  x="260" y="546" text-anchor="middle" font-size="21">v. 4 · the near pole</text>
+  <text class="gkd"  x="260" y="584" text-anchor="middle" font-size="24">ἡ ζωὴ ἦν τὸ <tspan class="gkgold">φῶς</tspan> τῶν ἀνθρώπων</text>
+  <text class="note" x="260" y="614" text-anchor="middle" font-size="21">the life that was the light of men</text>
+
+  <!-- ================= far pole, v. 14: this figure's home end ================= -->
+  <text class="lbl"  x="1180" y="568" text-anchor="middle" font-size="21">v. 14 · the far pole</text>
+  <text class="glab" x="1180" y="594" text-anchor="middle" font-size="21">this unit</text>
+  <text class="gk"   x="1180" y="630" text-anchor="middle" font-size="26">ὁ λόγος σὰρξ ἐγένετο</text>
+  <text class="gk"   x="1180" y="664" text-anchor="middle" font-size="26">ἐθεασάμεθα τὴν <tspan class="gkgold">δόξαν</tspan> αὐτοῦ</text>
+  <text class="gk"   x="1180" y="698" text-anchor="middle" font-size="26">δόξαν ὡς μονογενοῦς</text>
+  <text class="note" x="1180" y="728" text-anchor="middle" font-size="21">the Word made flesh, whose glory is beheld</text>
+
+  <!-- ================= synthesis ================= -->
+  <text class="desc" x="720" y="764" text-anchor="middle" font-size="22">The light of the beginning, beheld as glory in the flesh: one reality, the pairing held open.</text>
+</svg>
