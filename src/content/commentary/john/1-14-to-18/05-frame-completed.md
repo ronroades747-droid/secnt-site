@@ -2,6 +2,7 @@
 title: "Architecture: The Frame Completed"
 description: "The Prologue’s frame closing in v. 18: the brackets that open at vv. 1 and 3 reaching their far pole, where the Prologue ends with God."
 date: 2026-11-06
+revised: 2026-11-08
 book: john
 chapter: 1
 passageRef: "1:14–18"
@@ -65,7 +66,7 @@ The frame has no centre and no fold. The Prologue's last verse answers its first
 
 [^lincoln]: Andrew T. Lincoln, *The Gospel according to Saint John* (Black's New Testament Commentaries 4; London: Continuum, 2005), p. 108. The sentence goes on: "the Word as divine is God's self-expression, the form in which God makes Godself known." Lincoln's "therefore" rests on his argument just before it, for the reading μονογενὴς θεός as matching the θεός of verse 1.
 
-[^three]: Rudolf Bultmann, *The Gospel of John: A Commentary*, trans. G. R. Beasley-Murray, R. W. N. Hoare, and J. K. Riches (Philadelphia: Westminster, 1971), p. 83: "Thus the argument has come full circle"; the circle returns to the Word who "was in the beginning with God." Craig S. Keener, *The Gospel of John: A Commentary* (Hendrickson, 2003), p. 426: "The prologue thus culminates in a rehearsal of Jesus' deity, closing an inclusio that began with 1:1c"; Keener's form of the closing is the θεός of the two verses. John F. McHugh, *A Critical and Exegetical Commentary on John 1–4* (International Critical Commentary; London: T&T Clark, 2009), p. 70, where the phrase of verse 18 is "probably intended to answer to the words ἐν ἀρχῇ ἦν ὁ λόγος πρὸς τὸν θεόν"; and pp. 71–72, where on his preferred rendering of verse 18 he finds it "thus not only giving an inclusio with πρὸς τὸν θεόν in 1:1b".
+[^three]: Rudolf Bultmann, *The Gospel of John: A Commentary*, trans. G. R. Beasley-Murray, R. W. N. Hoare, and J. K. Riches (Philadelphia: Westminster, 1971), p. 83: "Thus the argument has come full circle"; the circle returns to the Word who "was in the beginning with God." Craig S. Keener, *The Gospel of John: A Commentary*, 2 vols. (Grand Rapids: Baker Academic, 2012; first published Hendrickson, 2003), p. 426: "The prologue thus culminates in a rehearsal of Jesus' deity, closing an inclusio that began with 1:1c"; Keener's form of the closing is the θεός of the two verses. John F. McHugh, *A Critical and Exegetical Commentary on John 1–4* (International Critical Commentary; London: T&T Clark, 2009), p. 70, where the phrase of verse 18 is "probably intended to answer to the words ἐν ἀρχῇ ἦν ὁ λόγος πρὸς τὸν θεόν"; and pp. 71–72, where on his preferred rendering of verse 18 he finds it "thus not only giving an inclusio with πρὸς τὸν θεόν in 1:1b".
 
 [^harris]: Murray J. Harris, *Jesus as God: The New Testament Use of Theos in Reference to Jesus* (Grand Rapids: Baker, 1992), p. 79. The sentence continues: "and attributing deity (θεός) to the Son (cf. μονογενής), as earlier it had been predicated of the Logos (v. 1)." His note on the two designations: "In v. 1 θεός is a direct designation of the Logos, but in v. 14 only inferentially is the Logos designated μονογενής."
 

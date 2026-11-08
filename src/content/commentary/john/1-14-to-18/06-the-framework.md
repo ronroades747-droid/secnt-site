@@ -2,6 +2,7 @@
 title: "Architecture: The Framework — A Linear Movement Carrying Concentric Figures"
 description: "The Prologue as three movements in progression, the third returning to the first: real concentric figures carried by a line, not a whole folded around a centre."
 date: 2026-11-07
+revised: 2026-11-08
 book: john
 chapter: 1
 passageRef: "1:14–18"
@@ -66,7 +67,7 @@ The figures are real, and the whole is not folded around a centre. One more pair
 
 [^lund]: John F. McHugh, *A Critical and Exegetical Commentary on John 1–4* (International Critical Commentary; London: T&T Clark, 2009), p. 85: "Lund's attempt to discern chiastic structures in Jn 1:1–18 was over-ambitious: it is too elaborate to be convincing, and requires the omission of vv. 6–8 and 15 to succeed." McHugh reports, after Culpepper, that the idea was first advanced by Lund in 1931. Rudolf Bultmann, *The Gospel of John: A Commentary*, trans. G. R. Beasley-Murray, R. W. N. Hoare, and J. K. Riches (Philadelphia: Westminster, 1971), p. 15 n. 1, likewise judges Lund's attempt unconvincing.
 
-[^boismard]: Boismard's scheme is engaged through Raymond E. Brown, *The Gospel according to John (I–XII)* (Anchor Bible 29; Garden City: Doubleday, 1966), p. 23; McHugh, p. 86, who sets it out in full; and Craig S. Keener, *The Gospel of John: A Commentary* (Hendrickson, 2003), p. 335.
+[^boismard]: Boismard's scheme is engaged through Raymond E. Brown, *The Gospel according to John (I–XII)* (Anchor Bible 29; Garden City: Doubleday, 1966), p. 23; McHugh, p. 86, who sets it out in full; and Craig S. Keener, *The Gospel of John: A Commentary*, 2 vols. (Grand Rapids: Baker Academic, 2012; first published Hendrickson, 2003), p. 335.
 
 [^culpepper]: R. Alan Culpepper, "The Pivot of John's Prologue," *New Testament Studies* 27 (1980–81): 1–31, engaged through D. A. Carson, *The Gospel according to John* (Pillar New Testament Commentary; Grand Rapids: Eerdmans, 1991), p. 113: "Of the large number of proposals advanced by various writers, one of the most believable (though still not entirely free of difficulty) is the large chiasm put forward by Culpepper." Carson sets out its pairs as holding "at certain levels": 1:1–2 with 1:18, 1:3 with 1:17, 1:4–5 with 1:16, 1:6–8 with 1:15, 1:9–10 with 1:14, 1:11 with 1:13, and 1:12a with 1:12c, "making 1:12b ('he gave them the right to become children of God') the 'pivot' on which the chiasm turns, the centre of attention." Köstenberger reports the proposal and its pivot at 1:12, naming Culpepper as its chief exponent, but does not list its pairs (vol. 1, p. 56 n. 42).
 

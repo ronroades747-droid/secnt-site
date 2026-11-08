@@ -2,7 +2,7 @@
 title: "The Word Became Flesh"
 description: "The Prologue’s third and last movement. The Word who was with God became flesh and dwelt among us, and we beheld his glory, full of grace and truth. John bears witness still: the one who came after him ranks before him, because he was before him. From his fullness we have all received grace in place of grace, for the law was given through Moses, and the grace and the truth came to be through Jesus Christ. No one has ever seen God. The only Son, himself God, who is in the bosom of the Father, has made him known. One composed movement in three parts — the confession (1:14), the witness (1:15), the ground and the declaration (1:16–18) — told in retrospect from a completed life, and closing the Prologue’s frame where it began, with God."
 date: 2026-11-03
-revised: 2026-11-07
+revised: 2026-11-08
 book: john
 chapter: 1
 passageRef: "1:14–18"
@@ -240,7 +240,7 @@ Above all, the governing discrimination stated at the outset holds throughout: t
 
 [^brown-chiasm]: Raymond E. Brown, *The Gospel according to John (I–XII)* (Anchor Bible 29; Doubleday, 1966), p. 23 — on Boismard's scheme, all three quotations.
 
-[^transferral]: Craig S. Keener, *The Gospel of John: A Commentary* (Hendrickson, 2003), p. 405 — "The narrative's logic implies a transferral": the Word that had been with God became flesh so that others could be born not of flesh but of God (1:13; cf. 3:6). Brown's frame from 7:39 is engaged at the treatment of verse 14a.
+[^transferral]: Craig S. Keener, *The Gospel of John: A Commentary*, 2 vols. (Grand Rapids: Baker Academic, 2012; first published Hendrickson, 2003), p. 405 — "The narrative's logic implies a transferral": the Word that had been with God became flesh so that others could be born not of flesh but of God (1:13; cf. 3:6). Brown's frame from 7:39 is engaged at the treatment of verse 14a.
 
 [^endpoint]: Rudolf Schnackenburg, *The Gospel according to St John*, vol. 1, trans. Kevin Smyth (Herder and Herder, 1968), Excursus IV, "The Johannine Signs," p. 524 — the signs reveal "the glory of the only-begotten of the Father in the time of his incarnation (1:14)," which is "not to deny that his saving power of bestowing the divine life on believers … only comes into play effectively after the hour of his 'glorification'"; C. H. Dodd, *The Interpretation of the Fourth Gospel* (Cambridge, 1953), pp. 207–208 — the self-devotion to death "the conclusive manifestation of the divine glory," and the light's "final manifestation … in His death."
 

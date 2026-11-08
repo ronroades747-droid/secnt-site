@@ -2,6 +2,7 @@
 title: "Exegesis: Ἦν τὸ φῶς τὸ ἀληθινόν — The True Light, Coming into the World"
 description: "John 1:9: the true light, coming into the world — the light that gives light to every human being."
 date: 2026-09-23
+revised: 2026-11-08
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -162,7 +163,7 @@ The verse thus lands as one teachable claim. The Word was the true light — the
 
 [^target]: Barth, *Witness to the Word*, p. 61; Bultmann, *John*, p. 53, granting with Barrett and Dupont that "the contrast to the φῶς ἀλ. can be seen in the Baptist"; Schnackenburg, *John*, vol. 1, p. 254, grounding the sense in "the precautionary remark of v. 8." Barth excludes John from the contrast; Bultmann and Schnackenburg include him within a wider field. Both moves deny that John is the target, which is the point at issue.
 
-[^exclusivity]: Brown, *John*, p. 9, and Appendix I, p. 501 — "in 1:9 Jesus is the real light while John the Baptist is not"; Köstenberger, *John 1–21*, vol. 1, pp. 61–62; Craig S. Keener, *The Gospel of John: A Commentary* (Hendrickson, 2003), pp. 393–394.
+[^exclusivity]: Brown, *John*, p. 9, and Appendix I, p. 501 — "in 1:9 Jesus is the real light while John the Baptist is not"; Köstenberger, *John 1–21*, vol. 1, pp. 61–62; Craig S. Keener, *The Gospel of John: A Commentary*, 2 vols. (Grand Rapids: Baker Academic, 2012; first published Hendrickson, 2003), pp. 393–394.
 
 [^tlevi]: *Testament of Levi* 14:4. The English is this commentary's rendering of the Greek Schnackenburg prints, τὸ φῶς τοῦ νόμου τὸ δοθὲν εἰς φωτισμὸν παντὸς ἀνθρώπου (*John*, vol. 1, p. 253 n. 113); the same Greek is at Bultmann, *John*, p. 53 n. 4. English renderings are at Andrew T. Lincoln, *The Gospel according to Saint John* (Black's New Testament Commentaries; Continuum, 2005), p. 101, following the variant that reads "to you," and at Brown, *John*, Appendix II, p. 523, who cautions: "There are Christian interpolations in Testament of Levi, however."
 
