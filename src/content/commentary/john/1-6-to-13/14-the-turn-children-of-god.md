@@ -2,6 +2,7 @@
 title: "Exegesis: ὅσοι δὲ ἔλαβον αὐτόν — The Turn: A Right to Become Children of God"
 description: "John 1:12: “but as many as received him” — the turn, and the right given to become children of God."
 date: 2026-09-29
+revised: 2026-11-08
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -156,7 +157,7 @@ It is the seed of the Gospel's "he who receives me receives him who sent me" (13
 
 [^harris-numbers]: Harris, *John*, p. 30.
 
-[^remnant]: D. A. Carson, *The Gospel according to John* (Pillar New Testament Commentary; Eerdmans, 1991), p. 125; C. H. Dodd, *The Interpretation of the Fourth Gospel* (Cambridge University Press, 1953), p. 270; Craig S. Keener, *The Gospel of John: A Commentary* (Hendrickson, 2003), pp. 398–399, where the second of two construals of δέ he leaves open on p. 399 would put the focus on the Jewish remnant; Harris, *John*, p. 30 — the aorist of verse 11 "summing up in a comprehensive glance the stark failure of the majority of Jews."
+[^remnant]: D. A. Carson, *The Gospel according to John* (Pillar New Testament Commentary; Eerdmans, 1991), p. 125; C. H. Dodd, *The Interpretation of the Fourth Gospel* (Cambridge University Press, 1953), p. 270; Craig S. Keener, *The Gospel of John: A Commentary*, 2 vols. (Grand Rapids: Baker Academic, 2012; first published Hendrickson, 2003), pp. 398–399, where the second of two construals of δέ he leaves open on p. 399 would put the focus on the Jewish remnant; Harris, *John*, p. 30 — the aorist of verse 11 "summing up in a comprehensive glance the stark failure of the majority of Jews."
 
 [^westcott-men]: B. F. Westcott, *The Gospel according to St John* (Murray, 1882), p. 8.
 

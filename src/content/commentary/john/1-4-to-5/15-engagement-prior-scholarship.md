@@ -2,6 +2,7 @@
 title: "Engagement with Prior Scholarship: The Scholarly Record"
 description: "The substantive engagement with the literature that shaped the cycle’s resolutions."
 date: 2026-08-27
+revised: 2026-11-08
 book: john
 chapter: 1
 passageRef: "1:4–5"
@@ -98,7 +99,7 @@ Harris, Murray J. *John*. Exegetical Guide to the Greek New Testament. Nashville
 
 Houghton, H. A. G. *A Textual Commentary on the Greek New Testament: A Companion to the Sixth Edition of the United Bible Societies' Greek New Testament*. Stuttgart: Deutsche Bibelgesellschaft, 2025.
 
-Keener, Craig S. *The Gospel of John: A Commentary*. 2 vols. Grand Rapids: Baker Academic, 2003.
+Keener, Craig S. *The Gospel of John: A Commentary*. 2 vols. Grand Rapids: Baker Academic, 2012. First published Hendrickson, 2003.
 
 Koester, Craig R. *Symbolism in the Fourth Gospel: Meaning, Mystery, Community*. 2nd ed. Minneapolis: Fortress, 2003.
 

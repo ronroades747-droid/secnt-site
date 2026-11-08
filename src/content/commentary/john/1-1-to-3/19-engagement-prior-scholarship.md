@@ -2,6 +2,7 @@
 title: "Engagement with Prior Scholarship: The Scholarly Record"
 description: "The cycle's substantive engagement with the scholarly literature that has shaped its resolutions, with engagement-layer disclosure of the load-bearing modern Tier 1 sources."
 date: 2026-07-15
+revised: 2026-11-08
 book: john
 chapter: 1
 passageRef: "1:1–3"
@@ -100,7 +101,7 @@ Harris, Murray J. *John*. Exegetical Guide to the Greek New Testament. Nashville
 
 Houghton, H. A. G. *A Textual Commentary on the Greek New Testament: A Companion to the Sixth Edition of the United Bible Societies' Greek New Testament*. Stuttgart: Deutsche Bibelgesellschaft, 2025.
 
-Keener, Craig S. *The Gospel of John: A Commentary*. 2 vols. Grand Rapids: Baker Academic, 2012.
+Keener, Craig S. *The Gospel of John: A Commentary*. 2 vols. Grand Rapids: Baker Academic, 2012. First published Hendrickson, 2003.
 
 Köstenberger, Andreas J. *A Theology of John's Gospel and Letters*. Biblical Theology of the New Testament. Grand Rapids: Zondervan Academic, 2009.
 
