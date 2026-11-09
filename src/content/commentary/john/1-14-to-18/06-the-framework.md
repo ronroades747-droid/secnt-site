@@ -2,7 +2,7 @@
 title: "Architecture: The Framework — A Linear Movement Carrying Concentric Figures"
 description: "The Prologue as three movements in progression, the third returning to the first: real concentric figures carried by a line, not a whole folded around a centre."
 date: 2026-11-07
-revised: 2026-11-08
+revised: 2026-11-09
 book: john
 chapter: 1
 passageRef: "1:14–18"
@@ -26,7 +26,7 @@ The previous section closed the Prologue's frame and ended on a question: whethe
 
 There are two ways to read the shape of John 1:1–18. On the first, the Prologue moves forward: from the Word in the beginning, to the Word coming as light, to the Word's glory in the flesh, and the last movement comes back to the first. On the second, the Prologue is a chiasm. Its members match from both ends inward, the first with the last, the second with the second-to-last, and so on, until they meet at a centre on which the whole is folded.
 
-The chiastic reading has a long history. McHugh traces it to N. W. Lund, whose attempt he judges "too elaborate to be convincing".[^lund] M.-É. Boismard's form of it pairs verses 1–2 with 18, 3 with 17, 4–5 with 16, the two passages about John the Baptist with each other, and 9–11 with 14, leaving verses 12–13 at the centre.[^boismard] The best-known form is R. Alan Culpepper's, which works toward the middle through seven matching pairs and makes verse 12b "the 'pivot' on which the chiasm turns, the centre of attention", in Carson's report of it.[^culpepper] Other forms centre the fold on verse 14. None of these proposals has been read here in its own publication. Each is engaged through the commentators who report it and answer it.
+The chiastic reading has a long history. McHugh, after Culpepper, traces it to N. W. Lund in 1931. Lund set verses 6–8 and 15 aside as "extraneous material" and paired verses 1–2 with 18, 3–5 and 9–10b with 16–17, and 10c–12 with 14, around verse 13 at the centre. McHugh judges the attempt "too elaborate to be convincing".[^lund] M.-É. Boismard's form of it pairs verses 1–2 with 18, 3 with 17, 4–5 with 16, the two passages about John the Baptist with each other, and 9–11 with 14, leaving verses 12–13 at the centre.[^boismard] The best-known form is R. Alan Culpepper's, which works toward the middle through seven matching pairs and makes verse 12b "the 'pivot' on which the chiasm turns, the centre of attention", in Carson's report of it.[^culpepper] Other forms centre the fold on verse 14. Lund's proposal has been read here in its own publication. The others are engaged through the commentators who report them and answer them.
 
 ## The chiasm of the whole declined
 
@@ -65,7 +65,7 @@ So no centre is left for the Prologue to fold around, at verse 14, at verse 12b,
 
 The figures are real, and the whole is not folded around a centre. One more pair remains to be weighed: the light of verse 4 and the glory of verse 14. That is the next section's question.
 
-[^lund]: John F. McHugh, *A Critical and Exegetical Commentary on John 1–4* (International Critical Commentary; London: T&T Clark, 2009), p. 85: "Lund's attempt to discern chiastic structures in Jn 1:1–18 was over-ambitious: it is too elaborate to be convincing, and requires the omission of vv. 6–8 and 15 to succeed." McHugh reports, after Culpepper, that the idea was first advanced by Lund in 1931. Rudolf Bultmann, *The Gospel of John: A Commentary*, trans. G. R. Beasley-Murray, R. W. N. Hoare, and J. K. Riches (Philadelphia: Westminster, 1971), p. 15 n. 1, likewise judges Lund's attempt unconvincing.
+[^lund]: N. W. Lund, "The Influence of Chiasmus upon the Structure of the Gospels," *Anglican Theological Review* 13 (1931): 27–48; the Prologue at pp. 41–46, the arrangement and its outline at pp. 42–44, and "extraneous material" at pp. 44 and 46. John F. McHugh, *A Critical and Exegetical Commentary on John 1–4* (International Critical Commentary; London: T&T Clark, 2009), p. 85: "Lund's attempt to discern chiastic structures in Jn 1:1–18 was over-ambitious: it is too elaborate to be convincing, and requires the omission of vv. 6–8 and 15 to succeed." McHugh reports, after Culpepper, that the idea was first advanced by Lund in 1931. Rudolf Bultmann, *The Gospel of John: A Commentary*, trans. G. R. Beasley-Murray, R. W. N. Hoare, and J. K. Riches (Philadelphia: Westminster, 1971), p. 15 n. 1, likewise judges Lund's attempt unconvincing.
 
 [^boismard]: Boismard's scheme is engaged through Raymond E. Brown, *The Gospel according to John (I–XII)* (Anchor Bible 29; Garden City: Doubleday, 1966), p. 23; McHugh, p. 86, who sets it out in full; and Craig S. Keener, *The Gospel of John: A Commentary*, 2 vols. (Grand Rapids: Baker Academic, 2012; first published Hendrickson, 2003), p. 335.
 
