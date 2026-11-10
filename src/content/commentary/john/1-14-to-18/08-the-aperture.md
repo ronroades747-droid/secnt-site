@@ -1,7 +1,7 @@
 ---
 title: "Architecture: The Aperture — A Witness Sounding into the Reader’s Day"
 description: "The movement’s one opening onto the reader’s present: the Baptist’s witness at v. 15, still sounding in the reader’s day."
-date: 2026-11-02
+date: 2026-11-10
 book: john
 chapter: 1
 passageRef: "1:14–18"
@@ -11,7 +11,7 @@ verseEnd: 18
 sectionType: framing
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 The previous section ended at the witness that follows verse 14. This section takes that witness on its own. Verse 15 is the one place in the movement where the telling opens onto the reader's present. The question here is what kind of opening it is, how it differs from the movement's other break in time at verse 18, and what the two together might suggest.
