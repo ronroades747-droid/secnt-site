@@ -2,7 +2,7 @@
 title: "The Word Became Flesh"
 description: "The Prologue’s third and last movement. The Word who was with God became flesh and dwelt among us, and we beheld his glory, full of grace and truth. John bears witness still: the one who came after him ranks before him, because he was before him. From his fullness we have all received grace in place of grace, for the law was given through Moses, and the grace and the truth came to be through Jesus Christ. No one has ever seen God. The only Son, himself God, who is in the bosom of the Father, has made him known. One composed movement in three parts — the confession (1:14), the witness (1:15), the ground and the declaration (1:16–18) — told in retrospect from a completed life, and closing the Prologue’s frame where it began, with God."
 date: 2026-11-03
-revised: 2026-11-08
+revised: 2026-11-11
 book: john
 chapter: 1
 passageRef: "1:14–18"
