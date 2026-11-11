@@ -2,7 +2,7 @@
 title: "Architecture: The Framework — A Linear Movement Carrying Concentric Figures"
 description: "The Prologue as three movements in progression, the third returning to the first: real concentric figures carried by a line, not a whole folded around a centre."
 date: 2026-11-07
-revised: 2026-11-09
+revised: 2026-11-11
 book: john
 chapter: 1
 passageRef: "1:14–18"
@@ -44,11 +44,11 @@ The positive framework is held with high confidence. Ridderbos supplies its crit
 
 Carson's sentence, whole: "Whether or not John intended his readers to find a chiasm in his Prologue, he clearly expected them to detect a certain progression in his line of thought."[^carson] Köstenberger: "Thus, the storyline seems to progress in linear fashion from 1:1 to 1:14 to 1:18".[^eec-line]
 
-The framework is held below very high confidence for one reason. Its second half, the concentric figures, rests on a narrower base than the decline does: on Ridderbos's pattern of return, and on the frame itself as the previous section set it out.
+The framework is held below very high confidence for one reason. Its second half, the concentric figures, rests on a narrower base than the decline does: on Ridderbos's pattern of return, on Morna Hooker's reading of the Prologue as two parallel sections, each "built to some degree in chiastic form",[^hooker] and on the frame itself as the previous section set it out.
 
 ## What the chiastic tradition saw
 
-What the chiastic tradition saw is received, and what it built on that is not. Brown grants that Boismard's arrangement "is supported by some valid observations (the concluding vs. 18 picks up the theme of the opening vs. 1; and vs. 15 matches vss. 6–8)".[^brown] Those observations are the outer pairs, and both are received. The first is the frame. The chiastic tradition draws it as verses 1–2 with verse 18. It answers to the bracket the commentary settled at the Prologue's opening, verse 1 with verse 18: *the Word was with God*, and *the only Son, himself God, who is in the bosom of the Father*. The second is the two passages about John the Baptist, verses 6–8 and verse 15, set at matching points in the second movement and the third. These are real concentric figures, one inside the other.
+What the chiastic tradition saw is received, and what it built on that is not. Brown grants that Boismard's arrangement "is supported by some valid observations (the concluding vs. 18 picks up the theme of the opening vs. 1; and vs. 15 matches vss. 6–8)".[^brown] Those observations are the outer pairs, and both are received. The first is the frame. The chiastic tradition draws it as verses 1–2 with verse 18. It answers to the bracket the commentary settled at the Prologue's opening, verse 1 with verse 18: *the Word was with God*, and *the only Son, himself God, who is in the bosom of the Father*. The second is the two passages about John the Baptist, verses 6–8 and verse 15, set at matching points in the second movement and the third. Hooker places them "at the turning-points of the two sections", where what has been stated is taken up and developed.[^hooker] These are real concentric figures, one inside the other.
 
 The concentric design of the whole is declined, and with it the inner pairings: verse 3 with verse 17, and verses 4–5 with verse 16. Brown finds those two parallels "highly imaginative".[^brown] The decline of the pairing of verse 3 with verse 17 is not a decline of what [the previous section](/commentary/john/1-14-to-18/05-frame-completed/) received. There, verse 17 was heard to echo verse 3 in a single verb, ἐγένετο, *came to be*, inside the frame. Here what is declined is a composed pair, matched point for point as a member of a chiasm. The two are different figures, and the one does not carry the other.
 
@@ -82,6 +82,8 @@ The figures are real, and the whole is not folded around a centre. One more pair
 [^mchugh]: McHugh, p. 86, of Boismard's scheme: "It is an impressive construction, which cannot be fairly appreciated except by checking the details in the Greek text of the Prologue." At p. 90, closing his survey: "some may find that one of the plans proposed above is of real help in understanding better the thrust of the argument. The fact that the plans differ from one another is not significant." Bultmann, in his treatment of the Prologue, passes no other verdict on a chiasm.
 
 [^ridderbos]: Herman N. Ridderbos, *The Gospel according to John: A Theological Commentary*, trans. John Vriend (Grand Rapids: Eerdmans, 1997), p. 40 n. 71. Where Ridderbos himself uses the word "concentric", he uses it with a hedge, of verses 9–13 taking up the themes of verses 1–5: "One can perhaps speak of a second concentric cycle of thought, in which the categories of the first come back" (pp. 42–43).
+
+[^hooker]: Morna D. Hooker, "John the Baptist and the Johannine Prologue," *New Testament Studies* 16 (1970): 354–58, at pp. 356–57. She divides the Prologue at verse 14 into two parallel sections, each a statement followed by its development, and places the passages about the Baptist at the turning-point of each. Her word "chiastic" is said of each section, not of the whole, and she proposes no centre. Ridderbos cites her for his "two strategic points" (p. 42 n. 77), so her support for the figures is partly behind his rather than beside it.
 
 [^carson]: Carson, *John*, p. 113. He goes on: "This in turn suggests that the two references to John the Baptist (1:6–8, 15) are not accidentally placed or somewhat repetitious."
 
