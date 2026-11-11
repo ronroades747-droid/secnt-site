@@ -1,7 +1,7 @@
 ---
 title: "Exegesis: Καὶ ὁ λόγος σὰρξ ἐγένετο — The Word, Remaining the Word, Became Flesh"
 description: "John 1:14a: the Word became flesh — the Word who was with God, remaining the Word, came to be what he was not."
-date: 2026-11-02
+date: 2026-11-11
 book: john
 chapter: 1
 passageRef: "1:14–18"
@@ -12,7 +12,7 @@ sectionType: exegesis
 tocGroup: "Part one — the confession (1:14)"
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 The architecture of this movement has been read whole, and what it carries has been stated. The exposition begins here, at the sentence that opens the third movement: Καὶ ὁ λόγος σὰρξ ἐγένετο, *and the Word became flesh*. It is the high point within the Prologue, where the Word who was with God becomes flesh. The movement it opens is crowned at verse 18, where the only Son makes the unseen God known.
