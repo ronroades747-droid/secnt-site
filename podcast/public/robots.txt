@@ -1,0 +1,25 @@
+# podcast.secnt.org — robots policy, the same locked OA&M posture as secnt.org:
+# user-action retrieval allowed; AI *training* crawlers blocked.
+# (If Cloudflare's managed robots.txt is switched on for this host, the
+# edge-managed file overrides this one.)
+
+User-agent: *
+Disallow:
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /

@@ -1,0 +1,83 @@
+---
+// The lecture site's page shell. It wears secnt.org's design system — the
+// same global stylesheet, header and footer classes — so the two hosts read
+// as one series, but its head is its own: canonical URLs on
+// podcast.secnt.org, and the feed advertised for podcast apps to discover.
+// No advertising of any kind (Ask §3.1), no audio player (ruling 9), and no
+// analytics script: Cloudflare Web Analytics, if the Editor switches it on
+// for this host, adds its own beacon at the edge.
+import '../../src/styles/global.css';
+import { SITE } from '../../src/lib/site';
+import { PODCAST, podcastUrl } from '../lib/episodes';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description } = Astro.props;
+const canonicalURL = podcastUrl(Astro.url.pathname);
+const fullTitle = title === PODCAST.title ? title : `${title} — ${PODCAST.title}`;
+const here = Astro.url.pathname;
+const year = new Date().getFullYear();
+const nav = [
+  { label: 'Lectures', href: '/' },
+  { label: 'Commentary', href: `${SITE.origin}/commentary/` },
+  { label: 'About', href: `${SITE.origin}/about/` },
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <title>{fullTitle}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="alternate" type="application/rss+xml" title={PODCAST.title} href={podcastUrl('/feed.xml')} />
+    <meta name="author" content={SITE.author} />
+    <meta name="license" content={SITE.licenseName} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={PODCAST.title} />
+    <meta property="og:title" content={title} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:url" content={canonicalURL} />
+  </head>
+  <body>
+    <header class="chrome site-header">
+      <div class="chrome-inner">
+        <a class="wordmark" href="/">{SITE.wordmark}</a>
+        <div class="site-identity">
+          <span class="site-subtitle">{PODCAST.title} · {SITE.name}</span>
+        </div>
+        <nav class="primary-nav" aria-label="Primary">
+          <ul>
+            {nav.map((item) => (
+              <li>
+                <a href={item.href} aria-current={item.href === here ? 'page' : undefined}>{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <hr class="gold-rule" />
+    <main>
+      <slot />
+    </main>
+    <hr class="gold-rule gold-rule--soft" />
+    <footer class="chrome site-footer">
+      <div class="chrome-inner">
+        <div class="citation-block">
+          <a class="canonical" href={canonicalURL}>{canonicalURL}</a>
+        </div>
+        <div class="footer-license">
+          © {year} {SITE.author} · Licensed under
+          <a href={SITE.licenseUrl} rel="license">{SITE.licenseName}</a>
+          · The written commentary: <a href={`${SITE.origin}/`}>secnt.org</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
