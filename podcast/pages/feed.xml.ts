@@ -9,8 +9,8 @@
 // a season and each lecture numbered within it, so apps play the lectures in
 // canonical order rather than newest first.
 //
-// The show's artwork and owner email are held in PODCAST (lib/episodes.ts)
-// and omitted while unset; see the notes there.
+// The show's artwork and owner email are held in PODCAST (lib/episodes.ts);
+// see the notes there on the placeholder cover.
 import type { APIRoute } from 'astro';
 import { SITE } from '../../src/lib/site';
 import {
@@ -33,6 +33,12 @@ const esc = (s: string) =>
 const cdata = (s: string) => `<![CDATA[${s.replace(/]]>/g, ']]]]><![CDATA[>')}]]>`;
 
 export const GET: APIRoute = async () => {
+  if (PODCAST.coverIsPlaceholder) {
+    console.warn(
+      '[podcast] feed carries the PLACEHOLDER cover — for the phone test only; ' +
+        'replace it before submitting to Apple Podcasts or Pocket Casts (Gate 5, ruling 4).'
+    );
+  }
   const { episodes } = await getEpisodes();
   const lengths = await Promise.all(
     episodes.map((e) => mp4Length(e.lecture.data.bunnyVideoId, e.lecture.data.title))
@@ -61,7 +67,10 @@ export const GET: APIRoute = async () => {
       `<p><a href="${esc(url)}">Watch on the lecture site</a></p>`;
     return [
       '    <item>',
-      `      <title>${esc(l.title)}</title>`,
+      // The passage leads every episode title (Gate 5, ruling 6): four
+      // lectures share "Introduction: Framing and Orientation", and an app's
+      // list shows the title alone.
+      `      <title>${esc(`${e.passageLabel} · ${l.title}`)}</title>`,
       `      <link>${esc(url)}</link>`,
       `      <guid isPermaLink="false">${esc(url)}</guid>`,
       `      <pubDate>${l.date.toUTCString()}</pubDate>`,
@@ -89,17 +98,14 @@ export const GET: APIRoute = async () => {
     `    <language>${PODCAST.language}</language>`,
     `    <copyright>${esc(`© ${year} ${SITE.author}. Licensed under ${SITE.licenseName}: ${SITE.licenseUrl}`)}</copyright>`,
     `    <description>${cdata(PODCAST.description)}</description>`,
-    `    <itunes:subtitle>${esc(PODCAST.subtitle)}</itunes:subtitle>`,
     `    <itunes:summary>${cdata(PODCAST.description)}</itunes:summary>`,
     `    <itunes:author>${esc(PODCAST.author)}</itunes:author>`,
     `    <itunes:owner>`,
     `      <itunes:name>${esc(PODCAST.author)}</itunes:name>`,
-    PODCAST.ownerEmail ? `      <itunes:email>${esc(PODCAST.ownerEmail)}</itunes:email>` : null,
+    `      <itunes:email>${esc(PODCAST.ownerEmail)}</itunes:email>`,
     `    </itunes:owner>`,
-    PODCAST.cover ? `    <itunes:image href="${esc(podcastUrl(PODCAST.cover))}"/>` : null,
-    PODCAST.cover
-      ? `    <image><url>${esc(podcastUrl(PODCAST.cover))}</url><title>${esc(PODCAST.title)}</title><link>${esc(showUrl)}</link></image>`
-      : null,
+    `    <itunes:image href="${esc(podcastUrl(PODCAST.cover))}"/>`,
+    `    <image><url>${esc(podcastUrl(PODCAST.cover))}</url><title>${esc(PODCAST.title)}</title><link>${esc(showUrl)}</link></image>`,
     `    <itunes:category text="Religion &amp; Spirituality">`,
     `      <itunes:category text="Christianity"/>`,
     `    </itunes:category>`,

@@ -17,25 +17,25 @@ import { SITE, isVisible, normalizeId } from '../../src/lib/site';
 
 export const PODCAST = {
   origin: 'https://podcast.secnt.org',
-  // Show identity. Provisional wording, for the Editor's ruling before the
-  // feed is submitted (Ask §8: all wording is the Editor's).
+  // Show identity: the Editor's wording, ruled 12 November 2026 (Gate 5,
+  // rulings 2 and 3).
   title: 'SECNT Lectures',
-  subtitle: 'Lectures on the Commentary on the Prologue of John',
   description:
-    'The lectures of the Systematic Evangelical Commentaries on the New Testament, ' +
-    'teaching the Commentary on the Prologue of John (John 1:1–18) section by section, ' +
-    'at expositional depth. Each lecture pairs with a section of the written commentary ' +
-    'at secnt.org, where every position is set out in full and documented.',
+    'Video lectures from the Systematic Evangelical Commentaries on the New Testament. ' +
+    'Each lecture teaches one section of the written Commentary at expositional depth, ' +
+    'for pastors, teachers and seminary students, and links to the Commentary it teaches ' +
+    'at secnt.org. Free to watch and share under CC BY 4.0, with no advertising.',
   author: SITE.author,
   language: 'en',
-  // The show's square cover, 3000 × 3000, made by Commentary Production
-  // (Ask §3.4). null until it exists: the feed then carries no itunes:image,
-  // which Apple's validator rejects — that is the hold, deliberately loud.
-  cover: null as string | null,
-  // The owner email Apple and other directories read from the feed for
-  // ownership checks. Published in the public feed, so it is the Editor's to
-  // give; null until he does.
-  ownerEmail: null as string | null,
+  // The show's square cover, 3000 × 3000 (Ask §3.4: Commentary Production
+  // makes it). Until it exists the feed carries a plainly marked placeholder,
+  // which the Editor allowed for the phone test ONLY (Gate 5, ruling 4): the
+  // real cover must replace it before the feed is submitted to Apple Podcasts
+  // or Pocket Casts. coverIsPlaceholder makes every build say so in its log.
+  cover: '/cover-placeholder.jpg',
+  coverIsPlaceholder: true,
+  // The owner email directories read from the feed (Gate 5, ruling 5).
+  ownerEmail: 'editor@secnt.org',
   // Bunny Stream's pull zone for library SITE.bunnyLibraryId, and the MP4
   // rendition each enclosure uses (720p; Editor's rulings of 26 Sep and
   // 12 Nov 2026).
