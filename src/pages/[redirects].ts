@@ -20,6 +20,8 @@
 //    published falls back to the commentary contents page, never to a 404.
 // 3. THE AID INDEXES (§4.2). /slides/ and each slide-cycle page go to the
 //    commentary contents page.
+// 4. THE AID IMAGES. Removed after Release B on the Editor's word (13 Nov
+//    2026); anything under /slides/<aid>/ goes where that aid's page goes.
 import { getCollection } from 'astro:content';
 import { commentaryUrl, lectureUrl, normalizeId, isVisible } from '../lib/site';
 
@@ -32,6 +34,10 @@ export async function GET() {
   const visibleIds = new Set(commentary.filter(isVisible).map((c) => c.id));
   const contents = '/commentary/';
   const rules: [string, string][] = [];
+  // The aids' two images, removed on the Editor's word of 13 Nov 2026, go
+  // where their page goes. One splat rule per aid: Cloudflare allows 100
+  // such dynamic rules, and these are the only ones.
+  const imageRules: [string, string][] = [];
 
   // 1. Lectures.
   for (const lecture of (await getCollection('lectures')).filter(isVisible)) {
@@ -49,6 +55,7 @@ export async function GET() {
     const targetId = sectionId ?? unitId;
     const target = targetId && visibleIds.has(targetId) ? commentaryUrl(targetId) : contents;
     rules.push([`/slides/${aid.id}/`, target]);
+    imageRules.push([`/slides/${aid.id}/*`, target]);
   }
 
   // 3. The aid indexes.
@@ -64,6 +71,8 @@ export async function GET() {
       lines.push(`${src} ${to} 301`);
     }
   }
+  // Dynamic (splat) rules after every static one.
+  for (const [src, to] of imageRules) lines.push(`${src} ${to} 301`);
   return new Response(lines.join('\n') + '\n', {
     headers: { 'Content-Type': 'text/plain; charset=utf-8' },
   });
