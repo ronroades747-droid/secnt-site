@@ -297,7 +297,7 @@ main { flex: 1 0 auto; width: 100%; }
   padding: 0;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 @media (min-width: 560px) { .unit-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .unit-card {
@@ -309,13 +309,10 @@ main { flex: 1 0 auto; width: 100%; }
   border-top: 1px solid var(--color-gold-soft);
   padding-top: 0.85rem;
 }
-.unit-card__frame { display: block; aspect-ratio: 16 / 9; background: var(--color-surface); margin-bottom: 0.7rem; overflow: hidden; }
-.unit-card__frame img { display: block; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.15s ease; }
 .unit-card__verses { font-size: 0.85rem; letter-spacing: 0.02em; color: var(--color-meta); }
 .unit-card__title { font-size: 1.2rem; font-weight: 600; margin: 0.15rem 0 0.4rem; }
 .unit-card__action { margin-top: auto; font-size: 0.95rem; font-weight: 500; color: var(--color-link); }
 .unit-card:hover .unit-card__action { color: var(--color-link-hover); text-decoration: underline; }
-.unit-card:hover .unit-card__frame img { opacity: 0.85; }
 .unit-card:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 4px; }
 
 .latest-list { list-style: none; margin: 0 0 2.5rem; padding: 0; }

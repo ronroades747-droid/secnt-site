@@ -13,8 +13,6 @@
 // The Teaching Aids section that stood here is gone (PFW-035): the aids were
 // superseded by the quotation cards on 28 Oct 2026 (Loop Rev 36). The /slides/
 // pages themselves stay published and reachable from their commentary pages.
-import fs from 'node:fs';
-import path from 'node:path';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import {
@@ -22,7 +20,6 @@ import {
   commentaryUrl,
   articleUrl,
   lectureUrl,
-  lectureThumbUrl,
   normalizeId,
   formatDate,
   isVisible,
@@ -44,10 +41,12 @@ const byReadingOrder = (
   a.data.sectionNumber - b.data.sectionNumber;
 
 // --- The units as cards ----------------------------------------------------
-// Each published unit landing of each published volume, in reading order. The
-// thumbnail is the unit's Lecture 1 Slide 1 (lectureThumbUrl), shown only
-// where the file exists, the same degrade the section pages make: a unit whose
-// image has not been copied over yet shows its card without a picture.
+// Each published unit landing of each published volume, in reading order.
+// The cards are text only: verses, title, and the reading link. The lecture
+// thumbnail that stood above each card was removed on the Editor's ruling of
+// 13 Nov 2026 ("1-3 as recommended"), conforming the card to the Release B
+// home page (corpus Web Dev Ask "The site refocused on the written record",
+// §4.3: "each with its title and verses").
 const bookDisplayOf = new Map(volumes.map((v) => [v.data.book, v.data.bookDisplay]));
 const volumeUnits = volumes.map((v) => ({
   volume: v,
@@ -58,9 +57,6 @@ const volumeUnits = volumes.map((v) => ({
       id: u.id,
       title: u.data.title,
       verses: `${v.data.bookDisplay} ${u.data.passageRef}`,
-      thumb: fs.existsSync(path.join(process.cwd(), 'public', 'lectures', `${u.id}.png`))
-        ? lectureThumbUrl(u.id)
-        : null,
     })),
 }));
 
@@ -136,11 +132,6 @@ const articles = (await getCollection('articles'))
           {vu.units.map((u) => (
             <li>
               <a class="unit-card" href={commentaryUrl(u.id)}>
-                {u.thumb && (
-                  <span class="unit-card__frame">
-                    <img src={u.thumb} alt="" width="640" height="360" loading="lazy" />
-                  </span>
-                )}
                 <span class="unit-card__verses">{u.verses}</span>
                 <span class="unit-card__title">{u.title}</span>
                 <span class="unit-card__action">Start reading</span>
