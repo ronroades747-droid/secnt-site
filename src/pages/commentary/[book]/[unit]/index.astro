@@ -22,7 +22,9 @@ import UnitNav from '../../../../components/UnitNav.astro';
 import PrevNext from '../../../../components/PrevNext.astro';
 import PageDates from '../../../../components/PageDates.astro';
 import Breadcrumb from '../../../../components/Breadcrumb.astro';
-import { splitCommentaryId, normalizeId, lectureUrl, volumeUrl, isVisible, isCardVisible, asDiagrams } from '../../../../lib/site';
+import PageRecord from '../../../../components/PageRecord.astro';
+import { pageVersions, versionUrl, cite } from '../../../../lib/record';
+import { splitCommentaryId, normalizeId, lectureUrl, volumeUrl, commentaryUrl, commentaryPdfUrl, isVisible, isCardVisible, asDiagrams } from '../../../../lib/site';
 
 export async function getStaticPaths() {
   const landings = (await getCollection('commentary'))
@@ -58,9 +60,25 @@ const crumbs = [
   { label: bookDisplay, href: volumeUrl(book) },
   { label: d.passageRef ? `${bookDisplay} ${d.passageRef}` : entry.id }, // final crumb unlinked
 ];
+
+// THE RECORD (Release C, Ask §5.1). The citation cites the page's current
+// dated version (ruling 16); the Versions list links every version; the
+// Scholar tags name the page and its PDF.
+const versions = await pageVersions('commentary', entry.id);
+const citedDate = versions.at(-1)?.date ?? (d.revised ?? d.date).toISOString().slice(0, 10);
+const volumeTitle = vols.find((v) => v.data.book === book)?.data.title ?? bookDisplay;
+const citation = cite({
+  kind: 'commentary',
+  volumeTitle,
+  passage: `${bookDisplay} ${d.passageRef}`,
+  title: d.title,
+  date: citedDate,
+  url: versionUrl('commentary', entry.id, citedDate),
+});
 ---
 <BaseLayout title={d.title} description={d.description}
-  pageMeta={{ date: d.date, revised: d.revised, license: d.license, passageRef: d.passageRef }}>
+  pageMeta={{ date: d.date, revised: d.revised, license: d.license, passageRef: d.passageRef }}
+  scholar={{ title: d.title, publicationDate: d.date, pdfUrl: commentaryPdfUrl(entry.id) }}>
   <div class="unit-layout">
     <UnitNav unitId={entry.id} />
     <article class="reading reading--wide">
@@ -83,6 +101,8 @@ const crumbs = [
       {diagramsBottom.map((dg) => <Diagram diagram={dg} entryPath={entry.filePath} />)}
 
       <SectionQuotations cards={visibleCards} />
+
+      <PageRecord citation={citation} livingPath={commentaryUrl(entry.id)} versions={versions} citedDate={citedDate} />
 
       <PrevNext unitId={entry.id} />
       <PageDates date={d.date} revised={d.revised} />

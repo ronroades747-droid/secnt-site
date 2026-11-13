@@ -681,3 +681,24 @@ blockquote footer { margin-top: 0.85rem; font-size: 0.95rem; font-style: normal;
      affordances. */
   .slide-downloads, .slide-backlink { display: none !important; }
 }
+
+/* ====================================================================
+   THE RECORD (Release C, Ask §5): "Cite this page", the Versions list, and
+   the notice on a dated version page.
+   ==================================================================== */
+.page-record { margin: 2.25rem 0 0; padding-top: 1rem; border-top: 1px solid var(--color-border); font-size: 0.95rem; }
+.page-record__heading { font-size: 1rem; letter-spacing: 0.02em; margin: 0 0 0.5rem; }
+.page-record__heading:not(:first-child) { margin-top: 1.25rem; }
+.page-record__cite { margin: 0 0 0.5rem; padding: 0.6rem 0.8rem; background: var(--color-surface); border-left: 3px solid var(--color-gold-soft); overflow-wrap: anywhere; }
+.page-record__cite--short { padding-top: 0.4rem; padding-bottom: 0.4rem; }
+.page-record__label { color: var(--color-meta); }
+.page-record__living { margin: 0.25rem 0 0; color: var(--color-meta); overflow-wrap: anywhere; }
+.page-record__versions { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.2rem 1.25rem; }
+.page-record__versions a[aria-current] { font-weight: 600; }
+.page-record__note { color: var(--color-meta); }
+.version-notice { margin: 0 0 1.5rem; padding: 0.7rem 0.9rem; background: var(--color-surface); border: 1px solid var(--color-gold-soft); font-size: 0.95rem; }
+@media print {
+  /* The PDF carries its own attribution (BaseLayout's print block); the
+     on-screen record and the notice's link are screen affordances. */
+  .page-record { display: none !important; }
+}

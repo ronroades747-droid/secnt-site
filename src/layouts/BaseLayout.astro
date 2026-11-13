@@ -16,9 +16,13 @@ interface Props {
     revised?: Date;
     license?: string;
     passageRef?: string;
+    /** On a dated version page: the version's date, YYYY-MM-DD. */
+    versionDate?: string;
   };
+  noindex?: boolean;
+  scholar?: { title: string; publicationDate: Date; pdfUrl?: string };
 }
-const { title, description, tier = '2', pageMeta } = Astro.props;
+const { title, description, tier = '2', pageMeta, noindex, scholar } = Astro.props;
 const canonicalURL = canonical(Astro.url.pathname);
 const citeYear = pageMeta?.date?.getFullYear();
 // Effective revision date: the standard's `revised` field, falling back to the
@@ -30,7 +34,8 @@ const revisedDate = pageMeta?.revised ?? pageMeta?.updated;
 <html lang="en">
   <head>
     <BaseHead title={title} description={description}
-      datePublished={pageMeta?.date} dateModified={revisedDate} />
+      datePublished={pageMeta?.date} dateModified={revisedDate}
+      noindex={noindex} scholar={scholar} />
   </head>
   <body>
     <Header tier={tier} />
@@ -40,7 +45,9 @@ const revisedDate = pageMeta?.revised ?? pageMeta?.updated;
       <div class="print-citation">
         {pageMeta?.passageRef && <div>John {pageMeta.passageRef}</div>}
         {pageMeta?.date && <div>Published {pageMeta.date.toISOString().slice(0, 10)}</div>}
-        {revisedDate && <div>Revised {revisedDate.toISOString().slice(0, 10)}</div>}
+        {pageMeta?.versionDate
+          ? <div>Version of {pageMeta.versionDate}</div>
+          : revisedDate && <div>Revised {revisedDate.toISOString().slice(0, 10)}</div>}
         <div>{pageMeta?.license ?? SITE.licenseName} · {SITE.author}</div>
         <div>{canonicalURL}</div>
       </div>
