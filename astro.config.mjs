@@ -2,7 +2,6 @@
 import { defineConfig } from 'astro/config';
 import remarkGfm from 'remark-gfm';
 import remarkDiagramAnchor from './src/lib/remark-diagram-anchor.mjs';
-import { checkSlideDates } from './src/lib/check-slide-dates.mjs';
 import { commentaryPdfs } from './src/lib/commentary-pdf.mjs';
 
 // SECNT — Systematic Evangelical Commentaries on the New Testament
@@ -19,24 +18,16 @@ import { commentaryPdfs } from './src/lib/commentary-pdf.mjs';
 //                  render at a <!-- diagram --> marker inside the body prose,
 //                  rather than only above (top) or below (bottom) it.
 //
-// The slide-date check is an integration rather than a script so that it
-// cannot be forgotten: it runs on every build and every dev start. Since
-// Plan D33 `scheduled` decides whether a slide page publishes, and a
-// well-formed but wrong date ships the page silently — early, ahead of its
-// short. See src/lib/check-slide-dates.mjs for what it can and cannot catch.
+// The slide-date check that stood here retired with the /slides/ pages
+// (Release B, Ask §4.2): with no slide page to publish, a `scheduled` date
+// gates nothing.
 //
 // The commentary PDFs are printed from the built pages after every Cloudflare
 // build and never committed; see src/lib/commentary-pdf.mjs.
 
-/** Fails the build if a slide's `scheduled` precedes an earlier slot's. */
-const slideDateCheck = {
-  name: 'secnt:slide-date-check',
-  hooks: { 'astro:config:setup': () => checkSlideDates() },
-};
-
 export default defineConfig({
   site: 'https://secnt.org',
-  integrations: [slideDateCheck, commentaryPdfs],
+  integrations: [commentaryPdfs],
   trailingSlash: 'always',
   markdown: {
     remarkPlugins: [remarkGfm, remarkDiagramAnchor],

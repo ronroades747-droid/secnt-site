@@ -1,19 +1,20 @@
 ---
 // Unit landing. Under the June 6, 2026 uniform link-and-serve decision the
 // landing is an ordinary Commentary page in every navigational respect: no
-// inline lecture embed (the landing-paired lecture has its own page at
-// ./lecture/), the paired-lecture link renders at the top of the article like
+// inline lecture embed, the paired-lecture link renders at the top of the article like
 // any section, and the diagram frontmatter field renders here just as the section
 // template renders it (closing the open item in publishing-a-pair.md).
+//
+// RELEASE B (Ask §4.1): the "Watch the lecture" link goes to the lecture's
+// episode page on the lecture site, as on a section page.
 //
 // QUOTATION CARDS (corpus Production Pair Loop Rev 36). A landing that is a
 // pair's commentary section carries that pair's cards exactly as a section
 // page does: found from the `cards` collection by `section`, one or two in id
-// order, live exactly when the landing is (isAidVisible), and rendered by the
-// same Triptych panel. Only the cards are passed: the landing keeps its plain
-// lecture link and has no aid, so a landing with no cards renders as before.
+// order, live exactly when the landing is (isCardVisible), and listed in the
+// "Quotations from this section" line lower on the page (Ask §4.2).
 import { getCollection, render } from 'astro:content';
-import Triptych from '../../../../components/Triptych.astro';
+import SectionQuotations from '../../../../components/SectionQuotations.astro';
 import Diagram from '../../../../components/Diagram.astro';
 import PageDownloads from '../../../../components/PageDownloads.astro';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
@@ -21,7 +22,7 @@ import UnitNav from '../../../../components/UnitNav.astro';
 import PrevNext from '../../../../components/PrevNext.astro';
 import PageDates from '../../../../components/PageDates.astro';
 import Breadcrumb from '../../../../components/Breadcrumb.astro';
-import { splitCommentaryId, normalizeId, lectureUrl, volumeUrl, isVisible, isAidVisible, asDiagrams } from '../../../../lib/site';
+import { splitCommentaryId, normalizeId, lectureUrl, volumeUrl, isVisible, isCardVisible, asDiagrams } from '../../../../lib/site';
 
 export async function getStaticPaths() {
   const landings = (await getCollection('commentary'))
@@ -44,7 +45,7 @@ const { Content } = await render(entry);
 const d = entry.data;
 const pairedLecture = d.hasLecture && lecture && isVisible(lecture) ? lecture : null;
 const pairedLectureUrl = lectureUrl(entry.id);
-const visibleCards = landingCards.filter((c) => isAidVisible(c, entry));
+const visibleCards = landingCards.filter(() => isCardVisible(entry));
 // A page may carry one diagram or several (see asDiagrams / content.config.ts).
 const diagrams = asDiagrams(d.diagram);
 const diagramsTop = diagrams.filter((x) => (x.position ?? 'bottom') === 'top');
@@ -73,8 +74,6 @@ const crumbs = [
         </p>
       )}
 
-      <Triptych sectionId={entry.id} showLecture={false} aid={null} cards={visibleCards} />
-
       <PageDownloads sectionId={entry.id} title={d.title} />
 
       {diagramsTop.map((dg) => <Diagram diagram={dg} entryPath={entry.filePath} />)}
@@ -82,6 +81,8 @@ const crumbs = [
       <Content />
 
       {diagramsBottom.map((dg) => <Diagram diagram={dg} entryPath={entry.filePath} />)}
+
+      <SectionQuotations cards={visibleCards} />
 
       <PrevNext unitId={entry.id} />
       <PageDates date={d.date} revised={d.revised} />
