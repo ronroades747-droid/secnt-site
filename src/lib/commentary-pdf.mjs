@@ -45,8 +45,13 @@ export const commentaryPdfName = (id) => `${id.replaceAll('/', '-')}.pdf`;
 // (commentary/<book>/<unit>/) or a section (commentary/<book>/<unit>/<section>/)
 // — not the volume page above them, and not a lecture page below them.
 const COMMENTARY_PAGE = /^commentary\/[^/]+\/[^/]+\/(?:[^/]+\/)?$/;
+// A dated version of a commentary page has its own PDF, printed from it, so
+// that its attribution names the version's date and address (Release C,
+// ruling 17): /commentary/<page id>/v/<YYYY-MM-DD>/ gets
+// <page id with hyphens>-v-<YYYY-MM-DD>.pdf beside it.
+const VERSION_PAGE = /^commentary\/[^/]+\/[^/]+\/(?:[^/]+\/)?v\/\d{4}-\d{2}-\d{2}\/$/;
 const isCommentaryPage = (pathname) =>
-  COMMENTARY_PAGE.test(pathname) && !pathname.endsWith('/lecture/');
+  COMMENTARY_PAGE.test(pathname) || VERSION_PAGE.test(pathname);
 
 // Paper and margins. US Letter: the author and the likeliest printers are
 // American. Nothing else is set — headers, footers and page numbers would be

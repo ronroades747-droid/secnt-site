@@ -1,0 +1,97 @@
+---
+// A dated version of a commentary page (Release C, Ask §5.2; rulings 14, 15,
+// 17, 22): /commentary/<page id>/v/<YYYY-MM-DD>/. The page exactly as
+// committed in the commit that set its date, rendered by the same pipeline
+// as the living page (its own diagrams included, as they stood), under a
+// notice naming its date and linking the current page.
+//
+// It never competes with its page in search (ruling 3 of 13 Nov 2026,
+// answering Ask §9 Q5): noindex, and no sitemap entry. It carries its own
+// PDF, printed from it at build, whose attribution names the version date and
+// address (src/lib/commentary-pdf.mjs; BaseLayout's print block).
+//
+// Built only for a page that is itself published.
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import Diagram from '../../../components/Diagram.astro';
+import PageDownloads from '../../../components/PageDownloads.astro';
+import PageRecord from '../../../components/PageRecord.astro';
+import { splitCommentaryId, volumeUrl, commentaryUrl, isVisible, asDiagrams } from '../../../lib/site';
+import { parseVersionId, pageVersions, cite, formatIsoDate } from '../../../lib/record';
+
+export async function getStaticPaths() {
+  const pages = new Map((await getCollection('commentary')).filter(isVisible).map((c) => [c.id, c]));
+  const out = [];
+  for (const v of await getCollection('versions')) {
+    const p = parseVersionId(v.id);
+    if (!p || p.kind !== 'commentary' || !pages.has(p.pageId)) continue;
+    out.push({
+      params: { version: `${p.pageId}/v/${p.date}` },
+      props: { version: v, page: pages.get(p.pageId)!, date: p.date },
+    });
+  }
+  return out;
+}
+const { version, page, date } = Astro.props;
+const { Content } = await render(version);
+const vd = version.data as any;
+const d = page.data;
+const { book, unit } = splitCommentaryId(page.id);
+const unitId = `${book}/${unit}`;
+const vols = await getCollection('volumes');
+const vol = vols.find((v) => v.data.book === book);
+const bookDisplay = vol?.data.bookDisplay ?? book;
+const passageRef = vd.passageRef ?? d.passageRef;
+const versionId = `${page.id}/v/${date}`;
+const versions = await pageVersions('commentary', page.id);
+const isCurrent = versions.at(-1)?.date === date;
+const citation = cite({
+  kind: 'commentary',
+  volumeTitle: vol?.data.title ?? bookDisplay,
+  passage: `${bookDisplay} ${passageRef}`,
+  title: vd.title,
+  date,
+  url: Astro.url.pathname,
+});
+const diagrams = asDiagrams(vd.diagram);
+const diagramsTop = diagrams.filter((x) => (x.position ?? 'bottom') === 'top');
+const diagramsBottom = diagrams.filter((x) => (x.position ?? 'bottom') === 'bottom');
+const crumbs = [
+  { label: 'Commentaries', href: '/commentary/' },
+  { label: bookDisplay, href: volumeUrl(book) },
+  ...(page.id === unitId
+    ? [{ label: `${bookDisplay} ${d.passageRef}`, href: commentaryUrl(unitId) }]
+    : [
+        { label: `${bookDisplay} ${d.passageRef}`, href: commentaryUrl(unitId) },
+        { label: d.title, href: commentaryUrl(page.id) },
+      ]),
+  { label: `Version of ${formatIsoDate(date)}` },
+];
+---
+<BaseLayout title={`${vd.title} (version of ${formatIsoDate(date)})`} description={vd.description ?? d.description}
+  pageMeta={{ date: d.date, license: d.license, passageRef, versionDate: date }} noindex>
+  <article class="reading">
+    <Breadcrumb crumbs={crumbs} />
+    <p class="version-notice">
+      This is the version of <strong>{formatIsoDate(date)}</strong>, kept exactly as it stood on
+      that date and never changed afterwards.
+      {isCurrent
+        ? ' It is the current version; later small corrections appear on the current page only.'
+        : ' The page has been revised since.'}{' '}
+      <a href={commentaryUrl(page.id)}>Read the current page</a>.
+    </p>
+    {passageRef && <p class="passage-ref">{bookDisplay} {passageRef}</p>}
+    <h1>{vd.title}</h1>
+
+    <PageDownloads sectionId={versionId} title={vd.title} />
+
+    {diagramsTop.map((dg) => <Diagram diagram={dg} entryPath={version.filePath!} />)}
+
+    <Content />
+
+    {diagramsBottom.map((dg) => <Diagram diagram={dg} entryPath={version.filePath!} />)}
+
+    <PageRecord citation={citation} livingPath={commentaryUrl(page.id)} versions={versions} citedDate={date} />
+  </article>
+</BaseLayout>

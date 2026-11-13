@@ -5,8 +5,16 @@ interface Props {
   description?: string;
   datePublished?: Date;
   dateModified?: Date;
+  /** Keep this page out of search results (a dated version; Release C, Q5). */
+  noindex?: boolean;
+  /**
+   * Google Scholar tags (Release C, Ask §5.1): citation_title,
+   * citation_author, citation_publication_date, citation_pdf_url.
+   */
+  scholar?: { title: string; publicationDate: Date; pdfUrl?: string };
 }
-const { title, description, datePublished, dateModified } = Astro.props;
+const { title, description, datePublished, dateModified, noindex, scholar } = Astro.props;
+const scholarDate = (d: Date) => d.toISOString().slice(0, 10).replaceAll('-', '/');
 const canonicalURL = canonical(Astro.url.pathname);
 const fullTitle = title === SITE.wordmark ? title : `${title} — ${SITE.wordmark}`;
 
@@ -40,6 +48,15 @@ const jsonLd = datePublished
 <link rel="canonical" href={canonicalURL} />
 
 <meta name="author" content={SITE.author} />
+{noindex && <meta name="robots" content="noindex" />}
+{scholar && (
+  <>
+    <meta name="citation_title" content={scholar.title} />
+    <meta name="citation_author" content="Roades, Ronald E." />
+    <meta name="citation_publication_date" content={scholarDate(scholar.publicationDate)} />
+    {scholar.pdfUrl && <meta name="citation_pdf_url" content={new URL(scholar.pdfUrl, SITE.origin).href} />}
+  </>
+)}
 <meta name="license" content={SITE.licenseName} />
 
 <!-- Open Graph -->

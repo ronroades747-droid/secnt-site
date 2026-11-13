@@ -1,0 +1,74 @@
+---
+// A dated version of an article page (Release C, Ask §5.2):
+// /articles/<id>/v/<YYYY-MM-DD>/, the orientation page exactly as committed
+// in the commit that set its date, under a notice naming its date. noindex,
+// as every version is (ruling 3 of 13 Nov 2026). The article itself is its
+// PDF, which the version links as the living page does.
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import PageRecord from '../../../components/PageRecord.astro';
+import { articleUrl, isVisible } from '../../../lib/site';
+import { parseVersionId, pageVersions, cite, articleOrigin, formatIsoDate } from '../../../lib/record';
+
+export async function getStaticPaths() {
+  const pages = new Map(
+    (await getCollection('articles')).filter((a) => !a.id.includes('/') && isVisible(a)).map((a) => [a.id, a])
+  );
+  const out = [];
+  for (const v of await getCollection('versions')) {
+    const p = parseVersionId(v.id);
+    if (!p || p.kind !== 'articles' || !pages.has(p.pageId)) continue;
+    out.push({
+      params: { version: `${p.pageId}/v/${p.date}` },
+      props: { version: v, page: pages.get(p.pageId)!, date: p.date },
+    });
+  }
+  return out;
+}
+const { version, page, date } = Astro.props;
+const { Content } = await render(version);
+const vd = version.data as any;
+const d = page.data;
+const versions = await pageVersions('articles', page.id);
+const isCurrent = versions.at(-1)?.date === date;
+const citation = cite({
+  kind: 'articles',
+  title: vd.title,
+  origin: articleOrigin(vd.provenance ?? d.provenance),
+  date,
+  url: Astro.url.pathname,
+});
+const pdf = vd.pdf ?? d.pdf;
+---
+<BaseLayout title={`${vd.title} (version of ${formatIsoDate(date)})`} description={vd.description ?? d.description}
+  pageMeta={{ date: d.date, license: d.license, versionDate: date }} noindex>
+  <article class="reading">
+    <Breadcrumb crumbs={[
+      { label: 'Articles', href: '/articles/' },
+      { label: d.title, href: articleUrl(page.id) },
+      { label: `Version of ${formatIsoDate(date)}` },
+    ]} />
+    <p class="version-notice">
+      This is the version of <strong>{formatIsoDate(date)}</strong>, kept exactly as it stood on
+      that date and never changed afterwards.
+      {isCurrent
+        ? ' It is the current version; later small corrections appear on the current page only.'
+        : ' The page has been revised since.'}{' '}
+      <a href={articleUrl(page.id)}>Read the current page</a>.
+    </p>
+    <h1>{vd.title}</h1>
+    {vd.provenance && <p class="article-provenance">{vd.provenance}</p>}
+
+    <Content />
+
+    {pdf?.src && (
+      <aside class="article-pdf">
+        <p class="article-pdf__label">{pdf.label ?? 'The article (PDF)'}</p>
+        <a class="article-pdf__link" href={pdf.src} download>Download “{vd.title}”</a>
+      </aside>
+    )}
+
+    <PageRecord citation={citation} livingPath={articleUrl(page.id)} versions={versions} citedDate={date} />
+  </article>
+</BaseLayout>

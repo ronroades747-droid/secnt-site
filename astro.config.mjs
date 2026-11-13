@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 import remarkGfm from 'remark-gfm';
 import remarkDiagramAnchor from './src/lib/remark-diagram-anchor.mjs';
 import { commentaryPdfs } from './src/lib/commentary-pdf.mjs';
+import { datedVersions } from './src/lib/versions.mjs';
 
 // SECNT — Systematic Evangelical Commentaries on the New Testament
 // (substantive series name per about.md §2; the earlier "Scholars Exegetical"
@@ -22,12 +23,16 @@ import { commentaryPdfs } from './src/lib/commentary-pdf.mjs';
 // (Release B, Ask §4.2): with no slide page to publish, a `scheduled` date
 // gates nothing.
 //
+// The dated versions (Release C) are generated from the Git history before
+// anything is built or served; see src/lib/versions.mjs. The integration runs
+// first, so the version files exist when the content layer reads them.
+//
 // The commentary PDFs are printed from the built pages after every Cloudflare
 // build and never committed; see src/lib/commentary-pdf.mjs.
 
 export default defineConfig({
   site: 'https://secnt.org',
-  integrations: [commentaryPdfs],
+  integrations: [datedVersions, commentaryPdfs],
   trailingSlash: 'always',
   markdown: {
     remarkPlugins: [remarkGfm, remarkDiagramAnchor],

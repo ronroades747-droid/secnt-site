@@ -30,7 +30,9 @@ interface Props {
 }
 const { diagram, entryPath } = Astro.props;
 
-const svgs = import.meta.glob('/src/content/commentary/**/*.svg', {
+// Dated versions carry their own figure as it stood in their commit, written
+// beside them by src/lib/versions.mjs (Release C), so they are globbed too.
+const svgs = import.meta.glob(['/src/content/commentary/**/*.svg', '/src/content/versions/**/*.svg'], {
   query: '?raw',
   import: 'default',
   eager: true,

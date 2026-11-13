@@ -487,4 +487,31 @@ const cards = defineCollection({
     }),
 });
 
-export const collections = { frontmatter, volumes, commentary, lectures, articles, slides, slideCycles, cards };
+// ---------------------------------------------------------------------------
+// Collection: versions  —  dated versions of commentary and article pages
+// ---------------------------------------------------------------------------
+// Release C, Ask §5.2. Generated at every build and dev start from the Git
+// history by src/lib/versions.mjs into src/content/versions/ (git-ignored):
+// each file is a page EXACTLY as committed in the commit that set its date,
+// so its frontmatter is whatever that page carried then. The schema is
+// therefore deliberately loose: it names only what the version template
+// reads and lets the rest pass. The id is the version's own path,
+// "<kind>/<page id>/v/<YYYY-MM-DD>", e.g.
+// "commentary/john/1-14-to-18/01-the-text/v/2026-11-12".
+const versions = defineCollection({
+  loader: glob({
+    pattern: '**/index.md',
+    base: './src/content/versions',
+    generateId: ({ entry }) => entry.replace(/\/index\.md$/, ''),
+  }),
+  schema: () =>
+    z
+      .object({
+        title: z.string(),
+        description: z.string().optional(),
+        diagram: z.any().optional(),
+      })
+      .passthrough(),
+});
+
+export const collections = { frontmatter, volumes, commentary, lectures, articles, slides, slideCycles, cards, versions };

@@ -23,3 +23,6 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 dist-podcast/
+
+# dated versions, generated from Git history at every build (src/lib/versions.mjs)
+src/content/versions/

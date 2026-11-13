@@ -1,0 +1,51 @@
+---
+// The page's record, at the foot of every commentary and article page and of
+// every version page (Release C, Ask §5.1 and §5.2):
+//   - "Cite this page": the citation of the page's CURRENT DATED VERSION
+//     (ruling 16), in the forms of the Citing page, and beneath it one line,
+//     "Current page, always the latest:", with the living address;
+//   - "Versions": every dated version, oldest first, each linked to its own
+//     permanent page; the one being cited is marked.
+// On a version page the block cites that version instead.
+import { canonical } from '../lib/site';
+import { formatIsoDate, type Citation, type Version } from '../lib/record';
+
+interface Props {
+  citation: Citation;
+  /** The living page's path, e.g. /commentary/john/1-1-to-3/01-the-text/. */
+  livingPath: string;
+  versions: Version[];
+  /** The version this page cites (and, on a version page, shows). */
+  citedDate: string;
+}
+const { citation, livingPath, versions, citedDate } = Astro.props;
+const living = canonical(livingPath);
+---
+<section class="page-record" aria-label="Citation and versions">
+  <h2 class="page-record__heading">Cite this page</h2>
+  <p class="page-record__cite" set:html={citation.full} />
+  {citation.short && (
+    <p class="page-record__cite page-record__cite--short">
+      <span class="page-record__label">Short form:</span> <span set:html={citation.short} />
+    </p>
+  )}
+  <p class="page-record__living">
+    Current page, always the latest: <a href={livingPath}>{living}</a>
+  </p>
+  {versions.length > 0 && (
+    <>
+      <h2 class="page-record__heading">Versions</h2>
+      <ol class="page-record__versions">
+        {versions.map((v, i) => (
+          <li>
+            <a href={v.url} aria-current={v.date === citedDate ? 'true' : undefined}>
+              {formatIsoDate(v.date)}
+            </a>
+            {i === 0 && <span class="page-record__note"> · first published</span>}
+            {i === versions.length - 1 && <span class="page-record__note"> · current</span>}
+          </li>
+        ))}
+      </ol>
+    </>
+  )}
+</section>
