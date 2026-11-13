@@ -351,9 +351,11 @@ const slideCycles = defineCollection({
 // published video and can never change (decisions-locked.md, Decision 6).
 // Frontmatter is Web-Dev-owned; the body (notes prose + the required
 // Pedagogical task section) is supplied by Commentary Production per short.
-// Served slide images live in public/slides/<slug>/ under the derived names
-// <slug>-16x9.jpg / <slug>-9x16.jpg; no per-entry asset fields to drift. No shorts-register internal apparatus
-// (SS index IDs, Build numbers) appears anywhere in this public repo.
+// The served slide images lived in public/slides/<slug>/ as <slug>-16x9.jpg
+// and <slug>-9x16.jpg. They were removed on the Editor's word of
+// 13 Nov 2026, after Release B; their old addresses redirect with the page's.
+// No shorts-register internal apparatus (SS index IDs, Build numbers)
+// appears anywhere in this public repo.
 // Audience tag — the public label registry (handoff memo §2, Editor's
 // audience-tags ruling, 20 Aug 2026 revision): names the floor, not the
 // ceiling. Tokens are public-safe; internal audience codes never appear in
