@@ -90,6 +90,9 @@ export const GET: APIRoute = async () => {
 
   const xml = [
     '<?xml version="1.0" encoding="UTF-8"?>',
+    // A readable page when the feed is opened in a browser (Gate 5, 13 Nov
+    // 2026); podcast apps ignore it. See public/feed.xsl.
+    '<?xml-stylesheet type="text/xsl" href="/feed.xsl"?>',
     '<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">',
     '  <channel>',
     `    <title>${esc(PODCAST.title)}</title>`,
