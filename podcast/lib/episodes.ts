@@ -27,13 +27,12 @@ export const PODCAST = {
     'at secnt.org. Free to watch and share under CC BY 4.0, with no advertising.',
   author: SITE.author,
   language: 'en',
-  // The show's square cover, 3000 × 3000 (Ask §3.4: Commentary Production
-  // makes it). Until it exists the feed carries a plainly marked placeholder,
-  // which the Editor allowed for the phone test ONLY (Gate 5, ruling 4): the
-  // real cover must replace it before the feed is submitted to Apple Podcasts
-  // or Pocket Casts. coverIsPlaceholder makes every build say so in its log.
-  cover: '/cover-placeholder.jpg',
-  coverIsPlaceholder: true,
+  // The show's square cover, 3000 × 3000 RGB JPEG (Ask §3.4): the approved
+  // cover, approved by the Editor on 13 November 2026. Commentary Production
+  // holds the master at Commentary/Assets/SECNT_Lectures_Podcast_Cover.jpg in
+  // the corpus repo; public/cover.jpg is a byte-for-byte copy of it, and any
+  // change to it returns to Commentary Production and the Editor.
+  cover: '/cover.jpg',
   // The owner email directories read from the feed (Gate 5, ruling 5).
   ownerEmail: 'editor@secnt.org',
   // Bunny Stream's pull zone for library SITE.bunnyLibraryId, and the MP4

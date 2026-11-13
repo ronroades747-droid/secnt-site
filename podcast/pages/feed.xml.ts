@@ -9,8 +9,7 @@
 // a season and each lecture numbered within it, so apps play the lectures in
 // canonical order rather than newest first.
 //
-// The show's artwork and owner email are held in PODCAST (lib/episodes.ts);
-// see the notes there on the placeholder cover.
+// The show's artwork and owner email are held in PODCAST (lib/episodes.ts).
 import type { APIRoute } from 'astro';
 import { SITE } from '../../src/lib/site';
 import {
@@ -33,12 +32,6 @@ const esc = (s: string) =>
 const cdata = (s: string) => `<![CDATA[${s.replace(/]]>/g, ']]]]><![CDATA[>')}]]>`;
 
 export const GET: APIRoute = async () => {
-  if (PODCAST.coverIsPlaceholder) {
-    console.warn(
-      '[podcast] feed carries the PLACEHOLDER cover — for the phone test only; ' +
-        'replace it before submitting to Apple Podcasts or Pocket Casts (Gate 5, ruling 4).'
-    );
-  }
   const { episodes } = await getEpisodes();
   const lengths = await Promise.all(
     episodes.map((e) => mp4Length(e.lecture.data.bunnyVideoId, e.lecture.data.title))
