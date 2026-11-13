@@ -4,14 +4,14 @@
 // publishes with its section and never ahead of it.
 import { getCollection, getEntry } from 'astro:content';
 import CardPage from '../../../components/CardPage.astro';
-import { isAidVisible } from '../../../lib/site';
+import { isCardVisible } from '../../../lib/site';
 
 export async function getStaticPaths() {
   const cards = await getCollection('cards');
   const out = [];
   for (const card of cards) {
     const section = await getEntry(card.data.section);
-    if (isAidVisible(card, section)) out.push({ params: { card: card.id }, props: { entry: card } });
+    if (isCardVisible(section)) out.push({ params: { card: card.id }, props: { entry: card } });
   }
   return out;
 }

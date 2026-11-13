@@ -47,7 +47,7 @@ src/content/lectures/john/1-1-to-3/NN-slug.md     ← its paired lecture
 
 One file each, sharing the same `NN-slug`. The filename is the section's slug and folder.
 
-**The unit landing is the exception:** the section is `commentary/john/1-1-to-3/index.md` (it has `sectionNumber: 0`, `sectionType: unit-landing`, and carries the §1–§3 front-matter prose), and its lecture is `lectures/john/1-1-to-3/index.md`. Lecture 1 embeds on the landing automatically — no `/lecture/` child route — so the "watch the lecture" link is replaced by the inline video. See *The landing* below.
+**The unit landing is the exception:** the section is `commentary/john/1-1-to-3/index.md` (it has `sectionNumber: 0`, `sectionType: unit-landing`, and carries the §1–§3 front-matter prose), and its lecture is `lectures/john/1-1-to-3/index.md`. Lecture 1 is linked from the landing exactly as every other lecture is from its section. See *The landing* below.
 
 ---
 
@@ -118,8 +118,7 @@ The unit landing renders diagrams the same way — the marker injects the figure
 
 The unit landing (`index.md`) works like any section, with three differences, all handled by the template — nothing extra in the file:
 
-- **Lecture 1 embeds inline.** The template finds the lecture whose `sectionRef` points at the landing and renders the video on the page. No `/lecture/` child route, no embed markup in the file.
-- **No "watch the lecture" link** — the embed replaces it.
+- **Lecture 1 is linked, as every lecture is.** The template finds the lecture whose `sectionRef` points at the landing and shows a plain "Watch the lecture" link under the title, to the lecture's episode page on the lecture site (see *The lecture site and its podcast feed*). No embed markup in the file.
 - The body is the §1–§3 front-matter prose (Introduction, Framework, Sources / Method), plus the architectural-orientation diagram's `<!-- diagram -->` marker where you want the figure.
 
 ---
@@ -164,6 +163,8 @@ The Bunny library ID is global (already in `src/lib/site.ts`); you never set it 
 
 ### The lecture site and its podcast feed
 
+**secnt.org has no lecture pages** (Release B of `Methodology/Web Dev Ask — The site refocused on the written record.md` in the corpus repo). Each commentary page with a published lecture carries one plain text link, "Watch the lecture", to that lecture's episode page on the lecture site, and each old `/commentary/…/lecture/` address redirects there permanently. The redirect list is written at every build from the collections (`src/pages/[redirects].ts`), so a new lecture needs nothing beyond its flip.
+
 The same flip also publishes the lecture on the lecture site, `podcast.secnt.org`, and in its video podcast feed (`/feed.xml`). That site is a second build of this repository, made by its own Cloudflare Pages project (`secnt-podcast`, build command `npm run build:podcast`). It reads the same lecture files, so there is nothing more to edit.
 
 Each episode's file is the video's **720p MP4** on Bunny, so **the video must have finished encoding, with MP4 Fallback on, before the flip.** The lecture-site build checks every published lecture's MP4 and **fails, naming the lecture, if one is missing**. secnt.org still publishes, because it is a separate build. The lecture site keeps its last good version until the MP4 exists and the build is retried.
@@ -178,7 +179,7 @@ Set at the flip, with the other lecture fields, once the voice track has been up
 audioUrl: "https://audio.secnt.org/Jn1_6-13/Jn1_613_Lecture_18.mp3"
 ```
 
-With it set, the lecture page shows a "Listen" player under the video and the commentary page a "Listen to the lecture" line under its lecture panel. Without it, neither appears. The build refuses a value that is not a full `https` URL.
+**Nothing displays it at present.** The listen player and the "Listen to the lecture" line left with secnt.org's lecture pages (Release B), and the lecture site has no audio player (the Editor's ruling 9 of 12 November 2026). The value is still set at the flip and stands as data. The build refuses a value that is not a full `https` URL.
 
 ### `sectionRef` — make it match exactly
 

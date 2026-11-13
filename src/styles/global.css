@@ -191,85 +191,29 @@ main { flex: 1 0 auto; width: 100%; }
    ==================================================================== */
 .passage-ref { color: var(--color-meta); font-size: 0.95rem; letter-spacing: 0.02em; margin: 0 0 0.5rem; }
 
-/* Paired-lecture link in the page header — the section's other format
-   (audiovisual), linked at the top of the reading column. Inherits body-link
-   gold; a touch of weight gives it presence without a button. */
+/* "Watch the lecture": one plain text link under a commentary page's title,
+   to the lecture's episode page on the lecture site (Release B, Ask §4.1).
+   Inherits body-link gold; a touch of weight gives it presence without a
+   button. */
 .paired-lecture { margin: 0 0 1.75rem; font-size: 0.98rem; }
 .paired-lecture a { font-weight: 500; }
-/* Downloads line under the Triptych / "Watch the lecture" link on commentary
-   pages (Web Dev Ask, Downloads on the commentary page, 26 Sep 2026). */
+/* Downloads line under the title, or under "Watch the lecture" where the page
+   has one (Web Dev Ask, Downloads on the commentary page, 26 Sep 2026). */
 .page-downloads { margin: 0 0 1.75rem; font-size: 0.98rem; display: flex; flex-wrap: wrap; gap: 0.35rem 1.5rem; }
 .page-downloads a { font-weight: 500; }
-/* "Listen to the lecture" (Web Dev Ask, Lecture audio player, 2 Oct 2026):
-   one line under the Triptych, shown only where the lecture has audio. */
-.paired-listen { margin: 0 0 1.75rem; font-size: 0.98rem; }
-.paired-listen a { font-weight: 500; }
-/* Sits close under whatever it follows, so the two read as one group. */
-.paired-lecture:has(+ .page-downloads),
-.paired-lecture:has(+ .paired-listen),
-.paired-listen:has(+ .page-downloads),
-.triptych:has(+ .paired-listen),
-.triptych:has(+ .page-downloads) { margin-bottom: 0.6rem; }
+/* Sits close under the lecture link, so the two read as one group. */
+.paired-lecture:has(+ .page-downloads) { margin-bottom: 0.6rem; }
+/* "Quotations from this section": the cards' line, lower on the page, after
+   the body and before Previous/Next (Release B, Ask §4.2). */
+.section-quotations { margin: 2.25rem 0 0; padding-top: 1rem; border-top: 1px solid var(--color-border); font-size: 0.98rem; }
+.section-quotations a { font-weight: 500; }
 
-/* --- TRIPTYCH -------------------------------------------------------------
-   The panel row under a commentary section's title: the paired lecture, and
-   the section's teaching aid in its two formats (D47 sec 4; Web Dev Ask, 20
-   Sep 2026). It replaces the .paired-lecture line on SECTION pages; the unit
-   landing keeps that line, having neither a row nor an aid (ask sec 9).
-
-   Frames are uniform 16:9 and share one height, so the three thumbnails line
-   up whatever their own proportions. The tall 9:16 is centred in its frame
-   against --color-bg — the PAGE background, not the slide field — so it floats
-   on the page rather than sitting in a visible box (the Editor's ruling, 20
-   Sep 2026). Nothing is bordered, for the same reason: a rule around the wide
-   frames would make the tall one's frame visible by contrast.
-
-   The row wraps rather than shrinking below legibility: on a narrow screen the
-   aid's pair drops under the lecture. */
-.triptych {
-  --frame-h: clamp(64px, 11vw, 104px);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.25rem 2rem;
-  margin: 0 0 2rem;
-}
-.triptych__panel { text-decoration: none; color: var(--color-text); }
-.triptych__frames { display: flex; gap: 0.5rem; }
-.triptych__frame {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: calc(var(--frame-h) * 16 / 9);
-  height: var(--frame-h);
-  background: var(--color-bg);
-  overflow: hidden;
-}
-.triptych__frame--square { width: var(--frame-h); } /* the quotation card (Loop Rev 36) */
-.triptych__frame img {
-  display: block;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-  transition: opacity 0.15s ease;
-}
-.triptych__label {
-  display: block;
-  margin-top: 0.5rem;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--color-link);
-}
-.triptych__panel:hover .triptych__label { color: var(--color-link-hover); text-decoration: underline; }
-.triptych__panel:hover .triptych__frame img { opacity: 0.85; }
-.triptych__panel:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 4px; }
-
-/* Home page (corpus Web Dev Ask "The front page", 9 Nov 2026; PFW-035/036).
-   The page opens on the commentary: headline, two buttons, the units as cards,
-   Latest. Same tokens and the same restrained register as the triptych panels;
-   the lecture thumbnails are the only pictures. Phone first: the cards are one
-   column until there is room for two, and the hero stays compact so the
-   buttons sit above the fold on a phone. */
+/* Home page: two equal doors (Web Dev Ask "The site refocused on the written
+   record", §4.3, Release B). The opening line, then the Commentary and
+   Articles panels side by side on a wide screen and stacked on a phone, then
+   Latest. Text only: no picture on the page but the banner. Phone first: the
+   panels stack, and the hero stays compact so the first panel starts above
+   the fold. */
 .reading.home { padding-top: clamp(1.25rem, 5vw, 3.5rem); }
 .home-hero { margin: 0 0 2.25rem; }
 .home-hero__headline { font-size: clamp(1.35rem, 4.6vw, 1.9rem); line-height: 1.3; margin: 0 0 1.25rem; }
@@ -289,11 +233,23 @@ main { flex: 1 0 auto; width: 100%; }
 .button:hover { color: var(--color-text); background: var(--color-surface); border-color: var(--color-link-hover); }
 .button:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 3px; }
 
-.home-units h2 a, .home-latest h2 a { color: inherit; text-decoration: none; }
-.home-units h2 a:hover { color: var(--color-gold); }
+.home-doors { display: grid; grid-template-columns: 1fr; gap: 2.5rem; margin: 0 0 2.5rem; }
+@media (min-width: 760px) { .home-doors--two { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem 3rem; } }
+.home-door { display: flex; flex-direction: column; }
+.home-door h2 { margin-top: 0; }
+.home-door h2 a, .home-latest h2 a { color: inherit; text-decoration: none; }
+.home-door h2 a:hover { color: var(--color-gold); }
+.home-door__sub { margin: -0.4rem 0 1rem; font-size: 0.95rem; }
+.home-door__sub a { color: var(--color-meta); text-decoration: none; }
+.home-door__sub a:hover { color: var(--color-gold); }
+.home-door__action { margin: auto 0 0; padding-top: 0.25rem; }
+/* In a two-door row each panel is half the column: its cards stack. */
+.home-doors--two .unit-cards { grid-template-columns: 1fr; }
+.article-cards { list-style: none; margin: 0 0 1.75rem; padding: 0; display: grid; gap: 1.25rem; }
+.article-card__desc { font-size: 0.95rem; color: var(--color-text); margin: 0 0 0.2rem; }
 .unit-cards {
   list-style: none;
-  margin: 0 0 2.5rem;
+  margin: 0 0 1.75rem;
   padding: 0;
   display: grid;
   grid-template-columns: 1fr;
@@ -597,15 +553,6 @@ blockquote footer { margin-top: 0.85rem; font-size: 0.95rem; font-style: normal;
 .video-embed { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 3px; overflow: hidden; margin: 1.5rem 0; }
 .video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 
-.lecture-resources { list-style: none; padding: 0; margin: 1.5rem 0; display: flex; flex-wrap: wrap; gap: 1.25rem; }
-.lecture-resources a { text-decoration: none; }
-
-/* Lecture audio (listen-only player under the video). Full width of the
-   reading column, so on a phone it spans the screen under the video. */
-.lecture-audio { margin: 1.5rem 0 0; }
-.lecture-audio__label { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-meta); margin: 0 0 0.4rem; font-weight: normal; }
-.lecture-audio__player { display: block; width: 100%; }
-
 .back-link { display: inline-block; margin: 1.5rem 0; color: var(--color-meta); text-decoration: none; }
 .back-link:hover { color: var(--color-gold); }
 
@@ -670,8 +617,8 @@ blockquote footer { margin-top: 0.85rem; font-size: 0.95rem; font-style: normal;
   :root { --color-bg: #fff; --color-text: #000; }
   body { font-size: 11.5pt; line-height: 1.45; }
   .site-header, .primary-nav, .banner, .gold-rule, .site-footer,
-  .video-embed, .lecture-audio, .paired-listen, .breadcrumb, .lecture-resources, .back-link,
-  .section-toc, .more-to-come, .unit-nav, .prev-next, .paired-lecture, .triptych, .page-downloads, .page-dates { display: none !important; }
+  .video-embed, .breadcrumb, .back-link,
+  .section-toc, .more-to-come, .unit-nav, .prev-next, .paired-lecture, .section-quotations, .page-downloads, .page-dates { display: none !important; }
   .unit-layout { display: block; max-width: none; padding: 0; margin: 0; }
   main, .reading { max-width: none; padding: 0; }
   a { color: #000; text-decoration: none; }
@@ -710,16 +657,10 @@ blockquote footer { margin-top: 0.85rem; font-size: 0.95rem; font-style: normal;
 .page-marker { display: inline-block; color: var(--color-meta); font-size: 0.78rem; font-style: normal; letter-spacing: 0.04em; border: 1px solid var(--color-border); border-radius: 2px; padding: 0 0.35rem; margin: 0 0.15rem; vertical-align: 0.12em; scroll-margin-top: 1.5rem; user-select: none; }
 
 /* ====================================================================
-   TEACHING AIDS — shorts resource pages (/slides/)
-   Slide display, both-ratio download buttons, cycle index list.
-   (Shorts Web Dev Handoff, 19 Aug 2026; Shorts Program Plan §2, D13.)
+   QUOTATION CARD PAGES (/cards/). The download-button and slide-* classes
+   were the teaching aids' and are kept for the card page, which inherited
+   them; the aid pages themselves left with Release B (Ask §4.2).
    ==================================================================== */
-.slide-display { margin: 1.75rem 0 1.25rem; }
-.slide-display img {
-  width: 100%; height: auto; display: block;
-  border: 1px solid var(--color-border);
-  background: #262b33; /* shorts-register field shows while the PNG loads */
-}
 .card-display { margin: 1.75rem auto 1.25rem; max-width: 36rem; }
 .card-display img { width: 100%; height: auto; display: block; border: 1px solid var(--color-border); }
 .card-quotation { margin: 1.5rem 0; }
@@ -733,47 +674,10 @@ blockquote footer { margin-top: 0.85rem; font-size: 0.95rem; font-style: normal;
 }
 .download-button:hover { color: var(--color-link-hover); border-color: var(--color-link-hover); }
 .slide-caption { color: var(--color-meta); font-size: 0.92rem; margin: 0 0 2rem; }
-.slide-onward { margin-top: 2.25rem; }
 .slide-backlink { margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--color-border); }
 
-/* Cycle index — published slides linked; upcoming entries unlinked + dated
-   (the run's public calendar, Editor's ruling 19 Aug 2026). */
-.slide-list { list-style: none; margin: 2rem 0 0; padding: 0; }
-.slide-list li { border-top: 1px solid var(--color-border); }
-.slide-list li:last-child { border-bottom: 1px solid var(--color-border); }
-.slide-list a, .slide-list .slide-list__upcoming { display: block; padding: 0.8rem 0; }
-.slide-list a { text-decoration: none; color: var(--color-text); }
-.slide-list a:hover { color: var(--color-gold); }
-.slide-list__title { font-size: 1.1rem; }
-.slide-list__date { display: block; color: var(--color-meta); font-size: 0.92rem; margin-top: 0.15rem; }
-.slide-list__upcoming .slide-list__title { color: var(--color-meta); }
-
-/* Audience chips (handoff memo §2, Editor's ruling 20 Aug 2026). One color
-   per category across the Teaching Aids section; the label is written inside
-   the chip — color is never the sole encoding. All text/fill pairs clear
-   WCAG AA (>= 5.9:1); the four fills hold a lightness ladder and were checked
-   pairwise under a deuteranopia simulation. */
-.audience-chip {
-  display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 600;
-  line-height: 1.35;
-  letter-spacing: 0.015em;
-  padding: 0.06rem 0.6rem 0.1rem;
-  border-radius: 999px;
-  white-space: nowrap;
-  vertical-align: 0.12em;
-}
-.audience-chip--for-everyone            { background: #f5e7c0; color: #6d5306; }
-.audience-chip--new-to-the-bible        { background: #d6efd9; color: #14594a; }
-.audience-chip--familiar-with-scripture { background: #c2d2ea; color: #2e4157; }
-.audience-chip--students-and-teachers   { background: #ddbccc; color: #552c4b; }
-.slide-list .audience-chip { margin-left: 0.6rem; }
-.audience-legend { margin: 1.25rem 0 0; }
-
 @media print {
-  /* The slide itself prints (it is the teaching asset); the download buttons
-     and back-link are screen affordances. Chips print as text on white. */
+  /* The card itself prints; the download buttons and back-link are screen
+     affordances. */
   .slide-downloads, .slide-backlink { display: none !important; }
-  .audience-chip { background: none !important; color: #000 !important; padding: 0; border: 0; }
 }

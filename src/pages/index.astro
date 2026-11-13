@@ -1,37 +1,36 @@
 ---
-// The home page opens on the commentary (corpus Web Dev Ask "The front page",
-// 9 Nov 2026, discharging PFW-035 and PFW-036; the Editor's rulings of 12 Nov
-// 2026, "1-3 as recommended"). Top to bottom: the headline and two buttons,
-// the published units as cards, the Latest strip, the Articles list (moved up
-// from below the Editor's welcome on the Editor's word, 13 Nov 2026), and then
-// the description, the Editor's welcome and the About links, unchanged in
-// wording.
+// The home page: two equal doors (Web Dev Ask "The site refocused on the
+// written record", §4.3, Release B; the Editor's rulings 12 and 20 of
+// 12 Nov 2026, and of 13 Nov 2026, "1-4 as recommended"). Top to bottom:
+//   1. the opening line, in the Editor's voice, as the page's h1;
+//   2. two panels of equal weight, side by side on a wide screen and stacked
+//      on a phone: Commentary (the units as text cards, and a "Read the
+//      commentary" button) and Articles (each article's title, provenance and
+//      description, and a "Read the articles" button);
+//   3. the Latest strip: the two newest pages of either kind, from their own
+//      dates (two by the Editor's word of 13 Nov 2026);
+//   4. the description paragraphs (the first conformed, §8 item (a)), the
+//      Editor's welcome, and the About links.
 //
-// NOTHING HERE IS LISTED BY HAND. The volumes, the unit cards, the Watch-the-
-// lectures target and the Latest strip are all read from the content
-// collections, and `isVisible` gates every one of them, so a draft shows
-// nothing and a newly published unit or page appears without an edit here.
+// It revises the page of PR #109 and the Editor's changes of 13 Nov 2026:
+// the text-only unit cards are kept; the "Watch the lectures" button is gone
+// (the lectures are reached by each commentary page's "Watch the lecture"
+// link); and the Articles list that stood after Latest becomes the second
+// panel.
 //
-// The Teaching Aids section that stood here is gone (PFW-035): the aids were
-// superseded by the quotation cards on 28 Oct 2026 (Loop Rev 36). The /slides/
-// pages themselves stay published and reachable from their commentary pages.
+// NOTHING HERE IS LISTED BY HAND. The volumes, units, articles and the Latest
+// strip are read from the content collections, and `isVisible` gates every
+// one of them, so a draft shows nothing and a newly published page appears
+// without an edit here. Until an article is published the Articles panel is
+// omitted and the Commentary panel takes the full width.
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import {
-  SITE,
-  commentaryUrl,
-  articleUrl,
-  lectureUrl,
-  normalizeId,
-  formatDate,
-  isVisible,
-} from '../lib/site';
+import { SITE, commentaryUrl, articleUrl, formatDate, isVisible } from '../lib/site';
 
 const volumes = (await getCollection('volumes'))
   .filter(isVisible)
   .sort((a, b) => a.data.title.localeCompare(b.data.title));
 const allCommentary = (await getCollection('commentary')).filter(isVisible);
-const lectures = (await getCollection('lectures')).filter(isVisible);
 
 // Reading order: chapter, then first verse (the unit), then section number.
 const byReadingOrder = (
@@ -42,107 +41,125 @@ const byReadingOrder = (
   (a.data.verseStart ?? 0) - (b.data.verseStart ?? 0) ||
   a.data.sectionNumber - b.data.sectionNumber;
 
-// --- The units as cards ----------------------------------------------------
-// Each published unit landing of each published volume, in reading order.
-// The cards are text only: verses, title, and the reading link. The lecture
-// thumbnail that stood above each card was removed on the Editor's ruling of
-// 13 Nov 2026 ("1-3 as recommended"), conforming the card to the Release B
-// home page (corpus Web Dev Ask "The site refocused on the written record",
-// §4.3: "each with its title and verses").
+// --- Commentary: the units as cards -------------------------------------------
+// Each published unit landing of each published volume, in reading order,
+// as a text card: verses, title, and the reading link (no picture, by the
+// Editor's ruling of 13 Nov 2026 and §4.3).
 const bookDisplayOf = new Map(volumes.map((v) => [v.data.book, v.data.bookDisplay]));
-const volumeUnits = volumes.map((v) => ({
-  volume: v,
-  units: allCommentary
-    .filter((e) => e.data.sectionType === 'unit-landing' && e.data.book === v.data.book)
-    .sort(byReadingOrder)
-    .map((u) => ({
-      id: u.id,
-      title: u.data.title,
-      verses: `${v.data.bookDisplay} ${u.data.passageRef}`,
-    })),
-}));
+const volumeUnits = volumes
+  .map((v) => ({
+    volume: v,
+    units: allCommentary
+      .filter((e) => e.data.sectionType === 'unit-landing' && e.data.book === v.data.book)
+      .sort(byReadingOrder)
+      .map((u) => ({
+        id: u.id,
+        title: u.data.title,
+        verses: `${v.data.bookDisplay} ${u.data.passageRef}`,
+      })),
+  }))
+  .filter((vu) => vu.units.length > 0);
 
-// --- The two buttons ---------------------------------------------------------
-// Read: the first volume's page. Watch: the first unit's Lecture 1, the
-// lecture paired to that unit's landing (the Editor's ruling, 12 Nov 2026; the
-// site has no lectures index). Either button is omitted rather than pointing
-// at a page that is not published.
-const firstVolume = volumeUnits[0];
-const firstUnit = volumeUnits.flatMap((vu) => vu.units)[0];
-const firstLecture =
-  firstUnit && lectures.some((l) => normalizeId(l.data.sectionRef.id) === firstUnit.id)
-    ? lectureUrl(firstUnit.id)
-    : null;
-
-// --- Latest ----------------------------------------------------------------
-// The two most recently published commentary pages, newest first, read from
-// each page's own `date` (the publication date; the Editor's ruling, 12 Nov
-// 2026; cut from five to two on the Editor's word, 13 Nov 2026). Not `revised`, which a conform sweep moves on many older pages at
-// once. Pages published the same day fall back to reading order, latest first.
-const LATEST_COUNT = 2;
-const latest = [...allCommentary]
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf() || byReadingOrder(b, a))
-  .slice(0, LATEST_COUNT)
-  .map((e) => ({
-    id: e.id,
-    title: e.data.title,
-    unit: `${bookDisplayOf.get(e.data.book) ?? ''} ${e.data.passageRef}`.trim(),
-    date: e.data.date,
-  }));
-
-// Parent articles only (chapters excluded); gated so the homepage shows an
-// Articles entry point only once an article is published, never an empty
-// "coming" section.
+// --- Articles ----------------------------------------------------------------
+// Parent articles only (chapters excluded), newest first.
 const articles = (await getCollection('articles'))
   .filter((a) => !a.id.includes('/') && isVisible(a))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+// --- Latest ------------------------------------------------------------------
+// The two most recently published pages of either kind, newest first, read
+// from each page's own `date` (the publication date; the Editor's ruling,
+// 12 Nov 2026). Not `revised`, which a conform sweep moves on many older
+// pages at once. Commentary pages published the same day fall back to reading
+// order, latest first.
+const LATEST_COUNT = 2;
+type Latest = { href: string; title: string; meta: string; date: Date };
+const latestCommentary = [...allCommentary]
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf() || byReadingOrder(b, a))
+  .map((e): Latest => ({
+    href: commentaryUrl(e.id),
+    title: e.data.title,
+    meta: `${bookDisplayOf.get(e.data.book) ?? ''} ${e.data.passageRef}`.trim(),
+    date: e.data.date,
+  }));
+const latestArticles = articles.map((a): Latest => ({
+  href: articleUrl(a.id),
+  title: a.data.title,
+  meta: 'Article',
+  date: a.data.date,
+}));
+// A stable merge: on a tie of dates the commentary page comes first.
+const latest = [...latestCommentary, ...latestArticles]
+  .map((x, i) => ({ x, i }))
+  .sort((a, b) => b.x.date.valueOf() - a.x.date.valueOf() || a.i - b.i)
+  .slice(0, LATEST_COUNT)
+  .map(({ x }) => x);
 ---
 <BaseLayout
   title={SITE.wordmark}
-  description="Verse-by-verse commentary on the New Testament at the systematic-theological register, paired with audiovisual lectures and projectable teaching aids. Freely available under CC BY 4.0."
+  description="Verse-by-verse commentary on the New Testament at the systematic-theological register, and scholarly articles in the field. Freely available under CC BY 4.0."
   tier="1"
 >
   <div class="reading reading--wide home">
     <header class="home-hero">
-      {/* The approved headline is the page's h1. The series name is not set
-          again here: the header's subtitle, directly above, already carries
-          it, and repeating it pushed the buttons below a phone's fold. */}
+      {/* The opening line is the page's h1. The series name is not set again
+          here: the header's subtitle, directly above, already carries it. */}
       <h1 class="home-hero__headline">
-        A verse-by-verse commentary on the New Testament, paired section by
-        section with audiovisual lectures.
+        Verse-by-verse commentary on the New Testament, and scholarly articles
+        in the field — free to read, to cite, and to reuse.
       </h1>
-      {(firstVolume || firstLecture) && (
-        <p class="home-hero__actions">
-          {firstVolume && (
-            <a class="button button--primary" href={commentaryUrl(firstVolume.volume.data.book)}>
-              Read the commentary on {firstVolume.volume.data.bookDisplay}
-            </a>
-          )}
-          {firstLecture && (
-            <a class="button" href={firstLecture}>Watch the lectures</a>
-          )}
-        </p>
-      )}
     </header>
 
-    {volumeUnits.map((vu) => vu.units.length > 0 && (
-      <section class="home-units" aria-labelledby={`units-${vu.volume.data.book}`}>
-        <h2 id={`units-${vu.volume.data.book}`}>
-          <a href={commentaryUrl(vu.volume.data.book)}>{vu.volume.data.title}</a>
-        </h2>
-        <ul class="unit-cards">
-          {vu.units.map((u) => (
-            <li>
-              <a class="unit-card" href={commentaryUrl(u.id)}>
-                <span class="unit-card__verses">{u.verses}</span>
-                <span class="unit-card__title">{u.title}</span>
-                <span class="unit-card__action">Start reading</span>
-              </a>
-            </li>
+    <div class={`home-doors${articles.length > 0 ? ' home-doors--two' : ''}`}>
+      {volumeUnits.length > 0 && (
+        <section class="home-door" aria-labelledby="door-commentary">
+          <h2 id="door-commentary"><a href="/commentary/">Commentary</a></h2>
+          {volumeUnits.map((vu) => (
+            <Fragment>
+              <p class="home-door__sub">
+                <a href={commentaryUrl(vu.volume.data.book)}>{vu.volume.data.title}</a>
+              </p>
+              <ul class="unit-cards">
+                {vu.units.map((u) => (
+                  <li>
+                    <a class="unit-card" href={commentaryUrl(u.id)}>
+                      <span class="unit-card__verses">{u.verses}</span>
+                      <span class="unit-card__title">{u.title}</span>
+                      <span class="unit-card__action">Start reading</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </Fragment>
           ))}
-        </ul>
-      </section>
-    ))}
+          <p class="home-door__action">
+            <a class="button button--primary" href={commentaryUrl(volumeUnits[0].volume.data.book)}>
+              Read the commentary
+            </a>
+          </p>
+        </section>
+      )}
+
+      {articles.length > 0 && (
+        <section class="home-door" aria-labelledby="door-articles">
+          <h2 id="door-articles"><a href="/articles/">Articles</a></h2>
+          <ul class="article-cards">
+            {articles.map((a) => (
+              <li>
+                <a class="unit-card" href={articleUrl(a.id)}>
+                  {a.data.provenance && <span class="unit-card__verses">{a.data.provenance}</span>}
+                  <span class="unit-card__title">{a.data.title}</span>
+                  <span class="article-card__desc">{a.data.description}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p class="home-door__action">
+            <a class="button button--primary" href="/articles/">Read the articles</a>
+          </p>
+        </section>
+      )}
+    </div>
 
     {latest.length > 0 && (
       <section class="home-latest" aria-labelledby="latest">
@@ -150,9 +167,9 @@ const articles = (await getCollection('articles'))
         <ol class="latest-list">
           {latest.map((p) => (
             <li>
-              <a href={commentaryUrl(p.id)}>{p.title}</a>
+              <a href={p.href}>{p.title}</a>
               <span class="latest-list__meta">
-                {p.unit} · <time datetime={p.date.toISOString().slice(0, 10)}>{formatDate(p.date)}</time>
+                {p.meta} · <time datetime={p.date.toISOString().slice(0, 10)}>{formatDate(p.date)}</time>
               </span>
             </li>
           ))}
@@ -160,29 +177,16 @@ const articles = (await getCollection('articles'))
       </section>
     )}
 
-    {articles.length > 0 && (
-      <Fragment>
-        <h2>Articles</h2>
-        <ul>
-          {articles.map((a) => (
-            <li><a href={articleUrl(a.id)}>{a.data.title}</a></li>
-          ))}
-        </ul>
-      </Fragment>
-    )}
-
     <p>
       A verse-by-verse commentary on the New Testament, taken up across the
       range of its writings — each volume carried through to a complete whole.
       The published Commentary is paired, section by section, with audiovisual
       Lectures that teach the same scholarly work — the writing for readers at
-      depth, the lectures for teachers and students. Particular questions that
-      warrant fuller treatment are developed as scholarly articles, published
-      here and submitted for peer review in journals in the field. From the
-      same work the series publishes teaching aids — projectable slides, each
-      with notes on how to teach from it, for use in church and in class. The
-      series is freely available under a Creative Commons Attribution 4.0
-      license.
+      depth, the lectures for teachers and students, on the series' lecture
+      site. Particular questions that warrant fuller treatment are developed as
+      scholarly articles, published here and submitted for peer review in
+      journals in the field. The series is freely available under a Creative
+      Commons Attribution 4.0 license.
     </p>
     <p>
       SECNT is also an invitation into a new genre of biblical scholarship. The

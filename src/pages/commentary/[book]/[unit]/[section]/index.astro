@@ -1,79 +1,51 @@
 ---
-import fs from 'node:fs';
-import path from 'node:path';
 import { getCollection, render } from 'astro:content';
 import Diagram from '../../../../../components/Diagram.astro';
-import Triptych from '../../../../../components/Triptych.astro';
+import SectionQuotations from '../../../../../components/SectionQuotations.astro';
 import PageDownloads from '../../../../../components/PageDownloads.astro';
 import BaseLayout from '../../../../../layouts/BaseLayout.astro';
 import UnitNav from '../../../../../components/UnitNav.astro';
 import PrevNext from '../../../../../components/PrevNext.astro';
 import PageDates from '../../../../../components/PageDates.astro';
 import Breadcrumb from '../../../../../components/Breadcrumb.astro';
-import { splitCommentaryId, normalizeId, lectureUrl, volumeUrl, commentaryUrl, isVisible, isAidVisible, asDiagrams } from '../../../../../lib/site';
+import { splitCommentaryId, normalizeId, lectureUrl, volumeUrl, commentaryUrl, isVisible, isCardVisible, asDiagrams } from '../../../../../lib/site';
 
 export async function getStaticPaths() {
   const sections = (await getCollection('commentary'))
     .filter((e) => e.data.sectionType !== 'unit-landing' && isVisible(e));
   const lectures = await getCollection('lectures');
-  // The section's teaching aid is found from the collection by its `section`
-  // reference (D47 sec 4) — never from a list kept by hand. One aid per pair
-  // (D47 sec 1), so the first match is the match.
-  const aids = await getCollection('slides');
-  // The section's quotation card, found the same way (corpus Loop Rev 36).
+  // The section's quotation cards, found from the collection by their
+  // `section` reference (corpus Loop Rev 36), never from a list kept by hand.
   const cards = await getCollection('cards');
   return sections.map((entry) => {
     const { book, unit, section } = splitCommentaryId(entry.id);
     const lecture = lectures.find((l) => normalizeId(l.data.sectionRef.id) === entry.id);
-    const aid =
-      aids.find((a) => a.data.section && normalizeId(a.data.section.id) === entry.id) ?? null;
-    // One or two cards per section (the Editor, 28 Oct 2026: "1 or 2 cards
-    // makes sense", in place of the aid's two formats), in id order.
+    // One or two cards per section (the Editor, 28 Oct 2026), in id order.
     const sectionCards = cards
       .filter((c) => normalizeId(c.data.section.id) === entry.id)
       .sort((a, b) => a.id.localeCompare(b.id))
       .slice(0, 2);
-    // The lecture's thumbnail has no frontmatter field: its path derives from
-    // this section's id (see lectureThumbUrl). Test for the file HERE, at
-    // build, so a pair whose Slide 1 has not been copied over yet renders no
-    // lecture panel at all rather than a broken image — the same degrade ask
-    // sec 9 requires of a section with no aid.
-    const thumb = path.join(process.cwd(), 'public', 'lectures', `${entry.id}.png`);
     return {
       params: { book, unit, section },
-      props: { entry, lecture, aid, sectionCards, hasLectureThumb: fs.existsSync(thumb) },
+      props: { entry, lecture, sectionCards },
     };
   });
 }
-const { entry, lecture, aid, sectionCards, hasLectureThumb } = Astro.props;
+const { entry, lecture, sectionCards } = Astro.props;
 const { book, unit } = splitCommentaryId(entry.id);
 const unitId = `${book}/${unit}`;
 const { Content } = await render(entry);
 const d = entry.data;
-// The panel row renders at the TOP of the article, between the title and the
-// body, so that it stands when the page opens (ask sec 2). It replaces the
-// "Watch the lecture" line that stood here before — the thumbnail and its
-// label now carry that link.
-//
-// The lecture panel needs the lecture published AND its thumbnail present; the
-// aid panel needs an aid whose own section — this one — is live (D47 sec 3),
-// which is what makes a single flip of `draft` publish all three.
+// RELEASE B (Web Dev Ask "The site refocused on the written record", §4.1 and
+// §4.2; the Editor's rulings of 12 Nov 2026). The row of panels that stood
+// under the title (the lecture's thumbnail, the teaching aid, the cards) is
+// gone. In its place: ONE plain text link, "Watch the lecture", to the
+// lecture's episode page on the lecture site, and lower on the page a short
+// "Quotations from this section" line for the cards. The "Listen to the
+// lecture" line went with the lecture pages: the lecture site has no audio
+// player (ruling 9), and `audioUrl` stands as data.
 const pairedLecture = d.hasLecture && lecture && isVisible(lecture) ? lecture : null;
-const showLecture = Boolean(pairedLecture && hasLectureThumb);
-const visibleAid = aid && isAidVisible(aid, entry) ? aid : null;
-const visibleCards = sectionCards.filter((c) => isAidVisible(c, entry));
-// NOTHING IS EVER LOST WHILE THE BACKFILL RUNS. A published lecture whose
-// Slide 1 has not been copied into public/lectures/ yet keeps the plain
-// "Watch the lecture" line that stood here before the row existed, so no
-// published page loses its lecture link waiting for an image. The line retires
-// itself, page by page, as each thumbnail lands.
-//
-// (Ask sec 3 assumed no backfill: it had the thumbnail coming from Bunny,
-// where every published pair already has one. The Editor's ruling of 20 Sep
-// 2026 took the image from the pair's own Diptychs folder instead, which is
-// cheaper per pair and independent of Bunny but does have to be carried over
-// for the pairs already published.)
-const lectureTextLinkOnly = Boolean(pairedLecture && !hasLectureThumb);
+const visibleCards = sectionCards.filter(() => isCardVisible(entry));
 // A page may carry one diagram or several (see asDiagrams / content.config.ts).
 // top/bottom render outside the body in array order; anchor diagrams are placed
 // inside the body by remark-diagram-anchor.
@@ -99,17 +71,9 @@ const crumbs = [
     {d.passageRef && <p class="passage-ref">John {d.passageRef}</p>}
     <h1>{d.title}</h1>
 
-    <Triptych sectionId={entry.id} showLecture={showLecture} aid={visibleAid} cards={visibleCards} />
-
-    {lectureTextLinkOnly && (
+    {pairedLecture && (
       <p class="paired-lecture">
         <a href={lectureUrl(entry.id)}>Watch the lecture</a>
-      </p>
-    )}
-
-    {pairedLecture?.data.audioUrl && (
-      <p class="paired-listen">
-        <a href={`${lectureUrl(entry.id)}#listen`}>Listen to the lecture</a>
       </p>
     )}
 
@@ -120,6 +84,8 @@ const crumbs = [
     <Content />
 
     {diagramsBottom.map((dg) => <Diagram diagram={dg} entryPath={entry.filePath} />)}
+
+    <SectionQuotations cards={visibleCards} />
 
     <PrevNext unitId={unitId} currentId={entry.id} />
     <PageDates date={d.date} revised={d.revised} />

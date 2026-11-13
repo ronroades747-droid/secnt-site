@@ -306,6 +306,13 @@ const lectures = defineCollection({
 // ---------------------------------------------------------------------------
 // Collection: slideCycles  —  Teaching Aids cycle indexes
 // ---------------------------------------------------------------------------
+// RELEASE B (Web Dev Ask "The site refocused on the written record", §4.2):
+// the /slides/ pages are gone, and this collection and `slides` below build
+// no page. They are kept as data for one purpose: src/pages/[redirects].ts
+// reads them at every build to redirect each old /slides/ address (QR-baked
+// into published video) to its commentary page. The notes below describe the
+// pages as they were.
+//
 // One entry per completed cycle whose shorts run has opened (Shorts Program
 // Plan §2/§4; Shorts Web Dev Handoff, 19 Aug 2026, §2 Route 2). The entry's
 // body is the cycle introduction (supplied by Commentary Production); the
@@ -345,14 +352,13 @@ const slideCycles = defineCollection({
 // Frontmatter is Web-Dev-owned; the body (notes prose + the required
 // Pedagogical task section) is supplied by Commentary Production per short.
 // Served slide images live in public/slides/<slug>/ under the derived names
-// <slug>-16x9.jpg / <slug>-9x16.jpg (see slideAssetUrl in site.ts); no
-// per-entry asset fields to drift. No shorts-register internal apparatus
+// <slug>-16x9.jpg / <slug>-9x16.jpg; no per-entry asset fields to drift. No shorts-register internal apparatus
 // (SS index IDs, Build numbers) appears anywhere in this public repo.
 // Audience tag — the public label registry (handoff memo §2, Editor's
 // audience-tags ruling, 20 Aug 2026 revision): names the floor, not the
 // ceiling. Tokens are public-safe; internal audience codes never appear in
-// this repo (Public-Facing Materials Discipline). Labels + chip styling:
-// AUDIENCES in site.ts and the chip classes in global.css.
+// this repo (Public-Facing Materials Discipline). The labels and chips that
+// displayed it left with the pages (Release B).
 const audience = z.enum([
   'for-everyone',
   'new-to-the-bible',
@@ -367,8 +373,8 @@ const audience = z.enum([
 // id, a URL, or an asset path. The pattern is `^\d+-`, deliberately not
 // `^\d{2}-`: a mistyped `4-` must still be stripped, because a two-digit
 // pattern would silently leave it in the id and re-point that page's QR code
-// at a 404. src/lib/slide-ids.ts is the independent check on that, asserted
-// at build in the /slides/ route.
+// at a 404. The same holds for the redirects that replaced the pages: the id
+// is the old address they match.
 const slides = defineCollection({
   loader: glob({
     pattern: '**/*.md',
@@ -453,7 +459,7 @@ const slides = defineCollection({
 // download) — see cardImageUrl in site.ts; no per-entry asset fields.
 //
 // Like a D47 aid, a card has no flip of its own: it is live exactly when the
-// commentary section it names is live (isAidVisible applies unchanged).
+// commentary section it names is live (isCardVisible in site.ts).
 // The quotation is the source's, cited in full; only the card's design is
 // ours to license.
 const cards = defineCollection({

@@ -1,0 +1,35 @@
+---
+// "Quotations from this section": the short line, lower on a commentary page,
+// that links its quotation cards (Web Dev Ask "The site refocused on the
+// written record", §4.2, Release B). It replaces the cards' panels in the row
+// under the title, which left with the lecture and teaching-aid panels.
+//
+// One or two cards per section, already found and visibility-checked by the
+// route. Each is linked by its own title ("Herman Ridderbos on John 1:14"), so
+// two cards read as two links on one line. Where both cards carry the same
+// title (two quotations from one voice on one verse), each is numbered, so the
+// two links never read alike. No cards, no line.
+import { cardUrl } from '../lib/site';
+
+interface Props {
+  cards: any[];
+}
+const { cards } = Astro.props;
+const shared = (t: string) => cards.filter((c) => c.data.title === t).length > 1;
+const labels = cards.map((c, i) =>
+  shared(c.data.title)
+    ? `${c.data.title} (${cards.slice(0, i + 1).filter((x) => x.data.title === c.data.title).length})`
+    : c.data.title
+);
+---
+{cards.length > 0 && (
+  <p class="section-quotations">
+    Quotations from this section:{' '}
+    {cards.map((c, i) => (
+      <>
+        {i > 0 && ' · '}
+        <a href={cardUrl(c.id)}>{labels[i]}</a>
+      </>
+    ))}
+  </p>
+)}
