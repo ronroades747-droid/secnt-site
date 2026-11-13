@@ -149,6 +149,11 @@ const articles = defineCollection({
       // Site publication date — drives the reverse-chronological listing.
       date: z.coerce.date(),
       updated: z.coerce.date().optional(),
+      // See commentary.revised — same standard, same semantics. A new
+      // `revised` date cuts a dated version (Release C, ruling 14; the
+      // Editor's ruling of 13 Nov 2026 gave articles this field rather than
+      // reading `updated`, which is left as it was).
+      revised: z.coerce.date().optional(),
       // Provenance of a work first produced elsewhere/earlier, rendered under
       // the title and in the listing (e.g. "M.A. thesis, Wheaton College,
       // June 1974"). Omitted for articles original to SECNT.

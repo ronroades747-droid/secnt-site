@@ -5,7 +5,8 @@
 // THE RULE. A version is the page EXACTLY AS COMMITTED in the commit that set
 // its date, and it never changes (ruling 22):
 //   - the page as first published is version 1, dated its `date`;
-//   - each new `revised` date (an article's `updated`) cuts a new version,
+//   - each new `revised` date cuts a new version, on commentary pages and
+//     articles alike (the Editor's ruling of 13 Nov 2026),
 //     dated that day (ruling 14);
 //   - a correction that leaves the date unmoved cuts none: it appears on the
 //     current page only.
@@ -114,11 +115,11 @@ function versionsOf(page) {
   // corrected after they went live (16 Aug 2026, "publication-date
   // integrity"), so the date a version 1 carries is the corrected one, read
   // from the current file, never the stub date the first commit happened to
-  // hold. Only a new revision date (`revised`; an article's `updated`) cuts a
+  // hold. Only a new revision date (`revised`, on commentary and articles alike) cuts a
   // later version.
   const current = frontmatter(fs.readFileSync(path.join(ROOT, page.file), 'utf8')) ?? {};
   const published = iso(current.date);
-  const revisedOf = (fm) => iso(page.kind === 'articles' ? fm.updated : fm.revised);
+  const revisedOf = (fm) => iso(fm.revised);
   const found = [];
   let last = null;
   for (const { commit, path: p } of history(page.file)) {

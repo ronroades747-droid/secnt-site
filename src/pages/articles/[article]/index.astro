@@ -30,9 +30,9 @@ const showMore = isChaptered && d.complete !== true;
 
 // THE RECORD (Release C, Ask §5.1): visible dates, the citation of the
 // current dated version, the Versions list, and the Scholar tags. An
-// article's revision date is its `updated` field.
+// article's revision date is its `revised` field, as on commentary pages.
 const versions = await pageVersions('articles', entry.id);
-const citedDate = versions.at(-1)?.date ?? (d.updated ?? d.date).toISOString().slice(0, 10);
+const citedDate = versions.at(-1)?.date ?? (d.revised ?? d.date).toISOString().slice(0, 10);
 const citation = cite({
   kind: 'articles',
   title: d.title,
@@ -48,7 +48,7 @@ const pdfMeta = d.pdf
   : '';
 ---
 <BaseLayout title={d.title} description={d.description}
-  pageMeta={{ date: d.date, updated: d.updated, license: d.license }}
+  pageMeta={{ date: d.date, revised: d.revised, updated: d.updated, license: d.license }}
   scholar={{ title: d.title, publicationDate: d.date, pdfUrl: d.pdf?.src }}>
   <article class="reading">
     <Breadcrumb crumbs={[{ label: 'Articles', href: '/articles/' }, { label: d.title }]} />
@@ -84,6 +84,6 @@ const pdfMeta = d.pdf
     )}
 
     <PageRecord citation={citation} livingPath={articleUrl(entry.id)} versions={versions} citedDate={citedDate} />
-    <PageDates date={d.date} revised={d.updated} />
+    <PageDates date={d.date} revised={d.revised} />
   </article>
 </BaseLayout>
