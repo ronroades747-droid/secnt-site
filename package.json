@@ -9,7 +9,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "build:podcast": "astro build --config astro.podcast.config.mjs",
+    "dev:podcast": "astro dev --config astro.podcast.config.mjs"
   },
   "dependencies": {
     "@sparticuz/chromium": "~143.0.4",

@@ -162,6 +162,12 @@ The Bunny library ID is global (already in `src/lib/site.ts`); you never set it 
 
 2. **`draft`** — flip to `false`.
 
+### The lecture site and its podcast feed
+
+The same flip also publishes the lecture on the lecture site, `podcast.secnt.org`, and in its video podcast feed (`/feed.xml`). That site is a second build of this repository, made by its own Cloudflare Pages project (`secnt-podcast`, build command `npm run build:podcast`). It reads the same lecture files, so there is nothing more to edit.
+
+Each episode's file is the video's **720p MP4** on Bunny, so **the video must have finished encoding, with MP4 Fallback on, before the flip.** The lecture-site build checks every published lecture's MP4 and **fails, naming the lecture, if one is missing**. secnt.org still publishes, because it is a separate build. The lecture site keeps its last good version until the MP4 exists and the build is retried.
+
 ### `audioUrl` — the listen-only player
 
 Set at the flip, with the other lecture fields, once the voice track has been uploaded unchanged to Bunny Storage (`secnt-audio`) in its cycle's folder. **Copy the address from the pair's Build** (its artifact-name block); never derive it from the page slug. The path is the corpus cycle folder plus the voice track's committed file name, and it is case-sensitive:
@@ -260,6 +266,7 @@ Do not author a section file from scratch on the Production side. The frontmatte
 **Lecture**
 - [ ] Video uploaded to Bunny, encoded, 16:9 title-slide thumbnail set
 - [ ] `bunnyVideoId` = bare GUID (no URL)
+- [ ] Video finished encoding in Bunny (its 720p MP4 exists), so the lecture-site build passes
 - [ ] `audioUrl`, if the voice track is uploaded: copied from the Build, opens and plays in a browser
 - [ ] `sectionRef` matches the section's ID exactly
 - [ ] `title` in `Lecture N — [descriptor]` form
@@ -270,4 +277,5 @@ Do not author a section file from scratch on the Production side. The frontmatte
 - [ ] If this is the **first** pair: the volume (`john.md`) and unit landing (`index.md`) are also `draft: false`
 - [ ] If this is the **last** pair: `passageComplete: true` set on the unit-landing `index.md` in the same commit
 - [ ] Committed and on `main` (pushed on Ron's authorization, or the cloud session's PR merged); Cloudflare rebuild succeeded (green in the Pages dashboard)
+- [ ] The `secnt-podcast` build succeeded too (green in the Pages dashboard)
 - [ ] Opened the live page: title shows once, passage ref and epigraph render, video plays, back-link/embed resolves; any diagram renders once, at its marker, in place; on the unit landing, the `More to come` line is present (or correctly gone, if this was the last pair)
