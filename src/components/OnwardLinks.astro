@@ -1,0 +1,36 @@
+---
+// Two onward lines lower on a commentary page (Release D, Ask §7, measures
+// 4 and 5; the Editor's ruling 24 of 12 Nov 2026):
+//
+//   - "The same question in the other units": on each The Text, Engagement
+//     with Prior Scholarship and Pastoral Hearing page, its counterparts in
+//     the volume's other units, derived from `sectionType`;
+//   - "Related article: …": the published articles that name this page's
+//     passage in their `passages` field. None does yet (the Editor, 14 Nov
+//     2026: "none for now"), so the line shows nowhere until he names one.
+//
+// Derived from the collections and gated by isVisible (src/lib/onward.ts).
+// Ruling 24's sixth measure, chosen links between exegesis and theology pages
+// across units, is later work and is not built here.
+import { sameQuestion, relatedArticles } from '../lib/onward';
+
+interface Props { page: any; }
+const { page } = Astro.props;
+const same = await sameQuestion(page);
+const related = await relatedArticles(page.id);
+---
+{related.length > 0 && (
+  <p class="related-article">
+    {related.map((a, i) => (
+      <>{i > 0 && <br />}Related article: <a href={a.url}>{a.label}</a></>
+    ))}
+  </p>
+)}
+{same.length > 0 && (
+  <nav class="same-question" aria-labelledby="same-question-heading">
+    <h2 class="same-question__heading" id="same-question-heading">The same question in the other units</h2>
+    <ul>
+      {same.map((l) => <li><a href={l.url}>{l.label}</a></li>)}
+    </ul>
+  </nav>
+)}

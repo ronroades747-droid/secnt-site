@@ -26,6 +26,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import { SITE, commentaryUrl, articleUrl, formatDate, isVisible } from '../lib/site';
+import { PODCAST } from '../../podcast/lib/episodes';
 
 const volumes = (await getCollection('volumes'))
   .filter(isVisible)
@@ -160,6 +161,21 @@ const latest = [...latestCommentary, ...latestArticles]
         </section>
       )}
     </div>
+
+    {/* The lecture site, after the Articles (the Editor, in the Release D
+        session, 14 Nov 2026). Its title, description and podcast line are the
+        lecture site's own (podcast/pages/index.astro; Gate 5 of Release A),
+        read from PODCAST so the two pages cannot drift apart. The "Search for"
+        line is also written in podcast/public/feed.xsl and the show page:
+        change all three together. */}
+    <section class="home-lectures" aria-labelledby="home-lectures">
+      <h2 id="home-lectures"><a href={`${PODCAST.origin}/`}>{PODCAST.title}</a></h2>
+      <p>{PODCAST.description}</p>
+      <div class="home-lectures__follow">
+        <h3>Follow as a podcast</h3>
+        <p>Search for <strong>{PODCAST.title}</strong> in Apple Podcasts or Pocket Casts.</p>
+      </div>
+    </section>
 
     {latest.length > 0 && (
       <section class="home-latest" aria-labelledby="latest">
