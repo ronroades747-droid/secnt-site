@@ -1,7 +1,7 @@
 ---
 title: "Exegesis: καὶ ἐθεασάμεθα τὴν δόξαν αὐτοῦ — He Dwelt Among Us, and We Beheld His Glory"
-description: "John 1:14b–d: he dwelt among us, and we beheld his glory, glory as of the only Son from the Father, full of grace and truth."
-date: 2026-11-02
+description: "John 1:14b–d: he dwelt among us, and we beheld his glory, glory as of the only one from the Father, full of grace and truth."
+date: 2026-11-14
 book: john
 chapter: 1
 passageRef: "1:14–18"
@@ -12,7 +12,7 @@ sectionType: exegesis
 tocGroup: "Part one — the confession (1:14)"
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 The Word became flesh, and the verse goes on at once to say what that becoming was: καὶ ἐσκήνωσεν ἐν ἡμῖν, καὶ ἐθεασάμεθα τὴν δόξαν αὐτοῦ, δόξαν ὡς μονογενοῦς παρὰ πατρός, πλήρης χάριτος καὶ ἀληθείας, *and dwelt among us, and we beheld his glory, glory as of the only one from the Father, full of grace and truth*. Everything after σὰρξ ἐγένετο [unfolds the clause](/commentary/john/1-14-to-18/10-word-became-flesh/) that opened the verse. The commentators letter the parts of the verse differently, so this page names them by the Greek: the dwelling, καὶ ἐσκήνωσεν ἐν ἡμῖν; the beholding, καὶ ἐθεασάμεθα τὴν δόξαν αὐτοῦ; and the definition of the glory, δόξαν ὡς μονογενοῦς παρὰ πατρός, πλήρης χάριτος καὶ ἀληθείας.
