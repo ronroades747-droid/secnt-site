@@ -174,6 +174,10 @@ main { flex: 1 0 auto; width: 100%; }
 }
 .wordmark:hover { color: var(--color-text); }
 .site-subtitle { color: var(--color-meta); font-size: 0.95rem; font-style: italic; }
+/* The lecture site's title line links to secnt.org's home page; it reads as
+   the same quiet subtitle until hovered. */
+a.site-subtitle--link { text-decoration: none; }
+a.site-subtitle--link:hover { color: var(--color-gold); }
 
 .primary-nav { margin: 1rem 0 1rem; }
 .primary-nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 1.25rem; margin: 0; padding: 0; }

@@ -60,11 +60,12 @@ const nav = [
   <body>
     <header class="chrome site-header">
       <div class="chrome-inner">
-        {/* The wordmark goes to secnt.org's home page (the Editor, 14 Nov
-            2026); "Lectures" in the navigation is the lecture site's own. */}
+        {/* The wordmark and the title line beside it both go to secnt.org's
+            home page (the Editor, 14 Nov 2026); "Lectures" in the navigation
+            is the lecture site's own home. */}
         <a class="wordmark" href={`${SITE.origin}/`}>{SITE.wordmark}</a>
         <div class="site-identity">
-          <span class="site-subtitle">{PODCAST.title} · {SITE.name}</span>
+          <a class="site-subtitle site-subtitle--link" href={`${SITE.origin}/`}>{PODCAST.title} · {SITE.name}</a>
         </div>
         <nav class="primary-nav" aria-label="Primary">
           <ul>
