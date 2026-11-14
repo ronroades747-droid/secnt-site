@@ -10,7 +10,7 @@ license: CC-BY-4.0
 
 ## §1 What SECNT Is
 
-The Systematic Evangelical Commentaries on the New Testament (SECNT) is a multi-volume verse-by-verse commentary series on the New Testament. The first volume — the *Commentary on the Gospel of John* — is under active publication; subsequent volumes will follow as the series develops.
+The Systematic Evangelical Commentaries on the New Testament (SECNT) is a multi-volume verse-by-verse commentary series on the New Testament. The first volume — the *Commentary on the Prologue of John* — is under active publication; subsequent volumes will follow as the series develops.
 
 Each volume of the published Commentary is paired with a series of audiovisual lectures that teach the Commentary's substantive scholarly work. The two formats serve different readers and different ways of engaging the same material. The written Commentary serves scholars, professors, and seminary students who want to engage the underlying scholarly work at depth — the running exposition carries detailed footnotes that document every source, every engagement with prior scholarship, every methodological decision the commentary makes. The audiovisual Lectures serve pastors, teachers, and seminary students who want the same substantive scholarly work opened up in expositional form — taught at deliberate pace, with the restatement and explanation that a listening audience needs to follow the argument and use it in their own teaching ministry.[^1] Both formats deliver the same scholarly work; the difference is how the work meets the reader.
 
@@ -170,9 +170,9 @@ It does mean that the series operates from a substantive confessional location a
 
 ### The First Volume
 
-The *Commentary on the Gospel of John* is the first volume of SECNT, currently under active publication. The Gospel of John is published in cycles — coordinated publications of a unit's Commentary text alongside its complete set of paired Lectures, with the unit's contribution to the volume's table of contents added at the same publication event. Cycle 1 covers Jn 1:1–3 and will be the series's first coordinated publication; subsequent cycles work through the remainder of the prologue (Jn 1:4–18) and the body of the Gospel.
+The *Commentary on the Prologue of John* (John 1:1–18) is the first volume of SECNT, currently in publication. It is published in cycles — coordinated publications of a unit's Commentary text alongside its complete set of paired Lectures, with the unit's contribution to the volume's table of contents added at the same publication event. Cycle 1, John 1:1–3, was the series's first coordinated publication; the cycles that follow carry the volume through to verse 18.
 
-The audiovisual Lectures pair with each cycle's Commentary publication. A reader arriving at a published unit's Commentary page finds links to the paired Lectures from the section headers; a reader watching a Lecture finds back-links to the Commentary section the Lecture teaches. The two artifacts publish together as the coordinated cycle deliverable.
+The audiovisual Lectures pair with each cycle's Commentary publication. A reader arriving at a published unit's Commentary page finds a link to each section's paired Lecture on the series' lecture site, where the Lectures can be watched in sequence, or followed as a podcast; each Lecture links back to the Commentary section it teaches. The two artifacts publish together as the coordinated cycle deliverable.
 
 ### The Sequential Cycle Approach
 
@@ -192,10 +192,10 @@ The pace of publication will reflect the substantive work each unit requires. As
 
 ### The Series Over Time
 
-The SECNT Commentary on John is the first volume. The Johannine epistles (1, 2, and 3 John) are projected to follow the Commentary on John as a natural continuation of the Johannine corpus. The series's longer-term scope envisions multi-volume coverage of the New Testament. The current first-volume work establishes the genre at depth; subsequent volumes operate within the methodological discipline the first volume establishes and articulates. The pace and ordering of subsequent volumes will develop as the corpus grows.
+The *Commentary on the Prologue of John* is the first volume. The volumes that follow take up the New Testament where a full treatment can add most to what the literature already provides: a short book read whole, beginning with Jude, and otherwise single passages from across the New Testament. The current first-volume work establishes the genre at depth; subsequent volumes operate within the methodological discipline the first volume establishes and articulates. The pace and ordering of subsequent volumes will develop as the corpus grows.
 
 ### The Citation and Archive Trajectory
 
-Each published unit of the Commentary carries a stable canonical URL that serves as the citation target for scholarly and pastoral reference. The citation form and the canonical URL discipline are articulated at the [Citing](/citing/) page. The work is published under a Creative Commons Attribution 4.0 license with deliberate movement toward public-domain status over time; the licensing posture is itself a commitment to the work's enduring availability to the church across institutional boundaries.
+Each published page of the Commentary and of the Articles carries a stable canonical URL that serves as the citation target for scholarly and pastoral reference, and each substantive revision is kept as a dated version at its own permanent address, so that a citation resolves to the text its author read. The citation form, the canonical URL discipline and the dated versions are articulated at the [Citing](/citing/) page. The work is published under a Creative Commons Attribution 4.0 license with deliberate movement toward public-domain status over time; the licensing posture is itself a commitment to the work's enduring availability to the church across institutional boundaries.
 
 The series carries an archival commitment that complements the digital publication. The substantive scholarly work — the locked-corpus resolutions, the documented methodological discipline, the matured architecture of every passage's treatment — is sustained as a body of work intended to endure. The institutional archive trajectory will develop as the corpus grows; the substantive intention is that SECNT's work remains available to the church and to the scholarly tradition long after its first publication.

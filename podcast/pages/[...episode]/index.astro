@@ -1,0 +1,57 @@
+---
+// An episode page per lecture (Ask §3.1): the Bunny player as secnt.org
+// embeds it today, the lecture's description, Previous/Next straight through
+// the units, and the way back to the commentary section it teaches.
+import PodcastLayout from '../../layouts/PodcastLayout.astro';
+import BunnyEmbed from '../../../src/components/BunnyEmbed.astro';
+import Breadcrumb from '../../../src/components/Breadcrumb.astro';
+import PageDates from '../../../src/components/PageDates.astro';
+import { getEpisodes, commentaryHref, type Episode } from '../../lib/episodes';
+
+export async function getStaticPaths() {
+  const { episodes } = await getEpisodes();
+  return episodes.map((e) => ({ params: { episode: e.sectionId }, props: { e } }));
+}
+const { e } = Astro.props as { e: Episode };
+const l = e.lecture.data;
+const runtime = l.duration && l.duration !== '00:00' ? l.duration : null;
+const crumbs = [
+  { label: 'Lectures', href: '/' },
+  { label: e.unit.passageLabel, href: `/#unit-${e.unit.number}` },
+  { label: `Lecture ${e.numberInUnit}` },
+];
+---
+<PodcastLayout title={l.title} description={l.description}>
+  <article class="reading reading--wide">
+    <Breadcrumb crumbs={crumbs} />
+    <h1>{l.title}</h1>
+    <p class="episode-meta">{e.passageLabel} · Lecture {e.numberInUnit}{runtime && ` · ${runtime}`}</p>
+
+    <BunnyEmbed videoId={l.bunnyVideoId} title={l.title} />
+
+    {l.description && <p class="episode-description">{l.description}</p>}
+
+    <a class="back-link" href={commentaryHref(e.sectionId)}>Read the commentary: {e.section.data.title} →</a>
+
+    <nav class="prev-next" aria-label="Lecture navigation">
+      {e.prev ? (
+        <a class="prev-next__link prev-next__prev" href={e.prev.path}>
+          <span class="prev-next__dir">← Previous lecture</span>
+          <span class="prev-next__title">{e.prev.lecture.data.title}</span>
+        </a>
+      ) : <span></span>}
+      {e.next && (
+        <a class="prev-next__link prev-next__next" href={e.next.path}>
+          <span class="prev-next__dir">Next lecture →</span>
+          <span class="prev-next__title">{e.next.lecture.data.title}</span>
+        </a>
+      )}
+    </nav>
+
+    <PageDates date={l.date} revised={l.revised} />
+  </article>
+</PodcastLayout>
+
+<style>
+  .episode-meta { color: var(--color-meta); margin-top: -0.5rem; }
+</style>

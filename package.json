@@ -9,12 +9,16 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "build:podcast": "astro build --config astro.podcast.config.mjs",
+    "dev:podcast": "astro dev --config astro.podcast.config.mjs"
   },
   "dependencies": {
     "@sparticuz/chromium": "~143.0.4",
     "astro": "^6.4.0",
+    "js-yaml": "^4.3.2",
     "playwright-core": "^1.63.0",
-    "remark-gfm": "^4.0.1"
+    "remark-gfm": "^4.0.1",
+    "sharp": "^0.34.5"
   }
 }

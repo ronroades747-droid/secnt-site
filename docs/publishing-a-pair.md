@@ -47,7 +47,7 @@ src/content/lectures/john/1-1-to-3/NN-slug.md     ← its paired lecture
 
 One file each, sharing the same `NN-slug`. The filename is the section's slug and folder.
 
-**The unit landing is the exception:** the section is `commentary/john/1-1-to-3/index.md` (it has `sectionNumber: 0`, `sectionType: unit-landing`, and carries the §1–§3 front-matter prose), and its lecture is `lectures/john/1-1-to-3/index.md`. Lecture 1 embeds on the landing automatically — no `/lecture/` child route — so the "watch the lecture" link is replaced by the inline video. See *The landing* below.
+**The unit landing is the exception:** the section is `commentary/john/1-1-to-3/index.md` (it has `sectionNumber: 0`, `sectionType: unit-landing`, and carries the §1–§3 front-matter prose), and its lecture is `lectures/john/1-1-to-3/index.md`. Lecture 1 is linked from the landing exactly as every other lecture is from its section. See *The landing* below.
 
 ---
 
@@ -118,8 +118,7 @@ The unit landing renders diagrams the same way — the marker injects the figure
 
 The unit landing (`index.md`) works like any section, with three differences, all handled by the template — nothing extra in the file:
 
-- **Lecture 1 embeds inline.** The template finds the lecture whose `sectionRef` points at the landing and renders the video on the page. No `/lecture/` child route, no embed markup in the file.
-- **No "watch the lecture" link** — the embed replaces it.
+- **Lecture 1 is linked, as every lecture is.** The template finds the lecture whose `sectionRef` points at the landing and shows a plain "Watch the lecture" link under the title, to the lecture's episode page on the lecture site (see *The lecture site and its podcast feed*). No embed markup in the file.
 - The body is the §1–§3 front-matter prose (Introduction, Framework, Sources / Method), plus the architectural-orientation diagram's `<!-- diagram -->` marker where you want the figure.
 
 ---
@@ -162,6 +161,16 @@ The Bunny library ID is global (already in `src/lib/site.ts`); you never set it 
 
 2. **`draft`** — flip to `false`.
 
+### The lecture site and its podcast feed
+
+**secnt.org has no lecture pages** (Release B of `Methodology/Web Dev Ask — The site refocused on the written record.md` in the corpus repo). Each commentary page with a published lecture carries one plain text link, "Watch the lecture", to that lecture's episode page on the lecture site, and each old `/commentary/…/lecture/` address redirects there permanently. The redirect list is written at every build from the collections (`src/pages/[redirects].ts`), so a new lecture needs nothing beyond its flip.
+
+The same flip also publishes the lecture on the lecture site, `podcast.secnt.org`, and in its video podcast feed (`/feed.xml`). That site is a second build of this repository, made by its own Cloudflare Pages project (`secnt-podcast`, build command `npm run build:podcast`). It reads the same lecture files, so there is nothing more to edit.
+
+Each episode's file is the video's **720p MP4** on Bunny, so **the video must have finished encoding, with MP4 Fallback on, before the flip.** The lecture-site build checks every published lecture's MP4 and **fails, naming the lecture, if one is missing**. secnt.org still publishes, because it is a separate build. The lecture site keeps its last good version until the MP4 exists and the build is retried.
+
+**The feed's browser page.** Opened in a web browser, `/feed.xml` shows a readable page rather than raw code: the show's title and description, the line "Search for SECNT Lectures in Apple Podcasts or Pocket Casts.", and the episode list. The stylesheet `podcast/public/feed.xsl` draws that page, and podcast apps ignore it. The title, description and episodes come from the feed itself, so they never need editing there. **The "Search for …" line is written in three places: `podcast/public/feed.xsl`, the show page `podcast/pages/index.astro`, and secnt.org's home page `src/pages/index.astro`, whose lecture block also shows the show's title and description (since Release D, 14 November 2026). Change all three together.** By the Editor's ruling of 13 November 2026, neither page shows the feed's address. A browser that no longer applies stylesheets to XML simply shows the raw feed, which does no harm.
+
 ### `audioUrl` — the listen-only player
 
 Set at the flip, with the other lecture fields, once the voice track has been uploaded unchanged to Bunny Storage (`secnt-audio`) in its cycle's folder. **Copy the address from the pair's Build** (its artifact-name block); never derive it from the page slug. The path is the corpus cycle folder plus the voice track's committed file name, and it is case-sensitive:
@@ -170,7 +179,7 @@ Set at the flip, with the other lecture fields, once the voice track has been up
 audioUrl: "https://audio.secnt.org/Jn1_6-13/Jn1_613_Lecture_18.mp3"
 ```
 
-With it set, the lecture page shows a "Listen" player under the video and the commentary page a "Listen to the lecture" line under its lecture panel. Without it, neither appears. The build refuses a value that is not a full `https` URL.
+**Nothing displays it at present.** The listen player and the "Listen to the lecture" line left with secnt.org's lecture pages (Release B), and the lecture site has no audio player (the Editor's ruling 9 of 12 November 2026). The value is still set at the flip and stands as data. The build refuses a value that is not a full `https` URL.
 
 ### `sectionRef` — make it match exactly
 
@@ -234,6 +243,7 @@ Cloudflare rebuilds automatically. `draft: false` content goes live; `draft: tru
 - **A correction to a live page sets `revised`.** Any pass that changes a live page's rendered content adds or updates `revised: YYYY-MM-DD` to that pass's date **in the same commit** as the correction. The page foot then reads "Published {date} · Revised {revised}". Repeated corrections advance `revised` to the latest pass; the fuller history is git's.
 - **A metadata-only correction does not set `revised`** *(Editor's ruling, 25 August 2026; refines the bullet above)*. `revised` is itself a reader-facing claim — it renders at the page foot, and a reader who sees it reasonably infers that the page's argument or wording moved. So it is set for a change to **what the reader sees on that page**: the body prose, its footnotes, its figures and their captions. It is **not** set for a correction confined to frontmatter that renders somewhere else or not visibly — `description` is the type case, feeding the HTML meta description and the unit landing's TOC blurb but appearing nowhere on the section page itself. Setting `revised` for such a pass tells the reader something *less* true than leaving it alone: it announces a revision that, on the page in front of them, did not happen. Git history remains the full record either way. Where one pass touches both, `revised` follows the body change. **Occasion:** the 25 August 2026 sweep that struck Locus numbering from ten Cycle-2 theology stubs' `description` fields (FWI-057) — eight of them live, none of them visibly changed, and eight "Revised" lines would have overstated every one.
 - The machine-readable schema.org pair (`datePublished` / `dateModified`) follows from these two fields automatically; nothing extra is set.
+- **Each new `revised` date cuts a dated version** *(Release C, 13 November 2026; the Editor's rulings 14, 15 and 22 of 12 November)*. The build reads the Git history and publishes the page exactly as it stood in the commit that set each date at `<page URL>v/<YYYY-MM-DD>/`, with its own PDF, and lists every version under *Versions* on the page. The page as first published is version 1, dated its `date`. Nothing is written or kept by hand: the versions are generated at every build (`src/lib/versions.mjs`). A commit that leaves `revised` unmoved changes the current page only. Articles carry the same `revised` field, with the same meaning, and it cuts their versions the same way.
 
 ---
 
@@ -260,6 +270,7 @@ Do not author a section file from scratch on the Production side. The frontmatte
 **Lecture**
 - [ ] Video uploaded to Bunny, encoded, 16:9 title-slide thumbnail set
 - [ ] `bunnyVideoId` = bare GUID (no URL)
+- [ ] Video finished encoding in Bunny (its 720p MP4 exists), so the lecture-site build passes
 - [ ] `audioUrl`, if the voice track is uploaded: copied from the Build, opens and plays in a browser
 - [ ] `sectionRef` matches the section's ID exactly
 - [ ] `title` in `Lecture N — [descriptor]` form
@@ -270,4 +281,5 @@ Do not author a section file from scratch on the Production side. The frontmatte
 - [ ] If this is the **first** pair: the volume (`john.md`) and unit landing (`index.md`) are also `draft: false`
 - [ ] If this is the **last** pair: `passageComplete: true` set on the unit-landing `index.md` in the same commit
 - [ ] Committed and on `main` (pushed on Ron's authorization, or the cloud session's PR merged); Cloudflare rebuild succeeded (green in the Pages dashboard)
+- [ ] The `secnt-podcast` build succeeded too (green in the Pages dashboard)
 - [ ] Opened the live page: title shows once, passage ref and epigraph render, video plays, back-link/embed resolves; any diagram renders once, at its marker, in place; on the unit landing, the `More to come` line is present (or correctly gone, if this was the last pair)

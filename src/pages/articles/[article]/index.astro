@@ -8,7 +8,11 @@
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
+import PageDates from '../../../components/PageDates.astro';
+import PageRecord from '../../../components/PageRecord.astro';
 import { articleUrl, isVisible } from '../../../lib/site';
+import { pageVersions, versionUrl, cite, articleOrigin } from '../../../lib/record';
+import { articlePassages } from '../../../lib/onward';
 
 export async function getStaticPaths() {
   const articles = (await getCollection('articles'))
@@ -25,6 +29,26 @@ const chapters = (await getCollection('articles'))
 const isChaptered = chapters.length > 0;
 const showMore = isChaptered && d.complete !== true;
 
+// THE RECORD (Release C, Ask §5.1): visible dates, the citation of the
+// current dated version, the Versions list, and the Scholar tags. An
+// article's revision date is its `revised` field, as on commentary pages.
+const versions = await pageVersions('articles', entry.id);
+const citedDate = versions.at(-1)?.date ?? (d.revised ?? d.date).toISOString().slice(0, 10);
+const citation = cite({
+  kind: 'articles',
+  title: d.title,
+  origin: articleOrigin(d.provenance),
+  date: citedDate,
+  url: versionUrl('articles', entry.id, citedDate),
+});
+
+// The commentary pages in the passages this article bears on (Release D,
+// ruling 24, measure 5), the return direction of each page's "Related
+// article" line. The thesis names none yet (the Editor, 14 Nov 2026: "none
+// for now"), so nothing shows.
+const related = await articlePassages(d.passages);
+const crumbs = [{ label: 'Articles', href: '/articles/' }, { label: d.title }];
+
 const pdfMeta = d.pdf
   ? [d.pdf.pages && `${d.pdf.pages} pages`, d.pdf.sizeMB && `${d.pdf.sizeMB} MB`]
       .filter(Boolean)
@@ -32,9 +56,11 @@ const pdfMeta = d.pdf
   : '';
 ---
 <BaseLayout title={d.title} description={d.description}
-  pageMeta={{ date: d.date, updated: d.updated, license: d.license }}>
+  structured={{ type: 'ScholarlyArticle', crumbs }}
+  pageMeta={{ date: d.date, revised: d.revised, updated: d.updated, license: d.license }}
+  scholar={{ title: d.title, publicationDate: d.date, pdfUrl: d.pdf?.src }}>
   <article class="reading">
-    <Breadcrumb crumbs={[{ label: 'Articles', href: '/articles/' }, { label: d.title }]} />
+    <Breadcrumb crumbs={crumbs} />
     <h1>{d.title}</h1>
     {d.provenance && <p class="article-provenance">{d.provenance}</p>}
 
@@ -65,5 +91,22 @@ const pdfMeta = d.pdf
         {d.pdf.note && <p class="article-pdf__note">{d.pdf.note}</p>}
       </aside>
     )}
+
+    {related.length > 0 && (
+      <nav class="article-commentary" aria-labelledby="article-commentary-heading">
+        <h2 id="article-commentary-heading">Related commentary</h2>
+        {related.map((r) => (
+          <>
+            <p class="article-commentary__unit"><a href={r.unit.url}>{r.unit.label}</a></p>
+            {r.pages.length > 0 && (
+              <ul>{r.pages.map((pg) => <li><a href={pg.url}>{pg.label}</a></li>)}</ul>
+            )}
+          </>
+        ))}
+      </nav>
+    )}
+
+    <PageRecord citation={citation} livingPath={articleUrl(entry.id)} versions={versions} citedDate={citedDate} />
+    <PageDates date={d.date} revised={d.revised} />
   </article>
 </BaseLayout>

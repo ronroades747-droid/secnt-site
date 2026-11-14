@@ -27,14 +27,15 @@ export const SITE = {
   },
 };
 
+// Content first (Web Dev Ask "The site refocused on the written record",
+// §4.3, Release B). Teaching Aids left the navigation with the /slides/ pages.
 export const NAV = [
-  { label: 'About', href: '/about/' },
-  { label: 'Architecture Principles', href: '/architecture-principles/' },
-  { label: 'Methodology', href: '/methodology/' },
-  { label: 'Citing', href: '/citing/' },
   { label: 'Commentaries', href: '/commentary/' },
   { label: 'Articles', href: '/articles/' },
-  { label: 'Teaching Aids', href: '/slides/' },
+  { label: 'About', href: '/about/' },
+  { label: 'Methodology', href: '/methodology/' },
+  { label: 'Architecture Principles', href: '/architecture-principles/' },
+  { label: 'Citing', href: '/citing/' },
 ];
 
 // --- Sections-sidebar segment grouping -------------------------------------
@@ -72,45 +73,23 @@ export const frontmatterUrl = (id: string) => `/${id}/`;
 // An article id is its slug under /articles/ (path-owns-identity, same as
 // commentary).
 export const articleUrl = (id: string) => `/articles/${id}/`;
-// Teaching Aids (shorts resource pages) — one namespace under /slides/: the
-// landing at /slides/, cycle indexes and slide pages both directly beneath
-// (/slides/john-1-1-to-3/, /slides/<slug>/). Slide-page URLs are the locked,
-// QR-baked, citation-stable tier (Decision 6, 19 Aug 2026): they are printed
-// into published video and can never be re-pointed. Web Dev owns slug
-// uniqueness across the shared namespace at stub creation.
-export const slideUrl = (id: string) => `/slides/${id}/`;
-export const slideCycleUrl = (id: string) => `/slides/${id}/`;
-// Served slide assets live in public/slides/<slug>/ beside the page route,
-// named from the slug — stable download URLs, nothing per-entry to drift.
-// JPG: the slide generators (Seedream / Nano Banana Pro) emit JPG, and for
-// photographic-style imagery JPG serves smaller at identical quality.
-// Neither served ratio carries a QR code: the code is a timed overlay laid
-// over the mp4 in the video editor, never baked into a downloadable image
-// (Editor's ruling, 20 Aug 2026, superseding the same day's composited-9:16
-// ruling — a code on the face of the download reads as advertising and
-// makes a pastor hesitate to reprint it; the 9:16 footer carries secnt.org
-// as a credit line instead). See Short 02 Build §4B/§7.
-export const slideAssetUrl = (id: string, ratio: '16x9' | '9x16') =>
-  `/slides/${id}/${id}-${ratio}.jpg`;
-
-// The paired lecture's thumbnail for the section page's panel row — Slide 1 of
-// that lecture's deck, which already exists for every pair in the corpus at
+// The paired lecture's thumbnail: Slide 1 of that lecture's deck, which
+// already exists for every pair in the corpus at
 // Volumes/<Vol>/Cycles/<Cycle>/Diptychs/<NN-slug>/Slide1.PNG and is copied
 // into public/lectures/ at the pair's media commit, downscaled.
 //
-// Same rule as slideAssetUrl above and for the same reason: the path derives
-// from the entry's id, so there is no per-entry frontmatter field to drift and
+// The path derives from the entry's id, so there is no per-entry frontmatter field to drift and
 // nothing to backfill but the files themselves. The id already contains the
 // book and unit (john/1-6-to-13/08-co-articulation), so it lays the tree out
 // under /lectures/ exactly as the content tree lays it out.
 //
-// A section whose file is absent renders no lecture panel at all rather than a
-// broken image: the section route tests for the file at build (see its
-// getStaticPaths) and the panel degrades, per ask sec 9.
+// Since Release B no page shows it: the Triptych panel and the home-page
+// cards that did are gone. The files stay in public/lectures/ because Release
+// D's share image uses them (Ask §6, item 3), and this helper names them.
 export const lectureThumbUrl = (sectionId: string) => `/lectures/${sectionId}.png`;
 
 // A quotation card's page and its two served images (content.config.ts, the
-// cards collection). Names derive from the id, as the slide assets' do: the
+// cards collection). Names derive from the id: the
 // 1080 square is shown on the pages, the 2048 original is the download.
 export const cardUrl = (id: string) => `/cards/${id}/`;
 export const cardImageUrl = (id: string, size: 'web' | 'full' = 'web') =>
@@ -122,21 +101,12 @@ export const cardImageUrl = (id: string, size: 'web' | 'full' = 'web') =>
 // /commentary/john/1-1-to-3/06-en-arche/john-1-1-to-3-06-en-arche.pdf.
 export const commentaryPdfUrl = (id: string) =>
   `${commentaryUrl(id)}${commentaryPdfName(id)}`;
-// Audience tags (handoff memo §2, Editor's ruling 20 Aug 2026): public labels
-// in display order. The chip renders the label inside a colored pill — one
-// color per category, color never the sole encoding. Chip values validated:
-// text/fill >= 5.9:1 (WCAG AA) and all fill pairs separable under
-// red-green color-blindness (lightness ladder + deuteranopia check).
-export const AUDIENCES = {
-  'for-everyone': 'For everyone',
-  'new-to-the-bible': 'New to the Bible',
-  'familiar-with-scripture': 'Familiar with Scripture',
-  'students-and-teachers': 'Students & teachers of the Word',
-} as const;
-export type AudienceKey = keyof typeof AUDIENCES;
-// A lecture lives at its paired section's URL + "lecture/".
-export const lectureUrl = (sectionId: string) =>
-  `/commentary/${sectionId}/lecture/`;
+// A lecture lives on the lecture site, podcast.secnt.org, at its section's id
+// (Release B, Ask §4.1; the episode path is podcast/lib/episodes.ts's
+// episodePath). secnt.org's own /lecture/ pages are gone, and each old address
+// redirects here (src/pages/[redirects].ts).
+export const LECTURE_SITE = 'https://podcast.secnt.org';
+export const lectureUrl = (sectionId: string) => `${LECTURE_SITE}/${sectionId}/`;
 
 // Some reference ids carry a trailing "/index" (the unit-landing lecture stub
 // does). Normalize so getEntry lookups resolve against the real entry id.
@@ -173,52 +143,14 @@ const showDrafts = process.env.SECNT_SHOW_DRAFTS === '1';
 export const isVisible = (entry: { data: { draft?: boolean } }) =>
   !import.meta.env.PROD || showDrafts ? true : !entry.data.draft;
 
-// Visibility gate for SLIDE pages, which additionally wait for their own
-// publication date (**Plan D33**, 10 September 2026; Shorts Loop Rev 39). `scheduled`
-// is the short's YouTube date, given by the Editor when he names the slide
-// (publication one at a time, 16 Sep 2026) and written into its file then;
-// the page goes live on the morning of that date, hours ahead of the short,
-// so the description link is never ahead of the page it points at.
-//
-// The gate is DATE-ONLY on purpose. The time of day is carried by *when the
-// publish build runs* — the Cloudflare cron at 12:00 UTC — not by this field,
-// which the schema types as a bare date. Consequence, stated rather than
-// discovered: a build triggered for some other reason after 00:00 UTC on the
-// day is already past a bare date, so an ordinary evening push can surface
-// the next day's page early. That is accepted (Plan D33(e));
-// tightening it means comparing in America/New_York here.
-//
-// `slideCycles` entries carry no `scheduled` and keep using isVisible.
-//
-// A MISSING `scheduled` is no longer a contradiction (D47 sec 3): an aid that
-// names a `section` has no date of its own and derives its published state
-// from that section instead — see isAidVisible below, which is what the
-// routes actually call. This function keeps the dated gate for the pre-D47
-// aids that still carry one, and treats its absence as "no dated gate".
-export const isSlideVisible = (entry: {
-  data: { draft?: boolean; scheduled?: Date };
-}) => {
-  if (!isVisible(entry)) return false;
-  if (!import.meta.env.PROD || showDrafts) return true;
-  if (!entry.data.scheduled) return true;
-  return entry.data.scheduled.getTime() <= Date.now();
-};
-
-// Visibility for a teaching aid, which since D47 sec 3 has no flip of its own.
-// An aid naming a `section` is live exactly when that commentary section is
-// live: one flip of the section's `draft` publishes the commentary page, its
-// lecture and its aid together, and an aid committed ahead of its pair is
-// inert rather than premature. An aid with no section is a pre-D47 one and
-// keeps the dated gate above.
-//
+// Visibility for a quotation card. A card has no flip of its own: it is live
+// exactly when the commentary section it names is live, so one flip of the
+// section's `draft` publishes the page and its cards together (the rule D47
+// sec 3 set for the teaching aids, kept for the cards that replaced them).
 // `section` is the resolved commentary entry, or undefined when the reference
-// points at an entry the caller did not load — in which case nothing is known
-// to derive from and the aid stays hidden, which is the safe direction.
-export const isAidVisible = (
-  aid: { data: { draft?: boolean; scheduled?: Date; section?: { id: string } } },
-  section: { data: { draft?: boolean } } | undefined
-) => {
-  if (!aid.data.section) return isSlideVisible(aid);
+// points at an entry the caller did not load — the card then stays hidden,
+// which is the safe direction.
+export const isCardVisible = (section: { data: { draft?: boolean } } | undefined) => {
   if (!import.meta.env.PROD || showDrafts) return true;
   return section ? isVisible(section) : false;
 };

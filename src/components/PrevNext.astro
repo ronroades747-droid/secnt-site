@@ -5,6 +5,7 @@
 // via isVisible, so it only steps between published pairs.
 import { getCollection } from 'astro:content';
 import { commentaryUrl, isVisible } from '../lib/site';
+import { onwardFrom } from '../lib/onward';
 
 interface Props {
   unitId: string;
@@ -29,15 +30,21 @@ for (const s of sections) {
 const current = currentId ?? unitId;
 const i = seq.findIndex((x) => x.id === current);
 const prev = i > 0 ? seq[i - 1] : null;
-const next = i >= 0 && i < seq.length - 1 ? seq[i + 1] : null;
-// Draft-skip rule: while the current page has no published successor, the next
-// cell renders an unlinked "More to come" echo — never a link to a draft.
-// When the passage closes (passageComplete: true) the echo retires; a forward
-// link to the next passage's landing is deferred [confirm at Jn 1:4–5 open].
-const moreToCome =
-  !next && i === seq.length - 1 && landing
-    ? landing.data.passageComplete !== true
-    : false;
+// Onward (Release D, Ask §7, measure 3; ruling 24): within the unit, the next
+// published page; at the unit's last published page, the next unit's landing
+// (the forward link this pager once deferred "[confirm at Jn 1:4–5 open]");
+// at the Volume's last page, the Volume contents (the Next link after the
+// body text also names the Articles there). The draft-skip rule stands: while
+// an unfinished last unit has no published successor, the next cell renders
+// an unlinked "More to come" echo — never a link to a draft.
+const onward = i >= 0 ? await onwardFrom(current) : { kind: 'none' as const };
+const next =
+  onward.kind === 'page' || onward.kind === 'unit'
+    ? onward.next
+    : onward.kind === 'volume'
+      ? onward.contents
+      : null;
+const moreToCome = onward.kind === 'more';
 ---
 {(prev || next) && (
   <nav class="prev-next" aria-label="Section navigation">

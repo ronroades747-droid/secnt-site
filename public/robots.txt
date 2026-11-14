@@ -29,3 +29,6 @@ Disallow: /
 
 User-agent: Google-Extended
 Disallow: /
+
+# The sitemap, generated at every build from the published pages (Release D).
+Sitemap: https://secnt.org/sitemap.xml

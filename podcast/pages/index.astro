@@ -1,0 +1,46 @@
+---
+// The show page (Ask §3.1): every published lecture, unit by unit, in
+// canonical order — derived from the collections at build (lib/episodes.ts).
+import PodcastLayout from '../layouts/PodcastLayout.astro';
+import { PODCAST, getEpisodes } from '../lib/episodes';
+
+const { units, episodes } = await getEpisodes();
+---
+<PodcastLayout title={PODCAST.title} description={PODCAST.description}>
+  <article class="reading reading--wide">
+    <h1>{PODCAST.title}</h1>
+    <p class="lead">{PODCAST.description}</p>
+
+    <section class="podcast-follow" aria-label="Follow as a podcast">
+      <h2>Follow as a podcast</h2>
+      {/* The Editor's wording, Gate 5 (13 Nov 2026): no feed address on the
+          page, and the line stops after Pocket Casts. */}
+      <p>Search for <strong>{PODCAST.title}</strong> in Apple Podcasts or Pocket Casts.</p>
+    </section>
+
+    {units.map((unit) => (
+      <section class="podcast-unit" aria-labelledby={`unit-${unit.number}`}>
+        <h2 id={`unit-${unit.number}`}>{unit.passageLabel}</h2>
+        <ol class="podcast-episodes">
+          {episodes.filter((e) => e.unit.id === unit.id).map((e) => (
+            <li>
+              <a href={e.path}>{e.lecture.data.title}</a>
+              <span class="podcast-episodes__meta">
+                Lecture {e.numberInUnit} · {e.passageLabel}{e.lecture.data.duration && e.lecture.data.duration !== '00:00' ? ` · ${e.lecture.data.duration}` : ''}
+              </span>
+            </li>
+          ))}
+        </ol>
+      </section>
+    ))}
+  </article>
+</PodcastLayout>
+
+<style>
+  .lead { font-size: 1.15rem; }
+  .podcast-follow { margin: 2rem 0 2.5rem; padding: 1rem 1.25rem; background: var(--color-surface); border-left: 3px solid var(--color-gold-soft); }
+  .podcast-follow h2 { margin-top: 0; font-size: 1.1rem; }
+  .podcast-episodes { padding-left: 1.5rem; }
+  .podcast-episodes li { margin: 0.6rem 0; }
+  .podcast-episodes__meta { display: block; font-size: 0.9rem; color: var(--color-meta); }
+</style>

@@ -149,6 +149,11 @@ const articles = defineCollection({
       // Site publication date — drives the reverse-chronological listing.
       date: z.coerce.date(),
       updated: z.coerce.date().optional(),
+      // See commentary.revised — same standard, same semantics. A new
+      // `revised` date cuts a dated version (Release C, ruling 14; the
+      // Editor's ruling of 13 Nov 2026 gave articles this field rather than
+      // reading `updated`, which is left as it was).
+      revised: z.coerce.date().optional(),
       // Provenance of a work first produced elsewhere/earlier, rendered under
       // the title and in the listing (e.g. "M.A. thesis, Wheaton College,
       // June 1974"). Omitted for articles original to SECNT.
@@ -161,6 +166,13 @@ const articles = defineCollection({
       complete: z.boolean().default(false),
       // The artifact, for born-print articles. `src` is a site-absolute path
       // under /articles/ in public/ (PDFs bypass the asset pipeline).
+      // The passages the article bears on (Release D, ruling 24, measure 5):
+      // commentary unit ids, e.g. john/1-14-to-18, checked at build against
+      // the collection. Each published commentary page in a named passage
+      // shows "Related article: …", and the article page lists those pages
+      // in return. Empty for the thesis by the Editor's ruling of 14 Nov
+      // 2026 ("none for now"), so no line shows until he names a passage.
+      passages: z.array(reference('commentary')).default([]),
       pdf: z
         .object({
           src: z.string(),
@@ -306,6 +318,13 @@ const lectures = defineCollection({
 // ---------------------------------------------------------------------------
 // Collection: slideCycles  —  Teaching Aids cycle indexes
 // ---------------------------------------------------------------------------
+// RELEASE B (Web Dev Ask "The site refocused on the written record", §4.2):
+// the /slides/ pages are gone, and this collection and `slides` below build
+// no page. They are kept as data for one purpose: src/pages/[redirects].ts
+// reads them at every build to redirect each old /slides/ address (QR-baked
+// into published video) to its commentary page. The notes below describe the
+// pages as they were.
+//
 // One entry per completed cycle whose shorts run has opened (Shorts Program
 // Plan §2/§4; Shorts Web Dev Handoff, 19 Aug 2026, §2 Route 2). The entry's
 // body is the cycle introduction (supplied by Commentary Production); the
@@ -344,15 +363,16 @@ const slideCycles = defineCollection({
 // published video and can never change (decisions-locked.md, Decision 6).
 // Frontmatter is Web-Dev-owned; the body (notes prose + the required
 // Pedagogical task section) is supplied by Commentary Production per short.
-// Served slide images live in public/slides/<slug>/ under the derived names
-// <slug>-16x9.jpg / <slug>-9x16.jpg (see slideAssetUrl in site.ts); no
-// per-entry asset fields to drift. No shorts-register internal apparatus
-// (SS index IDs, Build numbers) appears anywhere in this public repo.
+// The served slide images lived in public/slides/<slug>/ as <slug>-16x9.jpg
+// and <slug>-9x16.jpg. They were removed on the Editor's word of
+// 13 Nov 2026, after Release B; their old addresses redirect with the page's.
+// No shorts-register internal apparatus (SS index IDs, Build numbers)
+// appears anywhere in this public repo.
 // Audience tag — the public label registry (handoff memo §2, Editor's
 // audience-tags ruling, 20 Aug 2026 revision): names the floor, not the
 // ceiling. Tokens are public-safe; internal audience codes never appear in
-// this repo (Public-Facing Materials Discipline). Labels + chip styling:
-// AUDIENCES in site.ts and the chip classes in global.css.
+// this repo (Public-Facing Materials Discipline). The labels and chips that
+// displayed it left with the pages (Release B).
 const audience = z.enum([
   'for-everyone',
   'new-to-the-bible',
@@ -367,8 +387,8 @@ const audience = z.enum([
 // id, a URL, or an asset path. The pattern is `^\d+-`, deliberately not
 // `^\d{2}-`: a mistyped `4-` must still be stripped, because a two-digit
 // pattern would silently leave it in the id and re-point that page's QR code
-// at a 404. src/lib/slide-ids.ts is the independent check on that, asserted
-// at build in the /slides/ route.
+// at a 404. The same holds for the redirects that replaced the pages: the id
+// is the old address they match.
 const slides = defineCollection({
   loader: glob({
     pattern: '**/*.md',
@@ -453,7 +473,7 @@ const slides = defineCollection({
 // download) — see cardImageUrl in site.ts; no per-entry asset fields.
 //
 // Like a D47 aid, a card has no flip of its own: it is live exactly when the
-// commentary section it names is live (isAidVisible applies unchanged).
+// commentary section it names is live (isCardVisible in site.ts).
 // The quotation is the source's, cited in full; only the card's design is
 // ours to license.
 const cards = defineCollection({
@@ -479,4 +499,31 @@ const cards = defineCollection({
     }),
 });
 
-export const collections = { frontmatter, volumes, commentary, lectures, articles, slides, slideCycles, cards };
+// ---------------------------------------------------------------------------
+// Collection: versions  —  dated versions of commentary and article pages
+// ---------------------------------------------------------------------------
+// Release C, Ask §5.2. Generated at every build and dev start from the Git
+// history by src/lib/versions.mjs into src/content/versions/ (git-ignored):
+// each file is a page EXACTLY as committed in the commit that set its date,
+// so its frontmatter is whatever that page carried then. The schema is
+// therefore deliberately loose: it names only what the version template
+// reads and lets the rest pass. The id is the version's own path,
+// "<kind>/<page id>/v/<YYYY-MM-DD>", e.g.
+// "commentary/john/1-14-to-18/01-the-text/v/2026-11-12".
+const versions = defineCollection({
+  loader: glob({
+    pattern: '**/index.md',
+    base: './src/content/versions',
+    generateId: ({ entry }) => entry.replace(/\/index\.md$/, ''),
+  }),
+  schema: () =>
+    z
+      .object({
+        title: z.string(),
+        description: z.string().optional(),
+        diagram: z.any().optional(),
+      })
+      .passthrough(),
+});
+
+export const collections = { frontmatter, volumes, commentary, lectures, articles, slides, slideCycles, cards, versions };

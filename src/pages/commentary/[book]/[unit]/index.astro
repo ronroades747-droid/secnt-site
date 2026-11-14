@@ -1,19 +1,20 @@
 ---
 // Unit landing. Under the June 6, 2026 uniform link-and-serve decision the
 // landing is an ordinary Commentary page in every navigational respect: no
-// inline lecture embed (the landing-paired lecture has its own page at
-// ./lecture/), the paired-lecture link renders at the top of the article like
+// inline lecture embed, the paired-lecture link renders at the top of the article like
 // any section, and the diagram frontmatter field renders here just as the section
 // template renders it (closing the open item in publishing-a-pair.md).
+//
+// RELEASE B (Ask §4.1): the "Watch the lecture" link goes to the lecture's
+// episode page on the lecture site, as on a section page.
 //
 // QUOTATION CARDS (corpus Production Pair Loop Rev 36). A landing that is a
 // pair's commentary section carries that pair's cards exactly as a section
 // page does: found from the `cards` collection by `section`, one or two in id
-// order, live exactly when the landing is (isAidVisible), and rendered by the
-// same Triptych panel. Only the cards are passed: the landing keeps its plain
-// lecture link and has no aid, so a landing with no cards renders as before.
+// order, live exactly when the landing is (isCardVisible), and listed in the
+// "Quotations from this section" line lower on the page (Ask §4.2).
 import { getCollection, render } from 'astro:content';
-import Triptych from '../../../../components/Triptych.astro';
+import SectionQuotations from '../../../../components/SectionQuotations.astro';
 import Diagram from '../../../../components/Diagram.astro';
 import PageDownloads from '../../../../components/PageDownloads.astro';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
@@ -21,7 +22,12 @@ import UnitNav from '../../../../components/UnitNav.astro';
 import PrevNext from '../../../../components/PrevNext.astro';
 import PageDates from '../../../../components/PageDates.astro';
 import Breadcrumb from '../../../../components/Breadcrumb.astro';
-import { splitCommentaryId, normalizeId, lectureUrl, volumeUrl, isVisible, isAidVisible, asDiagrams } from '../../../../lib/site';
+import PageRecord from '../../../../components/PageRecord.astro';
+import NextLink from '../../../../components/NextLink.astro';
+import OnwardLinks from '../../../../components/OnwardLinks.astro';
+import { verseLedTitle } from '../../../../lib/onward';
+import { pageVersions, versionUrl, cite } from '../../../../lib/record';
+import { splitCommentaryId, normalizeId, lectureUrl, volumeUrl, commentaryUrl, commentaryPdfUrl, isVisible, isCardVisible, asDiagrams } from '../../../../lib/site';
 
 export async function getStaticPaths() {
   const landings = (await getCollection('commentary'))
@@ -40,11 +46,14 @@ export async function getStaticPaths() {
 }
 const { entry, lecture, landingCards } = Astro.props;
 const { book } = splitCommentaryId(entry.id);
-const { Content } = await render(entry);
+const { Content, remarkPluginFrontmatter } = await render(entry);
+// The footnote apparatus, lifted out of the body by rehype-footnotes-apart so
+// the Next link can stand between the body text and the footnotes (Release D).
+const footnotesHtml: string | undefined = remarkPluginFrontmatter?.footnotesHtml;
 const d = entry.data;
 const pairedLecture = d.hasLecture && lecture && isVisible(lecture) ? lecture : null;
 const pairedLectureUrl = lectureUrl(entry.id);
-const visibleCards = landingCards.filter((c) => isAidVisible(c, entry));
+const visibleCards = landingCards.filter(() => isCardVisible(entry));
 // A page may carry one diagram or several (see asDiagrams / content.config.ts).
 const diagrams = asDiagrams(d.diagram);
 const diagramsTop = diagrams.filter((x) => (x.position ?? 'bottom') === 'top');
@@ -57,9 +66,27 @@ const crumbs = [
   { label: bookDisplay, href: volumeUrl(book) },
   { label: d.passageRef ? `${bookDisplay} ${d.passageRef}` : entry.id }, // final crumb unlinked
 ];
+
+// THE RECORD (Release C, Ask §5.1). The citation cites the page's current
+// dated version (ruling 16); the Versions list links every version; the
+// Scholar tags name the page and its PDF.
+const versions = await pageVersions('commentary', entry.id);
+const citedDate = versions.at(-1)?.date ?? (d.revised ?? d.date).toISOString().slice(0, 10);
+const volumeTitle = vols.find((v) => v.data.book === book)?.data.title ?? bookDisplay;
+const citation = cite({
+  kind: 'commentary',
+  volumeTitle,
+  passage: `${bookDisplay} ${d.passageRef}`,
+  title: d.title,
+  date: citedDate,
+  url: versionUrl('commentary', entry.id, citedDate),
+});
 ---
 <BaseLayout title={d.title} description={d.description}
-  pageMeta={{ date: d.date, revised: d.revised, license: d.license, passageRef: d.passageRef }}>
+  headTitle={verseLedTitle(bookDisplay, d)}
+  structured={{ crumbs, isPartOf: { name: volumeTitle, url: volumeUrl(book) } }}
+  pageMeta={{ date: d.date, revised: d.revised, license: d.license, passageRef: d.passageRef }}
+  scholar={{ title: d.title, publicationDate: d.date, pdfUrl: commentaryPdfUrl(entry.id) }}>
   <div class="unit-layout">
     <UnitNav unitId={entry.id} />
     <article class="reading reading--wide">
@@ -73,8 +100,6 @@ const crumbs = [
         </p>
       )}
 
-      <Triptych sectionId={entry.id} showLecture={false} aid={null} cards={visibleCards} />
-
       <PageDownloads sectionId={entry.id} title={d.title} />
 
       {diagramsTop.map((dg) => <Diagram diagram={dg} entryPath={entry.filePath} />)}
@@ -82,6 +107,15 @@ const crumbs = [
       <Content />
 
       {diagramsBottom.map((dg) => <Diagram diagram={dg} entryPath={entry.filePath} />)}
+
+      <NextLink pageId={entry.id} />
+      {footnotesHtml && <Fragment set:html={footnotesHtml} />}
+
+      <SectionQuotations cards={visibleCards} />
+
+      <OnwardLinks page={entry} />
+
+      <PageRecord citation={citation} livingPath={commentaryUrl(entry.id)} versions={versions} citedDate={citedDate} />
 
       <PrevNext unitId={entry.id} />
       <PageDates date={d.date} revised={d.revised} />
