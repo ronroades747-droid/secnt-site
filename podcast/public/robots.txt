@@ -23,3 +23,6 @@ Disallow: /
 
 User-agent: Google-Extended
 Disallow: /
+
+# The sitemap, generated at every build from the published lectures (Release D).
+Sitemap: https://podcast.secnt.org/sitemap.xml

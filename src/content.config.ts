@@ -166,6 +166,13 @@ const articles = defineCollection({
       complete: z.boolean().default(false),
       // The artifact, for born-print articles. `src` is a site-absolute path
       // under /articles/ in public/ (PDFs bypass the asset pipeline).
+      // The passages the article bears on (Release D, ruling 24, measure 5):
+      // commentary unit ids, e.g. john/1-14-to-18, checked at build against
+      // the collection. Each published commentary page in a named passage
+      // shows "Related article: …", and the article page lists those pages
+      // in return. Empty for the thesis by the Editor's ruling of 14 Nov
+      // 2026 ("none for now"), so no line shows until he names a passage.
+      passages: z.array(reference('commentary')).default([]),
       pdf: z
         .object({
           src: z.string(),

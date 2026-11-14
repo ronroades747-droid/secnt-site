@@ -23,6 +23,9 @@ import PrevNext from '../../../../components/PrevNext.astro';
 import PageDates from '../../../../components/PageDates.astro';
 import Breadcrumb from '../../../../components/Breadcrumb.astro';
 import PageRecord from '../../../../components/PageRecord.astro';
+import NextLink from '../../../../components/NextLink.astro';
+import OnwardLinks from '../../../../components/OnwardLinks.astro';
+import { verseLedTitle } from '../../../../lib/onward';
 import { pageVersions, versionUrl, cite } from '../../../../lib/record';
 import { splitCommentaryId, normalizeId, lectureUrl, volumeUrl, commentaryUrl, commentaryPdfUrl, isVisible, isCardVisible, asDiagrams } from '../../../../lib/site';
 
@@ -43,7 +46,10 @@ export async function getStaticPaths() {
 }
 const { entry, lecture, landingCards } = Astro.props;
 const { book } = splitCommentaryId(entry.id);
-const { Content } = await render(entry);
+const { Content, remarkPluginFrontmatter } = await render(entry);
+// The footnote apparatus, lifted out of the body by rehype-footnotes-apart so
+// the Next link can stand between the body text and the footnotes (Release D).
+const footnotesHtml: string | undefined = remarkPluginFrontmatter?.footnotesHtml;
 const d = entry.data;
 const pairedLecture = d.hasLecture && lecture && isVisible(lecture) ? lecture : null;
 const pairedLectureUrl = lectureUrl(entry.id);
@@ -77,6 +83,8 @@ const citation = cite({
 });
 ---
 <BaseLayout title={d.title} description={d.description}
+  headTitle={verseLedTitle(bookDisplay, d)}
+  structured={{ crumbs, isPartOf: { name: volumeTitle, url: volumeUrl(book) } }}
   pageMeta={{ date: d.date, revised: d.revised, license: d.license, passageRef: d.passageRef }}
   scholar={{ title: d.title, publicationDate: d.date, pdfUrl: commentaryPdfUrl(entry.id) }}>
   <div class="unit-layout">
@@ -100,7 +108,12 @@ const citation = cite({
 
       {diagramsBottom.map((dg) => <Diagram diagram={dg} entryPath={entry.filePath} />)}
 
+      <NextLink pageId={entry.id} />
+      {footnotesHtml && <Fragment set:html={footnotesHtml} />}
+
       <SectionQuotations cards={visibleCards} />
+
+      <OnwardLinks page={entry} />
 
       <PageRecord citation={citation} livingPath={commentaryUrl(entry.id)} versions={versions} citedDate={citedDate} />
 

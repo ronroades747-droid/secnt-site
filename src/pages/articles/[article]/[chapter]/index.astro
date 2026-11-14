@@ -24,6 +24,11 @@ export async function getStaticPaths() {
 const { entry, parent } = Astro.props;
 const { Content } = await render(entry);
 const d = entry.data;
+const crumbs = [
+  { label: 'Articles', href: '/articles/' },
+  { label: parent.data.title, href: articleUrl(parent.id) },
+  { label: d.title },
+];
 
 const siblings = (await getCollection('articles'))
   .filter((e) => e.id.startsWith(parent.id + '/') && isVisible(e))
@@ -34,13 +39,10 @@ const next = i >= 0 && i < siblings.length - 1 ? siblings[i + 1] : null;
 const moreToCome = !next && i === siblings.length - 1 && parent.data.complete !== true;
 ---
 <BaseLayout title={`${d.title} — ${parent.data.title}`} description={d.description}
+  structured={{ type: 'ScholarlyArticle', crumbs }}
   pageMeta={{ date: d.date, updated: d.updated, license: d.license }}>
   <article class="reading">
-    <Breadcrumb crumbs={[
-      { label: 'Articles', href: '/articles/' },
-      { label: parent.data.title, href: articleUrl(parent.id) },
-      { label: d.title },
-    ]} />
+    <Breadcrumb crumbs={crumbs} />
     <h1>{d.title}</h1>
 
     <Content />

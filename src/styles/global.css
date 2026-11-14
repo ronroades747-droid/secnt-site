@@ -237,7 +237,14 @@ main { flex: 1 0 auto; width: 100%; }
 @media (min-width: 760px) { .home-doors--two { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem 3rem; } }
 .home-door { display: flex; flex-direction: column; }
 .home-door h2 { margin-top: 0; }
-.home-door h2 a, .home-latest h2 a { color: inherit; text-decoration: none; }
+.home-door h2 a, .home-latest h2 a, .home-lectures h2 a { color: inherit; text-decoration: none; }
+/* The lecture site on the home page, after the Articles; the box is the
+   lecture site's own "Follow as a podcast" box. */
+.home-lectures { margin: 2.5rem 0; }
+.home-lectures h2 a:hover { color: var(--color-gold); }
+.home-lectures__follow { margin: 1.25rem 0 0; padding: 1rem 1.25rem; background: var(--color-surface); border-left: 3px solid var(--color-gold-soft); }
+.home-lectures__follow h3 { margin: 0 0 0.25rem; font-size: 1.1rem; }
+.home-lectures__follow p { margin: 0; }
 .home-door h2 a:hover { color: var(--color-gold); }
 .home-door__sub { margin: -0.4rem 0 1rem; font-size: 0.95rem; }
 .home-door__sub a { color: var(--color-meta); text-decoration: none; }
@@ -367,10 +374,13 @@ main { flex: 1 0 auto; width: 100%; }
    gold marks the current item, content keeps its reading measure. */
 .unit-layout { display: block; }
 
-.unit-nav { margin: 0 0 2.5rem; border: 1px solid var(--color-border); border-left: var(--rule) solid var(--color-gold); background: var(--color-surface); padding: 1rem 1.1rem; }
-/* On small viewports the whole nav stacks above the article; only the
-   sections list scrolls. */
-.unit-nav__sections { max-height: 45vh; overflow-y: auto; }
+.unit-nav { margin: 0 0 1.5rem; border: 1px solid var(--color-border); border-left: var(--rule) solid var(--color-gold); background: var(--color-surface); padding: 0.65rem 1.1rem; }
+/* On small viewports the nav stacks above the article as one closed control,
+   "Sections in this unit (N)", which opens on a tap (Release D, Ask §7,
+   measure 1). Opened, the list runs at its full length. */
+.unit-nav__summary { cursor: pointer; font-size: 0.95rem; font-weight: 500; color: var(--color-text); padding: 0.2rem 0; }
+.unit-nav__summary:hover { color: var(--color-gold); }
+.unit-nav__control[open] > .unit-nav__summary { margin-bottom: 0.75rem; }
 .unit-nav a.unit-nav__up { display: inline-block; padding: 0; margin: 0 0 1rem; font-size: 0.82rem; letter-spacing: 0.02em; color: var(--color-meta); }
 .unit-nav a.unit-nav__up:hover { color: var(--color-gold); }
 /* Segment subheads were removed once each title gained its own segment prefix;
@@ -400,7 +410,26 @@ main { flex: 1 0 auto; width: 100%; }
      (21 entries on short screens). */
   .unit-nav { position: sticky; top: 1.5rem; margin: 0; border: 0; border-left: 1px solid var(--color-border); background: none; padding: 0 0 0 1rem; max-height: calc(100vh - 3rem); overflow-y: auto; }
   .unit-nav__sections { max-height: none; overflow: visible; }
+  /* The desktop sidebar is unchanged: the control is opened by its script
+     and its summary is not shown. */
+  .unit-nav__summary { display: none; }
 }
+
+/* Onward links (Release D, Ask §7, measures 2–5). The Next link sits between
+   the body text and the footnotes; the same-question and related-article
+   lines sit after the quotations line. Typographic, like the pager. */
+.next-link { margin: 2.5rem 0 0; padding-top: 1rem; border-top: 1px solid var(--color-border); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 1.25rem; }
+.next-link a { text-decoration: none; }
+.next-link__dir { display: block; flex-basis: 100%; font-size: 0.8rem; letter-spacing: 0.04em; color: var(--color-meta); }
+.next-link a .next-link__dir { margin-bottom: 0.1rem; }
+.next-link__title { color: var(--color-link); font-size: 1.05rem; }
+.next-link a:hover .next-link__title { color: var(--color-link-hover); }
+.related-article { margin: 2.25rem 0 0; padding-top: 1rem; border-top: 1px solid var(--color-border); font-size: 0.98rem; }
+.related-article a { font-weight: 500; }
+.same-question { margin: 2.25rem 0 0; padding-top: 1rem; border-top: 1px solid var(--color-border); font-size: 0.98rem; }
+.same-question__heading { font-size: 1rem; letter-spacing: 0.02em; margin: 0 0 0.5rem; }
+.same-question ul { list-style: none; margin: 0; padding: 0; }
+.same-question li { margin: 0.3rem 0; }
 
 /* ====================================================================
    DIAGRAM FIGURE
@@ -558,6 +587,12 @@ blockquote footer { margin-top: 0.85rem; font-size: 0.95rem; font-style: normal;
 
 /* Articles */
 .article-provenance { color: var(--color-meta); font-style: italic; margin: -0.4rem 0 1.5rem; }
+/* The commentary pages in the passages an article bears on (Release D). */
+.article-commentary { margin: 2.25rem 0 0; padding-top: 1rem; border-top: 1px solid var(--color-border); font-size: 0.98rem; }
+.article-commentary h2 { font-size: 1rem; letter-spacing: 0.02em; margin: 0 0 0.5rem; }
+.article-commentary__unit { margin: 0.75rem 0 0.25rem; font-weight: 500; }
+.article-commentary ul { list-style: none; margin: 0; padding: 0 0 0 1rem; }
+.article-commentary li { margin: 0.2rem 0; }
 .article-pdf { margin: 2.5rem 0 0; padding: 1rem 1.2rem; border: 1px solid var(--color-border); border-left: var(--rule) solid var(--color-gold); background: var(--color-surface); }
 .article-pdf__label { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-meta); margin: 0 0 0.4rem; }
 .article-pdf__link { font-size: 1.1rem; }
@@ -618,7 +653,7 @@ blockquote footer { margin-top: 0.85rem; font-size: 0.95rem; font-style: normal;
   body { font-size: 11.5pt; line-height: 1.45; }
   .site-header, .primary-nav, .banner, .gold-rule, .site-footer,
   .video-embed, .breadcrumb, .back-link,
-  .section-toc, .more-to-come, .unit-nav, .prev-next, .paired-lecture, .section-quotations, .page-downloads, .page-dates { display: none !important; }
+  .section-toc, .more-to-come, .unit-nav, .prev-next, .next-link, .same-question, .related-article, .paired-lecture, .section-quotations, .page-downloads, .page-dates { display: none !important; }
   .unit-layout { display: block; max-width: none; padding: 0; margin: 0; }
   main, .reading { max-width: none; padding: 0; }
   a { color: #000; text-decoration: none; }

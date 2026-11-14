@@ -1,0 +1,33 @@
+---
+// The "Next" link directly after the body text, before the footnotes
+// (Release D, Ask §7, measures 2 and 3; the Editor's ruling 24 of 12 Nov
+// 2026). It names the next page: the next published page in the unit; at a
+// unit's last page, the next unit's landing; at the Volume's last page, the
+// Volume contents and the Articles. The foot pager (PrevNext) stays.
+//
+// Derived from the collections and gated by isVisible (src/lib/onward.ts),
+// so a draft is never linked. On the last published page of an unfinished
+// last unit there is nothing to name, and the link is omitted; the foot
+// pager's "More to come" stands. Hidden in print.
+import { onwardFrom } from '../lib/onward';
+
+interface Props { pageId: string; }
+const onward = await onwardFrom(Astro.props.pageId);
+---
+{(onward.kind === 'page' || onward.kind === 'unit') && (
+  <nav class="next-link" aria-label="Next">
+    <a href={onward.next.url}>
+      <span class="next-link__dir">Next →</span>
+      <span class="next-link__title">{onward.next.label}</span>
+    </a>
+  </nav>
+)}
+{onward.kind === 'volume' && (
+  <nav class="next-link" aria-label="Next">
+    <span class="next-link__dir">Next →</span>
+    <a href={onward.contents.url}><span class="next-link__title">{onward.contents.label}</span></a>
+    {onward.articles && (
+      <a href={onward.articles.url}><span class="next-link__title">{onward.articles.label}</span></a>
+    )}
+  </nav>
+)}

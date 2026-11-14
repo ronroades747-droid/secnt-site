@@ -9,6 +9,7 @@
 import '../../src/styles/global.css';
 import { SITE } from '../../src/lib/site';
 import { PODCAST, podcastUrl } from '../lib/episodes';
+import { SHARE_IMAGE } from '../../src/lib/share-image.mjs';
 
 interface Props {
   title: string;
@@ -43,11 +44,25 @@ const nav = [
     <meta property="og:title" content={title} />
     {description && <meta property="og:description" content={description} />}
     <meta property="og:url" content={canonicalURL} />
+    <!-- The share image: the same 1200 × 630 crop of secnt.org's banner that
+         every secnt.org page names (Release D; src/lib/share-image.mjs). -->
+    <meta property="og:image" content={podcastUrl(SHARE_IMAGE.path)} />
+    <meta property="og:image:type" content={SHARE_IMAGE.type} />
+    <meta property="og:image:width" content={String(SHARE_IMAGE.width)} />
+    <meta property="og:image:height" content={String(SHARE_IMAGE.height)} />
+    <meta property="og:image:alt" content={SITE.banner.alt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    {description && <meta name="twitter:description" content={description} />}
+    <meta name="twitter:image" content={podcastUrl(SHARE_IMAGE.path)} />
+    <meta name="twitter:image:alt" content={SITE.banner.alt} />
   </head>
   <body>
     <header class="chrome site-header">
       <div class="chrome-inner">
-        <a class="wordmark" href="/">{SITE.wordmark}</a>
+        {/* The wordmark goes to secnt.org's home page (the Editor, 14 Nov
+            2026); "Lectures" in the navigation is the lecture site's own. */}
+        <a class="wordmark" href={`${SITE.origin}/`}>{SITE.wordmark}</a>
         <div class="site-identity">
           <span class="site-subtitle">{PODCAST.title} · {SITE.name}</span>
         </div>

@@ -11,9 +11,9 @@
 //
 // Count- and draft-aware via isVisible. Shows the "more to come" note (driven
 // by the landing's passageComplete) at the foot while the passage is in
-// progress. Mobile: the nav stacks above the article and the sections list
-// scrolls; desktop: the sidebar scrolls independently when it exceeds the
-// viewport.
+// progress. Mobile: the nav stacks above the article as one closed control
+// (Release D, below); desktop: the sidebar scrolls independently when it
+// exceeds the viewport.
 import { getCollection } from 'astro:content';
 import { commentaryUrl, isVisible, SEGMENT_ORDER, SEGMENT_OF, volumeUrl, splitCommentaryId } from '../lib/site';
 
@@ -60,29 +60,52 @@ const orderedGroups = SEGMENT_ORDER.filter((seg) => groups.has(seg)).map(
 const current = currentId ?? unitId;
 const showMore = landing ? landing.data.passageComplete !== true : true;
 const hasAny = orderedGroups.length > 0;
+const count = orderedGroups.reduce((n, g) => n + g.items.length, 0);
 // Up-and-out target: the volume landing, which lists this book's passages.
 const contentsUrl = volumeUrl(splitCommentaryId(unitId).book);
 ---
 {hasAny && (
   <nav class="unit-nav" aria-label="Sections in this unit">
-    <div class="unit-nav__sections">
-      <a class="unit-nav__up" href={contentsUrl}>&larr; Contents</a>
-      {orderedGroups.map((g) => (
-        <div class="unit-nav__segment">
-          <ol>
-            {g.items.map((it) => (
-              <li>
-                {it.id === current ? (
-                  <span class="unit-nav__current" aria-current="page">{it.label}</span>
-                ) : (
-                  <a href={it.url}>{it.label}</a>
-                )}
-              </li>
-            ))}
-          </ol>
-        </div>
-      ))}
-      {showMore && <p class="unit-nav__more">More to come; check back soon.</p>}
-    </div>
+    {/* Release D (Ask §7, measure 1; the Editor's ruling 24 of 12 Nov 2026):
+        on a phone the list is ONE CLOSED CONTROL above the title, "Sections
+        in this unit (N)", opening on a tap, where it was a box up to 45vh
+        tall ahead of the title. N counts the entries the list holds, the
+        Introduction included. On the desktop (64rem and wider) the sidebar is
+        unchanged: the script below opens the control there before the page
+        is painted, and the stylesheet hides its summary, so the list reads
+        exactly as before. Without scripts the control simply starts closed
+        on every screen and opens on a click. */}
+    <details class="unit-nav__control" data-unit-nav>
+      <summary class="unit-nav__summary">Sections in this unit ({count})</summary>
+      <div class="unit-nav__sections">
+        <a class="unit-nav__up" href={contentsUrl}>&larr; Contents</a>
+        {orderedGroups.map((g) => (
+          <div class="unit-nav__segment">
+            <ol>
+              {g.items.map((it) => (
+                <li>
+                  {it.id === current ? (
+                    <span class="unit-nav__current" aria-current="page">{it.label}</span>
+                  ) : (
+                    <a href={it.url}>{it.label}</a>
+                  )}
+                </li>
+              ))}
+            </ol>
+          </div>
+        ))}
+        {showMore && <p class="unit-nav__more">More to come; check back soon.</p>}
+      </div>
+    </details>
+    <script is:inline>
+      (function () {
+        var d = document.currentScript && document.currentScript.previousElementSibling;
+        if (!d || !d.hasAttribute('data-unit-nav')) return;
+        var wide = window.matchMedia('(min-width: 64rem)');
+        var sync = function () { d.open = wide.matches; };
+        sync();
+        if (wide.addEventListener) wide.addEventListener('change', sync);
+      })();
+    </script>
   </nav>
 )}

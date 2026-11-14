@@ -1,5 +1,7 @@
 ---
 import { SITE, canonical } from '../lib/site';
+import { SHARE_IMAGE } from '../lib/share-image.mjs';
+import { FEEDS } from '../lib/feeds';
 interface Props {
   title: string;
   description?: string;
@@ -12,11 +14,29 @@ interface Props {
    * citation_author, citation_publication_date, citation_pdf_url.
    */
   scholar?: { title: string; publicationDate: Date; pdfUrl?: string };
+  /**
+   * The verse-led title of a commentary page, "John 1:14–18 · The Text: …"
+   * (Release D, ruling 23, measure 2), for <title>, og:title and the card
+   * title. Every other page keeps `title`.
+   */
+  headTitle?: string;
+  /** Fuller structured data (Release D, ruling 23, measure 4). */
+  structured?: StructuredData;
 }
-const { title, description, datePublished, dateModified, noindex, scholar } = Astro.props;
+export type StructuredData = {
+  /** ScholarlyArticle for the articles; Article otherwise. */
+  type?: 'Article' | 'ScholarlyArticle';
+  /** The visible breadcrumb, as rendered; the last crumb is this page. */
+  crumbs?: { label: string; href?: string }[];
+  /** The Volume a commentary page belongs to. */
+  isPartOf?: { name: string; url: string };
+};
+const { title, description, datePublished, dateModified, noindex, scholar, headTitle, structured } = Astro.props;
 const scholarDate = (d: Date) => d.toISOString().slice(0, 10).replaceAll('-', '/');
 const canonicalURL = canonical(Astro.url.pathname);
-const fullTitle = title === SITE.wordmark ? title : `${title} — ${SITE.wordmark}`;
+const shownTitle = headTitle ?? title;
+const fullTitle = shownTitle === SITE.wordmark ? shownTitle : `${shownTitle} — ${SITE.wordmark}`;
+const shareImageUrl = canonical(SHARE_IMAGE.path);
 
 // schema.org Article dates, emitted machine-side per the Publication &
 // Revision Dates standard so citation managers and search-freshness signals
@@ -24,17 +44,49 @@ const fullTitle = title === SITE.wordmark ? title : `${title} — ${SITE.wordmar
 // dateModified falls back to datePublished when the page has never been
 // revised. `<` is escaped so a value containing it can never break the script.
 const iso = (d: Date) => d.toISOString().slice(0, 10);
-const jsonLd = datePublished
-  ? JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'Article',
+const series = { '@type': 'CreativeWorkSeries', name: SITE.name, url: canonical('/') };
+// Release D (ruling 23, measure 4): the author is a Person linked to About;
+// a commentary page isPartOf its Volume, itself part of the series; the
+// articles are ScholarlyArticles; the visible breadcrumb is given as a
+// BreadcrumbList. No FAQPage (Google retired FAQ results on 7 May 2026).
+// The dates are as Release C left them.
+const article = datePublished
+  ? {
+      '@type': structured?.type ?? 'Article',
       headline: title,
-      author: { '@type': 'Person', name: SITE.author },
+      author: { '@type': 'Person', name: SITE.author, url: canonical('/about/') },
       datePublished: iso(datePublished),
       dateModified: iso(dateModified ?? datePublished),
       license: SITE.licenseUrl,
       url: canonicalURL,
-    }).replace(/</g, '\\u003c')
+      image: shareImageUrl,
+      inLanguage: 'en',
+      ...(structured?.isPartOf
+        ? {
+            isPartOf: {
+              '@type': 'Book',
+              name: structured.isPartOf.name,
+              url: canonical(structured.isPartOf.url),
+              isPartOf: series,
+            },
+          }
+        : { isPartOf: series }),
+    }
+  : null;
+const breadcrumb = structured?.crumbs?.length
+  ? {
+      '@type': 'BreadcrumbList',
+      itemListElement: structured.crumbs.map((c, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: c.label,
+        item: c.href ? canonical(c.href) : canonicalURL,
+      })),
+    }
+  : null;
+const graph = [article, breadcrumb].filter(Boolean);
+const jsonLd = graph.length
+  ? JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\\u003c')
   : null;
 ---
 <meta charset="utf-8" />
@@ -62,8 +114,24 @@ const jsonLd = datePublished
 <!-- Open Graph -->
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content={SITE.name} />
-<meta property="og:title" content={title} />
+<meta property="og:title" content={shownTitle} />
 {description && <meta property="og:description" content={description} />}
 <meta property="og:url" content={canonicalURL} />
+<!-- The share image: one 1200 × 630 crop of the banner, on every page
+     (Release D; src/lib/share-image.mjs). -->
+<meta property="og:image" content={shareImageUrl} />
+<meta property="og:image:type" content={SHARE_IMAGE.type} />
+<meta property="og:image:width" content={String(SHARE_IMAGE.width)} />
+<meta property="og:image:height" content={String(SHARE_IMAGE.height)} />
+<meta property="og:image:alt" content={SITE.banner.alt} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={shownTitle} />
+{description && <meta name="twitter:description" content={description} />}
+<meta name="twitter:image" content={shareImageUrl} />
+<meta name="twitter:image:alt" content={SITE.banner.alt} />
+
+<!-- The two reader feeds (Release D, ruling 25). -->
+<link rel="alternate" type="application/rss+xml" title={FEEDS.all.title} href={canonical(FEEDS.all.path)} />
+<link rel="alternate" type="application/rss+xml" title={FEEDS.articles.title} href={canonical(FEEDS.articles.path)} />
 
 {jsonLd && <script type="application/ld+json" set:html={jsonLd} />}

@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import remarkGfm from 'remark-gfm';
 import remarkDiagramAnchor from './src/lib/remark-diagram-anchor.mjs';
+import rehypeFootnotesApart from './src/lib/rehype-footnotes-apart.mjs';
 import { commentaryPdfs } from './src/lib/commentary-pdf.mjs';
 import { datedVersions } from './src/lib/versions.mjs';
 
@@ -18,6 +19,9 @@ import { datedVersions } from './src/lib/versions.mjs';
 //   remark-diagram-anchor: lets a commentary `diagram` with position "anchor"
 //                  render at a <!-- diagram --> marker inside the body prose,
 //                  rather than only above (top) or below (bottom) it.
+//   rehype-footnotes-apart: on the living commentary pages only, hands the
+//                  footnote apparatus to the template, which sets the "Next"
+//                  link between the body text and the footnotes (Release D).
 //
 // The slide-date check that stood here retired with the /slides/ pages
 // (Release B, Ask §4.2): with no slide page to publish, a `scheduled` date
@@ -36,5 +40,6 @@ export default defineConfig({
   trailingSlash: 'always',
   markdown: {
     remarkPlugins: [remarkGfm, remarkDiagramAnchor],
+    rehypePlugins: [rehypeFootnotesApart],
   },
 });
