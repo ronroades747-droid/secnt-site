@@ -2,7 +2,7 @@
 title: "Exegesis: Ἐν αὐτῷ ζωὴ ἦν — Ontology, the Life in the Word"
 description: "The first clause (1:4a): the construal, the force of the imperfect, and the sense of ζωή — the life that was in the Word."
 date: 2026-08-09
-revised: 2026-08-27
+revised: 2026-11-15
 book: john
 chapter: 1
 passageRef: "1:4–5"
@@ -26,7 +26,7 @@ The construal is entered across a pivot, and the pivot is doing theological work
 
 The imperfect ἦν is not a narrative past, reporting something that once was and is no longer. It is the same imperfect of being that runs through the Prologue's opening — the sixfold ἦν of verses 1–4 — and its register is what Ridderbos calls the perspective of one who looks at the present in light of its origin, an origin antecedent to all human experience.[^ridderbos] Morris observes that in the Prologue the present tense is never used of the Word, with a single exception — the "shines" of verse 5, whose singularity the [run of tenses](/commentary/john/1-4-to-5/03-macro-tense-run/) has already weighed.[^morris] Grammatically the imperfect carries incomplete action, duration, continuity: an abiding, standing state, not a completed fact.[^turner] The life that was in the Word is not an episode.
 
-But the force must be held at its proper register, and the register here is *distinct* from verse 1. There, the imperfect predicated the Word's own eternal being: ἐν ἀρχῇ ἦν ὁ λόγος. Here, it predicates the life that the created order has *in* him. The life of verse 4a is therefore coordinate with the eternal frame — it is not a created vitality, and it stands before and above all created experience — and yet it is distinct from the Word's own self-existent life. It is, in Ridderbos's formulation, the life he gives to the world, and not therefore the same as the life the Word shares in himself with the Father.[^gives] The grammatical caution is honored — Morris warns that the tense should not be pressed unduly[^caution] — but the direction of the clause is not in doubt: an abiding life, in him, on which what has come to be depends.
+But the force must be held at its proper register, and the register here is *distinct* from verse 1. There, the imperfect predicated the Word's own eternal being: ἐν ἀρχῇ ἦν ὁ λόγος. Here, it predicates the life that the created order has *in* him. The life of verse 4a is therefore coordinate with the eternal frame — it is not a created vitality, and it stands before and above all created experience — and yet it is distinct from the Word's own self-existent life. The grammatical caution is honored — Morris warns that the tense should not be pressed unduly[^caution] — but the direction of the clause is not in doubt: an abiding life, in him, on which what has come to be depends.
 
 ## The sense of ζωή — one divine life, under two relations
 
@@ -47,8 +47,6 @@ From this ground the movement takes its second step, and the composition has alr
 [^morris]: Leon Morris, *The Gospel according to John*, rev. ed. (New International Commentary on the New Testament; Grand Rapids: Eerdmans, 1995), p. 96: "the present tense is never used of the Word, with but one exception, 'shines' in verse 5." The exception is weighed in the [run of tenses](/commentary/john/1-4-to-5/03-macro-tense-run/), where the unit's three tense-forms are treated together.
 
 [^turner]: Moulton–Howard–Turner, *A Grammar of New Testament Greek*, vol. III (Edinburgh: T&T Clark, 1963), p. 64 — "incomplete action, duration and continuity" — as cited by McHugh, *John 1–4*, ad loc.
-
-[^gives]: Ridderbos, *John*, on 1:4: the life of verse 4a is the life the Word "gives to the world," "not therefore the same as that which the Logos shares in himself with the Father." The distinction is load-bearing for this page: it is what keeps the eternal-frame register of the imperfect from collapsing the life-in-him of verse 4 into the aseity of verse 1.
 
 [^caution]: Morris, *John*, p. 65: "We should not press the tense unduly." The caution is accepted as stated; the page's claim rests on the convergence of the grammatical force with the Prologue-wide pattern of the imperfect, not on the tense alone.
 
