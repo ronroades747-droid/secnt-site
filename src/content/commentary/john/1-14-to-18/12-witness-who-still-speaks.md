@@ -1,7 +1,7 @@
 ---
 title: "Exegesis: Ἰωάννης μαρτυρεῖ περὶ αὐτοῦ — The Witness Who Still Speaks"
 description: "John 1:15: John bears witness still — the one who comes after me ranks before me, because he was before me."
-date: 2026-11-02
+date: 2026-11-15
 book: john
 chapter: 1
 passageRef: "1:14–18"
@@ -12,7 +12,7 @@ sectionType: exegesis
 tocGroup: "Part two — the witness (1:15)"
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 Between the confession of verse 14 and its ground in verse 16 the evangelist sets a witness: Ἰωάννης μαρτυρεῖ περὶ αὐτοῦ καὶ κέκραγεν λέγων· οὗτος ἦν ὃν εἶπον· ὁ ὀπίσω μου ἐρχόμενος ἔμπροσθέν μου γέγονεν, ὅτι πρῶτός μου ἦν, *John bears witness about him, and has cried out, saying, "This was he of whom I said, 'He who comes after me has come to rank before me, because he was before me.'"* The man who [in verses 6 to 8 was spoken of](/commentary/john/1-6-to-13/10-witness-sent/) now speaks, and he speaks in the reader's own day.
