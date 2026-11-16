@@ -2,7 +2,7 @@
 title: "The Word in the Beginning"
 description: "John 1:1–3 — the Prologue's opening movement: the Word's eternal ontology, the Word's relation to God, the Word's full deity, and the Word's creational agency, with the v. 3 → v. 4 architectural pivot."
 date: 2026-06-06
-revised: 2026-08-26
+revised: 2026-11-16
 book: john
 chapter: 1
 passageRef: "1:1–3"
@@ -31,11 +31,16 @@ diagram:
 
 > *(En archē ēn ho logos, kai ho logos ēn pros ton theon, kai theos ēn ho logos. houtos ēn en archē pros ton theon. panta di' autou egeneto, kai chōris autou egeneto oude hen ho gegonen.)*
 
-**John 1:1–3 (BSB, with text-critical adjustment)**
+**John 1:1–3 (the commentary's translation)**
 
-> In the beginning was the Word, and the Word was with God, and the Word was God. He was with God in the beginning. Through Him all things were made, and without Him nothing was made.
+> ¹ In the beginning was the Word, and the Word was with God, and the Word was God. ² This one was in the beginning with God. ³ All things came to be through him, and without him not even one thing came to be.
 
-Per the project's text-critical decisions (settled in the discussion of the text), this commentary reads *oude hen* (rather than *ouden*) at the close of v. 3a and places the full stop after *oude hen* (Reading A), with *ho gegonen* opening v. 4 rather than closing v. 3. The BSB's rendering, which reads *ouden* and closes v. 3 with "that has been made" under Reading B, is given here adjusted to the working text. Both adjustments — the form-question at 1:3b and the punctuation at 1:3/4 — converge on the same reading of v. 3 as a self-contained creational statement bounded at *oude hen*, with *ho gegonen* operating across the verse-boundary as the v. 3 → v. 4 architectural pivot.
+Notes on the rendering:
+
+- **1:1c**, θεὸς ἦν ὁ λόγος: "the Word was God". The article marks ὁ λόγος as subject, and the anarthrous θεός is a predicate that is qualitative, not indefinite ([the Word's full deity](/commentary/john/1-1-to-3/08-theos-en-ho-logos/)).
+- **1:2**, οὗτος: "this one". The demonstrative is resumptive-emphatic, gathering v. 1 onto a single subject ([the hinge of verse 2](/commentary/john/1-1-to-3/10-houtos/)).
+- **1:3**, ἐγένετο: "came to be", the aorist of entry into existence, in contrast with the fourfold ἦν ([the Word in the beginning](/commentary/john/1-1-to-3/06-en-arche/); [universal scope and agency](/commentary/john/1-1-to-3/11-panta-di-autou/)). οὐδὲ ἕν: "not even one thing", the emphatic two-word form the working text reads ([the absolute foreclosure](/commentary/john/1-1-to-3/12-oude-hen/)).
+- **Punctuation:** the full stop falls after οὐδὲ ἕν, and ὃ γέγονεν opens v. 4 ([the text](/commentary/john/1-1-to-3/01-the-text/); [the architectural pivot](/commentary/john/1-1-to-3/13-creational-pivot/)). That is why the rendering stops where it does, and why the [1:4–5 page](/commentary/john/1-4-to-5/) begins "⁴ … in him was life".
 
 ### Why This Passage Matters
 
