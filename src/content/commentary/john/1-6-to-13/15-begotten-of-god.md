@@ -1,6 +1,6 @@
 ---
 title: "Exegesis: ἐκ θεοῦ ἐγεννήθησαν — Begotten, Not of the World but of God"
-description: "John 1:13: begotten not of blood, nor of the will of the flesh, nor of the will of man, but of God."
+description: "John 1:13: begotten — not of bloods, nor of the will of the flesh, nor of the will of a husband — but of God."
 date: 2026-09-30
 revised: 2026-11-16
 book: john

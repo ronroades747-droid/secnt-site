@@ -1,6 +1,6 @@
 ---
 title: "Exegesis: χάριν ἀντὶ χάριτος — Grace in Place of Grace, from His Fullness"
-description: "John 1:16: from his fullness we have all received, grace in place of grace."
+description: "John 1:16: from his fullness we have all received — grace in place of grace."
 date: 2026-11-02
 book: john
 chapter: 1

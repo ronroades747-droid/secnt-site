@@ -2,7 +2,7 @@
 title: "Exegesis: Οὐδὲ ἕν — The Absolute Foreclosure"
 description: "§5.4.2: v. 3b's absolute foreclosure — καὶ χωρὶς αὐτοῦ ἐγένετο οὐδὲ ἕν: nothing whatever came to be apart from the Word."
 date: 2026-06-22
-revised: 2026-08-16
+revised: 2026-11-16
 book: john
 chapter: 1
 passageRef: "1:1–3"
@@ -15,7 +15,7 @@ hasLecture: true
 draft: false
 ---
 
-The verse makes its claim in two clauses, and [the positive predication](/commentary/john/1-1-to-3/11-panta-di-autou/) has done the structurally prior work: all things came to be through the Word, the personally-distinct divine agent. The second clause says in the negative what the first said in the positive — χωρὶς αὐτοῦ ἐγένετο οὐδὲ ἕν, "apart from him not even one thing came into being" — and the question this page settles is whether it adds anything by doing so. If "all things came to be through him" and "apart from him not even one thing came into being" are simply the same proposition in two forms, the negative is rhetorical reinforcement and nothing more. The project reads it otherwise. In the emphatic form the text carries, the negative clause does substantive work the positive predication alone does not: it seals.
+The verse makes its claim in two clauses, and [the positive predication](/commentary/john/1-1-to-3/11-panta-di-autou/) has done the structurally prior work: all things came to be through the Word, the personally-distinct divine agent. The second clause says in the negative what the first said in the positive — χωρὶς αὐτοῦ ἐγένετο οὐδὲ ἕν, "without him not even one thing came to be" — and the question this page settles is whether it adds anything by doing so. If "all things came to be through him" and "without him not even one thing came to be" are simply the same proposition in two forms, the negative is rhetorical reinforcement and nothing more. The project reads it otherwise. In the emphatic form the text carries, the negative clause does substantive work the positive predication alone does not: it seals.
 
 ## The emphatic form does substantive work
 

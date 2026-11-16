@@ -15,7 +15,7 @@ hasLecture: true
 draft: false
 ---
 
-[The light that gives light to every human being](/commentary/john/1-6-to-13/11-true-light-coming/) came into a world, and verse 10 says what the world did. Three short clauses, joined by καί — ἐν τῷ κόσμῳ ἦν, καὶ ὁ κόσμος δι᾽ αὐτοῦ ἐγένετο, καὶ ὁ κόσμος αὐτὸν οὐκ ἔγνω — carry the movement's first refusal: he was in the world, the world was made through him, the world did not know him. Ὁ κόσμος stands as a full noun in the second clause and again in the third. That is a marked figure, since nothing needed disambiguating and a relative clause lay ready to hand. Five things are fixed on this page: how the three clauses relate; what "the world" means, and whether it means the same thing three times; what ἦν asserts; what the middle clause is doing; and what "did not know" is.
+[The light that illumines every human being](/commentary/john/1-6-to-13/11-true-light-coming/) came into a world, and verse 10 says what the world did. Three short clauses, joined by καί — ἐν τῷ κόσμῳ ἦν, καὶ ὁ κόσμος δι᾽ αὐτοῦ ἐγένετο, καὶ ὁ κόσμος αὐτὸν οὐκ ἔγνω — carry the movement's first refusal: he was in the world, and the world came to be through him — and yet the world did not know him. Ὁ κόσμος stands as a full noun in the second clause and again in the third. That is a marked figure, since nothing needed disambiguating and a relative clause lay ready to hand. Five things are fixed on this page: how the three clauses relate; what "the world" means, and whether it means the same thing three times; what ἦν asserts; what the middle clause is doing; and what "did not know" is.
 
 ## Two beats, not three
 
