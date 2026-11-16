@@ -2,7 +2,7 @@
 title: "Engagement with Prior Scholarship: The Scholarly Record"
 description: "The cycle's substantive engagement with the scholarly literature that has shaped its resolutions, with engagement-layer disclosure of the load-bearing modern Tier 1 sources."
 date: 2026-07-15
-revised: 2026-11-08
+revised: 2026-11-16
 book: john
 chapter: 1
 passageRef: "1:1–3"
@@ -47,7 +47,7 @@ The third is the multi-tradition convergence standard for the architectural clai
 
 With the layers named and the disciplines set out, the record can be read at the level of the unit's individual resolutions. What follows discloses, for each principal resolution, the sources that bore load and — where the reading was contested — the alternative held against.
 
-On the form of the text and the sentence-boundary at verses 3 and 4, the adopted reading — the double-negation form at the close of verse 3, with the sentence-boundary set before "that which has come to be" opens verse 4 — rests on the critical-edition apparatus (Houghton, Metzger), on the colometric argument (Nässelqvist) at the load-bearing level, and on the editor's collation of the Nyssen witness at the primary-text level; the sustained defense of the alternative reading (Ed. L. Miller) is engaged at full strength as the position held against.
+On the form of the text and the sentence-boundary at verses 3 and 4, the adopted reading — the double-negation form at the close of verse 3, with the sentence-boundary set before "what has come to be" opens verse 4 — rests on the critical-edition apparatus (Houghton, Metzger), on the colometric argument (Nässelqvist) at the load-bearing level, and on the editor's collation of the Nyssen witness at the primary-text level; the sustained defense of the alternative reading (Ed. L. Miller) is engaged at full strength as the position held against.
 
 On the eternal existence of the Word and the sense of the imperfect, the reading rests on Schnackenburg at the load-bearing level, on the reference grammars (Wallace, Zerwick–Grosvenor) at the supporting level, and on the wider commentary and monograph field (Barth, Dodd, Keener, Evans, Michaels) engaged directly at the opening clause, with the patristic testimony (Athanasius, Chrysostom, Augustine) carried at the citation-chain level.
 

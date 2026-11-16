@@ -1,6 +1,6 @@
 ---
 title: "Exegesis: καὶ ἐθεασάμεθα τὴν δόξαν αὐτοῦ — He Dwelt Among Us, and We Beheld His Glory"
-description: "John 1:14b–d: he dwelt among us, and we beheld his glory, glory as of the only one from the Father, full of grace and truth."
+description: "John 1:14b–d: and dwelt among us, and we beheld his glory, glory as of the only one from the Father, full of grace and truth."
 date: 2026-11-14
 book: john
 chapter: 1

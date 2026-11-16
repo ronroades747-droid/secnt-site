@@ -2,7 +2,7 @@
 title: "Architecture: What the Architecture Theologically Carries"
 description: "What the movement’s architecture theologically carries, before the verse-by-verse exegesis begins."
 date: 2026-09-21
-revised: 2026-10-08
+revised: 2026-11-16
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -29,7 +29,7 @@ The distinction is worth keeping, because the opposite procedure is common and p
 
 The first is that the refusal and the reception are not two episodes laid end to end. They are the two halves of the one story this book will tell, composed here in a verse each.
 
-[Set against the Gospel](/commentary/john/1-6-to-13/06-gospel-facing-register/), the correspondence is exact enough to be checked. *He came to his own, and his own did not welcome him* stands over everything from the first sign to the last public word, and the Gospel closes that stretch on the refusal itself. *But as many as received him* stands over what follows, and the book closes on the believing. One turn, on the small marked δέ at the seam, and the two spans it divides are the two halves of the work.
+[Set against the Gospel](/commentary/john/1-6-to-13/06-gospel-facing-register/), the correspondence is exact enough to be checked. *He came to what was his own, and his own people did not welcome him* stands over everything from the first sign to the last public word, and the Gospel closes that stretch on the refusal itself. *But as many as received him* stands over what follows, and the book closes on the believing. One turn, on the small marked δέ at the seam, and the two spans it divides are the two halves of the work.
 
 What the shape teaches, then, is that the Prologue is not an overture standing apart from the narrative it introduces. It is that narrative, told once in short. A reader who has understood these two verses has been handed the plot of the whole, and the evangelist arranged the movement so that this would happen at its hinge rather than in a summary at the end.
 
@@ -37,7 +37,7 @@ What the shape teaches, then, is that the Prologue is not an overture standing a
 
 The second is a fact about where the movement stops, and it is easy to miss because the refusal is the louder half.
 
-The movement does not end at *his own did not welcome him*. That is its low point, not its destination. What comes after the turn is the answer to the refusal, and the answer occupies the movement's last and longest sentence — a right given, children of God, a believing, and then the begetting. The shape places the weight at the end, where a composition places what it is moving toward.
+The movement does not end at *his own people did not welcome him*. That is its low point, not its destination. What comes after the turn is the answer to the refusal, and the answer occupies the movement's last and longest sentence — a right given, children of God, a believing, and then the begetting. The shape places the weight at the end, where a composition places what it is moving toward.
 
 And the thing it moves toward is not a human turning. The last word of the movement is not about those who received but about what was done to them: they were begotten of God, and the sentence keeps that clause for its close. The reception is real and it is named first; the begetting is named last, and it is named as God's act. A shape that meant to make believing the achievement of the unit would not have ordered the sentence this way. The order is the teaching.
 

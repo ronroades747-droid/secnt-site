@@ -2,6 +2,7 @@
 title: "Pastoral Hearing and Forward Arc"
 description: "The unit’s pastoral hearing and the forward arc across the Gospel."
 date: 2026-08-29
+revised: 2026-11-16
 book: john
 chapter: 1
 passageRef: "1:4–5"
@@ -38,7 +39,7 @@ The unit hands its work forward on every register the Prologue runs, and naming 
 
 **To the far pole of the foyer.** Structurally the unit stands at the far pole of the Prologue’s opening bracket. Its light-and-life is the terminus of a pairing whose other end is the Word made flesh whose glory is beheld, and [the one life this commentary has traced](/commentary/john/1-4-to-5/14-one-life-arc/) — from the ground of creation to the consummation — reaches its close within this volume only there, at verse 14, where the light of verse 4 is disclosed as glory. That the two verses are a deliberately composed pair, an inclusio the evangelist built rather than a resonance a reader hears, is held here with confidence but is not yet closed; it belongs to the treatment of verse 14, and the commentary carries it forward as a commitment rather than as a conclusion.
 
-**Into the second movement.** Immediately ahead the unit hands into the Prologue’s second movement. The darkness that here neither knew the light nor overcame it will there be shown refusing it in the concrete — the world that “knew him not,” his own who “received him not” — and the question this unit deliberately withheld opens as the drama of that movement: who receives the light, and in what mode. Whether that reception runs first through Israel, and how a fallen will is turned toward the light at all — by grace, rather than by its own choosing — are questions the treatment of verse 11 will take up. They are not answered here, and the restraint is deliberate: the unit says what the light *is* and *whose* it is before it says anything about who received it.
+**Into the second movement.** Immediately ahead the unit hands into the Prologue’s second movement. The darkness that here neither knew the light nor overcame it will there be shown refusing it in the concrete — the world that “did not know him,” his own people who “did not welcome him” — and the question this unit deliberately withheld opens as the drama of that movement: who receives the light, and in what mode. Whether that reception runs first through Israel, and how a fallen will is turned toward the light at all — by grace, rather than by its own choosing — are questions the treatment of verse 11 will take up. They are not answered here, and the restraint is deliberate: the unit says what the light *is* and *whose* it is before it says anything about who received it.
 
 The darkness’s completed failure is, already, the first note of a victory the Gospel will narrate all the way to an empty tomb. Before any witness has spoken and before any rejection has been suffered, the outcome has been given. From here the story of light and dark begins to be told.
 

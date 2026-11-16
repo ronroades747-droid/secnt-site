@@ -1,6 +1,6 @@
 ---
 title: "Exegesis: μονογενὴς θεός … ἐκεῖνος ἐξηγήσατο — The Only Son, Himself God, Has Made Him Known"
-description: "John 1:18: no one has ever seen God; the only Son, himself God, who is in the bosom of the Father — he has made him known."
+description: "John 1:18: no one has ever seen God. The only Son, himself God, who is in the bosom of the Father — he has made him known."
 date: 2026-11-02
 book: john
 chapter: 1

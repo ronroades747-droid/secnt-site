@@ -2,7 +2,7 @@
 title: "Architecture: The Frame Completed"
 description: "The Prologue’s frame closing in v. 18: the brackets that open at vv. 1 and 3 reaching their far pole, where the Prologue ends with God."
 date: 2026-11-06
-revised: 2026-11-08
+revised: 2026-11-16
 book: john
 chapter: 1
 passageRef: "1:14–18"
@@ -40,7 +40,7 @@ Harris states it as part of a larger figure: "Μονογενὴς θεός forms
 
 The inclusio is held at high confidence, not higher, for a reason internal to its witnesses. They argue it as evidence for the reading of verse 18, μονογενὴς θεός, over the alternatives. And an older argument, Ezra Abbot's, as Harris reports it, turned the same observation the other way: a closing θεός answering the opening one was just what a copyist might have added in the margin.[^abbot] An argument that serves both sides of the text question cannot be leaned on to settle the figure. So the commentary does not use the inclusio as evidence for the text. The text was settled first, on its own evidence, in the commentary's [text of these verses](/commentary/john/1-14-to-18/01-the-text/), and the inclusio is held as a figure of the text so settled. The question earlier left open, whether the θεός of the two verses was composed as a pair, is answered here.
 
-**An echo, verse 3 and verse 17.** Verse 3 says, *Through Him all things were made*: πάντα δι' αὐτοῦ ἐγένετο. Verse 17 says that *the grace and the truth came to be through Jesus Christ*: ἡ χάρις καὶ ἡ ἀλήθεια διὰ Ἰησοῦ Χριστοῦ ἐγένετο. The same verb stands in both, ἐγένετο, the verb of what *came to be*, and in both what came to be came through him. This is an echo inside the frame, on the Prologue's spine of tenses, at its ἐγένετο. It is not a third bracket. The two brackets reach to verse 18, and verse 17 is not the far pole.
+**An echo, verse 3 and verse 17.** Verse 3 says, *All things came to be through him*: πάντα δι' αὐτοῦ ἐγένετο. Verse 17 says that *the grace and the truth came to be through Jesus Christ*: ἡ χάρις καὶ ἡ ἀλήθεια διὰ Ἰησοῦ Χριστοῦ ἐγένετο. The same verb stands in both, ἐγένετο, the verb of what *came to be*, and in both what came to be came through him. This is an echo inside the frame, on the Prologue's spine of tenses, at its ἐγένετο. It is not a third bracket. The two brackets reach to verse 18, and verse 17 is not the far pole.
 
 As a composed pair, matched point for point, the echo is Boismard's, one of the matching members of the chiasm he finds in the Prologue. Brown grants that Boismard's arrangement is "supported by some valid observations", but the parallels he finds between verses 3 and 17, and between verses 4–5 and 16, Brown judges "highly imaginative".[^brown] The commentary receives the echo of the verb and declines the composed pair.
 
