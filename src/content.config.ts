@@ -292,7 +292,6 @@ const lectures = defineCollection({
     sectionRef: reference('commentary'),
 
     bunnyVideoId: z.string(),
-    youtubeUrl: z.string().url().optional(),
     slidesPdf: z.string().optional(),
     duration: z.string().optional(),
 
