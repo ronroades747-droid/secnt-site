@@ -145,7 +145,7 @@ The Bunny library ID is global (already in `src/lib/site.ts`); you never set it 
 | `bunnyVideoId` | yes | The **bare GUID** — see the rule below |
 | `youtubeUrl` | no | YouTube mirror link |
 | `duration` | no | `MM:SS` or `HH:MM:SS`; rendered if present |
-| `audioUrl` | no | The voice track's full `https://audio.secnt.org/…` address — see below |
+| `audioUrl` | no | **Not set on new stubs** (no audio player); kept as data where it already stands — see below |
 | `license` | yes | `CC-BY-4.0` |
 | `draft` | yes | `true` while staging, `false` to go live |
 
@@ -171,9 +171,11 @@ Each episode's file is the video's **720p MP4** on Bunny, so **the video must ha
 
 **The feed's browser page.** Opened in a web browser, `/feed.xml` shows a readable page rather than raw code: the show's title and description, the line "Search for SECNT Lectures in Apple Podcasts or Pocket Casts.", and the episode list. The stylesheet `podcast/public/feed.xsl` draws that page, and podcast apps ignore it. The title, description and episodes come from the feed itself, so they never need editing there. **The "Search for …" line is written in three places: `podcast/public/feed.xsl`, the show page `podcast/pages/index.astro`, and secnt.org's home page `src/pages/index.astro`, whose lecture block also shows the show's title and description (since Release D, 14 November 2026). Change all three together.** By the Editor's ruling of 13 November 2026, neither page shows the feed's address. A browser that no longer applies stylesheets to XML simply shows the raw feed, which does no harm.
 
-### `audioUrl` — the listen-only player
+### `audioUrl` — not set: the lecture site has no audio player
 
-Set at the flip, with the other lecture fields, once the voice track has been uploaded unchanged to Bunny Storage (`secnt-audio`) in its cycle's folder. **Copy the address from the pair's Build** (its artifact-name block); never derive it from the page slug. The path is the corpus cycle folder plus the voice track's committed file name, and it is case-sensitive:
+**From 16 November 2026 (corpus Production Pair Loop Rev 43, the Editor's rulings "1-2 as recommended"): the voice track is not published.** A new lecture stub takes **no `audioUrl`**, and the mp3 is not uploaded to `audio.secnt.org`; it is made for the master and kept in the corpus only. On a **re-produced** lecture, the mp3 is not re-uploaded and the CDN is not purged, and an `audioUrl` already on the stub is left as it stands, as data. The re-publication commit carries `bunnyVideoId`, `duration` and `revised` only. The practice began at Jn 1:14–18 pair 12, whose stubs carry no `audioUrl`.
+
+*The rule this replaces, kept as the record:* Set at the flip, with the other lecture fields, once the voice track has been uploaded unchanged to Bunny Storage (`secnt-audio`) in its cycle's folder. **Copy the address from the pair's Build** (its artifact-name block); never derive it from the page slug. The path is the corpus cycle folder plus the voice track's committed file name, and it is case-sensitive:
 
 ```yaml
 audioUrl: "https://audio.secnt.org/Jn1_6-13/Jn1_613_Lecture_18.mp3"
@@ -271,7 +273,7 @@ Do not author a section file from scratch on the Production side. The frontmatte
 - [ ] Video uploaded to Bunny, encoded, 16:9 title-slide thumbnail set
 - [ ] `bunnyVideoId` = bare GUID (no URL)
 - [ ] Video finished encoding in Bunny (its 720p MP4 exists), so the lecture-site build passes
-- [ ] `audioUrl`, if the voice track is uploaded: copied from the Build, opens and plays in a browser
+- [ ] **No `audioUrl`** on a new stub, and none changed on a re-published one (Loop Rev 43: no audio player; the mp3 is not uploaded)
 - [ ] `sectionRef` matches the section's ID exactly
 - [ ] `title` in `Lecture N — [descriptor]` form
 
