@@ -2,7 +2,7 @@
 title: "Architecture: The Macro-Tense Spine"
 description: "The Prologue's diachronic spine: ἦν (timeless-eternal), ἐγένετο (historical-creational and historical-incarnational), ὃ γέγονεν (resulting-state)."
 date: 2026-06-09
-revised: 2026-08-26
+revised: 2026-11-16
 book: john
 chapter: 1
 passageRef: "1:1–3"
@@ -36,7 +36,7 @@ This three-term articulation extends the reading the reference grammars already 
 
 ## The register of the claim
 
-The macro-tense pattern as the Prologue's deliberate compositional spine is held at very-high confidence at both registers on which it operates — the substantive-compositional register, the pattern's structural function across the unit, and the architectural-thesis register, the pattern as the evangelist's intended design. That confidence rests on a convergence across independent traditions: Ridderbos, whose commentary and 1966 study supply the principal articulation of the pattern across the Prologue; Zerwick and Grosvenor at the grammatical register; McHugh on the pattern's structural-classification function; and Brown, Carson, and Schnackenburg at the commentary register.[^convergence] Sosa Siliezar reinforces the reading at a distinct register — the cross-section echo, where the ἐγένετο of 1:3 is heard again at 1:17 — supplementing the convergence rather than standing within it.[^sosa]
+The macro-tense pattern as the Prologue's deliberate compositional spine is held at very-high confidence at both registers on which it operates — the substantive-compositional register, the pattern's structural function across the unit, and the architectural-thesis register, the pattern as the evangelist's intended design. That confidence rests on a convergence across independent traditions: Ridderbos, whose commentary (pp. 38–40) and 1966 study (p. 192) read the imperfects of verses 1–4 as composed toward the present of verse 5; Zerwick and Grosvenor at the grammatical register; McHugh on the pattern's structural-classification function; and Brown, Carson, and Schnackenburg at the commentary register.[^convergence] Sosa Siliezar reinforces the reading at a distinct register — the cross-section echo, where the ἐγένετο of 1:3 is heard again at 1:17 — supplementing the convergence rather than standing within it.[^sosa]
 
 The pattern is therefore stated here at full force, as the evangelist's deliberate design, without hedging at the unit level. What would shift it is correspondingly narrow. The two-term core — ἦν against ἐγένετο — is independent of every other open question in the unit; it stands on the bare distribution of the tenses. The three-term form's third term rests on the Reading A punctuation that places ὃ γέγονεν at the head of v. 4 (settled in the discussion of the text); were that decision reopened, the placement of the perfect within the spine would reconfigure. But Reading A is locked, and the convergence on the eternal-being-against-becoming pattern does not depend on it. The residual condition is real but small, and it is named here rather than buried — the body carries the confidence and what could move it, as the architecture itself requires.
 
