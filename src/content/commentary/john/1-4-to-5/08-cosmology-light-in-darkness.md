@@ -2,7 +2,7 @@
 title: "Exegesis: Τὸ φῶς ἐν τῇ σκοτίᾳ φαίνει — Cosmology, the Light in the Darkness"
 description: "The third clause (1:5a): the marked present φαίνει and the σκοτία with the locative ἐν, under the Genesis frame — the light shining within the darkness."
 date: 2026-08-16
-revised: 2026-08-26
+revised: 2026-11-16
 book: john
 chapter: 1
 passageRef: "1:4–5"
@@ -68,7 +68,7 @@ One clarification, because a reader with the commentators open will want it. Lin
 
 And the adversative note — the darkness as resistant, the question whether it *masters* the light — is deliberately withheld here. It belongs to the verb of [the last tread](/commentary/john/1-4-to-5/09-soteriology-not-overcome/), and this page holds it there.
 
-The cosmology tread thus lands as one teachable claim, and it is pastorally the sharpest of the four: the light of the world does not shine *at* the darkness from a safe distance but *within* it. The eternal Word enters the very condition of those who do not know him — the moral and noetic dark of a race turned from its Maker — and goes on shining there. It is the seed of the word the Gospel will make explicit: "the light has come into the world, and men loved the darkness rather than the light" (3:19). And it leaves the reader poised on the unit's final and decisive question. The light shines in the dark. What, then, did the dark *do* with it?
+The cosmology tread thus lands as one teachable claim, and it is pastorally the sharpest of the four: the light of the world does not shine *at* the darkness from a safe distance but *within* it. The eternal Word enters the very condition of those who do not know him — the moral and noetic dark of a race turned from its Maker — and goes on shining there. It is the seed of the word the Gospel will make explicit: "the Light has come into the world, but men loved the darkness rather than the Light" (3:19). And it leaves the reader poised on the unit's final and decisive question. The light shines in the dark. What, then, did the dark *do* with it?
 
 [^triad]: Carlos Raúl Sosa Siliezar, *Creation Imagery in the Gospel of John* (Library of New Testament Studies 546; T&T Clark, 2015), p. 39, registering the vocabulary triad shared between John 1:4–5 and the opening of Genesis — light, darkness, and the verb *to shine* — as the verbal ground of the engagement. The two earlier engagements are settled where they belong: ἐν ἀρχῇ at 1:1 and the creative word of 1:3, both treated in this commentary's previous unit and carried here as given.
 
