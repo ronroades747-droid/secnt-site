@@ -2,7 +2,7 @@
 title: "Exegesis: Ἐν αὐτῷ ζωὴ ἦν — Ontology, the Life in the Word"
 description: "The first clause (1:4a): the construal, the force of the imperfect, and the sense of ζωή — the life that was in the Word."
 date: 2026-08-09
-revised: 2026-11-15
+revised: 2026-11-16
 book: john
 chapter: 1
 passageRef: "1:4–5"
@@ -36,7 +36,7 @@ The lexical core is the divine life. ζωή here is, in Barrett's phrase, the es
 
 This ordering is what turns the classic difficulty into the resolution. Schnackenburg pressed the objection harder than anyone: if ὃ γέγονεν — all created reality — is the subject of the clause, then no single ζωή can hold together the Word's divine life and a life-principle for all things; the term would be asked to mean two things at once. It is the strongest case for the rival punctuation, and it deserves a direct answer rather than a workaround.[^schnackenburg] The answer is not to divide the term but to order it. There is *one* divine, uncreated life in the Word, and it is the standing ground of created life; the two senses are one reality under two relations — source and participation — joined at the resulting-state pivot the construal already crossed. Read so, the clause does not strain: it says exactly what the ordered reading says it says. The resolution is offered as the answer Schnackenburg's own question calls for, not as a dismissal of it.
 
-The ontological claim of the first tread is thus exact: the life that was *in* the Word is the divine life itself, and everything that has come to be has its life in him. It is the seed of a word the Gospel will make explicit — "as the Father has life in himself, so he has granted the Son also to have life in himself" (5:26) — and, under the Genesis frame that conditions this whole unit, it is the creation-life of Genesis 1 now named as held in the Word; that frame receives its own treatment where the unit engages it most directly, in the [cosmology of verse 5a](/commentary/john/1-4-to-5/08-cosmology-light-in-darkness/).[^genesis] The doctrinal development of the claim — what the church confesses on the strength of a life held in the Word — belongs to the [theology of the unit](/commentary/john/1-4-to-5/10-life-in-the-word/), and is not begun here.
+The ontological claim of the first tread is thus exact: the life that was *in* the Word is the divine life itself, and everything that has come to be has its life in him. It is the seed of a word the Gospel will make explicit — "as the Father has life in Himself, so also He has granted the Son to have life in Himself" (5:26) — and, under the Genesis frame that conditions this whole unit, it is the creation-life of Genesis 1 now named as held in the Word; that frame receives its own treatment where the unit engages it most directly, in the [cosmology of verse 5a](/commentary/john/1-4-to-5/08-cosmology-light-in-darkness/).[^genesis] The doctrinal development of the claim — what the church confesses on the strength of a life held in the Word — belongs to the [theology of the unit](/commentary/john/1-4-to-5/10-life-in-the-word/), and is not begun here.
 
 From this ground the movement takes its second step, and the composition has already bound the two treads together: the staircase takes up ζωή at the head of the next clause. This same life, turned toward humanity, is its [light](/commentary/john/1-4-to-5/07-anthropology-light-of-men/).
 

@@ -2,6 +2,7 @@
 title: "Theology: The Life in the Word"
 description: "The first tread's doctrine: the life held and never owned in the Word, seed of John 5:26."
 date: 2026-08-17
+revised: 2026-11-16
 book: john
 chapter: 1
 passageRef: "1:4–5"
@@ -42,7 +43,7 @@ This is why the movement of the unit is not a change of subject when it turns to
 
 ## The seed of 5:26
 
-The second thing that follows is a matter of where this claim goes. The Prologue's statement is a seed, and the Gospel grows it in a sentence that says the same thing from the Son's side: "as the Father has life in himself, so he has granted the Son to have life in himself" (5:26). The Prologue says the life *was in* the Word; the Gospel will say the Son *has* it in himself, and gives it. It is one claim at two stages of disclosure — which is why the ζωή of 1:4 can be read as the first word of a field the Gospel develops to its last page, and not as a cosmological preliminary that the soteriology later replaces.
+The second thing that follows is a matter of where this claim goes. The Prologue's statement is a seed, and the Gospel grows it in a sentence that says the same thing from the Son's side: "as the Father has life in Himself, so also He has granted the Son to have life in Himself" (5:26). The Prologue says the life *was in* the Word; the Gospel will say the Son *has* it in himself, and gives it. It is one claim at two stages of disclosure — which is why the ζωή of 1:4 can be read as the first word of a field the Gospel develops to its last page, and not as a cosmological preliminary that the soteriology later replaces.
 
 One boundary belongs on that reading. To say that the life is the Son's to give is not yet to say how it is given, or to whom, or on what terms. The reception of the light — who received it and who did not, and what it is to be born of God — is the Gospel's own later work, and this unit deliberately holds it. The locus states the ground, not the grant.
 

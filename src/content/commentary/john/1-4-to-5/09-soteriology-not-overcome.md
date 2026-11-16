@@ -2,7 +2,7 @@
 title: "Exegesis: Ἡ σκοτία αὐτὸ οὐ κατέλαβεν — Soteriology, the Darkness’s Failure"
 description: "The fourth clause (1:5b): κατέλαβεν read both-and (comprehend and overcome) and the constative aorist — the darkness’s failure against the light."
 date: 2026-08-16
-revised: 2026-11-08
+revised: 2026-11-16
 book: john
 chapter: 1
 passageRef: "1:4–5"
@@ -67,7 +67,7 @@ The tradition even preserves a trace that the decisive note was heard in this un
 
 The soteriology tread — and with it the whole unit — thus lands on a note of quiet triumph, and it is the reason the passage matters where the introduction said it would. The light of the world shines within the darkness, and the darkness can do neither of the two things that would end its shining: it can neither understand the light and so possess it, nor master the light and so put it out. The fallen condition that does not recognize its Maker cannot, for all its not-knowing, overcome the light that goes on shining within it.
 
-This is the seed of the summons the Gospel will press — "walk while you have the light, lest the darkness overtake you" (12:35) — and it is the first note of the victory the whole Gospel will narrate to its end. Before any of the drama of belief and rejection is shown, before the cross and before the empty tomb, the Prologue has already disclosed the outcome. The darkness did not overcome it. From that finished verdict the Gospel's whole story of light and dark unfolds.
+This is the seed of the summons the Gospel will press — "walk while you have the light, lest the darkness overtake you" (12:35, μὴ σκοτία ὑμᾶς καταλάβῃ) — and it is the first note of the victory the whole Gospel will narrate to its end. Before any of the drama of belief and rejection is shown, before the cross and before the empty tomb, the Prologue has already disclosed the outcome. The darkness did not overcome it. From that finished verdict the Gospel's whole story of light and dark unfolds.
 
 [^agent]: The shift of grammatical role is the clause's first move and is easy to pass over. At 5a the σκοτία stands in the dative under a locative preposition (ἐν τῇ σκοτίᾳ) — a sphere, not an actor. At 5b the same noun is nominative and governs the verb. The darkness-as-state and the darkness-as-agent are held here as coordinate and distinct: the composite reading established at the previous clause — the fallen human condition on its cosmological, moral, and noetic registers — is what is now made the subject of a verb, so that the agency at 5b is the agency of a condition and not the emergence of a new cosmic personage. The catchword linkage itself (ζωή → ἡ ζωή, τὸ φῶς → τὸ φῶς, τῇ σκοτίᾳ → ἡ σκοτία) is the *anadiplosis* on which the unit's four-tread structure rests, treated at the architecture of the unit.
 

@@ -2,6 +2,7 @@
 title: "Pastoral Hearing and Forward Arc"
 description: "Closing: the unit’s pastoral hearing and its forward arc toward the Word made flesh."
 date: 2026-10-11
+revised: 2026-11-16
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -52,7 +53,7 @@ The unit hands its work forward on every register the Prologue runs. What it hel
 - verse 10's three clauses turn on one noun as verse 1's do, and the two verses may be a deliberate pair;
 - the movement restates at two of its joints, as the Prologue's opening verses do.
 
-**Across the Gospel.** The turn composed at verses 11 and 12 is realized as the Gospel's own. The public ministry the Prologue summarizes in verse 11 closes on the refusal at 12:37–41. The second half of the Gospel opens at 13:1 with his own named again, and loved to the end (held provisional at the Gospel's register). And the unit's last phrase is answered by the Gospel's last sentence: *that believing you may have life in his name* (20:31).
+**Across the Gospel.** The turn composed at verses 11 and 12 is realized as the Gospel's own. The public ministry the Prologue summarizes in verse 11 closes on the refusal at 12:37–41. The second half of the Gospel opens at 13:1 with his own named again, and loved to the end (held provisional at the Gospel's register). And the unit's last phrase is answered by the Gospel's last sentence: "that by believing you may have life in His name" (20:31).
 
 The three seeds the movement plants grow in the body of the Gospel:
 - the witness that opens the narrative (1:19–34; 3:27–30);

@@ -2,6 +2,7 @@
 title: "Theology: The Light the Darkness Cannot Master"
 description: "The fourth tread's doctrine: the light the darkness cannot overcome — the root of assurance."
 date: 2026-08-24
+revised: 2026-11-16
 book: john
 chapter: 1
 passageRef: "1:4–5"
@@ -54,7 +55,7 @@ Nor is the claim a truce. Lincoln, glossing this very verb, holds the two denial
 
 ## The light one can walk in
 
-The Gospel itself will draw the pastoral consequence, and in drawing it will use this verse’s own verb. “Walk while you have the light, lest the darkness overtake you” (12:35): the summons is real, and its warning is real — at the level of the disciple’s path, the darkness can still overtake the one who will not walk. But the summons presupposes the verdict. The light in which the disciple is summoned to walk is not a light whose survival is in question; it is the light of which the Prologue has already said that the darkness did not, and the whole Gospel will show cannot, put it out. The believer is not asked to defend the light. The believer is asked to walk in it.
+The Gospel itself will draw the pastoral consequence, and in drawing it will use this verse’s own verb. “Walk while you have the light, lest the darkness overtake you” (12:35, μὴ σκοτία ὑμᾶς καταλάβῃ): the summons is real, and its warning is real — at the level of the disciple’s path, the darkness can still overtake the one who will not walk. But the summons presupposes the verdict. The light in which the disciple is summoned to walk is not a light whose survival is in question; it is the light of which the Prologue has already said that the darkness did not, and the whole Gospel will show cannot, put it out. The believer is not asked to defend the light. The believer is asked to walk in it.
 
 That is the root of assurance as this unit gives it: not a promise that the believer’s darkness will be brief, or painless, or explicable — the previous locus refused those comforts — but a disclosure about the light itself. Whatever darkness a believer stands in has already been named in the Prologue’s fifth verse, and named as the thing that did not win. The outcome of the believer’s own conflict with the dark is carried inside the outcome of the light’s, and that outcome is not pending. It was disclosed before the story began.
 
