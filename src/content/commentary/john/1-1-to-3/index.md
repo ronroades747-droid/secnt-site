@@ -42,6 +42,8 @@ Notes on the rendering:
 - **1:3**, ἐγένετο: "came to be", the aorist of entry into existence, in contrast with the fourfold ἦν ([the Word in the beginning](/commentary/john/1-1-to-3/06-en-arche/); [universal scope and agency](/commentary/john/1-1-to-3/11-panta-di-autou/)). οὐδὲ ἕν: "not even one thing", the emphatic two-word form the working text reads ([the absolute foreclosure](/commentary/john/1-1-to-3/12-oude-hen/)).
 - **Punctuation:** the full stop falls after οὐδὲ ἕν, and ὃ γέγονεν opens v. 4 ([the text](/commentary/john/1-1-to-3/01-the-text/); [the architectural pivot](/commentary/john/1-1-to-3/13-creational-pivot/)). That is why the rendering stops where it does, and why the [1:4–5 page](/commentary/john/1-4-to-5/) begins "⁴ … in him was life".
 
+The English is the commentary's own translation of the working text; on how it is made, and on the English used for passages the commentary does not argue, see [The Text and Its Translation](/translation/).
+
 ### Why This Passage Matters
 
 The Gospel of John opens not with a birth narrative, not with a genealogy, not with the beginning of a ministry — but with eternity. *En archē ēn ho logos.* In the beginning was the Word. Before the first creative act, before the first day, before time itself had its start — the Word already was.

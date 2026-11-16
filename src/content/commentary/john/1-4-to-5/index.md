@@ -2,7 +2,7 @@
 title: "The Light Shines in the Darkness"
 description: "John 1:4–5 — the close of the Prologue’s first movement: the life in the Word, the light of men, the light shining in the darkness, and the darkness’s failure to overcome it."
 date: 2026-07-21
-revised: 2026-11-07
+revised: 2026-11-16
 book: john
 chapter: 1
 passageRef: "1:4–5"
@@ -26,6 +26,8 @@ The unit is John 1:4–5, read on the working text and punctuation this commenta
 > ⁴ … ἐν αὐτῷ ζωὴ ἦν, καὶ ἡ ζωὴ ἦν τὸ φῶς τῶν ἀνθρώπων· ⁵ καὶ τὸ φῶς ἐν τῇ σκοτίᾳ φαίνει, καὶ ἡ σκοτία αὐτὸ οὐ κατέλαβεν.
 >
 > ⁴ … in him was life, and the life was the light of men; ⁵ and the light shines in the darkness, and the darkness did not overcome it.
+
+The English is the commentary's own translation of the working text; on how it is made, and on the English used for passages the commentary does not argue, see [The Text and Its Translation](/translation/).
 
 On this reading the two verses do not open a new subject; they continue one. They stand on the far side of [the creational pivot at verse 3 to verse 4](/commentary/john/1-1-to-3/13-creational-pivot/), where the perfect ὃ γέγονεν turns from creation *through* the Word — πάντα δι' αὐτοῦ ἐγένετο, all things came to be through him — to the *resulting state* of all that has come to be: that it holds its standing, its very life, *in him*. The life of verse 4a is entered across that bridge, not begun anew.
 
