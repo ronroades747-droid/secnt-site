@@ -4,7 +4,7 @@ description: "What text SECNT comments on, and why the English printed with it i
 date: 2026-11-16
 order: 5
 license: CC-BY-4.0
-draft: true
+draft: false
 ---
 # The Text and Its Translation
 
@@ -25,3 +25,7 @@ Every published English version renders a Greek text and a punctuation its trans
 ## Other translations
 
 Published versions are engaged where their renderings bear on a decision, as part of the evidence, alongside the commentators, and are quoted at the words in question.
+
+## Scripture outside the passage
+
+Where the commentary cites a passage it does not itself argue (an Old Testament text the evangelist echoes, or a parallel elsewhere in the New Testament), the English is the Berean Standard Bible (BSB). It is a balanced translation that keeps the original languages transparent to the reader. It was made by a committee of scholars working alongside pastors and lay readers, and its team regularly invites public feedback on the text. Where the commentary argues a passage's wording, the rendering is its own.
