@@ -52,7 +52,7 @@ With the closing word of v. 3 fixed as οὐδὲ ἕν, the second question is 
 
 [^4]: An independent treatment of the same witness — Gregory of Nyssa's text of John — reaches the more cautious judgment that Gregory probably knew both readings, declining the conditional step taken above; the two studies are connected not by derivation but through Gordon Fee, who supervised the present author's thesis and edited the series in which that monograph appeared. The precedence given here to the present author's reconstruction rests on the originality of its primary-text collation, not on any claim that the secondary treatment derives from it. James A. Brooks, *The New Testament Text of Gregory of Nyssa*, New Testament in the Greek Fathers 2 (1991). \[Full publication line to confirm against Works Consulted.\]
 
-[^5]: Ed. L. Miller, *Salvation-History in the Prologue of John: The Significance of John 1:3/4*, Supplements to Novum Testamentum 60 (Leiden: Brill, 1989), 18, 27, 43–44; cited in Nässelqvist, "Punctuation in John 1:3–4," 176–77. Miller's own statement of the division is at "The Johannine Origins of the Johannine Logos," *JBL* 112 (1993): 446 n. 7.
+[^5]: Ed. L. Miller, *Salvation-History in the Prologue of John: The Significance of John 1:3/4*, Supplements to Novum Testamentum 60 (Leiden: Brill, 1989), 18, 27, 43–44. Miller's own statement of the division is at "The Johannine Origins of the Johannine Logos," *JBL* 112 (1993): 446 n. 7.
 
 [^6]: Dan Nässelqvist, "The Question of Punctuation in John 1:3–4: Arguments from Ancient Colometry," *Journal of Biblical Literature* 137, no. 1 (2018): 175–91.
 
