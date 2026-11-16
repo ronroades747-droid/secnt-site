@@ -1,7 +1,7 @@
 ---
 title: "Exegesis: χάριν ἀντὶ χάριτος — Grace in Place of Grace, from His Fullness"
 description: "John 1:16: from his fullness we have all received — grace in place of grace."
-date: 2026-11-02
+date: 2026-11-16
 book: john
 chapter: 1
 passageRef: "1:14–18"
@@ -12,7 +12,7 @@ sectionType: exegesis
 tocGroup: "Part three — the ground and the declaration (1:16–18)"
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 After the witness, the ground: ὅτι ἐκ τοῦ πληρώματος αὐτοῦ ἡμεῖς πάντες ἐλάβομεν καὶ χάριν ἀντὶ χάριτος, *for from his fullness we have all received — grace in place of grace.* The Baptist's words [closed with verse 15](/commentary/john/1-14-to-18/12-witness-who-still-speaks/), and the evangelist now gives the reason for the confession of verse 14, that the Word become flesh was [full of grace and truth](/commentary/john/1-14-to-18/11-glory-beheld/).
