@@ -2,7 +2,7 @@
 title: "The Word in the Beginning"
 description: "John 1:1–3 — the Prologue's opening movement: the Word's eternal ontology, the Word's relation to God, the Word's full deity, and the Word's creational agency, with the v. 3 → v. 4 architectural pivot."
 date: 2026-06-06
-revised: 2026-08-26
+revised: 2026-11-16
 book: john
 chapter: 1
 passageRef: "1:1–3"
@@ -31,11 +31,18 @@ diagram:
 
 > *(En archē ēn ho logos, kai ho logos ēn pros ton theon, kai theos ēn ho logos. houtos ēn en archē pros ton theon. panta di' autou egeneto, kai chōris autou egeneto oude hen ho gegonen.)*
 
-**John 1:1–3 (BSB, with text-critical adjustment)**
+**John 1:1–3 (the commentary's translation)**
 
-> In the beginning was the Word, and the Word was with God, and the Word was God. He was with God in the beginning. Through Him all things were made, and without Him nothing was made.
+> ¹ In the beginning was the Word, and the Word was with God, and the Word was God. ² This one was in the beginning with God. ³ All things came to be through him, and without him not even one thing came to be.
 
-Per the project's text-critical decisions (settled in the discussion of the text), this commentary reads *oude hen* (rather than *ouden*) at the close of v. 3a and places the full stop after *oude hen* (Reading A), with *ho gegonen* opening v. 4 rather than closing v. 3. The BSB's rendering, which reads *ouden* and closes v. 3 with "that has been made" under Reading B, is given here adjusted to the working text. Both adjustments — the form-question at 1:3b and the punctuation at 1:3/4 — converge on the same reading of v. 3 as a self-contained creational statement bounded at *oude hen*, with *ho gegonen* operating across the verse-boundary as the v. 3 → v. 4 architectural pivot.
+Notes on the rendering:
+
+- **1:1c**, θεὸς ἦν ὁ λόγος: "the Word was God". The article marks ὁ λόγος as subject, and the anarthrous θεός is a predicate that is qualitative, not indefinite ([the Word's full deity](/commentary/john/1-1-to-3/08-theos-en-ho-logos/)).
+- **1:2**, οὗτος: "this one". The demonstrative is resumptive-emphatic, gathering v. 1 onto a single subject ([the hinge of verse 2](/commentary/john/1-1-to-3/10-houtos/)).
+- **1:3**, ἐγένετο: "came to be", the aorist of entry into existence, in contrast with the fourfold ἦν ([the Word in the beginning](/commentary/john/1-1-to-3/06-en-arche/); [universal scope and agency](/commentary/john/1-1-to-3/11-panta-di-autou/)). οὐδὲ ἕν: "not even one thing", the emphatic two-word form the working text reads ([the absolute foreclosure](/commentary/john/1-1-to-3/12-oude-hen/)).
+- **Punctuation:** the full stop falls after οὐδὲ ἕν, and ὃ γέγονεν opens v. 4 ([the text](/commentary/john/1-1-to-3/01-the-text/); [the architectural pivot](/commentary/john/1-1-to-3/13-creational-pivot/)). That is why the rendering stops where it does, and why the [1:4–5 page](/commentary/john/1-4-to-5/) begins "⁴ … in him was life".
+
+The English is the commentary's own translation of the working text; on how it is made, and on the English used for passages the commentary does not argue, see [The Text and Its Translation](/translation/).
 
 ### Why This Passage Matters
 
@@ -72,7 +79,7 @@ The Prologue is read under Carson's foyer image: the entrance hall through which
 The unit's exegesis adopts disciplined intra-Johannine restraint: the unit is treated on its own terms, with forward gestures permitted only where exegetically required. For 1:1–3, three permitted forward gestures are made:
 
 - **17:5** — the shared glory of the Son with the Father before the world existed; the corpus echo of 1:1's pre-existence claim and the v. 1 / v. 18 *kolpos*-bracket's interior content
-- **5:26** — "as the Father has life in himself, so he has granted the Son to have life in himself"; the corpus echo of the personal-fellowship articulation at *pros ton theon*
+- **5:26** — "as the Father has life in Himself, so also He has granted the Son to have life in Himself"; the corpus echo of the personal-fellowship articulation at *pros ton theon*
 - **20:28** — Thomas's confession; the christological bookend forming the Gospel's inclusio with the deity-of-the-Word claim at 1:1c
 
 The broader Johannine corpus material on the Word's relation to the Father, the Father–Son coinherence, and the Son's full deity (10:30; 14:9–11; 8:58) is engaged in the theological implications where it substantively illuminates the unit's claims. Material that develops what 1:1–3 establishes but belongs to subsequent passages of the Prologue (1:4–5's light/darkness theology; 1:9's true light coming into the world; 1:14's incarnation) is reserved for those passages.
@@ -83,7 +90,7 @@ The Theological Implications section engages five canonical touchpoints beyond t
 
 - **Genesis 1:1–3** — the Hebrew Bible's foundational creational narrative; the *bereshit* / *en archē* echo at 1:1a; the creative divine speech that the Logos identification of 1:1 takes up christologically. Foundational, not optional.
 - **Colossians 1:15–17** — Paul's most direct christological articulation of the Word's creational agency; the *en autō ektisthē ta panta* parallel to 1:3's *panta di' autou egeneto*; the *prōtotokos pasēs ktiseōs* register that the personally-distinct divine agent reading of 1:3 inhabits. Required engagement in the theological implications.
-- **Hebrews 1:2–3** — "through whom he made the universe"; the *charaktēr tēs hypostaseōs autou* register of the Son's relation to the Father. Required engagement in the theological implications.
+- **Hebrews 1:2–3** — "through whom He made the universe"; the *charaktēr tēs hypostaseōs autou* register of the Son's relation to the Father. Required engagement in the theological implications.
 - **1 Corinthians 8:6** — the *heis Kyrios Iēsous Christos di' hou ta panta* formulation; the earliest Pauline articulation of the Word's universal creative agency, predating the Gospel and grounding the christological-creational pattern as Christian common ground. Engaged in the theological implications.
 - **Philippians 2:6–8** — *en morphē theou hyparchōn*; the form-of-God register; the immanent–economic distinction that the v. 1 deity-claim and the v. 14 incarnation-claim together require. Engaged in the theological implications.
 

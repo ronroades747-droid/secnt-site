@@ -1,6 +1,6 @@
 ---
 title: "Exegesis: Ἰωάννης μαρτυρεῖ περὶ αὐτοῦ — The Witness Who Still Speaks"
-description: "John 1:15: John bears witness still — the one who comes after me ranks before me, because he was before me."
+description: "John 1:15: John bears witness still — He who comes after me has come to rank before me, because he was before me."
 date: 2026-11-15
 book: john
 chapter: 1

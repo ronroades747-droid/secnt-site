@@ -1,8 +1,8 @@
 ---
 title: "Exegesis: Ἦν τὸ φῶς τὸ ἀληθινόν — The True Light, Coming into the World"
-description: "John 1:9: the true light, coming into the world — the light that gives light to every human being."
+description: "John 1:9: the true light, coming into the world — the light that illumines every human being."
 date: 2026-09-23
-revised: 2026-11-08
+revised: 2026-11-16
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -115,7 +115,7 @@ The hinge is held with very high confidence, on the Prologue as it stands, and i
 
 ---
 
-The verse thus lands as one teachable claim. The Word was the true light — the original light of God, of which every other light is a lamp — and that light's way of being in the world is coming. Shared with humanity again and again from creation onward, and arriving in the flesh, it shines on every human being without exception, giving each the possibility of sight. Where it is not seen, the eyes have failed and not the light. And its coming did not rest until the hardest doubter looked at the risen Lord and said, "My Lord and my God." It is the seed of the Gospel's "I have come as light into the world" (12:46), and it sets up what the movement now narrates: the light that illumines every human being came into a world that did not know it.
+The verse thus lands as one teachable claim. The Word was the true light — the original light of God, of which every other light is a lamp — and that light's way of being in the world is coming. Shared with humanity again and again from creation onward, and arriving in the flesh, it shines on every human being without exception, giving each the possibility of sight. Where it is not seen, the eyes have failed and not the light. And its coming did not rest until the hardest doubter looked at the risen Lord and said, "My Lord and my God." It is the seed of the Gospel's "I have come as light into the world" (12:46, ἐγὼ φῶς εἰς τὸν κόσμον ἐλήλυθα), and it sets up what the movement now narrates: the light that illumines every human being came into a world that did not know it.
 
 [^av]: D. A. Carson, *The Gospel according to John* (Pillar New Testament Commentary; Eerdmans, 1991), p. 121, for the Authorized Version's rendering; Luther's translation, "That was the true light that lights all men that come into this world," is quoted by Karl Barth, *Witness to the Word: A Commentary on John 1*, ed. Walther Fürst, trans. Geoffrey W. Bromiley (Eerdmans, 1986), p. 59.
 

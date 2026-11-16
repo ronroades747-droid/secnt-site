@@ -2,6 +2,7 @@
 title: "Theology: The Image of God and the Light of Men"
 description: "The second tread's doctrine: the imago-Dei constitution of the recipients of the light."
 date: 2026-08-18
+revised: 2026-11-16
 book: john
 chapter: 1
 passageRef: "1:4–5"
@@ -20,7 +21,7 @@ The first tread asked whose the life is, and answered that it is held — that n
 
 What the possessive presupposes is a doctrine of the human creature, and Scripture supplies it at the head of the canon. The human being is made in God's image and likeness (Gen 1:26–27) — and among all that God makes, only of this creature is it said. That is the ground on which the light can be humanity's own without ceasing to be the Word's to give. The image is not a possession the creature generates; it is what the creature *is*, by the act that made it. And what the creature so made is *for* is disclosed in the same breath: it is made to stand before God and to know him.
 
-The psalmist says the thing exactly, and says it as something already assumed rather than newly argued: "in your light we see light" (Ps 36:9). Notice the shape of that sentence. It does not say we possess a light and see by it. It says there is a light that is God's, and that seeing at all happens *in* it. The seeing is ours; the light is his; and the two are not in competition, because we were made to see this way. That is the whole logic of the possessive genitive in miniature, four centuries of Israel's worship before John writes it into a clause.
+The psalmist says the thing exactly, and says it as something already assumed rather than newly argued: "in Your light we see light" (Ps 36:9). Notice the shape of that sentence. It does not say we possess a light and see by it. It says there is a light that is God's, and that seeing at all happens *in* it. The seeing is ours; the light is his; and the two are not in competition, because we were made to see this way. That is the whole logic of the possessive genitive in miniature, four centuries of Israel's worship before John writes it into a clause.
 
 Westcott saw that the image is what makes the relation possible. Commenting on this very phrase he writes that "Man as made in the image of God stood in a special relation to the Word."[^westcott] The relation is *special* — not the relation of every creature to its Maker, which is real but different, but the relation of the creature that can be addressed. Calvin reaches the same place by another road. He will not let the light of verse 4 be an ordinary endowment: the life given to men, he says, "was not of an ordinary description, but was united to *the light* of understanding," and on that basis "He separates man from the rank of other creatures."[^calvin] Calvin is not talking about the image in so many words — his term is understanding, and it is worth keeping his word rather than improving it — but the separation he marks is the one the doctrine needs. Something about this creature is fitted to the light.
 
@@ -54,7 +55,7 @@ This matters more than it may appear, because the restricted reading has usually
 
 ## The second guardrail — the image's ruin is not yet in view
 
-The second guardrail is harder to keep, because the mind runs ahead. Say that humanity is the creature made to receive the light, and the next thought arrives unbidden: *then why does it not?* The Prologue is about to press exactly that. The very next clause reports that [the darkness did not apprehend the light](/commentary/john/1-4-to-5/09-soteriology-not-overcome/), and a few verses on, the world that was made through him "knew him not," and his own "received him not."
+The second guardrail is harder to keep, because the mind runs ahead. Say that humanity is the creature made to receive the light, and the next thought arrives unbidden: *then why does it not?* The Prologue is about to press exactly that. The very next clause reports that [the darkness did not apprehend the light](/commentary/john/1-4-to-5/09-soteriology-not-overcome/), and a few verses on, the world that came to be through him "did not know him," and his own people "did not welcome him."
 
 But that tension is the Gospel's to unfold, and this verse does not resolve it. Two things in particular are not settled here and should not be smuggled in. First, what became of the image in the creature that refuses — whether it is lost, defaced, retained in ruins. Second, and more consequentially, *how* a humanity that will not receive the light comes to receive it after all: whether the turn is something the creature manages from its own remaining resources or something worked in it. Both belong to the passages on reception, and the Gospel takes them up deliberately and at length. To answer them here, from the constitution alone, would be to build the doctrine of grace out of the doctrine of creation — which is precisely the move the Prologue declines to make by putting these clauses in this order.
 

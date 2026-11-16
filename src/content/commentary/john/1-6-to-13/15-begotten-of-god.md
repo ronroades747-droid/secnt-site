@@ -1,7 +1,8 @@
 ---
 title: "Exegesis: ἐκ θεοῦ ἐγεννήθησαν — Begotten, Not of the World but of God"
-description: "John 1:13: begotten not of blood, nor of the will of the flesh, nor of the will of man, but of God."
+description: "John 1:13: begotten — not of bloods, nor of the will of the flesh, nor of the will of a husband — but of God."
 date: 2026-09-30
+revised: 2026-11-16
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -112,7 +113,7 @@ God creating, not God procreating. A real change of kind, without anyone made di
 
 The Word gives the right and God does the begetting, and the giving rests on the begetting. God's act comes first as the ground — though John does not say how it meets faith, and this commentary does not say either.
 
-It is the seed of the Gospel's "unless one is begotten from above" (3:3–8), where the mode this verse withholds is supplied, and of the Epistle's "everyone who believes that Jesus is the Christ has been begotten of God" (1 John 5:1). And it is the movement's close. The sentence that opened with those who received him ends with God — which is what the reception, all along, was resting on.
+It is the seed of the Gospel's "unless one is begotten from above" (3:3–8; ἐὰν μή τις γεννηθῇ ἄνωθεν), where the mode this verse withholds is supplied, and of the Epistle's "everyone who believes that Jesus is the Christ has been begotten of God" (1 John 5:1, ἐκ τοῦ θεοῦ γεγέννηται). And it is the movement's close. The sentence that opened with those who received him ends with God — which is what the reception, all along, was resting on.
 
 [^barth-attachment]: Karl Barth, *Witness to the Word: A Commentary on John 1*, ed. Walther Fürst, trans. Geoffrey W. Bromiley (Eerdmans, 1986), pp. 81–82; the grammatical description is on p. 81, the material reference on p. 82, where the sentence continues: "although according to 2 John 1 taking hoi with tekna is not grammatically impossible."
 

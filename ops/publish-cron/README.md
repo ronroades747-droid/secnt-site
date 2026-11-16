@@ -99,7 +99,7 @@ beat the short's 9:00 PM ET publication.
 
 ## What this does not do
 
-It does not touch YouTube. The short is scheduled in YouTube Studio on the
-same date the Editor gives when he names the slide (publication one at a
-time, 16 September 2026); the two surfaces carry one date and neither
-triggers the other.
+It triggers the site's build and nothing else. *(Until October 2026 this
+section described the short's parallel scheduling in YouTube Studio. YouTube
+plays no role in SECNT: it stopped at the corpus Production Pair Loop's
+Rev 25, 6 October 2026.)*

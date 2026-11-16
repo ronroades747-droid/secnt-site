@@ -1,6 +1,6 @@
 ---
 title: "Exegesis: εἰς τὰ ἴδια ἦλθεν — His Own, and the Welcome Refused"
-description: "John 1:11: he came to what was his own — the world as his estate, Israel as his household — and his own did not welcome him."
+description: "John 1:11: he came to what was his own — the world as his estate, Israel as his household — and his own people did not welcome him."
 date: 2026-09-28
 revised: 2026-11-08
 book: john

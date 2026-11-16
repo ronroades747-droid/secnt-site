@@ -2,7 +2,7 @@
 title: "Exegesis: ὅσοι δὲ ἔλαβον αὐτόν — The Turn: A Right to Become Children of God"
 description: "John 1:12: “but as many as received him” — the turn, and the right given to become children of God."
 date: 2026-09-29
-revised: 2026-11-08
+revised: 2026-11-16
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -125,7 +125,7 @@ To them he gave a right. It is not a permission they might use, and not a power 
 
 And the verse tells us who they are before it tells us what they were given. They are the ones believing in his name — which in John means taking him for what he is, the divine one whose name is the name of God. That believing is not warmed-up feeling, and it is not bare assent; its whole weight comes from its object. It also does not certify itself. John will show us people who believed in his name and were not trusted with it. What the verse promises is not to the confident but to those who go on receiving.
 
-It is the seed of the Gospel's "he who receives me receives him who sent me" (13:20), and of its last sentence, "that believing you may have life in his name" (20:31). And it leaves one question the verse itself does not answer — what it is to *become* a child of God — which is the work of the sentence's second half.
+It is the seed of the Gospel's "whoever receives Me receives the One who sent Me" (13:20), and of its last sentence, "that by believing you may have life in His name" (20:31). And it leaves one question the verse itself does not answer — what it is to *become* a child of God — which is the work of the sentence's second half.
 
 [^eec-de]: Andreas J. Köstenberger, *John 1–21* (Evangelical Exegetical Commentary; 2026), vol. 1, p. 64.
 

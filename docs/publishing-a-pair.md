@@ -143,7 +143,6 @@ The Bunny library ID is global (already in `src/lib/site.ts`); you never set it 
 | `date` | yes | Publication date, `YYYY-MM-DD` |
 | `sectionRef` | yes | The **ID of the Commentary section this lecture teaches** (see below) |
 | `bunnyVideoId` | yes | The **bare GUID** — see the rule below |
-| `youtubeUrl` | no | YouTube mirror link |
 | `duration` | no | `MM:SS` or `HH:MM:SS`; rendered if present |
 | `audioUrl` | no | **Not set on new stubs** (no audio player); kept as data where it already stands — see below |
 | `license` | yes | `CC-BY-4.0` |
