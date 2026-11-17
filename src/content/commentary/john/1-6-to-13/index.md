@@ -2,7 +2,7 @@
 title: "The Light Comes to Its Own"
 description: "The Prologue’s second movement. A man sent from God to bear witness to a light he was not; the true light coming into the world — present to the world it made, arriving at the covenant household that was its own — and refused there, by the world that did not know its Maker and by his own people who did not welcome him; then, at a single “but,” the turn: as many as received him were given the right to become children of God, begotten not of anything the world can do but of God. One composed movement in three beats — the parenthesis (1:6–8), the light’s coming to its own (1:9–11), the reception’s turn (1:12–13) — told from this side of an advent already complete, and leaving one door open, at the believing."
 date: 2026-09-03
-revised: 2026-11-16
+revised: 2026-11-17
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -121,7 +121,7 @@ Seven disciplines govern the composition, four carried from John 1:4–5 and thr
 
 [^harris]: Murray J. Harris, *John* (Exegetical Guide to the Greek New Testament; B&H, 2015), p. 31 — the present participle τοῖς πιστεύουσιν "open to those who live after John's time."
 
-[^climax]: Barth, *Witness to the Word*, p. 69. The chiastic schemes: R. Alan Culpepper, with Boismard and Staley, centres at 1:12–13 or 1:14 — engaged at the unit register as a serious reading held against, the 1:14-centred forms to be tested at 1:14.
+[^climax]: Barth, *Witness to the Word*, p. 69. The chiastic schemes: R. Alan Culpepper, with Boismard and Staley, centres at 1:12–13 or 1:14 — engaged at the unit register as a serious reading held against, the 1:14-centred forms to be tested at 1:14. Culpepper's chiasm is reached through Carson, *John*, p. 113, and McHugh, pp. 85–87, and Staley's through Carson, p. 103; Boismard's plan has since been read at first hand (*Le Prologue de saint Jean*, pp. 106–107).
 
 [^ladder]: Barth, *Witness to the Word*, p. 33 — "The Word with God, the Word and the world, the Word among men, the Word itself flesh," the descent "forms the framework of consideration," and his reservation that the Prologue's purpose is not "exhausted by the descent of this ladder from rung to rung." Barth's own remark that "here we are on the second highest rung" (p. 33) is said of verse 3; the placement of verses 6–13 on the third rung, the Word among men, is this commentary's, not his.
 

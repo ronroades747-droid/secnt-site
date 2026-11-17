@@ -2,7 +2,7 @@
 title: "Engagement with Prior Scholarship: The Scholarly Record"
 description: "The scholarly record on John 1:6–13: the commentators and grammarians engaged, and where this commentary stands with them and against them."
 date: 2026-10-09
-revised: 2026-11-08
+revised: 2026-11-17
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -187,7 +187,7 @@ Zerwick, Max, and Mary Grosvenor. *A Grammatical Analysis of the Greek New Testa
 
 [^crux]: Brown, *John (I–XII)*, pp. 11–12; McHugh, pp. 107–110; Carson, pp. 138–139; Schnackenburg, vol. 1, pp. 264–265; Barth, *Witness to the Word*, pp. 80–81; Barrett, p. 164; Harris, p. 32. Galot's case through McHugh, p. 109 (Galot, p. 96).
 
-[^architecture]: Ridderbos, p. 41 and pp. 43, 48; Schnackenburg, vol. 1, p. 227; Barth, *Witness to the Word*, p. 69; McHugh, pp. 49–50; Carson, p. 112; Dyer, "The Unappreciated Light," p. 170; Bultmann, pp. 46, 146. Culpepper's chiasm, centred at 1:12b, is reached through McHugh's survey of the chiastic readings, pp. 85–87.
+[^architecture]: Ridderbos, p. 41 and pp. 43, 48; Schnackenburg, vol. 1, p. 227; Barth, *Witness to the Word*, p. 69; McHugh, pp. 49–50; Carson, p. 112; Dyer, "The Unappreciated Light," p. 170; Bultmann, pp. 46, 146. Culpepper's chiasm, centred at 1:12b, is reached through McHugh's survey of the chiastic readings, pp. 85–87, and through Carson, p. 113, and Köstenberger, *John 1–21*, vol. 1, p. 56.
 
 [^parenthesis]: Ridderbos, pp. 41–42; Barth, *Witness to the Word*, pp. 50, 56; Schnackenburg, vol. 1, p. 250; Bultmann, pp. 52, 84; McHugh, pp. 25, 27; Köstenberger, *John 1–21*, vol. 1, pp. 59–61.
 

@@ -2,7 +2,7 @@
 title: "Exegesis: Οὐδὲ ἕν — The Absolute Foreclosure"
 description: "§5.4.2: v. 3b's absolute foreclosure — καὶ χωρὶς αὐτοῦ ἐγένετο οὐδὲ ἕν: nothing whatever came to be apart from the Word."
 date: 2026-06-22
-revised: 2026-11-16
+revised: 2026-11-17
 book: john
 chapter: 1
 passageRef: "1:1–3"
@@ -39,7 +39,7 @@ The project reads χωρὶς αὐτοῦ ἐγένετο οὐδὲ ἕν as a
 
 And with this the verse closes. Taken together, its two clauses make one claim in two movements: [the positive predication](/commentary/john/1-1-to-3/11-panta-di-autou/) establishes that all things came to be through the personally-distinct divine agent, and the negative seals it by excluding every exception, instrument, and rival. Neither half alone says what the verse says — the positive without the negative leaves the door ajar; the negative without the positive would be foreclosure without a named agent. Read as the distich it is, verse 3 predicates of the Word a creative agency at once universal in reach and absolute in exclusivity: everything through him, and nothing at all without him. That is the terminus of the unit's eternal-being movement — [the Word who was, four times over](/commentary/john/1-1-to-3/06-en-arche/), is the Word through whom the all that came to be came to be. And it is the threshold of what follows: verse 3 has closed absolutely, and the relative clause that opens verse 4 will turn from the creation that came to be to the resulting state in which it stands, and from the Word's outward agency to the life that is in him. That pivot is the work of the next page.
 
-[^form]: The unit's text-critical treatment fixes the working text at the two-word οὐδὲ ἕν: the modern critical editions (NA28, SBLGNT, THGNT, UBS6) print the two-word form, with the contracted οὐδέν registered in the apparatus, and 𝔓⁷⁵ attests οὐδὲ ἕν. The form-question — which the unit settles in full in its treatment of the working text — is taken up on this page only for the substantive force the emphatic form carries, not re-adjudicated here.
+[^form]: The unit's text-critical treatment fixes the working text at the two-word οὐδὲ ἕν: the modern critical editions (NA28, SBLGNT, THGNT, UBS6) print the two-word form, with the contracted οὐδέν registered in NA28's apparatus, and 𝔓⁷⁵ attests οὐδὲ ἕν. The form-question — which the unit settles in full in its treatment of the working text — is taken up on this page only for the substantive force the emphatic form carries, not re-adjudicated here.
 
 [^bultmann]: Rudolf Bultmann, *The Gospel of John: A Commentary*, trans. G. R. Beasley-Murray, R. W. N. Hoare, and J. K. Riches (Philadelphia: Westminster, 1971), 37: the negative clause is added to the positive — everything by the Logos, nothing without him — so that it is stated as strongly as possible that everything without exception was made by the Logos; the emphatic ending οὐδὲ ἕν he characterizes as "a favourite way of ending a sentence, because of its effect" (37 n. 6). Bultmann adduces the same antithetical doublet in the Qumran liturgical-creation language (1QS XI:11; 37 n. 5), the parallel the idiom paragraph above attributes to Schnackenburg. Bultmann assigns the addition of the negative to liturgical style; the unit reads the emphatic form as substantive foreclosure — the stronger claim, resting on the same observed emphasis.
 

@@ -2,6 +2,7 @@
 title: "Exegesis: καὶ ἐθεασάμεθα τὴν δόξαν αὐτοῦ — He Dwelt Among Us, and We Beheld His Glory"
 description: "John 1:14b–d: and dwelt among us, and we beheld his glory, glory as of the only one from the Father, full of grace and truth."
 date: 2026-11-14
+revised: 2026-11-17
 book: john
 chapter: 1
 passageRef: "1:14–18"
@@ -163,7 +164,7 @@ Here the Gospel first names the Father and the Son. Barth: "Here for the first t
 - Barth: "Modern scholars usually relate plērēs to autou". And "To me an epexegetical relation to *monogenous* seems even better."
 - Ridderbos has the phrase "further qualify him who has just been called the only begotten from the Father". If the adjective is taken as indeclinable, he adds in a note, one could link it with the glory "or, even better, with αὐτοῦ".
 - Michaels: it "probably modifies “a father’s One and Only.”" Barrett: "it refers to Christ, and looks back to μονογενοῦς and αὐτοῦ."
-- Bultmann denies it of the glory, "for it is the Revealer who is being described". He takes it either with the Word, conditionally, after Schlatter, or with αὐτοῦ.[^construction]
+- Bultmann denies it of the glory, "for it is the Revealer who is being described". He takes it either with the Word, conditionally, after Schlatter, whom he cites and who is not read here, or with αὐτοῦ.[^construction]
 
 **Verse 16 confirms it.** Schnackenburg: "Πλήρωμα takes up πλήρης".[^fullness] Verse 16's *from his fullness* reads back to the Son.
 
@@ -257,7 +258,7 @@ How firmly each is held:
 
 [^given]: McHugh, *John 1–4*, p. 57. Calvin, *John*, vol. 1, p. 47. Köstenberger, *John 1–21*, vol. 1, p. 68. Schnackenburg, *John*, vol. 1, p. 270 — "He and a group of similar witnesses apprehended the divine glory of the eternal Logos, in and in spite of the flesh (cf. 1 Jn 1:1), by means of the “signs” which were at once so clear and so mysterious." Westcott, *St. John*, p. xxv.
 
-[^time]: Dodd, *Interpretation*, p. 300 and pp. 207–208. Michaels, *John*, p. 81 — "“we looked at his glory” is not a claim based on a single experience …, but a testimony to Jesus’ entire life on earth." Lincoln, *Saint John*, p. 105.
+[^time]: Dodd, *Interpretation*, p. 300 and pp. 207–208. Michaels, *John*, p. 81 — "“we looked at his glory” is not a claim based on a single experience …, but a testimony to Jesus’ entire life on earth." Lincoln, *Saint John*, p. 105. The confined readings are De Kruyf's, of the cross, reported by Ridderbos, *John*, n. 114, and De Ausejo's, of the resurrection, reported by Brown, *John (I–XII)*, p. 13; neither is read here.
 
 [^widening]: Westcott, *St. John*, p. 14. Dodd, *Interpretation*, p. 186. Bultmann, *John*, pp. 69–70, and p. 70 n. 2 — "H. von Campenhausen … takes the correct view when he describes the “we” here as a pluralis ecclesiasticus." Von Campenhausen is engaged here through Bultmann, who reports and endorses him. Barrett, *St John*, p. 166, with p. 143.
 
@@ -305,7 +306,7 @@ How firmly each is held:
 
 [^text]: The variant πλήρη, in Codex Bezae and the Old Latin b and c, is recorded where [the text this commentary reads](/commentary/john/1-14-to-18/01-the-text/) is settled. It is an early witness to reading the adjective with the glory. It bears on the meaning and not on the text, and the text's πλήρης is read here.
 
-[^construction]: Schnackenburg, *John*, vol. 1, p. 272. McHugh, *John 1–4*, p. 59 and pp. 60–61. Harris, *John*, p. 36. Barth, *Witness to the Word*, p. 100. Ridderbos, *John*, pp. 53–54, and p. 54 n. 117 — "If one takes πλήρης as declinable, it is nominative and can strictly only go with ὁ λόγος, from which it is, however, far removed. But it can also be indeclinable … In that case one could link it with δόξαν … or, even better, with αὐτοῦ (so BAGD)." Michaels, *John*, p. 81. Barrett, *St John*, p. 166. Bultmann, *John*, p. 73 n. 2, continued on p. 74 — "it is either “related to the dominating term ὁ λόγος” (Schl.; this is surely right if v. 14e and v. 16 originally belong together …), or else it is to be taken with αὐτοῦ and is used without inflection".
+[^construction]: Schnackenburg, *John*, vol. 1, p. 272. McHugh, *John 1–4*, p. 59 and pp. 60–61. Harris, *John*, p. 36. Barth, *Witness to the Word*, p. 100. Ridderbos, *John*, pp. 53–54, and p. 54 n. 117 — "If one takes πλήρης as declinable, it is nominative and can strictly only go with ὁ λόγος, from which it is, however, far removed. But it can also be indeclinable … In that case one could link it with δόξαν … or, even better, with αὐτοῦ (so BAGD)." Michaels, *John*, p. 81. Barrett, *St John*, p. 166. Bultmann, *John*, p. 73 n. 2, continued on p. 74 — "it is either “related to the dominating term ὁ λόγος” (Schl.; this is surely right if v. 14e and v. 16 originally belong together …), or else it is to be taken with αὐτοῦ and is used without inflection". Bultmann's "Schl." is Schlatter, reached only through this note.
 
 [^fullness]: Schnackenburg, *John*, vol. 1, p. 275.
 

@@ -2,6 +2,7 @@
 title: "Exegesis: Καὶ ὁ λόγος σὰρξ ἐγένετο — The Word, Remaining the Word, Became Flesh"
 description: "John 1:14a: the Word became flesh — the Word who was with God, remaining the Word, came to be what he was not."
 date: 2026-11-11
+revised: 2026-11-17
 book: john
 chapter: 1
 passageRef: "1:14–18"
@@ -208,7 +209,7 @@ How firmly each is held:
 
 [^conception]: Westcott, *St. John*, p. 10. Bultmann, *John*, p. 59 n. 5; at pp. 62–63 n. 4 he says that the evangelist "knew or wished to know nothing of the legend of the Virgin Birth".
 
-[^docetism]: Lincoln, *Saint John*, p. 104; his "It" is the Prologue's expression of the incarnation. Ridderbos, *John*, p. 50. Keener, *John*, p. 407, who adds that John "does not expend space here on polemic".
+[^docetism]: Lincoln, *Saint John*, p. 104; his "It" is the Prologue's expression of the incarnation. Ridderbos, *John*, p. 50. Keener, *John*, p. 407, who adds that John "does not expend space here on polemic". Käsemann, whom Keener names, is not read here.
 
 [^intent]: Brown, *John (I–XII)*, p. 31, and pp. lxxvi–lxxvii, where the next sentence reads: "If it exists, its best attestation is found in passages that belong to the latest stage of Johannine editing." Morris, *John*, p. 90 — "It seems probable that he was confronted by opponents of a docetic type". Schnackenburg, *John*, vol. 1, p. 268, and p. 231 — "It is difficult to decide whether the author of the hymn also knew the Gnostic doctrine of salvation and countered it … But we cannot be certain."
 
