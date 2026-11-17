@@ -2,6 +2,7 @@
 title: "Exegesis: Ἐγένετο ἄνθρωπος — The Witness Sent to a Light He Was Not"
 description: "John 1:6–8: a man came to be, sent from God to bear witness to a light he was not."
 date: 2026-09-22
+revised: 2026-11-17
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -68,7 +69,7 @@ With Ridderbos the office is at once soteriological as well as forensic. The spo
 
 That is why the purpose-clause runs the office out to a universal end: ἵνα πάντες πιστεύσωσιν δι᾽ αὐτοῦ — *that all might believe through him*. Three things sit in that clause and they come from different places. It carries the Gospel's first πιστεύω, and it states the testimony's **purpose** rather than its actual result — the clause says what the witness was for, not what it achieved.[^purpose] Faith is cast as response to testimony.[^response] And δι᾽ αὐτοῦ is read *through John*, as the testimony's means.
 
-That last reading is near-universal, and it does not rest on grammar. McHugh is explicit that any one of the three construals is grammatically possible; the case is made instead from Johannine usage and from the subordinate-agent διά of 1:17, where the law was given through Moses.[^through] Bernard's analogy runs along exactly that line — faith came through John as the law came through Moses — and it reaches this commentary through Harris, who cites him.[^bernard] The minority reading, taking δι᾽ αὐτοῦ of the light rather than of John, is registered and stands: Abbott argued it and Haenchen followed.[^minority]
+That last reading is near-universal, and it does not rest on grammar. McHugh is explicit that any one of the three construals is grammatically possible; the case is made instead from Johannine usage and from the subordinate-agent διά of 1:17, where the law was given through Moses.[^through] Bernard's analogy runs along exactly that line — faith came through John as the law came through Moses — and it reaches this commentary through Harris, who cites him.[^bernard] The minority reading, taking δι᾽ αὐτοῦ of the light rather than of John, is registered and stands: Abbott argued it, and Haenchen also dissents.[^minority]
 
 The universal reach of *all* is not a new claim introduced here. It is supplied by the light [*of men*](/commentary/john/1-4-to-5/07-anthropology-light-of-men/) in the first movement, and verse 9's *every human being* will carry it forward.
 
@@ -120,7 +121,7 @@ The parenthesis thus lands as one teachable claim, and it is the movement's thre
 
 [^bernard]: Murray J. Harris, *John* (Exegetical Guide to the Greek New Testament; B&H, 2015), p. 26, citing Bernard for the analogy — faith through John as the law through Moses. The analogy reaches this commentary through Harris; Bernard is not read directly here.
 
-[^minority]: Edwin A. Abbott, *Johannine Grammar* (Diatessarica), for the construal of δι᾽ αὐτοῦ with the light, followed by Haenchen. Registered as the standing minority and not adopted.
+[^minority]: Edwin A. Abbott, *Johannine Grammar* (Diatessarica), §§2302–2304, pp. 236–238, for the construal of δι᾽ αὐτοῦ with the light. Haenchen also dissents, as McHugh, *John 1–4*, p. 26, reports; Haenchen is not read here. Registered as the standing minority and not adopted.
 
 [^sect]: Barth, *Witness to the Word*, pp. 15, 17, for the reading that the Gospel's treatment of the Baptist is "only" a practical polemic; pp. 56–57, for the subordination of verse 8a and the positive share of verses 6–7 held as one coherent claim. The bound on the sect hypothesis is Schnackenburg's, *John*, vol. 1, p. 252.
 

@@ -2,7 +2,7 @@
 title: "The Text: Settling the Working Text, and μονογενὴς θεός at 1:18"
 description: "The working text of John 1:14–18 settled verse by verse, and the 1:18 crux — “only God” against “only Son.”"
 date: 2026-11-03
-revised: 2026-11-12
+revised: 2026-11-17
 book: john
 chapter: 1
 passageRef: "1:14–18"
@@ -121,7 +121,7 @@ With the working text fixed — ὃν εἶπον at verse 15, ὅτι at the he
 
 [^michaels]: Michaels, *John*, p. 86 n. 52: "the support for ὃν εἶπον is more widespread and diversified, and includes equally strong Alexandrian support, above all P66 and P75." His preference is stated at p. 87 n. 53, "For this reason I prefer the Westcott and Hort text," and his translation of the verse follows it. In the body of the commentary he judges that the external evidence favours the critical text, "but only slightly" (p. 86), and leaves both readings open for the commentary's purposes (p. 87).
 
-[^editions15]: The rating and its removal are reported by Michaels, *John*, p. 85 n. 46, citing the first edition of Metzger's *Textual Commentary* (1971), which is not consulted here directly; the second edition carries no entry at 1:15 or 1:16. Houghton's companion to the sixth edition carries no unit at either verse. Westcott, *St John*, p. 13: "This was He of whom I spake (ὃν εἶπον, Vulg. *quem dixi*)." His additional note (p. 32) allows "the possibility of some very early corruption of the text" and that ὁ εἰπών "gives an intelligible sense," without adopting it. Michaels's dissent from the rating is in his study of the verse, p. 102 (see the note on the study below).
+[^editions15]: The rating and its removal are reported by Michaels, *John*, p. 85 n. 46, citing the first edition of Metzger's *Textual Commentary* (1971), read here in its corrected printing of 1975, where the entry at 1:15 is rated {A}, pp. 197–198; the second edition carries no entry at 1:15 or 1:16. Houghton's companion to the sixth edition carries no unit at either verse. Westcott, *St John*, p. 13: "This was He of whom I spake (ὃν εἶπον, Vulg. *quem dixi*)." His additional note (p. 32) allows "the possibility of some very early corruption of the text" and that ὁ εἰπών "gives an intelligible sense," without adopting it. Michaels's dissent from the rating is in his study of the verse, p. 102 (see the note on the study below).
 
 [^scribes15]: Rudolf Schnackenburg, *The Gospel according to St John*, vol. 1, trans. Kevin Smyth (Herder and Herder, 1968), p. 274 n. 197: ὁ εἰπών "arose, no doubt, from the desire to avoid the difficulty created by the ἦν of the text." John F. McHugh, *A Critical and Exegetical Commentary on John 1–4* (International Critical Commentary; T&T Clark, 2009), p. 61, on the scribes who found the accusative awkward and changed ὃν εἶπον to ὁ εἰπών; Barrett, *St John*, p. 167, for whom ὁ εἰπών "seems to be an attempted correction of the former," the ἦν being "superficially difficult." Michaels, *John*, p. 87 n. 53, for both of his points. On the imperfect, McHugh, *John 1–4*, p. 61 — "the correct tense to refer back to a chronologically anterior witness by the Baptist" — and Barrett, *St John*, p. 168.
 
@@ -155,7 +155,7 @@ With the working text fixed — ὃν εἶπον at verse 15, ὅτι at the he
 
 [^mechanisms]: Bultmann, *John*, pp. 81–82 n. 2: "θεός is most likely the result of an error in dictation." Wikgren's note in Metzger, *Textual Commentary*, p. 170: μονογενὴς θεός "may be a primitive, transcriptional error in the Alexandrian tradition (Υς/Θς)."
 
-[^editions18]: Houghton, *Textual Commentary*, p. 198: "The reading ὁ μονογενὴς υἱός is adopted in the THGNT; the SBLGNT agrees with the UBS text." On Westcott and Hort, Harris, *Jesus as God*, p. 83 (Table 3), and Westcott, *St John*, p. 33, on Hort's conclusion in favour of θεός. Metzger, *Textual Commentary*, p. 170, Wikgren's note in full: "It is doubtful that the author would have written μονογενὴς θεός, which may be a primitive, transcriptional error in the Alexandrian tradition (Υς/Θς). At least a {D} decision would be preferable."
+[^editions18]: *The Greek New Testament, Produced at Tyndale House*, p. 177, prints ὁ μονογενὴς υἱὸς ὁ ὢν εἰς τὸν κόλπον τοῦ πατρός, with three readings in its apparatus. Houghton, *Textual Commentary*, p. 198: "The reading ὁ μονογενὴς υἱός is adopted in the THGNT; the SBLGNT agrees with the UBS text." On Westcott and Hort, Harris, *Jesus as God*, p. 83 (Table 3), and Westcott, *St John*, p. 33, on Hort's conclusion in favour of θεός. Metzger, *Textual Commentary*, p. 170, Wikgren's note in full: "It is doubtful that the author would have written μονογενὴς θεός, which may be a primitive, transcriptional error in the Alexandrian tradition (Υς/Θς). At least a {D} decision would be preferable."
 
 [^intrinsic]: Bultmann, *John*, pp. 81–82 n. 2: "Even though θεός may be considered better attested … nevertheless θεός cannot be defended here, for it neither fits in with the preceding θεόν κτλ., nor can it take the appositional phrase ὁ ὤν κτλ." Herman Ridderbos, *The Gospel according to John: A Theological Commentary* (Eerdmans, 1997), p. 59 n. 140, quoting that sentence. Barrett, *St John*, p. 169: "Yet υἱός seems to be required by the following clause, and is in conformity with Johannine usage … This however may simply make it lectio facilior." Harris, *Jesus as God*, p. 82.
 

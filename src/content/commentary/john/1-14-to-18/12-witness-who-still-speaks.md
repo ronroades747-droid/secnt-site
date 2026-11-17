@@ -2,6 +2,7 @@
 title: "Exegesis: Ἰωάννης μαρτυρεῖ περὶ αὐτοῦ — The Witness Who Still Speaks"
 description: "John 1:15: John bears witness still — He who comes after me has come to rank before me, because he was before me."
 date: 2026-11-15
+revised: 2026-11-17
 book: john
 chapter: 1
 passageRef: "1:14–18"
@@ -158,7 +159,7 @@ How firmly each is held:
 
 [^aorist]: Leon Morris, *The Gospel according to John*, rev. ed. (New International Commentary on the New Testament; Grand Rapids: Eerdmans, 1995), p. 81 — "The meaning is not that John continually witnessed (though that, too, was true), but that he accomplished a finished work."
 
-[^historic]: Raymond E. Brown, *The Gospel according to John (I–XII)* (Anchor Bible 29; Garden City: Doubleday, 1966), p. 15. The first is his note on "testified", where he records that Haenchen treats the tense as a real present. The second is his note on "by proclaiming", the perfect κέκραγεν: "John the Baptist's witness to Jesus and proclamation of him is looked on as still in effect against the claims of the sectarians." A. T. Robertson, *Word Pictures in the New Testament*, vol. 5 (Nashville: Broadman, 1932), ad loc. (John 1:15), also reads a "Historical (dramatic) present". Murray J. Harris, *John*, Exegetical Guide to the Greek New Testament (Nashville: B&H Academic, 2015), p. 36, gives it first, as one of two options, and then "Alternatively" the ongoing validity of the testimony.
+[^historic]: Raymond E. Brown, *The Gospel according to John (I–XII)* (Anchor Bible 29; Garden City: Doubleday, 1966), p. 15. The first is his note on "testified", where he records that Haenchen treats the tense as a real present; Haenchen is not read here. The second is his note on "by proclaiming", the perfect κέκραγεν: "John the Baptist's witness to Jesus and proclamation of him is looked on as still in effect against the claims of the sectarians." A. T. Robertson, *Word Pictures in the New Testament*, vol. 5 (Nashville: Broadman, 1932), ad loc. (John 1:15), also reads a "Historical (dramatic) present". Murray J. Harris, *John*, Exegetical Guide to the Greek New Testament (Nashville: B&H Academic, 2015), p. 36, gives it first, as one of two options, and then "Alternatively" the ongoing validity of the testimony.
 
 [^opiso]: Zerwick–Grosvenor, *A Grammatical Analysis*, p. 286. Harris, *John*, p. 36 — "ὀπίσω ('after') is here temp.", noting McHugh's reading of place.
 
