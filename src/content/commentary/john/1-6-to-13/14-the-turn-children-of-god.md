@@ -2,7 +2,7 @@
 title: "Exegesis: ὅσοι δὲ ἔλαβον αὐτόν — The Turn: A Right to Become Children of God"
 description: "John 1:12: “but as many as received him” — the turn, and the right given to become children of God."
 date: 2026-09-29
-revised: 2026-11-16
+revised: 2026-11-17
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -229,7 +229,7 @@ It is the seed of the Gospel's "whoever receives Me receives the One who sent Me
 
 [^brown-timing]: Brown reads the verse otherwise: becoming God's children is explained only by begetting from above by the Spirit (3:3, 5), so that "If the revelation of the OT empowered men to become God's children, the whole conversation with Nicodemus is unintelligible" (Brown, *John (I–XII)*, p. 29), and sonship "is realized on this earth once the resurrected Jesus gives the Spirit" (p. 139; cf. 7:39, and Raymond E. Brown, *The Gospel according to John (XIII–XXI)* [Anchor Bible 29A; Doubleday, 1970], p. 711). His timing places the realization where the working calibration places the fullness, at the glorification; the mode is verse 13's to withhold and 3:5–8's to supply, and the calibration's terminus is assessed at verse 14.
 
-[^mchugh-bengel]: McHugh, *John 1–4*, p. 44.
+[^mchugh-bengel]: McHugh, *John 1–4*, p. 44. Bengel's *Gnomon* is quoted as McHugh gives it and is not read here.
 
 [^michaels-light]: Michaels, *John*, p. 68.
 

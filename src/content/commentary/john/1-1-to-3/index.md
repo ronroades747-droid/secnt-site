@@ -2,7 +2,7 @@
 title: "The Word in the Beginning"
 description: "John 1:1–3 — the Prologue's opening movement: the Word's eternal ontology, the Word's relation to God, the Word's full deity, and the Word's creational agency, with the v. 3 → v. 4 architectural pivot."
 date: 2026-06-06
-revised: 2026-11-16
+revised: 2026-11-17
 book: john
 chapter: 1
 passageRef: "1:1–3"
@@ -68,7 +68,7 @@ The commentary inherits six standing commitments from the project's framework fo
 
 The Prologue is read under the Ridderbos/Morris three-movement linear architecture: 1:1–5 (the Word in the beginning), 1:6–13 (the Word coming as light), 1:14–18 (the Word's glory in the flesh). The 1:1–3 unit functions as the opening of the first movement: the establishment of the Word's eternal ontology, the Word's relation to God, the Word's deity, and the Word's creational agency, with the v. 3 → v. 4 boundary pivoting from the eternal *ēn*-state to the resulting-state of created reality in Him.
 
-The chiastic alternative — most prominently Culpepper, Boismard, and Staley, with various centers (1:12–13 or 1:14) — is acknowledged as a serious alternative held by serious readers. Under a chiastic reading, 1:1–3 functions as one limb of a structural pair (typically 1:1–5 / 1:14–18) rather than as the opening of a linear movement. The linear reading is held by serious Tier 1 commentators (Ridderbos, Morris, Carson) and is widely defensible. It is reinforced at the structural-architectural register by the foyer-bracket pattern and by the macro-tense diachronic spine, both of which are coherent with the linear architecture and would require substantial revision under a chiastic reading. The architectural commitment will be tested deliberately at 1:14 (the natural pivot point in most chiastic schemes); until then, the linear framework stands as the working architecture for this unit.
+The chiastic alternative — most prominently Culpepper, Boismard, and Staley, with various centers (1:12–13 or 1:14) — is acknowledged as a serious alternative held by serious readers. Under a chiastic reading, 1:1–3 functions as one limb of a structural pair (typically 1:1–5 / 1:14–18) rather than as the opening of a linear movement. The linear reading is held by serious Tier 1 commentators (Ridderbos, Morris, Carson) and is widely defensible. It is reinforced at the structural-architectural register by the foyer-bracket pattern and by the macro-tense diachronic spine, both of which are coherent with the linear architecture and would require substantial revision under a chiastic reading. The architectural commitment will be tested deliberately at 1:14 (the natural pivot point in most chiastic schemes); until then, the linear framework stands as the working architecture for this unit. Culpepper's and Staley's schemes are reached through Carson, *John*, pp. 113 and 103; Boismard's plan has since been read at *Le Prologue de saint Jean* (1953), pp. 106–107.
 
 ### Foyer reading, with the strong (genesis) form held provisionally
 
