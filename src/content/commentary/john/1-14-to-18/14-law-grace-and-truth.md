@@ -1,7 +1,7 @@
 ---
 title: "Exegesis: ἡ χάρις καὶ ἡ ἀλήθεια — The Law Given, the Grace and the Truth Come"
 description: "John 1:17: the law was given through Moses; the grace and the truth came to be through Jesus Christ."
-date: 2026-11-02
+date: 2026-11-17
 book: john
 chapter: 1
 passageRef: "1:14–18"
@@ -12,7 +12,7 @@ sectionType: exegesis
 tocGroup: "Part three — the ground and the declaration (1:16–18)"
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 After the ground, its reason: ὅτι ὁ νόμος διὰ Μωϋσέως ἐδόθη, ἡ χάρις καὶ ἡ ἀλήθεια διὰ Ἰησοῦ Χριστοῦ ἐγένετο, *for the law was given through Moses; the grace and the truth came to be through Jesus Christ.* The grace "we have all received" from his fullness, [grace in place of grace](/commentary/john/1-14-to-18/13-grace-in-place-of-grace/), is inexhaustible and his own, *because* the grace and the truth came through Jesus Christ. With this verse the chain of grounds is closed, and the one the Prologue has described is named.
