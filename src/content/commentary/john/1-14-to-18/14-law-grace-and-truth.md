@@ -1,6 +1,6 @@
 ---
 title: "Exegesis: ἡ χάρις καὶ ἡ ἀλήθεια — The Law Given, the Grace and the Truth Come"
-description: "John 1:17: the law was given through Moses; the grace and the truth came to be through Jesus Christ."
+description: "John 1:17: for the law was given through Moses; the grace and the truth came to be through Jesus Christ."
 date: 2026-11-17
 book: john
 chapter: 1
