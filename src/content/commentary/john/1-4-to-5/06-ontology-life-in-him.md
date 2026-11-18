@@ -2,7 +2,7 @@
 title: "Exegesis: Ἐν αὐτῷ ζωὴ ἦν — Ontology, the Life in the Word"
 description: "The first clause (1:4a): the construal, the force of the imperfect, and the sense of ζωή — the life that was in the Word."
 date: 2026-08-09
-revised: 2026-11-16
+revised: 2026-11-18
 book: john
 chapter: 1
 passageRef: "1:4–5"
@@ -40,7 +40,7 @@ The ontological claim of the first tread is thus exact: the life that was *in* t
 
 From this ground the movement takes its second step, and the composition has already bound the two treads together: the staircase takes up ζωή at the head of the next clause. This same life, turned toward humanity, is its [light](/commentary/john/1-4-to-5/07-anthropology-light-of-men/).
 
-[^construal]: The perfect as resulting state: John F. McHugh, *A Critical and Exegetical Commentary on John 1–4* (International Critical Commentary; London: T&T Clark, 2009), pp. 13–15, presenting Turner's resultative-perfect analysis of ὃ γέγονεν — a standing result, comfortable with a following imperfect; Edwin A. Abbott, *Johannine Grammar* (Diatessarica; London: A. & C. Black, 1906), §2440, on the aspectual distinction between ἐγένετο and γέγονεν; D. A. Carson, *The Gospel according to John* (Pillar New Testament Commentary; Grand Rapids: Eerdmans, 1991), on the same resulting-state reading of the pivot. The punctuation on which the construal rests, and the strong tradition that reads otherwise, are set out with their witnesses in the [text-critical notes](/commentary/john/1-4-to-5/01-the-text/).
+[^construal]: The perfect as resulting state: Edwin A. Abbott, *Johannine Grammar* (Diatessarica; London: A. & C. Black, 1906), §2440, on the aspectual distinction between ἐγένετο and γέγονεν, quoting J. B. Lightfoot on Col 1:16 — "ἔκτισται the continuous and present relations of creation to the Creator" — who applies the distinction to ὃ γέγονεν at John 1:3; D. A. Carson, *The Gospel according to John* (Pillar New Testament Commentary; Grand Rapids: Eerdmans, 1991), p. 118, on "the change in reference from the act of creation to the state of creation." John F. McHugh, *A Critical and Exegetical Commentary on John 1–4* (International Critical Commentary; London: T&T Clark, 2009), p. 15, reports Turner's "resultative" perfect in another sense — the perfect used in the sense of the aorist, "What came into existence in him, was life" — against which the objection to a following imperfect "has less force". The punctuation on which the construal rests, and the strong tradition that reads otherwise, are set out with their witnesses in the [text-critical notes](/commentary/john/1-4-to-5/01-the-text/).
 
 [^ridderbos]: Herman N. Ridderbos, *The Gospel according to John: A Theological Commentary*, trans. John Vriend (Grand Rapids: Eerdmans, 1997), on 1:4; the same reading of the Prologue's imperfects in his "The Structure and Scope of the Prologue to the Gospel of John," *Novum Testamentum* 8 (1966). The formulation quoted — the present seen in light of its origin, antecedent to all human experience — is his.
 
