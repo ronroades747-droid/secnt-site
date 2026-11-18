@@ -2,7 +2,7 @@
 title: "Exegesis: ὁ κόσμος αὐτὸν οὐκ ἔγνω — The World That Did Not Know Its Maker"
 description: "John 1:10: in the world, the world made through him — and the world did not know its Maker."
 date: 2026-09-27
-revised: 2026-11-16
+revised: 2026-11-18
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -153,7 +153,7 @@ The verse thus lands as one teachable claim. He was in the world — and the wor
 
 [^barth-faces]: Barth, *Witness to the Word*, p. 50 (the light in the world apart from the epiphany of the Word) and p. 63 (the immanence as event).
 
-[^schnackenburg-alternatives]: Schnackenburg, *John*, vol. 1, p. 256. The two renderings in quotation marks are Schnackenburg's own statements of the positions he canvasses.
+[^schnackenburg-alternatives]: Schnackenburg, *John*, vol. 1, p. 256. The two renderings in quotation marks are Schnackenburg's own statements of the positions he canvasses. Zahn, Lagrange, Hoskyns and Ruckstuhl are named as Schnackenburg names them and are not read here.
 
 [^mchugh-double]: McHugh, *John 1–4*, p. 43.
 
@@ -161,7 +161,7 @@ The verse thus lands as one teachable claim. He was in the world — and the wor
 
 [^patristic]: Schnackenburg, *John*, vol. 1, p. 257 and n. 127 (the Fathers nearly unanimous for the unincarnate Logos; Maldonatus, on Schanz's report, the first to propose the incarnate reading); cf. p. 258.
 
-[^ridderbos-historical]: Ridderbos, *John*, p. 45, on vv. 10–11.
+[^ridderbos-historical]: Ridderbos, *John*, p. 45, on vv. 10–11. The view Ridderbos refuses is Haenchen's, among others (p. 45 n. 85: "For this view (held by, e.g., Haenchen)"); Haenchen is not read here.
 
 [^echo]: Barth, *Witness to the Word*, pp. 63, 64–65 (cf. pp. 12, 25, 26, 30, 31, 67); Harris, *John*, p. 30 (on Ἐγένετο, "see v. 3"); Daniel Boyarin, "The Gospel of the Memra: Jewish Binitarianism and the Prologue to John," *Harvard Theological Review* 94 (2001), pp. 243–284 (the deposited text carries no page numbers, so no page within the article can be given); Schnackenburg, *John*, vol. 1, p. 256.
 

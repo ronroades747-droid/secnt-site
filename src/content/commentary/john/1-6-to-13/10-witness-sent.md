@@ -2,7 +2,7 @@
 title: "Exegesis: Ἐγένετο ἄνθρωπος — The Witness Sent to a Light He Was Not"
 description: "John 1:6–8: a man came to be, sent from God to bear witness to a light he was not."
 date: 2026-09-22
-revised: 2026-11-17
+revised: 2026-11-18
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -123,6 +123,6 @@ The parenthesis thus lands as one teachable claim, and it is the movement's thre
 
 [^minority]: Edwin A. Abbott, *Johannine Grammar* (Diatessarica), §§2302–2304, pp. 236–238, for the construal of δι᾽ αὐτοῦ with the light. Haenchen also dissents, as McHugh, *John 1–4*, p. 26, reports; Haenchen is not read here. Registered as the standing minority and not adopted.
 
-[^sect]: Barth, *Witness to the Word*, pp. 15, 17, for the reading that the Gospel's treatment of the Baptist is "only" a practical polemic; pp. 56–57, for the subordination of verse 8a and the positive share of verses 6–7 held as one coherent claim. The bound on the sect hypothesis is Schnackenburg's, *John*, vol. 1, p. 252.
+[^sect]: Barth, *Witness to the Word*, pp. 15, 17, reporting W. Bauer, *Das Johannesevangelium* (Handbuch zum Neuen Testament 6; 2nd ed.; Tübingen, 1925), p. 14, for the reading that the Gospel's treatment of the Baptist is "only" a practical polemic (Bauer is not read here); pp. 56–57, for the subordination of verse 8a and the positive share of verses 6–7 held as one coherent claim. The bound on the sect hypothesis is Schnackenburg's, *John*, vol. 1, p. 252.
 
 [^reception]: John Calvin, *Commentary on the Gospel according to John*, vol. 1, pp. 35–37 — the herald, and the dawn that goes before the sun. Augustine's lamp and Chrysostom's observation that the greater witness is borne to the lesser are carried at the clause-reception register through Elowsky, ed., *Ancient Christian Commentary on Scripture: John 1–10* (IVP, 2006).
