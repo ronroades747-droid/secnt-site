@@ -2,6 +2,7 @@
 title: "Theology: Creation through the Personally-Distinct Divine Agent"
 description: "Locus Four: creation through the Word, doctrinally articulated on the grounds of v. 3 (πάντα δι' αὐτοῦ ἐγένετο)."
 date: 2026-07-14
+revised: 2026-11-18
 book: john
 chapter: 1
 passageRef: "1:1–3"
@@ -44,7 +45,7 @@ How the first power hands forward to the second — how the creation that came t
 
 ## The tradition's confession and the creed
 
-The confession was so received across the patristic tradition. The Greek and Latin readers alike — among them Theodore of Mopsuestia, Chrysostom, Basil, and Augustine — received verse 3 as the church's charter of creation through the Word, reading the διά as the Son's cooperation in the one creative work and not bare instrumental service.[^reception] The reception confirms that the creation-agency reading is the tradition's own, not a modern construal.
+The confession was so received across the patristic tradition. The Greek and Latin readers alike received verse 3 as the church's charter of creation through the Word: Theodore of Mopsuestia, as Schnackenburg quotes him, read the διά as cooperation, not service; Chrysostom and Basil read verse 3 from the other Christological confessions; and the Latin Fathers, Augustine above all, took the Logos as exemplary cause.[^reception] The reception confirms that the creation-agency reading is the tradition's own, not a modern construal.
 
 What the apostolic witness predicated and the Fathers received, the church fixed in its symbol. The Nicene–Constantinopolitan creed confesses the Son the one δι' οὗ τὰ πάντα ἐγένετο — through whom all things were made — and the clause is John 1:3 made confession, the διά of the Prologue carried into the rule of faith.[^creed] Bavinck reads the conciliar settlement as a single fabric: the confession of the essential oneness of the persons and the confession of creation as the divine work stand or fall together, for only the One who is God by nature can be the agent of a work that is incommunicably divine.[^standfall] The creedal clause therefore fastens this locus to the last: [the One confessed of one essence with the Father](/commentary/john/1-1-to-3/16-full-deity/) is the One through whom all things were made, so that the creed reads the Prologue's deity and its creation-agency as a single confession — the homoousios Son is the agent of creation, and the agency is the work of no creature but of God.
 
@@ -78,7 +79,7 @@ What verse 3 establishes and the doctrine of creation now confesses is the fourt
 
 [^reception]: The patristic reception is engaged at the citation-chain layer through Rudolf Schnackenburg, *The Gospel according to St John*, vol. 1, trans. Kevin Smyth (New York: Herder, 1968), 236–238 — his catalogue of the Fathers' readings of the creation-agency διά: Theodore of Mopsuestia (238), Chrysostom (237–238), Basil (237), and Augustine (237) — rather than primary-text engagement with the Fathers, which the commentary reserves to its larger scope. Schnackenburg renders Theodore of Mopsuestia's reading of the διά (238): the evangelist "shows clearly that the words 'all things were made through him' were used not to denote service, but cooperation."
 
-[^creed]: The Symbolum Nicaeno-Constantinopolitanum (381): the Son confessed as the one δι' οὗ τὰ πάντα ἐγένετο, "through whom all things were made"; the clause is John 1:3 carried into the rule of faith. Text in *Conciliorum Oecumenicorum Decreta*, ed. Giuseppe Alberigo et al., 3rd ed. (Bologna: Istituto per le scienze religiose, 1973).
+[^creed]: The Symbolum Nicaeno-Constantinopolitanum (381): the Son confessed as the one δι' οὗ τὰ πάντα ἐγένετο, "through whom all things were made"; the clause is John 1:3 carried into the rule of faith. Text in *Conciliorum Oecumenicorum Decreta*, ed. Giuseppe Alberigo et al., 3rd ed. (Bologna: Istituto per le scienze religiose, 1973), not consulted here.
 
 [^standfall]: Bavinck, *Reformed Dogmatics*, 2: ch. 8, §255 (The Creator Is the Triune God), 422: "The two dogmas stand and fall together. The confession of the essential oneness of the three persons has as its corollary that all the outward works of God (*opera ad extra*) are common and indivisible (*communia et indivisa*)"; creation being "a divine work … incommunicable in either nature or grace to any creature," only the One who is God by nature can be its agent.
 
