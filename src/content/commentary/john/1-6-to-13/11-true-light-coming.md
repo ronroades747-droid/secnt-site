@@ -2,7 +2,7 @@
 title: "Exegesis: Ἦν τὸ φῶς τὸ ἀληθινόν — The True Light, Coming into the World"
 description: "John 1:9: the true light, coming into the world — the light that illumines every human being."
 date: 2026-09-23
-revised: 2026-11-16
+revised: 2026-11-18
 book: john
 chapter: 1
 passageRef: "1:6–13"
@@ -127,7 +127,7 @@ The verse thus lands as one teachable claim. The Word was the true light — the
 
 [^subject]: Rudolf Bultmann, *The Gospel of John: A Commentary*, trans. G. R. Beasley-Murray (Westminster, 1971), p. 52 n. 2 — "the subject must be the same as for ἦν in v. 10 and for ἦλθεν in v. 11; but this, as αὐτόν vv. 11f. shows, is the Logos." Rudolf Schnackenburg, *The Gospel according to St John*, vol. 1, trans. Kevin Smyth (Herder and Herder, 1968), p. 255 — "The subject of ἦν is the Logos, as again in vv. 10 f." Harris, *John*, p. 29, takes the Logos as subject at verse 9, and supplies the masculine αὐτόν at verse 10 (p. 30). Schnackenburg and Harris concur in the result; the argument from αὐτόν is Bultmann's.
 
-[^antiquity]: McHugh, *John 1–4*, p. 33, names "all the early ancient versions (Latin *venientem*, Old Syriac, Bohairic), except the Sahidic (at least in part)," and "several Greek Fathers (Eusebius, Cyril of Alexandria and Chrysostom)"; Raymond E. Brown, *The Gospel according to John (I–XII)* (Anchor Bible 29; Doubleday, 1966), p. 9, names the same Fathers, and sets the Sahidic and the Latin Fathers Tertullian and Cyprian on the other side. Luther is Barth's witness (p. 59). Chrysostom's place on the list is itself disputed: Edwin A. Abbott, *Johannine Grammar* (Diatessarica), §2508c, holds that "the argument of Chrys. suggests (though it does not prove) that he followed Origen" in taking the participle with the light.
+[^antiquity]: McHugh, *John 1–4*, p. 33, names "all the early ancient versions (Latin *venientem*, Old Syriac, Bohairic), except the Sahidic (at least in part)," and "several Greek Fathers (Eusebius, Cyril of Alexandria and Chrysostom)"; Raymond E. Brown, *The Gospel according to John (I–XII)* (Anchor Bible 29; Doubleday, 1966), p. 9, names the same Fathers, and sets the Sahidic and the Latin Fathers Tertullian and Cyprian on the other side. Luther is Barth's witness (p. 59). Chrysostom's place on the list is itself disputed: Edwin A. Abbott, *Johannine Grammar* (Diatessarica), §2508c, holds that "the argument of Chrys. suggests (though it does not prove) that he followed Origen" in taking the participle with the light. In the English of Joel C. Elowsky's collection (*John 1–10*, Ancient Christian Commentary on Scripture), Chrysostom (*Homilies on John* 8.1, p. 31) and Cyril of Alexandria (*Commentary on John* 1.9, p. 32) both run the lemma as "enlightens everyone that comes into the world"; a translation of the lemma cannot settle a Father's construal of the Greek. Eusebius is reported here only, on McHugh's and Brown's lists.
 
 [^gloss]: Bultmann, *John*, p. 52 n. 2 — "In fact ἄνθρ. is an explanatory gloss (of the translator) on πάντα ἐρχ. εἰς τ. κ.; for this is a common paraphrase in Semitic languages for 'every man' … It is clear then that ἄνθρ. is an explanatory addition."
 
