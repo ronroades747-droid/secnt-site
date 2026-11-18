@@ -2,7 +2,7 @@
 title: "Architecture: The Foyer’s Inner Pair — The Light of v. 4 and the Glory of v. 14"
 description: "The life that was the light of men (v. 4) and the glory beheld in the flesh (v. 14) as one reality, the Foyer’s inner pair seen from its far end."
 date: 2026-11-09
-revised: 2026-11-11
+revised: 2026-11-18
 book: john
 chapter: 1
 passageRef: "1:14–18"
@@ -61,7 +61,7 @@ One thing in the record might look like a case against the pair and is not. Brow
 - **The content, that the two poles are one reality**: grounded with Dodd, received at verse 14, and said in their own ways by Barth, Bultmann, Nolland, Pagels and Keener.
 - **The placement, a witness after each pole**: in the text, found deliberate by three readers; the reading that bears on the pair is Hooker's, counted once.
 - **The composition, that the evangelist built the two verses as a bracket**: this commentary's own reading, held with high but provisional confidence.
-- **The case against**: against the composition only. No chiastic proposal pairs verse 4 with verse 14, Coloe's scheme is judged forced by the one who reports it, and the imagery changes at verse 14. Hooker's parallel of verse 5 with verse 14 supports the correspondence and is not a bracket.
+- **The case against**: against the composition only. No chiastic proposal whose pairings the record reports pairs verse 4 with verse 14, Coloe's scheme is judged forced by the one who reports it, and the imagery changes at verse 14. Hooker's parallel of verse 5 with verse 14 supports the correspondence and is not a bracket.
 
 The commentary on verses 6–13 held, provisionally, that the second movement is enclosed by this pair. That reading now stands on the ground named in this section: the second movement is what the content pair encloses, at the same provisional confidence. The pairing has been assessed here, and it has not been raised. If a major commentator, read in his own words, were found setting verse 4 and verse 14 against each other as different realities, the reading would be withdrawn.
 
