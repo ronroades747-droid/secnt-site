@@ -1,7 +1,7 @@
 ---
 title: "Exegesis: μονογενὴς θεός … ἐκεῖνος ἐξηγήσατο — The Only Son, Himself God, Has Made Him Known"
 description: "John 1:18: no one has ever seen God. The only Son, himself God, who is in the bosom of the Father — he has made him known."
-date: 2026-11-02
+date: 2026-11-19
 book: john
 chapter: 1
 passageRef: "1:14–18"
@@ -12,7 +12,7 @@ sectionType: exegesis
 tocGroup: "Part three — the ground and the declaration (1:16–18)"
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 The Prologue ends on a sentence without a connective: Θεὸν οὐδεὶς ἑώρακεν πώποτε· μονογενὴς θεὸς ὁ ὢν εἰς τὸν κόλπον τοῦ πατρὸς ἐκεῖνος ἐξηγήσατο, *No one has ever seen God. The only Son, himself God, who is in the bosom of the Father — he has made him known.* It sets a denial against a declaration and lets them stand side by side. The text is the one [the commentary on the text](/commentary/john/1-14-to-18/01-the-text/) settles, μονογενὴς θεός without the article, and the critical edition's punctuation is left standing. That page decides the reading. This one asks what the reading says.
