@@ -1,7 +1,7 @@
 ---
 title: "Exegesis: The Tenses Gathered — The Synthesis Close"
 description: "The synthesis close: the unit’s verbs gathered back onto one line — the incarnate life told in retrospect, broken twice, and closed on the Son who abides with the Father."
-date: 2026-11-02
+date: 2026-11-22
 book: john
 chapter: 1
 passageRef: "1:14–18"
@@ -12,7 +12,7 @@ sectionType: synthesis
 tocGroup: "The synthesis close"
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 The reader has now met every verb of these five verses, each in its own place: the Word who [became flesh](/commentary/john/1-14-to-18/10-word-became-flesh/), the dwelling and the beholding of [his glory](/commentary/john/1-14-to-18/11-glory-beheld/), [the witness who still speaks](/commentary/john/1-14-to-18/12-witness-who-still-speaks/), [the fullness received](/commentary/john/1-14-to-18/13-grace-in-place-of-grace/), [the law given and the grace and the truth come](/commentary/john/1-14-to-18/14-law-grace-and-truth/), and [the only Son who has made God known](/commentary/john/1-14-to-18/15-only-son-made-him-known/). [Before the verses were read one by one](/commentary/john/1-14-to-18/04-temporal-payload/), this commentary set out what their tenses do together, as part of the passage's architecture. This page does the same work from the other end. With each verb now read where it stands, the verbs are gathered back onto one line, and the reading stated before the verses is stated again from the verbs up: **the incarnate life told in retrospect from its completion, broken twice — by a witness that still sounds and by a truth outside narrative time — and closed on the Son who abides with the Father.**
