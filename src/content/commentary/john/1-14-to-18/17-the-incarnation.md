@@ -1,7 +1,7 @@
 ---
 title: "Theology: The Word Became Flesh"
 description: "The theology of v. 14a: one subject, the Word who was with God, become flesh without change, disguise or mixture."
-date: 2026-11-02
+date: 2026-11-23
 book: john
 chapter: 1
 passageRef: "1:14–18"
@@ -12,7 +12,7 @@ sectionType: theology
 tocGroup: "The theology"
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 The exegesis is finished, and the theology begins where the confession begins. [The clause *And the Word became flesh*](/commentary/john/1-14-to-18/10-word-became-flesh/) has been read for what it says: what σάρξ names, what the becoming asserts and excludes, and how the church has received it. This page does not return to the clause to press it further. It asks what the church, on the strength of it, confesses about the one who became flesh.
