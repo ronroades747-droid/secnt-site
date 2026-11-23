@@ -1,7 +1,7 @@
 ---
 title: "Theology: He Dwelt Among Us, and We Beheld His Glory"
 description: "The theology of v. 14b–d: God dwelling with his people in the Word made flesh, and the glory beheld there."
-date: 2026-11-02
+date: 2026-11-23
 book: john
 chapter: 1
 passageRef: "1:14–18"
@@ -12,7 +12,7 @@ sectionType: theology
 tocGroup: "The theology"
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 The confession's second claim follows from the first. The Word who became flesh dwelt among us, and his glory was beheld. [The clause *and dwelt among us, and we beheld his glory, glory as of the only one from the Father, full of grace and truth*](/commentary/john/1-14-to-18/11-glory-beheld/) has been read for what it says: what the verb evokes, who beheld, what the glory is, and whose glory it is. This page does not weigh those words again. It asks what the church, on the strength of them, confesses about the Word's dwelling among us and the glory seen in him.
