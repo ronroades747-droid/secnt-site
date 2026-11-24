@@ -1,7 +1,7 @@
 ---
 title: "Theology: Grace in Place of Grace — The Law Given, the Grace and the Truth Come"
 description: "The theology of vv. 16–17: a fullness never diminished, and the law and the grace as the good and the better, not enemies."
-date: 2026-11-02
+date: 2026-11-24
 book: john
 chapter: 1
 passageRef: "1:14–18"
@@ -12,7 +12,7 @@ sectionType: theology
 tocGroup: "The theology"
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 The confession's third claim is about what was received. [The fullness that verse 16 names](/commentary/john/1-14-to-18/13-grace-in-place-of-grace/) and [the law and the grace and the truth that verse 17 sets side by side](/commentary/john/1-14-to-18/14-law-grace-and-truth/) have been read for what they say: the fullness, who received, what grace in place of grace means, and the two members of verse 17 with their mediators and their verbs. This page does not weigh those words again. It asks what the church, on the strength of them, confesses about the grace received and its source.
