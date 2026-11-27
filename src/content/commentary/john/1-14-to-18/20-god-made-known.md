@@ -1,7 +1,7 @@
 ---
 title: "Theology: No One Has Ever Seen God — The Only Son Has Made Him Known"
 description: "The theology of v. 18: God unseen, and the only Son, himself God, in the bosom of the Father, who has made him known."
-date: 2026-11-02
+date: 2026-11-26
 book: john
 chapter: 1
 passageRef: "1:14–18"
@@ -12,7 +12,7 @@ sectionType: theology
 tocGroup: "The theology"
 license: CC-BY-4.0
 hasLecture: true
-draft: true
+draft: false
 ---
 
 The Prologue closes on a declaration. [The verse that closes it](/commentary/john/1-14-to-18/15-only-son-made-him-known/) has been read for what it says: the denial, the only Son who is himself God, the participle and its preposition, the bosom of the Father, and the verb that says he has made God known. This page does not weigh those words again. It asks what the church, on the strength of them, confesses about God and about the Son.
